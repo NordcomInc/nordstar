@@ -1,21 +1,12 @@
 {
     "extends": "../tsconfig.json",
     "compilerOptions": {
-        "plugins": [
-            {
-                "name": "next"
-            }
-        ],
-        "allowJs": true,
-        "forceConsistentCasingInFileNames": true,
-        "noEmit": true,
+        "baseUrl": ".",
         "incremental": true,
         "jsx": "preserve",
-        "strictNullChecks": true,
-        "baseUrl": ".",
-        "paths": {
-            "@/*": ["./src/*"]
-        }
+        "noEmit": true,
+        "paths": { "@/*": ["./src/*"] },
+        "plugins": [{ "name": "next" }]
     },
     "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", ".next/types/**/*.ts"],
     "exclude": ["node_modules"]
