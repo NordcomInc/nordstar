@@ -4,9 +4,13 @@ on:
     pull_request:
         branches:
             - master
+        paths-ignore:
+            - '**.md'
     push:
         branches:
             - master
+        paths-ignore:
+            - '**.md'
 
 jobs:
     build:
@@ -24,3 +28,19 @@ jobs:
 
             - name: 🔨 Build
               run: npm run build
+
+    lint:
+        name: 📋 Lint
+        timeout-minutes: 10
+        runs-on: ubuntu-latest
+        env:
+            CI: true
+        steps:
+            - name: 🕶️ Checkout repository
+              uses: actions/checkout@v4
+
+            - name: 📦 Install
+              uses: ./.github/common/install
+
+            - name: 📋 Lint
+              run: npm run lint
