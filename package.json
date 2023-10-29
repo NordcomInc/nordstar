@@ -5,15 +5,24 @@
     "main": "index.js",
     "prettier": "@nordcom/prettier",
     "workspaces": [
-        "packages/**/**",
+        "packages/core/*",
+        "packages/components/*",
         "docs"
     ],
+    "engines": {
+        "npm": ">=8",
+        "node": ">=18 <=21"
+    },
     "scripts": {
+        "dev": "concurrently npm:dev:*",
+        "dev:docs": "turbo dev --filter=@nordcom/nordstar-docs",
         "build": "turbo build --filter=!@nordcom/nordstar-docs",
+        "build:docs": "turbo build --filter=@nordcom/nordstar-docs",
         "typecheck": "turbo typecheck",
         "lint": "concurrently npm:lint:*",
         "lint:packages": "eslint -c .eslintrc.json ./packages/**/**/*.{ts,tsx}",
         "lint:docs": "eslint -c .eslintrc.json ./docs/**/*.{ts,tsx} --no-error-on-unmatched-pattern",
+        "test": "concurrently npm:test:*",
         "clean": "concurrently npm:clean:*",
         "clean:turbo": "turbo clean && rimraf ./node_modules/.cache/turbo",
         "create:component": "plop component",
