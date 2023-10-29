@@ -28,7 +28,7 @@ jobs:
               uses: ./.github/common/install
 
             - name: 🔨 Build
-              run: npm run build
+              run: npm run build:packages
 
     lint:
         name: 📋 Lint
