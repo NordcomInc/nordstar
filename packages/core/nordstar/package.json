@@ -46,11 +46,12 @@
         "postpack": "clean-package restore"
     },
     "peerDependencies": {
-        "react": ">=18"
+        "react": ">=18",
+        "react-dom": ">=18"
     },
-    "dependencies": {},
     "devDependencies": {
-        "clean-package": "2.2.0"
+        "clean-package": "2.2.0",
+        "react": "18.2.0"
     },
     "clean-package": "../../../clean-package.config.json"
 }

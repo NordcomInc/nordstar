@@ -1,7 +1,3 @@
-/**
- * Part of this code is taken from @chakra-ui/react package ❤️
- */
-
 const capitalize = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
 };
