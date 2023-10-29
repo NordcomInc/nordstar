@@ -1,0 +1,20 @@
+# Code
+/docs/                      filiph@nordcom.io
+/packages/core/             filiph@nordcom.io
+/packages/components/       filiph@nordcom.io
+
+# Documentation
+/SECURITY.md                filiph@nordcom.io
+
+# Tooling
+/plop/                      filiph@nordcom.io
+/.husky/                    filiph@nordcom.io
+/.vscode/                   
+/.eslintrc.json             filiph@nordcom.io
+/.lintstagedrc.mjs          
+/.nvmrc                     filiph@nordcom.io
+/.npmrc                     filiph@nordcom.io
+/.renovaterc                filiph@nordcom.io
+package.json                
+/plopfile.js                filiph@nordcom.io
+/tsconfig.json              filiph@nordcom.io
