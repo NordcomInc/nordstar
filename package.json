@@ -17,7 +17,7 @@
         "create:component": "plop component",
         "create:package": "plop package",
         "version": "changeset version",
-        "release": "changeset release"
+        "release": "changeset publish"
     },
     "author": {
         "name": "Nordcom Group Inc.",
