@@ -1,19 +1,23 @@
 {
     "name": "@nordcom/nordstar",
-    "version": "0.1.0",
+    "version": "0.0.1",
     "description": "The @nordcom component library.",
     "main": "index.js",
     "prettier": "@nordcom/prettier",
     "workspaces": [
         "packages/**/**",
-        "docs/**"
+        "docs"
     ],
     "scripts": {
         "build": "turbo build --filter=!@nordcom/nordstar-docs",
         "typecheck": "turbo typecheck",
-        "lint": "npm run lint:pkg && npm run lint:docs",
-        "lint:pkg": "eslint -c .eslintrc.json ./packages/**/**/*.{ts,tsx}",
-        "lint:docs": "eslint -c .eslintrc.json ./docs/**/*.{ts,tsx}"
+        "lint": "concurrently npm:lint:*",
+        "lint:packages": "eslint -c .eslintrc.json ./packages/**/**/*.{ts,tsx}",
+        "lint:docs": "eslint -c .eslintrc.json ./docs/**/*.{ts,tsx}",
+        "create:component": "plop component",
+        "create:package": "plop package",
+        "version": "changeset version",
+        "release": "changeset release"
     },
     "author": {
         "name": "Nordcom Group Inc.",
@@ -35,18 +39,25 @@
     "bugs": {
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
-    "homepage": "https://github.com/NordcomInc/nordstar#readme",
+    "homepage": "https://nordstar.nordcom.io/",
     "dependencies": {
+        "@changesets/cli": "2.26.2",
+        "@changesets/types": "5.2.1",
         "@nordcom/prettier": "0.1.1"
     },
     "devDependencies": {
+        "@changesets/changelog-github": "0.4.8",
         "@types/react": "18.2.33",
         "@types/react-dom": "18.2.14",
         "concurrently": "8.2.2",
         "eslint": "8.52.0",
         "eslint-config-prettier": "9.0.0",
         "eslint-plugin-unused-imports": "3.0.0",
+        "plop": "4.0.0",
         "prettier": "3.0.3",
+        "prettier-eslint": "16.1.2",
+        "rimraf": "5.0.5",
+        "tsup": "7.2.0",
         "turbo": "1.10.16",
         "typescript": "5.2.2"
     }

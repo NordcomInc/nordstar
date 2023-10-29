@@ -1,2 +1,1 @@
-# nordstar
-
+packages/core/nordstar/README.md
