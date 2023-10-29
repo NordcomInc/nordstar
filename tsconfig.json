@@ -1,7 +1,6 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
     "compilerOptions": {
-        "plugins": [],
         "allowJs": true,
         "baseUrl": ".",
         "declaration": true,
@@ -13,6 +12,8 @@
         "lib": ["dom", "dom.iterable", "ESNext"],
         "module": "ESNext",
         "moduleResolution": "Node10",
+        "paths": {},
+        "plugins": [],
         "removeComments": true,
         "resolveJsonModule": true,
         "rootDir": "./",
@@ -20,8 +21,7 @@
         "sourceMap": true,
         "strict": true,
         "strictNullChecks": true,
-        "target": "ESNext",
-        "paths": {}
+        "target": "ESNext"
     },
     "include": ["packages"],
     "exclude": ["**/node_modules", "**/dist", "**/.turbo"]
