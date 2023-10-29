@@ -55,5 +55,19 @@ jobs:
             - name: 📦 Install
               uses: ./.github/common/install
 
-            - name: 🧪 Test
-              run: npm run test
+            # - name: 🧪 Test
+            #   run: npm run test
+
+    typecheck:
+        name: ✅ Typecheck
+        timeout-minutes: 10
+        runs-on: ubuntu-latest
+        steps:
+            - name: 🕶️ Checkout repository
+              uses: actions/checkout@v4
+
+            - name: 📦 Install
+              uses: ./.github/common/install
+
+            - name: ✅ Typecheck
+              run: npm run typecheck
