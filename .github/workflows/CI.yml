@@ -1,0 +1,26 @@
+name: 🧠 CI
+
+on:
+    pull_request:
+        branches:
+            - master
+    push:
+        branches:
+            - master
+
+jobs:
+    build:
+        name: 🔨 Build
+        timeout-minutes: 10
+        runs-on: ubuntu-latest
+        env:
+            CI: true
+        steps:
+            - name: 🕶️ Checkout repository
+              uses: actions/checkout@v2
+
+            - name: 📦 Install
+              uses: ./.github/common/install
+
+            - name: 🔨 Build
+              run: npm run build

@@ -1,0 +1,53 @@
+{
+    "name": "@nordcom/nordstar",
+    "version": "0.1.0",
+    "description": "The @nordcom component library.",
+    "main": "index.js",
+    "prettier": "@nordcom/prettier",
+    "workspaces": [
+        "packages/**/**",
+        "docs/**"
+    ],
+    "scripts": {
+        "build": "turbo build --filter=!@nordcom/nordstar-docs",
+        "typecheck": "turbo typecheck",
+        "lint": "npm run lint:pkg && npm run lint:docs",
+        "lint:pkg": "eslint -c .eslintrc.json ./packages/**/**/*.{ts,tsx}",
+        "lint:docs": "eslint -c .eslintrc.json ./docs/**/*.{ts,tsx}"
+    },
+    "author": {
+        "name": "Nordcom Group Inc.",
+        "email": "opensource@nordcom.io",
+        "url": "https://nordcom.io/"
+    },
+    "contributors": [
+        {
+            "name": "Filiph Siitam Sandström",
+            "email": "filiph@nordcom.io",
+            "url": "https://github.com/filiphsps/"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NordcomInc/nordstar.git"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/NordcomInc/nordstar/issues"
+    },
+    "homepage": "https://github.com/NordcomInc/nordstar#readme",
+    "dependencies": {
+        "@nordcom/prettier": "0.1.1"
+    },
+    "devDependencies": {
+        "@types/react": "18.2.33",
+        "@types/react-dom": "18.2.14",
+        "concurrently": "8.2.2",
+        "eslint": "8.52.0",
+        "eslint-config-prettier": "9.0.0",
+        "eslint-plugin-unused-imports": "3.0.0",
+        "prettier": "3.0.3",
+        "turbo": "1.10.16",
+        "typescript": "5.2.2"
+    }
+}
