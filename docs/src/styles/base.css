@@ -1,0 +1,20 @@
+body {
+    margin: 0;
+    font-family: var(--font-primary);
+    background: #000;
+    color: #fff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* TODO: This should obviously be in the component library :^) */
+main {
+    padding: 1rem;
+}
+
+h1 {
+    margin: 0;
+    line-height: 1;
+}

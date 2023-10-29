@@ -2,6 +2,23 @@
     "name": "@nordcom/nordstar-docs",
     "version": "0.0.1",
     "sideEffects": false,
+    "type": "module",
+    "engines": {
+        "npm": ">=8",
+        "node": ">=18 <=21"
+    },
+    "cacheDirectories": [
+        ".next/cache"
+    ],
+    "prettier": "@nordcom/prettier",
+    "scripts": {
+        "dev": "next dev --turbo",
+        "start": "next start -p $PORT",
+        "lint": "concurrently npm:lint:*",
+        "lint:next": "next lint",
+        "lint:prettier": "prettier src/**/*.* --check",
+        "typecheck": "tsc --noEmit"
+    },
     "keywords": [
         "nordstar",
         "nordcom",
@@ -29,7 +46,19 @@
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
     "homepage": "https://nordstar.nordcom.io/",
-    "scripts": {},
-    "dependencies": {},
-    "devDependencies": {}
+    "dependencies": {
+        "@nordcom/nordstar": "*",
+        "next": "14.0.0",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "@nordcom/prettier": "0.1.1",
+        "@types/node": "20.8.9",
+        "@types/react": "18.2.33",
+        "@types/react-dom": "18.2.14",
+        "eslint-config-next": "14.0.0",
+        "prettier": "3.0.3",
+        "typescript": "5.2.2"
+    }
 }
