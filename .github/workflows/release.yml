@@ -1,0 +1,42 @@
+name: Release
+
+on:
+    push:
+        paths:
+            - '.changeset/**'
+            - 'packages/**'
+        branches:
+            - master
+
+concurrency:
+    group: ${{ github.workflow }}-${{ github.ref }}
+
+jobs:
+    release:
+        name: Release
+        runs-on: ubuntu-latest
+        steps:
+            - name: 🕶️ Checkout repository
+              uses: actions/checkout@v4
+
+            - name: 📦 Install
+              uses: ./.github/common/install
+
+            - name: 🔨 Build
+              run: npm run build:packages
+
+            - name: 🧪 Tests
+              run: npm run test:packages
+
+            - name: 🤝 Create Release Pull Request or Publish to NPM
+              id: changesets
+              uses: changesets/action@v1
+              with:
+                  publish: npm release
+                  title: 'Meta: Bump version.'
+                  commit: ''
+                  setupGitUser: false
+              env:
+                  NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+                  NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
