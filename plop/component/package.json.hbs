@@ -1,0 +1,64 @@
+{
+    "name": "@nordcom/nordstar-{{componentName}}",
+    "version": "0.0.1",
+    "description": "{{description}}",
+    "main": "src/index.ts",
+    "sideEffects": false,
+    "keywords": [
+        "nordstar",
+        "nordcom",
+        "component",
+        "react",
+        "{{componentName}}",
+        "nordstar-{{componentName}}"
+    ],
+    "author": {
+        "name": "Nordcom Group Inc.",
+        "email": "opensource@nordcom.io",
+        "url": "https://nordcom.io/"
+    },
+    "contributors": [
+        {
+            "name": "Filiph Siitam Sandström",
+            "email": "filiph@nordcom.io",
+            "url": "https://github.com/filiphsps/"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NordcomInc/nordstar.git",
+        "directory": "packages/{{outDir}}/{{componentName}}"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/NordcomInc/nordstar/issues"
+    },
+    "homepage": "https://nordstar.nordcom.io/docs/components/{{componentName}}/",
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "tsup src --dts",
+        "build:fast": "tsup src",
+        "dev": "npm run build:fast -- --watch",
+        "clean": "rimraf dist .turbo",
+        "typecheck": "tsc --noEmit",
+        "prepack": "clean-package",
+        "postpack": "clean-package restore"
+    },
+    "peerDependencies": {
+        "react": ">=18"
+    },
+    "dependencies": {
+        "@nordcom/nordstar": "workspace:*",
+        "@nordcom/nordstar-theme": "workspace:*"
+    },
+    "devDependencies": {
+        "clean-package": "2.2.0",
+        "react": "^18.0.0"
+    },
+    "clean-package": "../../../clean-package.config.json"
+}

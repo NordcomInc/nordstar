@@ -1,0 +1,35 @@
+{
+    "name": "@nordcom/nordstar-docs",
+    "version": "0.0.1",
+    "sideEffects": false,
+    "keywords": [
+        "nordstar",
+        "nordcom",
+        "docs"
+    ],
+    "author": {
+        "name": "Nordcom Group Inc.",
+        "email": "opensource@nordcom.io",
+        "url": "https://nordcom.io/"
+    },
+    "contributors": [
+        {
+            "name": "Filiph Siitam Sandström",
+            "email": "filiph@nordcom.io",
+            "url": "https://github.com/filiphsps/"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NordcomInc/nordstar.git",
+        "directory": "docs"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/NordcomInc/nordstar/issues"
+    },
+    "homepage": "https://nordstar.nordcom.io/",
+    "scripts": {},
+    "dependencies": {},
+    "devDependencies": {}
+}
