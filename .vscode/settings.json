@@ -1,9 +1,35 @@
 {
     "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.locale": "en",
+    "typescript.surveys.enabled": false,
+    "git.autofetch": "all",
+    "git.countBadge": "tracked",
+    "git.fetchOnPull": true,
+    "git.inputValidationSubjectLength": 72,
+    "git.inputValidation": "always",
+    "git.showPushSuccessNotification": true,
+    "github.copilot.enable": {
+        "plaintext": "true",
+        "markdown": "true"
+    },
     "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
         "source.fixAll": true,
         "source.organizeImports": true,
         "source.sortMembers": true
+    },
+    "files.associations": {
+        "**/*.hbs": "plaintext",
+        "LICENSE": "plaintext",
+        ".renovaterc": "json"
+    },
+    "[plaintext]": {
+        "editor.formatOnSave": false
+    },
+    "[git-commit]": {
+        "editor.rulers": [72],
+        "editor.wordWrap": "off",
+        "workbench.editor.restoreViewState": false
     }
 }
