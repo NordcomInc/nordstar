@@ -23,6 +23,7 @@
     "files.associations": {
         "**/*.hbs": "plaintext",
         "LICENSE": "plaintext",
+        ".eslintrc": "json",
         ".renovaterc": "json"
     },
     "[plaintext]": {
