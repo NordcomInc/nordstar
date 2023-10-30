@@ -1,0 +1,65 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@nordcom/nordstar-storybook",
+    "version": "0.0.1",
+    "description": "",
+    "main": "src/index.ts",
+    "sideEffects": false,
+    "keywords": [
+        "nordstar",
+        "nordcom",
+        "storybook"
+    ],
+    "author": {
+        "name": "Nordcom Group Inc.",
+        "email": "opensource@nordcom.io",
+        "url": "https://nordcom.io/"
+    },
+    "contributors": [
+        {
+            "name": "Filiph Siitam Sandström",
+            "email": "filiph@nordcom.io",
+            "url": "https://github.com/filiphsps/"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NordcomInc/nordstar.git",
+        "directory": "packages/core/nordstar"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/NordcomInc/nordstar/issues"
+    },
+    "homepage": "https://nordstar.nordcom.io/",
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "tsup src --dts",
+        "dev": "storybook dev -p 3001",
+        "start": ""
+    },
+    "dependencies": {
+        "@nordcom/nordstar": "*",
+        "react": "18.2.0",
+        "react-dom": "18.2.0"
+    },
+    "devDependencies": {
+        "@storybook/addon-a11y": "7.5.1",
+        "@storybook/addon-actions": "7.5.1",
+        "@storybook/addon-docs": "7.5.1",
+        "@storybook/addon-essentials": "7.5.1",
+        "@storybook/addon-links": "7.5.1",
+        "@storybook/addon-mdx-gfm": "7.5.1",
+        "@storybook/cli": "7.5.1",
+        "@storybook/react": "7.5.1",
+        "@storybook/react-vite": "7.5.1",
+        "@storybook/theming": "7.5.1",
+        "storybook": "7.5.1",
+        "storybook-dark-mode": "3.0.1"
+    }
+}

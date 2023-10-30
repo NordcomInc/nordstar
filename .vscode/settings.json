@@ -6,6 +6,7 @@
     "git.countBadge": "tracked",
     "git.fetchOnPull": true,
     "git.inputValidationSubjectLength": 72,
+    "git.inputValidationLength": 72,
     "git.inputValidation": "always",
     "git.showPushSuccessNotification": true,
     "github.copilot.enable": {
