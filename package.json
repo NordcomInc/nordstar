@@ -1,7 +1,8 @@
 {
+    "$schema": "https://json.schemastore.org/package.json",
     "name": "nordstar",
     "version": "0.0.1",
-    "description": "The @nordcom component library.",
+    "description": "The Nordcom Group Inc. component library.",
     "main": "index.js",
     "prettier": "@nordcom/prettier",
     "workspaces": [
@@ -23,8 +24,8 @@
         "build:docs": "turbo build --filter=@nordcom/nordstar-docs",
         "typecheck": "turbo typecheck",
         "lint": "concurrently --raw npm:lint:*",
-        "lint:docs": "eslint -c .eslintrc.json ./docs/**/*.{ts,tsx} --no-error-on-unmatched-pattern",
-        "lint:packages": "eslint -c .eslintrc.json ./packages/**/**/*.{ts,tsx}",
+        "lint:docs": "eslint ./docs/**/*.{ts,tsx} --no-error-on-unmatched-pattern",
+        "lint:packages": "eslint ./packages/**/**/*.{ts,tsx}",
         "test": "concurrently --raw npm:test:*",
         "test:docs": "",
         "test:packages": "",
@@ -56,6 +57,9 @@
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
     "homepage": "https://nordstar.nordcom.io/",
+    "publishConfig": {
+        "access": "public"
+    },
     "dependencies": {
         "@changesets/cli": "2.26.2",
         "@changesets/types": "5.2.1",

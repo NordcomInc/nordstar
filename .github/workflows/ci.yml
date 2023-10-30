@@ -16,7 +16,7 @@ env:
     CI: true
     TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
     TURBO_TEAM: ${{ vars.TURBO_TEAM }}
-      
+
 jobs:
     build:
         name: 🔨 Build
@@ -57,8 +57,8 @@ jobs:
             - name: 📦 Install
               uses: ./.github/common/install
 
-            # - name: 🧪 Test
-            #   run: npm run test
+            - name: 🧪 Test
+              run: npm run test
 
     typecheck:
         name: ✅ Typecheck
