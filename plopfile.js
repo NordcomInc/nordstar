@@ -39,11 +39,6 @@ module.exports = function main(plop) {
                             return `${gen} name is required`;
                         }
 
-                        // check is has a valid hook name "use-something"
-                        if (gen === 'hook' && !value.startsWith('use-')) {
-                            return "Hook name must start with 'use-'";
-                        }
-
                         // check is case is correct
                         if (value !== value.toLowerCase()) {
                             return `${gen} name must be in lowercase`;

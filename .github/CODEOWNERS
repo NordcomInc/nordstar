@@ -10,7 +10,7 @@
 /plop/                      filiph@nordcom.io
 /.husky/                    filiph@nordcom.io
 /.vscode/                   
-/.eslintrc.json             filiph@nordcom.io
+/.eslintrc                  filiph@nordcom.io
 /.lintstagedrc.mjs          
 /.nvmrc                     filiph@nordcom.io
 /.npmrc                     filiph@nordcom.io
