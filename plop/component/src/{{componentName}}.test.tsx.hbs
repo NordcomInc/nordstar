@@ -1,0 +1,13 @@
+import React from 'react';
+import { {{capitalize componentName}} } from '../src';
+import { render } from '@testing-library/react';
+
+describe('components', () => {
+    describe('{{capitalize componentName}}', () => {
+        it('should render correctly', () => {
+            const wrapper = render(<{{capitalize componentName}} />);
+
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+    });
+});

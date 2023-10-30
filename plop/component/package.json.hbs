@@ -1,4 +1,5 @@
 {
+    "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-{{componentName}}",
     "version": "0.0.1",
     "description": "{{description}}",
@@ -54,15 +55,14 @@
         "access": "public"
     },
     "dependencies": {
-        "@nordcom/nordstar": "workspace:*",
-        "@nordcom/nordstar-theme": "workspace:*"
+        "@nordcom/nordstar": "*"
     },
     "peerDependencies": {
         "react": ">=18"
     },
     "devDependencies": {
         "clean-package": "2.2.0",
-        "react": "^18.0.0"
+        "react": "18.2.0"
     },
     "clean-package": "../../../clean-package.config.json"
 }

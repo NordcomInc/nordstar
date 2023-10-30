@@ -1,0 +1,13 @@
+import { ReactNode } from 'react';
+
+export type {{capitalize componentName}}Props = {
+    children: ReactNode;
+};
+
+const {{capitalize componentName}} = (props: {{capitalize componentName}}Props) => {
+    const { children } = props;
+
+    return <div {...props}>{children}</div>;
+};
+
+export default {{capitalize componentName}};
