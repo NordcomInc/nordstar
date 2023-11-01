@@ -31,7 +31,7 @@
         "lint:packages": "eslint ./packages/**/**/*.{ts,tsx}",
         "test": "concurrently --raw npm:test:*",
         "test:docs": "",
-        "test:packages": "vitest run --coverage",
+        "test:packages": "vitest run --coverage --passWithNoTests",
         "clean": "concurrently --raw npm:clean:*",
         "clean:turbo": "turbo clean && rimraf ./node_modules/.cache/turbo",
         "create:component": "plop component",
