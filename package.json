@@ -70,7 +70,7 @@
     "devDependencies": {
         "@changesets/changelog-github": "0.4.8",
         "@nordcom/prettier": "0.1.1",
-        "@storybook/react": "7.5.1",
+        "@storybook/react": "7.5.2",
         "@testing-library/dom": "9.3.3",
         "@testing-library/jest-dom": "6.1.4",
         "@testing-library/react": "14.0.0",
