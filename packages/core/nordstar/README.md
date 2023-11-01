@@ -1,21 +1,20 @@
 # [@nordcom/nordstar](https://nordstar.nordcom.io/)
 
 [![Downloads on npm](https://img.shields.io/npm/dt/@nordcom/nordstar.svg)](https://www.npmjs.com/package/@nordcom/nordstar)
-[![GitHub commit activity](https://img.shields.io/github/commit-activity/t/NordcomInc/nordstar)](https://github.com/NordcomInc/nordstar/graphs/commit-activity)
-[![GitHub contributors](https://img.shields.io/github/contributors/NordcomInc/nordstar)](https://github.com/NordcomInc/nordstar/graphs/contributors)
-[![License](https://img.shields.io/github/license/NordcomInc/nordstar.svg)](https://github.com/NordcomInc/nordstar/blob/master/LICENSE)
-[![codecov](https://codecov.io/gh/NordcomInc/nordstar/graph/badge.svg?token=C3ZLZ6X9QZ)](https://codecov.io/gh/NordcomInc/nordstar)
-[![Discord](https://img.shields.io/discord/532606942019846176.svg?logo=discord&logoColor=white&logoWidth=20&labelColor=7289DA&label=Discord&color=17cf48)](https://discord.gg/WgYVtCbR6J)
-[![WakaTime](https://wakatime.com/badge/github/NordcomInc/nordstar.svg)](https://wakatime.com/badge/github/NordcomInc/nordstar)
+[![Code Coverage](https://img.shields.io/codecov/c/github/NordcomInc/Nordstar?token=C3ZLZ6X9QZ
+)](https://codecov.io/gh/NordcomInc/nordstar)
+[![Discord](https://img.shields.io/discord/532606942019846176.svg?label=discord&color=7289DA)](https://discord.gg/WgYVtCbR6J)
+[![GitHub Commit Activity](https://img.shields.io/github/commit-activity/t/NordcomInc/nordstar)](https://github.com/NordcomInc/nordstar/graphs/commit-activity)
+[![GitHub Contributors](https://img.shields.io/github/contributors/NordcomInc/nordstar)](https://github.com/NordcomInc/nordstar/graphs/contributors)
 
-**Nordcom Group Inc.**'s component library, a modern, accessible, beautiful, and flexible design system for building human user interfaces.
+**Nordcom Group Inc.**'s component library. A modern, accessible, beautiful, and flexible design system for building human user interfaces in Next.js.
 
-> [!WARNING]  
-> This project is still in early development and is not quite ready for production use. Dragons ahead!
-
-Join our [Discord server](https://discord.gg/WgYVtCbR6J) to chat with the community and the Nordcom Group Inc. team.
+[Join our Discord server](https://discord.gg/WgYVtCbR6J) and come hang out with the community and the Nordstar team at Nordcom Group Inc.!
 
 ## 🚀 Getting Started
+
+> [!NOTE]  
+> Nordstar is still in early development and is **not** yet ready for production use. Beware of dragons ahead!
 
 ```bash
 npm install @nordcom/nordstar
@@ -41,9 +40,9 @@ To get started, please read our [Contributing Guidelines](CONTRIBUTING.md) as it
 
 ## 💛 Thanks To
 
-- The [NextUI team and their contributors](https://github.com/nextui-org/nextui) for showing how to properly build a react component library and for providing it as [open source under the permissive MIT license](LICENSE#L27), we've partialy used it as the base for Nordstar. Go check them out, they're great!
-- Our amazingly, awesome, and wonderful [contributors](https://github.com/NordcomInc/nordstar/graphs/contributors) for helping us make Nordstar the best it can be. Open Source is fueled by amazing people like y'all, thank you!
+• The [NextUI team and their contributors](https://github.com/nextui-org/nextui) for showing how to properly build a react component library and for providing it as [open source under the permissive MIT license](LICENSE#L27), we've partialy used it as the base for Nordstar. Go check them out, they're great!
+• Our amazingly, awesome, and wonderful [contributors](https://github.com/NordcomInc/nordstar/graphs/contributors) for helping us make Nordstar the best it can be. Open Source is fueled by amazing people like y'all, thank you!
 
 ## 📝 License
 
-Licensed under the [MIT License](LICENSE). Created by **[Nordcom Group Inc.](https://nordcom.io/?utm_source=nordstar&utm_campaign=oss)**.
+Licensed under the [MIT License](LICENSE). Created by **[Nordcom Group Inc.](https://nordcom.io/?utm_source=nordstar&utm_campaign=oss)** with the help of outside contributors.
