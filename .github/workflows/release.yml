@@ -43,7 +43,7 @@ jobs:
               id: changesets
               uses: changesets/action@v1
               with:
-                  publish: npm release
+                  publish: npm run release
                   setupGitUser: false
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
