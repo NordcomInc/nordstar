@@ -4,6 +4,7 @@
 [![GitHub commit activity](https://img.shields.io/github/commit-activity/t/NordcomInc/nordstar)](https://github.com/NordcomInc/nordstar/graphs/commit-activity)
 [![GitHub contributors](https://img.shields.io/github/contributors/NordcomInc/nordstar)](https://github.com/NordcomInc/nordstar/graphs/contributors)
 [![License](https://img.shields.io/github/license/NordcomInc/nordstar.svg)](https://github.com/NordcomInc/nordstar/blob/master/LICENSE)
+[![codecov](https://codecov.io/gh/NordcomInc/nordstar/graph/badge.svg?token=C3ZLZ6X9QZ)](https://codecov.io/gh/NordcomInc/nordstar)
 [![Discord](https://img.shields.io/discord/532606942019846176.svg?logo=discord&logoColor=white&logoWidth=20&labelColor=7289DA&label=Discord&color=17cf48)](https://discord.gg/WgYVtCbR6J)
 [![WakaTime](https://wakatime.com/badge/github/NordcomInc/nordstar.svg)](https://wakatime.com/badge/github/NordcomInc/nordstar)
 
@@ -40,9 +41,8 @@ To get started, please read our [Contributing Guidelines](CONTRIBUTING.md) as it
 
 ## 💛 Thanks To
 
-● The [NextUI team and their contributors](https://github.com/nextui-org/nextui) for showing how to properly build a react component library and for providing it as [open source under the permissive MIT license](LICENSE#L27), we've partialy used it as the base for Nordstar. Go check them out, they're great!
-
-● Our amazingly, awesome, and wonderful [contributors](https://github.com/NordcomInc/nordstar/graphs/contributors) for helping us make Nordstar the best it can be. Open Source is fueled by amazing people like y'all, thank you!
+- The [NextUI team and their contributors](https://github.com/nextui-org/nextui) for showing how to properly build a react component library and for providing it as [open source under the permissive MIT license](LICENSE#L27), we've partialy used it as the base for Nordstar. Go check them out, they're great!
+- Our amazingly, awesome, and wonderful [contributors](https://github.com/NordcomInc/nordstar/graphs/contributors) for helping us make Nordstar the best it can be. Open Source is fueled by amazing people like y'all, thank you!
 
 ## 📝 License
 
