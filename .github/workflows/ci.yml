@@ -1,16 +1,12 @@
-name: 🧠 CI
+name: CI
 
 on:
     pull_request_target:
         branches:
             - master
-        paths-ignore:
-            - '**.md'
     push:
         branches:
             - master
-        paths-ignore:
-            - '**.md'
 
 env:
     CI: true
@@ -34,7 +30,7 @@ jobs:
 
     lint:
         name: 📋 Lint
-        timeout-minutes: 10
+        timeout-minutes: 5
         runs-on: ubuntu-latest
         steps:
             - name: 🕶️ Checkout repository
@@ -59,6 +55,11 @@ jobs:
 
             - name: 🧪 Test
               run: npm run test
+
+            - name: 🦺 Codecov Coverage Reports
+              uses: codecov/codecov-action@v3
+              env:
+                  CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
     typecheck:
         name: ✅ Typecheck
