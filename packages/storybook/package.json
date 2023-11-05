@@ -39,7 +39,7 @@
         "access": "public"
     },
     "scripts": {
-        "build": "tsup src --dts",
+        "build": "storybook build",
         "dev": "storybook dev -p 3001",
         "start": ""
     },
