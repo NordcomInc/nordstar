@@ -1,3 +1,4 @@
+import { NordstarProvider } from '@nordcom/nordstar';
 import React from 'react';
 
 import type { Preview } from '@storybook/react';
@@ -5,9 +6,11 @@ import type { Preview } from '@storybook/react';
 const decorators: Preview['decorators'] = [
     (Story, { globals: {} }) => {
         return (
-            <div>
-                <Story />
-            </div>
+            <NordstarProvider>
+                <div lang="en" dir="ltr">
+                    <Story />
+                </div>
+            </NordstarProvider>
         );
     }
 ];
