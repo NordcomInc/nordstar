@@ -1,1 +1,1 @@
-export * from './nordcom-provider';
+export * from './nordstar-provider';
