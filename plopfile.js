@@ -71,6 +71,7 @@ module.exports = function main(plop) {
                     message: `where should this ${gen} live?`,
                     default: defaultOutDirs[gen],
                     choices: workspaces,
+
                     validate: (value) => {
                         if (!value) {
                             return `outDir is required`;
