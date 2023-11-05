@@ -33,5 +33,12 @@
         "editor.rulers": [72],
         "editor.wordWrap": "off",
         "workbench.editor.restoreViewState": false
-    }
+    },
+    "cSpell.words": ["Brandly", "Nordcom", "nordstar"],
+    "markdown.extension.list.indentationSize": "inherit",
+    "markdown.extension.toc.levels": "2..6",
+    "markdown.extension.toc.omittedFromToc": {
+        "CONTRIBUTING.md": ["## Table of Contents"]
+    },
+    "markdown.extension.toc.slugifyMode": "github"
 }
