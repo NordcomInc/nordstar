@@ -5,11 +5,13 @@ import { NordstarProvider } from './nordstar-provider';
 
 describe('NordstarProvider', () => {
     it('renders its children', () => {
+        const testText = 'Hello, world!';
+
         const { getByText } = render(
             <NordstarProvider>
-                <div>Hello, world!</div>
+                <div>{testText}</div>
             </NordstarProvider>
         );
-        expect(getByText('Hello, world!')).toBeInTheDocument();
+        expect(getByText(testText)).toBeInTheDocument();
     });
 });

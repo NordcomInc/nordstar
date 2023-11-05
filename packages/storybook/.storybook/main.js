@@ -1,4 +1,4 @@
-import { dirname, join } from 'path';
+import { dirname, join } from 'node:path';
 module.exports = {
     stories: [
         './readme.stories.mdx',
