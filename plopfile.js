@@ -55,7 +55,15 @@ module.exports = function main(plop) {
                 {
                     type: 'input',
                     name: 'description',
-                    message: `The description of this ${gen}:`
+                    message: `The description of this ${gen}:`,
+
+                    validate: (value) => {
+                        if (!value) {
+                            return `${gen} name is required`;
+                        }
+
+                        return true;
+                    }
                 },
                 {
                     type: 'list',

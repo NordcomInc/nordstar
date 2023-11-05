@@ -4,5 +4,5 @@ export default defineConfig({
     clean: true,
     target: 'esnext',
     entry: ['src/index.ts', '!src/scripts'],
-    format: ['cjs', 'esm']
+    format: ['esm']
 });
