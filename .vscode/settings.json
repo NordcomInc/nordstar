@@ -34,11 +34,12 @@
         "editor.wordWrap": "off",
         "workbench.editor.restoreViewState": false
     },
-    "cSpell.words": ["Brandly", "Nordcom", "nordstar"],
+    "cSpell.words": ["Brandly", "Filiph", "Nordcom", "nordstar", "Sandström", "Siitam", "typecheck"],
     "markdown.extension.list.indentationSize": "inherit",
     "markdown.extension.toc.levels": "2..6",
     "markdown.extension.toc.omittedFromToc": {
         "CONTRIBUTING.md": ["## Table of Contents"]
     },
-    "markdown.extension.toc.slugifyMode": "github"
+    "markdown.extension.toc.slugifyMode": "github",
+    "markdownlint.ignore": ["**/.changeset/**.md"]
 }

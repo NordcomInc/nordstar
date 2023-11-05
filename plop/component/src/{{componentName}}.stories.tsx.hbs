@@ -1,16 +1,18 @@
-import type { Meta } from '@storybook/react';
-import type { {{capitalize componentName}}Props } from '../src';
 import { {{capitalize componentName}} } from '../src';
+import type { {{capitalize componentName}}Props } from '../src';
+import type { Meta } from '@storybook/react';
 
-export default {
+const story: Meta<typeof {{capitalize componentName}}> = {
     title: 'Components/{{capitalize componentName}}',
     component: {{capitalize componentName}},
     argTypes: {}
-} as Meta<typeof {{capitalize componentName}}>;
+};
 
 const Template = (args: {{capitalize componentName}}Props) => <{{capitalize componentName}} {...args} />;
 
-export const Default = {
+export const Standard = {
     render: Template,
     args: {}
 };
+
+export default story;

@@ -2,7 +2,7 @@ import { dirname, join } from 'node:path';
 module.exports = {
     stories: [
         './readme.stories.mdx',
-        '../../components/**/*.stories.@(js|jsx|ts|tsx)'
+        '../../components/**/*.stories.{ts,tsx}'
     ],
     staticDirs: ['../public'],
     addons: [

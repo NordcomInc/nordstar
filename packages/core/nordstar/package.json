@@ -38,8 +38,8 @@
         "access": "public"
     },
     "scripts": {
-        "build": "tsup src --dts",
-        "build:fast": "tsup src",
+        "build": "tsup --dts",
+        "build:fast": "tsup",
         "dev": "npm run build:fast -- --watch",
         "clean": "rimraf dist .turbo",
         "typecheck": "tsc --noEmit",

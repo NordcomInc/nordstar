@@ -29,7 +29,7 @@
         "typecheck": "turbo typecheck",
         "lint": "concurrently --raw npm:lint:*",
         "lint:docs": "eslint ./docs/**/*.{ts,tsx} --no-error-on-unmatched-pattern",
-        "lint:packages": "eslint ./packages/**/**/*.{ts,tsx}",
+        "lint:packages": "eslint ./packages/**/src/**/*.{ts,tsx}",
         "test": "concurrently --raw npm:test:*",
         "test:docs": "",
         "test:packages": "vitest run --coverage --passWithNoTests",

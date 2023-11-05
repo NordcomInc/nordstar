@@ -1,8 +1,13 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
+    cjsInterop: true,
     clean: true,
+    entry: ['src/index.ts', 'src/**/*.ts(x)?', '!src/**/*.(stories|test).ts(x)?'],
+    format: ['cjs', 'esm'],
+    keepNames: true,
+    skipNodeModulesBundle: true,
+    sourcemap: true,
     target: 'esnext',
-    entry: ['src/index.ts', '!src/scripts'],
-    format: ['cjs', 'esm']
+    tsconfig: 'tsconfig.json'
 });
