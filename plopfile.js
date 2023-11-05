@@ -59,7 +59,7 @@ module.exports = function main(plop) {
 
                     validate: (value) => {
                         if (!value) {
-                            return `${gen} name is required`;
+                            return `${gen} description is required`;
                         }
 
                         return true;
@@ -68,7 +68,7 @@ module.exports = function main(plop) {
                 {
                     type: 'list',
                     name: 'outDir',
-                    message: `where should this ${gen} live?`,
+                    message: `Where should this ${gen} live?`,
                     default: defaultOutDirs[gen],
                     choices: workspaces,
 
