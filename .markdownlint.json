@@ -3,9 +3,20 @@
     "default": true,
     "spaces": true,
     "no-hard-tabs": true,
-    "MD013": false,
-    "MD007": {
-        "indent": 4
+    "no-trailing-punctuation": {
+        "punctuation": ".,;:!。，；：！"
     },
-    "MD041": false
+    "list-marker-space": {
+        "ol_single": 1,
+        "ol_multi": 1,
+        "ul_single": 1,
+        "ul_multi": 1
+    },
+    "ul-indent": {
+        "indent": 1,
+        "start_indent": 1,
+        "start_indented": true
+    },
+    "line-length": false,
+    "first-line-heading": false
 }
