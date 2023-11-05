@@ -5,7 +5,9 @@
         "incremental": true,
         "jsx": "preserve",
         "noEmit": true,
-        "paths": { "@/*": ["./src/*"] },
+        "paths": {
+            "@/*": ["./src/*"]
+        },
         "plugins": [{ "name": "next" }]
     },
     "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", ".next/types/**/*.ts"],
