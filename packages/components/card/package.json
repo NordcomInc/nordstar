@@ -1,7 +1,7 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-card",
-    "version": "0.0.1",
+    "version": "0.0.3",
     "description": "",
     "main": "src/index.ts",
     "sideEffects": false,
