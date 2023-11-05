@@ -25,5 +25,13 @@
         "types": ["vitest/globals", "@testing-library/jest-dom"]
     },
     "include": ["packages"],
-    "exclude": ["**/node_modules", "**/dist", "**/.turbo"]
+    "exclude": [
+        "**/node_modules",
+        "**/dist",
+        "**/.turbo",
+        "**/storybook-static",
+        "**/coverage",
+        "**/build",
+        "**/public"
+    ]
 }
