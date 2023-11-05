@@ -18,6 +18,8 @@ jobs:
         name: 🔨 Build
         timeout-minutes: 10
         runs-on: ubuntu-latest
+        permissions:
+            contents: write
         steps:
             - name: 🕶️ Checkout repository
               uses: actions/checkout@v4
@@ -27,6 +29,15 @@ jobs:
 
             - name: 🔨 Build
               run: npm run build:packages
+
+            - name: 🚚 Deploy Storybook
+              if: github.ref == 'refs/heads/master'
+              uses: peaceiris/actions-gh-pages@v3
+              with:
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  publish_dir: ./packages/storybook/storybook-static
+                  user_name: 'nordcombot'
+                  user_email: 'opensource@nordcom.io'
 
     lint:
         name: 📋 Lint
