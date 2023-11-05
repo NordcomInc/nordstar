@@ -1,11 +1,15 @@
 {
-    "$schema": "https://unpkg.com/@changesets/config@2.3.1/schema.json",
+    "$schema": "https://unpkg.com/@changesets/config@latest/schema.json",
     "changelog": ["@changesets/changelog-github", { "repo": "NordcomInc/nordstar" }],
     "commit": false,
-    "fixed": [],
+    "fixed": [["@nordcom/nordstar", "@nordcom/nordstar-*"]],
     "linked": [],
     "access": "public",
     "baseBranch": "master",
     "updateInternalDependencies": "patch",
-    "ignore": []
+    "privatePackages": {
+        "tag": true,
+        "version": true
+    },
+    "ignore": ["@nordcom/nordstar-docs", "@nordcom/nordstar-storybook"]
 }

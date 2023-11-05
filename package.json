@@ -1,6 +1,7 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
     "name": "nordstar",
+    "private": true,
     "version": "0.0.2",
     "description": "Nordcom Group Inc.'s component library, a modern, accessible, beautiful, and flexible design system for building human user interfaces.",
     "main": "index.js",
