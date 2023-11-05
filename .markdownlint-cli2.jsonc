@@ -1,0 +1,25 @@
+{
+    "$schema": "https://raw.githubusercontent.com/DavidAnson/markdownlint-cli2/main/schema/markdownlint-cli2-config-schema.json",
+    "config": {
+        "default": true,
+        "spaces": true,
+        "no-hard-tabs": true,
+        "no-trailing-punctuation": {
+            "punctuation": ".,;:!。，；：！"
+        },
+        "list-marker-space": {
+            "ol_single": 1,
+            "ol_multi": 1,
+            "ul_single": 1,
+            "ul_multi": 1
+        },
+        "ul-indent": {
+            "indent": 1,
+            "start_indent": 1,
+            "start_indented": true
+        },
+        "line-length": false,
+        "first-line-heading": false
+    },
+    "ignores": ["**/.changeset/**.md", "**/CHANGELOG.md"]
+}

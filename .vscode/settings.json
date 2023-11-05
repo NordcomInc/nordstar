@@ -40,6 +40,5 @@
     "markdown.extension.toc.omittedFromToc": {
         "CONTRIBUTING.md": ["## Table of Contents"]
     },
-    "markdown.extension.toc.slugifyMode": "github",
-    "markdownlint.ignore": ["**/.changeset/**.md"]
+    "markdown.extension.toc.slugifyMode": "github"
 }
