@@ -2,9 +2,6 @@ name: Release
 
 on:
     push:
-        paths:
-            - '.changeset/**'
-            - 'packages/**'
         branches:
             - master
 
@@ -36,14 +33,15 @@ jobs:
 
             - name: 🥸 Configure Identity
               run: |
-                   git config --global user.email "opensource@nordcom.io"
-                   git config --global user.name "nordcombot"
+                  git config --global user.email "opensource@nordcom.io"
+                  git config --global user.name "nordcombot"
 
             - name: 🤝 Create Release Pull Request or Publish to NPM
               id: changesets
               uses: changesets/action@v1
               with:
                   publish: npm run release
+                  createGithubReleases: true
                   setupGitUser: false
               env:
                   NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
