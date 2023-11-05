@@ -1,5 +1,6 @@
 import '@/styles/base.css';
 
+import { NordstarProvider } from '@nordcom/nordstar';
 import type { Metadata } from 'next';
 import { Montserrat } from 'next/font/google';
 
@@ -25,7 +26,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en">
             <head />
-            <body className={font.variable}>{children}</body>
+            <body className={font.variable}>
+                <NordstarProvider>{children}</NordstarProvider>
+            </body>
         </html>
     );
 }
