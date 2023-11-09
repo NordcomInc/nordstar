@@ -51,7 +51,7 @@
     "homepage": "https://nordstar.nordcom.io/",
     "dependencies": {
         "@nordcom/nordstar": "*",
-        "next": "14.0.1",
+        "next": "14.0.2",
         "react": "18.2.0",
         "react-dom": "18.2.0"
     },
@@ -60,7 +60,7 @@
         "@types/node": "20.8.9",
         "@types/react": "18.2.37",
         "@types/react-dom": "18.2.15",
-        "eslint-config-next": "14.0.1",
+        "eslint-config-next": "14.0.2",
         "prettier": "3.0.3",
         "typescript": "5.2.2"
     }
