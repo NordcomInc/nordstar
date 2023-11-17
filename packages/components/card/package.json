@@ -1,19 +1,20 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-card",
+    "type": "module",
     "version": "0.0.6",
     "description": "",
-    "main": "./dist/index.mjs",
-    "module": "./dist/index.mjs",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/index.mjs",
+            "import": "./dist/index.js",
             "types": "./dist/index.d.ts"
         },
-        "./nordstar-card": {
-            "import": "./dist/nordstar-card.mjs",
-            "types": "./dist/nordstar-card.d.ts"
+        "./card": {
+            "import": "./dist/card.js",
+            "types": "./dist/card.d.ts"
         }
     },
     "sideEffects": false,
@@ -23,7 +24,7 @@
     },
     "scripts": {
         "build": "vite build",
-        "dev": "vite",
+        "dev": "vite build --watch",
         "clean": "rimraf dist .turbo",
         "typecheck": "tsc --noEmit",
         "prepack": "clean-package",

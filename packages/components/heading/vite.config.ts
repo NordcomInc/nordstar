@@ -6,7 +6,7 @@ import { libInjectCss } from 'vite-plugin-lib-inject-css';
 import tsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-    root: resolve(__dirname, 'src'),
+    root: resolve(__dirname),
     build: {
         target: 'esnext',
         copyPublicDir: false,
@@ -14,7 +14,7 @@ export default defineConfig({
         outDir: resolve(__dirname, 'dist'),
         sourcemap: true,
         lib: {
-            entry: ['index.ts', 'heading.tsx'],
+            entry: ['src/index.ts', 'src/heading.tsx'],
             formats: ['es']
         },
         rollupOptions: {
@@ -33,7 +33,8 @@ export default defineConfig({
         tsConfigPaths(),
         dts({
             clearPureImport: false,
-            rollupTypes: false,
+            entryRoot: resolve(__dirname, 'src'),
+            rollupTypes: true,
             insertTypesEntry: true,
             tsconfigPath: resolve(__dirname, 'tsconfig.json')
         })

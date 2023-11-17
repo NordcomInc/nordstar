@@ -3,12 +3,17 @@
     "name": "@nordcom/nordstar-{{packageName}}",
     "version": "0.0.0",
     "description": "",
-    "main": "./dist/index.mjs",
-    "module": "./dist/index.mjs",
-    "types": "./dist/index.d.mts",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/index.mjs"
+            "import": "./dist/index.js",
+            "types": "./dist/index.d.ts"
+        },
+        "./{{packageName}}": {
+            "import": "./dist/{{packageName}}.js",
+            "types": "./dist/{{packageName}}.d.ts"
         }
     },
     "sideEffects": false,
@@ -18,7 +23,7 @@
     },
     "scripts": {
         "build": "vite build",
-        "dev": "vite",
+        "dev": "vite build --watch",
         "clean": "rimraf dist .turbo",
         "typecheck": "tsc --noEmit",
         "prepack": "clean-package",

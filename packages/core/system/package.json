@@ -1,19 +1,24 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-system",
+    "type": "module",
     "version": "0.0.6",
     "description": "",
-    "main": "./dist/index.mjs",
-    "module": "./dist/index.mjs",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/index.mjs",
+            "import": "./dist/index.js",
             "types": "./dist/index.d.ts"
         },
         "./nordstar-provider": {
-            "import": "./dist/nordstar-provider.mjs",
+            "import": "./dist/nordstar-provider.js",
             "types": "./dist/nordstar-provider.d.ts"
+        },
+        "./utils": {
+            "import": "./dist/utils.js",
+            "types": "./dist/utils.d.ts"
         }
     },
     "sideEffects": false,
@@ -51,7 +56,7 @@
     },
     "scripts": {
         "build": "vite build",
-        "dev": "vite",
+        "dev": "vite build --watch",
         "clean": "rimraf dist .turbo",
         "typecheck": "tsc --noEmit",
         "prepack": "clean-package",
