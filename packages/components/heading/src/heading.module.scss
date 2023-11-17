@@ -1,10 +1,8 @@
 .container {
-    margin: 0;
+    hyphens: auto;
 
-    &:not(:empty):after {
+    &:not(:empty):is(.h1, .h2):after {
         content: '.';
-        font-size: 0.75em;
-        line-height: 1;
     }
 
     &.h1 {
@@ -15,14 +13,31 @@
     }
     &.h2 {
         font-weight: 400;
-        font-size: 2.75rem;
-        line-height: 1.1;
+        font-size: 1.85rem;
+        line-height: 1.075;
         letter-spacing: 0.02rem;
         text-transform: lowercase;
         color: var(--color-foreground-secondary);
+
+        @media (min-width: 950px) {
+            font-size: 2rem;
+        }
     }
     &.h3 {
+        font-size: 1.6rem;
+        font-weight: 800;
+        line-height: 1;
+        text-transform: lowercase;
+
+        @media (min-width: 950px) {
+            font-size: 1.75rem;
+        }
     }
     &.h4 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        line-height: 1;
+        text-transform: uppercase;
+        color: var(--color-foreground-secondary);
     }
 }
