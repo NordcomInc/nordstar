@@ -1,6 +1,4 @@
 .container {
-    hyphens: auto;
-
     &:not(:empty):is(.h1, .h2):after {
         content: '.';
     }
@@ -10,6 +8,10 @@
         font-size: 4.25rem;
         line-height: 0.9;
         text-transform: uppercase;
+
+        @media (max-width: 950px) {
+            hyphens: auto;
+        }
     }
     &.h2 {
         font-weight: 400;
