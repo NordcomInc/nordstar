@@ -5,7 +5,7 @@
         "rootDir": "./src",
         "outDir": "dist"
     },
-    "exclude": ["node_modules", "dist", "src/**/*.test.*"],
+    "exclude": ["node_modules", "dist", "src/**/*.test.*", "src/**/*.stories.*"],
     "extends": "../../../tsconfig.json",
     "include": ["src", "index.ts", "../../../@types/declaration.d.ts"]
 }

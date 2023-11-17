@@ -1,8 +1,8 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
-    "name": "@nordcom/nordstar-{{componentName}}",
+    "name": "@nordcom/nordstar-view",
     "type": "module",
-    "version": "0.0.0",
+    "version": "0.0.7",
     "description": "",
     "main": "./dist/index.js",
     "module": "./dist/index.js",
@@ -12,9 +12,9 @@
             "import": "./dist/index.js",
             "types": "./dist/index.d.ts"
         },
-        "./{{componentName}}": {
-            "import": "./dist/{{componentName}}.js",
-            "types": "./dist/{{componentName}}.d.ts"
+        "./view": {
+            "import": "./dist/view.js",
+            "types": "./dist/view.d.ts"
         }
     },
     "sideEffects": false,
@@ -35,8 +35,8 @@
         "nordcom",
         "component",
         "react",
-        "{{componentName}}",
-        "nordstar-{{componentName}}"
+        "view",
+        "nordstar-view"
     ],
     "author": {
         "name": "Nordcom Group Inc.",
@@ -53,13 +53,13 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/NordcomInc/nordstar.git",
-        "directory": "packages/{{outDir}}/{{componentName}}"
+        "directory": "packages/components/view"
     },
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
-    "homepage": "https://nordstar.nordcom.io/docs/components/{{componentName}}/",
+    "homepage": "https://nordstar.nordcom.io/docs/components/view/",
     "files": [
         "dist"
     ],

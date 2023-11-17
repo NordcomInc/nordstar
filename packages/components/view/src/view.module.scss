@@ -1,0 +1,12 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .content {
+        width: calc(100vw - calc(var(--layout-page-spacing) * 2));
+        max-width: var(--layout-page-width);
+        margin: var(--layout-page-spacing);
+    }
+}
