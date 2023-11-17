@@ -1,6 +1,12 @@
 // Core
-export * from '@nordcom/nordstar-system';
+import type { NordstarProviderProps } from '@nordcom/nordstar-system';
+import { NordstarProvider } from '@nordcom/nordstar-system';
 
 // Components
-export * from '@nordcom/nordstar-card';
-export * from '@nordcom/nordstar-heading';
+import type { CardProps } from '@nordcom/nordstar-card';
+import { Card } from '@nordcom/nordstar-card';
+import type { HeadingProps } from '@nordcom/nordstar-heading';
+import { Heading } from '@nordcom/nordstar-heading';
+
+export { Card, Heading, NordstarProvider };
+export type { CardProps, HeadingProps, NordstarProviderProps };

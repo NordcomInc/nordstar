@@ -9,19 +9,19 @@ module.exports = {
     staticDirs: ['../public'],
     addons: [
         getAbsolutePath('storybook-dark-mode'),
-        getAbsolutePath('@storybook/addon-a11y'),
-        getAbsolutePath('@storybook/addon-essentials'),
-        getAbsolutePath('@storybook/addon-links'),
         {
             name: '@storybook/addon-docs',
             options: {
                 mdxPluginOptions: {
                     mdxCompileOptions: {
-                        remarkPlugins: [remarkGfm],
-                    },
-                },
-            },
+                        remarkPlugins: [remarkGfm]
+                    }
+                }
+            }
         },
+        getAbsolutePath('@storybook/addon-a11y'),
+        getAbsolutePath('@storybook/addon-essentials'),
+        getAbsolutePath('@storybook/addon-links')
     ],
     framework: {
         name: getAbsolutePath('@storybook/react-vite'),
@@ -31,8 +31,8 @@ module.exports = {
         disableTelemetry: true
     },
     typescript: {
-        reactDocgen: false,
-    },
+        reactDocgen: false
+    }
 };
 
 function getAbsolutePath(value) {

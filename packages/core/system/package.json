@@ -3,9 +3,19 @@
     "name": "@nordcom/nordstar-system",
     "version": "0.0.5",
     "description": "",
-    "main": "dist/index.mjs",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.mts",
+    "main": "./dist/index.mjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "types": "./dist/index.d.ts"
+        },
+        "./nordstar-provider": {
+            "import": "./dist/nordstar-provider.mjs",
+            "types": "./dist/nordstar-provider.d.ts"
+        }
+    },
     "sideEffects": false,
     "keywords": [
         "nordstar",
@@ -40,9 +50,8 @@
         "access": "public"
     },
     "scripts": {
-        "build": "tsup --dts",
-        "build:fast": "tsup",
-        "dev": "npm run build:fast -- --watch",
+        "build": "vite build",
+        "dev": "vite",
         "clean": "rimraf dist .turbo",
         "typecheck": "tsc --noEmit",
         "prepack": "clean-package",
