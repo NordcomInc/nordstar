@@ -2,27 +2,28 @@
     "$schema": "https://json.schemastore.org/tsconfig.json",
     "compilerOptions": {
         "allowJs": true,
-        "baseUrl": ".",
+        "allowSyntheticDefaultImports": true,
         "declaration": true,
         "downlevelIteration": true,
-        "esModuleInterop": true,
+        "esModuleInterop": false,
         "forceConsistentCasingInFileNames": true,
         "isolatedModules": true,
         "jsx": "react-jsx",
         "lib": ["dom", "dom.iterable", "ESNext"],
         "module": "ESNext",
         "moduleResolution": "Node10",
+        "noEmit": true,
         "paths": {},
         "plugins": [],
         "removeComments": true,
         "resolveJsonModule": true,
-        "rootDir": "./",
         "skipLibCheck": true,
         "sourceMap": true,
         "strict": true,
         "strictNullChecks": true,
         "target": "ESNext",
-        "types": ["vitest/globals", "@testing-library/jest-dom"]
+        "types": ["vitest/globals", "@testing-library/jest-dom"],
+        "useDefineForClassFields": true
     },
     "include": ["packages", "@types/declaration.d.ts"],
     "exclude": [
@@ -32,6 +33,7 @@
         "**/storybook-static",
         "**/coverage",
         "**/build",
-        "**/public"
+        "**/public",
+        "**.*.test.*"
     ]
 }

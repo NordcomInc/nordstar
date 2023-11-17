@@ -1,9 +1,11 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig.json",
-    "extends": "../../../tsconfig.json",
     "compilerOptions": {
-        "baseUrl": "."
+        "baseUrl": "./",
+        "rootDir": "./src",
+        "outDir": "dist"
     },
-    "include": ["src/**/*", "../../../@types/declaration.d.ts"],
-    "exclude": ["src/**/*.stories.*", "src/**/*.test.*"]
+    "exclude": ["node_modules", "dist", "src/**/*.test.*"],
+    "extends": "../../../tsconfig.json",
+    "include": ["src", "index.ts", "../../../@types/declaration.d.ts"]
 }

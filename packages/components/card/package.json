@@ -3,18 +3,27 @@
     "name": "@nordcom/nordstar-card",
     "version": "0.0.5",
     "description": "",
-    "main": "dist/index.mjs",
-    "module": "dist/index.mjs",
-    "types": "dist/index.d.mts",
+    "main": "./dist/index.mjs",
+    "module": "./dist/index.mjs",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "types": "./dist/index.d.ts"
+        },
+        "./nordstar-card": {
+            "import": "./dist/nordstar-card.mjs",
+            "types": "./dist/nordstar-card.d.ts"
+        }
+    },
     "sideEffects": false,
     "engines": {
         "npm": ">=8",
         "node": ">=18 <=21"
     },
     "scripts": {
-        "build": "tsup --dts",
-        "build:fast": "tsup",
-        "dev": "npm run build:fast -- --watch",
+        "build": "vite build",
+        "dev": "vite",
         "clean": "rimraf dist .turbo",
         "typecheck": "tsc --noEmit",
         "prepack": "clean-package",
