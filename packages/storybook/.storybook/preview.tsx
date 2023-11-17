@@ -7,9 +7,7 @@ const decorators: Preview['decorators'] = [
     (Story, { globals: {} }) => {
         return (
             <NordstarProvider>
-                <div lang="en" dir="ltr">
-                    <Story />
-                </div>
+                <Story />
             </NordstarProvider>
         );
     }
