@@ -20,7 +20,7 @@
         "prepare": "husky install",
         "dev": "concurrently -i --raw npm:dev:*",
         "dev:docs": "turbo dev --filter=@nordcom/nordstar-docs",
-        "dev:packages": "npm run build:packages && turbo dev --filter=!@nordcom/nordstar-docs --filter=!@nordcom/nordstar-storybook",
+        "dev:packages": "turbo dev --filter=!@nordcom/nordstar-docs --filter=!@nordcom/nordstar-storybook",
         "dev:storybook": "turbo dev --filter=@nordcom/nordstar-storybook",
         "build": "turbo build",
         "build:docs": "turbo build --filter=@nordcom/nordstar-docs",

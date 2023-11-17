@@ -3,16 +3,29 @@
     flex-direction: column;
     gap: 1rem;
 
-    .title {
-        max-width: 52rem;
+    .header {
         display: flex;
         flex-direction: column;
         gap: 0.25rem;
+        padding-top: calc(var(--layout-section-spacing) * 4);
+        padding-bottom: calc(var(--layout-section-spacing) * 2);
+        width: 52rem;
+        max-width: 100%;
     }
 
     .content {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr;
         gap: 1rem;
+
+        @media (min-width: 950px) {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        .block {
+            display: flex;
+            flex-direction: column;
+            gap: 0.25rem;
+        }
     }
 }

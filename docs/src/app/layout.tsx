@@ -1,7 +1,7 @@
-import '@/styles/base.css';
+import '@/styles/base.scss';
 
 import { NordstarProvider } from '@nordcom/nordstar';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Montserrat } from 'next/font/google';
 
 const font = Montserrat({
@@ -16,10 +16,16 @@ export const metadata: Metadata = {
     title: {
         default: '',
         template: `%s | nordstar Component Library`
-    },
-    alternates: {
-        canonical: 'https://nordstar.nordcom.io/'
     }
+};
+
+export const viewport: Viewport = {
+    initialScale: 1,
+    userScalable: true,
+    width: 'device-width',
+    interactiveWidget: 'resizes-visual',
+    themeColor: '#000000',
+    colorScheme: 'dark'
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

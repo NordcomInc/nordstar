@@ -3,10 +3,11 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
+    max-width: 100vw;
 
     .content {
         width: calc(100vw - calc(var(--layout-page-spacing) * 2));
-        max-width: var(--layout-page-width);
+        max-width: min(var(--layout-page-width), 100%);
         margin: var(--layout-page-spacing);
     }
 }
