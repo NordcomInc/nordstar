@@ -1,6 +1,6 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
-    "name": "@nordcom/nordstar",
+    "name": "@nordcom/nordstar-system",
     "version": "0.0.4",
     "description": "",
     "main": "dist/index.mjs",
@@ -52,11 +52,7 @@
         "react": ">=18",
         "react-dom": ">=18"
     },
-    "dependencies": {
-        "@nordcom/nordstar-card": "*",
-        "@nordcom/nordstar-heading": "*",
-        "@nordcom/nordstar-system": "*"
-    },
+    "dependencies": {},
     "devDependencies": {
         "clean-package": "2.2.0",
         "react": "18.2.0"
