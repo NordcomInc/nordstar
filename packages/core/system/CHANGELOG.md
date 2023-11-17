@@ -1,5 +1,11 @@
 # @nordcom/nordstar-system
 
+## 0.0.9
+
+### Patch Changes
+
+-   [#66](https://github.com/NordcomInc/nordstar/pull/66) [`54e7ba4`](https://github.com/NordcomInc/nordstar/commit/54e7ba4b91f90c91bb3faabbdfc51add5cc158c1) Thanks [@filiphsps](https://github.com/filiphsps)! - Tweak default theme's values.
+
 ## 0.0.8
 
 ### Patch Changes
