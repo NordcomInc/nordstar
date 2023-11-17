@@ -52,9 +52,13 @@ const parameters: Preview['parameters'] = {
         dark: {
             ...brand,
             appBg: '#262626',
-            barBg: '#262626',
-            background: '#262626',
             appContentBg: '#262626',
+            background: '#262626',
+            barBg: '#262626',
+            barSelectedColor: '#ed1e79',
+            colorPrimary: '#ed1e79',
+            inputBorderRadius: 0,
+            textColor: '#fefefe',
             brandImage: 'https://nordcom.io/logo-light.svg'
         }
     }

@@ -7,16 +7,11 @@ export type HeadingProps = {
     as?: As;
 };
 
-const Heading = forwardRef<'h1', HeadingProps>((props, ref) => {
-    const { as, level = 'h1', className } = props;
-
+const Heading = forwardRef<'h1', HeadingProps>(({ as, level = 'h1', className, ...props }, ref) => {
     const Tag = as || level;
     const classes = `${styles.container} ${styles[level]}${className ? ` ${className}` : ''}`;
 
-    // TODO: Figure out a better way to exclude props from being passed to the DOM element.
-    return (
-        <Tag ref={ref} {...{ ...props, level: undefined, as: undefined, className: undefined }} className={classes} />
-    );
+    return <Tag ref={ref} {...props} className={classes} />;
 });
 
 Heading.displayName = 'Nordstar.Typography.Heading';
