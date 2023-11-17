@@ -56,7 +56,9 @@
     "publishConfig": {
         "access": "public"
     },
-    "dependencies": {},
+    "dependencies": {
+        "@nordcom/nordstar-system": "*"
+    },
     "peerDependencies": {
         "react": ">=18"
     },
