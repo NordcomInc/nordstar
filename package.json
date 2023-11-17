@@ -2,7 +2,6 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "nordstar",
     "private": true,
-    "version": "0.0.2",
     "description": "Nordcom Group Inc.'s component library, a modern, accessible, beautiful, and flexible design system for building human user interfaces.",
     "main": "index.js",
     "prettier": "@nordcom/prettier",
@@ -40,7 +39,8 @@
         "version": "changeset version",
         "version:unstable": "changeset version --snapshot unstable",
         "release": "changeset publish",
-        "release:unstable": "changeset publish --snapshot --no-git-tag --tag unstable"
+        "release:unstable": "changeset publish --snapshot --no-git-tag --tag unstable",
+        "changeset": "changeset"
     },
     "author": {
         "name": "Nordcom Group Inc.",

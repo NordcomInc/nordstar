@@ -6,14 +6,20 @@ import { Heading } from '../src';
 const story: Meta<typeof Heading> = {
     title: 'Components/Heading',
     component: Heading,
-    argTypes: {}
+    argTypes: {
+        subheading: {
+            control: { type: 'boolean' }
+        }
+    }
 };
 
 const Template = (args: HeadingProps) => <Heading {...args}>A compelling page-title</Heading>;
 
 export const Standard = {
     render: Template,
-    args: {}
+    args: {
+        subheading: false
+    }
 };
 
 export const SubHeading = {

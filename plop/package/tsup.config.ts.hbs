@@ -1,7 +1,7 @@
 import { defineConfig } from 'tsup';
 
 export default defineConfig({
-    cjsInterop: true,
+    cjsInterop: false,
     clean: true,
     entry: ['src/index.ts', 'src/**/*.ts(x)?', '!src/**/*.(stories|test).ts(x)?'],
     format: ['esm'],

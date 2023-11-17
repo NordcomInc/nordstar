@@ -1,7 +1,6 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-docs",
-    "version": "0.0.2",
     "sideEffects": false,
     "private": true,
     "type": "module",
@@ -51,8 +50,6 @@
     "homepage": "https://nordstar.nordcom.io/",
     "dependencies": {
         "@nordcom/nordstar": "*",
-        "@nordcom/nordstar-card": "*",
-        "@nordcom/nordstar-heading": "*",
         "next": "14.0.3",
         "react": "18.2.0",
         "react-dom": "18.2.0"

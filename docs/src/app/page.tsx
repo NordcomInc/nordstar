@@ -1,5 +1,4 @@
-import { Card } from '@nordcom/nordstar-card';
-import { Heading } from '@nordcom/nordstar-heading';
+import { Card, Heading } from '@nordcom/nordstar';
 import styles from './page.module.scss';
 
 export default async function IndexPage() {

@@ -1,4 +1,6 @@
 import { dirname, join } from 'node:path';
+import remarkGfm from 'remark-gfm';
+
 module.exports = {
     stories: [
         './readme.stories.mdx',
@@ -10,7 +12,16 @@ module.exports = {
         getAbsolutePath('@storybook/addon-a11y'),
         getAbsolutePath('@storybook/addon-essentials'),
         getAbsolutePath('@storybook/addon-links'),
-        getAbsolutePath('@storybook/addon-mdx-gfm')
+        {
+            name: '@storybook/addon-docs',
+            options: {
+                mdxPluginOptions: {
+                    mdxCompileOptions: {
+                        remarkPlugins: [remarkGfm],
+                    },
+                },
+            },
+        },
     ],
     framework: {
         name: getAbsolutePath('@storybook/react-vite'),
