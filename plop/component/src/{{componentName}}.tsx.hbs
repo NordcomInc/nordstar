@@ -1,4 +1,5 @@
 import type { HTMLProps, ReactNode } from 'react';
+import styles from './{{componentName}}.module.scss';
 
 export type {{capitalize componentName}}Props = {
     children?: ReactNode;
@@ -7,7 +8,7 @@ export type {{capitalize componentName}}Props = {
 const {{capitalize componentName}} = (props: {{capitalize componentName}}Props) => {
     const { children } = props;
 
-    return <div {...props}>{children}</div>;
+    return <div {...props} className={`${styles.container} ${props.className || ''}`}>{children}</div>;
 };
 
 export default {{capitalize componentName}};

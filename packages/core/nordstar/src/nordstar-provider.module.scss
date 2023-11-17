@@ -1,0 +1,12 @@
+html {
+    --block-padding: 1rem;
+    --block-border-width: 0.1rem;
+    --block-border-radius: 0.65rem;
+
+    --color-background: #000000;
+    --color-background-highlight: #262626;
+    --color-foreground: #fefefe;
+
+    background: var(--color-background);
+    color: var(--color-foreground);
+}

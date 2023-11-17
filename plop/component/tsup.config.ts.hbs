@@ -9,5 +9,9 @@ export default defineConfig({
     skipNodeModulesBundle: true,
     sourcemap: true,
     target: 'esnext',
-    tsconfig: 'tsconfig.json'
+    tsconfig: 'tsconfig.json',
+    loader: {
+        '.css': 'local-css',
+        '.scss': 'local-css'
+    }
 });
