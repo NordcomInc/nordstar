@@ -1,4 +1,5 @@
 import type { HTMLProps, ReactNode } from 'react';
+import styles from './card.module.scss';
 
 export type CardProps = {
     children?: ReactNode;
@@ -7,7 +8,11 @@ export type CardProps = {
 const Card = (props: CardProps) => {
     const { children } = props;
 
-    return <section {...props}>{children}</section>;
+    return (
+        <section {...props} className={`${styles.container} ${props.className || ''}`}>
+            {children}
+        </section>
+    );
 };
 
 export default Card;

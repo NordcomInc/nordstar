@@ -1,7 +1,6 @@
 {
     "recommendations": [
         "aaron-bond.better-comments",
-        "amatiasq.sort-imports",
         "bierner.markdown-footnotes",
         "bierner.markdown-preview-github-styles",
         "davidanson.vscode-markdownlint",

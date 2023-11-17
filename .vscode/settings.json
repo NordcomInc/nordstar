@@ -26,6 +26,10 @@
         ".eslintrc": "json",
         ".renovaterc": "json"
     },
+    "files.autoSave": "off",
+    "files.trimTrailingWhitespace": true,
+    "files.eol": "\n",
+    "files.trimFinalNewlines": false,
     "[plaintext]": {
         "editor.formatOnSave": false
     },

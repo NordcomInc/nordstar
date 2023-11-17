@@ -1,9 +1,10 @@
 import type { ReactNode } from 'react';
+import './nordstar-provider.module.scss';
 
 export type NordstarProviderProps = {
     children: ReactNode;
 };
 
 export const NordstarProvider = ({ children }: NordstarProviderProps) => {
-    return <>{children}</>;
+    return <div>{children}</div>;
 };

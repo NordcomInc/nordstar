@@ -36,6 +36,15 @@ const parameters: Preview['parameters'] = {
             date: /Date$/
         }
     },
+    backgrounds: {
+        default: 'dark',
+        values: [
+            {
+                name: 'dark',
+                value: '#000000'
+            }
+        ]
+    },
     darkMode: {
         current: 'dark',
         stylePreview: true,
@@ -44,19 +53,11 @@ const parameters: Preview['parameters'] = {
         classTarget: 'html',
         dark: {
             ...brand,
-            appBg: '#000000',
-            barBg: '#000000',
-            background: '#000000',
-            appContentBg: '#000000',
+            appBg: '#262626',
+            barBg: '#262626',
+            background: '#262626',
+            appContentBg: '#262626',
             brandImage: 'https://nordcom.io/logo-light.svg'
-        },
-        light: {
-            ...brand,
-            appBg: '#e6e6e6',
-            barBg: '#e6e6e6',
-            background: '#e6e6e6',
-            appContentBg: '#e6e6e6',
-            brandImage: 'https://nordcom.io/logo.svg'
         }
     }
 };
