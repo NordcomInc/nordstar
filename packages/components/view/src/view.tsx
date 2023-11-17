@@ -6,14 +6,12 @@ export type ViewProps = {
     children?: ReactNode;
 };
 
-const View = forwardRef<'main', ViewProps>((props, ref) => {
-    const { className } = props;
+const View = forwardRef<'main', ViewProps>(({ className, ...props }, ref) => {
     const classes = `${styles.content}${className ? ` ${className}` : ''}`;
 
-    // TODO: Figure out a better way to exclude props from being passed to the DOM element.
     return (
         <div className={styles.container}>
-            <main ref={ref} {...{ ...props, className: undefined }} className={classes} />
+            <main ref={ref} {...props} className={classes} />
         </div>
     );
 });

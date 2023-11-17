@@ -8,14 +8,11 @@ export type CardProps = {
     as?: As;
 };
 
-const Card = forwardRef<'section', CardProps>((props, ref) => {
-    const { as, className } = props;
-
+const Card = forwardRef<'section', CardProps>(({ as, className, ...props }, ref) => {
     const Tag = as || 'section';
     const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
-    // TODO: Figure out a better way to exclude props from being passed to the DOM element.
-    return <Tag ref={ref} {...{ ...props, as: undefined, className: undefined }} className={classes} />;
+    return <Tag ref={ref} {...props} className={classes} />;
 });
 
 Card.displayName = 'Nordstar.Card';
