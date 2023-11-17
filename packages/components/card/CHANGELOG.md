@@ -1,5 +1,14 @@
 # @nordcom/nordstar-card
 
+## 0.0.5
+
+### Patch Changes
+
+-   [#56](https://github.com/NordcomInc/nordstar/pull/56) [`394fd8b`](https://github.com/NordcomInc/nordstar/commit/394fd8b9c9216644267e55e05ac5f6f5e6ca05a0) Thanks [@filiphsps](https://github.com/filiphsps)! - Attempt to properly exporting the typings.
+
+-   Updated dependencies [[`99f6c4c`](https://github.com/NordcomInc/nordstar/commit/99f6c4ca1bff0db7a0650be5abe1d5a65c51cf8d)]:
+    -   @nordcom/nordstar-system@0.0.5
+
 ## 0.0.4
 
 ### Patch Changes
