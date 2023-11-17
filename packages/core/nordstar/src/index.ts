@@ -1,5 +1,13 @@
 // Core
-import type { NordstarProviderProps } from '@nordcom/nordstar-system';
+import type {
+    As,
+    InternalForwardRefRenderFunction,
+    MergeWithAs,
+    NordstarProviderProps,
+    OmitCommonProps,
+    PropsOf,
+    RightJoinProps
+} from '@nordcom/nordstar-system';
 import { NordstarProvider } from '@nordcom/nordstar-system';
 
 // Components
@@ -9,4 +17,14 @@ import type { HeadingProps } from '@nordcom/nordstar-heading';
 import { Heading } from '@nordcom/nordstar-heading';
 
 export { Card, Heading, NordstarProvider };
-export type { CardProps, HeadingProps, NordstarProviderProps };
+export type {
+    As,
+    CardProps,
+    HeadingProps,
+    InternalForwardRefRenderFunction,
+    MergeWithAs,
+    NordstarProviderProps,
+    OmitCommonProps,
+    PropsOf,
+    RightJoinProps
+};

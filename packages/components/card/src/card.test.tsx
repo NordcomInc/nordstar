@@ -1,14 +1,17 @@
 import { describe, expect, it } from 'vitest';
 
-import { Card } from '../src';
 import { render } from '@testing-library/react';
+import React from 'react';
+import { Card } from '../src';
 
 describe('components', () => {
-    describe('Card', () => {
-        it('should render correctly', () => {
-            const wrapper = render(<Card />);
+    describe('card', () => {
+        describe('Card', () => {
+            it('should render correctly', () => {
+                const wrapper = render(<Card />);
 
-            expect(() => wrapper.unmount()).not.toThrow();
+                expect(() => wrapper.unmount()).not.toThrow();
+            });
         });
     });
 });

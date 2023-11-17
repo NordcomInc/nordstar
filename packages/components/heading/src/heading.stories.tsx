@@ -1,31 +1,31 @@
 import type { Meta } from '@storybook/react';
-import React from 'react';
 import type { HeadingProps } from '../src';
 import { Heading } from '../src';
 
 const story: Meta<typeof Heading> = {
-    title: 'Components/Heading',
+    title: 'Components/Typography/Heading',
     component: Heading,
     argTypes: {
-        subheading: {
-            control: { type: 'boolean' }
+        level: {
+            options: ['h1', 'h2', 'h3', 'h4'],
+            control: { type: 'radio' }
         }
     }
 };
 
 const Template = (args: HeadingProps) => <Heading {...args}>A compelling page-title</Heading>;
 
-export const Standard = {
+export const h1 = {
     render: Template,
     args: {
-        subheading: false
+        level: 'h1'
     }
 };
 
-export const SubHeading = {
+export const h2 = {
     render: Template,
     args: {
-        subheading: true
+        level: 'h2'
     }
 };
 

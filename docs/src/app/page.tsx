@@ -6,15 +6,21 @@ export default async function IndexPage() {
         <main className={styles.container}>
             <div className={styles.title}>
                 <Heading>Nordstar</Heading>
-                <Heading subheading>
+                <Heading level="h2">
                     An opinionated component library for building human-centric user interfaces
                 </Heading>
             </div>
 
             <div className={styles.content}>
-                <Card></Card>
-                <Card></Card>
-                <Card></Card>
+                <Card>
+                    <Heading level="h3">Guides</Heading>
+                </Card>
+                <Card>
+                    <Heading level="h3">Examples</Heading>
+                </Card>
+                <Card>
+                    <Heading level="h3">Documentation</Heading>
+                </Card>
             </div>
         </main>
     );
