@@ -3,7 +3,9 @@
     "name": "@nordcom/nordstar",
     "version": "0.0.4",
     "description": "",
-    "main": "src/index.ts",
+    "main": "dist/index.mjs",
+    "module": "dist/index.mjs",
+    "types": "dist/index.d.mts",
     "sideEffects": false,
     "keywords": [
         "nordstar",
@@ -49,6 +51,10 @@
     "peerDependencies": {
         "react": ">=18",
         "react-dom": ">=18"
+    },
+    "dependencies": {
+        "@nordcom/nordstar-card": "*",
+        "@nordcom/nordstar-heading": "*"
     },
     "devDependencies": {
         "clean-package": "2.2.0",
