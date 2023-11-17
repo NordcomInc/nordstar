@@ -30,15 +30,6 @@ jobs:
             - name: 🔨 Build
               run: npm run build
 
-            - name: 🚚 Deploy Storybook
-              if: github.ref == 'refs/heads/master'
-              uses: peaceiris/actions-gh-pages@v3
-              with:
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
-                  publish_dir: ./packages/storybook/storybook-static
-                  user_name: 'nordcombot'
-                  user_email: 'opensource@nordcom.io'
-
     lint:
         name: 📋 Lint
         timeout-minutes: 5
@@ -78,7 +69,7 @@ jobs:
 
     typecheck:
         name: ✅ Typecheck
-        timeout-minutes: 10
+        timeout-minutes: 5
         needs: [build]
         runs-on: ubuntu-latest
         steps:
