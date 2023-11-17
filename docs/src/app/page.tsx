@@ -1,9 +1,9 @@
-import { Card, Heading } from '@nordcom/nordstar';
+import { Card, Heading, View } from '@nordcom/nordstar';
 import styles from './page.module.scss';
 
 export default async function IndexPage() {
     return (
-        <main className={styles.container}>
+        <View className={styles.container}>
             <div className={styles.title}>
                 <Heading>Nordstar</Heading>
                 <Heading level="h2">
@@ -22,6 +22,6 @@ export default async function IndexPage() {
                     <Heading level="h3">Documentation</Heading>
                 </Card>
             </div>
-        </main>
+        </View>
     );
 }
