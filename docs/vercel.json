@@ -5,11 +5,11 @@
     "framework": "nextjs",
     "rewrites": [
         {
-            "source": "/docs/",
+            "source": "/storybook/",
             "destination": "https://docs.nordstar.nordcom.io/"
         },
         {
-            "source": "/docs/:path*",
+            "source": "/storybook/:path*",
             "destination": "https://docs.nordstar.nordcom.io/:path*"
         }
     ],
