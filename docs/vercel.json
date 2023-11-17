@@ -1,0 +1,20 @@
+{
+    "$schema": "https://openapi.vercel.sh/vercel.json",
+    "version": 2,
+    "trailingSlash": true,
+    "framework": "nextjs",
+    "rewrites": [
+        {
+            "source": "/docs/",
+            "destination": "https://docs.nordstar.nordcom.io/"
+        },
+        {
+            "source": "/docs/:path*",
+            "destination": "https://docs.nordstar.nordcom.io/:path*"
+        }
+    ],
+    "github": {
+        "enabled": true,
+        "autoJobCancelation": true
+    }
+}
