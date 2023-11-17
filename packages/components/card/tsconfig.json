@@ -4,6 +4,6 @@
     "compilerOptions": {
         "baseUrl": "."
     },
-    "include": ["src/**/*"],
+    "include": ["src/**/*", "../../../@types/declaration.d.ts"],
     "exclude": ["src/**/*.stories.*", "src/**/*.test.*"]
 }

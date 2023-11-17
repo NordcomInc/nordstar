@@ -4,7 +4,7 @@ export default defineConfig({
     cjsInterop: true,
     clean: true,
     entry: ['src/index.ts', 'src/**/*.ts(x)?', '!src/**/*.(stories|test).ts(x)?'],
-    format: ['cjs', 'esm'],
+    format: ['esm'],
     keepNames: true,
     skipNodeModulesBundle: true,
     sourcemap: true,
