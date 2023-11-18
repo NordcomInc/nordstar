@@ -1,5 +1,11 @@
 # @nordcom/nordstar-system
 
+## 0.0.10
+
+### Patch Changes
+
+-   [#69](https://github.com/NordcomInc/nordstar/pull/69) [`fba1544`](https://github.com/NordcomInc/nordstar/commit/fba1544bd929659f2d29c4b09d100b6aa44d650c) Thanks [@filiphsps](https://github.com/filiphsps)! - Remove unused css module.
+
 ## 0.0.9
 
 ### Patch Changes
