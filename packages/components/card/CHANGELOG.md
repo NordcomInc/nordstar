@@ -1,5 +1,12 @@
 # @nordcom/nordstar-card
 
+## 0.0.10
+
+### Patch Changes
+
+-   Updated dependencies [[`fba1544`](https://github.com/NordcomInc/nordstar/commit/fba1544bd929659f2d29c4b09d100b6aa44d650c)]:
+    -   @nordcom/nordstar-system@0.0.10
+
 ## 0.0.9
 
 ### Patch Changes
