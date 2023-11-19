@@ -1,6 +1,6 @@
 # @nordcom/nordstar-card
 
-The description of this component: `<Card/>` is a consistent looking container for content.
+`<Card/>` is a consistent card-like container for blocks of content.
 
 ## Installation
 
