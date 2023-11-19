@@ -1,6 +1,6 @@
 # @nordcom/nordstar-view
 
-Display a dedicated &#x60;view&#x60; (aka &#x60;page&#x60;) in your app.
+Display a dedicated `view`; (aka `page`) somewhere in your app.
 
 ## Installation
 
