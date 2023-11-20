@@ -13,7 +13,7 @@
     ],
     "prettier": "@nordcom/prettier",
     "scripts": {
-        "dev": "next dev --turbo",
+        "dev": "next dev",
         "build": "next build",
         "start": "next start -p $PORT",
         "lint": "concurrently npm:lint:*",

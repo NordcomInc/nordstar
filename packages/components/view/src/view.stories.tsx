@@ -1,4 +1,5 @@
 import type { Meta } from '@storybook/react';
+import React from 'react';
 import type { ViewProps } from '../src';
 import { View } from '../src';
 
@@ -10,7 +11,7 @@ const story: Meta<typeof View> = {
 
 const Template = (args: ViewProps) => <View {...args}>You view&apos;s content goes here!</View>;
 
-export const Standard = {
+export const Default = {
     render: Template,
     args: {}
 };

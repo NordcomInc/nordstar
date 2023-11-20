@@ -3,7 +3,6 @@
     "name": "nordstar",
     "type": "module",
     "private": true,
-    "description": "Nordcom Group Inc.'s component library, a modern, accessible, beautiful, and flexible design system for building human user interfaces.",
     "main": "index.js",
     "prettier": "@nordcom/prettier",
     "workspaces": [
@@ -18,9 +17,9 @@
     },
     "scripts": {
         "prepare": "husky install",
-        "dev": "concurrently -i --raw npm:dev:*",
+        "dev": "concurrently -i --raw npm:dev:",
         "dev:docs": "turbo dev --filter=@nordcom/nordstar-docs",
-        "dev:packages": "turbo dev --filter=!@nordcom/nordstar-docs --filter=!@nordcom/nordstar-storybook",
+        "dev:packages": "",
         "dev:storybook": "turbo dev --filter=@nordcom/nordstar-storybook",
         "build": "turbo build",
         "build:docs": "turbo build --filter=@nordcom/nordstar-docs",
