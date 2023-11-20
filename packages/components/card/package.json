@@ -4,17 +4,13 @@
     "type": "module",
     "version": "0.0.10",
     "description": "",
-    "main": "./dist/index.js",
-    "module": "./dist/index.js",
-    "types": "./dist/index.d.ts",
+    "main": "./src/index.ts",
+    "types": "./src/index.ts",
+    "module": "./src/index.ts",
     "exports": {
         ".": {
-            "import": "./dist/index.js",
-            "types": "./dist/index.d.ts"
-        },
-        "./card": {
-            "import": "./dist/card.js",
-            "types": "./dist/card.d.ts"
+            "import": "./src/index.ts",
+            "types": "./src/index.ts"
         }
     },
     "sideEffects": false,
@@ -28,7 +24,9 @@
         "clean": "rimraf dist .turbo",
         "typecheck": "tsc --noEmit",
         "prepack": "clean-package",
-        "postpack": "clean-package restore"
+        "postpack": "clean-package restore",
+        "prebuild": "npm run prepack",
+        "postbuild": "npm run postpack"
     },
     "keywords": [
         "nordstar",

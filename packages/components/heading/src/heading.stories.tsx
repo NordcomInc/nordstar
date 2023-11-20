@@ -1,4 +1,5 @@
 import type { Meta } from '@storybook/react';
+import React from 'react';
 import type { HeadingProps } from '../src';
 import { Heading } from '../src';
 
