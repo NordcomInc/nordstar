@@ -1,5 +1,19 @@
 # @nordcom/nordstar
 
+## 0.0.11
+
+### Patch Changes
+
+-   [#72](https://github.com/NordcomInc/nordstar/pull/72) [`b98011e`](https://github.com/NordcomInc/nordstar/commit/b98011e2b7b3bb992d5db3bfe64abccc9ff72596) Thanks [@filiphsps](https://github.com/filiphsps)! - Use typescript codebase directly during development internally.
+
+    The `exports` get automatically replaced during packaging as a part of running `clean-package` in the `prepack` and `postpack` script(s).
+
+-   Updated dependencies [[`b98011e`](https://github.com/NordcomInc/nordstar/commit/b98011e2b7b3bb992d5db3bfe64abccc9ff72596)]:
+    -   @nordcom/nordstar-heading@0.0.11
+    -   @nordcom/nordstar-card@0.0.11
+    -   @nordcom/nordstar-view@0.0.11
+    -   @nordcom/nordstar-system@0.0.11
+
 ## 0.0.10
 
 ### Patch Changes
