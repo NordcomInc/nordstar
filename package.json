@@ -67,7 +67,7 @@
         "access": "public"
     },
     "dependencies": {
-        "@changesets/cli": "2.26.2",
+        "@changesets/cli": "2.27.1",
         "@changesets/types": "5.2.1"
     },
     "devDependencies": {
