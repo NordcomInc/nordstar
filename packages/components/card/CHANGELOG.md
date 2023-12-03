@@ -1,5 +1,14 @@
 # @nordcom/nordstar-card
 
+## 0.0.12
+
+### Patch Changes
+
+-   [#102](https://github.com/NordcomInc/nordstar/pull/102) [`2865136`](https://github.com/NordcomInc/nordstar/commit/28651364a2fb32d9353733cf32a6dc01c5943bc4) Thanks [@filiphsps](https://github.com/filiphsps)! - Add theme prop to `<NordstarProvider/>`.
+
+-   Updated dependencies [[`2865136`](https://github.com/NordcomInc/nordstar/commit/28651364a2fb32d9353733cf32a6dc01c5943bc4)]:
+    -   @nordcom/nordstar-system@0.0.12
+
 ## 0.0.11
 
 ### Patch Changes
