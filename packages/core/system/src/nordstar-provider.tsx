@@ -10,6 +10,20 @@ export type NordstarTheme = {
         heading: string;
         body: string;
     };
+    sizes?: {
+        text?: {
+            body?: string;
+        };
+    };
+    layout?: {
+        page?: {
+            width?: string;
+            spacing?: string;
+        };
+        block?: {
+            padding?: string;
+        };
+    };
 };
 
 export type NordstarProviderProps = {
@@ -19,8 +33,7 @@ export type NordstarProviderProps = {
 
 /**
  * `<NordstarProvider/>`, a component that should wrap the entire application.
- *
- * When using Next.js make sure to to extract all providers into a client component used inside of your `RootLayout`.
+ * @note When using Next.js make sure to to extract all providers into a client component used inside of your `RootLayout`.
  *
  * @param {object} props - `<NordstarProvider/>` props.
  * @param {ReactNode} props.children - The children of the `<NordstarProvider/>` component.
@@ -29,15 +42,26 @@ export type NordstarProviderProps = {
  */
 export const NordstarProvider = ({ children, theme }: NordstarProviderProps) => {
     if (theme) {
-        // TODO: Maybe create a utility function for this to handle optional values.
+        const { accents, fonts, sizes, layout } = theme;
+
+        // TODO: Maybe create a utility function for this to better handle optional values.
         const style: CSSProperties = {
             // Colors.
-            '--color-accent-primary': theme.accents.primary,
-            '--color-accent-secondary': theme.accents.secondary,
+            '--color-accent-primary': accents.primary,
+            '--color-accent-secondary': accents.secondary,
 
             // Fonts.
-            '--font-heading': theme.fonts.heading,
-            '--font-body': theme.fonts.body
+            '--font-heading': fonts.heading,
+            '--font-body': fonts.body,
+
+            // Sizes.
+            '--size-text-body': sizes?.text?.body || '14px',
+
+            // Layout.Page.
+            '--layout-page-width': layout?.page?.width || '1200px',
+            '--layout-page-spacing': layout?.page?.spacing || '1rem',
+            // Layout.Block.
+            '--layout-block-padding': layout?.block?.padding || '1rem'
         } as CSSProperties;
 
         return (

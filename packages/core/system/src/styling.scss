@@ -10,7 +10,8 @@ body {
     background: var(--color-background);
     color: var(--color-foreground);
     font-family: var(--font-primary);
-    font-size: 14px;
+    font-size: var(--size-text-body);
+    font-weight: 500;
 
     // Touch actions
     touch-action: pan-y;
@@ -26,12 +27,8 @@ body {
 }
 
 :root {
-    --block-padding: 1rem;
     --block-border-width: 0.1rem;
     --block-border-radius: 0.65rem;
-
-    --layout-page-width: 1200px;
-    --layout-page-spacing: 1.25rem;
 
     --layout-section-spacing: 1rem;
     --layout-section-padding: 1.75rem;
@@ -40,10 +37,6 @@ body {
     --color-background-highlight: #262626;
     --color-foreground: #fefefe;
     --color-foreground-secondary: #828282;
-
-    @media (min-width: 950px) {
-        --layout-page-spacing: 1.25rem;
-    }
 }
 
 * {
@@ -63,5 +56,6 @@ p {
 }
 
 p {
-    font-size: 0.9rem;
+    font-size: inherit;
+    font-weight: inherit;
 }
