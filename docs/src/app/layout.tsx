@@ -15,7 +15,7 @@ const font = Montserrat({
 export const metadata: Metadata = {
     title: {
         default: '',
-        template: `%s | nordstar Component Library`
+        template: `%s | Nordstar Component Library`
     }
 };
 
