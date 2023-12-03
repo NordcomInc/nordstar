@@ -1,0 +1,22 @@
+name: Assign to Issue or PR 
+
+on:
+    issues:
+          types: [opened]
+    pull_request:
+          types: [opened]
+
+jobs:
+    assign:
+        runs-on: ubuntu-latest
+        permissions:
+            issues: write
+            pull-requests: write
+        steps:
+            - name: 🫵 Assign
+              uses: pozil/auto-assign-issue@v1
+              with:
+                  repo-token: ${{ secrets.GITHUB_TOKEN }}
+                  assignees: filiphsps
+                  allowNoAssignees: true
+                  allowSelfAssign: true
