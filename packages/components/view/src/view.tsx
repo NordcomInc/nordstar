@@ -1,11 +1,14 @@
 import { forwardRef } from '@nordcom/nordstar-system';
-import type { ReactNode } from 'react';
 import styles from './view.module.scss';
 
-export type ViewProps = {
-    children?: ReactNode;
-};
+export type ViewProps = {};
 
+/**
+ * `<View/>`, a component to render the main content of a page.
+ *
+ * @param {object} props - `<View/>` props.
+ * @returns {ReactNode} The `<View/>` component.
+ */
 const View = forwardRef<'main', ViewProps>(({ className, ...props }, ref) => {
     const classes = `${styles.content}${className ? ` ${className}` : ''}`;
 

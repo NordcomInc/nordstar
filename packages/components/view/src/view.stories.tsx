@@ -4,7 +4,7 @@ import type { ViewProps } from '../src';
 import { View } from '../src';
 
 const story: Meta<typeof View> = {
-    title: 'Components/View',
+    title: 'Components/Layout/View',
     component: View,
     argTypes: {}
 };

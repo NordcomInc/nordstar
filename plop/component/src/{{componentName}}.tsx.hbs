@@ -1,14 +1,19 @@
-import type { HTMLProps, ReactNode } from 'react';
+import type { As } from '@nordcom/nordstar-system';
+import { forwardRef } from '@nordcom/nordstar-system';
 import styles from './{{componentName}}.module.scss';
 
 export type {{capitalize componentName}}Props = {
-    children?: ReactNode;
+    as?: As;
 };
 
-const {{capitalize componentName}} = (props: {{capitalize componentName}}Props) => {
-    const { children } = props;
+const {{capitalize componentName}} = forwardRef<'div', {{capitalize componentName}}Props>(
+    ({ as: Tag = 'div', className, ...props }, ref) => {
+        const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
-    return <div {...props} className={`${styles.container} ${props.className || ''}`}>{children}</div>;
-};
+        return <Tag ref={ref} {...props} className={classes} />;
+    }
+);
+
+{{capitalize componentName}}.displayName = 'Nordstar.{{capitalize componentName}}';
 
 export default {{capitalize componentName}};
