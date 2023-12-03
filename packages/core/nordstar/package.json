@@ -61,6 +61,7 @@
         "react-dom": ">=18"
     },
     "dependencies": {
+        "@nordcom/nordstar-accented": "*",
         "@nordcom/nordstar-card": "*",
         "@nordcom/nordstar-heading": "*",
         "@nordcom/nordstar-view": "*",
