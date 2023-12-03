@@ -13,7 +13,7 @@
 
 ## 🚀 Getting Started
 
-> [!NOTE]  
+> [!NOTE]
 > Nordstar is still in early development and is **not** yet ready for production use. Beware of dragons ahead!
 
 ```bash
@@ -26,7 +26,7 @@ Visit [https://nordstar.nordcom.io/docs/](https://nordstar.nordcom.io/docs/?utm_
 
 ## 🏢 Real World Usage
 
-• We here at Nordcom Group Inc. use Nordstar in for our applications and services, like on [Sweet Side of Sweden](https://www.sweetsideofsweden.com/?utm_source=nordstar&utm_campaign=oss) (soon) and [nordcom.io](https://nordcom.io/?utm_source=nordstar&utm_campaign=oss).
+• We here at Nordcom Group Inc. use Nordstar in for our applications and services, like on [Nordcom Commerce](https://shops.nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss), [Sweet Side of Sweden](https://www.sweetsideofsweden.com/?utm_source=nordstar&utm_medium=github&utm_campaign=oss) (soon) and [nordcom.io](https://nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss).
 
 > If you use Nordstar in one your or your company's project, please let us know! We'd love to feature you here and on Nordstar's website.
 
@@ -38,9 +38,9 @@ To get started, please read our [Contribution Guidelines](/CONTRIBUTING.md) as i
 
 ## 💛 Thanks To
 
-• The [NextUI team and their contributors](https://github.com/nextui-org/nextui) for showing how to properly build a react component library and for providing it as [open source under the permissive MIT license](/LICENSE#L4), we've partially used it as the base for Nordstar. Go check them out, they're great!
+• The [NextUI team and their contributors](https://github.com/nextui-org/nextui) for showing how to properly build a react component library and for providing it as [open source under the permissive MIT license](/LICENSE#L4), we've partially used it as the base for Nordstar. Go check them out, they're great!\
 • Our amazingly, awesome, and wonderful [contributors](https://github.com/NordcomInc/nordstar/graphs/contributors) for helping us make Nordstar the best it can be. Open Source is fueled by amazing people like y'all, thank you!
 
 ## 📝 License
 
-Licensed under the [MIT License](/LICENSE). Created by **[Nordcom Group Inc.](https://nordcom.io/?utm_source=nordstar&utm_campaign=oss)** with the help of outside contributors.
+Licensed under the [MIT License](/LICENSE). Created by **[Nordcom Group Inc.](https://nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss)** with the help of outside contributors.

@@ -8,6 +8,7 @@ To keep the project running smoothly, we have a few guidelines that we ask contr
 
  - [Questions, Feedback, or Support](#questions-feedback-or-support)
  - [Language Policy](#language-policy)
+ - [Copyright](#copyright)
 
 ## Questions, Feedback, or Support
 
@@ -23,5 +24,11 @@ While we are a global community, we ask that all communications be kept in Engli
 
 We recommend the use of spell-, grammar-checkers and other tooling to help you with this. Some browsers like `MSEdge` include powerful grammar and spell-checkers out of the box.
 
-> [!NOTE]  
+## Copyright
+
+When making a major contribution (e.g. adding a new feature or changing an existing one), please add your (or your employers) name to the bottom of the copyright holders in the `LICENSE` file. This is to ensure that you are properly credited for your work and get to retain the rights to your contributions.
+
+---
+
+> [!NOTE]
 > These Contribution Guidelines are still a work in progress and as such a lot is still missing and everything that is already here is subject to change at any time without prior notice. Please bear with us as we work to improve them. Contributions are welcome and encouraged! 😄
