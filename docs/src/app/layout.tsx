@@ -33,7 +33,20 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <html lang="en">
             <head />
             <body className={font.variable}>
-                <NordstarProvider>{children}</NordstarProvider>
+                <NordstarProvider
+                    theme={{
+                        accents: {
+                            primary: '#ed1e79',
+                            secondary: '#ed1e79'
+                        },
+                        fonts: {
+                            heading: 'var(--font-primary)',
+                            body: 'var(--font-primary)'
+                        }
+                    }}
+                >
+                    {children}
+                </NordstarProvider>
             </body>
         </html>
     );

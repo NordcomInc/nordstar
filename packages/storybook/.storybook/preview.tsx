@@ -6,7 +6,18 @@ import type { Preview } from '@storybook/react';
 const decorators: Preview['decorators'] = [
     (Story, { globals: {} }) => {
         return (
-            <NordstarProvider>
+            <NordstarProvider
+                theme={{
+                    accents: {
+                        primary: '#ed1e79',
+                        secondary: '#ed1e79'
+                    },
+                    fonts: {
+                        heading: 'var(--font-primary)',
+                        body: 'var(--font-primary)'
+                    }
+                }}
+            >
                 <Story />
             </NordstarProvider>
         );

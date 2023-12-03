@@ -41,7 +41,7 @@ export const NordstarProvider = ({ children, theme }: NordstarProviderProps) => 
         } as CSSProperties;
 
         return (
-            <div id="nordstar" style={style}>
+            <div id="nordstar" role="document" style={style}>
                 {children}
             </div>
         );
