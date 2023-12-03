@@ -94,7 +94,7 @@
         "eslint-plugin-unused-imports": "3.0.0",
         "husky": "8.0.3",
         "jsdom": "23.0.1",
-        "lint-staged": "15.1.0",
+        "lint-staged": "15.2.0",
         "plop": "4.0.0",
         "postcss": "8.4.32",
         "postcss-scss": "4.0.9",
