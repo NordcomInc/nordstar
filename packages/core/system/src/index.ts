@@ -1,8 +1,6 @@
 import { NordstarProvider } from './nordstar-provider';
 import { forwardRef } from './utils';
 
-export type * from './@types/react';
-
 export type { NordstarProviderProps, NordstarTheme } from './nordstar-provider';
 export type {
     As,
