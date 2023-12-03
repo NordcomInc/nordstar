@@ -1,5 +1,14 @@
 # @nordcom/nordstar-heading
 
+## 0.0.13
+
+### Patch Changes
+
+-   [`8ecf8f9`](https://github.com/NordcomInc/nordstar/commit/8ecf8f929c5f4b533a6de435b3049af5a3eaa9ca) Thanks [@filiphsps](https://github.com/filiphsps)! - Add layout and sizing options to `<NordstarProvider/>` and refine overall design.
+
+-   Updated dependencies [[`8ecf8f9`](https://github.com/NordcomInc/nordstar/commit/8ecf8f929c5f4b533a6de435b3049af5a3eaa9ca)]:
+    -   @nordcom/nordstar-system@0.0.13
+
 ## 0.0.12
 
 ### Patch Changes
