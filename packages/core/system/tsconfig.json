@@ -3,7 +3,8 @@
     "compilerOptions": {
         "baseUrl": "./",
         "rootDir": "./src",
-        "outDir": "dist"
+        "outDir": "dist",
+        "types": ["./src/@types/**/*.d.ts"]
     },
     "exclude": ["node_modules", "dist", "src/**/*.test.*", "src/**/*.stories.*"],
     "extends": "../../../tsconfig.json",

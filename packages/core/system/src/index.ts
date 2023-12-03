@@ -1,14 +1,16 @@
 import { NordstarProvider } from './nordstar-provider';
 import { forwardRef } from './utils';
 
-export type { NordstarProviderProps } from './nordstar-provider';
+export type * from './@types/react';
+
+export type { NordstarProviderProps, NordstarTheme } from './nordstar-provider';
 export type {
     As,
-    PropsOf,
-    OmitCommonProps,
-    RightJoinProps,
+    InternalForwardRefRenderFunction,
     MergeWithAs,
-    InternalForwardRefRenderFunction
+    OmitCommonProps,
+    PropsOf,
+    RightJoinProps
 } from './utils';
 
-export { forwardRef, NordstarProvider };
+export { NordstarProvider, forwardRef };
