@@ -38,7 +38,7 @@ export const NordstarProvider = ({ children, theme }: NordstarProviderProps) => 
             // Fonts.
             '--font-heading': theme.fonts.heading,
             '--font-body': theme.fonts.body
-        };
+        } as CSSProperties;
 
         return (
             <div id="nordstar" style={style}>
