@@ -10,11 +10,11 @@ const decorators: Preview['decorators'] = [
                 theme={{
                     accents: {
                         primary: '#ed1e79',
-                        secondary: '#ed1e79'
+                        secondary: '#5eb1bf'
                     },
                     fonts: {
-                        heading: 'var(--font-primary)',
-                        body: 'var(--font-primary)'
+                        heading: "'Montserrat', sans-serif",
+                        body: "'Montserrat', sans-serif"
                     }
                 }}
             >

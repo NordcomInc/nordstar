@@ -9,16 +9,25 @@ export type NordstarTheme = {
     fonts: {
         heading: string;
         body: string;
+        code?: string;
     };
     sizes?: {
         text?: {
             body?: string;
         };
     };
+    border?: {
+        width?: string;
+        radius?: string;
+    };
     layout?: {
         page?: {
             width?: string;
             spacing?: string;
+        };
+        section?: {
+            spacing?: string;
+            padding?: string;
         };
         block?: {
             padding?: string;
@@ -57,9 +66,18 @@ export const NordstarProvider = ({ children, theme }: NordstarProviderProps) => 
             // Sizes.
             '--size-text-body': sizes?.text?.body || '14px',
 
+            // Border.
+            '--border-width': theme?.border?.width || '0.18rem',
+            '--border-radius': theme?.border?.radius || '0.65rem',
+
             // Layout.Page.
             '--layout-page-width': layout?.page?.width || '1200px',
             '--layout-page-spacing': layout?.page?.spacing || '1rem',
+
+            // Layout.Section.
+            '--layout-section-spacing': layout?.section?.spacing || '1rem',
+            '--layout-section-padding': layout?.section?.padding || '1.75rem',
+
             // Layout.Block.
             '--layout-block-padding': layout?.block?.padding || '1rem'
         } as CSSProperties;
