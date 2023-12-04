@@ -57,13 +57,13 @@
         "postbuild": "npm run postpack"
     },
     "dependencies": {
-        "@nordcom/nordstar-accented": "0.0.15",
-        "@nordcom/nordstar-button": "0.0.15",
-        "@nordcom/nordstar-card": "0.0.15",
-        "@nordcom/nordstar-heading": "0.0.15",
-        "@nordcom/nordstar-label": "0.0.15",
-        "@nordcom/nordstar-system": "0.0.15",
-        "@nordcom/nordstar-view": "0.0.15"
+        "@nordcom/nordstar-accented": "^0.0.15",
+        "@nordcom/nordstar-button": "^0.0.15",
+        "@nordcom/nordstar-card": "^0.0.15",
+        "@nordcom/nordstar-heading": "^0.0.15",
+        "@nordcom/nordstar-label": "^0.0.15",
+        "@nordcom/nordstar-system": "^0.0.15",
+        "@nordcom/nordstar-view": "^0.0.15"
     },
     "peerDependencies": {
         "react": ">=18",
