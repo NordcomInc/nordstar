@@ -1,0 +1,21 @@
+name: PRs
+
+on:
+    pull_request_target:
+        types: [opened, synchronize, labeled]
+
+jobs:
+    renovate:
+        name: 🔍 Add Changesdt to Renovate PR
+        runs-on: ubuntu-latest
+        if: contains(github.event.pull_request.labels.*.name, 'Dependency')
+
+        steps:
+            - name: 🚚 Update PR
+              uses: mscharley/dependency-changesets-action@v1.0.5
+              with:
+                  token: ${{ secrets.MACHINE_USER }}
+                  use-conventional-commits: false
+                  commit-message: 'Deps: Add changeset for dependency update.'
+                  author-name: nordcombot
+                  author-email: opensource@nordcom.io
