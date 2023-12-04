@@ -30,4 +30,18 @@ export const h2 = {
     }
 };
 
+export const h3 = {
+    render: Template,
+    args: {
+        level: 'h3'
+    }
+};
+
+export const h4 = {
+    render: Template,
+    args: {
+        level: 'h4'
+    }
+};
+
 export default story;
