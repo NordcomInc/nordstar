@@ -1,4 +1,4 @@
-import { Accented, Card, Heading, View } from '@nordcom/nordstar';
+import { Accented, Card, Heading, Label, View } from '@nordcom/nordstar';
 import type { Metadata } from 'next';
 import styles from './page.module.scss';
 
@@ -27,9 +27,7 @@ export default async function IndexPage() {
 
             <div className={styles.content}>
                 <Card className={styles.block}>
-                    <Heading level="h4" as="p">
-                        Guides
-                    </Heading>
+                    <Label>Guides</Label>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc. Turpis egestas maecenas
@@ -38,9 +36,7 @@ export default async function IndexPage() {
                     </p>
                 </Card>
                 <Card className={styles.block}>
-                    <Heading level="h4" as="p">
-                        Examples
-                    </Heading>
+                    <Label>Examples</Label>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc. Turpis egestas maecenas
@@ -49,9 +45,7 @@ export default async function IndexPage() {
                     </p>
                 </Card>
                 <Card className={styles.block}>
-                    <Heading level="h4" as="p">
-                        Documentation
-                    </Heading>
+                    <Label>Documentation</Label>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc. Turpis egestas maecenas
