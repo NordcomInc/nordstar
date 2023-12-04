@@ -1,8 +1,8 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
-    "name": "@nordcom/nordstar",
+    "name": "@nordcom/nordstar-button",
     "type": "module",
-    "version": "0.0.13",
+    "version": "0.0.0",
     "description": "",
     "main": "./src/index.ts",
     "types": "./src/index.ts",
@@ -14,9 +14,25 @@
         }
     },
     "sideEffects": false,
+    "engines": {
+        "npm": ">=8",
+        "node": ">=18 <=21"
+    },
+    "scripts": {
+        "build": "vite build",
+        "dev": "vite build --watch",
+        "clean": "rimraf dist .turbo",
+        "typecheck": "tsc --noEmit",
+        "prepack": "clean-package",
+        "postpack": "clean-package restore"
+    },
     "keywords": [
         "nordstar",
-        "nordcom"
+        "nordcom",
+        "component",
+        "react",
+        "button",
+        "nordstar-button"
     ],
     "author": {
         "name": "Nordcom Group Inc.",
@@ -33,43 +49,28 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/NordcomInc/nordstar.git",
-        "directory": "packages/core/nordstar"
+        "directory": "packages/components/button"
     },
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
-    "homepage": "https://nordstar.nordcom.io/",
+    "homepage": "https://nordstar.nordcom.io/docs/components/button/",
     "files": [
         "dist"
     ],
     "publishConfig": {
         "access": "public"
     },
-    "scripts": {
-        "build": "vite build",
-        "dev": "vite build --watch",
-        "clean": "rimraf dist .turbo",
-        "typecheck": "tsc --noEmit",
-        "prepack": "clean-package",
-        "postpack": "clean-package restore",
-        "prebuild": "npm run prepack",
-        "postbuild": "npm run postpack"
-    },
-    "peerDependencies": {
-        "react": ">=18",
-        "react-dom": ">=18"
-    },
     "dependencies": {
-        "@nordcom/nordstar-accented": "*",
-        "@nordcom/nordstar-button": "*",
-        "@nordcom/nordstar-card": "*",
-        "@nordcom/nordstar-heading": "*",
-        "@nordcom/nordstar-view": "*",
         "@nordcom/nordstar-system": "*"
     },
+    "peerDependencies": {
+        "react": ">=18"
+    },
     "devDependencies": {
-        "clean-package": "2.2.0"
+        "clean-package": "2.2.0",
+        "react": "18.2.0"
     },
     "clean-package": "../../../clean-package.config.json"
 }
