@@ -7,21 +7,36 @@ export default defineConfig({
         alias: [] // TODO: Handle `@/` aliases
     },
     test: {
+        bail: 1,
+        environment: 'jsdom',
+        globals: true,
+        maxConcurrency: 16,
+        passWithNoTests: true,
+        useAtomics: true,
+        experimentalVmThreads: true,
+
+        setupFiles: ['./__tests__/setup.ts'],
+        reporters: ['verbose'],
+        exclude: ['**/*.d.ts', '**/*.stories.*', '**/dist/**/*.*', '**/node_modules/**/*.*'],
+
         coverage: {
             all: true,
             exclude: [
                 '**/*.d.ts',
-                '**/*.test.{js,ts,jsx,tsx}',
-                '**/*.stories.{js,ts,jsx,tsx}',
-                '**/src/app/{page,layout}.{js,ts,jsx,tsx}',
-                '**/packages/**/src/index.{js,ts,jsx,tsx}'
+                '**/*.test.*',
+                '**/*.stories.*',
+                '**/src/app/{page,layout}.*',
+                '**/packages/**/src/index.*',
+                '**/*.css',
+                '**/dist/**/*.*'
             ],
             include: ['**/src/**/*.{js,ts,jsx,tsx}'],
             provider: 'v8'
         },
-        environment: 'jsdom',
-        globals: true,
-        setupFiles: ['./.vitest/setup.ts'],
-        useAtomics: true
+        deps: {
+            web: {
+                transformCss: true
+            }
+        }
     }
 });

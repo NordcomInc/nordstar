@@ -18,12 +18,13 @@ export default defineConfig({
             formats: ['es']
         },
         rollupOptions: {
-            external: ['react', 'react-dom'],
+            external: ['react', 'react/jsx-runtime', 'react-dom', /^@nordcom\/nordstar-/],
             output: {
                 globals: {
                     react: 'React',
                     'react-dom': 'ReactDOM'
-                }
+                },
+                sourcemapExcludeSources: true
             }
         }
     },
@@ -34,8 +35,8 @@ export default defineConfig({
         dts({
             clearPureImport: false,
             entryRoot: resolve(__dirname, 'src'),
-            rollupTypes: true,
-            insertTypesEntry: true,
+            rollupTypes: false,
+            insertTypesEntry: false,
             tsconfigPath: resolve(__dirname, 'tsconfig.json')
         })
     ]

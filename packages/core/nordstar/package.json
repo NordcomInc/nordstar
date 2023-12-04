@@ -56,21 +56,22 @@
         "prebuild": "npm run prepack",
         "postbuild": "npm run postpack"
     },
+    "dependencies": {
+        "@nordcom/nordstar-accented": "0.0.14",
+        "@nordcom/nordstar-button": "0.0.14",
+        "@nordcom/nordstar-card": "0.0.14",
+        "@nordcom/nordstar-heading": "0.0.14",
+        "@nordcom/nordstar-label": "0.0.14",
+        "@nordcom/nordstar-system": "0.0.14",
+        "@nordcom/nordstar-view": "0.0.14"
+    },
     "peerDependencies": {
         "react": ">=18",
         "react-dom": ">=18"
     },
-    "dependencies": {
-        "@nordcom/nordstar-accented": "*",
-        "@nordcom/nordstar-button": "*",
-        "@nordcom/nordstar-card": "*",
-        "@nordcom/nordstar-heading": "*",
-        "@nordcom/nordstar-label": "*",
-        "@nordcom/nordstar-view": "*",
-        "@nordcom/nordstar-system": "*"
-    },
     "devDependencies": {
-        "clean-package": "2.2.0"
+        "clean-package": "2.2.0",
+        "react": "18.2.0"
     },
     "clean-package": "../../../clean-package.config.json"
 }

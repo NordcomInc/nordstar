@@ -14,9 +14,10 @@ coverage
 
 # production
 /build
-dist/
+dist
 storybook-static
 /packages/storybook/public/tailwind.css
+*.tsbuildinfo
 
 # misc
 .DS_Store
@@ -41,7 +42,6 @@ yarn-error.log*
 .yarn-integrity
 .idea
 .now
-dist
 esm
 examples/**/yarn.lock
 examples/**/out

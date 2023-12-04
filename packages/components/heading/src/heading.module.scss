@@ -1,4 +1,6 @@
 .container {
+    font-family: var(--font-heading);
+
     &:not(:empty):is(.h1, .h2):after {
         content: '.';
     }

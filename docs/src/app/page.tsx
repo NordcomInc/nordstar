@@ -1,5 +1,6 @@
-import { Accented, Card, Heading, Label, View } from '@nordcom/nordstar';
+import { Accented, Button, Card, Heading, Label, View } from '@nordcom/nordstar';
 import type { Metadata } from 'next';
+import Link from 'next/link';
 import styles from './page.module.scss';
 
 export const metadata: Metadata = {
@@ -34,6 +35,12 @@ export default async function IndexPage() {
                         pharetra convallis posuere morbi leo urna. Amet consectetur adipiscing elit ut aliquam purus.
                         Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo.
                     </p>
+
+                    <div style={{ paddingTop: '0.25rem' }}>
+                        <Button variant="solid" color="primary" as={Link} href="/docs/">
+                            Get Started
+                        </Button>
+                    </div>
                 </Card>
                 <Card className={styles.block}>
                     <Label>Examples</Label>

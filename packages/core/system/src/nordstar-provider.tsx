@@ -1,4 +1,5 @@
 import type { CSSProperties, ReactNode } from 'react';
+import styles from './nordstar-provider.module.scss';
 import './styling.scss';
 
 export type NordstarTheme = {
@@ -53,21 +54,25 @@ export const NordstarProvider = ({ children, theme }: NordstarProviderProps) => 
     const { accents, fonts, sizes, layout } = theme ?? {};
 
     // TODO: Maybe create a utility function for this to better handle optional values.
+    // TODO: We should probably try to get this into a `:root` selector.
     const style: CSSProperties = {
         // Colors.
         '--color-accent-primary': accents?.primary,
         '--color-accent-secondary': accents?.secondary,
 
         // Fonts.
-        '--font-heading': fonts?.heading,
-        '--font-body': fonts?.body,
+        ...(fonts?.heading && { '--font-heading': fonts.heading }),
+        ...(fonts?.body && {
+            '--font-body': fonts.body,
+            fontFamily: `var('--font-body')`
+        }),
 
         // Sizes.
         '--size-text-body': sizes?.text?.body || '14px',
 
         // Border.
         '--border-width': theme?.border?.width || '0.18rem',
-        '--border-radius': theme?.border?.radius || '0.65rem',
+        '--border-radius': theme?.border?.radius || '0.5rem',
 
         // Layout.Page.
         '--layout-page-width': layout?.page?.width || '1200px',
@@ -82,7 +87,7 @@ export const NordstarProvider = ({ children, theme }: NordstarProviderProps) => 
     } as CSSProperties;
 
     return (
-        <div id="nordstar" role="document" style={style}>
+        <div id="nordstar" role="document" style={style} className={styles.container}>
             {children}
         </div>
     );

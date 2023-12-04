@@ -1,15 +1,22 @@
 .container {
     appearance: none;
     -webkit-appearance: none;
+
     display: flex;
     gap: calc(var(--layout-block-padding) / 4);
+
+    width: fit-content;
     padding: calc(var(--layout-block-padding) / 2) var(--layout-block-padding);
+
     border-radius: var(--border-radius);
     border-width: var(--border-width);
     border-style: solid;
+
     text-transform: uppercase;
+    text-decoration: none;
     font-weight: 700;
     font-family: var(--font-heading);
+
     transition:
         250ms ease-in-out background-color,
         250ms ease-in-out border-color,
@@ -21,8 +28,8 @@
     }
 
     &[data-color='default'] {
-        --button-accent: var(--color-foreground-secondary); // TODO: Decide on a default color.
-        --button-foreground: var(--color-foreground); // TODO: Decide on a default color.
+        --button-accent: var(--color-foreground);
+        --button-foreground: var(--color-background);
     }
     &[data-color='primary'] {
         --button-accent: var(--color-accent-primary);
@@ -55,5 +62,10 @@
     }
 
     .content {
+        display: block;
+    }
+
+    a {
+        text-decoration: none;
     }
 }

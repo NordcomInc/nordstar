@@ -1,0 +1,10 @@
+.container {
+    display: contents;
+
+    :root {
+        background: var(--color-background);
+        color: var(--color-foreground);
+        font-family: var(--font-heading);
+        font-size: var(--size-text-body);
+    }
+}
