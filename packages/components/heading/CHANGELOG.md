@@ -1,5 +1,12 @@
 # @nordcom/nordstar-heading
 
+## 0.0.16
+
+### Patch Changes
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-system@0.0.16
+
 ## 0.0.15
 
 ### Patch Changes
