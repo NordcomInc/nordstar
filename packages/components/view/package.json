@@ -65,10 +65,11 @@
         "access": "public"
     },
     "dependencies": {
-        "@nordcom/nordstar-system": "*"
+        "@nordcom/nordstar-system": "0.0.14"
     },
     "peerDependencies": {
-        "react": ">=18"
+        "react": ">=18",
+        "react-dom": ">=18"
     },
     "devDependencies": {
         "clean-package": "2.2.0",

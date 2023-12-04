@@ -1,10 +1,10 @@
 {
     "$schema": "https://turbo.build/schema.json",
-    "globalDependencies": ["tsconfig.json"],
+    "globalDependencies": ["tsconfig.json", "**/package.json", "**/vite.config.ts"],
     "pipeline": {
         "build": {
             "dependsOn": ["^build"],
-            "outputs": ["**/.next/**", "!**/.next/cache/**", "**/dist/**", "**/storybook-static/**"]
+            "outputs": ["**/.next/**", "!**/.next/cache/**", "**/dist/**", "**/storybook-static/**", "!**/coverage/**"]
         },
         "clean": {
             "cache": false,

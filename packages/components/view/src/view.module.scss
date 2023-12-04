@@ -9,5 +9,6 @@
         width: calc(100vw - calc(var(--layout-page-spacing) * 2));
         max-width: min(var(--layout-page-width), 100%);
         margin: var(--layout-page-spacing);
+        font-family: var(--font-body);
     }
 }

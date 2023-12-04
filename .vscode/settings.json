@@ -47,7 +47,8 @@
         "postpack",
         "Sandström",
         "Siitam",
-        "typecheck"
+        "typecheck",
+        "vite"
     ],
     "markdown.extension.list.indentationSize": "inherit",
     "markdown.extension.toc.levels": "2..6",

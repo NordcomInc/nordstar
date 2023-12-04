@@ -66,7 +66,8 @@
         "@nordcom/nordstar-system": "*"
     },
     "peerDependencies": {
-        "react": ">=18"
+        "react": ">=18",
+        "react-dom": ">=18"
     },
     "devDependencies": {
         "clean-package": "2.2.0",

@@ -9,7 +9,6 @@
                 "import": "./dist/index.js",
                 "types": "./dist/index.d.ts"
             },
-            "./index.css": "./dist/index.css",
             "./package.json": "./package.json"
         }
     }

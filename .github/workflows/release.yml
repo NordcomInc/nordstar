@@ -25,8 +25,11 @@ jobs:
             - name: 📦 Install
               uses: ./.github/common/install
 
+            - name: 🧹 Clean
+              run: npm run clean
+
             - name: 🔨 Build
-              run: npm run build:packages
+              run: npm run build:packages --no-cache
 
             - name: 🧪 Tests
               run: npm run test:packages
