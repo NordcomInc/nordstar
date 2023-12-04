@@ -1,5 +1,14 @@
 # @nordcom/nordstar-system
 
+## 0.0.15
+
+### Patch Changes
+
+-   [#108](https://github.com/NordcomInc/nordstar/pull/108) [`2885663`](https://github.com/NordcomInc/nordstar/commit/28856638ececea0f598cf5f418456f8fd2f2114d) Thanks [@filiphsps](https://github.com/filiphsps)! - - Update release tooling, this should hopefully fix the issue with wildcard (`*`) dependencies. I will have to push a new release to verify.
+    -   Completely refactored how packages are built, exported and reimported. We will have to look into a better way to deal with `clean-package` as we'd eventually like to be able to export the `scss`/`css` modules as well.
+        -   Fixes code duplication inside of `@nordcom/nordstar`.
+        -   No longer embeds jsx-runtime into every package.
+
 ## 0.0.14
 
 ### Patch Changes
