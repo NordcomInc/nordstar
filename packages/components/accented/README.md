@@ -1,6 +1,6 @@
 # @nordcom/nordstar-accented
 
-Highlight text with an accent color
+Highlight text with an accent color.
 
 ## Installation
 
