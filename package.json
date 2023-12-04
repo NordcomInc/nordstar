@@ -39,6 +39,7 @@
         "create:component": "plop component",
         "create:package": "plop package",
         "version": "changeset version",
+        "postversion": "npm install",
         "version:unstable": "changeset version --snapshot unstable",
         "release": "changeset publish",
         "release:unstable": "changeset publish --snapshot --no-git-tag --tag unstable",
