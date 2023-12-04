@@ -20,10 +20,12 @@ import type { CardProps } from '@nordcom/nordstar-card';
 import { Card } from '@nordcom/nordstar-card';
 import type { HeadingProps } from '@nordcom/nordstar-heading';
 import { Heading } from '@nordcom/nordstar-heading';
+import type { LabelProps } from '@nordcom/nordstar-label';
+import { Label } from '@nordcom/nordstar-label';
 import type { ViewProps } from '@nordcom/nordstar-view';
 import { View } from '@nordcom/nordstar-view';
 
-export { Accented, Button, Card, Heading, NordstarProvider, View };
+export { Accented, Button, Card, Heading, Label, NordstarProvider, View };
 export type {
     AccentedProps,
     As,
@@ -31,6 +33,7 @@ export type {
     CardProps,
     HeadingProps,
     InternalForwardRefRenderFunction,
+    LabelProps,
     MergeWithAs,
     NordstarProviderProps,
     NordstarTheme,
