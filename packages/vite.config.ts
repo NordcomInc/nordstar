@@ -1,5 +1,4 @@
 import { resolve } from 'node:path';
-import postcssRename from 'postcss-rename';
 import scss from 'postcss-scss';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
@@ -30,13 +29,7 @@ export default defineConfig({
     css: {
         postcss: {
             syntax: scss,
-            plugins: [
-                postcssRename({
-                    strategy: 'minimal',
-                    by: 'whole',
-                    ids: false
-                })
-            ]
+            plugins: []
         }
     },
     plugins: [

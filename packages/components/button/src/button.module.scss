@@ -12,11 +12,6 @@
     border-width: var(--border-width);
     border-style: solid;
 
-    text-transform: uppercase;
-    text-decoration: none;
-    font-weight: 700;
-    font-family: var(--font-heading);
-
     transition:
         250ms ease-in-out background-color,
         250ms ease-in-out border-color,
@@ -63,6 +58,11 @@
 
     .content {
         display: block;
+        text-transform: uppercase;
+        text-decoration: none;
+        text-align: center;
+        font-weight: 700;
+        font-family: var(--font-heading);
     }
 
     a {
