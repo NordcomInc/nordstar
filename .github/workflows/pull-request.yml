@@ -12,7 +12,7 @@ jobs:
 
         steps:
             - name: 🚚 Update PR
-              uses: mscharley/dependency-changesets-action@v1.0.5
+              uses: mscharley/dependency-changesets-action@v1.0.6
               with:
                   token: ${{ secrets.MACHINE_USER }}
                   use-conventional-commits: false
