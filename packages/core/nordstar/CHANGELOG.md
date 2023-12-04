@@ -1,5 +1,20 @@
 # @nordcom/nordstar
 
+## 0.0.16
+
+### Patch Changes
+
+-   [#112](https://github.com/NordcomInc/nordstar/pull/112) [`aaa3a13`](https://github.com/NordcomInc/nordstar/commit/aaa3a135b870ff02fc87b17863386ef5e8a09d73) Thanks [@filiphsps](https://github.com/filiphsps)! - Slight update to how releases are built.
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-accented@0.0.16
+    -   @nordcom/nordstar-button@0.0.16
+    -   @nordcom/nordstar-card@0.0.16
+    -   @nordcom/nordstar-heading@0.0.16
+    -   @nordcom/nordstar-label@0.0.16
+    -   @nordcom/nordstar-view@0.0.16
+    -   @nordcom/nordstar-system@0.0.16
+
 ## 0.0.15
 
 ### Patch Changes
