@@ -19,7 +19,10 @@ export default defineConfig({
         rollupOptions: {
             external: [/^@nordcom\/nordstar-/],
             output: {
-                sourcemapExcludeSources: true
+                esModule: true,
+                freeze: true,
+                sourcemapExcludeSources: true,
+                strict: true
             }
         }
     },

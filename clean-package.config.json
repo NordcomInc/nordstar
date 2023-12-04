@@ -1,5 +1,5 @@
 {
-    "remove": ["devDependencies"],
+    "remove": ["devDependencies", "clean-package"],
     "replace": {
         "main": "dist/index.js",
         "module": "dist/index.js",
@@ -10,6 +10,7 @@
                 "types": "./dist/index.d.ts"
             },
             "./package.json": "./package.json"
-        }
+        },
+        "files": ["dist"]
     }
 }

@@ -65,7 +65,7 @@
         "access": "public"
     },
     "dependencies": {
-        "@nordcom/nordstar-system": "^0.0.15"
+        "@nordcom/nordstar-system": "0.0.15"
     },
     "peerDependencies": {
         "react": ">=18",
