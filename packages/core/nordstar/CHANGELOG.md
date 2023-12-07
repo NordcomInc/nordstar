@@ -1,5 +1,24 @@
 # @nordcom/nordstar
 
+## 0.0.17
+
+### Patch Changes
+
+-   [#121](https://github.com/NordcomInc/nordstar/pull/121) [`0a3bfad`](https://github.com/NordcomInc/nordstar/commit/0a3bfadcbc7793256217bb58e48fd90337e02977) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.2.42.
+
+-   [#125](https://github.com/NordcomInc/nordstar/pull/125) [`ba6cd36`](https://github.com/NordcomInc/nordstar/commit/ba6cd369ff471465982b3fdf1544ef969e4cbfdc) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.3.3.
+
+-   [#126](https://github.com/NordcomInc/nordstar/pull/126) [`c42adba`](https://github.com/NordcomInc/nordstar/commit/c42adba32f0132cd6d22bb8ada17342235bd6807) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update storybook monorepo to v7.6.4.
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-accented@0.0.17
+    -   @nordcom/nordstar-button@0.0.17
+    -   @nordcom/nordstar-card@0.0.17
+    -   @nordcom/nordstar-heading@0.0.17
+    -   @nordcom/nordstar-label@0.0.17
+    -   @nordcom/nordstar-view@0.0.17
+    -   @nordcom/nordstar-system@0.0.17
+
 ## 0.0.16
 
 ### Patch Changes
