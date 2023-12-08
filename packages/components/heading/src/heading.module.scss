@@ -1,34 +1,35 @@
 .container {
     font-family: var(--font-heading);
 
-    &:not(:empty):is(.h1, .h2):after {
+    &:not(:empty):is([data-level='h1'], [data-level='h2']):after {
         content: '.';
     }
 
-    &.h1 {
-        font-weight: 800;
-        font-size: 2.5em;
-        line-height: 1;
-        text-transform: uppercase;
+    &[data-level='h1'] {
         hyphens: auto;
 
+        font-weight: 800;
+        font-size: 2.5em;
+        line-height: 0.925;
+        text-transform: uppercase;
+
         @media (min-width: 950px) {
-            font-size: 2.75em;
+            font-size: 3em;
         }
     }
-    &.h2 {
-        font-weight: 400;
-        font-size: 1.85em;
-        line-height: 1.075;
-        letter-spacing: 0.02rem;
-        text-transform: lowercase;
+    &[data-level='h2'] {
         color: var(--color-foreground-secondary);
+
+        font-weight: 400;
+        font-size: 1.65em;
+        line-height: 1.075;
+        text-transform: lowercase;
 
         @media (min-width: 950px) {
             font-size: 2em;
         }
     }
-    &.h3 {
+    &[data-level='h3'] {
         font-size: 1.6em;
         font-weight: 800;
         line-height: 1;
@@ -38,11 +39,10 @@
             font-size: 1.75em;
         }
     }
-    &.h4 {
-        font-size: 0.9em;
+    &[data-level='h4'] {
+        font-size: 1em;
         font-weight: 700;
-        line-height: 1;
+        line-height: 1.05;
         text-transform: uppercase;
-        color: var(--color-foreground-secondary);
     }
 }

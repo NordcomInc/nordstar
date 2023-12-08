@@ -19,7 +19,7 @@ const Heading = forwardRef<'h1', HeadingProps>(({ as, level = 'h1', className, .
     const Tag = as || level;
     const classes = `${styles.container} ${styles[level]}${className ? ` ${className}` : ''}`;
 
-    return <Tag ref={ref} {...props} className={classes} />;
+    return <Tag ref={ref} data-level={level} {...props} className={classes} />;
 });
 
 Heading.displayName = 'Nordstar.Typography.Heading';
