@@ -3,6 +3,7 @@
     -webkit-appearance: none;
 
     display: flex;
+    justify-content: center;
     gap: calc(var(--layout-block-padding) / 4);
 
     width: fit-content;
@@ -11,6 +12,9 @@
     border-radius: var(--border-radius);
     border-width: var(--border-width);
     border-style: solid;
+
+    text-align: center;
+    text-decoration: none;
 
     transition:
         250ms ease-in-out background-color,
@@ -41,7 +45,7 @@
         color: var(--button-foreground);
 
         &:is(:hover, :active) {
-            filter: brightness(80%);
+            filter: brightness(50%);
         }
     }
 
@@ -63,9 +67,5 @@
         text-align: center;
         font-weight: 700;
         font-family: var(--font-heading);
-    }
-
-    a {
-        text-decoration: none;
     }
 }
