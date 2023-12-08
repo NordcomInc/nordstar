@@ -1,5 +1,20 @@
 # @nordcom/nordstar
 
+## 0.0.19
+
+### Patch Changes
+
+-   [#131](https://github.com/NordcomInc/nordstar/pull/131) [`e2f14a6`](https://github.com/NordcomInc/nordstar/commit/e2f14a6c6ad5cd2589fd9bfa722b5256c3f5154b) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update nextjs monorepo to v14.0.4.
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-accented@0.0.19
+    -   @nordcom/nordstar-button@0.0.19
+    -   @nordcom/nordstar-card@0.0.19
+    -   @nordcom/nordstar-heading@0.0.19
+    -   @nordcom/nordstar-label@0.0.19
+    -   @nordcom/nordstar-view@0.0.19
+    -   @nordcom/nordstar-system@0.0.19
+
 ## 0.0.18
 
 ### Patch Changes
