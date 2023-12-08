@@ -28,7 +28,7 @@ export default async function IndexPage() {
 
             <div className={styles.content}>
                 <Card className={styles.block}>
-                    <Label>Guides</Label>
+                    <Label>1. Guides</Label>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc. Turpis egestas maecenas
@@ -36,29 +36,41 @@ export default async function IndexPage() {
                         Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo.
                     </p>
 
-                    <div style={{ paddingTop: '0.25rem' }}>
+                    <div className={styles.actions}>
                         <Button variant="solid" color="primary" as={Link} href="/docs/">
                             Get Started
                         </Button>
                     </div>
                 </Card>
                 <Card className={styles.block}>
-                    <Label>Examples</Label>
+                    <Label>2. Examples</Label>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc. Turpis egestas maecenas
                         pharetra convallis posuere morbi leo urna. Amet consectetur adipiscing elit ut aliquam purus.
                         Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo.
                     </p>
+
+                    <div className={styles.actions}>
+                        <Button variant="solid" as={Link} href="/docs/">
+                            Get Started
+                        </Button>
+                    </div>
                 </Card>
                 <Card className={styles.block}>
-                    <Label>Documentation</Label>
+                    <Label>3. Documentation</Label>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc. Turpis egestas maecenas
                         pharetra convallis posuere morbi leo urna. Amet consectetur adipiscing elit ut aliquam purus.
                         Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo.
                     </p>
+
+                    <div className={styles.actions}>
+                        <Button variant="outline" as={Link} href="/docs/">
+                            Get Started
+                        </Button>
+                    </div>
                 </Card>
             </div>
         </View>

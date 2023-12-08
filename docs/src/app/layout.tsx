@@ -40,8 +40,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             secondary: '#ed1e79'
                         },
                         fonts: {
-                            heading: 'var(--font-primary)',
-                            body: 'var(--font-primary)'
+                            heading: font.style.fontFamily,
+                            body: font.style.fontFamily
                         }
                     }}
                 >

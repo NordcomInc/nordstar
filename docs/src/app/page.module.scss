@@ -1,14 +1,14 @@
 .container {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: var(--layout-section-spacing);
 
     .header {
         display: flex;
         flex-direction: column;
-        gap: 0.25rem;
+        gap: calc(var(--layout-section-spacing) / 3);
         padding-top: calc(var(--layout-section-spacing) * 2);
-        padding-bottom: calc(var(--layout-section-spacing) * 2);
+        padding-bottom: var(--layout-section-spacing);
         width: 52rem;
         max-width: 100%;
     }
@@ -16,7 +16,7 @@
     .content {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: var(--layout-block-padding);
 
         @media (min-width: 950px) {
             grid-template-columns: 1fr 1fr 1fr;
@@ -25,7 +25,12 @@
         .block {
             display: flex;
             flex-direction: column;
-            gap: 0.25rem;
+            gap: calc(var(--layout-block-padding) / 4);
+
+            .actions {
+                display: flex;
+                margin-top: calc(var(--layout-block-padding) / 2);
+            }
         }
     }
 }

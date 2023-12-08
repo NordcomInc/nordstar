@@ -4,17 +4,17 @@ import React from 'react';
 import type { Preview } from '@storybook/react';
 
 const decorators: Preview['decorators'] = [
-    (Story, { globals: {} }) => {
+    (Story) => {
         return (
             <NordstarProvider
                 theme={{
                     accents: {
                         primary: '#ed1e79',
-                        secondary: '#5eb1bf'
+                        secondary: '#1e79ed'
                     },
                     fonts: {
-                        heading: "'Montserrat', sans-serif",
-                        body: "'Montserrat', sans-serif"
+                        heading: 'Montserrat, sans-serif',
+                        body: 'Montserrat, sans-serif'
                     }
                 }}
             >
