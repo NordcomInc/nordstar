@@ -10,8 +10,8 @@
         "forceConsistentCasingInFileNames": true,
         "isolatedModules": true,
         "incremental": true,
-        "jsx": "preserve",
-        "lib": ["dom", "dom.iterable", "ESNext"],
+        "jsx": "react-jsx",
+        "lib": ["dom", "dom.iterable", "ES2023", "ESNext"],
         "module": "ESNext",
         "moduleResolution": "Node",
         "noEmit": true,
@@ -24,18 +24,16 @@
         "strict": true,
         "strictNullChecks": true,
         "target": "ESNext",
-        "types": ["vitest/globals", "@testing-library/jest-dom"],
         "useDefineForClassFields": true
     },
-    "include": ["packages", "@types/declaration.d.ts"],
+    "include": ["./packages", "./packages/**/src/", "@types/declaration.d.ts"],
     "exclude": [
-        "**/node_modules",
-        "**/dist",
-        "**/.turbo",
-        "**/storybook-static",
-        "**/coverage",
-        "**/build",
-        "**/public",
-        "**.*.test.*"
+        "**/node_modules/",
+        "**/dist/",
+        "**/.turbo/",
+        "**/storybook-static/",
+        "**/coverage/",
+        "**/build/",
+        "**/public/"
     ]
 }

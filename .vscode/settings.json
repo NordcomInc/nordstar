@@ -16,9 +16,9 @@
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.codeActionsOnSave": {
-        "source.fixAll": true,
-        "source.organizeImports": true,
-        "source.sortMembers": true
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit",
+        "source.sortMembers": "explicit"
     },
     "files.associations": {
         "**/*.hbs": "plaintext",
@@ -55,5 +55,6 @@
     "markdown.extension.toc.omittedFromToc": {
         "CONTRIBUTING.md": ["## Table of Contents"]
     },
-    "markdown.extension.toc.slugifyMode": "github"
+    "markdown.extension.toc.slugifyMode": "github",
+    "typescript.preferences.importModuleSpecifier": "non-relative"
 }

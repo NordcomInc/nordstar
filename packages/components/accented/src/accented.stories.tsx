@@ -1,5 +1,4 @@
 import type { Meta } from '@storybook/react';
-import React from 'react';
 import type { AccentedProps } from '../src';
 import { Accented } from '../src';
 

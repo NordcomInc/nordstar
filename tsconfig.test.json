@@ -1,0 +1,19 @@
+{
+    "$schema": "https://json.schemastore.org/tsconfig",
+    "extends": "./tsconfig.json",
+    "compilerOptions": {
+        "jsx": "react-jsx",
+        "types": ["vitest/globals", "@testing-library/jest-dom"]
+    },
+
+    "include": ["packages", "@types/declaration.d.ts", "**/*.test.*"],
+    "exclude": [
+        "**/node_modules",
+        "**/dist",
+        "**/.turbo",
+        "**/storybook-static",
+        "**/coverage",
+        "**/build",
+        "**/public"
+    ]
+}

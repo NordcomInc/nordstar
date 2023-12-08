@@ -1,5 +1,6 @@
 {
     "$schema": "https://json.schemastore.org/eslintrc.json",
+    "root": true,
     "env": {
         "browser": false,
         "es2024": true,
@@ -17,7 +18,8 @@
         "ecmaFeatures": {
             "jsx": true
         },
-        "sourceType": "module"
+        "sourceType": "module",
+        "project": ["./tsconfig.json", "./tsconfig.test.json", "./packages/*/tsconfig.json"]
     },
     "settings": {
         "react": {
@@ -36,6 +38,7 @@
         "no-mixed-operators": "off",
         "no-unused-vars": "off",
         "no-useless-constructor": "off",
+        "prettier/prettier": "error",
         "react-hooks/exhaustive-deps": "off",
         "react-hooks/rules-of-hooks": "error",
         "react/no-children-prop": "off",
@@ -43,6 +46,7 @@
         "react/no-string-refs": "off",
         "react/prop-types": "error",
         "react/react-in-jsx-scope": "off",
+        "react/jsx-uses-react": "off",
         "semi": ["error", "always"],
         "standard/computed-property-even-spacing": "off",
         "unused-imports/no-unused-imports": "error",

@@ -9,4 +9,4 @@
 '@nordcom/nordstar-system': patch
 ---
 
-Deps: Update dependency turbo to v1.11.1.
+Refactor tests to use their own tsconfig; this is to prevent typepollution.

@@ -1,6 +1,7 @@
-import { describe, expect, it } from 'vitest';
+import '@testing-library/jest-dom';
 
 import { render } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
 import { NordstarProvider } from './nordstar-provider';
 
 describe('core', () => {
@@ -14,7 +15,7 @@ describe('core', () => {
                         <div>{testText}</div>
                     </NordstarProvider>
                 );
-                expect(getByText(testText)).toBeInTheDocument();
+                expect(getByText(testText)).toBeDefined();
             });
 
             it('renders with theme prop', () => {
@@ -26,22 +27,25 @@ describe('core', () => {
                                 secondary: '#00ff00'
                             },
                             fonts: {
-                                heading: 'sans-serif',
-                                body: 'sans-serif'
+                                heading: 'Open Sans',
+                                body: 'Roboto'
                             }
                         }}
+                        {...{ 'data-testid': 'style' }}
                     >
                         <div>Hello World!</div>
                     </NordstarProvider>
                 );
 
-                expect(wrapper.getByText('Hello World!')).toBeInTheDocument();
-                expect(wrapper.getByRole('document')).toHaveStyle({
-                    '--color-accent-primary': '#ff0000',
-                    '--color-accent-secondary': '#00ff00',
-                    '--font-heading': 'sans-serif',
-                    '--font-body': 'sans-serif'
-                });
+                expect(wrapper.getByText('Hello World!')).toBeDefined();
+                // We add a style tag before the NordstarProvider's container element; let's check if it includes the styles
+
+                const styleElementContent = wrapper.getByTestId('style').innerHTML;
+                expect(styleElementContent).toContain('--color-accent-primary: #ff0000');
+                expect(styleElementContent).toContain('--color-accent-secondary: #00ff00');
+                expect(styleElementContent).toContain('--font-heading: Open Sans');
+                expect(styleElementContent).toContain('--font-body: Roboto');
+
                 expect(() => wrapper.unmount()).not.toThrow();
             });
         });

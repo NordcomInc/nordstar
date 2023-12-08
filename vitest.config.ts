@@ -9,15 +9,31 @@ export default defineConfig({
     test: {
         bail: 1,
         environment: 'jsdom',
-        globals: true,
         maxConcurrency: 16,
         passWithNoTests: true,
-        useAtomics: true,
-        experimentalVmThreads: true,
+
+        typecheck: {
+            tsconfig: './tsconfig.test.json'
+        },
+
+        pool: 'vmThreads',
+        poolOptions: {
+            vmThreads: {
+                useAtomics: true
+            }
+        },
 
         setupFiles: ['./__tests__/setup.ts'],
         reporters: ['verbose'],
         exclude: ['**/*.d.ts', '**/*.stories.*', '**/dist/**/*.*', '**/node_modules/**/*.*'],
+
+        globals: true,
+        deps: {
+            web: {
+                transformCss: true,
+                transformAssets: true
+            }
+        },
 
         coverage: {
             all: true,
@@ -32,11 +48,6 @@ export default defineConfig({
             ],
             include: ['**/src/**/*.{js,ts,jsx,tsx}'],
             provider: 'v8'
-        },
-        deps: {
-            web: {
-                transformCss: true
-            }
         }
     }
 });

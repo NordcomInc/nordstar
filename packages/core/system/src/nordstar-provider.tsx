@@ -1,6 +1,7 @@
-import type { CSSProperties, ReactNode } from 'react';
-import styles from './nordstar-provider.module.scss';
 import './styling.scss';
+
+import type { ReactNode } from 'react';
+import styles from './nordstar-provider.module.scss';
 
 export type NordstarTheme = {
     accents: {
@@ -39,7 +40,6 @@ export type NordstarTheme = {
 export type NordstarProviderProps = {
     theme?: NordstarTheme;
     children: ReactNode;
-    style?: CSSProperties;
 };
 
 /**
@@ -51,49 +51,46 @@ export type NordstarProviderProps = {
  * @param {NordstarTheme} [props.theme] - The theme to use for the application.
  * @returns {ReactNode} The `<NordstarProvider/>` component.
  */
-export const NordstarProvider = ({ children, theme }: NordstarProviderProps) => {
-    const { accents, fonts, sizes, layout } = theme ?? {};
+export const NordstarProvider = ({ children, theme, ...props }: NordstarProviderProps) => {
+    const { accents, fonts, sizes, layout } = theme || {};
+
+    const headingFont =
+        fonts?.heading || fonts?.body ? `--font-heading: ${(fonts.heading || fonts.body).replaceAll("'", '')};` : '';
+    const bodyFont =
+        fonts?.body || fonts?.heading ? `--font-body: ${(fonts.body || fonts.heading).replaceAll("'", '')};` : '';
+
+    // TODO: Maybe create a utility function for this to better handle optional values (and to hide this away from view).
+    const css = `
+        :root {
+            --color-accent-primary: ${accents?.primary};
+            --color-accent-secondary: ${accents?.secondary};
+            --color-background: #000000;
+            --color-background-highlight: #262626;
+            --color-foreground: #fefefe;
+            --color-foreground-secondary: #828282;
+
+            ${headingFont}
+            ${bodyFont}
+
+            --size-text-body: ${sizes?.text?.body || '14px'};
+
+            --border-width: ${theme?.border?.width || '0.18rem'};
+            --border-radius: ${theme?.border?.radius || '0.5rem'};
+
+            --layout-page-width: ${layout?.page?.width || '1200px'};
+            --layout-page-spacing: ${layout?.page?.spacing || '1rem'};
+
+            --layout-section-spacing: ${layout?.section?.spacing || '1rem'};
+            --layout-section-padding: ${layout?.section?.padding || '1.75rem'};
+
+            --layout-block-padding: ${layout?.block?.padding || '1rem'};
+        }
+    `;
 
     return (
         <>
-            <style>
-                {`
-                    ${/* TODO: Maybe create a utility function for this to better handle optional values. */ ''}
-                    :root {
-                        --color-accent-primary: ${accents?.primary};
-                        --color-accent-secondary: ${accents?.secondary};
-                        --color-background: #000000;
-                        --color-background-highlight: #262626;
-                        --color-foreground: #fefefe;
-                        --color-foreground-secondary: #828282;
-
-                        ${
-                            fonts?.heading || fonts?.body
-                                ? `--font-heading: ${(fonts.heading || fonts.body).replaceAll("'", '')};`
-                                : ''
-                        }
-                        ${
-                            fonts?.body || fonts?.heading
-                                ? `--font-body: ${(fonts.body || fonts.heading).replaceAll("'", '')};`
-                                : ''
-                        }
-
-                        --size-text-body: ${sizes?.text?.body || '14px'};
-
-                        --border-width: ${theme?.border?.width || '0.18rem'};
-                        --border-radius: ${theme?.border?.radius || '0.5rem'};
-
-                        --layout-page-width: ${layout?.page?.width || '1200px'};
-                        --layout-page-spacing: ${layout?.page?.spacing || '1rem'};
-
-                        --layout-section-spacing: ${layout?.section?.spacing || '1rem'};
-                        --layout-section-padding: ${layout?.section?.padding || '1.75rem'};
-
-                        --layout-block-padding: ${layout?.block?.padding || '1rem'};
-                    }
-                `}
-            </style>
-            <div id="nordstar" role="document" className={styles.container}>
+            <style {...props}>{css}</style>
+            <div id="nordstar" role="document" className={styles.container || ''}>
                 {children}
             </div>
         </>
