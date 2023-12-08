@@ -1,5 +1,5 @@
 ---
-"@nordcom/nordstar-docs": patch
+'@nordcom/nordstar': patch
 ---
 
 Deps: Update nextjs monorepo to v14.0.4.
