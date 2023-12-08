@@ -6,13 +6,11 @@ export type {{capitalize componentName}}Props = {
     as?: As;
 };
 
-const {{capitalize componentName}} = forwardRef<'div', {{capitalize componentName}}Props>(
-    ({ as: Tag = 'div', className, ...props }, ref) => {
-        const classes = `${styles.container}${className ? ` ${className}` : ''}`;
+const {{capitalize componentName}} = forwardRef<'div', {{capitalize componentName}}Props>(({ as: Tag = 'div', className, ...props }, ref) => {
+    const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
-        return <Tag ref={ref} {...props} className={classes} />;
-    }
-);
+    return <Tag ref={ref} {...props} className={classes} />;
+});
 
 {{capitalize componentName}}.displayName = 'Nordstar.{{capitalize componentName}}';
 
