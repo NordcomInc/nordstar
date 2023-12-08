@@ -1,5 +1,24 @@
 # @nordcom/nordstar
 
+## 0.0.18
+
+### Patch Changes
+
+-   [`618abee`](https://github.com/NordcomInc/nordstar/commit/618abee5fcd951a0a861e7663cd0e45269cc1cad) Thanks [@filiphsps](https://github.com/filiphsps)! - Improve internal tooling.
+
+-   [#129](https://github.com/NordcomInc/nordstar/pull/129) [`69a6e39`](https://github.com/NordcomInc/nordstar/commit/69a6e39a0a1d6cbe3d412f887562e244c608d4e0) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency turbo to v1.11.1.
+
+-   [`5233770`](https://github.com/NordcomInc/nordstar/commit/5233770af4db8114be467712404502b389ac2a6c) Thanks [@filiphsps](https://github.com/filiphsps)! - Refactor tests to use their own tsconfig; this is to prevent typepollution.
+
+-   Updated dependencies [[`69a6e39`](https://github.com/NordcomInc/nordstar/commit/69a6e39a0a1d6cbe3d412f887562e244c608d4e0), [`c5cff63`](https://github.com/NordcomInc/nordstar/commit/c5cff6314804460934bbd200a8c952aa850b84a9), [`b950cd4`](https://github.com/NordcomInc/nordstar/commit/b950cd448243fe0ba5b831e95a6d2ea483846f16), [`3a2967d`](https://github.com/NordcomInc/nordstar/commit/3a2967d167091124c7930d68948451c64c06403a), [`5233770`](https://github.com/NordcomInc/nordstar/commit/5233770af4db8114be467712404502b389ac2a6c), [`e2e55ee`](https://github.com/NordcomInc/nordstar/commit/e2e55eeae39da39be8367b28ecefe93540d2981b)]:
+    -   @nordcom/nordstar-accented@0.0.18
+    -   @nordcom/nordstar-heading@0.0.18
+    -   @nordcom/nordstar-button@0.0.18
+    -   @nordcom/nordstar-label@0.0.18
+    -   @nordcom/nordstar-card@0.0.18
+    -   @nordcom/nordstar-view@0.0.18
+    -   @nordcom/nordstar-system@0.0.18
+
 ## 0.0.17
 
 ### Patch Changes
