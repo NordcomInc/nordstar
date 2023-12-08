@@ -6,7 +6,7 @@
         "types": ["vitest/globals", "@testing-library/jest-dom"]
     },
 
-    "include": ["packages", "@types/declaration.d.ts", "**/*.test.*"],
+    "include": ["packages", "@types/declaration.d.ts", "**/*.test.*", "plop/**/*.js"],
     "exclude": [
         "**/node_modules",
         "**/dist",
