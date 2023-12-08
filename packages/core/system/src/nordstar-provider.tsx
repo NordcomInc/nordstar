@@ -37,8 +37,9 @@ export type NordstarTheme = {
 };
 
 export type NordstarProviderProps = {
-    children: ReactNode;
     theme?: NordstarTheme;
+    children: ReactNode;
+    style?: CSSProperties;
 };
 
 /**
@@ -53,42 +54,48 @@ export type NordstarProviderProps = {
 export const NordstarProvider = ({ children, theme }: NordstarProviderProps) => {
     const { accents, fonts, sizes, layout } = theme ?? {};
 
-    // TODO: Maybe create a utility function for this to better handle optional values.
-    // TODO: We should probably try to get this into a `:root` selector.
-    const style: CSSProperties = {
-        // Colors.
-        '--color-accent-primary': accents?.primary,
-        '--color-accent-secondary': accents?.secondary,
-
-        // Fonts.
-        ...(fonts?.heading && { '--font-heading': fonts.heading }),
-        ...(fonts?.body && {
-            '--font-body': fonts.body,
-            fontFamily: `var('--font-body')`
-        }),
-
-        // Sizes.
-        '--size-text-body': sizes?.text?.body || '14px',
-
-        // Border.
-        '--border-width': theme?.border?.width || '0.18rem',
-        '--border-radius': theme?.border?.radius || '0.5rem',
-
-        // Layout.Page.
-        '--layout-page-width': layout?.page?.width || '1200px',
-        '--layout-page-spacing': layout?.page?.spacing || '1rem',
-
-        // Layout.Section.
-        '--layout-section-spacing': layout?.section?.spacing || '1rem',
-        '--layout-section-padding': layout?.section?.padding || '1.75rem',
-
-        // Layout.Block.
-        '--layout-block-padding': layout?.block?.padding || '1rem'
-    } as CSSProperties;
-
     return (
-        <div id="nordstar" role="document" style={style} className={styles.container}>
-            {children}
-        </div>
+        <>
+            <style>
+                {`
+                    ${/* TODO: Maybe create a utility function for this to better handle optional values. */ ''}
+                    :root {
+                        --color-accent-primary: ${accents?.primary};
+                        --color-accent-secondary: ${accents?.secondary};
+                        --color-background: #000000;
+                        --color-background-highlight: #262626;
+                        --color-foreground: #fefefe;
+                        --color-foreground-secondary: #828282;
+
+                        ${
+                            fonts?.heading || fonts?.body
+                                ? `--font-heading: ${(fonts.heading || fonts.body).replaceAll("'", '')};`
+                                : ''
+                        }
+                        ${
+                            fonts?.body || fonts?.heading
+                                ? `--font-body: ${(fonts.body || fonts.heading).replaceAll("'", '')};`
+                                : ''
+                        }
+
+                        --size-text-body: ${sizes?.text?.body || '14px'};
+
+                        --border-width: ${theme?.border?.width || '0.18rem'};
+                        --border-radius: ${theme?.border?.radius || '0.5rem'};
+
+                        --layout-page-width: ${layout?.page?.width || '1200px'};
+                        --layout-page-spacing: ${layout?.page?.spacing || '1rem'};
+
+                        --layout-section-spacing: ${layout?.section?.spacing || '1rem'};
+                        --layout-section-padding: ${layout?.section?.padding || '1.75rem'};
+
+                        --layout-block-padding: ${layout?.block?.padding || '1rem'};
+                    }
+                `}
+            </style>
+            <div id="nordstar" role="document" className={styles.container}>
+                {children}
+            </div>
+        </>
     );
 };
