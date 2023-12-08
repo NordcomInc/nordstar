@@ -1,5 +1,15 @@
 # @nordcom/nordstar-system
 
+## 0.0.18
+
+### Patch Changes
+
+-   [#129](https://github.com/NordcomInc/nordstar/pull/129) [`69a6e39`](https://github.com/NordcomInc/nordstar/commit/69a6e39a0a1d6cbe3d412f887562e244c608d4e0) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency turbo to v1.11.1.
+
+-   [`c5cff63`](https://github.com/NordcomInc/nordstar/commit/c5cff6314804460934bbd200a8c952aa850b84a9) Thanks [@filiphsps](https://github.com/filiphsps)! - Apply css vars to `:root`.
+
+-   [`5233770`](https://github.com/NordcomInc/nordstar/commit/5233770af4db8114be467712404502b389ac2a6c) Thanks [@filiphsps](https://github.com/filiphsps)! - Refactor tests to use their own tsconfig; this is to prevent typepollution.
+
 ## 0.0.17
 
 ## 0.0.16
