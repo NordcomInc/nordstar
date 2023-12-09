@@ -1,5 +1,14 @@
 # @nordcom/nordstar-view
 
+## 0.0.21
+
+### Patch Changes
+
+-   [`9612e4f`](https://github.com/NordcomInc/nordstar/commit/9612e4ff50a605b0b6c3b51a68e5d6d6990d04d6) Thanks [@filiphsps](https://github.com/filiphsps)! - Improve usage of `<View />` in `withoutWrapper` mode.
+
+-   Updated dependencies [[`254168f`](https://github.com/NordcomInc/nordstar/commit/254168fe9b427ea56eef3c20185eb597df1ebb73), [`961f9af`](https://github.com/NordcomInc/nordstar/commit/961f9af6d41ba187c928598ba17dc59782b5ba30)]:
+    -   @nordcom/nordstar-system@0.0.21
+
 ## 0.0.20
 
 ### Patch Changes

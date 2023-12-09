@@ -1,5 +1,15 @@
 # @nordcom/nordstar-system
 
+## 0.0.21
+
+### Patch Changes
+
+-   [`254168f`](https://github.com/NordcomInc/nordstar/commit/254168fe9b427ea56eef3c20185eb597df1ebb73) Thanks [@filiphsps](https://github.com/filiphsps)! - Add a modern (the-new-css-reset) style reset to `nordstar-system`.
+
+    See https://github.com/elad2412/the-new-css-reset.
+
+-   [`961f9af`](https://github.com/NordcomInc/nordstar/commit/961f9af6d41ba187c928598ba17dc59782b5ba30) Thanks [@filiphsps](https://github.com/filiphsps)! - Improve general styling across all Nordstar components.
+
 ## 0.0.20
 
 ## 0.0.19
