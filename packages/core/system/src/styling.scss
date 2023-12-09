@@ -2,10 +2,15 @@ html,
 body {
     margin: 0;
     padding: 0;
+}
 
-    width: 100vw;
-    max-width: 100vw;
-    font-weight: 400;
+body {
+    --fallback-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Helvetica Neue',
+        sans-serif;
+
+    width: 100%;
+    max-width: 100%;
+    font-weight: 500;
 
     // Touch actions
     touch-action: pan-y;
@@ -17,16 +22,7 @@ body {
     text-rendering: optimizeLegibility;
     text-size-adjust: auto;
     font-smooth: always;
-    font-family:
-        var(--font-body, sans-serif),
-        -apple-system,
-        BlinkMacSystemFont,
-        'Segoe UI',
-        Roboto,
-        Ubuntu,
-        Cantarell,
-        'Helvetica Neue',
-        sans-serif;
+    font-family: var(--font-body, var(--fallback-font));
 
     color: var(--color-foreground);
     background-color: var(--color-background);
@@ -36,24 +32,22 @@ body {
     box-sizing: border-box;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
+:is(h1, h2, h3, h4, h5, h6) {
     margin: 0;
     padding: 0;
     line-height: normal;
 }
 
-p,
-a {
+:is(p, a, b, i, strong, em) {
     font-size: inherit;
-    font-weight: inherit;
+    line-height: inherit;
 }
 
 p {
     line-height: 1.215;
+}
+
+b,
+strong {
+    font-weight: 700;
 }
