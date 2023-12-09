@@ -56,7 +56,9 @@
         "prebuild": "npm run prepack",
         "postbuild": "npm run postpack"
     },
-    "dependencies": {},
+    "dependencies": {
+        "the-new-css-reset": "1.11.2"
+    },
     "peerDependencies": {
         "react": ">=18",
         "react-dom": ">=18"
