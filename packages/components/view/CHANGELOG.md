@@ -1,5 +1,14 @@
 # @nordcom/nordstar-view
 
+## 0.0.20
+
+### Patch Changes
+
+-   [`df751f0`](https://github.com/NordcomInc/nordstar/commit/df751f05c32a3f26e3baecd26f3b24fe306cc935) Thanks [@filiphsps](https://github.com/filiphsps)! - Add `as`, `outerAs` and `withoutWrapper` props to `<View />`.
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-system@0.0.20
+
 ## 0.0.19
 
 ### Patch Changes
