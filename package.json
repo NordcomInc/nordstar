@@ -103,7 +103,7 @@
         "plop": "4.0.0",
         "postcss": "8.4.32",
         "postcss-scss": "4.0.9",
-        "prettier": "3.1.0",
+        "prettier": "3.1.1",
         "prettier-eslint": "16.1.2",
         "react": "18.2.0",
         "react-dom": "18.2.0",
