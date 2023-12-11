@@ -56,5 +56,14 @@
         "CONTRIBUTING.md": ["## Table of Contents"]
     },
     "markdown.extension.toc.slugifyMode": "github",
-    "typescript.preferences.importModuleSpecifier": "non-relative"
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "github.copilot.chat.localeOverride": "en",
+    "github.copilot.advanced": {
+        "length": 1500,
+        "temperature": "0.75"
+    },
+    "github.copilot-labs.advanced": {
+        "length": 1500,
+        "temperature": "0.75"
+    }
 }

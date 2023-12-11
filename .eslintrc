@@ -19,7 +19,13 @@
             "jsx": true
         },
         "sourceType": "module",
-        "project": ["./tsconfig.json", "./tsconfig.test.json", "./packages/*/tsconfig.json"]
+        "project": [
+            "./tsconfig.json",
+            "./tsconfig.test.json",
+            "./packages/**/tsconfig.json",
+            "./packages/**/tsconfig.test.json",
+            "./docs/**/tsconfig.json"
+        ]
     },
     "settings": {
         "react": {

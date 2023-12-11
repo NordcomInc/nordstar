@@ -4,7 +4,7 @@ let config = {
     reactStrictMode: true,
     trailingSlash: true,
     swcMinify: true,
-    productionBrowserSourceMaps: false,
+    productionBrowserSourceMaps: true,
     compress: true,
     experimental: {
         scrollRestoration: true,
@@ -15,23 +15,16 @@ let config = {
         remotePatterns: [
             {
                 protocol: 'https',
-                hostname: '**.nordcom.io',
-            }, {
-                protocol: 'https',
-                hostname: '**.github.io',
+                hostname: '**.nordcom.io'
             },
+            {
+                protocol: 'https',
+                hostname: '**.github.io'
+            }
         ]
     },
-    compiler: {
-        styledComponents: true,
-        ...(process.env.NODE_ENV === 'production' && {
-            removeConsole: {
-                exclude: ['warn', 'error'],
-            }
-        } || {})
-    },
     eslint: {
-        ignoreDuringBuilds: true,
+        ignoreDuringBuilds: true
     }
 };
 
