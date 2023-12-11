@@ -6,7 +6,7 @@ on:
 
 jobs:
     renovate:
-        name: 🔍 Add Changesdt to Renovate PR
+        name: 🔍 Add Changeset to Renovate PR
         runs-on: ubuntu-latest
         if: contains(github.event.pull_request.labels.*.name, 'Dependency')
 
