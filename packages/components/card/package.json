@@ -3,8 +3,9 @@
     "name": "@nordcom/nordstar-card",
     "type": "module",
     "version": "0.0.21",
-    "description": "",
+    "description": "Card is a consistent card-like container for blocks of content.",
     "main": "./src/index.ts",
+    "prettier": "@nordcom/prettier",
     "types": "./src/index.ts",
     "module": "./src/index.ts",
     "exports": {
@@ -72,7 +73,9 @@
         "react-dom": ">=18"
     },
     "devDependencies": {
+        "@nordcom/prettier": "0.1.1",
         "clean-package": "2.2.0",
+        "prettier": "3.1.1",
         "react": "18.2.0"
     },
     "clean-package": "../../../clean-package.config.json"

@@ -8,7 +8,7 @@ If you believe you have found a security flaw or vulnerability, If you believe y
 
 **Please, do not report or disclose a potential security vulnerability through a publicly accessible forum like GitHub issues.**
 
-Instead, report any suspected security vulnerabilities or issues to **[opensource@nordcom.io](mailto:opensource@nordcom.io)**.
+Instead, report any suspected security vulnerabilities or issues to **[security@nordcom.io](mailto:security@nordcom.io)**.
 
 After which, we may then reach out and request more information to help us triage the issue more quickly.
 
@@ -27,6 +27,6 @@ We will investigate all reported security vulnerabilities promptly and responsib
 
 We will work with security researchers to coordinate a responsible disclosure of vulnerabilities. We will provide a public disclosure with a workaround, if possible, or as soon as a fix has been deployed.
 
-**We encourage security researchers to report vulnerabilities to us privately at [opensource@nordcom.io](mailto:opensource@nordcom.io). We do not accept or disclose security vulnerabilities through public forums like GitHub issues.**
+**We encourage security researchers to report vulnerabilities to us privately at [security@nordcom.io](mailto:security@nordcom.io). We do not accept or disclose security vulnerabilities through public forums like GitHub issues.**
 
 We appreciate the help of the security community in keeping our open source software, libraries and packages safe.

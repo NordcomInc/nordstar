@@ -7,7 +7,7 @@
 [![GitHub Commit Activity](https://img.shields.io/github/commit-activity/t/NordcomInc/nordstar?style=flat)](https://github.com/NordcomInc/nordstar/graphs/commit-activity)
 [![GitHub Contributors](https://img.shields.io/github/contributors/NordcomInc/nordstar?style=flat&color=48A9A6)](https://github.com/NordcomInc/nordstar/graphs/contributors)
 
-**Nordcom Group Inc.**'s component library. A modern, accessible, beautiful, and flexible design system for building human user interfaces in Next.js.
+**Nordcom Group Inc.**'s component library. An opinionated component library for building human-centric user interfaces in React/Next.js.
 
 [Join our Discord server](https://discord.gg/WgYVtCbR6J) and come hang out with the community and the Nordstar team at Nordcom Group Inc.!
 

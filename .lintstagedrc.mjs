@@ -19,12 +19,12 @@ const filterIgnoredFiles = async (files) => {
 };
 
 export default {
-    '**/*.{js,ts,jsx,tsx}': async (files) => {
+    'packages/**/*.{js,ts,jsx,tsx}': async (files) => {
         const filesToLint = await filterIgnoredFiles(files);
 
         return [`eslint --max-warnings=0 --fix ${filesToLint}`];
     },
-    '**/*.css': async (files) => {
+    'packages/**/*.{css,scss}': async (files) => {
         const filesToLint = await filterIgnoredFiles(files);
 
         return [`prettier --ignore-path --write ${filesToLint}`];

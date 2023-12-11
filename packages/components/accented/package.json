@@ -3,8 +3,9 @@
     "name": "@nordcom/nordstar-accented",
     "type": "module",
     "version": "0.0.21",
-    "description": "",
+    "description": "Highlight text with an accent color.",
     "main": "./src/index.ts",
+    "prettier": "@nordcom/prettier",
     "types": "./src/index.ts",
     "module": "./src/index.ts",
     "exports": {
@@ -70,7 +71,9 @@
         "react-dom": ">=18"
     },
     "devDependencies": {
+        "@nordcom/prettier": "0.1.1",
         "clean-package": "2.2.0",
+        "prettier": "3.1.1",
         "react": "18.2.0"
     },
     "clean-package": "../../../clean-package.config.json"
