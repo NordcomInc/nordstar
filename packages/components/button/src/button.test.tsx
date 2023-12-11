@@ -9,17 +9,38 @@ import { Button } from '../src';
 describe('components', () => {
     describe('button', () => {
         describe('Button', () => {
-            it('should render correctly', () => {
+            it('renders without crashing', () => {
                 const wrapper = render(<Button />);
 
                 expect(() => wrapper.unmount()).not.toThrow();
             });
 
-            it('should render with disabled correctly', () => {
+            it('renders as another component', () => {
+                const wrapper = render(<Button as="aside" />);
+
+                expect(wrapper.container.outerHTML).toContain('<aside');
+                expect(() => wrapper.unmount()).not.toThrow();
+            });
+
+            it('renders with className', () => {
+                const wrapper = render(<Button className="hello-world" />);
+
+                expect(wrapper.container.outerHTML).toContain('hello-world');
+                expect(() => wrapper.unmount()).not.toThrow();
+            });
+
+            it('renders when disabled', () => {
                 const wrapper = render(<Button disabled />);
 
                 expect(wrapper.getByRole('button')).toHaveProperty('disabled', true);
                 expect(wrapper.getByRole('button')).toHaveAttribute('aria-disabled', 'true');
+                expect(() => wrapper.unmount()).not.toThrow();
+            });
+
+            it('renders with an icon', () => {
+                const wrapper = render(<Button icon={'insert-icon-here'} />);
+
+                expect(wrapper.getByRole('button')).toHaveTextContent('insert-icon-here');
                 expect(() => wrapper.unmount()).not.toThrow();
             });
 

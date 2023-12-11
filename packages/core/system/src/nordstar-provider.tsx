@@ -8,9 +8,9 @@ export type NordstarTheme = {
         primary: string;
         secondary: string;
     };
-    fonts: {
-        heading: string;
-        body: string;
+    fonts?: {
+        heading?: string;
+        body?: string;
         code?: string;
     };
     sizes?: {
@@ -39,7 +39,7 @@ export type NordstarTheme = {
 
 export type NordstarProviderProps = {
     theme?: NordstarTheme;
-    children: ReactNode;
+    children?: ReactNode;
 };
 
 /**
@@ -55,9 +55,9 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
     const { accents, fonts, sizes, layout } = theme || {};
 
     const headingFont =
-        fonts?.heading || fonts?.body ? `--font-heading: ${(fonts.heading || fonts.body).replaceAll("'", '')};` : '';
+        fonts?.heading || fonts?.body ? `--font-heading: ${(fonts?.heading || fonts?.body)!.replaceAll("'", '')};` : '';
     const bodyFont =
-        fonts?.body || fonts?.heading ? `--font-body: ${(fonts.body || fonts.heading).replaceAll("'", '')};` : '';
+        fonts?.body || fonts?.heading ? `--font-body: ${(fonts?.body || fonts?.heading)!.replaceAll("'", '')};` : '';
 
     // TODO: Maybe create a utility function for this to better handle optional values (and to hide this away from view).
     const css = `

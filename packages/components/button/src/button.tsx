@@ -1,17 +1,29 @@
 import type { As } from '@nordcom/nordstar-system';
 import { forwardRef } from '@nordcom/nordstar-system';
+import type { ReactNode } from 'react';
 import styles from './button.module.scss';
 
 export type ButtonProps = {
     variant?: 'solid' | 'outline';
     color?: 'default' | 'primary' | 'secondary';
+    icon?: ReactNode;
     as?: As;
     disabled?: boolean;
 };
 
 const Button = forwardRef<'button', ButtonProps>(
     (
-        { variant = 'solid', color = 'default', as: Tag = 'button', disabled, className, type, children, ...props },
+        {
+            variant = 'solid',
+            color = 'default',
+            icon = null,
+            as: Tag = 'button',
+            disabled,
+            className,
+            type,
+            children,
+            ...props
+        },
         ref
     ) => {
         const classes = `${styles.container}${className ? ` ${className}` : ''}`;
@@ -30,6 +42,7 @@ const Button = forwardRef<'button', ButtonProps>(
                 })}
                 className={classes}
             >
+                {icon ? <div className={styles.icon}>{icon}</div> : null}
                 <div className={styles.content}>{children}</div>
             </Tag>
         );
