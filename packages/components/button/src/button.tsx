@@ -42,8 +42,8 @@ const Button = forwardRef<'button', ButtonProps>(
                 })}
                 className={classes}
             >
-                {icon ? <div className={styles.icon}>{icon}</div> : null}
-                <div className={styles.content}>{children}</div>
+                {icon ? <div data-icon>{icon}</div> : null}
+                <div data-content>{children}</div>
             </Tag>
         );
     }

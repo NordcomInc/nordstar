@@ -61,7 +61,7 @@
         }
     }
 
-    .content {
+    [data-content] {
         display: block;
         text-transform: uppercase;
         text-decoration: none;
@@ -70,7 +70,7 @@
         font-family: var(--font-heading);
     }
 
-    :is(.icon, .icon svg) {
+    :is([data-icon], [data-icon] svg) {
         color: inherit;
         font-size: inherit;
         font-weight: inherit;
