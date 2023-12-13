@@ -1,5 +1,6 @@
 import type { Meta } from '@storybook/react';
 import React from 'react';
+import React from 'react';
 import type { CardProps } from '../src';
 import { Card } from '../src';
 
@@ -14,6 +15,11 @@ const Template = (args: CardProps) => <Card {...args}>Content inside of the card
 export const Default = {
     render: Template,
     args: {}
+};
+
+export const Solid = {
+    render: Template,
+    args: { variant: 'solid' }
 };
 
 export default story;
