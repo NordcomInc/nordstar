@@ -9,10 +9,28 @@ import { Card } from '../src';
 describe('components', () => {
     describe('card', () => {
         describe('Card', () => {
-            it('should render correctly', () => {
-                const wrapper = render(<Card />);
+            it('renders with default styles', () => {
+                const { getByTestId } = render(<Card data-testid="card" />);
+                const card = getByTestId('card');
 
-                expect(() => wrapper.unmount()).not.toThrow();
+                expect(card).toHaveAttribute('data-variant', 'default');
+                expect(card).toHaveAttribute('data-color', 'default');
+            });
+
+            it('renders with solid variant and primary color', () => {
+                const { getByTestId } = render(<Card variant='solid' color='primary' data-testid="card" />);
+                const card = getByTestId('card');
+
+                expect(card).toHaveAttribute('data-variant', 'solid');
+                expect(card).toHaveAttribute('data-color', 'primary');
+            });
+
+            it('renders with solid variant and secondary color', () => {
+                const { getByTestId } = render(<Card variant='solid' color='secondary' data-testid="card" />);
+                const card = getByTestId('card');
+
+                expect(card).toHaveAttribute('data-variant', 'solid');
+                expect(card).toHaveAttribute('data-color', 'secondary');
             });
         });
     });
