@@ -7,22 +7,20 @@ docs:
     react: ["https://react.dev/", "We use React.js to build our components."]
     next: ["https://nextjs.org/docs", "We specfically target projects using the Next.js app router."]
     vitest: ["https://vitest.dev", "We use vitest for unit and snapshot testing."]
-    nordstar: ["https://nordstar.nordcom.io", "We publish the nordstar documentation to the nordstar website."]
+    nordstar: ["https://nordstar.nordcom.io/", "We publish the nordstar documentation to the nordstar website."]
+    scss: ["https://sass-lang.com/documentation/", "We use scss modules to style the components."]
 
 sandbox:
     install:
         - npm install
     check:
-        - git add .
         - npx -y lint-staged --allow-empty
+        - npm run lint
+        - git add .
 
 rules:
-    - "Commit titles should start with the effected area of the code followed by a description and then a period and should be no longer than 72 characters. For example `Button: Add an alternative solid variant."
-    - "Do not use conventional commits."
-    - "Always squash changes, never do fixup commits."
     - "Code should be covered by unit tests using vitest in a `{filename}.tests.{ts,tsx} file."
     - "Any clearly inefficient or repeated code should be optimized or refactored."
-    - "Follow our style guidelines and the contribution guidelines detailed in `CONTRIBUTING.md`."
+    - "Follow our style contribution guidelines detailed in `CONTRIBUTING.md`."
     - "Remove any comments before code that are obvious. For example `// this prints hello world; console.log('hello world');`."
-    - "Leftover TODOs in the code should be handled."
-    - "Add a changeset file in `./.changeset/` when adding, changing or removing a feature. Use lowercase and dashes naming of the file and, as an easteregg, always use a title of a Taylor Swift song. For example `./.changeset/back-to-december.md`."
+    - "Prefer data-attributes over classes when adding component-legel variations/customization."
