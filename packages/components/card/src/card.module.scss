@@ -3,4 +3,18 @@
     border: var(--border-width) solid var(--color-background-highlight);
     border-radius: var(--border-radius);
     font-family: var(--font-body);
+    background-color: var(--color-foreground);
+}
+
+.solid {
+    padding: 0;
+    background-color: var(--color-background);
+}
+
+.primary {
+    background-color: var(--color-primary);
+}
+
+.secondary {
+    background-color: var(--color-secondary);
 }
