@@ -16,4 +16,9 @@ export const Default = {
     args: {}
 };
 
+export const SolidVariant = {
+    render: Template,
+    args: { variant: 'solid', color: 'primary' }
+};
+
 export default story;
