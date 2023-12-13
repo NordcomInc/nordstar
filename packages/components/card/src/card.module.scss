@@ -4,3 +4,20 @@
     border-radius: var(--border-radius);
     font-family: var(--font-body);
 }
+
+/* Styles for the solid variant */
+.container[data-variant="solid"] {
+    background: var(--color-foreground);
+    padding: 0;
+    border: none;
+}
+
+/* Styles for the primary color option of the solid variant */
+.container[data-variant="solid"][data-color="primary"] {
+    background-color: var(--color-primary);
+}
+
+/* Styles for the secondary color option of the solid variant */
+.container[data-variant="solid"][data-color="secondary"] {
+    background-color: var(--color-secondary);
+}
