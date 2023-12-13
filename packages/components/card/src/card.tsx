@@ -4,6 +4,8 @@ import styles from './card.module.scss';
 
 export type CardProps = {
     as?: As;
+    variant?: 'default' | 'solid';
+    color?: 'default' | 'primary' | 'secondary';
 };
 
 /**
@@ -14,7 +16,7 @@ export type CardProps = {
  * @returns {ReactNode} The `<Card/>` component.
  */
 const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className, ...props }, ref) => {
-    const classes = `${styles.container}${className ? ` ${className}` : ''}`;
+    const classes = `${styles.container}${className ? ` ${className}` : ''}${props.variant === 'solid' ? ` ${styles.solid}` : ''}${props.color === 'primary' ? ` ${styles.primary}` : props.color === 'secondary' ? ` ${styles.secondary}` : ''}`;
 
     return <Tag ref={ref} {...props} className={classes} />;
 });
