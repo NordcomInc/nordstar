@@ -18,6 +18,8 @@ sandbox:
 
 rules:
     - "Commit titles should start with the effected area of the code followed by a description and then a period and should be no longer than 72 characters. For example `Button: Add an alternative solid variant."
+    - "Do not use conventional commits."
+    - "Always squash changes, never do fixup commits."
     - "Code should be covered by unit tests using vitest in a `{filename}.tests.{ts,tsx} file."
     - "Any clearly inefficient or repeated code should be optimized or refactored."
     - "Follow our style guidelines and the contribution guidelines detailed in `CONTRIBUTING.md`."
