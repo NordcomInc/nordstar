@@ -4,6 +4,8 @@ import styles from './card.module.scss';
 
 export type CardProps = {
     as?: As;
+    variant?: 'default' | 'solid';
+    color?: 'default' | 'primary' | 'secondary';
 };
 
 /**
@@ -14,9 +16,18 @@ export type CardProps = {
  * @returns {ReactNode} The `<Card/>` component.
  */
 const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className, ...props }, ref) => {
+    const { variant = 'default', color = 'default', ...otherProps } = props;
     const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
-    return <Tag ref={ref} {...props} className={classes} />;
+    return (
+      <Tag
+        ref={ref}
+        data-variant={variant}
+        data-color={color}
+        {...otherProps}
+        className={classes}
+      />
+    );
 });
 
 Card.displayName = 'Nordstar.Card';
