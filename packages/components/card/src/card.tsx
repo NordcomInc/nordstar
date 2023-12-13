@@ -4,6 +4,8 @@ import styles from './card.module.scss';
 
 export type CardProps = {
     as?: As;
+    variant?: 'default' | 'solid';
+    color?: 'default' | 'primary' | 'secondary';
 };
 
 /**
@@ -16,7 +18,7 @@ export type CardProps = {
 const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className, ...props }, ref) => {
     const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
-    return <Tag ref={ref} {...props} className={classes} />;
+    return <Tag ref={ref} {...props} className={classes} data-variant={props.variant || 'default'} data-color={props.color || 'default'} />;
 });
 
 Card.displayName = 'Nordstar.Card';
