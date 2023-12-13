@@ -6,10 +6,13 @@ import { Card } from '../src';
 const story: Meta<typeof Card> = {
     title: 'Components/Card',
     component: Card,
-    argTypes: {}
+    argTypes: {
+        variant: { control: 'select', options: ['default', 'solid'] },
+        color: { control: 'select', options: ['default', 'primary', 'secondary'] }
+    }
 };
 
-const Template = (args: CardProps) => <Card {...args}>Content inside of the card</Card>;
+const Template = ({variant, color, ...args}: CardProps) => <Card variant={variant} color={color} {...args}>Content inside of the card</Card>;
 
 export const Default = {
     render: Template,
