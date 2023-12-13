@@ -1,6 +1,18 @@
-.container {
+.container[data-color='primary'] {
+    background-color: var(--color-primary);
+}
+
+.container[data-color='secondary'] {
+    background-color: var(--color-secondary);
+}.container {
     padding: var(--layout-block-padding);
     border: var(--border-width) solid var(--color-background-highlight);
+}
+
+.container[data-variant='solid'] {
+    background-color: var(--color-foreground);
+    border: none;
+}
     border-radius: var(--border-radius);
     font-family: var(--font-body);
 }
