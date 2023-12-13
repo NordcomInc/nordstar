@@ -9,11 +9,27 @@ const story: Meta<typeof Card> = {
     argTypes: {}
 };
 
-const Template = (args: CardProps) => <Card {...args}>Content inside of the card</Card>;
+const Template = ({ variant, color, ...args }: CardProps) => <Card variant={variant} color={color} {...args}>Content inside of the card</Card>;
 
 export const Default = {
     render: Template,
     args: {}
+};
+
+export const SolidPrimary = {
+    render: Template,
+    args: {
+        variant: 'solid',
+        color: 'primary'
+    }
+};
+
+export const SolidSecondary = {
+    render: Template,
+    args: {
+        variant: 'solid',
+        color: 'secondary'
+    }
 };
 
 export default story;
