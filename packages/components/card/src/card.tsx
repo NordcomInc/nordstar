@@ -16,7 +16,10 @@ export type CardProps = {
  * @returns {ReactNode} The `<Card/>` component.
  */
 const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className, ...props }, ref) => {
-    const classes = `${styles.container}${className ? ` ${className}` : ''}`;
+    const { variant = 'default', color = 'default' } = props;
+    const variantClass = styles[variant] || '';
+    const colorClass = styles[color] || '';
+    const classes = `${styles.container}${variantClass}${colorClass}${className ? ` ${className}` : ''}`;
 
     return <Tag ref={ref} {...props} className={classes} />;
 });
