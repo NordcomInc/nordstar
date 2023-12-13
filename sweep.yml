@@ -23,5 +23,6 @@ rules:
     - "Code should be covered by unit tests using vitest in a `{filename}.tests.{ts,tsx} file."
     - "Any clearly inefficient or repeated code should be optimized or refactored."
     - "Follow our style guidelines and the contribution guidelines detailed in `CONTRIBUTING.md`."
-    - "Remove any comments before code that are obvious. For example `// this prints hello world; console.log('hello world')`;"
+    - "Remove any comments before code that are obvious. For example `// this prints hello world; console.log('hello world');`."
     - "Leftover TODOs in the code should be handled."
+    - "Add a changeset file in `./.changeset/` when adding, changing or removing a feature. Use lowercase and dashes naming of the file and, as an easteregg, always use a title of a Taylor Swift song. For example `./.changeset/back-to-december.md`."
