@@ -1,5 +1,21 @@
 .container {
     padding: var(--layout-block-padding);
+    &[data-variant='solid'] {
+        padding: 0;
+        border: none;
+        background-color: var(--color-foreground);
+        color: var(--color-background);
+        &[data-variant='solid'] {
+        &[data-color='primary'] {
+            background-color: var(--color-accent-primary);
+            color: var(--color-background);
+        }
+        &[data-color='secondary'] {
+            background-color: var(--color-accent-secondary);
+            color: var(--color-background);
+        }
+    }
+}
     border: var(--border-width) solid var(--color-background-highlight);
     border-radius: var(--border-radius);
     font-family: var(--font-body);
