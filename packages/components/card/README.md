@@ -2,6 +2,12 @@
 
 `<Card/>` is a consistent card-like container for blocks of content.
 
+## Props
+
+- `variant`: The visual variant of the card component. Possible values:
+  - `default`: A standard card with padding.
+  - `solid`: A solid card with no padding.
+
 ## Installation
 
 > [!TIP]
