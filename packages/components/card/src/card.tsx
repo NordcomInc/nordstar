@@ -4,6 +4,8 @@ import styles from './card.module.scss';
 
 export type CardProps = {
     as?: As;
+    variant?: 'default' | 'solid';
+    color?: 'default' | 'primary' | 'secondary';
 };
 
 /**
