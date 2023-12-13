@@ -16,4 +16,34 @@ export const Default = {
     args: {}
 };
 
+export const SolidPrimary = {
+    render: Template,
+    args: {
+        variant: 'solid',
+        color: 'primary'
+    }
+};
+
+export const SolidSecondary = {
+    render: Template,
+    args: {
+        variant: 'solid',
+        color: 'secondary'
+    }
+};
+
+export const DefaultPrimary = {
+    render: Template,
+    args: {
+        color: 'primary'
+    }
+};
+
+export const DefaultSecondary = {
+    render: Template,
+    args: {
+        color: 'secondary'
+    }
+};
+
 export default story;
