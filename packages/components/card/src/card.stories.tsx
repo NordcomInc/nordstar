@@ -17,7 +17,7 @@ const Template = (args: CardProps & { variant?: 'default' | 'solid', color?: 'de
 
 export const Default = {
     render: Template,
-    args: {}
+    args: {variant: 'solid', color: 'default'}
 };
 
 export default story;
