@@ -1,4 +1,5 @@
-import type { As } from '@nordcom/nordstar-system';
+import type { As } from './solid-card.module.scss';
+import { As } from '@nordcom/nordstar-system';
 import { forwardRef } from '@nordcom/nordstar-system';
 import styles from './card.module.scss';
 
