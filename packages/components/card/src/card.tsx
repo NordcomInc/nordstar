@@ -19,7 +19,10 @@ const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className,
     const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
     
-return <Tag ref={ref} {...props} className={classes} />;
+const dataVariant = (props.variant === 'solid') ? 'solid' : 'default';
+    const dataColor = (props.color === 'default') ? 'var(--color-foreground)' : (props.color === 'primary') ? 'var(--color-primary)' : 'var(--color-secondary)';
+
+return <Tag ref={ref} {...props} className={classes} data-variant={dataVariant} data-color={dataColor} />;
 });
 
 Card.displayName = 'Nordstar.Card';
