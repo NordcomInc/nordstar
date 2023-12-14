@@ -1,6 +1,21 @@
 .container {
     padding: var(--layout-block-padding);
     border: var(--border-width) solid var(--color-background-highlight);
+
+    &[data-variant="solid"] {
+        background: var(--color-foreground);
+        color: var(--color-background);
+        padding: 0;
+        border: none;
+    }
+    &[data-variant="solid"][data-color="primary"] {
+        background: var(--color-primary);
+        color: var(--color-on-primary);
+    }
+    &[data-variant="solid"][data-color="secondary"] {
+        background: var(--color-secondary);
+        color: var(--color-on-secondary);
+    }
     border-radius: var(--border-radius);
     font-family: var(--font-body);
 }
