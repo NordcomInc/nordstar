@@ -1,0 +1,20 @@
+// packages/components/card/card.module.scss
+
+.container {
+  // Existing styles for the base container class
+}
+
+.container.solid {
+  @extend .container;
+
+  border-width: 0;
+  background-color: var(--color-background);
+}
+
+[data-variant="solid"] {
+  @extend .container.solid;
+}
+
+[data-color="default"] {
+  color: var(--color-background);
+}
