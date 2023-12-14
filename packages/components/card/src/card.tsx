@@ -12,7 +12,6 @@ export type CardProps = {
  * `<Card/>`, a component to render cards.
  *
  * @param {object} props - `<Card/>` props.
- * @param {object} props - `<Card/>` props.
  * @param {As} [props.as] - The element to render the component as.
  * @param {'default' | 'solid'} [props.variant] - The card variant.
  * @param {'default' | 'primary' | 'secondary'} [props.color] - The color of the card background.
