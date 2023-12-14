@@ -1,6 +1,8 @@
 .container {
     padding: var(--layout-block-padding);
-    border: var(--border-width) solid var(--color-background-highlight);
+    border-radius: var(--border-radius);
+    border: 0;
     border-radius: var(--border-radius);
     font-family: var(--font-body);
+    background-color: var(--color-background-highlight);
 }
