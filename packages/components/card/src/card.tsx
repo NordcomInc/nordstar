@@ -3,6 +3,8 @@ import { forwardRef } from '@nordcom/nordstar-system';
 import styles from './card.module.scss';
 
 export type CardProps = {
+    variant?: 'default' | 'solid';
+    color?: 'default' | 'primary' | 'secondary';
     as?: As;
 };
 
@@ -16,7 +18,8 @@ export type CardProps = {
 const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className, ...props }, ref) => {
     const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
-    return <Tag ref={ref} {...props} className={classes} />;
+    const cardStyle = props.variant === 'solid' ? { backgroundColor: props.color === 'default' ? 'var(--color-foreground)' : props.color === 'primary' ? 'var(--color-primary)' : 'var(--color-secondary)' } : {};
+return <Tag ref={ref} {...props} className={classes} style={cardStyle} />;
 });
 
 Card.displayName = 'Nordstar.Card';
