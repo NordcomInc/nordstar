@@ -13,7 +13,7 @@ const story: Meta<typeof Card> = {
   }
 };
 
-const Template = (args: CardProps) => <Card {...args}>Content inside of the card</Card>;
+const Template = (args: CardProps & { variant?: 'default' | 'solid', color?: 'default' | 'primary' | 'secondary' }) => <Card {...args}>Content inside of the card</Card>
 
 export const Default = {
     render: Template,
