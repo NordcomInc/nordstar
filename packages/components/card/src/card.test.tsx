@@ -14,6 +14,10 @@ describe('components', () => {
 
                 expect(() => wrapper.unmount()).not.toThrow();
             });
+    it('should render correctly with solid variant and primary color', () => {
+        const wrapper = render(<Card variant='solid' color='primary' />);
+        expect(() => wrapper.unmount()).not.toThrow();
+    });
         });
     });
 });
