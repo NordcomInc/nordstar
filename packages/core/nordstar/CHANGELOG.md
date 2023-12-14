@@ -1,5 +1,18 @@
 # @nordcom/nordstar
 
+## 0.0.23
+
+### Patch Changes
+
+- Updated dependencies [[`70b300d`](https://github.com/NordcomInc/nordstar/commit/70b300d773a89f2244f4a183b0ad0ffce62c3418)]:
+  - @nordcom/nordstar-button@0.0.23
+  - @nordcom/nordstar-accented@0.0.23
+  - @nordcom/nordstar-card@0.0.23
+  - @nordcom/nordstar-heading@0.0.23
+  - @nordcom/nordstar-label@0.0.23
+  - @nordcom/nordstar-view@0.0.23
+  - @nordcom/nordstar-system@0.0.23
+
 ## 0.0.22
 
 ### Patch Changes
