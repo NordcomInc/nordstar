@@ -1,6 +1,6 @@
 import type { As } from '@nordcom/nordstar-system';
 import { forwardRef } from '@nordcom/nordstar-system';
-import styles from './card.module.scss';
+import styles from '@nordcom/nordstar-card/src/card.module.scss';
 
 export type CardProps = {
     variant?: 'default' | 'solid';
