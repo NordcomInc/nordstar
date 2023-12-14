@@ -4,3 +4,9 @@
     border-radius: var(--border-radius);
     font-family: var(--font-body);
 }
+
+.solid {
+    @extend .container;
+    border-width: 0;
+}
+@import './card.solid.module.scss';
