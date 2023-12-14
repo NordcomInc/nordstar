@@ -1,27 +1,27 @@
-gha_enabled: true
+gha_enabled: True
 branch: master
-blocked_dirs: []
-draft: false
-description: "NordcomInc/nordstar is a React.js/Next.js component library for creating human-centric web applications. Follow the prettier and eslint configurations and everything detailed in `CONTRIBUTING.md`."
+blocked_dirs: [".github/", ".vscode/", ".husky/"]
+draft: False
+description: "NordcomInc/nordstar is a React.js/Next.js component library built using react.js, vite and scss modules. Use spaces instead of tabs with an indentation level of 4, single quotes instead of double quotes except for react and html component props. Also follow our prettier and eslint configuration in addition to the CONTRIBUTING.md rules."
 docs:
     react: ["https://react.dev/", "We use React.js to build our components."]
     next: ["https://nextjs.org/docs", "We specfically target projects using the Next.js app router."]
     vitest: ["https://vitest.dev", "We use vitest for unit and snapshot testing."]
-    nordstar: ["https://nordstar.nordcom.io/", "We publish the nordstar documentation to the nordstar website."]
+    nordstar: ["https://nordstar.nordcom.io/", "We use the nordstar component library for the website and documentation site."]
     scss: ["https://sass-lang.com/documentation/", "We use scss modules to style the components."]
 
 sandbox:
     install:
         - npm install
     check:
-        - npx -y lint-staged --allow-empty
         - npm run fix
         - npm run build
+        - npm run test
         - git add .
 
 rules:
-    - "Code should be covered by unit tests using vitest in a `{filename}.tests.{ts,tsx} file."
-    - "Any clearly inefficient or repeated code should be optimized or refactored."
-    - "Follow our style contribution guidelines detailed in `CONTRIBUTING.md`."
-    - "Remove any comments before code that are obvious. For example `// this prints hello world; console.log('hello world');`."
-    - "Prefer data-attributes over classes when adding component-legel variations/customization."
+    - "Code MUST be covered by unit tests using the vitest library/framework in a corresponding `{filename}.tests.{ts,tsx} file."
+    - "Any clearly inefficient or repeated code MUST be optimized or refactored."
+    - "Our style contribution guidelines detailed in `CONTRIBUTING.md` MUST be followed."
+    - "Remove any comments before code that are obvious. For example `// this prints hello world;\nconsole.log('hello world');`."
+    - "Always use html data attributes instead of css/scss classes when adding component-level customizations."
