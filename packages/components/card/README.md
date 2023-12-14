@@ -4,6 +4,8 @@
 
 ## Installation
 
+Don't forget to mention the changeset file!
+
 > [!TIP]
 > This is an internal package and should probably not be installed by itself, but rather come as a dependency of `@nordcom/nordstar`.
 
