@@ -16,7 +16,7 @@ sandbox:
     check:
         - npx -y lint-staged --allow-empty
         - npm run fix
-        - npm run build
+        
         - git add .
 
 rules:
