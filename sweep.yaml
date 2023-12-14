@@ -15,7 +15,6 @@ sandbox:
         - npm install --ignore-engines
     check:
         - npm run fix
-        - git add .
         - npm run test
 
 rules:
