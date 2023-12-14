@@ -6,7 +6,16 @@ import { Card } from '../src';
 const story: Meta<typeof Card> = {
     title: 'Components/Card',
     component: Card,
-    argTypes: {}
+    argTypes: {
+  variant: {
+    options: ['default', 'solid'],
+    control: { type: 'select' },
+  },
+  color: {
+    options: ['default', 'primary', 'secondary'],
+    control: { type: 'select' },
+  },
+}
 };
 
 const Template = (args: CardProps) => <Card {...args}>Content inside of the card</Card>;
