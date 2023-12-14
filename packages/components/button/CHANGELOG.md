@@ -1,5 +1,14 @@
 # @nordcom/nordstar-button
 
+## 0.0.23
+
+### Patch Changes
+
+- [`70b300d`](https://github.com/NordcomInc/nordstar/commit/70b300d773a89f2244f4a183b0ad0ffce62c3418) Thanks [@filiphsps](https://github.com/filiphsps)! - Center button content.
+
+- Updated dependencies []:
+  - @nordcom/nordstar-system@0.0.23
+
 ## 0.0.22
 
 ### Patch Changes
