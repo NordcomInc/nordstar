@@ -1,6 +1,20 @@
 .container {
+@import 'button.module.scss';
+
+.container {
     padding: var(--layout-block-padding);
-    border: var(--border-width) solid var(--color-background-highlight);
     border-radius: var(--border-radius);
     font-family: var(--font-body);
+    
+    &[data-variant='solid'] {
+        border-width: 0;
+        background-color: var(--button-accent, var(--color-foreground));
+        color: var(--button-foreground, var(--color-background));
+    }
+    
+    &[data-variant='default'] {
+        border: var(--border-width) solid var(--color-background-highlight);
+        background-color: var(--color-background-highlight);
+    }
+}
 }
