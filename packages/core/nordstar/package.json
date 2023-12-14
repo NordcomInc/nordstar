@@ -55,7 +55,8 @@
         "prepack": "clean-package",
         "postpack": "clean-package restore",
         "prebuild": "npm run prepack",
-        "postbuild": "npm run postpack"
+        "postbuild": "npm run postpack",
+        "test": "vitest"
     },
     "dependencies": {
         "@nordcom/nordstar-accented": "0.0.23",
@@ -74,7 +75,8 @@
         "@nordcom/prettier": "0.1.1",
         "clean-package": "2.2.0",
         "prettier": "3.1.1",
-        "react": "18.2.0"
+        "react": "18.2.0",
+        "vitest": "^0.0.117"
     },
     "clean-package": "../../../clean-package.config.json"
 }
