@@ -7,7 +7,7 @@ export default defineConfig({
         alias: [] // TODO: Handle `@/` aliases
     },
     test: {
-        bail: 1,
+        bail: 2,
         environment: 'jsdom',
         maxConcurrency: 16,
         passWithNoTests: true,

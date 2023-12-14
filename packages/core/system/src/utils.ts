@@ -52,6 +52,10 @@ export type InternalForwardRefRenderFunction<
     displayName?: string | undefined;
 };
 
+export type CSSCustomProperties = {
+    [key: `--${string}`]: string | number;
+};
+
 export function forwardRef<Component extends As, Props extends object, OmitKeys extends keyof any = never>(
     component: ForwardRefRenderFunction<
         any,
