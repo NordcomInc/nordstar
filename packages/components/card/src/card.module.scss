@@ -1,6 +1,6 @@
 .container {
-    padding: var(--layout-block-padding);
-    border: var(--border-width) solid var(--color-background-highlight);
-    border-radius: var(--border-radius);
+    @at-root #{&} { &.solid { @at-root #{&} { @at-root #{&} { &.solid { @at-root #{&} { padding: var(--layout-block-padding); border-width: 0; &[data-variant='solid'] {} &[data-color='default'] {} } } } border-width: 0; @at-root #{&} { &.solid { @[data-color='default'] { background-color: var(--color-foreground); } } } &[data-variant='solid'] { background-color: var(--color-foreground); } &[data-color='default'] { color: var(--color-background); } } } }
+    background-color: $color;
+    color: var(--color-background);
     font-family: var(--font-body);
 }
