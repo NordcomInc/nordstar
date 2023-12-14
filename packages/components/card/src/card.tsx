@@ -7,14 +7,14 @@ export type CardProps = {
 };
 
 /**
- * `<Card/>`, a component to render cards.
+ * `<Card/>`, a component to render cards.\n* @param {('default' | 'solid')} [props.variant='default'] - The card variant.
  *
  * @param {object} props - `<Card/>` props.
  * @param {As} [props.as] - The element to render the component as.
  * @returns {ReactNode} The `<Card/>` component.
  */
 const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className, ...props }, ref) => {
-    const classes = `${styles.container}${className ? ` ${className}` : ''}`;
+    const classes = `${styles.container} ${props.variant === 'solid' ? styles.solid : ''}${className ? ` ${className}` : ''}`;
 
     return <Tag ref={ref} {...props} className={classes} />;
 });
