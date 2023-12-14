@@ -3,4 +3,12 @@
     border: var(--border-width) solid var(--color-background-highlight);
     border-radius: var(--border-radius);
     font-family: var(--font-body);
+
+    &[data-variant='solid'] {
+        border-width: 0;
+        background-color: var(--color-#{color});
+        &[data-color='default'] {
+            color: var(--color-background);
+        }
+    }
 }
