@@ -1,0 +1,18 @@
+@import './card.module.scss';
+
+.container {
+  @extend .container;
+  background-color: var(--color-foreground);
+}
+
+[data-variant="solid"] {
+  background-color: var(--color-foreground);
+}
+
+[data-color="primary"] {
+  background-color: var(--color-primary);
+}
+
+[data-color="secondary"] {
+  background-color: var(--color-secondary);
+}
