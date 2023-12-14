@@ -1,0 +1,8 @@
+@import './card.module.scss';
+
+.container[data-variant="solid"] {
+  padding: 0;
+  border: none;
+  background-color: var(--color-foreground);
+  color: var(--color-background);
+}
