@@ -1,8 +1,16 @@
 import type { As } from '@nordcom/nordstar-system';
 import { forwardRef } from '@nordcom/nordstar-system';
+import { As } from '@nordcom/nordstar-system';
+import styles from './card.module.scss';
+
+import { As } from '@nordcom/nordstar-system';
+import { forwardRef } from '@nordcom/nordstar-system';
 import styles from './card.module.scss';
 
 export type CardProps = {
+  variant?: 'default' | 'solid',
+  color?: 'default' | 'primary' | 'secondary',
+  as?: As;
     variant?: 'default' | 'solid',
     color?: 'default' | 'primary' | 'secondary',
     as?: As;
@@ -19,7 +27,9 @@ export type CardProps = {
 @param {'default' | 'primary' | 'secondary'} [props.color] - The color of the card background.
 @returns {ReactNode} The `<Card/>` component.
  */
-const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className, ...props }, ref) => {
+const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className, variant, color, ...props }, ref) => {
+    let styleAttr = 'data-variant="' + (variant ? variant : 'default') + '" data-color="' + (color ? color : 'default') + '"';
+    const classes = `${styles.container} [styleAttr] ${className ? ` ${className}` : ''}`;
     const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
     return <Tag ref={ref} {...props} className={classes} />;
