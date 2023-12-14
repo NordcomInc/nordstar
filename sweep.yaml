@@ -23,5 +23,5 @@ rules:
     - "Code MUST be covered by unit tests using the vitest library/framework in a corresponding `{filename}.tests.{ts,tsx} file."
     - "Any clearly inefficient or repeated code MUST be optimized or refactored."
     - "Our style contribution guidelines detailed in `CONTRIBUTING.md` MUST be followed."
-    - "Remove any comments before code that are obvious. For example `// this prints hello world;\nconsole.log('hello world');`."
+    - "Remove any comments before code that are obvious."
     - "Always use html data attributes instead of css/scss classes when adding component-level customizations."
