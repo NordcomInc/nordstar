@@ -6,14 +6,11 @@ import { render } from '@testing-library/react';
 import React from 'react';
 import { Card } from '../src';
 
-describe('components', () => {
-    describe('card', () => {
-        describe('Card', () => {
-            it('should render correctly', () => {
-                const wrapper = render(<Card />);
-
-                expect(() => wrapper.unmount()).not.toThrow();
-            });
-        });
-    });
+describe('Card', () => {
+  it('should render the default card without crashing', () => {
+    render(<Card />);
+    
+    const defaultCard = screen.getByTestId('card-default');
+    expect(defaultCard).toBeInTheDocument();
+  });
 });
