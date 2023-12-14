@@ -20,7 +20,8 @@ export type CardProps = {
 const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className, ...props }, ref) => {
     const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
-    return <Tag ref={ref} {...props} className={classes} />;
+    const bgColor = props.color === 'default' ? 'var(--color-foreground)' : 'var(--button-accent)';
+    return <Tag ref={ref} {...props} className={classes} style={{'background-color': bgColor}} />;
 });
 
 Card.displayName = 'Nordstar.Card';
