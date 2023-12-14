@@ -4,6 +4,7 @@ import { forwardRef } from '@nordcom/nordstar-system';
 import styles from './card.module.scss';
 
 export type CardProps = {
+    variant?: 'default' | 'solid';
     as?: As;
 };
 
@@ -14,10 +15,11 @@ export type CardProps = {
  * @param {As} [props.as] - The element to render the component as.
  * @returns {ReactNode} The `<Card/>` component.
  */
-const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className, ...props }, ref) => {
+const Card = forwardRef<'section', CardProps & {variant?: 'default' | 'solid'}>(({ as: Tag = 'section', className, ...props }, ref) => {
     const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
-    return <Tag ref={ref} {...props} className={classes} />;
+    const variantClassName = !!props.variant && props.variant === 'solid' ? `${styles.container} ${styles.container}--solid ${className ? ` ${className}` : ''}` : `${styles.container}${className ? ` ${className}` : ''}`;
+    return <Tag ref={ref} {...props} className={variantClassName} data-variant={props.variant} />;
 });
 
 Card.displayName = 'Nordstar.Card';
