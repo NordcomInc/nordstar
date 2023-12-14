@@ -1,6 +1,36 @@
 .container {
     padding: var(--layout-block-padding);
-    border: var(--border-width) solid var(--color-background-highlight);
+
+    border-width: var(--border-width);
+    border-style: solid;
     border-radius: var(--border-radius);
+
     font-family: var(--font-body);
+
+    &[data-variant='solid'] {
+        border-width: 0;
+
+        &[data-color='default'] {
+            background-color: var(--color-foreground);
+            color: var(--color-background);
+        }
+        &[data-color='primary'] {
+            background-color: var(--color-accent-primary);
+            color: inherit;
+        }
+        &[data-color='secondary'] {
+            background-color: var(--color-accent-secondary);
+            color: inherit;
+        }
+    }
+
+    &[data-color='default'] {
+        border-color: var(--color-background-highlight);
+    }
+    &[data-color='primary'] {
+        border-color: var(--color-accent-primary);
+    }
+    &[data-color='secondary'] {
+        border-color: var(--color-accent-secondary);
+    }
 }

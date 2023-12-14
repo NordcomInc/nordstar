@@ -4,6 +4,7 @@ import { forwardRef } from './utils';
 export type { NordstarProviderProps, NordstarTheme } from './nordstar-provider';
 export type {
     As,
+    CSSCustomProperties,
     InternalForwardRefRenderFunction,
     MergeWithAs,
     OmitCommonProps,
