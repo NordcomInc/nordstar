@@ -3,6 +3,8 @@ import { forwardRef } from '@nordcom/nordstar-system';
 import styles from './card.module.scss';
 
 export type CardProps = {
+  variant?: 'default' | 'solid';
+  color?: 'default' | 'primary' | 'secondary';
     as?: As;
 };
 
