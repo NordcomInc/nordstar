@@ -1,4 +1,14 @@
 .container {
+  @include when($variant == "solid") {
+    border-width: 0; 
+    background-color: var(--color-foreground);
+    &[data-color="primary"] {
+      background-color: var(--color-primary);
+    }
+    &[data-color="secondary"] {
+      background-color: var(--color-secondary);
+    }
+  }
     padding: var(--layout-block-padding);
     border: var(--border-width) solid var(--color-background-highlight);
     border-radius: var(--border-radius);
