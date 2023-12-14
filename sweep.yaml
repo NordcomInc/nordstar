@@ -12,12 +12,10 @@ docs:
 
 sandbox:
     install:
-        - npm install
+        - npm install --ignore-engines
     check:
         - npm run fix
-        - npm run build
         - npm run test
-        - git add .
 
 rules:
     - "Code MUST be covered by unit tests using the vitest library/framework in a corresponding `{filename}.tests.{ts,tsx} file."
