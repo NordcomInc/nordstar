@@ -19,7 +19,7 @@ const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className,
     const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
     
-return <Tag ref={ref} {...props} className={classes} data-variant={props.variant} data-color={props.color} />;
+return <Tag ref={ref} {...props} className={classes} />;
 });
 
 Card.displayName = 'Nordstar.Card';
