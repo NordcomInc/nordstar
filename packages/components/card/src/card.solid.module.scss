@@ -1,0 +1,26 @@
+.container {
+    @extend .container;
+    border-width: 0;
+    background-color: var(--color-foreground);
+}
+
+[data-variant="solid"] {
+    @extend .container;
+    border-width: 0;
+    background-color: var(--color-foreground);
+}
+
+[data-color="default"] {
+    @extend .container;
+    background-color: var(--color-foreground);
+}
+
+[data-color="primary"] {
+    @extend .container;
+    background-color: var(--color-primary);
+}
+
+[data-color="secondary"] {
+    @extend .container;
+    background-color: var(--color-secondary);
+}
