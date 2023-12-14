@@ -18,8 +18,8 @@ export type CardProps = {
 const Card = forwardRef<'section', CardProps>(({ as: Tag = 'section', className, ...props }, ref) => {
     const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
-    const cardStyle = props.variant === 'solid' ? { backgroundColor: props.color === 'default' ? 'var(--color-foreground)' : props.color === 'primary' ? 'var(--color-primary)' : 'var(--color-secondary)' } : {};
-return <Tag ref={ref} {...props} className={classes} style={cardStyle} />;
+    
+return <Tag ref={ref} {...props} className={classes} data-variant={props.variant} data-color={props.color} />;
 });
 
 Card.displayName = 'Nordstar.Card';
