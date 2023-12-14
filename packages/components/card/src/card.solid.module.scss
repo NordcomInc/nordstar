@@ -1,0 +1,5 @@
+.container[data-variant='solid'] {
+    border-width: 0;
+    background-color: var(--button-accent); // Set based on the color prop
+    color: var(--button-foreground); // Set based on the color prop
+}
