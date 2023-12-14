@@ -1,0 +1,20 @@
+// File: ./packages/components/card/src/card-solid.module.scss
+
+.container {
+  @extend .container;
+  border-width: 0;
+  background-color: var(--color-background-default);
+
+  &[data-variant="solid"] {
+    background-color: var(--color-background-default);
+    color: var(--color-background);
+  }
+
+  &[data-variant="solid"][data-color="primary"] {
+    background-color: var(--color-primary);
+  }
+
+  &[data-variant="solid"][data-color="secondary"] {
+    background-color: var(--color-secondary);
+  }
+}
