@@ -23,7 +23,7 @@ export default defineConfig({
             }
         },
 
-        setupFiles: ['./__tests__/setup.ts'],
+        setupFiles: ['./.vitest/setup.ts'],
         reporters: ['verbose'],
         exclude: ['**/*.d.ts', '**/*.stories.*', '**/dist/**/*.*', '**/node_modules/**/*.*'],
 
