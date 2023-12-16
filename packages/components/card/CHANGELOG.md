@@ -1,5 +1,14 @@
 # @nordcom/nordstar-card
 
+## 0.0.24
+
+### Patch Changes
+
+- [#184](https://github.com/NordcomInc/nordstar/pull/184) [`4898fb0`](https://github.com/NordcomInc/nordstar/commit/4898fb022114e8ab2a0136d774b51d21474ddfad) Thanks [@sweep-ai](https://github.com/apps/sweep-ai)! - Add a `solid` variation of the `<Card/>` component.
+
+- Updated dependencies []:
+  - @nordcom/nordstar-system@0.0.24
+
 ## 0.0.23
 
 ### Patch Changes
