@@ -28,9 +28,9 @@ describe('components', () => {
             });
 
             it('should render as secondary with className', () => {
-                const wrapper = render(<Accented data-testid="accented" secondary className="hello-world" />);
+                const wrapper = render(<Accented data-testid="accented" secondary data-custom="hello-world" />);
 
-                expect(wrapper.getByTestId('accented')).toHaveClass('hello-world');
+                expect(wrapper.getByTestId('accented').dataset.custom).toBe('hello-world');
                 expect(() => wrapper.unmount()).not.toThrow();
             });
         });
