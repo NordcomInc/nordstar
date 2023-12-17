@@ -1,6 +1,15 @@
 import type { As } from '@nordcom/nordstar-system';
 import { forwardRef } from '@nordcom/nordstar-system';
-import styles from './accented.module.scss';
+import * as stylex from '@stylexjs/stylex';
+
+const styles = stylex.create({
+    primary: {
+        color: 'var(--color-accent-primary)'
+    },
+    secondary: {
+        color: 'var(--color-accent-secondary)'
+    }
+});
 
 export type AccentedProps = {
     secondary?: boolean;
@@ -17,12 +26,18 @@ export type AccentedProps = {
  */
 const Accented = forwardRef<'span', AccentedProps>(
     ({ as: Tag = 'span', secondary = 'false', className, ...props }, ref) => {
-        const classes = `${styles[secondary ? 'secondary' : 'primary']}${className ? ` ${className}` : ''}`;
+        const classes = `${className ? ` ${className}` : ''}`;
 
-        return <Tag ref={ref} {...props} className={classes} />;
+        return (
+            <Tag
+                ref={ref}
+                {...stylex.props(styles[secondary ? 'secondary' : 'primary'])}
+                {...props}
+                className={classes}
+            />
+        );
     }
 );
 
 Accented.displayName = 'Nordstar.Typography.Accented';
-
 export default Accented;

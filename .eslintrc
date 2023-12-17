@@ -12,7 +12,7 @@
         "plugin:react-hooks/recommended",
         "plugin:jsx-a11y/recommended"
     ],
-    "plugins": ["react", "react-hooks", "unused-imports", "import", "@typescript-eslint", "jsx-a11y", "prettier"],
+    "plugins": ["react", "react-hooks", "@stylexjs", "unused-imports", "import", "@typescript-eslint", "jsx-a11y", "prettier"],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
@@ -33,6 +33,7 @@
         }
     },
     "rules": {
+        "@stylexjs/valid-styles": "error",
         "@typescript-eslint/consistent-type-imports": "error",
         "brace-style": ["error", "1tbs", { "allowSingleLine": true }],
         "consistent-return": "error",
