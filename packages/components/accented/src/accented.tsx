@@ -16,7 +16,7 @@ export type AccentedProps = {
  * @returns {ReactNode} The `<Accented/>` component.
  */
 const Accented = forwardRef<'span', AccentedProps>(
-    ({ as: Tag = 'span', secondary = 'false', className, ...props }, ref) => {
+    ({ as: Tag = 'mark', secondary = 'false', className, ...props }, ref) => {
         const classes = `${styles[secondary ? 'secondary' : 'primary']}${className ? ` ${className}` : ''}`;
 
         return <Tag ref={ref} {...props} className={classes} />;
