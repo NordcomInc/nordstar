@@ -20,6 +20,7 @@ sandbox:
     check:
         - npm run fix
         - npm run test
+        - git add .
 
 rules:
     - 'Code MUST be covered by unit tests using the vitest library/framework in a corresponding `{filename}.tests.{ts,tsx} file.'
