@@ -47,6 +47,9 @@
         "postpack",
         "Sandström",
         "Siitam",
+        "stylex",
+        "stylexjs",
+        "treeshake",
         "typecheck",
         "vite"
     ],
