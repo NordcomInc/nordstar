@@ -1,7 +1,9 @@
-.primary {
-    color: var(--color-accent-primary);
-}
+.container {
+    &:is([data-color='default'], [data-color='primary']) {
+        color: var(--color-accent-primary);
+    }
 
-.secondary {
-    color: var(--color-accent-secondary);
+    &:is([data-color='secondary']) {
+        color: var(--color-accent-secondary);
+    }
 }

@@ -1,0 +1,5 @@
+.footer {
+    display: grid;
+    grid-auto-flow: column;
+    gap: var(--layout-section-spacing);
+}

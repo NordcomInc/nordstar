@@ -37,7 +37,7 @@ export default async function IndexPage() {
                     </p>
 
                     <div className={styles.actions}>
-                        <Button variant="solid" color="primary" as={Link} href="/docs/">
+                        <Button variant="solid" color="primary" as={Link} href="#">
                             Get Started
                         </Button>
                     </div>
@@ -52,7 +52,7 @@ export default async function IndexPage() {
                     </p>
 
                     <div className={styles.actions}>
-                        <Button variant="solid" as={Link} href="/docs/">
+                        <Button variant="solid" as={Link} href="#">
                             Get Started
                         </Button>
                     </div>
@@ -67,7 +67,7 @@ export default async function IndexPage() {
                     </p>
 
                     <div className={styles.actions}>
-                        <Button variant="outline" as={Link} href="/docs/">
+                        <Button variant="outline" as={Link} href="#">
                             Get Started
                         </Button>
                     </div>

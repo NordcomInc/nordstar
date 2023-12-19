@@ -1,25 +1,34 @@
-import type { As } from '@nordcom/nordstar-system';
+import type { As, NordstarColor } from '@nordcom/nordstar-system';
 import { forwardRef } from '@nordcom/nordstar-system';
 import styles from './accented.module.scss';
 
 export type AccentedProps = {
-    secondary?: boolean;
     as?: As;
+
+    color?: NordstarColor;
+
+    /** @deprecated use the `color` prop instead */
+    secondary?: boolean;
 };
 
 /**
  * `<Accented/>`, a component to highlight text with an accent color.
  *
  * @param {object} props - `<Accented/>` props.
- * @param {boolean} [props.secondary] - Whether to use the secondary accent color.
  * @param {As} [props.as='span'] - The element to render the component as.
- * @returns {ReactNode} The `<Accented/>` component.
+ * @param {NordstarColor} [props.color='default'] - The color of the accented text.
+ * @returns {React.ReactNode} The `<Accented/>` component.
  */
 const Accented = forwardRef<'span', AccentedProps>(
-    ({ as: Tag = 'span', secondary = 'false', className, ...props }, ref) => {
-        const classes = `${styles[secondary ? 'secondary' : 'primary']}${className ? ` ${className}` : ''}`;
-
-        return <Tag ref={ref} {...props} className={classes} />;
+    ({ as: Tag = 'span', color = 'default', secondary, className, ...props }, ref) => {
+        return (
+            <Tag
+                ref={ref}
+                data-color={!!secondary ? 'secondary' : color}
+                {...props}
+                className={`${styles.container}${className ? ` ${className}` : ''}`}
+            />
+        );
     }
 );
 

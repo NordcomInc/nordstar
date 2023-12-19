@@ -1,8 +1,9 @@
 import '@/styles/base.scss';
 
-import { NordstarProvider } from '@nordcom/nordstar';
+import { Card, NordstarProvider, View } from '@nordcom/nordstar';
 import type { Metadata, Viewport } from 'next';
 import { Montserrat } from 'next/font/google';
+import styles from './layout.module.scss';
 
 const font = Montserrat({
     weight: 'variable',
@@ -46,6 +47,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     }}
                 >
                     {children}
+
+                    <Card as={View} variant="solid" color="primary" className={styles.footer}>
+                        <Card></Card>
+                        <Card></Card>
+                        <Card></Card>
+                        <Card></Card>
+                    </Card>
                 </NordstarProvider>
             </body>
         </html>

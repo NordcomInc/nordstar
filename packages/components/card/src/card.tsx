@@ -1,11 +1,11 @@
-import type { As, CSSCustomProperties } from '@nordcom/nordstar-system';
+import type { As, CSSCustomProperties, NordstarColor } from '@nordcom/nordstar-system';
 import { forwardRef } from '@nordcom/nordstar-system';
 import styles from './card.module.scss';
 
 export type CardProps = {
     as?: As;
     variant?: 'default' | 'solid';
-    color?: 'default' | 'primary' | 'secondary';
+    color?: NordstarColor;
     style?: CSSCustomProperties;
 };
 
@@ -15,8 +15,8 @@ export type CardProps = {
  * @param {object} props - `<Card/>` props.
  * @param {As} [props.as] - The element to render the component as.
  * @param {'default' | 'solid'} [props.variant='default'] - The variant of the card.
- * @param {'default' | 'primary' | 'secondary'} [props.color='default'] - The color scheme of the card.
- * @returns {ReactNode} The `<Card/>` component.
+ * @param {NordstarColor} [props.color='default'] - The color scheme of the card.
+ * @returns {React.ReactNode} The `<Card/>` component.
  */
 const Card = forwardRef<'section', CardProps>(
     ({ as: Tag = 'section', className, variant = 'default', color = 'default', ...props }, ref) => {

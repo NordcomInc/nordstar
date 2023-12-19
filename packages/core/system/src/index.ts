@@ -1,6 +1,7 @@
 import { NordstarProvider } from './nordstar-provider';
 import { forwardRef } from './utils';
 
+export type { NordstarColor } from './colors';
 export type { NordstarProviderProps, NordstarTheme } from './nordstar-provider';
 export type {
     As,

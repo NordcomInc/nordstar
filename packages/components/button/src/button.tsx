@@ -4,10 +4,11 @@ import type { ReactNode } from 'react';
 import styles from './button.module.scss';
 
 export type ButtonProps = {
+    as?: As;
+
     variant?: 'solid' | 'outline';
     color?: 'default' | 'primary' | 'secondary';
     icon?: ReactNode;
-    as?: As;
     disabled?: boolean;
 };
 
@@ -50,5 +51,4 @@ const Button = forwardRef<'button', ButtonProps>(
 );
 
 Button.displayName = 'Nordstar.Button';
-
 export default Button;
