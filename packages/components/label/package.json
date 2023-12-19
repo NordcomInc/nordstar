@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-label",
     "type": "module",
-    "version": "0.0.25",
+    "version": "0.0.26",
     "description": "A component used to describe other components or groups of components.",
     "main": "./src/index.ts",
     "prettier": "@nordcom/prettier",
@@ -64,7 +64,7 @@
         "access": "public"
     },
     "dependencies": {
-        "@nordcom/nordstar-system": "0.0.25"
+        "@nordcom/nordstar-system": "0.0.26"
     },
     "peerDependencies": {
         "react": ">=18",
