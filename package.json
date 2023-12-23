@@ -103,7 +103,7 @@
         "inquirer-directory": "2.2.0",
         "jsdom": "23.0.1",
         "lint-staged": "15.2.0",
-        "plop": "4.0.0",
+        "plop": "4.0.1",
         "postcss": "8.4.32",
         "postcss-scss": "4.0.9",
         "prettier": "3.1.1",
