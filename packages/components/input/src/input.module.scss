@@ -1,0 +1,116 @@
+.container {
+    // FIXME: Re-do this style entirely when there's a bit of free time.
+
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    gap: 0.15rem;
+
+    height: 3.25rem;
+    padding: var(--layout-block-padding-half) var(--layout-block-padding);
+
+    font-family: var(--font-mono, var(--font-body));
+
+    transition:
+        150ms ease-in-out border-color,
+        150ms ease-in-out color;
+    border-radius: var(--border-radius);
+
+    &:is([data-variant='outline'], :not([data-variant])) {
+        border-width: var(--border-width-half);
+        border-style: solid;
+
+        &[data-color='default'] {
+            border-color: var(--color-foreground-secondary);
+
+            .label {
+                color: var(--color-foreground-secondary);
+            }
+
+            :is(:focus, :focus-within) > & {
+                border-color: var(--color-foreground);
+            }
+        }
+
+        &[data-color='primary'] {
+            border-color: var(--color-accent-primary);
+        }
+        &[data-color='secondary'] {
+            border-color: var(--color-accent-secondary);
+        }
+
+        &:is([data-color='primary'], [data-color='secondary']) {
+            opacity: 0.85;
+
+            :is(:focus, :focus-within) > & {
+                opacity: 1;
+            }
+        }
+
+        &:is(:not(:has(.input[value=''], .input:not([value]))), :focus, :focus-within):not(:has(.input:invalid)) {
+            opacity: 1;
+
+            &[data-color='default'] {
+                border-color: var(--color-foreground);
+            }
+
+            .label {
+                color: inherit;
+            }
+        }
+
+        &:has(.input:invalid) {
+            opacity: 1;
+
+            border-color: var(--color-error);
+            color: var(--color-error);
+
+            .input::placeholder {
+                color: var(--color-error);
+            }
+        }
+    }
+
+    .label {
+        font-size: 0.75em;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        -webkit-user-select: none;
+        user-select: none;
+        pointer-events: none;
+        transform: translateZ(0);
+
+        &.full-height {
+            transition:
+                75ms ease-out padding,
+                150ms ease-out margin,
+                150ms ease-out font-size,
+                150ms ease-out color;
+
+            font-size: 0.75em;
+        }
+    }
+
+    &:not(:focus-within, :focus, :has(:focus-within, :focus)) {
+        .label.full-height {
+            padding-top: 0.65em;
+            margin-bottom: -1em;
+            font-size: 1em;
+        }
+    }
+
+    .input {
+        height: 100%;
+
+        font-size: 1em;
+
+        &::placeholder {
+            transition: 150ms ease-in-out opacity;
+        }
+
+        &:not(:focus)::placeholder {
+            color: var(--color-foreground-secondary);
+        }
+    }
+}

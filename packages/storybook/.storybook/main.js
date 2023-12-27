@@ -2,10 +2,7 @@ import { dirname, join } from 'node:path';
 import remarkGfm from 'remark-gfm';
 
 module.exports = {
-    stories: [
-        './readme.stories.mdx',
-        '../../components/**/*.stories.{ts,tsx}'
-    ],
+    stories: ['./readme.stories.mdx', '../../components/**/*.stories.{ts,tsx}'],
     staticDirs: ['../public'],
     addons: [
         getAbsolutePath('storybook-dark-mode'),
@@ -31,7 +28,7 @@ module.exports = {
         disableTelemetry: true
     },
     typescript: {
-        reactDocgen: false
+        reactDocgen: true
     }
 };
 

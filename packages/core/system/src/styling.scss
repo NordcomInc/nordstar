@@ -22,7 +22,9 @@ body {
     -moz-osx-font-smoothing: auto;
     -webkit-font-smoothing: subpixel-antialiased;
     text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: auto;
     text-size-adjust: auto;
+    -webkit-font-smoothing: subpixel-antialiased;
     font-smooth: always;
     font-family: var(--font-body, var(--fallback-font));
 
