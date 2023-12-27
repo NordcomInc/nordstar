@@ -64,10 +64,13 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
         :root {
             --color-accent-primary: ${accents?.primary};
             --color-accent-secondary: ${accents?.secondary};
+
             --color-background: #000000;
             --color-background-highlight: #262626;
             --color-foreground: #fefefe;
             --color-foreground-secondary: #828282;
+
+            --color-error: #ba3e3e;
 
             ${headingFont}
             ${bodyFont}
@@ -75,7 +78,9 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
             --size-text-body: ${sizes?.text?.body || '14px'};
 
             --border-width: ${theme?.border?.width || '0.18rem'};
-            --border-radius: ${theme?.border?.radius || '0.5rem'};
+            --border-width-half: calc(var(--border-width) / 2);
+            --border-radius: ${theme?.border?.radius || '0.45rem'};
+            --border-radius-half: calc(var(--border-radius) / 2);
 
             --layout-page-width: ${layout?.page?.width || '1200px'};
             --layout-page-spacing: ${layout?.page?.spacing || '1rem'};
@@ -84,6 +89,7 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
             --layout-section-padding: ${layout?.section?.padding || '1.75rem'};
 
             --layout-block-padding: ${layout?.block?.padding || '1rem'};
+            --layout-block-padding-half: calc(var(--layout-block-padding) / 2);
         }
     `;
 
