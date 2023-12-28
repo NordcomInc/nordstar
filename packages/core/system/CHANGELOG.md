@@ -1,5 +1,11 @@
 # @nordcom/nordstar-system
 
+## 0.0.28
+
+### Patch Changes
+
+- [#209](https://github.com/NordcomInc/nordstar/pull/209) [`2dac3e6`](https://github.com/NordcomInc/nordstar/commit/2dac3e68d2e0e9b02446c80a2fd949558626bc1e) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update storybook monorepo to v7.6.6.
+
 ## 0.0.27
 
 ### Patch Changes
