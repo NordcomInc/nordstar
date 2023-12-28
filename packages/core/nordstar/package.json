@@ -62,6 +62,7 @@
         "@nordcom/nordstar-button": "0.0.28",
         "@nordcom/nordstar-card": "0.0.28",
         "@nordcom/nordstar-heading": "0.0.28",
+        "@nordcom/nordstar-input": "0.0.28",
         "@nordcom/nordstar-label": "0.0.28",
         "@nordcom/nordstar-system": "0.0.28",
         "@nordcom/nordstar-view": "0.0.28"
