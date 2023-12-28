@@ -1,5 +1,21 @@
 # @nordcom/nordstar
 
+## 0.0.29
+
+### Patch Changes
+
+- [`678f072`](https://github.com/NordcomInc/nordstar/commit/678f0725ac2d1db9dfbda046ec0ae68d0ee011a3) Thanks [@filiphsps](https://github.com/filiphsps)! - Core: Properly re-export `<Input/>`.
+
+- Updated dependencies []:
+  - @nordcom/nordstar-accented@0.0.29
+  - @nordcom/nordstar-button@0.0.29
+  - @nordcom/nordstar-card@0.0.29
+  - @nordcom/nordstar-heading@0.0.29
+  - @nordcom/nordstar-input@0.0.29
+  - @nordcom/nordstar-label@0.0.29
+  - @nordcom/nordstar-view@0.0.29
+  - @nordcom/nordstar-system@0.0.29
+
 ## 0.0.28
 
 ### Patch Changes
