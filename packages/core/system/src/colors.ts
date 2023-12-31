@@ -1,1 +1,1 @@
-export type NordstarColor = 'default' | 'primary' | 'secondary';
+export type NordstarColor = 'default' | 'foreground' | 'primary' | 'secondary';

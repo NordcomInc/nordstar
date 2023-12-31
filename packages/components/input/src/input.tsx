@@ -42,20 +42,20 @@ const Input = forwardRef<'input', InputProps>(
 
             placeholder,
 
-            defaultValue = '',
+            defaultValue,
 
             ...props
         },
         ref
     ) => {
         const Tag = as || 'input';
-        const [value, setValue] = useState<typeof defaultValue>(defaultValue);
+        const [value, setValue] = useState<typeof defaultValue>(defaultValue || '');
 
         return (
             <>
                 {label && labelPosition === 'outside' ? <label className={styles.label}>{label}</label> : null}
 
-                <div className={styles.container} data-variant={variant} data-color={color}>
+                <div className={styles.container} data-variant={variant} data-color={color || 'default'}>
                     {label && labelPosition === 'inside' ? (
                         <label className={`${styles.label} ${!placeholder && !value ? styles['full-height'] : ''}`}>
                             {label}
@@ -68,7 +68,6 @@ const Input = forwardRef<'input', InputProps>(
                         type={type}
                         className={styles.input}
                         placeholder={placeholder}
-                        value={value}
                         defaultValue={defaultValue}
                         onChange={(e: any) => setValue(() => e.target.value)}
                     />

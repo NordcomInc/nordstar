@@ -10,13 +10,11 @@ const story: Meta<typeof Input> = {
 };
 
 const Template = ({ entries }: { entries: InputProps[] }) => (
-    <>
+    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: '0.75rem', maxWidth: '56rem' }}>
         {entries.map((args, index) => (
-            <div key={index} style={{ display: 'inline-block', padding: '0 1rem 1rem 0', float: 'left' }}>
-                <Input {...args} />
-            </div>
+            <Input key={index} {...args} />
         ))}
-    </>
+    </div>
 );
 
 export const Default = {
@@ -35,6 +33,16 @@ export const Default = {
             {
                 label: 'Search',
                 type: 'text'
+            },
+            {
+                label: 'Search',
+                as: 'select',
+                children: (
+                    <>
+                        <option key="option-1">Option 1</option>
+                        <option key="option-2">Option 2</option>
+                    </>
+                )
             }
         ]
     }

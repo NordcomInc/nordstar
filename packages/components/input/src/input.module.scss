@@ -20,15 +20,25 @@
         border-width: var(--border-width-half);
         border-style: solid;
 
-        &[data-color='default'] {
-            border-color: var(--color-foreground-secondary);
+        &:not(:is([data-color='primary'], [data-color='secondary'])) {
+            &[data-color='default'] {
+                --color: var(--color-foreground-secondary);
+                --color-highlight: var(--color-foreground-secondary);
+            }
+
+            &[data-color='foreground'] {
+                --color: var(--color-foreground-secondary);
+                --color-highlight: var(--color-foreground);
+            }
+
+            border-color: var(--color);
 
             .label {
-                color: var(--color-foreground-secondary);
+                color: var(--color);
             }
 
             :is(:focus, :focus-within) > & {
-                border-color: var(--color-foreground);
+                border-color: var(--color-highlight);
             }
         }
 
@@ -92,7 +102,7 @@
         }
     }
 
-    &:not(:focus-within, :focus, :has(:focus-within, :focus)) {
+    &:not(:focus-within, :focus, :has(:focus-within, :focus, select)) {
         .label.full-height {
             padding-top: 0.65em;
             margin-bottom: -1em;
@@ -102,6 +112,7 @@
 
     .input {
         height: 100%;
+        width: 100%;
 
         font-size: 1em;
 

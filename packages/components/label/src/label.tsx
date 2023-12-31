@@ -1,10 +1,13 @@
-import type { As } from '@nordcom/nordstar-system';
+import type { As, NordstarColor } from '@nordcom/nordstar-system';
 import { forwardRef } from '@nordcom/nordstar-system';
 import type { ReactNode } from 'react';
 import styles from './label.module.scss';
 
 export type LabelProps = {
     as?: As;
+
+    color?: NordstarColor;
+
     children: ReactNode;
 };
 

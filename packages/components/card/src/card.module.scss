@@ -10,7 +10,7 @@
     &[data-variant='solid'] {
         border-width: 0;
 
-        &[data-color='default'] {
+        &:is([data-color='foreground'], [data-color='default']) {
             background-color: var(--color-foreground);
             color: var(--color-background);
         }
@@ -26,6 +26,9 @@
 
     &[data-color='default'] {
         border-color: var(--color-background-highlight);
+    }
+    &[data-color='foreground'] {
+        border-color: var(--color-foreground-secondary);
     }
     &[data-color='primary'] {
         border-color: var(--color-accent-primary);

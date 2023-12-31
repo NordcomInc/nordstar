@@ -8,6 +8,7 @@
     align-items: center;
     gap: calc(var(--layout-block-padding) / 4);
 
+    width: -moz-fit-content;
     width: fit-content;
     padding: calc(var(--layout-block-padding) / 2) var(--layout-block-padding);
 
@@ -28,7 +29,7 @@
         cursor: pointer;
     }
 
-    &[data-color='default'] {
+    &:is([data-color='default'], [data-color='foreground']) {
         --button-accent: var(--color-foreground);
         --button-foreground: var(--color-background);
     }

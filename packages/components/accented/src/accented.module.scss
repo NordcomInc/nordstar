@@ -1,5 +1,5 @@
 .container {
-    &:is([data-color='default'], [data-color='primary']) {
+    &:is([data-color='default'], [data-color='foreground'], [data-color='primary']) {
         color: var(--color-accent-primary);
     }
 

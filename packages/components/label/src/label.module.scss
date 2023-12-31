@@ -6,4 +6,17 @@
     line-height: 1;
     text-transform: uppercase;
     color: var(--color-foreground-secondary);
+
+    &[data-color='default'] {
+        color: var(--color-foreground-secondary);
+    }
+    &[data-color='foreground'] {
+        color: var(--color-foreground);
+    }
+    &[data-color='primary'] {
+        color: var(--color-accent-primary);
+    }
+    &[data-color='secondary'] {
+        color: var(--color-accent-secondary);
+    }
 }
