@@ -79,7 +79,7 @@
         "@changesets/cli": "2.27.1",
         "@changesets/types": "6.0.0",
         "@nordcom/prettier": "0.1.1",
-        "@storybook/react": "7.6.6",
+        "@storybook/react": "7.6.7",
         "@testing-library/dom": "9.3.3",
         "@testing-library/jest-dom": "6.1.6",
         "@testing-library/react": "14.1.2",
