@@ -1,6 +1,5 @@
 import { resolve } from 'node:path';
 import scss from 'postcss-scss';
-import preserveDirectives from 'rollup-plugin-preserve-directives';
 import { defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
 import tsConfigPaths from 'vite-tsconfig-paths';
@@ -23,10 +22,8 @@ export default defineConfig({
                 esModule: true,
                 freeze: true,
                 sourcemapExcludeSources: true,
-                strict: true,
-                preserveModules: true
-            },
-            plugins: [preserveDirectives() as any]
+                strict: true
+            }
         }
     },
     esbuild: {
