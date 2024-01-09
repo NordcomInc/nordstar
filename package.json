@@ -73,7 +73,6 @@
     "publishConfig": {
         "access": "public"
     },
-    "dependencies": {},
     "devDependencies": {
         "@changesets/changelog-github": "0.5.0",
         "@changesets/cli": "2.27.1",
@@ -111,6 +110,7 @@
         "react": "18.2.0",
         "react-dom": "18.2.0",
         "rimraf": "5.0.5",
+        "rollup-plugin-preserve-directives": "0.2.0",
         "sass": "1.69.7",
         "strip-ansi": "7.1.0",
         "turbo": "1.11.3",

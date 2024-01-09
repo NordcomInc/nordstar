@@ -16,17 +16,11 @@ export type InputProps = {
     labelPosition?: 'inside' | 'outside';
 
     defaultValue?: string | number;
-} & (
-    | {
-          type: Omit<HTMLInputTypeAttribute, 'number'>;
-      }
-    | {
-          type: 'number';
 
-          min?: number;
-          max?: number;
-      }
-);
+    type?: Omit<HTMLInputTypeAttribute, 'number'>;
+    min?: number;
+    max?: number;
+};
 
 const Input = forwardRef<'input', InputProps>(
     (
@@ -68,7 +62,7 @@ const Input = forwardRef<'input', InputProps>(
                         type={type}
                         className={styles.input}
                         placeholder={placeholder}
-                        defaultValue={defaultValue}
+                        {...(defaultValue ? { defaultValue } : { value })}
                         onChange={(e: any) => setValue(() => e.target.value)}
                     />
                 </div>
