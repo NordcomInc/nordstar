@@ -6,10 +6,10 @@
     flex-direction: column;
     gap: 0.15rem;
 
-    height: 3.25rem;
     padding: var(--layout-block-padding-half) var(--layout-block-padding);
 
     font-family: var(--font-mono, var(--font-body));
+    font-size: 1em;
 
     transition:
         150ms ease-in-out border-color,
@@ -114,10 +114,16 @@
         height: 100%;
         width: 100%;
 
-        font-size: 1em;
+        font-size: inherit;
+
+        &:is(input) {
+            line-height: 1;
+        }
 
         &::placeholder {
             transition: 150ms ease-in-out opacity;
+
+            font-size: inherit;
         }
 
         &:not(:focus)::placeholder {
