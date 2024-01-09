@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar",
     "type": "module",
-    "version": "0.0.30",
+    "version": "0.0.31",
     "description": "An opinionated component library for building human-centric user interfaces.",
     "main": "./src/index.ts",
     "prettier": "@nordcom/prettier",
@@ -58,14 +58,14 @@
         "postbuild": "npm run postpack"
     },
     "dependencies": {
-        "@nordcom/nordstar-accented": "0.0.30",
-        "@nordcom/nordstar-button": "0.0.30",
-        "@nordcom/nordstar-card": "0.0.30",
-        "@nordcom/nordstar-heading": "0.0.30",
-        "@nordcom/nordstar-input": "0.0.30",
-        "@nordcom/nordstar-label": "0.0.30",
-        "@nordcom/nordstar-system": "0.0.30",
-        "@nordcom/nordstar-view": "0.0.30"
+        "@nordcom/nordstar-accented": "0.0.31",
+        "@nordcom/nordstar-button": "0.0.31",
+        "@nordcom/nordstar-card": "0.0.31",
+        "@nordcom/nordstar-heading": "0.0.31",
+        "@nordcom/nordstar-input": "0.0.31",
+        "@nordcom/nordstar-label": "0.0.31",
+        "@nordcom/nordstar-system": "0.0.31",
+        "@nordcom/nordstar-view": "0.0.31"
     },
     "peerDependencies": {
         "react": ">=18",

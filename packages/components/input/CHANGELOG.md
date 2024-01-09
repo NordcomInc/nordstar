@@ -1,5 +1,16 @@
 # @nordcom/nordstar-input
 
+## 0.0.31
+
+### Patch Changes
+
+- [`6bfddeb`](https://github.com/NordcomInc/nordstar/commit/6bfddebcee2e73889336b2d9c8d094e216ce4e36) Thanks [@filiphsps](https://github.com/filiphsps)! - Improve default value.
+
+- [`8a7faae`](https://github.com/NordcomInc/nordstar/commit/8a7faaef11da11dcc8baa6e6044f174d71ccb11f) Thanks [@filiphsps](https://github.com/filiphsps)! - Input: Slightly improve styling.
+
+- Updated dependencies []:
+  - @nordcom/nordstar-system@0.0.31
+
 ## 0.0.30
 
 ### Patch Changes
