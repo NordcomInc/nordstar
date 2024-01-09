@@ -1,5 +1,25 @@
 # @nordcom/nordstar
 
+## 0.0.31
+
+### Patch Changes
+
+- [#232](https://github.com/NordcomInc/nordstar/pull/232) [`d64ad9d`](https://github.com/NordcomInc/nordstar/commit/d64ad9dfce92f8d8ddef30252258df2ec8f34a5b) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency sass to v1.69.7.
+
+- [#235](https://github.com/NordcomInc/nordstar/pull/235) [`b7b2eb5`](https://github.com/NordcomInc/nordstar/commit/b7b2eb552e368643113d7f4d16428a1df2cb41f4) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency postcss to v8.4.33.
+
+- [#237](https://github.com/NordcomInc/nordstar/pull/237) [`29d557a`](https://github.com/NordcomInc/nordstar/commit/29d557a59290ebfc24af0e78ec784ad70eaf6309) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.0.11.
+
+- Updated dependencies [[`6bfddeb`](https://github.com/NordcomInc/nordstar/commit/6bfddebcee2e73889336b2d9c8d094e216ce4e36), [`8a7faae`](https://github.com/NordcomInc/nordstar/commit/8a7faaef11da11dcc8baa6e6044f174d71ccb11f)]:
+  - @nordcom/nordstar-input@0.0.31
+  - @nordcom/nordstar-accented@0.0.31
+  - @nordcom/nordstar-button@0.0.31
+  - @nordcom/nordstar-card@0.0.31
+  - @nordcom/nordstar-heading@0.0.31
+  - @nordcom/nordstar-label@0.0.31
+  - @nordcom/nordstar-view@0.0.31
+  - @nordcom/nordstar-system@0.0.31
+
 ## 0.0.30
 
 ### Patch Changes
