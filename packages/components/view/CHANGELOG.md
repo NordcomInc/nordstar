@@ -1,5 +1,14 @@
 # @nordcom/nordstar-view
 
+## 0.0.33
+
+### Patch Changes
+
+- [`347baab`](https://github.com/NordcomInc/nordstar/commit/347baab2c084676779c0ace369e87de67e94faec) Thanks [@filiphsps](https://github.com/filiphsps)! - Design: Fix styling.
+
+- Updated dependencies [[`347baab`](https://github.com/NordcomInc/nordstar/commit/347baab2c084676779c0ace369e87de67e94faec)]:
+  - @nordcom/nordstar-system@0.0.33
+
 ## 0.0.32
 
 ### Patch Changes
