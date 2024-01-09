@@ -1,5 +1,21 @@
 # @nordcom/nordstar
 
+## 0.0.32
+
+### Patch Changes
+
+- [#229](https://github.com/NordcomInc/nordstar/pull/229) [`6af05c0`](https://github.com/NordcomInc/nordstar/commit/6af05c084b4bd7f30d58718e4909190408ed310a) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update storybook monorepo to v7.6.7.
+
+- Updated dependencies []:
+  - @nordcom/nordstar-accented@0.0.32
+  - @nordcom/nordstar-button@0.0.32
+  - @nordcom/nordstar-card@0.0.32
+  - @nordcom/nordstar-heading@0.0.32
+  - @nordcom/nordstar-input@0.0.32
+  - @nordcom/nordstar-label@0.0.32
+  - @nordcom/nordstar-view@0.0.32
+  - @nordcom/nordstar-system@0.0.32
+
 ## 0.0.31
 
 ### Patch Changes

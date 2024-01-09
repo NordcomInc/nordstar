@@ -46,7 +46,7 @@
         "start": ""
     },
     "dependencies": {
-        "@nordcom/nordstar": "0.0.31",
+        "@nordcom/nordstar": "0.0.32",
         "react": "18.2.0",
         "react-dom": "18.2.0"
     },
