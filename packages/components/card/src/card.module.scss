@@ -1,11 +1,19 @@
 .container {
-    padding: var(--layout-block-padding);
-
     border-width: var(--border-width-half);
     border-style: solid;
     border-radius: var(--border-radius);
 
     font-family: var(--font-body);
+
+    &:not([data-padding='false']) {
+        $padding: var(--layout-block-padding);
+
+        padding: $padding;
+
+        .divider {
+            margin: $padding calc($padding * -1);
+        }
+    }
 
     &[data-variant='solid'] {
         border-width: 0;
@@ -35,5 +43,12 @@
     }
     &[data-color='secondary'] {
         border-color: var(--color-accent-secondary);
+    }
+
+    .divider {
+        height: var(--border-width-half);
+
+        // TODO: Use the proper color based on `data-color`.
+        background: var(--color-background-highlight);
     }
 }

@@ -20,13 +20,26 @@ const story: Meta<typeof Card> = {
     }
 };
 
-const Template = (args: CardProps) => <Card {...args}>Content inside of the card</Card>;
+const Template = (args: CardProps<any>) => <Card {...args} style={{ width: '18rem', maxWidth: '100%' }} />;
 
 export const Default = {
     render: Template,
     args: {
         variant: 'default',
-        color: 'default'
+        color: 'default',
+        children: (
+            <>
+                Hello World!
+                <Card.Divider />
+                Content inside of the card
+                <br />
+                Another line of content inside of the card.
+                <br />
+                And another one.
+                <Card.Divider />
+                Imaginary footer
+            </>
+        )
     }
 };
 
@@ -34,21 +47,24 @@ export const DefaultSolid = {
     render: Template,
     args: {
         variant: 'solid',
-        color: 'default'
+        color: 'default',
+        children: <>Content inside of the card</>
     }
 };
 export const PrimarySolid = {
     render: Template,
     args: {
         variant: 'solid',
-        color: 'primary'
+        color: 'primary',
+        children: <>Content inside of the card</>
     }
 };
 export const SecondarySolid = {
     render: Template,
     args: {
         variant: 'solid',
-        color: 'secondary'
+        color: 'secondary',
+        children: <>Content inside of the card</>
     }
 };
 
