@@ -1,5 +1,14 @@
 # @nordcom/nordstar-input
 
+## 0.0.34
+
+### Patch Changes
+
+- [`8998013`](https://github.com/NordcomInc/nordstar/commit/8998013e260d77d3dfaadd39f09e4bcac5478a62) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix height changing during label animation.
+
+- Updated dependencies []:
+  - @nordcom/nordstar-system@0.0.34
+
 ## 0.0.33
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @nordcom/nordstar-card
 
+## 0.0.34
+
+### Patch Changes
+
+- [`b27b4f0`](https://github.com/NordcomInc/nordstar/commit/b27b4f00506b8ab8abf46d9f5cca6dcad2977f62) Thanks [@filiphsps](https://github.com/filiphsps)! - Add `<Card.Divider/>` child component.
+
+- Updated dependencies []:
+  - @nordcom/nordstar-system@0.0.34
+
 ## 0.0.33
 
 ### Patch Changes
