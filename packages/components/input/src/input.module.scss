@@ -89,11 +89,11 @@
         -webkit-user-select: none;
         user-select: none;
         pointer-events: none;
-        transform: translateZ(0);
+        transform: translateZ(0) translateY(0);
 
         &.full-height {
             transition:
-                75ms ease-out padding,
+                75ms ease-out transform,
                 150ms ease-out margin,
                 150ms ease-out font-size,
                 150ms ease-out color;
@@ -104,7 +104,7 @@
 
     &:not(:focus-within, :focus, :has(:focus-within, :focus, select)) {
         .label.full-height {
-            padding-top: 0.65em;
+            transform: translateY(0.5em);
             margin-bottom: -1em;
             font-size: 1em;
         }
