@@ -1,0 +1,12 @@
+{
+    "extends": ["development"],
+    "hints": {
+        "typescript-config/is-valid": "off",
+        "compat-api/css": [
+            "default",
+            {
+                "ignore": ["backdrop-filter", "font-smooth", "overscroll-behavior", "text-size-adjust"]
+            }
+        ]
+    }
+}

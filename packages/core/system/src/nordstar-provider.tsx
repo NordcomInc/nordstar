@@ -84,12 +84,16 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
 
             --layout-page-width: ${layout?.page?.width || '1200px'};
             --layout-page-spacing: ${layout?.page?.spacing || '1rem'};
+            --layout-page-spacing-half: calc(var(--layout-page-spacing) / 2);
 
             --layout-section-spacing: ${layout?.section?.spacing || '1rem'};
             --layout-section-padding: ${layout?.section?.padding || '1.75rem'};
 
             --layout-block-padding: ${layout?.block?.padding || '1rem'};
+            --layout-block-padding-double: calc(var(--layout-block-padding) * 2);
             --layout-block-padding-half: calc(var(--layout-block-padding) / 2);
+
+            --duration-short: 150ms;
         }
     `;
 

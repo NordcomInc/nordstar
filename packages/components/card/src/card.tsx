@@ -26,7 +26,9 @@ const Card = forwardRef<'section', CardProps>(
         const Tag = as || 'section';
         const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
-        return <Tag {...props} ref={ref} data-variant={variant} data-color={color} className={classes} />;
+        return (
+            <Tag ref={ref} draggable={false} {...props} data-variant={variant} data-color={color} className={classes} />
+        );
     }
 );
 Card.displayName = 'Nordstar.Card';
@@ -41,7 +43,7 @@ export type CardDividerProps = {} & ComponentProps<'hr'>;
 const Divider = ({ className, ...props }: CardDividerProps) => {
     const classes = `${styles.divider}${className ? ` ${className}` : ''}`;
 
-    return <section {...props} className={classes} />;
+    return <section draggable={false} {...props} className={classes} />;
 };
 Divider.displayName = 'Nordstar.Card.Divider';
 

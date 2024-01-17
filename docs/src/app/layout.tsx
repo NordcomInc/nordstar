@@ -1,8 +1,9 @@
 import '@/styles/base.scss';
 
-import { Card, NordstarProvider, View } from '@nordcom/nordstar';
+import { Card, Header, NordstarProvider, View } from '@nordcom/nordstar';
 import type { Metadata, Viewport } from 'next';
 import { Montserrat } from 'next/font/google';
+import Link from 'next/link';
 import styles from './layout.module.scss';
 
 const font = Montserrat({
@@ -46,6 +47,21 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         }
                     }}
                 >
+                    <Header className={styles.header}>
+                        <Header.Logo className={styles.logo}>nordstar</Header.Logo>
+                        <Header.Menu>
+                            <Header.Menu.Link as={Link} href="/">
+                                Home
+                            </Header.Menu.Link>
+                            <Header.Menu.Link as={Link} href="/docs/" prefetch={false}>
+                                Docs
+                            </Header.Menu.Link>
+                            <Header.Menu.Link as={Link} href="/storybook/" prefetch={false}>
+                                Storybook
+                            </Header.Menu.Link>
+                        </Header.Menu>
+                    </Header>
+
                     {children}
 
                     <Card as={View} variant="solid" color="primary" className={styles.footer}>

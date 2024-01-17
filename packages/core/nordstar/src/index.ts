@@ -1,5 +1,5 @@
 // Core
-import type {
+export type {
     As,
     InternalForwardRefRenderFunction,
     MergeWithAs,
@@ -10,38 +10,25 @@ import type {
     RightJoinProps
 } from '@nordcom/nordstar-system';
 import { NordstarProvider } from '@nordcom/nordstar-system';
-
-// Components
-import type { AccentedProps } from '@nordcom/nordstar-accented';
-import { Accented } from '@nordcom/nordstar-accented';
-import type { ButtonProps } from '@nordcom/nordstar-button';
-import { Button } from '@nordcom/nordstar-button';
-import type { CardProps } from '@nordcom/nordstar-card';
-import { Card } from '@nordcom/nordstar-card';
-import type { HeadingProps } from '@nordcom/nordstar-heading';
-import { Heading } from '@nordcom/nordstar-heading';
-import type { InputProps } from '@nordcom/nordstar-input';
-import { Input } from '@nordcom/nordstar-input';
-import type { LabelProps } from '@nordcom/nordstar-label';
-import { Label } from '@nordcom/nordstar-label';
-import type { ViewProps } from '@nordcom/nordstar-view';
 import { View } from '@nordcom/nordstar-view';
 
-export { Accented, Button, Card, Heading, Input, Label, NordstarProvider, View };
-export type {
-    AccentedProps,
-    As,
-    ButtonProps,
-    CardProps,
-    HeadingProps,
-    InputProps,
-    InternalForwardRefRenderFunction,
-    LabelProps,
-    MergeWithAs,
-    NordstarProviderProps,
-    NordstarTheme,
-    OmitCommonProps,
-    PropsOf,
-    RightJoinProps,
-    ViewProps
-};
+// Components
+import { Accented } from '@nordcom/nordstar-accented';
+import { Button } from '@nordcom/nordstar-button';
+import { Card } from '@nordcom/nordstar-card';
+import { Header } from '@nordcom/nordstar-header';
+import { Heading } from '@nordcom/nordstar-heading';
+import { Input } from '@nordcom/nordstar-input';
+import { Label } from '@nordcom/nordstar-label';
+
+// Component Types
+export type { AccentedProps } from '@nordcom/nordstar-accented';
+export type { ButtonProps } from '@nordcom/nordstar-button';
+export type { CardDividerProps, CardProps } from '@nordcom/nordstar-card';
+export type { HeaderLogoProps, HeaderMenuLinkProps, HeaderMenuProps, HeaderProps } from '@nordcom/nordstar-header';
+export type { HeadingProps } from '@nordcom/nordstar-heading';
+export type { InputProps } from '@nordcom/nordstar-input';
+export type { LabelProps } from '@nordcom/nordstar-label';
+export type { ViewProps } from '@nordcom/nordstar-view';
+
+export { Accented, Button, Card, Header, Heading, Input, Label, NordstarProvider, View };
