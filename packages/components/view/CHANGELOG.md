@@ -1,5 +1,12 @@
 # @nordcom/nordstar-view
 
+## 0.0.36
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @nordcom/nordstar-system@0.0.36
+
 ## 0.0.35
 
 ### Patch Changes
