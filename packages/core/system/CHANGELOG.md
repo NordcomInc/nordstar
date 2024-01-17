@@ -1,5 +1,17 @@
 # @nordcom/nordstar-system
 
+## 0.0.35
+
+### Patch Changes
+
+- [#250](https://github.com/NordcomInc/nordstar/pull/250) [`a9cc081`](https://github.com/NordcomInc/nordstar/commit/a9cc0816f18ce8f0d879e989705bb8aa7cb108b5) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency prettier to v3.2.0.
+
+- [#252](https://github.com/NordcomInc/nordstar/pull/252) [`2f836e9`](https://github.com/NordcomInc/nordstar/commit/2f836e92d17941b6d131021c821625f7c41a360b) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency prettier to v3.2.1.
+
+- [#253](https://github.com/NordcomInc/nordstar/pull/253) [`914b186`](https://github.com/NordcomInc/nordstar/commit/914b1862e4e211b423f15205f204a25fcce5b94d) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency prettier to v3.2.2.
+
+- [#261](https://github.com/NordcomInc/nordstar/pull/261) [`5a7645c`](https://github.com/NordcomInc/nordstar/commit/5a7645cdb1074c4e1f0c3938e7e8e3a0da467df1) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency prettier to v3.2.4.
+
 ## 0.0.34
 
 ## 0.0.33
