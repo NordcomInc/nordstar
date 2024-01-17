@@ -61,7 +61,7 @@
         "@storybook/react": "7.6.8",
         "@storybook/react-vite": "7.6.8",
         "@storybook/theming": "7.6.8",
-        "prettier": "3.2.2",
+        "prettier": "3.2.3",
         "remark-gfm": "4.0.0",
         "storybook": "7.6.8",
         "storybook-dark-mode": "3.0.3"
