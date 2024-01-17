@@ -44,7 +44,8 @@ export default defineConfig({
                 '**/src/app/{page,layout}.*',
                 '**/packages/**/src/index.*',
                 '**/*.css',
-                '**/dist/**/*.*'
+                '**/dist/**/*.*',
+                'packages/core/system/src/colors.ts'
             ],
             include: ['**/src/**/*.{js,ts,jsx,tsx}'],
             provider: 'v8'
