@@ -11,7 +11,7 @@
         "forceConsistentCasingInFileNames": true,
         "incremental": true,
         "isolatedModules": true,
-        "jsx": "react-jsx",
+        "jsx": "preserve",
         "jsxImportSource": "react",
         "lib": ["dom", "ESNext"],
         "module": "ESNext",
