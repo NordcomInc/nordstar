@@ -101,7 +101,7 @@
         "husky": "9.0.7",
         "inquirer-directory": "2.2.0",
         "jsdom": "24.0.0",
-        "lint-staged": "15.2.0",
+        "lint-staged": "15.2.1",
         "plop": "4.0.1",
         "postcss": "8.4.33",
         "postcss-scss": "4.0.9",
