@@ -103,7 +103,7 @@
         "jsdom": "24.0.0",
         "lint-staged": "15.2.2",
         "plop": "4.0.1",
-        "postcss": "8.4.34",
+        "postcss": "8.4.35",
         "postcss-scss": "4.0.9",
         "prettier": "3.2.5",
         "prettier-eslint": "16.3.0",
