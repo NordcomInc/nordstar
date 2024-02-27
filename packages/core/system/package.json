@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-system",
     "type": "module",
-    "version": "0.0.38",
+    "version": "0.0.39",
     "description": "Utilities used by all of the Nordstar Components, shouldn't be used directly outside of the Nordstar library.",
     "main": "./src/index.ts",
     "prettier": "@nordcom/prettier",
