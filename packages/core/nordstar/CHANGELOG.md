@@ -1,5 +1,22 @@
 # @nordcom/nordstar
 
+## 0.0.40
+
+### Patch Changes
+
+- [#340](https://github.com/NordcomInc/nordstar/pull/340) [`7189dd3`](https://github.com/NordcomInc/nordstar/commit/7189dd31e996aa6f510392ec06ddd142e2169303) Thanks [@filiphsps](https://github.com/filiphsps)! - Add `packageManager` field and missing component descriptions.
+
+- Updated dependencies [[`7189dd3`](https://github.com/NordcomInc/nordstar/commit/7189dd31e996aa6f510392ec06ddd142e2169303)]:
+  - @nordcom/nordstar-accented@0.0.40
+  - @nordcom/nordstar-heading@0.0.40
+  - @nordcom/nordstar-button@0.0.40
+  - @nordcom/nordstar-header@0.0.40
+  - @nordcom/nordstar-input@0.0.40
+  - @nordcom/nordstar-label@0.0.40
+  - @nordcom/nordstar-card@0.0.40
+  - @nordcom/nordstar-view@0.0.40
+  - @nordcom/nordstar-system@0.0.40
+
 ## 0.0.39
 
 ### Patch Changes

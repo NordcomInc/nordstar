@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-card",
     "type": "module",
-    "version": "0.0.39",
+    "version": "0.0.40",
     "description": "Card is a consistent card-like container for blocks of content.",
     "packageManager": "npm",
     "engines": {
@@ -67,7 +67,7 @@
         "access": "public"
     },
     "dependencies": {
-        "@nordcom/nordstar-system": "0.0.39"
+        "@nordcom/nordstar-system": "0.0.40"
     },
     "peerDependencies": {
         "react": ">=18",
