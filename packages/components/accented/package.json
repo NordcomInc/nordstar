@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-accented",
     "type": "module",
-    "version": "0.0.38",
+    "version": "0.0.39",
     "description": "Highlight text with an accent color.",
     "main": "./src/index.ts",
     "prettier": "@nordcom/prettier",
@@ -64,7 +64,7 @@
         "access": "public"
     },
     "dependencies": {
-        "@nordcom/nordstar-system": "0.0.38"
+        "@nordcom/nordstar-system": "0.0.39"
     },
     "peerDependencies": {
         "react": ">=18",

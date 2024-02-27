@@ -1,5 +1,22 @@
 # @nordcom/nordstar
 
+## 0.0.39
+
+### Patch Changes
+
+- [#303](https://github.com/NordcomInc/nordstar/pull/303) [`98552a0`](https://github.com/NordcomInc/nordstar/commit/98552a0ea80eb8b7bd0e4d9afdf305dda472ff82) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency prettier to v3.2.5.
+
+- Updated dependencies [[`98552a0`](https://github.com/NordcomInc/nordstar/commit/98552a0ea80eb8b7bd0e4d9afdf305dda472ff82)]:
+  - @nordcom/nordstar-accented@0.0.39
+  - @nordcom/nordstar-button@0.0.39
+  - @nordcom/nordstar-card@0.0.39
+  - @nordcom/nordstar-header@0.0.39
+  - @nordcom/nordstar-heading@0.0.39
+  - @nordcom/nordstar-input@0.0.39
+  - @nordcom/nordstar-label@0.0.39
+  - @nordcom/nordstar-view@0.0.39
+  - @nordcom/nordstar-system@0.0.39
+
 ## 0.0.38
 
 ### Patch Changes
