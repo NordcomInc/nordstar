@@ -3,6 +3,11 @@
     "name": "@nordcom/nordstar-storybook",
     "type": "module",
     "description": "",
+    "packageManager": "npm",
+    "engines": {
+        "npm": ">=8",
+        "node": ">=18 <=21"
+    },
     "main": "src/index.ts",
     "prettier": "@nordcom/prettier",
     "sideEffects": false,

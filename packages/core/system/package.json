@@ -4,6 +4,11 @@
     "type": "module",
     "version": "0.0.39",
     "description": "Utilities used by all of the Nordstar Components, shouldn't be used directly outside of the Nordstar library.",
+    "packageManager": "npm",
+    "engines": {
+        "npm": ">=8",
+        "node": ">=18 <=21"
+    },
     "main": "./src/index.ts",
     "prettier": "@nordcom/prettier",
     "types": "./src/index.ts",
