@@ -7,6 +7,11 @@
     "main": "./src/index.ts",
     "types": "./src/index.ts",
     "module": "./src/index.ts",
+    "packageManager": "npm",
+    "engines": {
+        "npm": ">=8",
+        "node": ">=18 <=21"
+    },
     "exports": {
         ".": {
             "import": "./src/index.ts",
@@ -14,10 +19,6 @@
         }
     },
     "sideEffects": false,
-    "engines": {
-        "npm": ">=8",
-        "node": ">=18 <=21"
-    },
     "scripts": {
         "build": "vite build",
         "dev": "vite build --watch",

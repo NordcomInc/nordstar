@@ -3,7 +3,12 @@
     "name": "@nordcom/nordstar-header",
     "type": "module",
     "version": "0.0.39",
-    "description": "",
+    "description": "Generic simple component to render headers for landing pages and similar.",
+    "packageManager": "npm",
+    "engines": {
+        "npm": ">=8",
+        "node": ">=18 <=21"
+    },
     "main": "./src/index.ts",
     "types": "./src/index.ts",
     "module": "./src/index.ts",
@@ -14,10 +19,6 @@
         }
     },
     "sideEffects": false,
-    "engines": {
-        "npm": ">=8",
-        "node": ">=18 <=21"
-    },
     "scripts": {
         "build": "vite build",
         "dev": "vite build --watch",

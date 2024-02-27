@@ -6,6 +6,11 @@
     "description": "An opinionated component library for building human-centric user interfaces.",
     "private": true,
     "main": "index.js",
+    "packageManager": "npm",
+    "engines": {
+        "npm": ">=8",
+        "node": ">=18 <=21"
+    },
     "prettier": "@nordcom/prettier",
     "workspaces": [
         "packages/core/*",
@@ -13,10 +18,6 @@
         "packages/storybook",
         "docs"
     ],
-    "engines": {
-        "npm": ">=8",
-        "node": ">=18 <=21"
-    },
     "scripts": {
         "prepare": "husky install",
         "dev": "concurrently -i --raw npm:dev:*",
@@ -86,7 +87,7 @@
         "@types/node": "20.10.3",
         "@types/react": "18.2.59",
         "@types/react-dom": "18.2.19",
-        "@typescript-eslint/eslint-plugin": "6.21.0",
+        "@typescript-eslint/eslint-plugin": "7.1.0",
         "@vitejs/plugin-react": "4.2.1",
         "@vitest/coverage-v8": "1.3.1",
         "concurrently": "8.2.2",

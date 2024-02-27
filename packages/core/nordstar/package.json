@@ -4,6 +4,11 @@
     "type": "module",
     "version": "0.0.39",
     "description": "An opinionated component library for building human-centric user interfaces.",
+    "packageManager": "npm",
+    "engines": {
+        "npm": ">=8",
+        "node": ">=18 <=21"
+    },
     "main": "./src/index.ts",
     "prettier": "@nordcom/prettier",
     "types": "./src/index.ts",

@@ -4,6 +4,11 @@
     "type": "module",
     "version": "0.0.39",
     "description": "A component used to describe other components or groups of components.",
+    "packageManager": "npm",
+    "engines": {
+        "npm": ">=8",
+        "node": ">=18 <=21"
+    },
     "main": "./src/index.ts",
     "prettier": "@nordcom/prettier",
     "types": "./src/index.ts",
@@ -15,10 +20,6 @@
         }
     },
     "sideEffects": false,
-    "engines": {
-        "npm": ">=8",
-        "node": ">=18 <=21"
-    },
     "scripts": {
         "build": "vite build",
         "dev": "vite build --watch",
