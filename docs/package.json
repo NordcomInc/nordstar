@@ -51,7 +51,7 @@
     "homepage": "https://nordstar.nordcom.io/",
     "dependencies": {
         "@nordcom/nordstar": "0.0.40",
-        "next": "14.1.1",
+        "next": "14.1.2",
         "react": "18.2.0",
         "react-dom": "18.2.0"
     },
