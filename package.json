@@ -113,7 +113,7 @@
         "rimraf": "5.0.5",
         "sass": "1.71.1",
         "strip-ansi": "7.1.0",
-        "turbo": "1.12.4",
+        "turbo": "1.12.5",
         "typescript": "5.3.3",
         "vite": "5.1.5",
         "vite-plugin-dts": "3.7.3",
