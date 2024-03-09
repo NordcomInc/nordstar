@@ -1,33 +1,43 @@
-import { forwardRef, type As, type CSSCustomProperties, type NordstarColor } from '@nordcom/nordstar-system';
-import type { ComponentProps } from 'react';
+import { forwardRef } from '@nordcom/nordstar-system';
 import styles from './card.module.scss';
+
+import type { As, CSSCustomProperties, NordstarColor } from '@nordcom/nordstar-system';
+import type { ComponentProps } from 'react';
 
 export type CardProps = {
     as?: As;
-    variant?: 'default' | 'solid';
+    variant?: 'outline' | 'solid';
     color?: NordstarColor;
+    borderless?: boolean;
     style?: CSSCustomProperties;
 };
 
 /**
- * `<Card/>`, a component to render cards.
+ * `<Card/>`, a consistent card-like container for blocks of content.
  *
  * @param {object} props - `<Card/>` props.
  * @param {As} [props.as] - The element to render the component as.
- * @param {'default' | 'solid'} [props.variant='default'] - The variant of the card.
- * @param {NordstarColor} [props.color='default'] - The color scheme of the card.
+ * @param {'outline' | 'solid'} [props.variant='outline'] - The variant.
+ * @param {NordstarColor} [props.color='default'] - The color scheme.
  * @param {CSSCustomProperties} [props.style] - Custom CSS properties.
  * @param {React.ReactNode} [props.children] - The children of the component.
  * @returns {React.ReactNode} The `<Card/>` component.
  */
-
 const Card = forwardRef<'section', CardProps>(
-    ({ as, className, variant = 'default', color = 'default', ...props }, ref) => {
+    ({ as, className, variant = 'outline', color = 'default', borderless = false, ...props }, ref) => {
         const Tag = as || 'section';
         const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
         return (
-            <Tag ref={ref} draggable={false} {...props} data-variant={variant} data-color={color} className={classes} />
+            <Tag
+                ref={ref}
+                draggable={false}
+                {...props}
+                data-variant={variant}
+                data-color={color}
+                data-borderless={borderless}
+                className={classes}
+            />
         );
     }
 );

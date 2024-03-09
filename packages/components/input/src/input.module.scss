@@ -4,8 +4,9 @@
     position: relative;
     display: inline-flex;
     flex-direction: column;
-    gap: 0.15rem;
+    gap: 0.15em;
 
+    height: 3.5em;
     padding: var(--layout-block-padding-half) var(--layout-block-padding);
 
     font-family: var(--font-mono, var(--font-body));
@@ -17,7 +18,7 @@
     border-radius: var(--border-radius);
 
     &:is([data-variant='outline'], :not([data-variant])) {
-        border-width: var(--border-width-half);
+        border-width: var(--border-width-small);
         border-style: solid;
 
         &:not(:is([data-color='primary'], [data-color='secondary'])) {
@@ -82,7 +83,7 @@
     }
 
     .label {
-        font-size: 0.75em;
+        font-size: 0.65em;
         font-weight: 700;
         text-transform: uppercase;
 
@@ -98,14 +99,14 @@
                 150ms ease-out font-size,
                 150ms ease-out color;
 
-            font-size: 0.75em;
+            font-size: 0.65em;
         }
     }
 
     &:not(:focus-within, :focus, :has(:focus-within, :focus, select)) {
         .label.full-height {
-            transform: translateY(0.5em);
-            margin-bottom: -1em;
+            transform: translateY(0.45em);
+            margin-bottom: -0.5em;
             font-size: 1em;
         }
     }

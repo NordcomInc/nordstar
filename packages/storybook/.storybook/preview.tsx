@@ -1,5 +1,6 @@
-import { NordstarProvider } from '@nordcom/nordstar';
 import React from 'react';
+
+import { NordstarProvider, View } from '@nordcom/nordstar';
 
 import type { Preview } from '@storybook/react';
 
@@ -18,7 +19,11 @@ const decorators: Preview['decorators'] = [
                     }
                 }}
             >
-                <Story />
+                <View>
+                    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--layout-page-spacing)' }}>
+                        <Story />
+                    </div>
+                </View>
             </NordstarProvider>
         );
     }
@@ -35,16 +40,13 @@ const parameters: Preview['parameters'] = {
     actions: { argTypesRegex: '^on[A-Z].*' },
     options: {
         storySort: {
-            method: 'alphabetical',
-            order: ['Foundations', 'Components']
+            method: 'alphabetical'
         }
     },
     controls: {
-        matchers: {
-            color: /(background|color)$/i,
-            date: /Date$/
-        }
+        matchers: {}
     },
+    layout: 'fullscreen',
     backgrounds: {
         default: 'dark',
         values: [

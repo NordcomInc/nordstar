@@ -4,7 +4,7 @@ import type { LabelProps } from '../src';
 import { Label } from '../src';
 
 const story: Meta<typeof Label> = {
-    title: 'Components/Typography/Label',
+    title: 'System/Typography/Label',
     component: Label,
     argTypes: {}
 };

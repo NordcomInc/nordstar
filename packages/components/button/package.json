@@ -3,7 +3,7 @@
     "name": "@nordcom/nordstar-button",
     "type": "module",
     "version": "0.0.40",
-    "description": "A component for triggering actionable events on an interaction with it (or as most would call it, a button).",
+    "description": "Nordstar Button",
     "packageManager": "npm",
     "engines": {
         "npm": ">=8",

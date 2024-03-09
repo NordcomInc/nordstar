@@ -1,34 +1,43 @@
-import type { Meta } from '@storybook/react';
 import React from 'react';
-import type { CardProps } from '../src';
+
 import { Card } from '../src';
 
+import type { Meta, StoryObj } from '@storybook/react';
+import type { CardProps } from '../src';
+
 const story: Meta<typeof Card> = {
-    title: 'Components/Card',
+    title: 'System/Components/Card',
     component: Card,
     argTypes: {
         variant: {
-            control: 'select',
-            options: ['default', 'solid'],
+            control: 'inline-radio',
+            options: ['outline', 'solid'],
             defaultValue: 'default'
         },
         color: {
-            control: 'select',
+            control: 'inline-radio',
             options: ['default', 'primary', 'secondary'],
             defaultValue: 'default'
+        },
+
+        borderless: {
+            control: 'boolean',
+            defaultValue: false
         }
     }
 };
 
-const Template = (args: CardProps<any>) => <Card {...args} style={{ width: '18rem', maxWidth: '100%' }} />;
+export default story;
+type Story = StoryObj<typeof Card>;
 
-export const Default = {
-    render: Template,
-    args: {
-        variant: 'default',
-        color: 'default',
-        children: (
-            <>
+const Template = (args: CardProps) => (
+    <>
+        {[
+            <Card key="simple" {...args} style={{ width: '18rem', maxWidth: '100%' }}>
+                This is a simple card
+            </Card>,
+
+            <Card key="card" {...args} style={{ width: '18rem', maxWidth: '100%' }}>
                 Hello World!
                 <Card.Divider />
                 Content inside of the card
@@ -38,34 +47,29 @@ export const Default = {
                 And another one.
                 <Card.Divider />
                 Imaginary footer
-            </>
-        )
+            </Card>
+        ]}
+    </>
+);
+
+export const Standard: Story = {
+    render: Template,
+    args: {}
+};
+
+export const Solid: Story = {
+    render: Template,
+    args: {
+        variant: 'solid',
+        color: 'primary'
     }
 };
 
-export const DefaultSolid = {
+export const Borderless: Story = {
     render: Template,
     args: {
         variant: 'solid',
         color: 'default',
-        children: <>Content inside of the card</>
+        borderless: true
     }
 };
-export const PrimarySolid = {
-    render: Template,
-    args: {
-        variant: 'solid',
-        color: 'primary',
-        children: <>Content inside of the card</>
-    }
-};
-export const SecondarySolid = {
-    render: Template,
-    args: {
-        variant: 'solid',
-        color: 'secondary',
-        children: <>Content inside of the card</>
-    }
-};
-
-export default story;

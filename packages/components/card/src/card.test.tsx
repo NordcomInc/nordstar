@@ -8,7 +8,7 @@ import { Card } from '../src';
 describe('components', () => {
     describe('card', () => {
         describe('Card', () => {
-            it('should render correctly', () => {
+            it('renders correctly', () => {
                 const wrapper = render(<Card />);
 
                 expect(() => wrapper.unmount()).not.toThrow();

@@ -13,7 +13,7 @@ const Header = ({ className, children, ...props }: HeaderProps) => {
     const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
     return (
-        <Card as="header" {...props} className={classes}>
+        <Card as="header" borderless={true} {...props} className={classes}>
             <View as="div" className={styles.content} withoutWrapper={true}>
                 {children}
             </View>

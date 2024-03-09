@@ -6,10 +6,12 @@ header.container {
 
     width: 100%;
     padding: var(--layout-page-spacing-half) var(--layout-page-spacing);
+    margin-bottom: var(--layout-page-spacing-half);
 
     border-radius: 0;
     border: none;
-    border-bottom: var(--border-width-half) solid var(--color-background-highlight);
+    border-bottom: var(--border-width) solid var(--color-background-highlight);
+
     -webkit-backdrop-filter: saturate(220%) blur(8px);
     backdrop-filter: saturate(220%) blur(8px);
     background-color: rgba(0, 0, 0, 0.75);

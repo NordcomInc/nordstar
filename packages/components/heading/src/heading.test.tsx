@@ -7,7 +7,7 @@ import { Heading } from '../src';
 describe('components', () => {
     describe('heading', () => {
         describe('Heading', () => {
-            it('should render correctly', () => {
+            it('renders correctly', () => {
                 const wrapper = render(<Heading />);
 
                 expect(() => wrapper.unmount()).not.toThrow();

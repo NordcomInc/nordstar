@@ -1,15 +1,15 @@
-import '@testing-library/jest-dom';
+import React from 'react';
 
+import '@testing-library/jest-dom';
 import { describe, expect, it } from 'vitest';
 
 import { {{capitalize componentName}} } from '../src';
-import React from 'react';
 import { render } from '@testing-library/react';
 
 describe('components', () => {
     describe('{{componentName}}', () => {
         describe('{{capitalize componentName}}', () => {
-            it('should render correctly', () => {
+            it('renders correctly', () => {
                 const wrapper = render(<{{capitalize componentName}} />);
 
                 expect(() => wrapper.unmount()).not.toThrow();

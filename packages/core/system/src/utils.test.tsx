@@ -5,7 +5,7 @@ import { forwardRef } from './utils';
 describe('core', () => {
     describe('system', () => {
         describe('forwardRef', () => {
-            it('should forward refs', () => {
+            it('forward refs', () => {
                 const ref = { current: null };
                 const Component = forwardRef<'div', { foo: string }>((props, ref) => {
                     return <div ref={ref} {...props} />;

@@ -1,6 +1,6 @@
 # @nordcom/nordstar-button
 
-A component for triggering actionable events on an interaction with it (or as most would call it, a `button`).
+A button component for the Nordstar design system.
 
 ## Installation
 
