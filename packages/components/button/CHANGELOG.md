@@ -1,5 +1,14 @@
 # @nordcom/nordstar-button
 
+## 0.0.41
+
+### Patch Changes
+
+- [#357](https://github.com/NordcomInc/nordstar/pull/357) [`7264690`](https://github.com/NordcomInc/nordstar/commit/7264690b7d71c63cf87b1da192cbd4087fc84731) Thanks [@filiphsps](https://github.com/filiphsps)! - Improve general styling.
+
+- Updated dependencies []:
+  - @nordcom/nordstar-system@0.0.41
+
 ## 0.0.40
 
 ### Patch Changes

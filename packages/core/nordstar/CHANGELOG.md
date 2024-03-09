@@ -1,5 +1,22 @@
 # @nordcom/nordstar
 
+## 0.0.41
+
+### Patch Changes
+
+- [#357](https://github.com/NordcomInc/nordstar/pull/357) [`52eb64e`](https://github.com/NordcomInc/nordstar/commit/52eb64e0c2b5fde47244ee38cec032e4c914a2b7) Thanks [@filiphsps](https://github.com/filiphsps)! - Various package upgrades.
+
+- Updated dependencies [[`7264690`](https://github.com/NordcomInc/nordstar/commit/7264690b7d71c63cf87b1da192cbd4087fc84731)]:
+  - @nordcom/nordstar-button@0.0.41
+  - @nordcom/nordstar-card@0.0.41
+  - @nordcom/nordstar-input@0.0.41
+  - @nordcom/nordstar-header@0.0.41
+  - @nordcom/nordstar-accented@0.0.41
+  - @nordcom/nordstar-heading@0.0.41
+  - @nordcom/nordstar-label@0.0.41
+  - @nordcom/nordstar-view@0.0.41
+  - @nordcom/nordstar-system@0.0.41
+
 ## 0.0.40
 
 ### Patch Changes
