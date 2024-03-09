@@ -4,7 +4,7 @@ import type { HeadingProps } from '../src';
 import { Heading } from '../src';
 
 const story: Meta<typeof Heading> = {
-    title: 'Components/Typography/Heading',
+    title: 'System/Typography/Heading',
     component: Heading,
     argTypes: {
         level: {

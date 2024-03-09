@@ -8,26 +8,26 @@ import { Accented } from '../src';
 describe('components', () => {
     describe('accented', () => {
         describe('Accented', () => {
-            it('should render correctly', () => {
+            it('renders correctly', () => {
                 const wrapper = render(<Accented data-testid="accented" />);
 
                 expect(() => wrapper.unmount()).not.toThrow();
             });
 
-            it('should render with secondary accent', () => {
+            it('renders with secondary accent', () => {
                 const wrapper = render(<Accented data-testid="accented" secondary />);
 
                 expect(() => wrapper.unmount()).not.toThrow();
             });
 
-            it('should render with className', () => {
+            it('renders with className', () => {
                 const wrapper = render(<Accented data-testid="accented" className="hello-world" />);
 
                 expect(wrapper.getByTestId('accented')).toHaveClass('hello-world');
                 expect(() => wrapper.unmount()).not.toThrow();
             });
 
-            it('should render as secondary with className', () => {
+            it('renders as secondary with className', () => {
                 const wrapper = render(<Accented data-testid="accented" secondary className="hello-world" />);
 
                 expect(wrapper.getByTestId('accented')).toHaveClass('hello-world');

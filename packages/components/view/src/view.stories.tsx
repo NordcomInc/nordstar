@@ -4,16 +4,23 @@ import type { ViewProps } from '../src';
 import { View } from '../src';
 
 const story: Meta<typeof View> = {
-    title: 'Components/Layout/View',
+    title: 'System/Layout/View',
     component: View,
-    argTypes: {}
+    argTypes: {
+        withoutWrapper: {
+            control: 'boolean',
+            defaultValue: true
+        }
+    }
 };
 
 const Template = (args: ViewProps) => <View {...args}>You view&apos;s content goes here!</View>;
 
 export const Default = {
     render: Template,
-    args: {}
+    args: {
+        withoutWrapper: true
+    }
 };
 
 export default story;

@@ -1,7 +1,8 @@
 import { dirname, join } from 'node:path';
 import remarkGfm from 'remark-gfm';
 
-module.exports = {
+/** @type { import('@storybook/react').Preview } */
+const preview = {
     stories: ['./readme.stories.mdx', '../../components/**/*.stories.{ts,tsx}'],
     staticDirs: ['../public'],
     addons: [
@@ -31,6 +32,8 @@ module.exports = {
         reactDocgen: true
     }
 };
+
+export default preview;
 
 function getAbsolutePath(value) {
     return dirname(require.resolve(join(value, 'package.json')));

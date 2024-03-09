@@ -3,7 +3,7 @@ import type { AccentedProps } from '../src';
 import { Accented } from '../src';
 
 const story: Meta<typeof Accented> = {
-    title: 'Components/Typography/Accented',
+    title: 'System/Typography/Accented',
     component: Accented,
     argTypes: {
         secondary: {

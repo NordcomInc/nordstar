@@ -19,7 +19,7 @@ export type NordstarTheme = {
         };
     };
     border?: {
-        width?: string;
+        width?: number;
         radius?: string;
     };
     layout?: {
@@ -59,11 +59,15 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
     const bodyFont =
         fonts?.body || fonts?.heading ? `--font-body: ${(fonts?.body || fonts?.heading)!.replaceAll("'", '')};` : '';
 
+    const borderWidth = theme?.border?.width || 0.2;
+
     // TODO: Maybe create a utility function for this to better handle optional values (and to hide this away from view).
     const css = `
         :root {
             --color-accent-primary: ${accents?.primary};
+            --color-accent-primary-foreground: #fefefe;
             --color-accent-secondary: ${accents?.secondary};
+            --color-accent-secondary-foreground: #fefefe;
 
             --color-background: #000000;
             --color-background-highlight: #262626;
@@ -77,8 +81,8 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
 
             --size-text-body: ${sizes?.text?.body || '14px'};
 
-            --border-width: ${theme?.border?.width || '0.18rem'};
-            --border-width-half: calc(var(--border-width) / 2);
+            --border-width: ${borderWidth}rem;
+            --border-width-small: ${borderWidth / 1.45}rem;
             --border-radius: ${theme?.border?.radius || '0.45rem'};
             --border-radius-half: calc(var(--border-radius) / 2);
 

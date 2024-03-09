@@ -129,7 +129,7 @@ describe('core', () => {
                                 }
                             },
                             border: {
-                                width: '8px',
+                                width: 0.2,
                                 radius: '25px'
                             }
                         }}
@@ -139,7 +139,7 @@ describe('core', () => {
 
                 const styleElementContent = wrapper.getByTestId('style').innerHTML;
                 expect(styleElementContent).toContain('--size-text-body: 16px');
-                expect(styleElementContent).toContain('--border-width: 8px');
+                expect(styleElementContent).toContain('--border-width: 0.2rem');
                 expect(styleElementContent).toContain('--border-radius: 25px');
 
                 expect(() => wrapper.unmount()).not.toThrow();

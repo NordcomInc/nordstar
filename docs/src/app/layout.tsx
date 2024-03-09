@@ -64,12 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                     {children}
 
-                    <Card as={View} variant="solid" color="primary" className={styles.footer}>
-                        <Card></Card>
-                        <Card></Card>
-                        <Card></Card>
-                        <Card></Card>
-                    </Card>
+                    <Card as={View} variant="solid" color="primary" borderless={true} className={styles.footer}></Card>
                 </NordstarProvider>
             </body>
         </html>

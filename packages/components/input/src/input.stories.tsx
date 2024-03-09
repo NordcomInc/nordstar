@@ -1,51 +1,58 @@
-import type { Meta } from '@storybook/react';
 import React from 'react';
-import type { InputProps } from '../src';
+
 import { Input } from '../src';
 
+import type { Meta, StoryObj } from '@storybook/react';
+import type { InputProps } from '../src';
+
 const story: Meta<typeof Input> = {
-    title: 'Components/Input',
+    title: 'System/Components/Input',
     component: Input,
-    argTypes: {}
-};
+    argTypes: {
+        variant: {
+            control: 'inline-radio',
+            options: ['outline', 'solid'],
+            defaultValue: 'default'
+        },
+        color: {
+            control: 'inline-radio',
+            options: ['default', 'primary', 'secondary'],
+            defaultValue: 'default'
+        },
 
-const Template = ({ entries }: { entries: InputProps[] }) => (
-    <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr 1fr 1fr', gap: '0.75rem', maxWidth: '56rem' }}>
-        {entries.map((args, index) => (
-            <Input key={index} {...args} />
-        ))}
-    </div>
-);
+        type: {
+            control: 'select',
+            options: ['text', 'textarea', 'email', 'number', 'password', 'search']
+        },
 
-export const Default = {
-    render: Template,
-    args: {
-        entries: [
-            {
-                placeholder: 'Placeholder',
-                type: 'text'
-            },
-            {
-                label: 'Name',
-                placeholder: 'Whats your name?',
-                type: 'text'
-            },
-            {
-                label: 'Search',
-                type: 'text'
-            },
-            {
-                label: 'Search',
-                as: 'select',
-                children: (
-                    <>
-                        <option key="option-1">Option 1</option>
-                        <option key="option-2">Option 2</option>
-                    </>
-                )
-            }
-        ]
+        labelPosition: {
+            control: 'select',
+            options: ['inside', 'outside'],
+            defaultValue: 'inside'
+        }
     }
 };
 
 export default story;
+type Story = StoryObj<typeof Input>;
+
+const Template = (args: InputProps) => (
+    <>
+        {[
+            <Input key="simple" defaultValue="This is a bit of text!" {...args} />,
+            <Input key="placeholder" placeholder="Search for Songs, Albums and Artists..." {...args} />,
+            <Input key="label" label="First Name" {...args} />,
+            <Input key="label-with-placeholder" label="Company Name" placeholder="Acme Inc." {...args} />
+        ]}
+    </>
+);
+
+export const Default: Story = {
+    render: Template,
+    args: {
+        variant: 'outline',
+        color: 'default',
+        type: 'text',
+        value: ''
+    }
+};

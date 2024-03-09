@@ -1,9 +1,13 @@
 .container {
-    border-width: var(--border-width-half);
-    border-style: solid;
+    font-family: var(--font-body);
+
     border-radius: var(--border-radius);
 
-    font-family: var(--font-body);
+    &:not([data-borderless='true']) {
+        border-width: var(--border-width);
+        border-style: solid;
+        border-color: var(--border-color);
+    }
 
     &:not([data-padding='false']) {
         $padding: var(--layout-block-padding);
@@ -15,40 +19,45 @@
         }
     }
 
-    &[data-variant='solid'] {
-        border-width: 0;
+    &[data-variant='outline'] {
+        &[data-color='primary'] {
+            --border-color: var(--color-accent-primary);
+        }
+        &[data-color='secondary'] {
+            --border-color: var(--color-accent-secondary);
+        }
+    }
 
+    &[data-variant='solid'] {
         &:is([data-color='foreground'], [data-color='default']) {
             background-color: var(--color-foreground);
             color: var(--color-background);
         }
         &[data-color='primary'] {
+            --border-color: var(--color-accent-primary-foreground);
+
             background-color: var(--color-accent-primary);
-            color: inherit;
+            color: var(--color-accent-primary-foreground);
         }
         &[data-color='secondary'] {
             background-color: var(--color-accent-secondary);
-            color: inherit;
+            color: var(--color-accent-secondary-foreground);
+
+            --border-color: var(--color-accent-secondary-foreground);
         }
     }
 
     &[data-color='default'] {
-        border-color: var(--color-background-highlight);
+        --border-color: var(--color-background-highlight);
     }
     &[data-color='foreground'] {
-        border-color: var(--color-foreground-secondary);
-    }
-    &[data-color='primary'] {
-        border-color: var(--color-accent-primary);
-    }
-    &[data-color='secondary'] {
-        border-color: var(--color-accent-secondary);
+        --border-color: var(--color-foreground-secondary);
     }
 
     .divider {
-        height: var(--border-width-half);
+        height: var(--border-width);
 
         // TODO: Use the proper color based on `data-color`.
-        background: var(--color-background-highlight);
+        background: var(--border-color);
     }
 }

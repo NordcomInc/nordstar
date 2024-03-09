@@ -7,7 +7,7 @@ import { Label } from '../src';
 describe('components', () => {
     describe('label', () => {
         describe('Label', () => {
-            it('should render correctly', () => {
+            it('renders correctly', () => {
                 const wrapper = render(<Label>Hello World</Label>);
 
                 expect(() => wrapper.unmount()).not.toThrow();

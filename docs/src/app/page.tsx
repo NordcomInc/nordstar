@@ -36,11 +36,11 @@ export default async function IndexPage() {
                         Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo.
                     </p>
 
-                    <div className={styles.actions}>
-                        <Button variant="solid" color="primary" as={Link} href="#">
-                            Get Started
-                        </Button>
-                    </div>
+                    <Card.Divider />
+
+                    <Button variant="solid" color="primary" as={Link} href="#">
+                        Get Started
+                    </Button>
                 </Card>
                 <Card className={styles.block}>
                     <Label>2. Examples</Label>
@@ -51,11 +51,11 @@ export default async function IndexPage() {
                         Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo.
                     </p>
 
-                    <div className={styles.actions}>
-                        <Button variant="solid" as={Link} href="#">
-                            Get Started
-                        </Button>
-                    </div>
+                    <Card.Divider />
+
+                    <Button variant="solid" as={Link} href="#">
+                        Get Started
+                    </Button>
                 </Card>
                 <Card className={styles.block}>
                     <Label>3. Documentation</Label>
@@ -66,11 +66,11 @@ export default async function IndexPage() {
                         Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo.
                     </p>
 
-                    <div className={styles.actions}>
-                        <Button variant="outline" as={Link} href="#">
-                            Get Started
-                        </Button>
-                    </div>
+                    <Card.Divider />
+
+                    <Button variant="outline" as={Link} href="#">
+                        Get Started
+                    </Button>
                 </Card>
             </div>
         </View>

@@ -4,7 +4,7 @@ import type { HeaderLogoProps, HeaderMenuProps, HeaderProps } from '../src';
 import { Header } from '../src';
 
 const story: Meta<typeof Header> = {
-    title: 'Components/Header',
+    title: 'System/Layout/Header',
     component: Header,
     argTypes: {}
 };
