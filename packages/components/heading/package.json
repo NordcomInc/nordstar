@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-heading",
     "type": "module",
-    "version": "0.0.40",
+    "version": "0.0.41",
     "description": "Component used to display title/heading text.",
     "packageManager": "npm",
     "engines": {
@@ -67,7 +67,7 @@
         "access": "public"
     },
     "dependencies": {
-        "@nordcom/nordstar-system": "0.0.40"
+        "@nordcom/nordstar-system": "0.0.41"
     },
     "peerDependencies": {
         "react": ">=18",
