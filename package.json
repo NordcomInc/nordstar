@@ -115,7 +115,7 @@
         "strip-ansi": "7.1.0",
         "turbo": "1.12.5",
         "typescript": "5.4.2",
-        "vite": "5.1.5",
+        "vite": "5.1.6",
         "vite-plugin-dts": "3.7.3",
         "vite-plugin-lib-inject-css": "2.0.0",
         "vite-tsconfig-paths": "4.3.1",
