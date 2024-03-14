@@ -23,7 +23,7 @@ describe('components', () => {
             combinations.forEach(({ variant, color }) => {
                 it.fails(`should render with ${variant} variant and ${color} color correctly`, () => {
                     const wrapper = render(
-                        <Card variant={variant as any} color={color as any} data-testId="nordstar-card" />
+                        <Card variant={variant as any} color={color as any} data-testid="nordstar-card" />
                     );
 
                     const cardElement = wrapper.getByTestId('nordstar-card');

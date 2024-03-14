@@ -29,10 +29,10 @@ jobs:
               uses: ./.github/common/install
 
             - name: 🔨 Build
-              run: npm run build:packages --no-cache
+              run: bun run build:packages --no-cache
 
             - name: 🧪 Tests
-              run: npm run test:packages
+              run: bun run test:packages
 
             - name: 🥸 Configure Identity
               run: |
@@ -44,8 +44,8 @@ jobs:
               uses: changesets/action@v1
               with:
                   createGithubReleases: true
-                  version: npm run version
-                  publish: npm run release
+                  version: bun run version
+                  publish: bun run release
                   setupGitUser: false
                   commit: |
                       Changeset: Increment package & dependecy versions.
@@ -58,6 +58,6 @@ jobs:
               if: steps.changesets.outputs.published != 'true'
               run: |
                   git checkout master
-                  npm run version:unstable
-                  npm install
-                  npm run release:unstable
+                  bun run version:unstable
+                  bun install
+                  bun run release:unstable
