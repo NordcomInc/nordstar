@@ -9,18 +9,23 @@ runs:
           with:
               node-version-file: '.nvmrc'
               registry-url: 'https://registry.npmjs.org'
-              cache: 'npm'
+
+        - name: 🏎️ Setup Bun
+          uses: oven-sh/setup-bun@v1
 
         - name: 📦 Install dependencies
           shell: bash
-          run: npm ci
+          run: bun install
 
         - name: 💾 Cache node modules
           uses: actions/cache@v4
           with:
               path: |
                   ~/.npm
-                  ${{ github.workspace }}/docs/.next/cache
+                  ${{ github.workspace }}/.turbo
+                  ${{ github.workspace }}/**/.next
+                  ${{ github.workspace }}/**/.turbo
+                  ${{ github.workspace }}/**/.vercel
               key: ${{ runner.os }}-node-build-${{ hashFiles('**/package-lock.json') }}-${{ hashFiles('**/*.[jt]s', '**/*.[jt]sx') }}
               restore-keys: |
                   ${{ runner.os }}-node-build-${{ hashFiles('**/package-lock.json') }}-

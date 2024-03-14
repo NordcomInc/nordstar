@@ -16,7 +16,6 @@
     },
     "sideEffects": false,
     "engines": {
-        "npm": ">=8",
         "node": ">=18 <=21"
     },
     "scripts": {
@@ -26,8 +25,8 @@
         "typecheck": "tsc --noEmit",
         "prepack": "clean-package",
         "postpack": "clean-package restore",
-        "prebuild": "npm run prepack",
-        "postbuild": "npm run postpack"
+        "prebuild": "bun run prepack",
+        "postbuild": "bun run postpack"
     },
     "keywords": [
         "nordstar",
@@ -66,7 +65,7 @@
         "access": "public"
     },
     "dependencies": {
-        "@nordcom/nordstar-system": "0.0.41"
+        "@nordcom/nordstar-system": "workspace:*"
     },
     "peerDependencies": {
         "react": ">=18",

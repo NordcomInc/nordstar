@@ -22,7 +22,7 @@ jobs:
               uses: ./.github/common/install
 
             - name: 🔨 Build
-              run: npm run build
+              run: bun run build
 
     lint:
         name: 📋 Lint
@@ -36,7 +36,7 @@ jobs:
               uses: ./.github/common/install
 
             - name: 📋 Lint
-              run: npm run lint
+              run: bun run lint
 
     test:
         name: 🧪 Test
@@ -51,10 +51,10 @@ jobs:
               uses: ./.github/common/install
 
             - name: 🔨 Build
-              run: npm run build
+              run: bun run build
 
             - name: 🧪 Test
-              run: npm run test
+              run: bun run test
 
             - name: 🦺 Codecov Coverage Reports
               uses: codecov/codecov-action@v4
@@ -74,7 +74,7 @@ jobs:
               uses: ./.github/common/install
 
             - name: 🔨 Build
-              run: npm run build
+              run: bun run build
 
             - name: ✅ Typecheck
-              run: npm run typecheck
+              run: bun run typecheck

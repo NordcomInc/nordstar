@@ -4,9 +4,7 @@
     "type": "module",
     "version": "0.0.41",
     "description": "An opinionated component library for building human-centric user interfaces.",
-    "packageManager": "npm",
     "engines": {
-        "npm": ">=8",
         "node": ">=18 <=21"
     },
     "main": "./src/index.ts",
@@ -59,19 +57,19 @@
         "typecheck": "tsc --noEmit",
         "prepack": "clean-package",
         "postpack": "clean-package restore",
-        "prebuild": "npm run prepack",
-        "postbuild": "npm run postpack"
+        "prebuild": "bun run prepack",
+        "postbuild": "bun run postpack"
     },
     "dependencies": {
-        "@nordcom/nordstar-accented": "0.0.41",
-        "@nordcom/nordstar-button": "0.0.41",
-        "@nordcom/nordstar-card": "0.0.41",
-        "@nordcom/nordstar-header": "0.0.41",
-        "@nordcom/nordstar-heading": "0.0.41",
-        "@nordcom/nordstar-input": "0.0.41",
-        "@nordcom/nordstar-label": "0.0.41",
-        "@nordcom/nordstar-system": "0.0.41",
-        "@nordcom/nordstar-view": "0.0.41"
+        "@nordcom/nordstar-accented": "workspace:*",
+        "@nordcom/nordstar-button": "workspace:*",
+        "@nordcom/nordstar-card": "workspace:*",
+        "@nordcom/nordstar-header": "workspace:*",
+        "@nordcom/nordstar-heading": "workspace:*",
+        "@nordcom/nordstar-input": "workspace:*",
+        "@nordcom/nordstar-label": "workspace:*",
+        "@nordcom/nordstar-system": "workspace:*",
+        "@nordcom/nordstar-view": "workspace:*"
     },
     "peerDependencies": {
         "react": ">=18",
