@@ -3,7 +3,7 @@
     "name": "@nordcom/nordstar-{{componentName}}",
     "type": "module",
     "version": "0.0.0",
-    "description": "",
+    "description": "{{escapeJsonString description}}",
     "main": "./src/index.ts",
     "types": "./src/index.ts",
     "module": "./src/index.ts",
@@ -23,7 +23,9 @@
         "clean": "rimraf dist .turbo",
         "typecheck": "tsc --noEmit",
         "prepack": "clean-package",
-        "postpack": "clean-package restore"
+        "postpack": "clean-package restore",
+        "prebuild": "bun run prepack",
+        "postbuild": "bun run postpack"
     },
     "keywords": [
         "nordstar",

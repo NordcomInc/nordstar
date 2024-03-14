@@ -72,8 +72,24 @@ const capitalize = (str) => {
     return str.charAt(0).toUpperCase() + str.slice(1);
 };
 
+/**
+ * Converts a string to camelCase.
+ *
+ * @param {string} str - The string to convert to camelCase.
+ * @returns {string} The camelCased string.
+ */
 const camelCase = (str) => {
     return str.replace(/[-_](\w)/g, (_, c) => c.toUpperCase());
+};
+
+/**
+ * Escapes a string to be used in a JSON string.
+ *
+ * @param {string} str - The string to escape.
+ * @returns {string} The escaped string.
+ */
+const escapeJsonString = (str) => {
+    return str.replace(/"/g, '\\"').split('\n').at(0);
 };
 
 /**
@@ -90,6 +106,9 @@ export default function main(plop) {
     });
     plop.setHelper('lowerCase', (text) => {
         return text.toLowerCase();
+    });
+    plop.setHelper('escapeJsonString', (text) => {
+        return escapeJsonString(text);
     });
 
     plop.setPrompt('directory', DirectoryPrompt);
