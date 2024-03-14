@@ -3,9 +3,7 @@
     "name": "@nordcom/nordstar-storybook",
     "type": "module",
     "description": "",
-    "packageManager": "npm",
     "engines": {
-        "npm": ">=8",
         "node": ">=18 <=21"
     },
     "main": "src/index.ts",
@@ -51,7 +49,7 @@
         "start": ""
     },
     "dependencies": {
-        "@nordcom/nordstar": "0.0.41",
+        "@nordcom/nordstar": "workspace:*",
         "react": "18.2.0",
         "react-dom": "18.2.0"
     },

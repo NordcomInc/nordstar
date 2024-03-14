@@ -4,9 +4,7 @@
     "type": "module",
     "version": "0.0.41",
     "description": "Utilities used by all of the Nordstar Components, shouldn't be used directly outside of the Nordstar library.",
-    "packageManager": "npm",
     "engines": {
-        "npm": ">=8",
         "node": ">=18 <=21"
     },
     "main": "./src/index.ts",
@@ -59,8 +57,8 @@
         "typecheck": "tsc --noEmit",
         "prepack": "clean-package",
         "postpack": "clean-package restore",
-        "prebuild": "npm run prepack",
-        "postbuild": "npm run postpack"
+        "prebuild": "bun run prepack",
+        "postbuild": "bun run postpack"
     },
     "dependencies": {
         "the-new-css-reset": "1.11.2"

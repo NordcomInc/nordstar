@@ -4,9 +4,7 @@
     "type": "module",
     "version": "0.0.41",
     "description": "Card is a consistent card-like container for blocks of content.",
-    "packageManager": "npm",
     "engines": {
-        "npm": ">=8",
         "node": ">=18 <=21"
     },
     "main": "./src/index.ts",
@@ -27,8 +25,8 @@
         "typecheck": "tsc --noEmit",
         "prepack": "clean-package",
         "postpack": "clean-package restore",
-        "prebuild": "npm run prepack",
-        "postbuild": "npm run postpack"
+        "prebuild": "bun run prepack",
+        "postbuild": "bun run postpack"
     },
     "keywords": [
         "nordstar",
@@ -67,7 +65,7 @@
         "access": "public"
     },
     "dependencies": {
-        "@nordcom/nordstar-system": "0.0.41"
+        "@nordcom/nordstar-system": "workspace:*"
     },
     "peerDependencies": {
         "react": ">=18",

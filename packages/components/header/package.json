@@ -4,9 +4,7 @@
     "type": "module",
     "version": "0.0.41",
     "description": "Generic simple component to render headers for landing pages and similar.",
-    "packageManager": "npm",
     "engines": {
-        "npm": ">=8",
         "node": ">=18 <=21"
     },
     "main": "./src/index.ts",
@@ -64,9 +62,9 @@
         "access": "public"
     },
     "dependencies": {
-        "@nordcom/nordstar-system": "0.0.41",
-        "@nordcom/nordstar-card": "0.0.41",
-        "@nordcom/nordstar-view": "0.0.41"
+        "@nordcom/nordstar-system": "workspace:*",
+        "@nordcom/nordstar-card": "workspace:*",
+        "@nordcom/nordstar-view": "workspace:*"
     },
     "peerDependencies": {
         "react": ">=18",
