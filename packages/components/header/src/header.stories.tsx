@@ -1,6 +1,6 @@
 import type { Meta } from '@storybook/react';
 import React from 'react';
-import type { HeaderLogoProps, HeaderMenuProps, HeaderProps } from '../src';
+import type { HeaderProps } from '../src';
 import { Header } from '../src';
 
 const story: Meta<typeof Header> = {
@@ -9,37 +9,25 @@ const story: Meta<typeof Header> = {
     argTypes: {}
 };
 
-const Template = ({
-    headerArgs,
-    logoArgs,
-    menuArgs
-}: {
-    headerArgs: HeaderProps;
-    logoArgs: HeaderLogoProps;
-    menuArgs: HeaderMenuProps;
-}) => (
-    <Header {...headerArgs}>
-        <Header.Logo {...logoArgs} />
-        <Header.Menu {...menuArgs} />
-    </Header>
+const Template = ({ title, ...args }: HeaderProps & { title: string }) => (
+    <>
+        {[
+            <Header key="standard" {...args}>
+                <Header.Logo>{title}</Header.Logo>
+                <Header.Menu>
+                    <Header.Menu.Link>Link 1</Header.Menu.Link>
+                    <Header.Menu.Link>Link 2</Header.Menu.Link>
+                    <Header.Menu.Link>Link 3</Header.Menu.Link>
+                </Header.Menu>
+            </Header>
+        ]}
+    </>
 );
 
 export const Default = {
     render: Template,
     args: {
-        headerArgs: {},
-        logoArgs: {
-            children: <b>hello world</b>
-        },
-        menuArgs: {
-            children: (
-                <>
-                    <Header.Menu.Link>Link 1</Header.Menu.Link>
-                    <Header.Menu.Link>Link 2</Header.Menu.Link>
-                    <Header.Menu.Link>Link 3</Header.Menu.Link>
-                </>
-            )
-        }
+        title: 'Nordstar'
     }
 };
 

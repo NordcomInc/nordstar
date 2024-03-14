@@ -13,8 +13,9 @@ const story: Meta<typeof Button> = {
             defaultValue: 'default'
         },
         color: {
-            options: ['default', 'secondary', 'primary'],
-            control: { type: 'radio' }
+            control: 'inline-radio',
+            options: ['default', 'primary', 'secondary'],
+            defaultValue: 'default'
         }
     }
 };
