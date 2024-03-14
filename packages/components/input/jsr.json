@@ -1,0 +1,5 @@
+{
+    "name": "@nordcom/nordstar-input",
+    "version": "0.0.41",
+    "exports": "./src/index.ts"
+}

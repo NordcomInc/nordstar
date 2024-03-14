@@ -26,7 +26,8 @@
         "prepack": "clean-package",
         "postpack": "clean-package restore",
         "prebuild": "bun run prepack",
-        "postbuild": "bun run postpack"
+        "postbuild": "bun run postpack",
+        "publish:jsr": "bunx jsr publish"
     },
     "keywords": [
         "nordstar",

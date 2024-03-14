@@ -44,6 +44,7 @@
         "create:component": "plop --plopfile ./plop/plopfile.js component",
         "version": "changeset version",
         "postversion": "bun install",
+        "publish:jsr": "turbo publish:jsr --filter=!@nordcom/nordstar-docs --filter=!@nordcom/nordstar-storybook",
         "version:unstable": "changeset version --snapshot unstable",
         "release": "changeset publish",
         "release:unstable": "changeset publish --snapshot --no-git-tag --tag unstable",

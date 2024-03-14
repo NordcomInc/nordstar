@@ -1,0 +1,5 @@
+{
+    "name": "@nordcom/nordstar-card",
+    "version": "0.0.41",
+    "exports": "./src/index.ts"
+}

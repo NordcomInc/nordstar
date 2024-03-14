@@ -27,6 +27,10 @@
         "typecheck": {
             "cache": false,
             "dependsOn": ["build", "^typecheck"]
+        },
+        "publish:jsr": {
+            "cache": false,
+            "dependsOn": []
         }
     }
 }
