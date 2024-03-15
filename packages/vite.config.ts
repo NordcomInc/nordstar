@@ -38,10 +38,10 @@ export default defineConfig({
     plugins: [
         tsConfigPaths(),
         dts({
-            clearPureImport: true,
+            clearPureImport: false,
             entryRoot: 'src',
             rollupTypes: false,
-            insertTypesEntry: false,
+            insertTypesEntry: true,
             tsconfigPath: 'tsconfig.json'
         })
     ]

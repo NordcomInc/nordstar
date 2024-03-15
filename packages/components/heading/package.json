@@ -4,9 +4,9 @@
     "type": "module",
     "version": "0.0.41",
     "description": "Component used to display title/heading text.",
-    "engines": {
-        "node": ">=18 <=21"
-    },
+    "files": [
+        "dist"
+    ],
     "main": "./src/index.ts",
     "prettier": "@nordcom/prettier",
     "types": "./src/index.ts",
@@ -19,7 +19,7 @@
     },
     "sideEffects": false,
     "scripts": {
-        "build": "vite build",
+        "build": "tsc && vite build",
         "dev": "vite build --watch",
         "clean": "rimraf dist .turbo",
         "typecheck": "tsc --noEmit",
@@ -58,9 +58,6 @@
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
     "homepage": "https://nordstar.nordcom.io/docs/components/heading/",
-    "files": [
-        "dist"
-    ],
     "publishConfig": {
         "access": "public"
     },

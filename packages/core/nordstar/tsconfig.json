@@ -7,6 +7,6 @@
         "typeRoots": ["./dist/index.d.ts"]
     },
     "exclude": ["node_modules", "dist", "**/*.test.*", "**/*.stories.*"],
-    "extends": "../../tsconfig.json",
-    "include": ["./src/**/*.ts", "./**/*.tsx", "../../../@types/declaration.d.ts"]
+    "include": ["../../../@types/declaration.d.ts"],
+    "references": [{ "path": "../../tsconfig.json" }]
 }

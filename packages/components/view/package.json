@@ -6,6 +6,9 @@
     "description": "Display a dedicated view; (aka page) somewhere in your app.",
     "main": "./src/index.ts",
     "prettier": "@nordcom/prettier",
+    "files": [
+        "dist"
+    ],
     "types": "./src/index.ts",
     "module": "./src/index.ts",
     "exports": {
@@ -15,11 +18,8 @@
         }
     },
     "sideEffects": false,
-    "engines": {
-        "node": ">=18 <=21"
-    },
     "scripts": {
-        "build": "vite build",
+        "build": "tsc && vite build",
         "dev": "vite build --watch",
         "clean": "rimraf dist .turbo",
         "typecheck": "tsc --noEmit",
@@ -58,9 +58,6 @@
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
     "homepage": "https://nordstar.nordcom.io/docs/components/view/",
-    "files": [
-        "dist"
-    ],
     "publishConfig": {
         "access": "public"
     },

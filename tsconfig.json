@@ -1,7 +1,6 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig.json",
     "compilerOptions": {
-        "allowImportingTsExtensions": true,
         "allowJs": true,
         "allowSyntheticDefaultImports": true,
         "composite": true,
@@ -18,7 +17,9 @@
         "module": "ESNext",
         "moduleDetection": "force",
         "moduleResolution": "Bundler",
-        "noEmit": true,
+        "noFallthroughCasesInSwitch": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
         "paths": {},
         "plugins": [],
         "removeComments": false,
