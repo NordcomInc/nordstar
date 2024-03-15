@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-accented",
     "type": "module",
-    "version": "0.0.41",
+    "version": "0.0.42",
     "description": "Highlight text with an accent color.",
     "engines": {
         "node": ">=18 <=21"

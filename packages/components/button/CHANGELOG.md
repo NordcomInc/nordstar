@@ -1,5 +1,23 @@
 # @nordcom/nordstar-button
 
+## 0.0.42
+
+### Patch Changes
+
+- [#369](https://github.com/NordcomInc/nordstar/pull/369) [`85cda90`](https://github.com/NordcomInc/nordstar/commit/85cda9069f19cba8f3da958b02878cea549e48c8) Thanks [@filiphsps](https://github.com/filiphsps)! - - Remove `clean-package` and replace it with `publishConfig` _(this still needs testing)_.
+
+  - Switch from `"jsx": "preserve"` to `"jsx": "react-jsx"`.
+  - Substantially improve both the `vite` and `typescript` configurations.
+    - Use `references` instead of `extends` in `tsconfig.json`s. This allows for better type checking and faster builds.
+    - Properly create `entry` and `rollupOptions`' `input` file lists. This fixes a bunch of issues.
+    - Define `__dirname`, we previously tried using `__dirname ` under esm which is not supported, somehow it didn't error or break the build but it's fixed now anyway.
+  - Some groundwork done to eventually support [`jsr.io`](https://jsr.io/@nordcom)
+
+- [#367](https://github.com/NordcomInc/nordstar/pull/367) [`bd8b007`](https://github.com/NordcomInc/nordstar/commit/bd8b0079663eeb080e97f623ebec953061bc4e74) Thanks [@filiphsps](https://github.com/filiphsps)! - Meta: Migrate to `bun` from `npm`.
+
+- Updated dependencies [[`85cda90`](https://github.com/NordcomInc/nordstar/commit/85cda9069f19cba8f3da958b02878cea549e48c8), [`bd8b007`](https://github.com/NordcomInc/nordstar/commit/bd8b0079663eeb080e97f623ebec953061bc4e74)]:
+  - @nordcom/nordstar-system@0.0.42
+
 ## 0.0.41
 
 ### Patch Changes
