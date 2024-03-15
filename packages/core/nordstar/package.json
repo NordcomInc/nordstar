@@ -4,11 +4,11 @@
     "type": "module",
     "version": "0.0.41",
     "description": "An opinionated component library for building human-centric user interfaces.",
-    "engines": {
-        "node": ">=18 <=21"
-    },
     "main": "./src/index.ts",
     "prettier": "@nordcom/prettier",
+    "files": [
+        "dist"
+    ],
     "types": "./src/index.ts",
     "module": "./src/index.ts",
     "exports": {
@@ -44,14 +44,11 @@
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
     "homepage": "https://nordstar.nordcom.io/",
-    "files": [
-        "dist"
-    ],
     "publishConfig": {
         "access": "public"
     },
     "scripts": {
-        "build": "vite build",
+        "build": "tsc && vite build",
         "dev": "vite build --watch",
         "clean": "rimraf dist .turbo",
         "typecheck": "tsc --noEmit",

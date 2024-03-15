@@ -11,6 +11,9 @@
     "prettier": "@nordcom/prettier",
     "types": "./src/index.ts",
     "module": "./src/index.ts",
+    "files": [
+        "dist"
+    ],
     "exports": {
         ".": {
             "import": "./src/index.ts",
@@ -19,7 +22,7 @@
     },
     "sideEffects": false,
     "scripts": {
-        "build": "vite build",
+        "build": "tsc && vite build",
         "dev": "vite build --watch",
         "clean": "rimraf dist .turbo",
         "typecheck": "tsc --noEmit",
@@ -58,9 +61,6 @@
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
     "homepage": "https://nordstar.nordcom.io/docs/components/accented/",
-    "files": [
-        "dist"
-    ],
     "publishConfig": {
         "access": "public"
     },
