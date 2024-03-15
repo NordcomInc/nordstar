@@ -1,3 +1,4 @@
+import MagicString from 'magic-string';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -25,10 +26,13 @@ export default mergeConfig(
                 apply: 'build',
                 enforce: 'post',
                 renderChunk(code, chunk) {
-                    if (!chunk.viteMetadata) return { code };
+                    const ms = new MagicString(code);
+
+                    if (chunk.viteMetadata) ms.prepend(`'use client';\n\n`);
 
                     return {
-                        code: `'use client';\n\n${code}`
+                        code: ms.toString(),
+                        map: ms.generateMap()
                     };
                 }
             }

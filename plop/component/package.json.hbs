@@ -12,28 +12,24 @@
     "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "import": "./dist/index.js",
-            "module": "./dist/index.js",
+            "import": [
+                "./src/index.ts",
+                "./dist/index.js"
+            ],
+            "module": [
+                "./src/index.ts",
+                "./dist/index.js"
+            ],
             "require": null,
-            "types": "./dist/index.d.ts"
+            "types": [
+                "./src/index.ts",
+                "./dist/index.d.ts"
+            ]
         },
         "./package.json": "./package.json"
     },
     "publishConfig": {
-        "access": "public",
-        "main": "dist/index.js",
-        "module": "dist/index.js",
-        "types": "dist/index.d.ts",
-        "exports": {
-            ".": {
-                "import": "./dist/index.js",
-                "module": "./dist/index.js",
-                "require": null,
-                "types": "./dist/index.d.ts"
-            },
-            "./dist/index.css": "./dist/index.css",
-            "./package.json": "./package.json"
-        }
+        "access": "public"
     },
     "sideEffects": [
         "**/*.css*"

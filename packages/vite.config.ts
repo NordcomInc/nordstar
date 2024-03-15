@@ -17,7 +17,7 @@ const input = Object.fromEntries(
         .map((file) => {
             const filenameWithoutExt = file.slice(0, file.length - extname(file).length);
 
-            return [relative('src', filenameWithoutExt), `${process.cwd()}/${filenameWithoutExt}`];
+            return [relative('src', filenameWithoutExt), resolve(process.cwd(), file)];
         })
 );
 
@@ -40,8 +40,8 @@ export default defineConfig({
         sourcemap: true,
         target: 'esnext',
         rollupOptions: {
-            external: [/^@nordcom\/nordstar-/, 'react', 'react/jsx-runtime', 'react-dom'],
-            treeshake: 'smallest',
+            external: ['react', 'react/jsx-runtime', 'react-dom'],
+            treeshake: 'recommended',
             input: input,
             output: {
                 assetFileNames: ({ name }) => {
@@ -51,13 +51,25 @@ export default defineConfig({
 
                     return 'assets/[name][extname]';
                 },
+                intro: (chunk) => {
+                    if (chunk.isEntry && chunk.facadeModuleId.endsWith('.tsx')) {
+                        return `import 'react';`;
+                    }
+
+                    return '';
+                },
                 chunkFileNames: 'chunks/[name].[hash].js',
                 dir: 'dist',
                 entryFileNames: '[name].js',
                 esModule: true,
                 exports: 'named',
+                format: 'esm',
                 globals: { react: 'React', 'react-dom': 'ReactDOM' },
+                hoistTransitiveImports: true,
+                indent: false,
+                interop: 'esModule',
                 minifyInternalExports: true,
+                noConflict: true,
                 sourcemapExcludeSources: false,
                 strict: true
             }
@@ -80,10 +92,10 @@ export default defineConfig({
         libInjectCss(),
         tsConfigPaths(),
         dts({
-            clearPureImport: false,
+            clearPureImport: true,
             entryRoot: 'src',
-            rollupTypes: false,
             insertTypesEntry: true,
+            rollupTypes: false,
             tsconfigPath: 'tsconfig.json',
             include: ['**/src']
         })
