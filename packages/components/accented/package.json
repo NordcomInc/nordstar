@@ -7,19 +7,19 @@
     "engines": {
         "node": ">=18 <=21"
     },
-    "main": "./src/index.ts",
     "prettier": "@nordcom/prettier",
-    "module": "./src/index.ts",
-    "types": "./src/index.ts",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "files": [
         "dist"
     ],
     "exports": {
         ".": {
-            "import": "./src/index.ts",
-            "module": "./src/index.ts",
+            "import": "./dist/index.js",
+            "module": "./dist/index.js",
             "require": null,
-            "types": "./src/index.ts"
+            "types": "./dist/index.d.ts"
         },
         "./package.json": "./package.json"
     },
@@ -79,7 +79,7 @@
     },
     "homepage": "https://nordstar.nordcom.io/docs/components/accented/",
     "dependencies": {
-        "@nordcom/nordstar-system": "workspace:*"
+        "@nordcom/nordstar-system": "*"
     },
     "peerDependencies": {
         "react": ">=18",

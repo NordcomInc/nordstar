@@ -53,8 +53,13 @@ header.container {
 
             -webkit-user-select: none;
             user-select: none;
+            overflow-x: auto;
+            touch-action: auto;
+            scroll-behavior: smooth;
 
             @media (min-width: 950px) {
+                overflow-x: unset;
+                justify-content: flex-end;
                 gap: var(--layout-block-padding-double);
             }
 

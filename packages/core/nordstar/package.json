@@ -8,15 +8,15 @@
     "files": [
         "dist"
     ],
-    "main": "./src/index.ts",
-    "module": "./src/index.ts",
-    "types": "./src/index.ts",
+    "main": "./dist/index.js",
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "import": "./src/index.ts",
-            "module": "./src/index.ts",
+            "import": "./dist/index.js",
+            "module": "./dist/index.js",
             "require": null,
-            "types": "./src/index.ts"
+            "types": "./dist/index.d.ts"
         },
         "./package.json": "./package.json"
     },
@@ -72,15 +72,15 @@
         "typecheck": "tsc --noEmit"
     },
     "dependencies": {
-        "@nordcom/nordstar-accented": "workspace:*",
-        "@nordcom/nordstar-button": "workspace:*",
-        "@nordcom/nordstar-card": "workspace:*",
-        "@nordcom/nordstar-header": "workspace:*",
-        "@nordcom/nordstar-heading": "workspace:*",
-        "@nordcom/nordstar-input": "workspace:*",
-        "@nordcom/nordstar-label": "workspace:*",
-        "@nordcom/nordstar-system": "workspace:*",
-        "@nordcom/nordstar-view": "workspace:*"
+        "@nordcom/nordstar-accented": "*",
+        "@nordcom/nordstar-button": "*",
+        "@nordcom/nordstar-card": "*",
+        "@nordcom/nordstar-header": "*",
+        "@nordcom/nordstar-heading": "*",
+        "@nordcom/nordstar-input": "*",
+        "@nordcom/nordstar-label": "*",
+        "@nordcom/nordstar-system": "*",
+        "@nordcom/nordstar-view": "*"
     },
     "peerDependencies": {
         "react": ">=18",
