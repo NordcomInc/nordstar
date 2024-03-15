@@ -110,3 +110,4 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
         </>
     );
 };
+NordstarProvider.displayName = 'Nordstar.Core.NordstarProvider';

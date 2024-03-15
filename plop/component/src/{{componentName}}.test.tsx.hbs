@@ -1,19 +1,18 @@
 import React from 'react';
 
-import '@testing-library/jest-dom';
+import '@testing-library/jest-dom/vitest';
+import '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
-import { {{capitalize componentName}} } from '../src';
+import { {{capitalize componentName}} } from '.';
 import { render } from '@testing-library/react';
 
 describe('components', () => {
-    describe('{{componentName}}', () => {
-        describe('{{capitalize componentName}}', () => {
-            it('renders correctly', () => {
-                const wrapper = render(<{{capitalize componentName}} />);
+    describe('{{capitalize componentName}}', () => {
+        it('renders correctly', () => {
+            const wrapper = render(<{{capitalize componentName}} />);
 
-                expect(() => wrapper.unmount()).not.toThrow();
-            });
+            expect(() => wrapper.unmount()).not.toThrow();
         });
     });
 });
