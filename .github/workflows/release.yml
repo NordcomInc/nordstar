@@ -14,6 +14,7 @@ env:
     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     GITHUB_TOKEN: ${{ secrets.MACHINE_USER }}
+    CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
 jobs:
     release:

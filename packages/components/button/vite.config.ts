@@ -1,12 +1,14 @@
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { codecovVitePlugin } from '@codecov/vite-plugin';
 import { defineConfig, mergeConfig } from 'vite';
 
 import base from '../vite.config';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+const name = 'Nordstar.Component.Button';
 export default mergeConfig(
     base,
     defineConfig({
@@ -14,9 +16,16 @@ export default mergeConfig(
         build: {
             rollupOptions: {
                 output: {
-                    name: 'Nordstar.Component.Button'
+                    name
                 }
             }
-        }
+        },
+        plugins: [
+            codecovVitePlugin({
+                enableBundleAnalysis: !!process.env.CODECOV_TOKEN,
+                bundleName: name,
+                uploadToken: process.env.CODECOV_TOKEN
+            })
+        ]
     })
 );

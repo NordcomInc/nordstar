@@ -2,12 +2,14 @@ import MagicString from 'magic-string';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
+import { codecovVitePlugin } from '@codecov/vite-plugin';
 import { defineConfig, mergeConfig } from 'vite';
 
 import base from '../vite.config';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
+const name = 'Nordstar.Component.Input';
 export default mergeConfig(
     base,
     defineConfig({
@@ -15,7 +17,7 @@ export default mergeConfig(
         build: {
             rollupOptions: {
                 output: {
-                    name: 'Nordstar.Component.Input'
+                    name
                 }
             }
         },
@@ -35,7 +37,12 @@ export default mergeConfig(
                         map: ms.generateMap()
                     };
                 }
-            }
+            },
+            codecovVitePlugin({
+                enableBundleAnalysis: !!process.env.CODECOV_TOKEN,
+                bundleName: name,
+                uploadToken: process.env.CODECOV_TOKEN
+            })
         ]
     })
 );
