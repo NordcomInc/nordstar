@@ -18,6 +18,7 @@
         "unused-imports",
         "import",
         "@typescript-eslint",
+        "eslint-plugin-jsdoc",
         "jsx-a11y",
         "prettier"
     ],
@@ -52,6 +53,14 @@
         "consistent-return": "error",
         "import/first": "off",
         "indent": "off",
+        "jsdoc/check-alignment": "error",
+        "jsdoc/check-indentation": "off",
+        "jsdoc/check-line-alignment": "error",
+        "jsdoc/check-param-names": "error",
+        "jsdoc/check-property-names": "error",
+        "jsdoc/check-syntax": "error",
+        "jsdoc/check-types": "error",
+        "jsdoc/require-hyphen-before-param-description": "error",
         "jsx-a11y/alt-text": "off",
         "jsx-a11y/anchor-is-valid": "off",
         "no-console": [

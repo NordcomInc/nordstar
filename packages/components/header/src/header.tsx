@@ -26,7 +26,7 @@ export type HeaderLogoProps = {} & ComponentProps<'nav'>;
 
 /**
  * `<Header.Logo/>`, a component to render a header's logo.
- * @param {object} props - `<Header.Logo/>` props.
+ * @param {HeaderLogoProps} props - `<Header.Logo/>` props.
  * @returns {React.ReactNode} The `<Header.Logo/>` component.
  */
 const Logo = ({ className, ...props }: HeaderLogoProps) => {
@@ -40,7 +40,7 @@ export type HeaderMenuProps = {} & ComponentProps<'nav'>;
 
 /**
  * `<Header.Menu/>`, a component to render a header's content.
- * @param {object} props - `<Header.Menu/>` props.
+ * @param {HeaderMenuProps} props - `<Header.Menu/>` props.
  * @returns {React.ReactNode} The `<Header.Menu/>` component.
  */
 const Menu = ({ className, ...props }: HeaderMenuProps) => {
@@ -56,7 +56,7 @@ export type HeaderMenuLinkProps = {
 
 /**
  * `<Header.Menu.Link/>`, a component to render header links.
- * @param {object} props - `<Header.Menu.Link/>` props.
+ * @param {HeaderMenuLinkProps} props - `<Header.Menu.Link/>` props.
  * @returns {React.ReactNode} The `<Header.Menu.Link/>` component.
  */
 const Link = forwardRef<'a', HeaderMenuLinkProps>(({ as, className, ...props }, ref) => {

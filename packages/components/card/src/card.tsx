@@ -15,7 +15,7 @@ export type CardProps = {
 /**
  * `<Card/>`, a consistent card-like container for blocks of content.
  *
- * @param {object} props - `<Card/>` props.
+ * @param {CardProps} props - `<Card/>` props.
  * @param {As} [props.as] - The element to render the component as.
  * @param {'outline' | 'solid'} [props.variant='outline'] - The variant.
  * @param {NordstarColor} [props.color='default'] - The color scheme.
@@ -47,7 +47,7 @@ export type CardDividerProps = {} & ComponentProps<'hr'>;
 
 /**
  * `<Card.Divider/>`, a component to render card dividers.
- * @param {object} props - `<Card.Divider/>` props.
+ * @param {CardDividerProps} props - `<Card.Divider/>` props.
  * @returns {React.ReactNode} The `<Card.Divider/>` component.
  */
 const Divider = ({ className, ...props }: CardDividerProps) => {
