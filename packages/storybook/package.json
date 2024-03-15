@@ -55,18 +55,18 @@
     },
     "devDependencies": {
         "@nordcom/prettier": "0.1.1",
-        "@storybook/addon-a11y": "7.6.17",
-        "@storybook/addon-actions": "7.6.17",
-        "@storybook/addon-docs": "7.6.17",
-        "@storybook/addon-essentials": "7.6.17",
-        "@storybook/addon-links": "7.6.17",
-        "@storybook/cli": "7.6.17",
-        "@storybook/react": "7.6.17",
-        "@storybook/react-vite": "7.6.17",
-        "@storybook/theming": "7.6.17",
+        "@storybook/addon-a11y": "8.0.0",
+        "@storybook/addon-actions": "8.0.0",
+        "@storybook/addon-docs": "8.0.0",
+        "@storybook/addon-essentials": "8.0.0",
+        "@storybook/addon-links": "8.0.0",
+        "@storybook/cli": "8.0.0",
+        "@storybook/react": "8.0.0",
+        "@storybook/react-vite": "8.0.0",
+        "@storybook/theming": "8.0.0",
         "prettier": "3.2.5",
         "remark-gfm": "4.0.0",
-        "storybook": "7.6.17",
+        "storybook": "8.0.0",
         "storybook-dark-mode": "4.0.0"
     }
 }
