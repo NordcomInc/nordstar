@@ -16,8 +16,7 @@
             "outputs": ["**/.next/**", "!**/.next/cache/**", "!**/coverage/**", "dist/**", "storybook-static/**"]
         },
         "clean": {
-            "cache": false,
-            "outputs": []
+            "cache": false
         },
         "dev": {
             "cache": false,
@@ -30,11 +29,6 @@
         "start": {
             "cache": false,
             "dependsOn": ["build"]
-        },
-        "test": {
-            "cache": false,
-            "dependsOn": ["build"],
-            "outputs": ["coverage/**"]
         },
         "typecheck": {
             "cache": false,

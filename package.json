@@ -73,6 +73,7 @@
         "@changesets/cli": "2.27.1",
         "@changesets/types": "6.0.0",
         "@codecov/vite-plugin": "0.0.1-beta.4",
+        "@happy-dom/global-registrator": "13.8.6",
         "@nordcom/prettier": "0.1.1",
         "@testing-library/dom": "9.3.4",
         "@testing-library/jest-dom": "6.4.2",
@@ -96,9 +97,9 @@
         "eslint-plugin-unused-imports": "3.1.0",
         "eslint": "8.57.0",
         "glob": "10.3.10",
+        "happy-dom": "13.8.6",
         "husky": "9.0.11",
         "inquirer-directory": "2.2.0",
-        "jsdom": "24.0.0",
         "lint-staged": "15.2.2",
         "magic-string": "0.30.8",
         "plop": "4.0.1",
@@ -120,6 +121,7 @@
     },
     "overrides": {
         "@typescript-eslint/typescript-estree": "7.2.0",
-        "esbuild": "0.20.2"
+        "esbuild": "0.20.2",
+        "psl": "npm:@filiphsandstrom/psl@2.0.0"
     }
 }

@@ -1,17 +1,18 @@
 import { describe, expect, it } from 'vitest';
 
 import { render } from '@testing-library/react';
-import React from 'react';
-import { Label } from '../src';
+import { Label } from '.';
 
 describe('components', () => {
-    describe('label', () => {
-        describe('Label', () => {
-            it('renders correctly', () => {
-                const wrapper = render(<Label>Hello World</Label>);
+    describe('Label', () => {
+        it('has correct displayName', () => {
+            expect(Label).toHaveProperty('displayName', 'Nordstar.Typography.Label');
+        });
 
-                expect(() => wrapper.unmount()).not.toThrow();
-            });
+        it('renders correctly', () => {
+            const wrapper = render(<Label>Hello World</Label>);
+
+            expect(() => wrapper.unmount()).not.toThrow();
         });
     });
 });

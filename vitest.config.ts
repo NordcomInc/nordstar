@@ -1,54 +1,66 @@
-import react from '@vitejs/plugin-react-swc';
-import { defineConfig } from 'vitest/config';
+import { defineConfig, mergeConfig } from 'vitest/config';
 
-export default defineConfig({
-    plugins: [react()],
-    resolve: {
-        alias: [] // TODO: Handle `@/` aliases
-    },
-    test: {
-        bail: 2,
-        environment: 'jsdom',
-        maxConcurrency: 16,
-        passWithNoTests: true,
+import base from './vite.config';
 
-        typecheck: {
-            tsconfig: './tsconfig.test.json'
-        },
+const reporters = ['verbose'];
+const extraReporters = !!process.env.GITHUB_ACTIONS ? ['github-actions'] : [];
 
-        pool: 'vmThreads',
-        poolOptions: {
-            vmThreads: {
-                useAtomics: true
+export default mergeConfig(
+    base,
+    defineConfig({
+        test: {
+            bail: 2,
+            environment: 'happy-dom',
+            exclude: ['**/*.d.ts', '**/*.stories.*', '**/dist/**/*.*', '**/node_modules/**/*.*'],
+            globals: true,
+            maxConcurrency: 16,
+            passWithNoTests: true,
+            reporters: [...reporters, ...extraReporters],
+            setupFiles: ['./.vitest/setup.ts'],
+
+            browser: {
+                name: 'edge',
+                provider: 'playwright',
+                providerOptions: {
+                    enabled: true
+                }
+            },
+
+            coverage: {
+                all: true,
+                exclude: [
+                    '**/*.d.ts',
+                    '**/*.test.*',
+                    '**/*.stories.*',
+                    '**/src/app/{page,layout}.*',
+                    '**/packages/**/src/index.*',
+                    '**/*.css',
+                    '**/dist/**/*.*',
+                    'packages/core/system/src/colors.ts'
+                ],
+                include: ['**/src/**/*.{js,ts,jsx,tsx}'],
+                provider: 'v8',
+                reporter: ['text', 'json-summary', 'json'],
+                reportOnFailure: true
+            },
+
+            deps: {
+                web: {
+                    transformCss: true,
+                    transformAssets: true
+                }
+            },
+
+            typecheck: {
+                tsconfig: './tsconfig.test.json'
+            },
+
+            pool: 'vmThreads',
+            poolOptions: {
+                vmThreads: {
+                    useAtomics: true
+                }
             }
-        },
-
-        setupFiles: ['./.vitest/setup.ts'],
-        reporters: ['verbose'],
-        exclude: ['**/*.d.ts', '**/*.stories.*', '**/dist/**/*.*', '**/node_modules/**/*.*'],
-
-        globals: true,
-        deps: {
-            web: {
-                transformCss: true,
-                transformAssets: true
-            }
-        },
-
-        coverage: {
-            all: true,
-            exclude: [
-                '**/*.d.ts',
-                '**/*.test.*',
-                '**/*.stories.*',
-                '**/src/app/{page,layout}.*',
-                '**/packages/**/src/index.*',
-                '**/*.css',
-                '**/dist/**/*.*',
-                'packages/core/system/src/colors.ts'
-            ],
-            include: ['**/src/**/*.{js,ts,jsx,tsx}'],
-            provider: 'v8'
         }
-    }
-});
+    })
+);

@@ -20,7 +20,7 @@ const Header = ({ className, children, ...props }: HeaderProps) => {
         </Card>
     );
 };
-Header.displayName = 'Nordstar.Header';
+Header.displayName = 'Nordstar.Layout.Header';
 
 export type HeaderLogoProps = {} & ComponentProps<'nav'>;
 
@@ -34,7 +34,7 @@ const Logo = ({ className, ...props }: HeaderLogoProps) => {
 
     return <section {...props} draggable={false} className={classes} />;
 };
-Logo.displayName = 'Nordstar.Header.Logo';
+Logo.displayName = 'Nordstar.Layout.Header.Logo';
 
 export type HeaderMenuProps = {} & ComponentProps<'nav'>;
 
@@ -48,7 +48,7 @@ const Menu = ({ className, ...props }: HeaderMenuProps) => {
 
     return <nav {...props} draggable={false} className={classes} />;
 };
-Menu.displayName = 'Nordstar.Header.Menu';
+Menu.displayName = 'Nordstar.Layout.Header.Menu';
 
 export type HeaderMenuLinkProps = {
     as?: As;
@@ -65,6 +65,6 @@ const Link = forwardRef<'a', HeaderMenuLinkProps>(({ as, className, ...props }, 
 
     return <Tag ref={ref} draggable={false} {...props} className={classes} />;
 });
-Link.displayName = 'Nordstar.Header.Menu.Link';
+Link.displayName = 'Nordstar.Layout.Header.Menu.Link';
 
 export default Object.assign(Header, { Logo, Menu: Object.assign(Menu, { Link }) });
