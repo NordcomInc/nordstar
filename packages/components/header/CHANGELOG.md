@@ -1,5 +1,21 @@
 # @nordcom/nordstar-header
 
+## 0.0.43
+
+### Patch Changes
+
+- [`11e5754`](https://github.com/NordcomInc/nordstar/commit/11e575480178c327aa95f1a13bb832c56c634d2b) Thanks [@filiphsps](https://github.com/filiphsps)! - - Improve exports.
+
+  - Fix types.
+  - Improve build output.
+
+- [#374](https://github.com/NordcomInc/nordstar/pull/374) [`0b2ef6d`](https://github.com/NordcomInc/nordstar/commit/0b2ef6d8424b8a617ff560701d4b94499391b10a) Thanks [@filiphsps](https://github.com/filiphsps)! - - Substantially improve testing.
+
+- Updated dependencies [[`11e5754`](https://github.com/NordcomInc/nordstar/commit/11e575480178c327aa95f1a13bb832c56c634d2b), [`0b2ef6d`](https://github.com/NordcomInc/nordstar/commit/0b2ef6d8424b8a617ff560701d4b94499391b10a)]:
+  - @nordcom/nordstar-view@0.0.43
+  - @nordcom/nordstar-system@0.0.43
+  - @nordcom/nordstar-card@0.0.43
+
 ## 0.0.42
 
 ### Patch Changes

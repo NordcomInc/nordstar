@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar",
     "type": "module",
-    "version": "0.0.42",
+    "version": "0.0.43",
     "description": "An opinionated component library for building human-centric user interfaces.",
     "prettier": "@nordcom/prettier",
     "files": [
