@@ -1,7 +1,6 @@
-import { Card } from '../src';
-
+import type { CardProps } from '@nordcom/nordstar-card';
+import { Card } from '@nordcom/nordstar-card';
 import type { Meta, StoryObj } from '@storybook/react';
-import type { CardProps } from '../src';
 
 const story: Meta<typeof Card> = {
     title: 'System/Components/Card',
@@ -59,7 +58,8 @@ export const Solid: Story = {
     render: Template,
     args: {
         variant: 'solid',
-        color: 'primary'
+        color: 'primary',
+        borderless: false
     }
 };
 

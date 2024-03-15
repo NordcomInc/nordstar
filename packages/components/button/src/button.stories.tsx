@@ -1,7 +1,6 @@
+import type { ButtonProps } from '@nordcom/nordstar-button';
+import { Button } from '@nordcom/nordstar-button';
 import type { Meta, StoryObj } from '@storybook/react';
-import React from 'react';
-import type { ButtonProps } from '../src';
-import { Button } from '../src';
 
 const story: Meta<typeof Button> = {
     title: 'System/Components/Button',

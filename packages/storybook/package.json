@@ -2,53 +2,20 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-storybook",
     "type": "module",
-    "description": "",
     "engines": {
         "node": ">=18 <=21"
     },
     "main": "src/index.ts",
     "prettier": "@nordcom/prettier",
-    "sideEffects": [
-        "**/*.css*"
-    ],
+    "sideEffects": true,
     "private": true,
-    "keywords": [
-        "nordstar",
-        "nordcom",
-        "storybook"
-    ],
-    "author": {
-        "name": "Nordcom Group Inc.",
-        "email": "opensource@nordcom.io",
-        "url": "https://nordcom.io/"
-    },
-    "contributors": [
-        {
-            "name": "Filiph Siitam Sandström",
-            "email": "filiph@nordcom.io",
-            "url": "https://github.com/filiphsps/"
-        }
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/NordcomInc/nordstar.git",
-        "directory": "packages/core/nordstar"
-    },
-    "license": "MIT",
-    "bugs": {
-        "url": "https://github.com/NordcomInc/nordstar/issues"
-    },
-    "homepage": "https://nordstar.nordcom.io/",
     "files": [
         "dist"
     ],
-    "publishConfig": {
-        "access": "public"
-    },
     "scripts": {
         "build": "storybook build",
         "dev": "storybook dev -p 3001",
-        "start": ""
+        "clean": "rimraf -g dist coverage storybook-static .turbo .next .tsbuildinfo *.log"
     },
     "dependencies": {
         "@nordcom/nordstar": "workspace:*",
@@ -57,19 +24,14 @@
     },
     "devDependencies": {
         "@nordcom/prettier": "0.1.1",
-        "@storybook/addon-a11y": "7.6.17",
-        "@storybook/addon-actions": "7.6.17",
-        "@storybook/addon-docs": "7.6.17",
-        "@storybook/addon-essentials": "7.6.17",
-        "@storybook/addon-links": "7.6.17",
-        "@storybook/cli": "7.6.17",
-        "@storybook/react": "7.6.17",
-        "@storybook/react-vite": "7.6.17",
-        "@storybook/theming": "7.6.17",
-        "jsonfile": "6.1.0",
+        "@storybook/addon-essentials": "8.0.0",
+        "@storybook/cli": "8.0.0",
+        "@storybook/react-vite": "8.0.0",
+        "@vitejs/plugin-react": "4.2.1",
         "prettier": "3.2.5",
-        "remark-gfm": "4.0.0",
-        "storybook": "7.6.17",
-        "storybook-dark-mode": "4.0.0"
+        "rimraf": "5.0.5",
+        "storybook-dark-mode": "4.0.0",
+        "typescript": "5.4.2",
+        "vite": "5.1.6"
     }
 }

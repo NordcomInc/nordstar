@@ -1,13 +1,15 @@
-import type { Meta } from '@storybook/react';
-import React from 'react';
-import type { HeaderProps } from '../src';
-import { Header } from '../src';
+import type { HeaderProps } from '@nordcom/nordstar-header';
+import { Header } from '@nordcom/nordstar-header';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const story: Meta<typeof Header> = {
     title: 'System/Layout/Header',
     component: Header,
     argTypes: {}
 };
+
+export default story;
+type Story = StoryObj<typeof Header>;
 
 const Template = ({ title, ...args }: HeaderProps & { title: string }) => (
     <>
@@ -24,11 +26,9 @@ const Template = ({ title, ...args }: HeaderProps & { title: string }) => (
     </>
 );
 
-export const Default = {
-    render: Template,
+export const Standard: Story = {
+    render: Template as any,
     args: {
         title: 'Nordstar'
     }
 };
-
-export default story;

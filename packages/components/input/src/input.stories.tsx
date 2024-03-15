@@ -1,9 +1,6 @@
-import React from 'react';
-
-import { Input } from '../src';
-
+import type { InputProps } from '@nordcom/nordstar-input';
+import { Input } from '@nordcom/nordstar-input';
 import type { Meta, StoryObj } from '@storybook/react';
-import type { InputProps } from '../src';
 
 const story: Meta<typeof Input> = {
     title: 'System/Components/Input',
@@ -22,11 +19,16 @@ const story: Meta<typeof Input> = {
 
         type: {
             control: 'select',
-            options: ['text', 'textarea', 'email', 'number', 'password', 'search']
+            options: ['text', 'email', 'number', 'password', 'search']
+        },
+
+        as: {
+            control: 'select',
+            options: [null, 'textarea']
         },
 
         labelPosition: {
-            control: 'select',
+            control: 'inline-radio',
             options: ['inside', 'outside'],
             defaultValue: 'inside'
         }
@@ -47,12 +49,13 @@ const Template = (args: InputProps) => (
     </>
 );
 
-export const Default: Story = {
+export const Standard: Story = {
     render: Template,
     args: {
         variant: 'outline',
         color: 'default',
         type: 'text',
+        labelPosition: 'inside',
         value: ''
     }
 };
