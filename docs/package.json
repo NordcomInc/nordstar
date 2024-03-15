@@ -14,9 +14,9 @@
     "scripts": {
         "build": "next build",
         "dev": "next dev",
-        "clean": "rimraf -g dist coverage .turbo .next .tsbuildinfo",
+        "clean": "rimraf -g dist coverage storybook-static .turbo .next .tsbuildinfo *.log",
         "start": "next start -p $PORT",
-        "lint": "concurrently -i --raw bun:lint:*",
+        "lint": "concurrently -i bun:lint:*",
         "lint:next": "next lint",
         "lint:prettier": "prettier src/**/*.* --check"
     },

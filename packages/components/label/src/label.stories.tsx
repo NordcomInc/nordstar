@@ -1,7 +1,6 @@
-import type { Meta } from '@storybook/react';
-import React from 'react';
-import type { LabelProps } from '../src';
-import { Label } from '../src';
+import type { LabelProps } from '@nordcom/nordstar-label';
+import { Label } from '@nordcom/nordstar-label';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const story: Meta<typeof Label> = {
     title: 'System/Typography/Label',
@@ -9,11 +8,12 @@ const story: Meta<typeof Label> = {
     argTypes: {}
 };
 
+export default story;
+type Story = StoryObj<typeof Label>;
+
 const Template = (args: LabelProps) => <Label {...args}>This is a label</Label>;
 
-export const Default = {
+export const Standard: Story = {
     render: Template,
     args: {}
 };
-
-export default story;

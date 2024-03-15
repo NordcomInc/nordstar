@@ -16,10 +16,10 @@
         150ms ease-in-out border-color,
         150ms ease-in-out color;
     border-radius: var(--border-radius);
+    border-style: solid;
 
     &:is([data-variant='outline'], :not([data-variant])) {
         border-width: var(--border-width-small);
-        border-style: solid;
 
         &:not(:is([data-color='primary'], [data-color='secondary'])) {
             &[data-color='default'] {
@@ -80,6 +80,26 @@
                 color: var(--color-error);
             }
         }
+    }
+
+    &:is([data-variant='solid'], :not([data-variant])) {
+        --background: var(--color-foreground);
+        --foreground: var(--color-background);
+
+        &[data-color='primary'] {
+            --background: var(--color-accent-primary);
+            --foreground: var(--color-accent-primary-foreground);
+        }
+        &[data-color='secondary'] {
+            --background: var(--color-accent-secondary);
+            --foreground: var(--color-accent-secondary-foreground);
+        }
+
+        border-width: var(--border-width-small);
+        border-color: var(--background);
+
+        color: var(--foreground);
+        background: var(--background);
     }
 
     .label {

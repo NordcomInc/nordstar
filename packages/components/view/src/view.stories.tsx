@@ -1,7 +1,6 @@
-import type { Meta } from '@storybook/react';
-import React from 'react';
-import type { ViewProps } from '../src';
-import { View } from '../src';
+import type { ViewProps } from '@nordcom/nordstar-view';
+import { View } from '@nordcom/nordstar-view';
+import type { Meta, StoryObj } from '@storybook/react';
 
 const story: Meta<typeof View> = {
     title: 'System/Layout/View',
@@ -14,13 +13,14 @@ const story: Meta<typeof View> = {
     }
 };
 
+export default story;
+type Story = StoryObj<typeof View>;
+
 const Template = (args: ViewProps) => <View {...args}>You view&apos;s content goes here!</View>;
 
-export const Default = {
+export const Standard: Story = {
     render: Template,
     args: {
         withoutWrapper: true
     }
 };
-
-export default story;
