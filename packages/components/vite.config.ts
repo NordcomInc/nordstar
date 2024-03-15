@@ -1,25 +1,15 @@
-import react from '@vitejs/plugin-react';
-import { resolve } from 'node:path';
+import { dirname, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
 import { defineConfig, mergeConfig } from 'vite';
-import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
 import base from '../vite.config';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default mergeConfig(
     base,
     defineConfig({
-        root: resolve(__dirname),
-        build: {
-            rollupOptions: {
-                external: ['react', 'react/jsx-runtime', 'react-dom'],
-                output: {
-                    globals: {
-                        react: 'React',
-                        'react-dom': 'ReactDOM'
-                    }
-                }
-            }
-        },
-        plugins: [react(), libInjectCss()]
+        root: resolve(__dirname)
     })
 );

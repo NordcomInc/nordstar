@@ -52,17 +52,25 @@ const testAndLintAll = async (_) => {
         .join(' ');
 
     const filesToLint = await filterIgnoredFiles(allFiles);
-    return [`prettier --ignore-path --write ${allPrettierFiles}`, `eslint --max-warnings=0 --fix ${filesToLint}`];
+
+    const prettier = `prettier --write ${allPrettierFiles}`;
+    const eslint = `eslint --max-warnings=0 --fix ${filesToLint}`;
+
+    return [...(filesToLint.length > 0 ? [eslint] : []), ...(allPrettierFiles.length > 0 ? [prettier] : [])];
 };
 
 export default {
     '**/*.{js,ts,jsx,tsx}': async (files) => {
         const filesToLint = await filterIgnoredFiles(files);
-        return [`prettier --ignore-path --write ${filesToLint}`, `eslint --max-warnings=0 --fix ${filesToLint}`];
+        if (filesToLint.length === 0) return [];
+
+        return [`prettier --write ${filesToLint}`, `eslint --max-warnings=0 --fix ${filesToLint}`];
     },
     '**/*.{css,scss}': async (files) => {
         const filesToLint = await filterIgnoredFiles(files);
-        return [`prettier --ignore-path --write ${filesToLint}`];
+        if (filesToLint.length === 0) return [];
+
+        return [`prettier --write ${filesToLint}`];
     },
 
     // Lint and test all files since dependency updates could potentially break tests.

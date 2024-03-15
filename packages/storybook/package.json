@@ -8,7 +8,9 @@
     },
     "main": "src/index.ts",
     "prettier": "@nordcom/prettier",
-    "sideEffects": false,
+    "sideEffects": [
+        "**/*.css*"
+    ],
     "private": true,
     "keywords": [
         "nordstar",
@@ -64,6 +66,7 @@
         "@storybook/react": "7.6.17",
         "@storybook/react-vite": "7.6.17",
         "@storybook/theming": "7.6.17",
+        "jsonfile": "6.1.0",
         "prettier": "3.2.5",
         "remark-gfm": "4.0.0",
         "storybook": "7.6.17",

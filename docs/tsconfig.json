@@ -2,6 +2,7 @@
     "compilerOptions": {
         "allowJs": true,
         "baseUrl": ".",
+        "composite": true,
         "esModuleInterop": true,
         "incremental": true,
         "isolatedModules": true,
@@ -14,7 +15,7 @@
         "plugins": [{ "name": "next" }],
         "resolveJsonModule": true,
         "skipLibCheck": true,
-        "strict": false
+        "strict": true
     },
     "exclude": ["node_modules"],
     "include": ["next-env.d.ts", "src/**/*.ts", "src/**/*.tsx", ".next/types/**/*.ts", "next.config.mjs"],

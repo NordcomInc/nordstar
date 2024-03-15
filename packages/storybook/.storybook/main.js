@@ -3,7 +3,7 @@ import remarkGfm from 'remark-gfm';
 
 /** @type { import('@storybook/react').Preview } */
 const preview = {
-    stories: ['./readme.stories.mdx', '../../components/**/*.stories.{ts,tsx}'],
+    stories: ['../../components/**/*.stories.{ts,tsx}'],
     staticDirs: ['../public'],
     addons: [
         getAbsolutePath('storybook-dark-mode'),
