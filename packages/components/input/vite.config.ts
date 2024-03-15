@@ -14,10 +14,24 @@ export default mergeConfig(
         build: {
             rollupOptions: {
                 output: {
-                    intro: `'use client';`,
                     name: 'Nordstar.Component.Input'
                 }
             }
-        }
+        },
+        plugins: [
+            {
+                // TODO: Turn this into a proper plugin or figure out a better way to do this.
+                name: 'nordcom:use-client',
+                apply: 'build',
+                enforce: 'post',
+                renderChunk(code, chunk) {
+                    if (!chunk.viteMetadata) return { code };
+
+                    return {
+                        code: `'use client';\n\n${code}`
+                    };
+                }
+            }
+        ]
     })
 );

@@ -68,7 +68,8 @@ export default defineConfig({
         }
     },
     esbuild: {
-        jsx: 'automatic'
+        jsx: 'automatic',
+        jsxInject: "import React from 'react';"
     },
     css: {
         postcss: {
