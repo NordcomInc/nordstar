@@ -67,6 +67,6 @@
         "prettier": "3.2.5",
         "remark-gfm": "4.0.0",
         "storybook": "7.6.17",
-        "storybook-dark-mode": "3.0.3"
+        "storybook-dark-mode": "4.0.0"
     }
 }
