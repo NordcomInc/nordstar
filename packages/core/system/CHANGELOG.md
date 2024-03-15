@@ -1,5 +1,16 @@
 # @nordcom/nordstar-system
 
+## 0.0.43
+
+### Patch Changes
+
+- [`11e5754`](https://github.com/NordcomInc/nordstar/commit/11e575480178c327aa95f1a13bb832c56c634d2b) Thanks [@filiphsps](https://github.com/filiphsps)! - - Improve exports.
+
+  - Fix types.
+  - Improve build output.
+
+- [#374](https://github.com/NordcomInc/nordstar/pull/374) [`0b2ef6d`](https://github.com/NordcomInc/nordstar/commit/0b2ef6d8424b8a617ff560701d4b94499391b10a) Thanks [@filiphsps](https://github.com/filiphsps)! - - Substantially improve testing.
+
 ## 0.0.42
 
 ### Patch Changes
