@@ -1,13 +1,14 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig.json",
     "compilerOptions": {
-        "allowJs": true,
+        "allowJs": false,
         "allowSyntheticDefaultImports": true,
         "composite": true,
         "declaration": true,
         "declarationMap": true,
         "downlevelIteration": true,
         "esModuleInterop": true,
+        "experimentalDecorators": true,
         "forceConsistentCasingInFileNames": true,
         "incremental": true,
         "isolatedModules": true,
@@ -31,14 +32,8 @@
         "target": "ESNext",
         "useDefineForClassFields": true
     },
-    "include": ["./packages", "./packages/**/src/", "@types/declaration.d.ts"],
-    "exclude": [
-        "**/node_modules/",
-        "**/dist/",
-        "**/.turbo/",
-        "**/storybook-static/",
-        "**/coverage/",
-        "**/build/",
-        "**/public/"
-    ]
+    "exclude": ["**/.turbo/", "**/coverage/", "**/*.stories.ts", "**/*.test.ts", "node_modules"],
+    "include": ["./packages", "./packages/**/src/*.*", "@types/declaration.d.ts"],
+    "references": [{ "path": "./tsconfig.node.json" }],
+    "typeRoots": ["./node_modules/@types"]
 }

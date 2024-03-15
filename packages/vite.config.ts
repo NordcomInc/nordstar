@@ -1,27 +1,68 @@
-import { resolve } from 'node:path';
+import { globSync } from 'glob';
+import { dirname, extname, relative, resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+import react from '@vitejs/plugin-react-swc';
 import scss from 'postcss-scss';
-import { defineConfig } from 'vite';
+import { createLogger, defineConfig } from 'vite';
 import dts from 'vite-plugin-dts';
+import { libInjectCss } from 'vite-plugin-lib-inject-css';
 import tsConfigPaths from 'vite-tsconfig-paths';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+
+const input = Object.fromEntries(
+    globSync('./**/src/*.ts*')
+        .filter((file) => ['.test', '.stories'].every((ext) => !file.includes(ext)))
+        .map((file) => {
+            const filenameWithoutExt = file.slice(0, file.length - extname(file).length);
+
+            return [relative('src', filenameWithoutExt), `${process.cwd()}/${filenameWithoutExt}`];
+        })
+);
+
+const logger = createLogger();
+logger.info(JSON.stringify(input, null, 4));
 
 export default defineConfig({
     root: resolve(__dirname),
     build: {
         copyPublicDir: false,
-        cssCodeSplit: false,
+        cssCodeSplit: true,
         cssMinify: false,
         emptyOutDir: true,
-        lib: { entry: ['src/index.ts'], formats: ['es'] },
+        lib: {
+            entry: input,
+            formats: ['es']
+        },
         minify: false,
         outDir: 'dist',
         sourcemap: true,
         target: 'esnext',
         rollupOptions: {
-            external: [/^@nordcom\/nordstar-/],
+            external: [/^@nordcom\/nordstar-/, 'react', 'react/jsx-runtime', 'react-dom'],
+            treeshake: 'smallest',
+            input: input,
             output: {
+                assetFileNames: ({ name }) => {
+                    if (!['.css'].every((ext) => !name.includes(ext))) {
+                        return 'index.css';
+                    }
+
+                    return 'assets/[name][extname]';
+                },
+                chunkFileNames: 'chunks/[name].[hash].js',
+                dir: 'dist',
+                entryFileNames: '[name].js',
                 esModule: true,
-                freeze: true,
-                sourcemapExcludeSources: true,
+                exports: 'named',
+                freeze: false,
+                globals: { react: 'React', 'react-dom': 'ReactDOM' },
+                hoistTransitiveImports: true,
+                indent: false,
+                minifyInternalExports: true,
+                noConflict: true,
+                sourcemapExcludeSources: false,
                 strict: true
             }
         }
@@ -31,18 +72,24 @@ export default defineConfig({
     },
     css: {
         postcss: {
-            syntax: scss,
-            plugins: []
+            map: true,
+            plugins: [],
+            syntax: scss
         }
     },
     plugins: [
+        react({
+            tsDecorators: true
+        }),
+        libInjectCss(),
         tsConfigPaths(),
         dts({
-            clearPureImport: false,
+            clearPureImport: true,
             entryRoot: 'src',
             rollupTypes: false,
             insertTypesEntry: true,
-            tsconfigPath: 'tsconfig.json'
+            tsconfigPath: 'tsconfig.json',
+            include: ['**/src']
         })
     ]
 });

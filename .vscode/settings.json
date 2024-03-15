@@ -48,6 +48,8 @@
         "postpack",
         "Sandström",
         "Siitam",
+        "treeshake",
+        "tsbuildinfo",
         "typecheck",
         "vite"
     ],

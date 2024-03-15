@@ -23,6 +23,7 @@
             "./tsconfig.json",
             "./tsconfig.test.json",
             "./packages/**/tsconfig.json",
+            "./packages/**/tsconfig.node.json",
             "./packages/**/tsconfig.test.json",
             "./docs/**/tsconfig.json"
         ]

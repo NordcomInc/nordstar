@@ -12,13 +12,13 @@
     ],
     "prettier": "@nordcom/prettier",
     "scripts": {
-        "dev": "next dev",
         "build": "next build",
+        "dev": "next dev",
+        "clean": "rimraf -g dist coverage .turbo .next .tsbuildinfo",
         "start": "next start -p $PORT",
-        "lint": "concurrently npm:lint:*",
+        "lint": "concurrently -i --raw bun:lint:*",
         "lint:next": "next lint",
-        "lint:prettier": "prettier src/**/*.* --check",
-        "typecheck": "tsc --noEmit"
+        "lint:prettier": "prettier src/**/*.* --check"
     },
     "keywords": [
         "nordstar",

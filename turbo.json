@@ -1,10 +1,11 @@
 {
     "$schema": "https://turbo.build/schema.json",
-    "globalDependencies": ["tsconfig.json", "**/*.json", "**/vite.config.ts"],
+    "globalDependencies": ["tsconfig.json", "**/tsconfig.json", "**/*.json", "vite.config.ts", "**/vite.config.ts"],
     "pipeline": {
         "build": {
+            "cache": false,
             "dependsOn": ["^build"],
-            "outputs": ["**/.next/**", "!**/.next/cache/**", "**/dist/**", "**/storybook-static/**", "!**/coverage/**"]
+            "outputs": ["**/.next/**", "!**/.next/cache/**", "!**/coverage/**", "dist/**", "storybook-static/**"]
         },
         "clean": {
             "cache": false,
@@ -15,18 +16,21 @@
             "persistent": true
         },
         "lint": {
+            "cache": false,
             "dependsOn": ["build"]
         },
         "start": {
+            "cache": false,
             "dependsOn": ["build"]
         },
         "test": {
+            "cache": false,
             "dependsOn": ["build"],
             "outputs": ["coverage/**"]
         },
         "typecheck": {
             "cache": false,
-            "dependsOn": ["build", "^typecheck"]
+            "dependsOn": ["^typecheck"]
         }
     }
 }

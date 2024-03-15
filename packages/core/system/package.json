@@ -4,20 +4,41 @@
     "type": "module",
     "version": "0.0.41",
     "description": "Utilities used by all of the Nordstar Components, shouldn't be used directly outside of the Nordstar library.",
-    "main": "./src/index.ts",
     "prettier": "@nordcom/prettier",
     "files": [
         "dist"
     ],
-    "types": "./src/index.ts",
+    "main": "./src/index.ts",
     "module": "./src/index.ts",
+    "types": "./src/index.ts",
     "exports": {
         ".": {
             "import": "./src/index.ts",
+            "module": "./src/index.ts",
+            "require": null,
             "types": "./src/index.ts"
+        },
+        "./package.json": "./package.json"
+    },
+    "publishConfig": {
+        "access": "public",
+        "main": "dist/index.js",
+        "module": "dist/index.js",
+        "types": "dist/index.d.ts",
+        "exports": {
+            ".": {
+                "import": "./dist/index.js",
+                "module": "./dist/index.js",
+                "require": null,
+                "types": "./dist/index.d.ts"
+            },
+            "./dist/index.css": "./dist/index.css",
+            "./package.json": "./package.json"
         }
     },
-    "sideEffects": false,
+    "sideEffects": [
+        "**/*.css*"
+    ],
     "keywords": [
         "nordstar",
         "nordcom"
@@ -44,18 +65,11 @@
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
     "homepage": "https://nordstar.nordcom.io/",
-    "publishConfig": {
-        "access": "public"
-    },
     "scripts": {
         "build": "vite build",
         "dev": "vite build --watch",
-        "clean": "rimraf dist .turbo",
-        "typecheck": "tsc --noEmit",
-        "prepack": "clean-package",
-        "postpack": "clean-package restore",
-        "prebuild": "bun run prepack",
-        "postbuild": "bun run postpack"
+        "clean": "rimraf -g dist coverage .turbo .next .tsbuildinfo",
+        "typecheck": "tsc --noEmit"
     },
     "dependencies": {
         "the-new-css-reset": "1.11.2"
@@ -66,9 +80,7 @@
     },
     "devDependencies": {
         "@nordcom/prettier": "0.1.1",
-        "clean-package": "2.2.0",
         "prettier": "3.2.5",
         "react": "18.2.0"
-    },
-    "clean-package": "../../../clean-package.config.json"
+    }
 }
