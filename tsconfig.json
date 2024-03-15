@@ -30,6 +30,7 @@
         "strict": true,
         "strictNullChecks": true,
         "target": "ESNext",
+        "types": ["bun-types"],
         "useDefineForClassFields": true
     },
     "exclude": ["**/.turbo/", "**/coverage/", "**/*.stories.ts", "**/*.test.ts", "node_modules"],

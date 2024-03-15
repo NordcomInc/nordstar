@@ -56,12 +56,8 @@ export default defineConfig({
                 entryFileNames: '[name].js',
                 esModule: true,
                 exports: 'named',
-                freeze: false,
                 globals: { react: 'React', 'react-dom': 'ReactDOM' },
-                hoistTransitiveImports: true,
-                indent: false,
                 minifyInternalExports: true,
-                noConflict: true,
                 sourcemapExcludeSources: false,
                 strict: true
             }
@@ -84,7 +80,7 @@ export default defineConfig({
         libInjectCss(),
         tsConfigPaths(),
         dts({
-            clearPureImport: true,
+            clearPureImport: false,
             entryRoot: 'src',
             rollupTypes: false,
             insertTypesEntry: true,
