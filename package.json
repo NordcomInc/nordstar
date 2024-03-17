@@ -105,7 +105,7 @@
         "magic-string": "0.30.8",
         "plop": "4.0.1",
         "postcss-scss": "4.0.9",
-        "postcss": "8.4.35",
+        "postcss": "8.4.36",
         "prettier-eslint": "16.3.0",
         "prettier": "3.2.5",
         "react-dom": "18.2.0",
