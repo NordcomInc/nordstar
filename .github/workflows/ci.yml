@@ -1,20 +1,18 @@
 name: CI
 
-on: [push, pull_request, pull_request_target]
+on: [push, pull_request]
 
 env:
     CI: true
     TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
     TURBO_TEAM: ${{ vars.TURBO_TEAM }}
-    CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
 jobs:
     build:
         name: 🔨 Build
-        timeout-minutes: 25
-        runs-on: ubuntu-latest
-        permissions:
-            contents: write
+        needs: [lint, typecheck]
+        timeout-minutes: 15
+        runs-on: ubuntu-lates
         steps:
             - name: 🕶️ Checkout repository
               uses: actions/checkout@v4
@@ -22,27 +20,13 @@ jobs:
             - name: 📦 Install
               uses: ./.github/common/install
 
-            - name: 🔨 Build
+            - name: 🔨 Build Everything
               run: bun run build:packages
-
-    lint:
-        name: 📋 Lint
-        timeout-minutes: 10
-        runs-on: ubuntu-latest
-        steps:
-            - name: 🕶️ Checkout repository
-              uses: actions/checkout@v4
-
-            - name: 📦 Install
-              uses: ./.github/common/install
-
-            - name: 📋 Lint
-              run: bun run lint
 
     test:
         name: 🧪 Test
-        timeout-minutes: 20
-        needs: [build]
+        timeout-minutes: 15
+        needs: [lint, typecheck]
         runs-on: ubuntu-latest
         steps:
             - name: 🕶️ Checkout repository
@@ -51,23 +35,36 @@ jobs:
             - name: 📦 Install
               uses: ./.github/common/install
 
-            - name: 🔨 Build
+            - name: 🔨 Build Packages
               run: bun run build:packages
 
             - name: 🧪 Test
               run: bun run test
 
             - name: 🦺 Report Coverage to GitHub
-              # Always run, even if previous steps failed
-              if: always()
               uses: davelosert/vitest-coverage-report-action@v2.3.0
 
             - name: 🦺 Codecov Coverage Reports
               uses: codecov/codecov-action@v4
-              # Always run, even if previous steps failed
-              if: always()
               env:
                   CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+
+    lint:
+        name: 📋 Lint
+        timeout-minutes: 15
+        runs-on: ubuntu-latest
+        steps:
+            - name: 🕶️ Checkout repository
+              uses: actions/checkout@v4
+
+            - name: 📦 Install
+              uses: ./.github/common/install
+
+            - name: 🔨 Build Packages
+              run: bun run build:packages
+
+            - name: 📋 Lint
+              run: bun run lint
 
     typecheck:
         name: ✅ Typecheck
