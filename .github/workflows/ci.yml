@@ -69,7 +69,6 @@ jobs:
     typecheck:
         name: ✅ Typecheck
         timeout-minutes: 15
-        needs: [build]
         runs-on: ubuntu-latest
         steps:
             - name: 🕶️ Checkout repository
@@ -78,7 +77,7 @@ jobs:
             - name: 📦 Install
               uses: ./.github/common/install
 
-            - name: 🔨 Build
+            - name: 🔨 Build Packages
               run: bun run build:packages
 
             - name: ✅ Typecheck
