@@ -44,22 +44,8 @@ export default mergeConfig(
                 reportOnFailure: true
             },
 
-            deps: {
-                web: {
-                    transformCss: true,
-                    transformAssets: true
-                }
-            },
-
             typecheck: {
                 tsconfig: './tsconfig.test.json'
-            },
-
-            pool: 'vmThreads',
-            poolOptions: {
-                vmThreads: {
-                    useAtomics: true
-                }
             }
         }
     })
