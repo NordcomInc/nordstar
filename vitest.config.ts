@@ -40,7 +40,7 @@ export default mergeConfig(
                 ],
                 include: ['**/src/**/*.{js,ts,jsx,tsx}'],
                 provider: 'v8',
-                reporter: ['text', 'json-summary', 'json'],
+                reporter: ['text', 'json'],
                 reportOnFailure: true
             },
 
