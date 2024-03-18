@@ -7,7 +7,7 @@
     "private": true,
     "main": "index.js",
     "engines": {
-        "node": ">=18 <=21"
+        "node": "<=21"
     },
     "prettier": "@nordcom/prettier",
     "workspaces": [

@@ -3,7 +3,7 @@
     "name": "@nordcom/nordstar-storybook",
     "type": "module",
     "engines": {
-        "node": ">=18 <=21"
+        "node": "<=21"
     },
     "main": "src/index.ts",
     "prettier": "@nordcom/prettier",

@@ -12,6 +12,8 @@ runs:
 
         - name: 🏎️ Setup Bun
           uses: oven-sh/setup-bun@v1
+          with:
+              bun-version: canary
 
         - name: 📦 Install dependencies
           shell: bash
