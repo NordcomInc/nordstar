@@ -11,17 +11,16 @@ runs:
 
         - name: 📦 Install dependencies
           shell: bash
-          run: bun install --frozen-lockfile
+          run: bun install
 
         - name: 💾 Cache node modules
           uses: actions/cache@v4
           with:
               path: |
-                  ~/.npm
+                  ~/.bun/install/cache
                   ${{ github.workspace }}/.turbo
                   ${{ github.workspace }}/**/.next
-                  ${{ github.workspace }}/**/.turbo
-                  ${{ github.workspace }}/**/.vercel
+                  ${{ github.workspace }}/**/node_modules
               key: ${{ runner.os }}-node-build-${{ hashFiles('**bun.lockb') }}-${{ hashFiles('**/*.[jt]s', '**/*.[jt]sx') }}
               restore-keys: |
                   ${{ runner.os }}-node-build-${{ hashFiles('**/bun.lockb') }}-
