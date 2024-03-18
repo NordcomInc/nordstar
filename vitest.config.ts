@@ -63,7 +63,7 @@ export default defineConfig({
             ],
             include: ['**/src/**/*.{js,ts,jsx,tsx}'],
             provider: 'v8',
-            reporter: ['json-summary'],
+            reporter: ['json', 'json-summary'],
             reportOnFailure: true
         },
 
