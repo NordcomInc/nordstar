@@ -31,7 +31,7 @@
         "@vitejs/plugin-react": "4.2.1",
         "prettier": "3.2.5",
         "rimraf": "5.0.5",
-        "storybook-dark-mode": "4.0.0",
+        "storybook-dark-mode": "4.0.1",
         "typescript": "5.4.2",
         "vite": "5.1.6"
     }
