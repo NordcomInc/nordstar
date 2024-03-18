@@ -30,7 +30,7 @@ jobs:
               uses: ./.github/common/install
 
             - name: 🔨 Build
-              run: bun run build:packages --no-cache
+              run: bun run build:packages
 
             - name: 🥸 Configure Identity
               run: |
