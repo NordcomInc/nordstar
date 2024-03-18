@@ -24,7 +24,7 @@ export default defineConfig({
         sourcemap: true,
         target: 'esnext',
         rollupOptions: {
-            external: ['react', 'react/jsx-runtime', 'react-dom'],
+            external: [/^@nordcom\/nordstar-/, 'react', 'react/jsx-runtime', 'react-dom'],
             treeshake: 'recommended',
             output: {
                 assetFileNames: ({ name }) => {
