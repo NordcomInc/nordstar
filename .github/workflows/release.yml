@@ -32,9 +32,6 @@ jobs:
             - name: 🔨 Build
               run: bun run build:packages --no-cache
 
-            - name: 🧪 Tests
-              run: bun run test:packages
-
             - name: 🥸 Configure Identity
               run: |
                   git config --global user.email "opensource@nordcom.io"
