@@ -1,11 +1,14 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig.json",
+    "extends": "../../../tsconfig.json",
     "compilerOptions": {
+        "baseUrl": ".",
+        "composite": true,
         "outDir": "./dist",
         "rootDir": "./src",
-        "typeRoots": ["./dist/index.d.ts"]
+        "typeRoots": ["./node_modules/@types", "./src/@types", "./dist/index.d.ts"]
     },
-    "exclude": ["node_modules", "dist", "**/*.test.*", "**/*.stories.*"],
-    "include": ["../../../@types/declaration.d.ts"],
+    "exclude": ["node_modules", "coverage", "dist", "**/*.test.*", "**/*.stories.*"],
+    "include": ["./src/@types"],
     "references": [{ "path": "../../../tsconfig.json" }]
 }

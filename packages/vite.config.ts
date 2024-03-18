@@ -3,7 +3,6 @@ import { dirname, extname, relative, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { createLogger, defineConfig, mergeConfig } from 'vite';
-import dts from 'vite-plugin-dts';
 import tsConfigPaths from 'vite-tsconfig-paths';
 
 import base from '../vite.config';
@@ -21,7 +20,7 @@ const input = Object.fromEntries(
 );
 
 const logger = createLogger();
-logger.info(JSON.stringify(input, null, 4));
+logger.info(JSON.stringify({ __dirname, ...input }, null, 4));
 
 export default mergeConfig(
     base,
@@ -33,20 +32,13 @@ export default mergeConfig(
                 formats: ['es']
             },
             rollupOptions: {
-                input: input
+                external: ['react', 'react/jsx-runtime', 'react-dom'],
+                input: input,
+                output: {
+                    globals: { react: 'React', 'react-dom': 'ReactDOM' }
+                }
             }
         },
-        plugins: [
-            tsConfigPaths(),
-            dts({
-                clearPureImport: false,
-                copyDtsFiles: true,
-                entryRoot: 'src',
-                insertTypesEntry: true,
-                rollupTypes: false,
-                tsconfigPath: './tsconfig.json',
-                include: ['**/src']
-            })
-        ]
+        plugins: [tsConfigPaths()]
     })
 );

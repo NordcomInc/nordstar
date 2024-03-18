@@ -13,7 +13,7 @@
         "build": {
             "cache": true,
             "dependsOn": ["^build"],
-            "outputs": ["**/.next/**", "!**/.next/cache/**", "!**/coverage/**", "dist/**", "storybook-static/**"]
+            "outputs": ["**/.next/**", "!**/.next/cache/**", "**/dist/**"]
         },
         "clean": {
             "cache": false
