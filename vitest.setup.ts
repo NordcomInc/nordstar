@@ -11,4 +11,5 @@ expect.extend(matchers);
 
 afterEach(() => {
     cleanup();
+    document.body.innerHTML = '';
 });

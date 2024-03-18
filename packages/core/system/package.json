@@ -27,6 +27,21 @@
                 "./dist/index.d.ts"
             ]
         },
+        "./*": {
+            "import": [
+                "./src/*.ts",
+                "./dist/*.js"
+            ],
+            "module": [
+                "./src/*.ts",
+                "./dist/*.js"
+            ],
+            "require": null,
+            "types": [
+                "./src/*.ts",
+                "./dist/*.d.ts"
+            ]
+        },
         "./package.json": "./package.json"
     },
     "publishConfig": {
@@ -64,7 +79,7 @@
     "scripts": {
         "build": "vite build",
         "dev": "vite build --watch",
-        "clean": "rimraf -g dist coverage storybook-static .turbo .next .tsbuildinfo *.log",
+        "clean": "rimraf -g dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
         "typecheck": "tsc --noEmit"
     },
     "dependencies": {

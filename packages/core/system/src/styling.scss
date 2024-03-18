@@ -27,6 +27,7 @@ body {
     -webkit-font-smoothing: subpixel-antialiased;
     font-smooth: always;
     font-family: var(--font-body, var(--fallback-font));
+    font-size: 14px;
 
     color: var(--color-foreground);
     background-color: var(--color-background);

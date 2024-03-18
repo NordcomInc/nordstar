@@ -30,11 +30,13 @@
         "sourceType": "module",
         "project": [
             "./tsconfig.json",
+            "./tsconfig.node.json",
             "./tsconfig.test.json",
             "./packages/**/tsconfig.json",
             "./packages/**/tsconfig.node.json",
             "./packages/**/tsconfig.test.json",
-            "./docs/**/tsconfig.json"
+            "./docs/**/tsconfig.json",
+            "./docs/**/tsconfig.node.json"
         ]
     },
     "settings": {

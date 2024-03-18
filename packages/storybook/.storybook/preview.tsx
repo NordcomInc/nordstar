@@ -4,6 +4,8 @@ import { NordstarProvider, View } from '@nordcom/nordstar';
 
 import type { Preview } from '@storybook/react';
 
+import './style.css';
+
 const decorators: Preview['decorators'] = [
     (Story) => {
         return (
@@ -30,10 +32,38 @@ const decorators: Preview['decorators'] = [
 ];
 
 const brand = {
-    brandTitle: "Nordcom Group Inc.'s Nordstar",
-    brandUrl: 'https://nordstar.nordcom.io/',
+    brandImage: 'https://nordcom.io/logo-light.svg',
     brandTarget: '_self',
-    appBorderRadius: 0
+    brandTitle: "Nordcom Group Inc.'s Nordstar",
+    brandUrl: 'https://nordstar.nordcom.io/'
+};
+
+const theme: any = {
+    ...brand,
+    appBg: '#262626',
+    appBorderColor: '#262626',
+    appBorderRadius: 0,
+    appContentBg: '#000000',
+    appPreviewBg: '#000000',
+    barBg: '#262626',
+    barHoverColor: '',
+    barSelectedColor: '#ed1e79',
+    barTextColor: '#fefefe',
+    booleanBg: '#ed1e79',
+    booleanSelectedBg: '#000000',
+    buttonBg: '#ed1e79',
+    buttonBorder: '#ed1e79',
+    colorPrimary: '#ed1e79',
+    colorSecondary: '#ed1e79',
+    fontBase: `Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif`,
+    gridCellSize: 5,
+    inputBg: '#000000',
+    inputBorder: '#fefefe',
+    inputBorderRadius: 0,
+    inputTextColor: '#fefefe',
+    textColor: '#fefefe',
+    textInverseColor: '#000000',
+    textMutedColor: '#262626'
 };
 
 const parameters: Preview['parameters'] = {
@@ -62,17 +92,13 @@ const parameters: Preview['parameters'] = {
         darkClass: 'dark',
         lightClass: 'light',
         classTarget: 'html',
-        dark: {
-            ...brand,
-            appBg: '#262626',
-            appContentBg: '#262626',
-            background: '#262626',
-            barBg: '#262626',
-            barSelectedColor: '#ed1e79',
-            colorPrimary: '#ed1e79',
-            inputBorderRadius: 0,
-            textColor: '#fefefe',
-            brandImage: 'https://nordcom.io/logo-light.svg'
+        dark: theme
+    },
+    docs: {
+        theme,
+        toc: true,
+        story: {
+            inline: false
         }
     }
 };

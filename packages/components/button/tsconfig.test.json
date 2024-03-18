@@ -2,12 +2,10 @@
     "$schema": "https://json.schemastore.org/tsconfig",
     "extends": "./tsconfig.json",
     "compilerOptions": {
-        "jsx": "react-jsx",
-        "jsxImportSource": "react",
-        "types": ["vitest/globals", "@testing-library/react", "happy-dom"],
-        "noEmit": true
+        "types": ["vitest/globals"]
     },
-    "include": ["packages/**/*.test.*", "packages/**/*.stories.*", "vitest.config.ts", "vitest.workspace.ts"],
+
+    "include": ["src/**/*.test.*"],
     "exclude": [
         "**/node_modules",
         "**/dist",

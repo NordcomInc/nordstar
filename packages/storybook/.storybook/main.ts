@@ -1,15 +1,23 @@
 import { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
-    stories: ['../../components/**/*.stories.{ts,tsx}'],
+    stories: ['../../**/src/**/*.stories.@(ts|tsx)'],
     staticDirs: ['../public'],
     addons: ['@storybook/addon-essentials', 'storybook-dark-mode'],
-    framework: {
-        name: '@storybook/react-vite',
-        options: {}
-    },
+    framework: '@storybook/react-vite',
     typescript: {
-        reactDocgen: 'react-docgen-typescript'
+        reactDocgen: 'react-docgen-typescript',
+        reactDocgenTypescriptOptions: {
+            tsconfigPath: '../../core/nordstar/tsconfig.json'
+        }
+    },
+    docs: {
+        autodocs: true,
+        defaultName: 'Overview'
+    },
+    core: {
+        disableTelemetry: true,
+        disableWhatsNewNotifications: true
     }
 };
 

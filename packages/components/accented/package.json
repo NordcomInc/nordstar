@@ -45,7 +45,7 @@
     "scripts": {
         "build": "tsc && vite build",
         "dev": "vite build --watch",
-        "clean": "rimraf -g dist coverage storybook-static .turbo .next .tsbuildinfo *.log",
+        "clean": "rimraf -g dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
         "typecheck": "tsc --noEmit"
     },
     "keywords": [

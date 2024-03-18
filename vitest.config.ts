@@ -3,22 +3,27 @@ import { fileURLToPath } from 'node:url';
 
 import { defineConfig } from 'vitest/config';
 
-import base from './vite.config';
-
 const reporters = ['verbose'];
 const extraReporters = !!process.env.GITHUB_ACTIONS ? ['github-actions'] : [];
 const exclude = [
     '**/.next/**/*.*',
     '**/.turbo/**/*.*',
-    '**/*.d.ts',
-    '**/*.json',
     '**/*.*css',
-    '**/*.stories.',
+    '**/*.d.ts',
+    '**/*.js*',
+    '**/*.mjs*',
+    '**/*.stories.*',
     '**/coverage/**/*.*',
     '**/dist/**/*.*',
+    '**/docs/**/*.*',
     '**/node_modules/**/*.*',
+    '**/plop/**/*.*',
+    '**/src/index.ts',
+    '**/storybook/**/*.*',
     '**/vite.*.ts',
     '**/vitest.*.ts',
+    'vite.config.ts',
+    'vitest.config.ts',
     'vitest.workspace.ts'
 ];
 
@@ -42,30 +47,17 @@ export default defineConfig({
         maxConcurrency: 16,
         passWithNoTests: true,
         silent: false,
-        reporters: [...reporters, ...extraReporters],
+        reporters: [...reporters, ...extraReporters, 'github-actions'],
 
-        pool: 'vmThreads',
-        poolOptions: {
-            vmThreads: {
-                useAtomics: true
-            }
-        },
+        pool: 'threads',
 
-        setupFiles: ['./.vitest/setup.ts'],
-
-        browser: {
-            name: 'edge',
-            provider: 'playwright',
-            providerOptions: {
-                enabled: true
-            }
-        },
+        setupFiles: [`${__dirname}/vitest.setup.ts`],
 
         coverage: {
             all: true,
             exclude,
             provider: 'v8',
-            reporter: ['json', 'json-summary'],
+            reporter: ['json', 'json-summary', 'text'],
             reportOnFailure: true
         },
 
