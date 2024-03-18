@@ -22,7 +22,7 @@ export default mergeConfig(
                 name: 'edge',
                 provider: 'playwright',
                 providerOptions: {
-                    enabled: true
+                    enabled: false
                 }
             },
 
