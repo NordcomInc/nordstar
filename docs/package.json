@@ -1,9 +1,7 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-docs",
-    "sideEffects": [
-        "**/*.css*"
-    ],
+    "sideEffects": false,
     "private": true,
     "type": "module",
     "version": "0.0.41",
@@ -17,7 +15,7 @@
     "scripts": {
         "build": "next build",
         "dev": "next dev",
-        "clean": "rimraf -g dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
+        "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
         "start": "next start -p $PORT",
         "lint": "concurrently -i bun:lint:*",
         "lint:next": "next lint",

@@ -1,15 +1,21 @@
-import { dirname, resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
-
-import react from '@vitejs/plugin-react';
 import { defineConfig } from 'vite';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
+import react from '@vitejs/plugin-react';
+import tsConfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig({
-    root: resolve(__dirname),
+    root: process.cwd(),
     build: {
-        chunkSizeWarningLimit: 9999999 // We don't really care about this in storybook.
+        lib: {
+            entry: [],
+            formats: ['es']
+        },
+        rollupOptions: {
+            external: ['react', 'react/jsx-runtime', 'react-dom'],
+            output: {
+                globals: { react: 'React', 'react-dom': 'ReactDOM' }
+            }
+        }
     },
-    plugins: [react()]
+    plugins: [tsConfigPaths(), react()]
 });

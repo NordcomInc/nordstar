@@ -47,13 +47,11 @@
     "publishConfig": {
         "access": "public"
     },
-    "sideEffects": [
-        "**/*.css*"
-    ],
+    "sideEffects": false,
     "scripts": {
         "build": "tsc && vite build",
         "dev": "vite build --watch",
-        "clean": "rimraf -g dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
+        "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
         "typecheck": "tsc --noEmit"
     },
     "keywords": [
@@ -95,7 +93,13 @@
     },
     "devDependencies": {
         "@nordcom/prettier": "0.1.1",
+        "@types/node": "20.11.27",
+        "@types/react-dom": "18.2.22",
+        "@types/react": "18.2.67",
         "prettier": "3.2.5",
-        "react": "18.2.0"
+        "react-dom": "18.2.0",
+        "react": "18.2.0",
+        "typescript": "5.4.2",
+        "vite": "5.1.6"
     }
 }

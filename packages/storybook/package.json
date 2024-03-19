@@ -12,26 +12,26 @@
         "dist"
     ],
     "scripts": {
-        "build": "storybook build",
-        "dev": "storybook dev -p 3001",
-        "clean": "rimraf -g dist coverage storybook-static .turbo .next *.tsbuildinfo *.log"
+        "build": "storybook build --disable-telemetry",
+        "dev": "storybook dev -p 3001 --disable-telemetry",
+        "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log"
     },
     "dependencies": {
         "@nordcom/nordstar": "workspace:*",
-        "react": "18.2.0",
         "react-dom": "18.2.0",
+        "react": "18.2.0",
         "storybook": "8.0.0"
     },
     "devDependencies": {
         "@nordcom/prettier": "0.1.1",
         "@storybook/addon-essentials": "8.0.0",
+        "@storybook/cli": "8.0.0",
         "@storybook/react-vite": "8.0.0",
         "@types/node": "20.11.27",
         "@types/react-dom": "18.2.22",
         "@types/react": "18.2.67",
         "@vitejs/plugin-react": "4.2.1",
         "prettier": "3.2.5",
-        "rimraf": "5.0.5",
         "storybook-dark-mode": "4.0.1",
         "typescript": "5.4.2",
         "vite": "5.1.6"

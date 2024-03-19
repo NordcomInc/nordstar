@@ -1,4 +1,4 @@
 #!/usr/bin/env sh
 . "$(dirname "$0")/_/husky.sh"
 
-bunx lint-staged --allow-empty
+bunx --bun lint-staged --allow-empty

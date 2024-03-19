@@ -9,8 +9,6 @@ concurrency:
     group: ${{ github.workflow }}-${{ github.ref }}
 
 env:
-    TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
-    TURBO_TEAM: ${{ vars.TURBO_TEAM }}
     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
     GITHUB_TOKEN: ${{ secrets.MACHINE_USER }}
@@ -30,12 +28,7 @@ jobs:
               uses: ./.github/common/install
 
             - name: 🔨 Build
-              run: bun run build:packages
-
-            - name: 🥸 Configure Identity
-              run: |
-                  git config --global user.email "opensource@nordcom.io"
-                  git config --global user.name "nordcombot"
+              run: bun run --bun build:packages
 
             - name: 🤝 Create Release Pull Request or Publish to NPM
               id: changesets

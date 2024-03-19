@@ -1,19 +1,10 @@
 {
     "$schema": "https://turbo.build/schema.json",
-    "globalDependencies": [
-        "bun.lockb",
-        "tsconfig.json",
-        "**/tsconfig.json",
-        "vite.config.ts",
-        "**/vite.config.ts",
-        "package.json",
-        "**/package.json"
-    ],
+    "globalDependencies": ["tsconfig.json", "package.json"],
     "pipeline": {
         "build": {
-            "cache": true,
             "dependsOn": ["^build"],
-            "outputs": ["**/.next/**", "!**/.next/cache/**", "**/dist/**"]
+            "outputs": [".next/**", "!.next/cache/**", "dist/**", "lib/**", "storybook-static/**"]
         },
         "clean": {
             "cache": false
@@ -24,15 +15,15 @@
         },
         "lint": {
             "cache": false,
-            "dependsOn": ["build"]
-        },
-        "start": {
-            "cache": false,
-            "dependsOn": ["build"]
+            "outputs": [""]
         },
         "typecheck": {
             "cache": false,
             "dependsOn": ["^typecheck"]
+        },
+        "start": {
+            "dependsOn": ["^build"],
+            "outputs": []
         }
     }
 }

@@ -5,13 +5,15 @@ import process from 'node:process';
 
 const ignoredFiles = [
     '**/node_modules/**',
-    '**/dist/**',
     '**/.next/**',
-    '**/storybook-static/**',
     '**/.vitest/**',
     '**/*.d.ts',
-    'vitest.config.ts',
-    '**/vite.config.ts'
+    '**/dist/**',
+    '**/storybook-static/**',
+    '**/vite.config.ts',
+    '**/vitest.config.ts',
+    '**/vitest.setup.ts',
+    '**/vitest.workspace.ts'
 ];
 
 const filterIgnoredFiles = async (requestedFiles) => {

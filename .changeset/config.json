@@ -2,7 +2,7 @@
     "$schema": "https://unpkg.com/@changesets/config@latest/schema.json",
     "changelog": ["@changesets/changelog-github", { "repo": "NordcomInc/nordstar" }],
     "commit": false,
-    "fixed": [["{,@nordcom/}nordstar{,-!(storybook|docs)*}"]],
+    "fixed": [["{,@nordcom/}nordstar{,-*}"]],
     "linked": [],
     "access": "public",
     "baseBranch": "master",
