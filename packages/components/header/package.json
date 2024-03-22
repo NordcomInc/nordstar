@@ -84,9 +84,9 @@
     },
     "homepage": "https://nordstar.nordcom.io/docs/components/header/",
     "dependencies": {
-        "@nordcom/nordstar-card": "*",
-        "@nordcom/nordstar-system": "*",
-        "@nordcom/nordstar-view": "*"
+        "@nordcom/nordstar-card": "workspace:*",
+        "@nordcom/nordstar-system": "workspace:*",
+        "@nordcom/nordstar-view": "workspace:*"
     },
     "peerDependencies": {
         "react": ">=18",

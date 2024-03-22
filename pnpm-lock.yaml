@@ -169,7 +169,7 @@ importers:
   packages/components/accented:
     dependencies:
       '@nordcom/nordstar-system':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../core/system
     devDependencies:
       '@nordcom/prettier':
@@ -203,7 +203,7 @@ importers:
   packages/components/button:
     dependencies:
       '@nordcom/nordstar-system':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../core/system
     devDependencies:
       '@nordcom/prettier':
@@ -237,7 +237,7 @@ importers:
   packages/components/card:
     dependencies:
       '@nordcom/nordstar-system':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../core/system
     devDependencies:
       '@nordcom/prettier':
@@ -271,13 +271,13 @@ importers:
   packages/components/header:
     dependencies:
       '@nordcom/nordstar-card':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../card
       '@nordcom/nordstar-system':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../core/system
       '@nordcom/nordstar-view':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../view
     devDependencies:
       '@nordcom/prettier':
@@ -311,7 +311,7 @@ importers:
   packages/components/heading:
     dependencies:
       '@nordcom/nordstar-system':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../core/system
     devDependencies:
       '@nordcom/prettier':
@@ -345,7 +345,7 @@ importers:
   packages/components/input:
     dependencies:
       '@nordcom/nordstar-system':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../core/system
     devDependencies:
       '@nordcom/prettier':
@@ -379,7 +379,7 @@ importers:
   packages/components/label:
     dependencies:
       '@nordcom/nordstar-system':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../core/system
     devDependencies:
       '@nordcom/prettier':
@@ -413,7 +413,7 @@ importers:
   packages/components/view:
     dependencies:
       '@nordcom/nordstar-system':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../core/system
     devDependencies:
       '@nordcom/prettier':
@@ -447,31 +447,31 @@ importers:
   packages/core/nordstar:
     dependencies:
       '@nordcom/nordstar-accented':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../components/accented
       '@nordcom/nordstar-button':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../components/button
       '@nordcom/nordstar-card':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../components/card
       '@nordcom/nordstar-header':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../components/header
       '@nordcom/nordstar-heading':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../components/heading
       '@nordcom/nordstar-input':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../components/input
       '@nordcom/nordstar-label':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../components/label
       '@nordcom/nordstar-system':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../system
       '@nordcom/nordstar-view':
-        specifier: '*'
+        specifier: workspace:*
         version: link:../../components/view
     devDependencies:
       '@nordcom/prettier':

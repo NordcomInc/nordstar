@@ -84,7 +84,7 @@
     },
     "homepage": "https://nordstar.nordcom.io/docs/components/input/",
     "dependencies": {
-        "@nordcom/nordstar-system": "*"
+        "@nordcom/nordstar-system": "workspace:*"
     },
     "peerDependencies": {
         "react": ">=18",
