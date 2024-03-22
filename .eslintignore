@@ -12,3 +12,6 @@ public/
 *.lock
 *.env
 *.log
+
+vite.config.ts
+vitest.config.ts
