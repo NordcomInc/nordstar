@@ -34,7 +34,7 @@ jobs:
               run: bun run --bun build:packages
 
             - name: 🧪 Test
-              run: bun run --bun test
+              run: bun run test
 
             - name: 🦺 Report Coverage to GitHub
               uses: davelosert/vitest-coverage-report-action@v2.3.0
