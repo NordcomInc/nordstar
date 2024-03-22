@@ -1,5 +1,16 @@
 # @nordcom/nordstar-view
 
+## 0.0.45
+
+### Patch Changes
+
+- [#404](https://github.com/NordcomInc/nordstar/pull/404) [`e4f7d7f`](https://github.com/NordcomInc/nordstar/commit/e4f7d7fefd2158ddfe7b053e602106e19696b1c3) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.2.3.
+
+- [#401](https://github.com/NordcomInc/nordstar/pull/401) [`156a41b`](https://github.com/NordcomInc/nordstar/commit/156a41b49d49cbb9989f8066c0500cd51f4bb608) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix export.
+
+- Updated dependencies [[`e4f7d7f`](https://github.com/NordcomInc/nordstar/commit/e4f7d7fefd2158ddfe7b053e602106e19696b1c3), [`156a41b`](https://github.com/NordcomInc/nordstar/commit/156a41b49d49cbb9989f8066c0500cd51f4bb608)]:
+  - @nordcom/nordstar-system@0.0.45
+
 ## 0.0.44
 
 ### Patch Changes
