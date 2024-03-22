@@ -1,5 +1,18 @@
 # @nordcom/nordstar-accented
 
+## 0.0.44
+
+### Patch Changes
+
+- [#395](https://github.com/NordcomInc/nordstar/pull/395) [`017d737`](https://github.com/NordcomInc/nordstar/commit/017d7374d54c383a360c6abcaf06685e463035db) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.2.2.
+
+- [#397](https://github.com/NordcomInc/nordstar/pull/397) [`1993898`](https://github.com/NordcomInc/nordstar/commit/19938982af7abd2c4538001223c9e413b4c63961) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.4.3.
+
+- [#388](https://github.com/NordcomInc/nordstar/pull/388) [`34dc5fb`](https://github.com/NordcomInc/nordstar/commit/34dc5fb8ae5080a72743f88f4c25c431aca3e5f8) Thanks [@filiphsps](https://github.com/filiphsps)! - - Improve testing setup to be more reliable and consistent.
+  - Substantially improve both the output from the transpiler/compiler and the built type definitions.
+- Updated dependencies [[`017d737`](https://github.com/NordcomInc/nordstar/commit/017d7374d54c383a360c6abcaf06685e463035db), [`1993898`](https://github.com/NordcomInc/nordstar/commit/19938982af7abd2c4538001223c9e413b4c63961), [`34dc5fb`](https://github.com/NordcomInc/nordstar/commit/34dc5fb8ae5080a72743f88f4c25c431aca3e5f8)]:
+  - @nordcom/nordstar-system@0.0.44
+
 ## 0.0.43
 
 ### Patch Changes
