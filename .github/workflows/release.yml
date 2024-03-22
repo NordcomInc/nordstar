@@ -27,12 +27,11 @@ jobs:
             - name: 📦 Install
               uses: ./.github/common/install
 
-            - name: set node-version
+            - name: 🏎️ Setup Node
               uses: actions/setup-node@v4
               with:
                 registry-url: 'https://registry.npmjs.org/'
-                node-version-file: '.nvmrc'
-                cache: 'npm'
+                node-version: '21.x'
 
             - name: 🔨 Build
               run: bun run --bun build:packages
