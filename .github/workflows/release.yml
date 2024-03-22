@@ -27,22 +27,16 @@ jobs:
             - name: 📦 Install
               uses: ./.github/common/install
 
-            - name: 🏎️ Setup Node
-              uses: actions/setup-node@v4
-              with:
-                registry-url: 'https://registry.npmjs.org/'
-                node-version: '21.x'
-
             - name: 🔨 Build
-              run: bun run --bun build:packages
+              run: pnpm run build:packages
 
             - name: 🤝 Create Release Pull Request or Publish to NPM
               id: changesets
               uses: changesets/action@v1
               with:
                   createGithubReleases: true
-                  version: bun run version
-                  publish: bun run release
+                  version: pnpm run version
+                  publish: pnpm run release
                   setupGitUser: false
                   commit: |
                       Changeset: Increment package & dependecy versions.
@@ -55,5 +49,5 @@ jobs:
               if: steps.changesets.outputs.published != 'true'
               run: |
                   git checkout master
-                  bun run version:unstable
-                  bun run release:unstable
+                  pnpm run version:unstable
+                  pnpm run release:unstable

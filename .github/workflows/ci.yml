@@ -16,7 +16,7 @@ jobs:
               uses: ./.github/common/install
 
             - name: 🔨 Build Everything
-              run: bun run --bun build:packages
+              run: pnpm run build:packages
 
     test:
         name: 🧪 Test
@@ -31,10 +31,10 @@ jobs:
               uses: ./.github/common/install
 
             - name: 🔨 Build Packages
-              run: bun run --bun build:packages
+              run: pnpm run build:packages
 
             - name: 🧪 Test
-              run: bun run test
+              run: pnpm run test
 
             - name: 🦺 Report Coverage to GitHub
               uses: davelosert/vitest-coverage-report-action@v2.3.0
@@ -56,10 +56,10 @@ jobs:
               uses: ./.github/common/install
 
             - name: 🔨 Build Packages
-              run: bun run --bun build:packages
+              run: pnpm run build:packages
 
             - name: 📋 Lint
-              run: bun run --bun lint
+              run: pnpm run lint
 
     typecheck:
         name: ✅ Typecheck
@@ -73,7 +73,7 @@ jobs:
               uses: ./.github/common/install
 
             - name: 🔨 Build Packages
-              run: bun run --bun build:packages
+              run: pnpm run build:packages
 
             - name: ✅ Typecheck
-              run: bun run --bun typecheck
+              run: pnpm run typecheck

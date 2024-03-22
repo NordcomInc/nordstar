@@ -7,19 +7,43 @@
     "engines": {
         "node": "<=21"
     },
+    "files": [
+        "dist"
+    ],
     "prettier": "@nordcom/prettier",
     "main": "./dist/index.js",
     "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
-    "files": [
-        "dist"
-    ],
     "exports": {
         ".": {
-            "import": "./dist/index.js",
-            "module": "./dist/index.js",
+            "import": [
+                "./src/index.ts",
+                "./dist/index.js"
+            ],
+            "module": [
+                "./src/index.ts",
+                "./dist/index.js"
+            ],
             "require": null,
-            "types": "./dist/index.d.ts"
+            "types": [
+                "./src/index.ts",
+                "./dist/index.d.ts"
+            ]
+        },
+        "./*": {
+            "import": [
+                "./src/*.ts",
+                "./dist/*.js"
+            ],
+            "module": [
+                "./src/*.ts",
+                "./dist/*.js"
+            ],
+            "require": null,
+            "types": [
+                "./src/*.ts",
+                "./dist/*.d.ts"
+            ]
         },
         "./package.json": "./package.json"
     },
