@@ -27,6 +27,13 @@ jobs:
             - name: 📦 Install
               uses: ./.github/common/install
 
+            - name: set node-version
+              uses: actions/setup-node@v4
+              with:
+                registry-url: 'https://registry.npmjs.org/'
+                node-version-file: '.nvmrc'
+                cache: 'npm'
+
             - name: 🔨 Build
               run: bun run --bun build:packages
 
