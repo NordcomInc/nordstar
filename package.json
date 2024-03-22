@@ -80,8 +80,8 @@
         "@types/node": "20.11.27",
         "@types/react-dom": "18.2.22",
         "@types/react": "18.2.67",
-        "@typescript-eslint/eslint-plugin": "7.3.0",
-        "@typescript-eslint/parser": "7.3.0",
+        "@typescript-eslint/eslint-plugin": "7.3.1",
+        "@typescript-eslint/parser": "7.3.1",
         "@vitejs/plugin-react": "4.2.1",
         "@vitest/coverage-v8": "1.4.0",
         "bun-types": "1.0.31",
@@ -116,7 +116,7 @@
         "vitest": "1.4.0"
     },
     "overrides": {
-        "@typescript-eslint/typescript-estree": "7.3.0",
+        "@typescript-eslint/typescript-estree": "7.3.1",
         "esbuild": "0.20.2",
         "psl": "npm:@filiphsandstrom/psl@2.0.0"
     },
