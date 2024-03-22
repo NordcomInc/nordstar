@@ -9,7 +9,6 @@
 "@nordcom/nordstar-view": patch
 "@nordcom/nordstar": patch
 "@nordcom/nordstar-system": patch
-"@nordcom/nordstar-storybook": patch
 ---
 
 Deps: Update dependency vite to v5.2.2.
