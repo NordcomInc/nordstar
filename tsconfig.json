@@ -33,7 +33,7 @@
         "strictNullChecks": true,
         "strictPropertyInitialization": true,
         "target": "ESNext",
-        "types": ["bun-types"],
+        "types": [],
         "useDefineForClassFields": true,
         "paths": {
             "@nordcom/nordstar": ["./packages/core/nordstar"],

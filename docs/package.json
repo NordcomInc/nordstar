@@ -17,7 +17,7 @@
         "dev": "next dev",
         "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
         "start": "next start -p $PORT",
-        "lint": "concurrently -i bun:lint:*",
+        "lint": "concurrently -i pnpm:lint:*",
         "lint:next": "next lint",
         "lint:prettier": "prettier src/**/*.* --check"
     },

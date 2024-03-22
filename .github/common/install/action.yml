@@ -10,26 +10,14 @@ runs:
               git config --global user.email "opensource@nordcom.io"
               git config --global user.name "nordcombot"
 
-        - name: 💾 Cache
-          uses: actions/cache@v4
+        - name: 🏎️ Setup Node
+          uses: actions/setup-node@v4
           with:
-              path: |
-                  ~/.bun/install/cache
-                  ${{ github.workspace }}/**/.next
-                  ${{ github.workspace }}/**/dist
-                  ${{ github.workspace }}/**/node_modules
-              key: ${{ runner.os }}-bun-build-${{ hashFiles('**/bun.lockb') }}-
-              restore-keys: |
-                  ${{ runner.os }}-bun-build-${{ hashFiles('**/bun.lockb') }}-
-                  ${{ runner.os }}-bun-build-
-                  ${{ runner.os }}-
+              registry-url: 'https://registry.npmjs.org/'
+              node-version-file: '.nvmrc'
 
-        - name: 🏎️ Setup Bun
-          uses: oven-sh/setup-bun@v1
+        - name: 🏎️ Setup pnpm
+          uses: pnpm/action-setup@v3
           with:
-              bun-version: canary
-              no-cache: true
-
-        - name: 📦 Install dependencies
-          shell: bash
-          run: bun install
+              version: 8
+              run_install: true

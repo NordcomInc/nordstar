@@ -31,6 +31,6 @@ jobs:
               with:
                   token: ${{ secrets.MACHINE_USER }}
                   use-conventional-commits: false
-                  commit-message: 'Deps: Update lockfile and add changeset.'
+                  commit-message: 'Deps: Add changeset.'
                   author-name: nordcombot
                   author-email: opensource@nordcom.io

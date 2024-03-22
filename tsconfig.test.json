@@ -11,7 +11,8 @@
     "include": [
         "packages/**/*.test.*",
         "packages/**/*.stories.*",
-        "packages/vitest.config.ts",
+        "packages/**/vitest.config.ts",
+        "packages/vite.config.ts",
         "vitest.config.ts",
         "vitest.setup.ts",
         "vitest.workspace.ts"
@@ -24,6 +25,6 @@
         "**/dist",
         "**/node_modules",
         "**/public",
-        "**/storybook-static",
+        "**/storybook-static"
     ]
 }
