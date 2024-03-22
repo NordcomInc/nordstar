@@ -14,7 +14,7 @@
         "markdown": "true"
     },
     "editor.formatOnSave": true,
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
     "editor.codeActionsOnSave": {
         "source.fixAll": "explicit",
         "source.organizeImports": "explicit",
@@ -71,5 +71,8 @@
     "github.copilot-labs.advanced": {
         "length": 1500,
         "temperature": "0.75"
+    },
+    "[json]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
     }
 }

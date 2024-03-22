@@ -5,12 +5,12 @@
         "bierner.markdown-preview-github-styles",
         "davidanson.vscode-markdownlint",
         "dbaeumer.vscode-eslint",
-        "esbenp.prettier-vscode",
         "formulahendry.auto-close-tag",
         "formulahendry.auto-rename-tag",
         "jgclark.vscode-todo-highlight",
         "medo64.render-crlf",
         "mikestead.dotenv",
-        "oven.bun-vscode"
+        "oven.bun-vscode",
+        "rvest.vs-code-prettier-eslint",
     ]
 }

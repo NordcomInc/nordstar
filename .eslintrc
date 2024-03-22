@@ -28,6 +28,7 @@
             "jsx": true
         },
         "sourceType": "module",
+        "ecmaVersion": "latest",
         "project": [
             "./tsconfig.json",
             "./tsconfig.node.json",
@@ -45,6 +46,21 @@
         }
     },
     "rules": {
+        "@typescript-eslint/consistent-type-exports": [
+            "error",
+            {
+                "fixMixedExportsWithInlineTypeSpecifier": false
+            }
+        ],
+        "@typescript-eslint/consistent-type-imports": [
+            "error",
+            {
+                "fixStyle": "separate-type-imports",
+                "prefer": "type-imports"
+            }
+        ],
+        "@typescript-eslint/no-require-imports": "error",
+        "@typescript-eslint/no-unnecessary-condition": "warn",
         "brace-style": [
             "error",
             "1tbs",

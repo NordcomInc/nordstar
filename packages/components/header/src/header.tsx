@@ -1,8 +1,10 @@
 import { Card } from '@nordcom/nordstar-card';
-import { As, CSSCustomProperties, NordstarColor, forwardRef } from '@nordcom/nordstar-system';
+import { forwardRef } from '@nordcom/nordstar-system';
 import { View } from '@nordcom/nordstar-view';
-import { ComponentProps } from 'react';
+import type { ComponentProps } from 'react';
 import styles from './header.module.scss';
+
+import type { As, CSSCustomProperties, NordstarColor } from '@nordcom/nordstar-system';
 
 export type HeaderProps = {
     color?: NordstarColor;

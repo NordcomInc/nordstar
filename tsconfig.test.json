@@ -4,23 +4,26 @@
     "compilerOptions": {
         "jsx": "react-jsx",
         "jsxImportSource": "react",
-        "types": ["vitest/globals", "@testing-library/react", "happy-dom"],
-        "noEmit": true
+        "noEmit": true,
+        "strictNullChecks": true,
+        "types": ["vitest/globals", "@testing-library/react", "happy-dom"]
     },
     "include": [
         "packages/**/*.test.*",
         "packages/**/*.stories.*",
+        "packages/vitest.config.ts",
         "vitest.config.ts",
         "vitest.setup.ts",
         "vitest.workspace.ts"
     ],
     "exclude": [
-        "**/node_modules",
-        "**/dist",
+        "**/.next",
         "**/.turbo",
-        "**/storybook-static",
-        "**/coverage",
         "**/build",
-        "**/public"
+        "**/coverage",
+        "**/dist",
+        "**/node_modules",
+        "**/public",
+        "**/storybook-static",
     ]
 }
