@@ -16,10 +16,13 @@ const story: Meta<typeof Card> = {
             options: ['default', 'primary', 'secondary'],
             defaultValue: 'default'
         },
-
         borderless: {
             control: 'boolean',
             defaultValue: false
+        },
+        padding: {
+            control: 'boolean',
+            defaultValue: true
         }
     }
 };
@@ -69,5 +72,12 @@ export const Borderless: Story = {
         variant: 'solid',
         color: 'default',
         borderless: true
+    }
+};
+
+export const NoPadding: Story = {
+    render: Template,
+    args: {
+        padding: false
     }
 };
