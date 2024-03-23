@@ -47,7 +47,7 @@
         border-color: var(--button-accent);
         color: var(--button-foreground);
 
-        &:is(:hover, :active) {
+        &:is(:hover, :active):not(:disabled, [aria-disabled='true']) {
             filter: brightness(50%);
         }
     }
@@ -57,7 +57,7 @@
         border-color: var(--button-accent);
         color: var(--button-accent);
 
-        &:is(:hover, :active) {
+        &:is(:hover, :active):not(:disabled, [aria-disabled='true']) {
             background-color: var(--button-accent);
             color: var(--button-foreground);
         }
