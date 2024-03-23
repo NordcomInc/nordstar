@@ -12,19 +12,10 @@
     "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "import": [
-                "./src/index.ts",
-                "./dist/index.js"
-            ],
-            "module": [
-                "./src/index.ts",
-                "./dist/index.js"
-            ],
+            "import": "./dist/index.js",
+            "module": "./dist/index.js",
             "require": null,
-            "types": [
-                "./src/index.ts",
-                "./dist/index.d.ts"
-            ]
+            "types": "./dist/index.d.ts"
         },
         "./*": {
             "import": [
