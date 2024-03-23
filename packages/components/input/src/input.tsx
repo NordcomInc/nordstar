@@ -1,5 +1,3 @@
-'use client';
-
 import type { NordstarColor } from '@nordcom/nordstar-system';
 import { forwardRef, type As } from '@nordcom/nordstar-system';
 import type { HTMLInputTypeAttribute } from 'react';

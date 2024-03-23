@@ -30,7 +30,7 @@ export default mergeConfig(
                 renderChunk(code, chunk) {
                     const ms = new MagicString(code);
 
-                    if (chunk.viteMetadata) ms.prepend(`'use client';\n\n`);
+                    if (chunk.viteMetadata) ms.prepend(`'use client';`);
 
                     return {
                         code: ms.toString(),
