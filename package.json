@@ -110,7 +110,7 @@
         "turbo": "1.13.0",
         "typescript": "5.4.3",
         "vite-plugin-dts": "3.7.3",
-        "vite-plugin-lib-inject-css": "2.0.0",
+        "vite-plugin-lib-inject-css": "2.0.1",
         "vite-tsconfig-paths": "4.3.2",
         "vite": "5.2.3",
         "vitest": "1.4.0"
