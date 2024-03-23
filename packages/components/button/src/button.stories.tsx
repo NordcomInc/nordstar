@@ -15,6 +15,10 @@ const story: Meta<typeof Button> = {
             control: 'inline-radio',
             options: ['default', 'primary', 'secondary'],
             defaultValue: 'default'
+        },
+        disabled: {
+            control: 'boolean',
+            defaultValue: false
         }
     }
 };
@@ -53,5 +57,12 @@ export const Outline: Story = {
     render: Template,
     args: {
         variant: 'outline'
+    }
+};
+
+export const Disabled: Story = {
+    render: Template,
+    args: {
+        disabled: true
     }
 };
