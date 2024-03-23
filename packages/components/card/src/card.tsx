@@ -9,6 +9,7 @@ export type CardProps = {
     variant?: 'outline' | 'solid';
     color?: NordstarColor;
     borderless?: boolean;
+    padding?: boolean;
     style?: CSSCustomProperties;
 };
 
@@ -20,11 +21,13 @@ export type CardProps = {
  * @param {'outline' | 'solid'} [props.variant='outline'] - The variant.
  * @param {NordstarColor} [props.color='default'] - The color scheme.
  * @param {CSSCustomProperties} [props.style] - Custom CSS properties.
+ * @param {boolean} [props.borderless=false] - Whether the card should be borderless.
+ * @param {boolean} [props.padding=true] - If the card should have an inner padding.
  * @param {React.ReactNode} [props.children] - The children of the component.
  * @returns {React.ReactNode} The `<Card/>` component.
  */
 const Card = forwardRef<'section', CardProps>(
-    ({ as, className, variant = 'outline', color = 'default', borderless = false, ...props }, ref) => {
+    ({ as, className, variant = 'outline', color = 'default', borderless = false, padding = true, ...props }, ref) => {
         const Tag = as || 'section';
         const classes = `${styles.container}${className ? ` ${className}` : ''}`;
 
@@ -36,6 +39,7 @@ const Card = forwardRef<'section', CardProps>(
                 data-variant={variant}
                 data-color={color}
                 data-borderless={borderless}
+                data-padding={padding}
                 className={classes}
             />
         );
