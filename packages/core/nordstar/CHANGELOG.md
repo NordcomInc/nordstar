@@ -1,5 +1,26 @@
 # @nordcom/nordstar
 
+## 0.0.46
+
+### Patch Changes
+
+- [#405](https://github.com/NordcomInc/nordstar/pull/405) [`be3c203`](https://github.com/NordcomInc/nordstar/commit/be3c20366d661a44f2fab64261754fdbb81e415b) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.2.68.
+
+- [#406](https://github.com/NordcomInc/nordstar/pull/406) [`302520a`](https://github.com/NordcomInc/nordstar/commit/302520a45424197841da397ae621e44e00e46268) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.2.69.
+
+- [#407](https://github.com/NordcomInc/nordstar/pull/407) [`d98ab55`](https://github.com/NordcomInc/nordstar/commit/d98ab55b5c4b38623aa5e87dbcc18e65ee8cfd76) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.2.4.
+
+- Updated dependencies [[`be3c203`](https://github.com/NordcomInc/nordstar/commit/be3c20366d661a44f2fab64261754fdbb81e415b), [`302520a`](https://github.com/NordcomInc/nordstar/commit/302520a45424197841da397ae621e44e00e46268), [`d98ab55`](https://github.com/NordcomInc/nordstar/commit/d98ab55b5c4b38623aa5e87dbcc18e65ee8cfd76), [`4fac8d3`](https://github.com/NordcomInc/nordstar/commit/4fac8d37e4fa0aa1820de9f85c43d52e47a47bc9), [`61c20e6`](https://github.com/NordcomInc/nordstar/commit/61c20e66c503477a317c40e22368e5d8ca20e3bb), [`078a652`](https://github.com/NordcomInc/nordstar/commit/078a652956bc5ee1a9025127977902ae2d482eb8)]:
+  - @nordcom/nordstar-accented@0.0.46
+  - @nordcom/nordstar-button@0.0.46
+  - @nordcom/nordstar-card@0.0.46
+  - @nordcom/nordstar-header@0.0.46
+  - @nordcom/nordstar-heading@0.0.46
+  - @nordcom/nordstar-input@0.0.46
+  - @nordcom/nordstar-label@0.0.46
+  - @nordcom/nordstar-view@0.0.46
+  - @nordcom/nordstar-system@0.0.46
+
 ## 0.0.45
 
 ### Patch Changes
