@@ -13,6 +13,5 @@
     },
     "snapshot": {
         "useCalculatedVersion": true
-    },
-    "ignore": ["@nordcom/nordstar-docs", "@nordcom/nordstar-storybook"]
+    }
 }
