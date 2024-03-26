@@ -90,8 +90,8 @@ importers:
         specifier: 10.3.10
         version: 10.3.10
       happy-dom:
-        specifier: 14.3.7
-        version: 14.3.7
+        specifier: 14.3.8
+        version: 14.3.8
       husky:
         specifier: 9.0.11
         version: 9.0.11
@@ -145,7 +145,7 @@ importers:
         version: 4.3.2(typescript@5.4.3)(vite@5.2.6)
       vitest:
         specifier: 1.4.0
-        version: 1.4.0(@types/node@20.11.30)(happy-dom@14.3.7)(sass@1.72.0)
+        version: 1.4.0(@types/node@20.11.30)(happy-dom@14.3.8)(sass@1.72.0)
 
   docs:
     dependencies:
@@ -2266,7 +2266,7 @@ packages:
     resolution: {integrity: sha512-Ono7x1F0nHllXl58VpO/vUgBnNXm+uJx3xI/oTy2s1y6Znk7xJt73eLTE6JR3qRTyLDcalzEeWqjnJqFsaXTCQ==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      happy-dom: 14.3.7
+      happy-dom: 14.3.8
     dev: true
 
   /@humanwhocodes/config-array@0.11.14:
@@ -3450,7 +3450,7 @@ packages:
       dom-accessibility-api: 0.6.3
       lodash: 4.17.21
       redent: 3.0.0
-      vitest: 1.4.0(@types/node@20.11.30)(happy-dom@14.3.7)(sass@1.72.0)
+      vitest: 1.4.0(@types/node@20.11.30)(happy-dom@14.3.8)(sass@1.72.0)
     dev: true
 
   /@testing-library/react@14.2.2(react-dom@18.2.0)(react@18.2.0):
@@ -3963,7 +3963,7 @@ packages:
       strip-literal: 2.0.0
       test-exclude: 6.0.0
       v8-to-istanbul: 9.2.0
-      vitest: 1.4.0(@types/node@20.11.30)(happy-dom@14.3.7)(sass@1.72.0)
+      vitest: 1.4.0(@types/node@20.11.30)(happy-dom@14.3.8)(sass@1.72.0)
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -6522,8 +6522,8 @@ packages:
     optionalDependencies:
       uglify-js: 3.17.4
 
-  /happy-dom@14.3.7:
-    resolution: {integrity: sha512-lUfDRGzjrVJF2pnvh13OL+qEJ9eDpcedVLm77a3aMg8gPGKXfG+xFMNk3cOWetjucU8FveJ4qcSC/EX55nJ4fQ==}
+  /happy-dom@14.3.8:
+    resolution: {integrity: sha512-jP7p/VQJ08lbIoCsw1Adna3RA86eE+2CNkqvJRWIhrKP7XKZ0e0s2TJSt5lwGS4b7x0z0Ztw0A9P4uQGMHPiiA==}
     engines: {node: '>=16.0.0'}
     dependencies:
       entities: 4.5.0
@@ -10298,7 +10298,7 @@ packages:
       fsevents: 2.3.3
     dev: true
 
-  /vitest@1.4.0(@types/node@20.11.30)(happy-dom@14.3.7)(sass@1.72.0):
+  /vitest@1.4.0(@types/node@20.11.30)(happy-dom@14.3.8)(sass@1.72.0):
     resolution: {integrity: sha512-gujzn0g7fmwf83/WzrDTnncZt2UiXP41mHuFYFrdwaLRVQ6JYQEiME2IfEjU3vcFL3VKa75XhI3lFgn+hfVsQw==}
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
@@ -10333,7 +10333,7 @@ packages:
       chai: 4.4.1
       debug: 4.3.4
       execa: 8.0.1
-      happy-dom: 14.3.7
+      happy-dom: 14.3.8
       local-pkg: 0.5.0
       magic-string: 0.30.8
       pathe: 1.1.2
