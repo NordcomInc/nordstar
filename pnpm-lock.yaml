@@ -21,8 +21,8 @@ importers:
         specifier: 0.0.1-beta.5
         version: 0.0.1-beta.5(vite@5.2.6)
       '@happy-dom/global-registrator':
-        specifier: 14.3.7
-        version: 14.3.7
+        specifier: 14.3.8
+        version: 14.3.8
       '@nordcom/prettier':
         specifier: 0.1.1
         version: 0.1.1
@@ -2262,8 +2262,8 @@ packages:
   /@fal-works/esbuild-plugin-global-externals@2.1.2:
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
 
-  /@happy-dom/global-registrator@14.3.7:
-    resolution: {integrity: sha512-Ono7x1F0nHllXl58VpO/vUgBnNXm+uJx3xI/oTy2s1y6Znk7xJt73eLTE6JR3qRTyLDcalzEeWqjnJqFsaXTCQ==}
+  /@happy-dom/global-registrator@14.3.8:
+    resolution: {integrity: sha512-FudY7iZsAYFeeHyvysxg1UB87Kbox6SGfWOuUXBbkf57dH4kLuRoALkgw1HHhA/s/eCwrqOlqzneizboefS8LA==}
     engines: {node: '>=16.0.0'}
     dependencies:
       happy-dom: 14.3.8
