@@ -96,7 +96,7 @@
         "@nordcom/prettier": "0.1.1",
         "@types/node": "20.11.30",
         "@types/react-dom": "18.2.22",
-        "@types/react": "18.2.72",
+        "@types/react": "18.2.73",
         "prettier": "3.2.5",
         "react-dom": "18.2.0",
         "react": "18.2.0",
