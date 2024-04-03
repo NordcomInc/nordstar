@@ -1,5 +1,18 @@
 # @nordcom/nordstar-button
 
+## 0.0.48
+
+### Patch Changes
+
+- [`0d69dc7`](https://github.com/NordcomInc/nordstar/commit/0d69dc7082c6d62e837bd77b5a76f6bba211306a) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix [#446](https://github.com/NordcomInc/nordstar/issues/446): ``Button should have `user-select: none;`.``
+
+- [#449](https://github.com/NordcomInc/nordstar/pull/449) [`55ea17a`](https://github.com/NordcomInc/nordstar/commit/55ea17ad4e5347902cb1302571adc8b0844812d7) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.2.74.
+
+- [#452](https://github.com/NordcomInc/nordstar/pull/452) [`42fada7`](https://github.com/NordcomInc/nordstar/commit/42fada7d7d272921f0c21ab66bc6530b9c245b45) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.12.3.
+
+- Updated dependencies [[`55ea17a`](https://github.com/NordcomInc/nordstar/commit/55ea17ad4e5347902cb1302571adc8b0844812d7), [`42fada7`](https://github.com/NordcomInc/nordstar/commit/42fada7d7d272921f0c21ab66bc6530b9c245b45)]:
+  - @nordcom/nordstar-system@0.0.48
+
 ## 0.0.47
 
 ### Patch Changes
