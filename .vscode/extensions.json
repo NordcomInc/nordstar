@@ -10,7 +10,6 @@
         "jgclark.vscode-todo-highlight",
         "medo64.render-crlf",
         "mikestead.dotenv",
-        "oven.bun-vscode",
-        "rvest.vs-code-prettier-eslint",
+        "rvest.vs-code-prettier-eslint"
     ]
 }
