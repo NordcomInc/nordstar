@@ -102,8 +102,8 @@ importers:
         specifier: 15.2.2
         version: 15.2.2
       magic-string:
-        specifier: 0.30.8
-        version: 0.30.8
+        specifier: 0.30.9
+        version: 0.30.9
       plop:
         specifier: 4.0.1
         version: 4.0.1
@@ -2971,7 +2971,7 @@ packages:
       express: 4.19.1
       find-cache-dir: 3.3.2
       fs-extra: 11.2.0
-      magic-string: 0.30.8
+      magic-string: 0.30.9
       ts-dedent: 2.2.0
       typescript: 5.4.3
       vite: 5.2.8(@types/node@20.12.4)(sass@1.74.1)
@@ -4067,7 +4067,7 @@ packages:
       istanbul-lib-report: 3.0.1
       istanbul-lib-source-maps: 5.0.4
       istanbul-reports: 3.1.7
-      magic-string: 0.30.8
+      magic-string: 0.30.9
       magicast: 0.3.3
       picocolors: 1.0.0
       std-env: 3.7.0
@@ -4098,7 +4098,7 @@ packages:
   /@vitest/snapshot@1.4.0:
     resolution: {integrity: sha512-saAFnt5pPIA5qDGxOHxJ/XxhMFKkUSBJmVt5VgDsAqPTX6JP326r5C/c9UuCMPoXNzuudTPsYDZCoJ5ilpqG2A==}
     dependencies:
-      magic-string: 0.30.8
+      magic-string: 0.30.9
       pathe: 1.1.2
       pretty-format: 29.7.0
     dev: true
@@ -7695,6 +7695,13 @@ packages:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
 
+  /magic-string@0.30.9:
+    resolution: {integrity: sha512-S1+hd+dIrC8EZqKyT9DstTH/0Z+f76kmmvZnkfQVmOpDEF9iVgdYif3Q/pIWHmCoo59bQVGW0kVL3e2nl+9+Sw==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.4.15
+    dev: true
+
   /magicast@0.3.3:
     resolution: {integrity: sha512-ZbrP1Qxnpoes8sz47AM0z08U+jW6TyRgZzcWy3Ma3vDhJttwMwAFDMMQFobwdBxByBD46JYmxRzeF7w2+wJEuw==}
     dependencies:
@@ -9093,7 +9100,7 @@ packages:
     peerDependencies:
       rollup: ^2.0.0 || ^3.0.0 || ^4.0.0
     dependencies:
-      magic-string: 0.30.8
+      magic-string: 0.30.9
       rollup: 4.13.0
     dev: true
 
@@ -10337,7 +10344,7 @@ packages:
       '@vue/language-core': 1.8.27(typescript@5.4.3)
       debug: 4.3.4
       kolorist: 1.8.0
-      magic-string: 0.30.8
+      magic-string: 0.30.9
       typescript: 5.4.3
       vite: 5.2.8(@types/node@20.12.4)(sass@1.74.1)
       vue-tsc: 1.8.27(typescript@5.4.3)
@@ -10352,7 +10359,7 @@ packages:
     peerDependencies:
       vite: '*'
     dependencies:
-      magic-string: 0.30.8
+      magic-string: 0.30.9
       picocolors: 1.0.0
       vite: 5.2.8(@types/node@20.12.4)(sass@1.74.1)
     dev: true
@@ -10448,7 +10455,7 @@ packages:
       execa: 8.0.1
       happy-dom: 14.4.0
       local-pkg: 0.5.0
-      magic-string: 0.30.8
+      magic-string: 0.30.9
       pathe: 1.1.2
       picocolors: 1.0.0
       std-env: 3.7.0
