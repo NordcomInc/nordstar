@@ -1,5 +1,12 @@
 # @nordcom/nordstar-docs
 
+## 0.0.51
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @nordcom/nordstar@0.0.51
+
 ## 0.0.50
 
 ### Patch Changes

@@ -1,5 +1,14 @@
 # @nordcom/nordstar-heading
 
+## 0.0.51
+
+### Patch Changes
+
+- [`1c77c7f`](https://github.com/NordcomInc/nordstar/commit/1c77c7f3d8c514794ea9563c0b452b5f325e48ba) Thanks [@filiphsps](https://github.com/filiphsps)! - Improve `line-height`.
+
+- Updated dependencies []:
+  - @nordcom/nordstar-system@0.0.51
+
 ## 0.0.50
 
 ### Patch Changes
