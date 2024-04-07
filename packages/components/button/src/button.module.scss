@@ -30,6 +30,11 @@
         cursor: pointer;
     }
 
+    &:is(:disabled, [aria-disabled='true']) {
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
+
     &:is([data-color='default'], [data-color='foreground']) {
         --button-accent: var(--color-foreground);
         --button-foreground: var(--color-background);
