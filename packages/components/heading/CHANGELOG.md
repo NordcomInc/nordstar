@@ -1,5 +1,12 @@
 # @nordcom/nordstar-heading
 
+## 0.0.50
+
+### Patch Changes
+
+- Updated dependencies [[`80fd06e`](https://github.com/NordcomInc/nordstar/commit/80fd06ecfa4687c79e46bab809d6f44a71cb2f70)]:
+  - @nordcom/nordstar-system@0.0.50
+
 ## 0.0.49
 
 ### Patch Changes
