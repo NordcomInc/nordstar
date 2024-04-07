@@ -80,7 +80,7 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
             --color-accent-secondary-foreground: #fefefe;
 
             --color-background: ${colors?.background ?? '#000000'};
-            --color-background-highlight: ${colors?.background ?? '#262626'};
+            --color-background-highlight: ${colors?.highlight ?? '#262626'};
             --color-foreground: ${colors?.foreground ?? '#fefefe'};
             --color-foreground-secondary: ${colors?.foregroundSecondary ?? '#828282'};
 
