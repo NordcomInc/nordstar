@@ -1,5 +1,12 @@
 # @nordcom/nordstar-storybook
 
+## 0.0.52
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @nordcom/nordstar@0.0.52
+
 ## 0.0.51
 
 ### Patch Changes

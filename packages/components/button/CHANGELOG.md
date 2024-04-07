@@ -1,5 +1,14 @@
 # @nordcom/nordstar-button
 
+## 0.0.52
+
+### Patch Changes
+
+- [`7abbc2b`](https://github.com/NordcomInc/nordstar/commit/7abbc2bbb1cbb3720d5b6a496b9c6151cdfbf846) Thanks [@filiphsps](https://github.com/filiphsps)! - Add disabled state.
+
+- Updated dependencies []:
+  - @nordcom/nordstar-system@0.0.52
+
 ## 0.0.51
 
 ### Patch Changes
