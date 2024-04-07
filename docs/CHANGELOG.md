@@ -1,5 +1,14 @@
 # @nordcom/nordstar-docs
 
+## 0.0.49
+
+### Patch Changes
+
+- [#463](https://github.com/NordcomInc/nordstar/pull/463) [`ea19e3c`](https://github.com/NordcomInc/nordstar/commit/ea19e3cc54fe70666021acf16f9d5ea32ee89cea) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.4.4.
+
+- Updated dependencies [[`3d3a435`](https://github.com/NordcomInc/nordstar/commit/3d3a435cf64cc4483ba761e6aeafd1600246f989), [`eb4de52`](https://github.com/NordcomInc/nordstar/commit/eb4de52b2558d997622de65e8517ae71af7e5d2d), [`0631bef`](https://github.com/NordcomInc/nordstar/commit/0631bef7c86a6fb5947c8f0d8e442ff9c7408b61), [`ea19e3c`](https://github.com/NordcomInc/nordstar/commit/ea19e3cc54fe70666021acf16f9d5ea32ee89cea), [`7abb469`](https://github.com/NordcomInc/nordstar/commit/7abb469813c7f4a11e1b7038d608fc009f45d3fa)]:
+  - @nordcom/nordstar@0.0.49
+
 ## 0.0.48
 
 ### Patch Changes

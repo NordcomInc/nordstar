@@ -1,5 +1,24 @@
 # @nordcom/nordstar-storybook
 
+## 0.0.49
+
+### Patch Changes
+
+- [#453](https://github.com/NordcomInc/nordstar/pull/453) [`3d3a435`](https://github.com/NordcomInc/nordstar/commit/3d3a435cf64cc4483ba761e6aeafd1600246f989) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.2.8.
+
+- [#455](https://github.com/NordcomInc/nordstar/pull/455) [`eb4de52`](https://github.com/NordcomInc/nordstar/commit/eb4de52b2558d997622de65e8517ae71af7e5d2d) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react-dom to v18.2.24.
+
+- [#458](https://github.com/NordcomInc/nordstar/pull/458) [`0631bef`](https://github.com/NordcomInc/nordstar/commit/0631bef7c86a6fb5947c8f0d8e442ff9c7408b61) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.12.4.
+
+- [#463](https://github.com/NordcomInc/nordstar/pull/463) [`ea19e3c`](https://github.com/NordcomInc/nordstar/commit/ea19e3cc54fe70666021acf16f9d5ea32ee89cea) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.4.4.
+
+- [#467](https://github.com/NordcomInc/nordstar/pull/467) [`d73816a`](https://github.com/NordcomInc/nordstar/commit/d73816a34e08fcce3f6755e8169fc2853d519984) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update storybook monorepo to v8.0.6.
+
+- [#469](https://github.com/NordcomInc/nordstar/pull/469) [`7abb469`](https://github.com/NordcomInc/nordstar/commit/7abb469813c7f4a11e1b7038d608fc009f45d3fa) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.12.5.
+
+- Updated dependencies [[`3d3a435`](https://github.com/NordcomInc/nordstar/commit/3d3a435cf64cc4483ba761e6aeafd1600246f989), [`eb4de52`](https://github.com/NordcomInc/nordstar/commit/eb4de52b2558d997622de65e8517ae71af7e5d2d), [`0631bef`](https://github.com/NordcomInc/nordstar/commit/0631bef7c86a6fb5947c8f0d8e442ff9c7408b61), [`ea19e3c`](https://github.com/NordcomInc/nordstar/commit/ea19e3cc54fe70666021acf16f9d5ea32ee89cea), [`7abb469`](https://github.com/NordcomInc/nordstar/commit/7abb469813c7f4a11e1b7038d608fc009f45d3fa)]:
+  - @nordcom/nordstar@0.0.49
+
 ## 0.0.48
 
 ### Patch Changes
