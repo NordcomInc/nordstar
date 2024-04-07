@@ -4,7 +4,7 @@
     "sideEffects": false,
     "private": true,
     "type": "module",
-    "version": "0.0.51",
+    "version": "0.0.52",
     "engines": {
         "node": "<=21"
     },

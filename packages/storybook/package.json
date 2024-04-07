@@ -1,7 +1,7 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-storybook",
-    "version": "0.0.51",
+    "version": "0.0.52",
     "engines": {
         "node": "<=21"
     },
