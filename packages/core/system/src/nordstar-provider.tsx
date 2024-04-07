@@ -8,6 +8,13 @@ export type NordstarTheme = {
         primary: string;
         secondary: string;
     };
+    colors?: {
+        background?: string;
+        foreground?: string;
+        foregroundSecondary?: string;
+        highlight?: string;
+        error?: string;
+    };
     fonts?: {
         heading?: string;
         body?: string;
@@ -35,6 +42,9 @@ export type NordstarTheme = {
             padding?: string;
         };
     };
+    duration?: {
+        short?: string;
+    };
 };
 
 export type NordstarProviderProps = {
@@ -52,7 +62,7 @@ export type NordstarProviderProps = {
  * @returns {ReactNode} The `<NordstarProvider/>` component.
  */
 export const NordstarProvider = ({ children, theme, ...props }: NordstarProviderProps) => {
-    const { accents, fonts, sizes, layout } = theme || {};
+    const { accents, colors, fonts, sizes, layout } = theme || {};
 
     const headingFont =
         fonts?.heading || fonts?.body ? `--font-heading: ${(fonts.heading || fonts.body)!.replaceAll("'", '')};` : '';
@@ -69,35 +79,35 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
             --color-accent-secondary: ${accents?.secondary};
             --color-accent-secondary-foreground: #fefefe;
 
-            --color-background: #000000;
-            --color-background-highlight: #262626;
-            --color-foreground: #fefefe;
-            --color-foreground-secondary: #828282;
+            --color-background: ${colors?.background ?? '#000000'};
+            --color-background-highlight: ${colors?.background ?? '#262626'};
+            --color-foreground: ${colors?.foreground ?? '#fefefe'};
+            --color-foreground-secondary: ${colors?.foregroundSecondary ?? '#828282'};
 
-            --color-error: #ba3e3e;
+            --color-error: ${colors?.error ?? '#ba3e3e'};
 
             ${headingFont}
             ${bodyFont}
 
-            --size-text-body: ${sizes?.text?.body || '14px'};
+            --size-text-body: ${sizes?.text?.body ?? '14px'};
 
             --border-width: ${borderWidth}rem;
             --border-width-small: ${borderWidth / 1.45}rem;
-            --border-radius: ${theme?.border?.radius || '0.45rem'};
+            --border-radius: ${theme?.border?.radius ?? '0.45rem'};
             --border-radius-half: calc(var(--border-radius) / 2);
 
-            --layout-page-width: ${layout?.page?.width || '1200px'};
-            --layout-page-spacing: ${layout?.page?.spacing || '1rem'};
+            --layout-page-width: ${layout?.page?.width ?? '1200px'};
+            --layout-page-spacing: ${layout?.page?.spacing ?? '1rem'};
             --layout-page-spacing-half: calc(var(--layout-page-spacing) / 2);
 
-            --layout-section-spacing: ${layout?.section?.spacing || '1rem'};
-            --layout-section-padding: ${layout?.section?.padding || '1.75rem'};
+            --layout-section-spacing: ${layout?.section?.spacing ?? '1rem'};
+            --layout-section-padding: ${layout?.section?.padding ?? '1.75rem'};
 
-            --layout-block-padding: ${layout?.block?.padding || '1rem'};
+            --layout-block-padding: ${layout?.block?.padding ?? '1rem'};
             --layout-block-padding-double: calc(var(--layout-block-padding) * 2);
             --layout-block-padding-half: calc(var(--layout-block-padding) / 2);
 
-            --duration-short: 150ms;
+            --duration-short: ${theme?.duration?.short ?? '0.25s'};
         }
     `;
 
