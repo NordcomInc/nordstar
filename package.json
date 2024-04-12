@@ -107,7 +107,7 @@
         "react-dom": "18.2.0",
         "react": "18.2.0",
         "rollup-preserve-directives": "1.1.1",
-        "sass": "1.74.1",
+        "sass": "1.75.0",
         "turbo": "1.13.2",
         "typescript": "5.4.5",
         "vite-plugin-dts": "3.8.1",
