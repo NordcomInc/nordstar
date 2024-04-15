@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-card",
     "type": "module",
-    "version": "0.0.52",
+    "version": "0.0.53",
     "description": "Card is a consistent card-like container for blocks of content.",
     "files": [
         "dist"
