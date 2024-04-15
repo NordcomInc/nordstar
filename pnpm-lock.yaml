@@ -317,8 +317,8 @@ importers:
         specifier: 18.2.0
         version: 18.2.0(react@18.2.0)
       typescript:
-        specifier: 5.4.2
-        version: 5.4.2
+        specifier: 5.4.5
+        version: 5.4.5
       vite:
         specifier: 5.1.7
         version: 5.1.7(@types/node@20.11.27)(sass@1.75.0)
