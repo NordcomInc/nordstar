@@ -1,10 +1,9 @@
 {
     "$schema": "https://json.schemastore.org/package.json",
-    "name": "@nordcom/nordstar",
+    "name": "@nordcom/nordstar-details",
     "type": "module",
-    "version": "0.0.52",
-    "description": "An opinionated component library for building human-centric user interfaces.",
-    "prettier": "@nordcom/prettier",
+    "version": "0.0.0",
+    "description": "Hide/Show content using a styled &lt;details&gt; element.",
     "files": [
         "dist"
     ],
@@ -48,9 +47,19 @@
         "access": "public"
     },
     "sideEffects": false,
+    "scripts": {
+        "build": "tsc && vite build",
+        "dev": "vite build --watch",
+        "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
+        "typecheck": "tsc --noEmit"
+    },
     "keywords": [
         "nordstar",
-        "nordcom"
+        "nordcom",
+        "component",
+        "react",
+        "details",
+        "nordstar-details"
     ],
     "author": {
         "name": "Nordcom Group Inc.",
@@ -67,30 +76,17 @@
     "repository": {
         "type": "git",
         "url": "git+https://github.com/NordcomInc/nordstar.git",
-        "directory": "packages/core/nordstar"
+        "directory": "packages/components/details"
     },
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
-    "homepage": "https://nordstar.nordcom.io/",
-    "scripts": {
-        "build": "tsc && vite build",
-        "dev": "vite build --watch",
-        "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
-        "typecheck": "tsc --noEmit"
-    },
+    "homepage": "https://nordstar.nordcom.io/docs/components/details/",
     "dependencies": {
-        "@nordcom/nordstar-accented": "workspace:*",
-        "@nordcom/nordstar-button": "workspace:*",
         "@nordcom/nordstar-card": "workspace:*",
-        "@nordcom/nordstar-details": "workspace:*",
-        "@nordcom/nordstar-header": "workspace:*",
-        "@nordcom/nordstar-heading": "workspace:*",
-        "@nordcom/nordstar-input": "workspace:*",
         "@nordcom/nordstar-label": "workspace:*",
-        "@nordcom/nordstar-system": "workspace:*",
-        "@nordcom/nordstar-view": "workspace:*"
+        "@nordcom/nordstar-system": "workspace:*"
     },
     "peerDependencies": {
         "react": ">=18",
@@ -98,13 +94,13 @@
     },
     "devDependencies": {
         "@nordcom/prettier": "0.1.1",
-        "@types/node": "20.12.7",
-        "@types/react-dom": "18.2.25",
-        "@types/react": "18.2.78",
+        "@types/node": "20.11.27",
+        "@types/react-dom": "18.2.22",
+        "@types/react": "18.2.67",
         "prettier": "3.2.5",
         "react-dom": "18.2.0",
         "react": "18.2.0",
-        "typescript": "5.4.5",
-        "vite": "5.2.8"
+        "typescript": "5.4.2",
+        "vite": "5.1.6"
     }
 }

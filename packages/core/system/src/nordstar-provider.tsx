@@ -44,6 +44,7 @@ export type NordstarTheme = {
     };
     duration?: {
         short?: string;
+        medium?: string;
     };
 };
 
@@ -93,6 +94,7 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
 
             --border-width: ${borderWidth}rem;
             --border-width-small: ${borderWidth / 1.45}rem;
+            --border-width-large: ${borderWidth * 1.45}rem;
             --border-radius: ${theme?.border?.radius ?? '0.45rem'};
             --border-radius-half: calc(var(--border-radius) / 2);
 
@@ -106,8 +108,10 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
             --layout-block-padding: ${layout?.block?.padding ?? '1rem'};
             --layout-block-padding-double: calc(var(--layout-block-padding) * 2);
             --layout-block-padding-half: calc(var(--layout-block-padding) / 2);
+            --layout-block-padding-quarter: calc(var(--layout-block-padding) / 4);
 
             --duration-short: ${theme?.duration?.short ?? '0.25s'};
+            --duration-medium: ${theme?.duration?.medium ?? '0.5s'};
         }
     `;
 

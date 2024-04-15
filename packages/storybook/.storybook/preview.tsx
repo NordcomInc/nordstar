@@ -21,7 +21,7 @@ const decorators: Preview['decorators'] = [
                     }
                 }}
             >
-                <View>
+                <View withoutWrapper>
                     <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--layout-page-spacing)' }}>
                         <Story />
                     </div>
