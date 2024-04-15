@@ -6,7 +6,6 @@ import styles from './details.module.scss';
 
 export type DetailsProps = {
     label: string;
-    color: never;
     style?: CSSCustomProperties;
 };
 
