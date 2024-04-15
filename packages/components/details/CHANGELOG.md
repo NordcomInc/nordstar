@@ -1,5 +1,16 @@
 # @nordcom/nordstar-details
 
+## 0.0.54
+
+### Patch Changes
+
+- [`93e2685`](https://github.com/NordcomInc/nordstar/commit/93e2685a6313a5bdb1d69d0e875bfe0aeb19493d) Thanks [@filiphsps](https://github.com/filiphsps)! - Details: Remove color.
+
+- Updated dependencies []:
+  - @nordcom/nordstar-card@0.0.54
+  - @nordcom/nordstar-label@0.0.54
+  - @nordcom/nordstar-system@0.0.54
+
 ## 0.0.53
 
 ### Patch Changes

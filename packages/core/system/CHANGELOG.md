@@ -1,5 +1,7 @@
 # @nordcom/nordstar-system
 
+## 0.0.54
+
 ## 0.0.53
 
 ### Patch Changes

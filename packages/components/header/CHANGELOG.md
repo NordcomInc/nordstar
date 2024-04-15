@@ -1,5 +1,14 @@
 # @nordcom/nordstar-header
 
+## 0.0.54
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @nordcom/nordstar-card@0.0.54
+  - @nordcom/nordstar-view@0.0.54
+  - @nordcom/nordstar-system@0.0.54
+
 ## 0.0.53
 
 ### Patch Changes
