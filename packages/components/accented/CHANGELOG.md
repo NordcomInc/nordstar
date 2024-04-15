@@ -1,5 +1,26 @@
 # @nordcom/nordstar-accented
 
+## 0.0.53
+
+### Patch Changes
+
+- [#483](https://github.com/NordcomInc/nordstar/pull/483) [`e1922f6`](https://github.com/NordcomInc/nordstar/commit/e1922f6eba5369c93e1ac0410dda6eb501c40ea5) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.2.75.
+
+- [#485](https://github.com/NordcomInc/nordstar/pull/485) [`67b4715`](https://github.com/NordcomInc/nordstar/commit/67b47150a7cc9c45c1ac7d99ee7ce87265cd657b) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.12.6.
+
+- [#486](https://github.com/NordcomInc/nordstar/pull/486) [`9d973a0`](https://github.com/NordcomInc/nordstar/commit/9d973a0c744b6e7f2fd6d9ddd3377cb9361ced70) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.12.7.
+
+- [#488](https://github.com/NordcomInc/nordstar/pull/488) [`dc819e1`](https://github.com/NordcomInc/nordstar/commit/dc819e1167a463cae2b1c153ae5510d053afb4bd) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.4.5.
+
+- [#493](https://github.com/NordcomInc/nordstar/pull/493) [`33b7ea4`](https://github.com/NordcomInc/nordstar/commit/33b7ea4475f7240ee606441f6e9e4dd9a32b379c) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update react monorepo .
+
+- [#495](https://github.com/NordcomInc/nordstar/pull/495) [`d86e557`](https://github.com/NordcomInc/nordstar/commit/d86e557f980106e3556ba75bfc3d3c4f65f0f0a1) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.2.77.
+
+- [#502](https://github.com/NordcomInc/nordstar/pull/502) [`a711791`](https://github.com/NordcomInc/nordstar/commit/a7117916cb74d2121b381563f3efb174f99fbdd7) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.2.78.
+
+- Updated dependencies [[`e1922f6`](https://github.com/NordcomInc/nordstar/commit/e1922f6eba5369c93e1ac0410dda6eb501c40ea5), [`67b4715`](https://github.com/NordcomInc/nordstar/commit/67b47150a7cc9c45c1ac7d99ee7ce87265cd657b), [`9d973a0`](https://github.com/NordcomInc/nordstar/commit/9d973a0c744b6e7f2fd6d9ddd3377cb9361ced70), [`dc819e1`](https://github.com/NordcomInc/nordstar/commit/dc819e1167a463cae2b1c153ae5510d053afb4bd), [`33b7ea4`](https://github.com/NordcomInc/nordstar/commit/33b7ea4475f7240ee606441f6e9e4dd9a32b379c), [`d86e557`](https://github.com/NordcomInc/nordstar/commit/d86e557f980106e3556ba75bfc3d3c4f65f0f0a1), [`a711791`](https://github.com/NordcomInc/nordstar/commit/a7117916cb74d2121b381563f3efb174f99fbdd7)]:
+  - @nordcom/nordstar-system@0.0.53
+
 ## 0.0.52
 
 ### Patch Changes
