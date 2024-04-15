@@ -1,3 +1,5 @@
+import React from 'react';
+
 import type { CardProps } from '@nordcom/nordstar-card';
 import { Card } from '@nordcom/nordstar-card';
 import type { Meta, StoryObj } from '@storybook/react';

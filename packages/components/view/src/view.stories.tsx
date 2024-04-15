@@ -1,3 +1,5 @@
+import React from 'react';
+
 import type { ViewProps } from '@nordcom/nordstar-view';
 import { View } from '@nordcom/nordstar-view';
 import type { Meta, StoryObj } from '@storybook/react';

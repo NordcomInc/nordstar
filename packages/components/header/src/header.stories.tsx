@@ -1,3 +1,5 @@
+import React from 'react';
+
 import type { HeaderProps } from '@nordcom/nordstar-header';
 import { Header } from '@nordcom/nordstar-header';
 import type { Meta, StoryObj } from '@storybook/react';

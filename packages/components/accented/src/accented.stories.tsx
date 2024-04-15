@@ -1,3 +1,5 @@
+import React from 'react';
+
 import type { AccentedProps } from '@nordcom/nordstar-accented';
 import { Accented } from '@nordcom/nordstar-accented';
 import type { Meta, StoryObj } from '@storybook/react';

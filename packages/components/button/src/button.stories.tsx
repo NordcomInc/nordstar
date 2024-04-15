@@ -1,3 +1,5 @@
+import React from 'react';
+
 import type { ButtonProps } from '@nordcom/nordstar-button';
 import { Button } from '@nordcom/nordstar-button';
 import type { Meta, StoryObj } from '@storybook/react';

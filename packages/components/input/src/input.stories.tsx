@@ -1,3 +1,5 @@
+import React from 'react';
+
 import type { InputProps } from '@nordcom/nordstar-input';
 import { Input } from '@nordcom/nordstar-input';
 import type { Meta, StoryObj } from '@storybook/react';

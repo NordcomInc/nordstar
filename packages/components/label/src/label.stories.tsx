@@ -1,3 +1,5 @@
+import React from 'react';
+
 import type { LabelProps } from '@nordcom/nordstar-label';
 import { Label } from '@nordcom/nordstar-label';
 import type { Meta, StoryObj } from '@storybook/react';
