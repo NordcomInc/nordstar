@@ -53,6 +53,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             <Header.Menu.Link as={Link} href="/">
                                 Home
                             </Header.Menu.Link>
+                            <Header.Menu.Link as={Link} href="https://github.com/NordcomInc/nordstar" target="_blank">
+                                GitHub
+                            </Header.Menu.Link>
                             <Header.Menu.Link as={Link} href="/docs/" prefetch={false}>
                                 Docs
                             </Header.Menu.Link>
