@@ -111,8 +111,8 @@ importers:
         specifier: 15.2.2
         version: 15.2.2
       magic-string:
-        specifier: 0.30.9
-        version: 0.30.9
+        specifier: 0.30.10
+        version: 0.30.10
       plop:
         specifier: 4.0.1
         version: 4.0.1
@@ -4334,6 +4334,9 @@ packages:
     resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
     engines: {node: '>=12'}
 
+  magic-string@0.30.10:
+    resolution: {integrity: sha512-iIRwTIf0QKV3UAnYK4PU8uiEc4SRh5jX0mwpIwETPpHdhVM4f53RSwS/vXvN1JhGX+Cs7B8qIq3d6AH49O5fAQ==}
+
   magic-string@0.30.9:
     resolution: {integrity: sha512-S1+hd+dIrC8EZqKyT9DstTH/0Z+f76kmmvZnkfQVmOpDEF9iVgdYif3Q/pIWHmCoo59bQVGW0kVL3e2nl+9+Sw==}
     engines: {node: '>=12'}
@@ -7640,7 +7643,7 @@ snapshots:
       express: 4.19.1
       find-cache-dir: 3.3.2
       fs-extra: 11.2.0
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       ts-dedent: 2.2.0
       vite: 5.2.9(@types/node@20.12.7)(sass@1.75.0)
     optionalDependencies:
@@ -8448,7 +8451,7 @@ snapshots:
       istanbul-lib-report: 3.0.1
       istanbul-lib-source-maps: 5.0.4
       istanbul-reports: 3.1.7
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       magicast: 0.3.3
       picocolors: 1.0.0
       std-env: 3.7.0
@@ -8472,7 +8475,7 @@ snapshots:
 
   '@vitest/snapshot@1.5.0':
     dependencies:
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       pathe: 1.1.2
       pretty-format: 29.7.0
 
@@ -10762,6 +10765,10 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
 
+  magic-string@0.30.10:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.4.15
+
   magic-string@0.30.9:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
@@ -11657,7 +11664,7 @@ snapshots:
 
   rollup-preserve-directives@1.1.1(rollup@4.13.0):
     dependencies:
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       rollup: 4.13.0
 
   rollup@4.13.0:
@@ -12425,7 +12432,7 @@ snapshots:
       '@vue/language-core': 1.8.27(typescript@5.4.5)
       debug: 4.3.4
       kolorist: 1.8.0
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       typescript: 5.4.5
       vue-tsc: 1.8.27(typescript@5.4.5)
     optionalDependencies:
@@ -12437,7 +12444,7 @@ snapshots:
 
   vite-plugin-lib-inject-css@2.0.1(vite@5.2.9(@types/node@20.12.7)(sass@1.75.0)):
     dependencies:
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       picocolors: 1.0.0
       vite: 5.2.9(@types/node@20.12.7)(sass@1.75.0)
 
@@ -12474,7 +12481,7 @@ snapshots:
       debug: 4.3.4
       execa: 8.0.1
       local-pkg: 0.5.0
-      magic-string: 0.30.9
+      magic-string: 0.30.10
       pathe: 1.1.2
       picocolors: 1.0.0
       std-env: 3.7.0
