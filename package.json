@@ -103,7 +103,7 @@
         "inquirer-directory": "2.2.0",
         "inquirer": "9.2.19",
         "lint-staged": "15.2.2",
-        "magic-string": "0.30.9",
+        "magic-string": "0.30.10",
         "plop": "4.0.1",
         "prettier-eslint": "16.3.0",
         "prettier": "3.2.5",
