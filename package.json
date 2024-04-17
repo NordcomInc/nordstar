@@ -6,7 +6,7 @@
     "description": "An opinionated component library for building human-centric user interfaces.",
     "private": true,
     "main": "index.js",
-    "packageManager": "pnpm@9.0.1",
+    "packageManager": "pnpm@9.0.2",
     "engines": {
         "node": "<=21"
     },
