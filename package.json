@@ -97,7 +97,7 @@
         "eslint-plugin-react": "7.34.1",
         "eslint-plugin-unused-imports": "3.2.0",
         "eslint": "8.57.0",
-        "glob": "10.3.12",
+        "glob": "10.3.14",
         "happy-dom": "14.10.1",
         "husky": "9.0.11",
         "inquirer-directory": "2.2.0",
