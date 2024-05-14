@@ -31,7 +31,7 @@ importers:
         version: 8.1.0(prettier@3.2.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.4.5)
       '@testing-library/jest-dom':
         specifier: 6.4.5
-        version: 6.4.5(vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.10.2)(sass@1.77.1))
+        version: 6.4.5(vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.11.0)(sass@1.77.1))
       '@testing-library/react':
         specifier: 15.0.7
         version: 15.0.7(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
@@ -58,7 +58,7 @@ importers:
         version: 4.2.1(vite@5.2.11(@types/node@20.12.12)(sass@1.77.1))
       '@vitest/coverage-v8':
         specifier: 1.6.0
-        version: 1.6.0(vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.10.2)(sass@1.77.1))
+        version: 1.6.0(vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.11.0)(sass@1.77.1))
       chalk:
         specifier: 5.3.0
         version: 5.3.0
@@ -96,8 +96,8 @@ importers:
         specifier: 10.3.15
         version: 10.3.15
       happy-dom:
-        specifier: 14.10.2
-        version: 14.10.2
+        specifier: 14.11.0
+        version: 14.11.0
       husky:
         specifier: 9.0.11
         version: 9.0.11
@@ -157,7 +157,7 @@ importers:
         version: 4.3.2(typescript@5.4.5)(vite@5.2.11(@types/node@20.12.12)(sass@1.77.1))
       vitest:
         specifier: 1.6.0
-        version: 1.6.0(@types/node@20.12.12)(happy-dom@14.10.2)(sass@1.77.1)
+        version: 1.6.0(@types/node@20.12.12)(happy-dom@14.11.0)(sass@1.77.1)
 
   docs:
     dependencies:
@@ -3989,10 +3989,6 @@ packages:
     resolution: {integrity: sha512-vafaFqs8MZkRrSX7sFVUdo3ap/eNiLnb4IakshzvP56X5Nr1iGKAIqdX6tMlm6HcNRIkr6AxO5jFEoJzzpT8aQ==}
     engines: {node: '>=0.4.7'}
     hasBin: true
-
-  happy-dom@14.10.2:
-    resolution: {integrity: sha512-n9A1h5X4OCJ1ACjjrLQJQ10F02dkGj9wpPdtam/LsxPHfcpsRp55Kfrruz/LVbDuM4QLwgZ56jr4OSVImWZkhQ==}
-    engines: {node: '>=16.0.0'}
 
   happy-dom@14.11.0:
     resolution: {integrity: sha512-vu25dY7YJqLuTG/3ADC0FZRRF0yNBp3q2K0YTN08opXdZi8V/YzIJDNJWFiCnDIuyc+RrCIE093+H5fa9Trlxg==}
@@ -8876,7 +8872,7 @@ snapshots:
       lz-string: 1.5.0
       pretty-format: 27.5.1
 
-  '@testing-library/jest-dom@6.4.5(vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.10.2)(sass@1.77.1))':
+  '@testing-library/jest-dom@6.4.5(vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.11.0)(sass@1.77.1))':
     dependencies:
       '@adobe/css-tools': 4.3.3
       '@babel/runtime': 7.24.1
@@ -8887,7 +8883,7 @@ snapshots:
       lodash: 4.17.21
       redent: 3.0.0
     optionalDependencies:
-      vitest: 1.6.0(@types/node@20.12.12)(happy-dom@14.10.2)(sass@1.77.1)
+      vitest: 1.6.0(@types/node@20.12.12)(happy-dom@14.11.0)(sass@1.77.1)
 
   '@testing-library/react@15.0.7(@types/react@18.3.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
     dependencies:
@@ -9210,7 +9206,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-v8@1.6.0(vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.10.2)(sass@1.77.1))':
+  '@vitest/coverage-v8@1.6.0(vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.11.0)(sass@1.77.1))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -9225,7 +9221,7 @@ snapshots:
       std-env: 3.7.0
       strip-literal: 2.0.0
       test-exclude: 6.0.0
-      vitest: 1.6.0(@types/node@20.12.12)(happy-dom@14.10.2)(sass@1.77.1)
+      vitest: 1.6.0(@types/node@20.12.12)(happy-dom@14.11.0)(sass@1.77.1)
     transitivePeerDependencies:
       - supports-color
 
@@ -10901,12 +10897,6 @@ snapshots:
       wordwrap: 1.0.0
     optionalDependencies:
       uglify-js: 3.17.4
-
-  happy-dom@14.10.2:
-    dependencies:
-      entities: 4.5.0
-      webidl-conversions: 7.0.0
-      whatwg-mimetype: 3.0.0
 
   happy-dom@14.11.0:
     dependencies:
@@ -13313,7 +13303,7 @@ snapshots:
       fsevents: 2.3.3
       sass: 1.77.1
 
-  vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.10.2)(sass@1.77.1):
+  vitest@1.6.0(@types/node@20.12.12)(happy-dom@14.11.0)(sass@1.77.1):
     dependencies:
       '@vitest/expect': 1.6.0
       '@vitest/runner': 1.6.0
@@ -13337,7 +13327,7 @@ snapshots:
       why-is-node-running: 2.2.2
     optionalDependencies:
       '@types/node': 20.12.12
-      happy-dom: 14.10.2
+      happy-dom: 14.11.0
     transitivePeerDependencies:
       - less
       - lightningcss
