@@ -12,8 +12,8 @@ importers:
         specifier: 0.5.0
         version: 0.5.0
       '@changesets/cli':
-        specifier: 2.27.1
-        version: 2.27.1
+        specifier: 2.27.2
+        version: 2.27.2
       '@changesets/types':
         specifier: 6.0.0
         version: 6.0.0
@@ -1399,8 +1399,8 @@ packages:
   '@bcoe/v8-coverage@0.2.3':
     resolution: {integrity: sha512-0hYQ8SB4Db5zvZB4axdMHGwEaQjkZzFjQiN9LVYvIFB2nSUHW9tYpxWriPrWDASIxiaXax83REcLxuSdnGPZtw==}
 
-  '@changesets/apply-release-plan@7.0.0':
-    resolution: {integrity: sha512-vfi69JR416qC9hWmFGSxj7N6wA5J222XNBmezSVATPWDVPIF7gkd4d8CpbEbXmRWbVrkoli3oerGS6dcL/BGsQ==}
+  '@changesets/apply-release-plan@7.0.1':
+    resolution: {integrity: sha512-aPdSq/R++HOyfEeBGjEe6LNG8gs0KMSyRETD/J2092OkNq8mOioAxyKjMbvVUdzgr/HTawzMOz7lfw339KnsCA==}
 
   '@changesets/assemble-release-plan@6.0.0':
     resolution: {integrity: sha512-4QG7NuisAjisbW4hkLCmGW2lRYdPrKzro+fCtZaILX+3zdUELSvYjpL4GTv0E4aM9Mef3PuIQp89VmHJ4y2bfw==}
@@ -1411,8 +1411,8 @@ packages:
   '@changesets/changelog-github@0.5.0':
     resolution: {integrity: sha512-zoeq2LJJVcPJcIotHRJEEA2qCqX0AQIeFE+L21L8sRLPVqDhSXY8ZWAt2sohtBpFZkBwu+LUwMSKRr2lMy3LJA==}
 
-  '@changesets/cli@2.27.1':
-    resolution: {integrity: sha512-iJ91xlvRnnrJnELTp4eJJEOPjgpF3NOh4qeQehM6Ugiz9gJPRZ2t+TsXun6E3AMN4hScZKjqVXl0TX+C7AB3ZQ==}
+  '@changesets/cli@2.27.2':
+    resolution: {integrity: sha512-6/kADjKMOrlLwNr/Y5HAq7T9oGOA2Lq5A59AGtwQCCiXuSGp4EgszzdJFeBiF8pdz7Wn1HaLzSUBhAaNToEJqg==}
     hasBin: true
 
   '@changesets/config@3.0.0':
@@ -1454,8 +1454,8 @@ packages:
   '@changesets/types@6.0.0':
     resolution: {integrity: sha512-b1UkfNulgKoWfqyHtzKS5fOZYSJO+77adgL7DLRDr+/7jhChN+QcHnbjiQVOz/U+Ts3PGNySq7diAItzDgugfQ==}
 
-  '@changesets/write@0.3.0':
-    resolution: {integrity: sha512-slGLb21fxZVUYbyea+94uFiD6ntQW0M2hIKNznFizDhZPDgn2c/fv1UzzlW43RVzh1BEDuIqW6hzlJ1OflNmcw==}
+  '@changesets/write@0.3.1':
+    resolution: {integrity: sha512-SyGtMXzH3qFqlHKcvFY2eX+6b0NGiFcNav8AFsYwy5l8hejOeoeTDemu5Yjmke2V5jpzY+pBvM0vCCQ3gdZpfw==}
 
   '@codecov/bundler-plugin-core@0.0.1-beta.6':
     resolution: {integrity: sha512-dGk/s90fZm7D1O00gRtuE2gqM/CW9nglaPzcIT0v10VOV2tj+aHRrdB+yjas+RW8QP8Qf/sMqSmjkufP1iqggw==}
@@ -7455,7 +7455,7 @@ snapshots:
 
   '@bcoe/v8-coverage@0.2.3': {}
 
-  '@changesets/apply-release-plan@7.0.0':
+  '@changesets/apply-release-plan@7.0.1':
     dependencies:
       '@babel/runtime': 7.24.1
       '@changesets/config': 3.0.0
@@ -7469,7 +7469,7 @@ snapshots:
       outdent: 0.5.0
       prettier: 2.8.8
       resolve-from: 5.0.0
-      semver: 7.6.0
+      semver: 7.6.2
 
   '@changesets/assemble-release-plan@6.0.0':
     dependencies:
@@ -7478,7 +7478,7 @@ snapshots:
       '@changesets/get-dependents-graph': 2.0.0
       '@changesets/types': 6.0.0
       '@manypkg/get-packages': 1.1.3
-      semver: 7.6.0
+      semver: 7.6.2
 
   '@changesets/changelog-git@0.2.0':
     dependencies:
@@ -7492,10 +7492,10 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@changesets/cli@2.27.1':
+  '@changesets/cli@2.27.2':
     dependencies:
       '@babel/runtime': 7.24.1
-      '@changesets/apply-release-plan': 7.0.0
+      '@changesets/apply-release-plan': 7.0.1
       '@changesets/assemble-release-plan': 6.0.0
       '@changesets/changelog-git': 0.2.0
       '@changesets/config': 3.0.0
@@ -7507,7 +7507,7 @@ snapshots:
       '@changesets/pre': 2.0.0
       '@changesets/read': 0.6.0
       '@changesets/types': 6.0.0
-      '@changesets/write': 0.3.0
+      '@changesets/write': 0.3.1
       '@manypkg/get-packages': 1.1.3
       '@types/semver': 7.5.8
       ansi-colors: 4.1.3
@@ -7522,7 +7522,7 @@ snapshots:
       p-limit: 2.3.0
       preferred-pm: 3.1.3
       resolve-from: 5.0.0
-      semver: 7.6.0
+      semver: 7.6.2
       spawndamnit: 2.0.0
       term-size: 2.2.1
       tty-table: 4.2.3
@@ -7547,7 +7547,7 @@ snapshots:
       '@manypkg/get-packages': 1.1.3
       chalk: 2.4.2
       fs-extra: 7.0.1
-      semver: 7.6.0
+      semver: 7.6.2
 
   '@changesets/get-github-info@0.6.0':
     dependencies:
@@ -7610,7 +7610,7 @@ snapshots:
 
   '@changesets/types@6.0.0': {}
 
-  '@changesets/write@0.3.0':
+  '@changesets/write@0.3.1':
     dependencies:
       '@babel/runtime': 7.24.1
       '@changesets/types': 6.0.0
@@ -7621,7 +7621,7 @@ snapshots:
   '@codecov/bundler-plugin-core@0.0.1-beta.6':
     dependencies:
       chalk: 4.1.2
-      semver: 7.6.0
+      semver: 7.6.2
       unplugin: 1.10.0
       zod: 3.22.4
 
@@ -8489,7 +8489,7 @@ snapshots:
       prettier-fallback: prettier@3.2.5
       pretty-hrtime: 1.0.3
       resolve-from: 5.0.0
-      semver: 7.6.0
+      semver: 7.6.2
       tempy: 1.0.1
       tiny-invariant: 1.3.3
       ts-dedent: 2.2.0
@@ -9098,7 +9098,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
-      semver: 7.6.0
+      semver: 7.6.2
       ts-api-utils: 1.3.0(typescript@5.4.5)
     optionalDependencies:
       typescript: 5.4.5
@@ -9113,7 +9113,7 @@ snapshots:
       globby: 11.1.0
       is-glob: 4.0.3
       minimatch: 9.0.3
-      semver: 7.6.0
+      semver: 7.6.2
       ts-api-utils: 1.3.0(typescript@5.4.5)
     optionalDependencies:
       typescript: 5.4.5
@@ -9129,7 +9129,7 @@ snapshots:
       '@typescript-eslint/types': 7.3.1
       '@typescript-eslint/typescript-estree': 7.3.1(typescript@5.4.5)
       eslint: 8.57.0
-      semver: 7.6.0
+      semver: 7.6.2
     transitivePeerDependencies:
       - supports-color
       - typescript
@@ -11525,7 +11525,7 @@ snapshots:
 
   make-dir@4.0.0:
     dependencies:
-      semver: 7.6.0
+      semver: 7.6.2
 
   make-iterator@1.0.1:
     dependencies:
@@ -13299,7 +13299,7 @@ snapshots:
       espree: 9.6.1
       esquery: 1.5.0
       lodash: 4.17.21
-      semver: 7.6.0
+      semver: 7.6.2
     transitivePeerDependencies:
       - supports-color
 
@@ -13312,7 +13312,7 @@ snapshots:
     dependencies:
       '@volar/typescript': 1.11.1
       '@vue/language-core': 1.8.27(typescript@5.4.5)
-      semver: 7.6.0
+      semver: 7.6.2
       typescript: 5.4.5
 
   watchpack@2.4.1:
