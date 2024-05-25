@@ -69,7 +69,7 @@
     "homepage": "https://nordstar.nordcom.io/",
     "devDependencies": {
         "@changesets/changelog-github": "0.5.0",
-        "@changesets/cli": "2.27.2",
+        "@changesets/cli": "2.27.3",
         "@changesets/types": "6.0.0",
         "@codecov/vite-plugin": "0.0.1-beta.8",
         "@happy-dom/global-registrator": "14.11.0",
