@@ -21,8 +21,8 @@ importers:
         specifier: 0.0.1-beta.8
         version: 0.0.1-beta.8(vite@5.2.11(@types/node@20.12.12)(sass@1.77.2))
       '@happy-dom/global-registrator':
-        specifier: 14.11.0
-        version: 14.11.0
+        specifier: 14.11.1
+        version: 14.11.1
       '@nordcom/prettier':
         specifier: 0.1.1
         version: 0.1.1
@@ -1613,8 +1613,8 @@ packages:
   '@fal-works/esbuild-plugin-global-externals@2.1.2':
     resolution: {integrity: sha512-cEee/Z+I12mZcFJshKcCqC8tuX5hG3s+d+9nZ3LabqKF1vKdF41B92pJVCBggjAGORAeOzyyDDKrZwIkLffeOQ==}
 
-  '@happy-dom/global-registrator@14.11.0':
-    resolution: {integrity: sha512-QRqnYzaS90gwWT0zuTMHVry4ouacoUCYedeEQOMQjFA+AVynroLoj2XVC+WYugDSeAa6FSXprXjiEZiZ0g+VgA==}
+  '@happy-dom/global-registrator@14.11.1':
+    resolution: {integrity: sha512-02MP3Dh/QYDI6IBt0MSQEHOg3sPJ3c2FxRdSSaI3JFnXW+uFyS/vHvNhH5WeXjPvw3zfuDbbjFxP7/dB79i73Q==}
     engines: {node: '>=16.0.0'}
 
   '@humanwhocodes/config-array@0.11.14':
@@ -3879,6 +3879,7 @@ packages:
 
   glob@7.2.3:
     resolution: {integrity: sha512-nFR0zLpU2YCaRxwoCJvL6UvCH2JFyFVIvwTLsIf21AuHlMskA1hhTdk+LlYJtOlYt9v6dvszD2BGRqBL+iQK9Q==}
+    deprecated: Glob versions prior to v9 are no longer supported
 
   global-modules@1.0.0:
     resolution: {integrity: sha512-sKzpEkf11GpOFuw0Zzjzmt4B4UZwjOcG757PPvrfhxcLFbq0wpsgpOqxpxtxFiCG4DtG93M6XRVbF2oGdev7bg==}
@@ -3938,6 +3939,10 @@ packages:
 
   happy-dom@14.11.0:
     resolution: {integrity: sha512-vu25dY7YJqLuTG/3ADC0FZRRF0yNBp3q2K0YTN08opXdZi8V/YzIJDNJWFiCnDIuyc+RrCIE093+H5fa9Trlxg==}
+    engines: {node: '>=16.0.0'}
+
+  happy-dom@14.11.1:
+    resolution: {integrity: sha512-JuaGMxD3QlQei6LdAM9mMY9am/cHa978uFbkOpjN5x83DG+QQp/NLyVV4Ru7KOjs70XYZ4KbI0TNiO81nM7uQQ==}
     engines: {node: '>=16.0.0'}
 
   hard-rejection@2.1.0:
@@ -5469,10 +5474,12 @@ packages:
 
   rimraf@2.6.3:
     resolution: {integrity: sha512-mwqeW5XsA2qAejG46gYdENaxXjx9onRNCfn7L0duuP4hCuTIi/QO7PDK07KJfp1d+izWPrzEJDcSqBa0OZQriA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rimraf@3.0.2:
     resolution: {integrity: sha512-JZkJMZkAGFFPP2YqXZXPbMlMBgsxzE8ILs4lMIX/2o0L9UBw9O/Y3o6wFw/i9YLapcUJWwqbi3kdxIPdC62TIA==}
+    deprecated: Rimraf versions prior to v4 are no longer supported
     hasBin: true
 
   rollup-preserve-directives@1.1.1:
@@ -7593,9 +7600,9 @@ snapshots:
 
   '@fal-works/esbuild-plugin-global-externals@2.1.2': {}
 
-  '@happy-dom/global-registrator@14.11.0':
+  '@happy-dom/global-registrator@14.11.1':
     dependencies:
-      happy-dom: 14.11.0
+      happy-dom: 14.11.1
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
@@ -10706,6 +10713,12 @@ snapshots:
       uglify-js: 3.17.4
 
   happy-dom@14.11.0:
+    dependencies:
+      entities: 4.5.0
+      webidl-conversions: 7.0.0
+      whatwg-mimetype: 3.0.0
+
+  happy-dom@14.11.1:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
