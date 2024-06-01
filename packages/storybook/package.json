@@ -33,7 +33,7 @@
         "@types/react-dom": "18.3.0",
         "@types/react": "18.3.3",
         "@vitejs/plugin-react": "4.3.0",
-        "prettier": "3.2.5",
+        "prettier": "3.3.0",
         "storybook-dark-mode": "4.0.1",
         "typescript": "5.4.5",
         "vite": "5.2.12"
