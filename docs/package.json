@@ -50,7 +50,7 @@
     "homepage": "https://nordstar.nordcom.io/",
     "dependencies": {
         "@nordcom/nordstar": "workspace:*",
-        "next": "14.2.3",
+        "next": "14.2.4",
         "react": "18.3.1",
         "react-dom": "18.3.1"
     },
