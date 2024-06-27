@@ -102,8 +102,8 @@ importers:
         specifier: 9.0.11
         version: 9.0.11
       inquirer:
-        specifier: 9.3.0
-        version: 9.3.0
+        specifier: 9.3.1
+        version: 9.3.1
       inquirer-directory:
         specifier: 2.2.0
         version: 2.2.0
@@ -4172,8 +4172,8 @@ packages:
   inquirer@1.2.3:
     resolution: {integrity: sha512-diSnpgfv/Ozq6QKuV2mUcwZ+D24b03J3W6EVxzvtkCWJTPrH2gKLsqgSW0vzRMZZFhFdhnvzka0RUJxIm7AOxQ==}
 
-  inquirer@9.3.0:
-    resolution: {integrity: sha512-zdopqPUKWmnOcaBJYMMtjqWCB2HHXrteAou9tCYgkTJu01QheLfYOrkzigDfidPBtCizmkdpSU0fp2DKaMdFPA==}
+  inquirer@9.3.1:
+    resolution: {integrity: sha512-A5IdVr1I04XqPlwrGgTJMKmzRg5ropqNpSeqo0vj1ZmluSCNSFaPZz4eazdPrhVcZfej7fCEYvD2NYa1KjkTJA==}
     engines: {node: '>=18'}
 
   internal-slot@1.0.7:
@@ -4608,9 +4608,6 @@ packages:
 
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
-
-  lodash.set@4.3.2:
-    resolution: {integrity: sha512-4hNPN5jlm/N/HLMCO43v8BXKq9Z7QdAGc/VGrRD61w8gN9g/6jF9A4L1pbUgBLCffi0w9VsXfTOij5x8iTyFvg==}
 
   lodash.startcase@4.4.0:
     resolution: {integrity: sha512-+WKqsK294HMSc2jEbNgpHpd0JfIBhp7rEV4aqXWqFr6AlXov+SlcgB1Fv01y2kGe3Gc8nMW7VA0SrGuSkRfIEg==}
@@ -10989,14 +10986,12 @@ snapshots:
       strip-ansi: 3.0.1
       through: 2.3.8
 
-  inquirer@9.3.0:
+  inquirer@9.3.1:
     dependencies:
       '@inquirer/figures': 1.0.3
       ansi-escapes: 4.3.2
       cli-width: 4.1.0
       external-editor: 3.1.0
-      lodash.get: 4.4.2
-      lodash.set: 4.3.2
       mute-stream: 1.0.0
       ora: 5.4.1
       picocolors: 1.0.1
@@ -11429,8 +11424,6 @@ snapshots:
 
   lodash.merge@4.6.2: {}
 
-  lodash.set@4.3.2: {}
-
   lodash.startcase@4.4.0: {}
 
   lodash@4.17.21: {}
@@ -11679,7 +11672,7 @@ snapshots:
       del: 7.1.0
       globby: 13.2.2
       handlebars: 4.7.8
-      inquirer: 9.3.0
+      inquirer: 9.3.1
       isbinaryfile: 5.0.2
       lodash.get: 4.4.2
       lower-case: 2.0.2
@@ -13156,7 +13149,7 @@ snapshots:
       cac: 6.7.14
       debug: 4.3.4
       pathe: 1.1.2
-      picocolors: 1.0.0
+      picocolors: 1.0.1
       vite: 5.3.1(@types/node@20.14.9)(sass@1.77.6)
     transitivePeerDependencies:
       - '@types/node'
