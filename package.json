@@ -100,7 +100,7 @@
         "happy-dom": "14.12.3",
         "husky": "9.0.11",
         "inquirer-directory": "2.2.0",
-        "inquirer": "9.2.23",
+        "inquirer": "9.3.0",
         "lint-staged": "15.2.7",
         "magic-string": "0.30.10",
         "plop": "4.0.1",
