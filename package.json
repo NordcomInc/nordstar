@@ -74,7 +74,7 @@
         "@codecov/vite-plugin": "0.0.1-beta.10",
         "@happy-dom/global-registrator": "14.12.3",
         "@nordcom/prettier": "0.1.1",
-        "@storybook/react": "8.2.4",
+        "@storybook/react": "8.2.5",
         "@testing-library/jest-dom": "6.4.6",
         "@testing-library/react": "16.0.0",
         "@testing-library/user-event": "14.5.2",
