@@ -58,13 +58,15 @@ header.container {
             touch-action: auto;
             scroll-behavior: smooth;
 
-            animation: scroll-shadow-inset linear;
-            animation-timeline: scroll(self inline);
-
             @media (min-width: 950px) {
                 overflow-x: unset;
                 justify-content: flex-end;
                 gap: var(--layout-block-padding-double);
+            }
+
+            .overflow-shadow {
+                animation: scroll-shadow-inset linear;
+                animation-timeline: scroll(self inline);
             }
 
             .link {
@@ -89,9 +91,9 @@ header.container {
 
 @keyframes scroll-shadow-inset {
     from {
-        box-shadow: inset -10px 0px 10px -10px rgb(155 155 155 / 0.75);
+        box-shadow: inset -10px 0px 10px -10px var(--header-scroll-shadow, rgb(155 155 155 / 0.75));
     }
     to {
-        box-shadow: inset 10px 0px 10px -10px rgb(155 155 155 / 0.75);
+        box-shadow: inset 10px 0px 10px -10px var(--header-scroll-shadow, rgb(155 155 155 / 0.75));
     }
 }

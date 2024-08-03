@@ -86,6 +86,12 @@
         --background: var(--color-foreground);
         --foreground: var(--color-background);
 
+        border-width: var(--border-width-small);
+        border-color: var(--background);
+
+        color: var(--foreground);
+        background: var(--background);
+
         &[data-color='primary'] {
             --background: var(--color-accent-primary);
             --foreground: var(--color-accent-primary-foreground);
@@ -94,12 +100,6 @@
             --background: var(--color-accent-secondary);
             --foreground: var(--color-accent-secondary-foreground);
         }
-
-        border-width: var(--border-width-small);
-        border-color: var(--background);
-
-        color: var(--foreground);
-        background: var(--background);
     }
 
     .label {

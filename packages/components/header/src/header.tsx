@@ -1,5 +1,5 @@
 import { Card } from '@nordcom/nordstar-card';
-import { forwardRef } from '@nordcom/nordstar-system';
+import { cn, forwardRef } from '@nordcom/nordstar-system';
 import { View } from '@nordcom/nordstar-view';
 import type { ComponentProps } from 'react';
 import styles from './header.module.scss';
@@ -12,10 +12,8 @@ export type HeaderProps = {
 } & ComponentProps<'header'>;
 
 const Header = ({ className, children, ...props }: HeaderProps) => {
-    const classes = `${styles.container}${className ? ` ${className}` : ''}`;
-
     return (
-        <Card as="header" borderless={true} {...props} className={classes}>
+        <Card as="header" borderless={true} {...props} className={cn(styles.container, className)}>
             <View as="div" className={styles.content} withoutWrapper={true}>
                 {children}
             </View>
@@ -32,23 +30,27 @@ export type HeaderLogoProps = {} & ComponentProps<'nav'>;
  * @returns {React.ReactNode} The `<Header.Logo/>` component.
  */
 const Logo = ({ className, ...props }: HeaderLogoProps) => {
-    const classes = `${styles.logo}${className ? ` ${className}` : ''}`;
-
-    return <section {...props} draggable={false} className={classes} />;
+    return <section {...props} draggable={false} className={cn(styles.logo, className)} />;
 };
 Logo.displayName = 'Nordstar.Layout.Header.Logo';
 
-export type HeaderMenuProps = {} & ComponentProps<'nav'>;
+export type HeaderMenuProps = {
+    noOverflowShadow?: boolean;
+} & ComponentProps<'nav'>;
 
 /**
  * `<Header.Menu/>`, a component to render a header's content.
  * @param {HeaderMenuProps} props - `<Header.Menu/>` props.
  * @returns {React.ReactNode} The `<Header.Menu/>` component.
  */
-const Menu = ({ className, ...props }: HeaderMenuProps) => {
-    const classes = `${styles.nav}${className ? ` ${className}` : ''}`;
-
-    return <nav {...props} draggable={false} className={classes} />;
+const Menu = ({ className, noOverflowShadow = false, ...props }: HeaderMenuProps) => {
+    return (
+        <nav
+            {...props}
+            draggable={false}
+            className={cn(styles.nav, !noOverflowShadow && styles.overflowShadow, className)}
+        />
+    );
 };
 Menu.displayName = 'Nordstar.Layout.Header.Menu';
 
@@ -63,9 +65,8 @@ export type HeaderMenuLinkProps = {
  */
 const Link = forwardRef<'a', HeaderMenuLinkProps>(({ as, className, ...props }, ref) => {
     const Tag = as || 'a';
-    const classes = `${styles.link}${className ? ` ${className}` : ''}`;
 
-    return <Tag ref={ref} draggable={false} {...props} className={classes} />;
+    return <Tag ref={ref} draggable={false} {...props} className={cn(styles.link, className)} />;
 });
 Link.displayName = 'Nordstar.Layout.Header.Menu.Link';
 

@@ -1,5 +1,5 @@
 import { NordstarProvider } from './nordstar-provider';
-import { forwardRef } from './utils';
+import { cn, forwardRef } from './utils';
 
 export type { NordstarColor } from './colors';
 export type { NordstarProviderProps, NordstarTheme } from './nordstar-provider';
@@ -13,4 +13,4 @@ export type {
     RightJoinProps
 } from './utils';
 
-export { NordstarProvider, forwardRef };
+export { cn, forwardRef, NordstarProvider };
