@@ -62,6 +62,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             <Header.Menu.Link as={Link} href="/storybook/" prefetch={false}>
                                 Storybook
                             </Header.Menu.Link>
+                            <Header.Menu.Link as={Link} href="https://nordcom.io/" prefetch={false}>
+                                Nordcom AB
+                            </Header.Menu.Link>
                         </Header.Menu>
                     </Header>
 
