@@ -5,7 +5,7 @@ header.container {
     align-items: center;
 
     width: 100%;
-    padding: var(--layout-page-spacing-half) var(--layout-page-spacing);
+    padding: 0 var(--layout-page-spacing);
     margin-bottom: var(--layout-page-spacing-half);
 
     border-radius: 0;
@@ -50,12 +50,16 @@ header.container {
             gap: var(--layout-block-padding);
 
             width: 100%;
+            padding: var(--layout-page-spacing-half) 0;
 
             -webkit-user-select: none;
             user-select: none;
             overflow-x: auto;
             touch-action: auto;
             scroll-behavior: smooth;
+
+            animation: scroll-shadow-inset linear;
+            animation-timeline: scroll(self inline);
 
             @media (min-width: 950px) {
                 overflow-x: unset;
@@ -80,5 +84,14 @@ header.container {
                 }
             }
         }
+    }
+}
+
+@keyframes scroll-shadow-inset {
+    from {
+        box-shadow: inset -10px 0px 10px -10px rgb(155 155 155 / 0.75);
+    }
+    to {
+        box-shadow: inset 10px 0px 10px -10px rgb(155 155 155 / 0.75);
     }
 }
