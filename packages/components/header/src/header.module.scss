@@ -70,6 +70,8 @@ header.container {
                 line-height: 1;
                 font-weight: 800;
                 text-transform: uppercase;
+                word-break: keep-all;
+                white-space: nowrap;
 
                 transition: color ease-in-out var(--duration-short);
 

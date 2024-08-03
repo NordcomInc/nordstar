@@ -22,6 +22,8 @@ const Template = ({ title, ...args }: HeaderProps & { title: string }) => (
                     <Header.Menu.Link>Link 1</Header.Menu.Link>
                     <Header.Menu.Link>Link 2</Header.Menu.Link>
                     <Header.Menu.Link>Link 3</Header.Menu.Link>
+                    <Header.Menu.Link>Link 4</Header.Menu.Link>
+                    <Header.Menu.Link>Link 5</Header.Menu.Link>
                 </Header.Menu>
             </Header>
         ]}
