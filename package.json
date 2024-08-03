@@ -7,7 +7,7 @@
     "private": true,
     "main": "index.js",
     "engines": {
-        "node": "<=21"
+        "node": "<=22"
     },
     "prettier": "@nordcom/prettier",
     "workspaces": [
@@ -79,44 +79,44 @@
         "@testing-library/react": "16.0.0",
         "@testing-library/user-event": "14.5.2",
         "@types/node": "20.14.14",
-        "@types/react-dom": "18.3.0",
         "@types/react": "18.3.3",
+        "@types/react-dom": "18.3.0",
         "@typescript-eslint/eslint-plugin": "8.0.0",
         "@typescript-eslint/parser": "8.0.0",
         "@vitejs/plugin-react": "4.3.1",
         "@vitest/coverage-v8": "2.0.5",
         "chalk": "5.3.0",
         "concurrently": "8.2.2",
+        "eslint": "8.57.0",
         "eslint-config-prettier": "9.1.0",
         "eslint-plugin-import": "2.29.1",
         "eslint-plugin-jsdoc": "48.11.0",
         "eslint-plugin-jsx-a11y": "6.9.0",
         "eslint-plugin-prettier": "5.2.1",
-        "eslint-plugin-react-hooks": "4.6.2",
         "eslint-plugin-react": "7.35.0",
+        "eslint-plugin-react-hooks": "4.6.2",
         "eslint-plugin-unused-imports": "4.0.1",
-        "eslint": "8.57.0",
         "glob": "11.0.0",
         "happy-dom": "14.12.3",
         "husky": "9.1.4",
-        "inquirer-directory": "2.2.0",
         "inquirer": "10.1.6",
+        "inquirer-directory": "2.2.0",
         "lint-staged": "15.2.7",
         "magic-string": "0.30.11",
         "plop": "4.0.1",
-        "prettier-eslint": "16.3.0",
         "prettier": "3.3.3",
-        "react-dom": "18.3.1",
+        "prettier-eslint": "16.3.0",
         "react": "18.3.1",
+        "react-dom": "18.3.1",
         "rollup-preserve-directives": "1.1.1",
         "sass": "1.77.8",
         "strip-ansi": "7.1.0",
-        "turbo": "1.13.4",
+        "turbo": "2.0.11",
         "typescript": "5.5.4",
+        "vite": "5.3.5",
         "vite-plugin-dts": "3.9.1",
         "vite-plugin-lib-inject-css": "2.1.1",
         "vite-tsconfig-paths": "4.3.2",
-        "vite": "5.3.5",
         "vitest": "2.0.5"
     },
     "overrides": {
@@ -126,5 +126,6 @@
     },
     "trustedDependencies": [
         "spawn-sync"
-    ]
+    ],
+    "packageManager": "pnpm@9.6.0"
 }

@@ -73,6 +73,6 @@
         "temperature": "0.75"
     },
     "[json]": {
-        "editor.defaultFormatter": "vscode.json-language-features"
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
