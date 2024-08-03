@@ -101,7 +101,7 @@
         "husky": "9.1.4",
         "inquirer": "10.1.6",
         "inquirer-directory": "2.2.0",
-        "lint-staged": "15.2.7",
+        "lint-staged": "15.2.8",
         "magic-string": "0.30.11",
         "plop": "4.0.1",
         "prettier": "3.3.3",
