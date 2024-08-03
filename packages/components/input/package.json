@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-input",
     "type": "module",
-    "version": "0.0.56",
+    "version": "0.0.57",
     "description": "Component for single-line text and number input with formatting support.",
     "files": [
         "dist"

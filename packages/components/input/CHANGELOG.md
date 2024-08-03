@@ -1,5 +1,12 @@
 # @nordcom/nordstar-input
 
+## 0.0.57
+
+### Patch Changes
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-system@0.0.57
+
 ## 0.0.56
 
 ### Patch Changes
