@@ -1,5 +1,22 @@
 # @nordcom/nordstar-docs
 
+## 0.0.56
+
+### Patch Changes
+
+-   [#657](https://github.com/NordcomInc/nordstar/pull/657) [`910bb16`](https://github.com/NordcomInc/nordstar/commit/910bb16c5360c54af06f676eaee2c9a74ff84579) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.5.2.
+
+-   [#676](https://github.com/NordcomInc/nordstar/pull/676) [`f769b24`](https://github.com/NordcomInc/nordstar/commit/f769b241309c34b611c59636b203b4bc4ba55f79) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.5.3.
+
+-   [#696](https://github.com/NordcomInc/nordstar/pull/696) [`5bcd4f5`](https://github.com/NordcomInc/nordstar/commit/5bcd4f5c78a7de1d1f29c6fa9f7d8287605bc231) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency next to v14.2.5.
+
+-   [#725](https://github.com/NordcomInc/nordstar/pull/725) [`2af6f72`](https://github.com/NordcomInc/nordstar/commit/2af6f720fa521efa63ef61e3d40b7d41951b6370) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.5.4.
+
+-   [`0c3f4e1`](https://github.com/NordcomInc/nordstar/commit/0c3f4e139ae18cded312865d58b6ebb423241737) Thanks [@filiphsps](https://github.com/filiphsps)! - Upgrade turbo.
+
+-   Updated dependencies [[`36020f4`](https://github.com/NordcomInc/nordstar/commit/36020f4456cd8f75e3e245e671b9965ef61e3ec2), [`2b9f9e1`](https://github.com/NordcomInc/nordstar/commit/2b9f9e17b642e678b5042959abdc05be1eab74ff), [`2a539ad`](https://github.com/NordcomInc/nordstar/commit/2a539adf615af8a9e2b3e35e2fb22808d45dc6b5), [`364dfdc`](https://github.com/NordcomInc/nordstar/commit/364dfdc689a021c04bd7bfaddbd01a92b8566d59), [`910bb16`](https://github.com/NordcomInc/nordstar/commit/910bb16c5360c54af06f676eaee2c9a74ff84579), [`a2a3f8f`](https://github.com/NordcomInc/nordstar/commit/a2a3f8ff6bf2edc35e5c7a0c7205808b50a80e0b), [`9209b60`](https://github.com/NordcomInc/nordstar/commit/9209b60920e4ad0567c7fc77ddaa942d59d00b53), [`d400b3c`](https://github.com/NordcomInc/nordstar/commit/d400b3c040de3c56c9c9abbe0ec83176e79a166c), [`5de8f59`](https://github.com/NordcomInc/nordstar/commit/5de8f591dd2b963f513553972aea0698730170ee), [`f769b24`](https://github.com/NordcomInc/nordstar/commit/f769b241309c34b611c59636b203b4bc4ba55f79), [`a378fbe`](https://github.com/NordcomInc/nordstar/commit/a378fbec14831646ff7a1d2099757425871c86c4), [`4c6e010`](https://github.com/NordcomInc/nordstar/commit/4c6e010e78229fac11cee649948ba202d5f35d7d), [`916781e`](https://github.com/NordcomInc/nordstar/commit/916781e4a44a9577f85b68ff80ca4ceaf2c48c39), [`e7b5099`](https://github.com/NordcomInc/nordstar/commit/e7b509957066c5dc65987cc0fead5082e38193c7), [`9c916c9`](https://github.com/NordcomInc/nordstar/commit/9c916c96bff06f7a522f7baec954cad846ba7c8a), [`2af6f72`](https://github.com/NordcomInc/nordstar/commit/2af6f720fa521efa63ef61e3d40b7d41951b6370), [`c8a3b77`](https://github.com/NordcomInc/nordstar/commit/c8a3b77634e42249957c03815f8d2c2635354a25), [`a1f39ab`](https://github.com/NordcomInc/nordstar/commit/a1f39ab90a0618dc28d862bbfc0beda8cc9644dc), [`ac6dd18`](https://github.com/NordcomInc/nordstar/commit/ac6dd18b20866c4033b8d56e01b69ea1a1eaed04), [`2eb404f`](https://github.com/NordcomInc/nordstar/commit/2eb404f104baffa2ff3f23bc1e4343155d1d796c), [`0c3f4e1`](https://github.com/NordcomInc/nordstar/commit/0c3f4e139ae18cded312865d58b6ebb423241737)]:
+    -   @nordcom/nordstar@0.0.56
+
 ## 0.0.55
 
 ### Patch Changes
