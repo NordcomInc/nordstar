@@ -1,5 +1,16 @@
 # @nordcom/nordstar-header
 
+## 0.0.57
+
+### Patch Changes
+
+-   [`818cbaa`](https://github.com/NordcomInc/nordstar/commit/818cbaa53a135f49c9d4236480ba142a89e0e92d) Thanks [@filiphsps](https://github.com/filiphsps)! - Add overflow scroll.
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-card@0.0.57
+    -   @nordcom/nordstar-view@0.0.57
+    -   @nordcom/nordstar-system@0.0.57
+
 ## 0.0.56
 
 ### Patch Changes
