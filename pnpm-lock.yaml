@@ -153,8 +153,8 @@ importers:
         specifier: 2.1.1
         version: 2.1.1(vite@5.4.0(@types/node@20.14.14)(sass@1.77.8))
       vite-tsconfig-paths:
-        specifier: 4.3.2
-        version: 4.3.2(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.14)(sass@1.77.8))
+        specifier: 5.0.1
+        version: 5.0.1(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.14)(sass@1.77.8))
       vitest:
         specifier: 2.0.5
         version: 2.0.5(@types/node@20.14.14)(happy-dom@14.12.3)(sass@1.77.8)
@@ -5641,8 +5641,8 @@ packages:
     peerDependencies:
       vite: '*'
 
-  vite-tsconfig-paths@4.3.2:
-    resolution: {integrity: sha512-0Vd/a6po6Q+86rPlntHye7F31zA2URZMbH8M3saAZ/xR9QoGN/L21bxEGfXdWmFdNkqPpRdxFT7nmNe12e9/uA==}
+  vite-tsconfig-paths@5.0.1:
+    resolution: {integrity: sha512-yqwv+LstU7NwPeNqajZzLEBVpUFU6Dugtb2P84FXuvaoYA+/70l9MHE+GYfYAycVyPSDYZ7mjOFuYBRqlEpTig==}
     peerDependencies:
       vite: '*'
     peerDependenciesMeta:
@@ -11719,7 +11719,7 @@ snapshots:
       picocolors: 1.0.1
       vite: 5.4.0(@types/node@20.14.14)(sass@1.77.8)
 
-  vite-tsconfig-paths@4.3.2(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.14)(sass@1.77.8)):
+  vite-tsconfig-paths@5.0.1(typescript@5.5.4)(vite@5.4.0(@types/node@20.14.14)(sass@1.77.8)):
     dependencies:
       debug: 4.3.6
       globrex: 0.1.2
