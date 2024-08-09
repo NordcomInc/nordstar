@@ -1,5 +1,12 @@
 # @nordcom/nordstar-docs
 
+## 0.0.58
+
+### Patch Changes
+
+-   Updated dependencies [[`0094d57`](https://github.com/NordcomInc/nordstar/commit/0094d57939d01385273900320f9ae9add4fd8ad9), [`405a031`](https://github.com/NordcomInc/nordstar/commit/405a031aeb109fbdda6e986516f55e66fe2eca70)]:
+    -   @nordcom/nordstar@0.0.58
+
 ## 0.0.57
 
 ### Patch Changes
