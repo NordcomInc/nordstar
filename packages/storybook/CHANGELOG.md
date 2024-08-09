@@ -1,5 +1,14 @@
 # @nordcom/nordstar-storybook
 
+## 0.0.58
+
+### Patch Changes
+
+-   [#758](https://github.com/NordcomInc/nordstar/pull/758) [`405a031`](https://github.com/NordcomInc/nordstar/commit/405a031aeb109fbdda6e986516f55e66fe2eca70) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.4.0.
+
+-   Updated dependencies [[`0094d57`](https://github.com/NordcomInc/nordstar/commit/0094d57939d01385273900320f9ae9add4fd8ad9), [`405a031`](https://github.com/NordcomInc/nordstar/commit/405a031aeb109fbdda6e986516f55e66fe2eca70)]:
+    -   @nordcom/nordstar@0.0.58
+
 ## 0.0.57
 
 ### Patch Changes
