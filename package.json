@@ -121,7 +121,7 @@
     },
     "overrides": {
         "@typescript-eslint/typescript-estree": "8.0.0",
-        "esbuild": "0.23.0",
+        "esbuild": "0.23.1",
         "psl": "npm:@filiphsandstrom/psl@2.0.0"
     },
     "trustedDependencies": [
