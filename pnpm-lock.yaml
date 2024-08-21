@@ -21,8 +21,8 @@ importers:
         specifier: 0.0.1-beta.10
         version: 0.0.1-beta.10(vite@5.4.0(@types/node@20.16.1)(sass@1.77.8))
       '@happy-dom/global-registrator':
-        specifier: 14.12.3
-        version: 14.12.3
+        specifier: 15.0.0
+        version: 15.0.0
       '@nordcom/prettier':
         specifier: 0.1.1
         version: 0.1.1
@@ -1582,9 +1582,9 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@happy-dom/global-registrator@14.12.3':
-    resolution: {integrity: sha512-VL6mjnIhqD1l9zYBmdIx5Q3qNiNY0ZBByrDV2Z7hHDMsjhqwaVI2/uQZ7uyCsgRWvubSG1yZ74sEK2inDBBw/w==}
-    engines: {node: '>=16.0.0'}
+  '@happy-dom/global-registrator@15.0.0':
+    resolution: {integrity: sha512-gTAQty3Wlo+VBC58FGQbnecJ+kSLP+gX9mN22zI2JkGCQxvBj0694dP57ANdfaN+uYcyJ2f1jhY8KU5OUlfO0w==}
+    engines: {node: '>=18.0.0'}
 
   '@humanwhocodes/config-array@0.11.14':
     resolution: {integrity: sha512-3T8LkOmg45BV5FICb15QQMsyUSWrQ8AygVfC7ZG32zOalnqrilm018ZVCw0eapXux8FtA33q8PSRSstjee3jSg==}
@@ -3588,6 +3588,10 @@ packages:
   happy-dom@14.12.3:
     resolution: {integrity: sha512-vsYlEs3E9gLwA1Hp+w3qzu+RUDFf4VTT8cyKqVICoZ2k7WM++Qyd2LwzyTi5bqMJFiIC/vNpTDYuxdreENRK/g==}
     engines: {node: '>=16.0.0'}
+
+  happy-dom@15.0.0:
+    resolution: {integrity: sha512-DsvANUcxxY20iCo3Yllm7dqwzPVPduGfVFxa7mONwMBLczFeQgkN0LpDir1kIY322JMh+hrcPV3aGLyHCESDlA==}
+    engines: {node: '>=18.0.0'}
 
   has-ansi@2.0.0:
     resolution: {integrity: sha512-C8vBJ8DwUCx19vhm7urhTuUsr4/IyP6l4VzNQDv+ryHQObW3TTTp9yB68WpYgRe2bbaGuZ/se74IqFeVnMnLZg==}
@@ -7021,9 +7025,9 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
-  '@happy-dom/global-registrator@14.12.3':
+  '@happy-dom/global-registrator@15.0.0':
     dependencies:
-      happy-dom: 14.12.3
+      happy-dom: 15.0.0
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
@@ -9552,6 +9556,12 @@ snapshots:
       uglify-js: 3.19.1
 
   happy-dom@14.12.3:
+    dependencies:
+      entities: 4.5.0
+      webidl-conversions: 7.0.0
+      whatwg-mimetype: 3.0.0
+
+  happy-dom@15.0.0:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
