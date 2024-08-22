@@ -127,5 +127,5 @@
     "trustedDependencies": [
         "spawn-sync"
     ],
-    "packageManager": "pnpm@9.7.1"
+    "packageManager": "pnpm@9.8.0"
 }
