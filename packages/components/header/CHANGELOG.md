@@ -1,5 +1,30 @@
 # @nordcom/nordstar-header
 
+## 0.0.58
+
+### Patch Changes
+
+-   [`0094d57`](https://github.com/NordcomInc/nordstar/commit/0094d57939d01385273900320f9ae9add4fd8ad9) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix engines field.
+
+-   [#758](https://github.com/NordcomInc/nordstar/pull/758) [`405a031`](https://github.com/NordcomInc/nordstar/commit/405a031aeb109fbdda6e986516f55e66fe2eca70) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.4.0.
+
+-   [#762](https://github.com/NordcomInc/nordstar/pull/762) [`515e27a`](https://github.com/NordcomInc/nordstar/commit/515e27ac66e9cea6415b02a751076cf48d1044cc) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.14.15.
+
+-   [#774](https://github.com/NordcomInc/nordstar/pull/774) [`ff15a5b`](https://github.com/NordcomInc/nordstar/commit/ff15a5bab61c2411245dfe4c089da31c6fe9c6af) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.15.0.
+
+-   [#776](https://github.com/NordcomInc/nordstar/pull/776) [`022cd26`](https://github.com/NordcomInc/nordstar/commit/022cd2671a78bff0cff204ca50acd8a3c0c1ae2c) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.16.0.
+
+-   [#777](https://github.com/NordcomInc/nordstar/pull/777) [`205f3ce`](https://github.com/NordcomInc/nordstar/commit/205f3ce3bac654743934c16be440d420bc293297) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.16.1.
+
+-   [#779](https://github.com/NordcomInc/nordstar/pull/779) [`8606051`](https://github.com/NordcomInc/nordstar/commit/86060510d1e8042b954897cb6c20705e7bd11a02) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.3.4.
+
+-   [`6dc2efe`](https://github.com/NordcomInc/nordstar/commit/6dc2efea402461ec24b0ab60241b37a6775f7cf5) Thanks [@filiphsps](https://github.com/filiphsps)! - Make overflow shadow customizable.
+
+-   Updated dependencies [[`0094d57`](https://github.com/NordcomInc/nordstar/commit/0094d57939d01385273900320f9ae9add4fd8ad9), [`405a031`](https://github.com/NordcomInc/nordstar/commit/405a031aeb109fbdda6e986516f55e66fe2eca70), [`515e27a`](https://github.com/NordcomInc/nordstar/commit/515e27ac66e9cea6415b02a751076cf48d1044cc), [`ff15a5b`](https://github.com/NordcomInc/nordstar/commit/ff15a5bab61c2411245dfe4c089da31c6fe9c6af), [`022cd26`](https://github.com/NordcomInc/nordstar/commit/022cd2671a78bff0cff204ca50acd8a3c0c1ae2c), [`205f3ce`](https://github.com/NordcomInc/nordstar/commit/205f3ce3bac654743934c16be440d420bc293297), [`8606051`](https://github.com/NordcomInc/nordstar/commit/86060510d1e8042b954897cb6c20705e7bd11a02), [`6dc2efe`](https://github.com/NordcomInc/nordstar/commit/6dc2efea402461ec24b0ab60241b37a6775f7cf5)]:
+    -   @nordcom/nordstar-card@0.0.58
+    -   @nordcom/nordstar-view@0.0.58
+    -   @nordcom/nordstar-system@0.0.58
+
 ## 0.0.57
 
 ### Patch Changes
