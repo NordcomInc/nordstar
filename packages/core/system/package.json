@@ -82,7 +82,7 @@
     },
     "dependencies": {
         "clsx": "2.1.1",
-        "the-new-css-reset": "1.11.2"
+        "the-new-css-reset": "1.11.3"
     },
     "peerDependencies": {
         "react": ">=18",
