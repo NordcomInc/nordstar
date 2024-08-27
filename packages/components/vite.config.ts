@@ -15,7 +15,7 @@ export default mergeConfig(
         root: resolve(__dirname),
         build: {
             rollupOptions: {
-                external: [/^@nordcom\/nordstar-/]
+                external: [/^@nordcom\/nordstar-/, 'clsx']
             }
         },
         plugins: [

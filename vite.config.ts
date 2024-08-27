@@ -66,7 +66,7 @@ export default defineConfig({
         target: 'esnext',
         rollupOptions: {
             external: [/^@nordcom\/nordstar-/, 'clsx'],
-            treeshake: 'recommended',
+            treeshake: false,
             output: {
                 intro: (chunk) => {
                     if (chunk.isEntry && chunk.facadeModuleId?.endsWith('.tsx')) {
@@ -84,7 +84,6 @@ export default defineConfig({
                 minifyInternalExports: false,
                 preserveModules: false,
                 preserveModulesRoot: 'src',
-                sourcemapExcludeSources: false,
                 strict: true,
                 validate: true
             },
@@ -92,7 +91,7 @@ export default defineConfig({
         }
     },
     esbuild: {
-        jsx: 'automatic'
+        jsx: 'preserve'
     },
     plugins: [
         react(),
@@ -104,8 +103,9 @@ export default defineConfig({
             copyDtsFiles: true,
             entryRoot: 'src',
             include: ['**/src', `${__dirname}/@types/declaration.d.ts`],
-            bundledPackages: ['@nordcom/*'],
             insertTypesEntry: true,
+            staticImport: true,
+            pathsToAliases: true,
             tsconfigPath: `${__dirname}/tsconfig.json`
         })
     ]

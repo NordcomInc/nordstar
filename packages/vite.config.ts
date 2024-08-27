@@ -32,7 +32,7 @@ export default mergeConfig(
                 formats: ['es']
             },
             rollupOptions: {
-                external: ['react', 'react/jsx-runtime', 'react-dom'],
+                external: ['react', 'react/jsx-runtime', 'react-dom', 'clsx'],
                 input: input,
                 output: {
                     globals: { react: 'React', 'react-dom': 'ReactDOM' }

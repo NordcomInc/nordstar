@@ -5,7 +5,14 @@
     "tasks": {
         "build": {
             "dependsOn": ["^build"],
-            "outputs": [".next/**", "!.next/cache/**", "dist/**", "lib/**", "storybook-static/**"]
+            "outputs": [
+                ".next/**",
+                "!.next/cache/**",
+                "dist/**",
+                "lib/**",
+                "storybook-static/**",
+                "packages/**/package.json"
+            ]
         },
         "clean": {
             "cache": false

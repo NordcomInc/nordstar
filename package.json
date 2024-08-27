@@ -17,7 +17,6 @@
         "docs"
     ],
     "scripts": {
-        "prepare": "husky install",
         "dev": "concurrently -i pnpm:dev:*",
         "dev:docs": "turbo dev --filter=@nordcom/nordstar-docs",
         "dev:storybook": "turbo dev --filter=@nordcom/nordstar-storybook",
@@ -98,7 +97,6 @@
         "eslint-plugin-unused-imports": "4.1.3",
         "glob": "11.0.0",
         "happy-dom": "15.0.0",
-        "husky": "9.1.5",
         "inquirer": "10.1.8",
         "inquirer-directory": "2.2.0",
         "lint-staged": "15.2.9",
