@@ -58,23 +58,16 @@ export default defineConfig({
     build: {
         copyPublicDir: false,
         cssCodeSplit: true,
-        cssMinify: false,
+        cssMinify: true,
         emptyOutDir: true,
         minify: false,
         outDir: 'dist',
         sourcemap: true,
         target: 'esnext',
         rollupOptions: {
-            external: [/^@nordcom\/nordstar-/],
-            treeshake: false,
+            external: [/^@nordcom\/nordstar-/, 'clsx'],
+            treeshake: 'recommended',
             output: {
-                assetFileNames: ({ name }) => {
-                    if (name && !['.css'].every((ext) => !name.includes(ext))) {
-                        return 'index.css';
-                    }
-
-                    return 'assets/[name][extname]';
-                },
                 intro: (chunk) => {
                     if (chunk.isEntry && chunk.facadeModuleId?.endsWith('.tsx')) {
                         return `import 'react';`;
@@ -82,24 +75,15 @@ export default defineConfig({
 
                     return '';
                 },
-                chunkFileNames: 'chunks/[name].[hash].js',
-                entryFileNames: '[name].js',
-                generatedCode: {
-                    arrowFunctions: true,
-                    constBindings: true,
-                    objectShorthand: true,
-                    preset: 'es2015',
-                    reservedNamesAsProps: true,
-                    symbols: true
-                },
                 esModule: true,
-                exports: 'named',
+                exports: 'auto',
                 format: 'esm',
-                freeze: false,
                 hoistTransitiveImports: false,
                 interop: 'esModule',
-                minifyInternalExports: true,
+                noConflict: true,
+                minifyInternalExports: false,
                 preserveModules: false,
+                preserveModulesRoot: 'src',
                 sourcemapExcludeSources: false,
                 strict: true,
                 validate: true
@@ -119,11 +103,9 @@ export default defineConfig({
             clearPureImport: false,
             copyDtsFiles: true,
             entryRoot: 'src',
-            include: ['**/src'],
+            include: ['**/src', `${__dirname}/@types/declaration.d.ts`],
+            bundledPackages: ['@nordcom/*'],
             insertTypesEntry: true,
-            logLevel: 'info',
-            rollupTypes: false,
-            staticImport: true,
             tsconfigPath: `${__dirname}/tsconfig.json`
         })
     ]

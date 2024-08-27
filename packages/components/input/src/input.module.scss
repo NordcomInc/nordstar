@@ -32,7 +32,9 @@
                 --color-highlight: var(--color-foreground);
             }
 
-            border-color: var(--color);
+            & {
+                border-color: var(--color);
+            }
 
             .label {
                 color: var(--color);

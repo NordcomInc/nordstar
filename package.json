@@ -23,7 +23,7 @@
         "dev:storybook": "turbo dev --filter=@nordcom/nordstar-storybook",
         "build": "turbo build",
         "build:docs": "turbo build --filter=@nordcom/nordstar-docs",
-        "build:packages": "turbo build --filter=!@nordcom/nordstar-docs --filter=!@nordcom/nordstar-storybook",
+        "build:packages": "turbo build --filter=!@nordcom/nordstar-docs --filter=!@nordcom/nordstar-storybook --no-cache",
         "build:storybook": "turbo build --filter=@nordcom/nordstar-storybook",
         "typecheck": "turbo typecheck",
         "lint": "eslint **/*.{ts,tsx}",
@@ -113,10 +113,11 @@
         "strip-ansi": "7.1.0",
         "turbo": "2.1.0",
         "typescript": "5.5.4",
-        "vite": "5.4.0",
+        "typescript-plugin-css-modules": "5.1.0",
         "vite-plugin-dts": "4.0.3",
         "vite-plugin-lib-inject-css": "2.1.1",
         "vite-tsconfig-paths": "4.3.2",
+        "vite": "5.4.2",
         "vitest": "2.0.5"
     },
     "overrides": {
