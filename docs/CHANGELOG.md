@@ -1,5 +1,14 @@
 # @nordcom/nordstar-docs
 
+## 0.0.59
+
+### Patch Changes
+
+-   [#789](https://github.com/NordcomInc/nordstar/pull/789) [`acfa122`](https://github.com/NordcomInc/nordstar/commit/acfa12286baf7aea8f2dddfab137a93a37aa05ca) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency next to v14.2.7.
+
+-   Updated dependencies [[`762574c`](https://github.com/NordcomInc/nordstar/commit/762574caaf33cf998c4fa7defcbd3312df0a4553)]:
+    -   @nordcom/nordstar@0.0.59
+
 ## 0.0.58
 
 ### Patch Changes
