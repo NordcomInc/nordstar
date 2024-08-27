@@ -111,7 +111,7 @@
         "rollup-preserve-directives": "1.1.1",
         "sass": "1.77.8",
         "strip-ansi": "7.1.0",
-        "turbo": "2.0.14",
+        "turbo": "2.1.0",
         "typescript": "5.5.4",
         "vite": "5.4.0",
         "vite-plugin-dts": "4.0.3",
