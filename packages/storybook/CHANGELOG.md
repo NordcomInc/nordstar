@@ -1,5 +1,16 @@
 # @nordcom/nordstar-storybook
 
+## 0.0.59
+
+### Patch Changes
+
+-   [#756](https://github.com/NordcomInc/nordstar/pull/756) [`fa5f139`](https://github.com/NordcomInc/nordstar/commit/fa5f139e05ebe1d928299e058259dc355db97e4c) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update storybook monorepo to v8.2.9.
+
+-   [`762574c`](https://github.com/NordcomInc/nordstar/commit/762574caaf33cf998c4fa7defcbd3312df0a4553) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix `css` module inclusions.
+
+-   Updated dependencies [[`762574c`](https://github.com/NordcomInc/nordstar/commit/762574caaf33cf998c4fa7defcbd3312df0a4553)]:
+    -   @nordcom/nordstar@0.0.59
+
 ## 0.0.58
 
 ### Patch Changes

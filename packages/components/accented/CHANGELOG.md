@@ -1,5 +1,14 @@
 # @nordcom/nordstar-accented
 
+## 0.0.59
+
+### Patch Changes
+
+-   [`762574c`](https://github.com/NordcomInc/nordstar/commit/762574caaf33cf998c4fa7defcbd3312df0a4553) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix `css` module inclusions.
+
+-   Updated dependencies [[`c53ba82`](https://github.com/NordcomInc/nordstar/commit/c53ba82cb902f93e3c66843fa862b30be6f62f0f), [`762574c`](https://github.com/NordcomInc/nordstar/commit/762574caaf33cf998c4fa7defcbd3312df0a4553)]:
+    -   @nordcom/nordstar-system@0.0.59
+
 ## 0.0.58
 
 ### Patch Changes
