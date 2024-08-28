@@ -1,5 +1,16 @@
 # @nordcom/nordstar-card
 
+## 0.0.60
+
+### Patch Changes
+
+-   [#791](https://github.com/NordcomInc/nordstar/pull/791) [`15f44fb`](https://github.com/NordcomInc/nordstar/commit/15f44fb32c13314ebe6e00ff60fe7541f9869586) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.16.2.
+
+-   [`d17b2e0`](https://github.com/NordcomInc/nordstar/commit/d17b2e064772fd4157c82af59397c0799ed49f23) Thanks [@filiphsps](https://github.com/filiphsps)! - Meta: Change codegen slightly.
+
+-   Updated dependencies [[`15f44fb`](https://github.com/NordcomInc/nordstar/commit/15f44fb32c13314ebe6e00ff60fe7541f9869586), [`d17b2e0`](https://github.com/NordcomInc/nordstar/commit/d17b2e064772fd4157c82af59397c0799ed49f23)]:
+    -   @nordcom/nordstar-system@0.0.60
+
 ## 0.0.59
 
 ### Patch Changes
