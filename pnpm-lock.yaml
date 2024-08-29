@@ -21,8 +21,8 @@ importers:
         specifier: 0.0.1-beta.10
         version: 0.0.1-beta.10(vite@5.4.2(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
       '@happy-dom/global-registrator':
-        specifier: 15.4.2
-        version: 15.4.2
+        specifier: 15.4.3
+        version: 15.4.3
       '@nordcom/prettier':
         specifier: 0.1.1
         version: 0.1.1
@@ -1585,8 +1585,8 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@happy-dom/global-registrator@15.4.2':
-    resolution: {integrity: sha512-9IZrq7ehtfOXVukgijyoo925u4eBxf16RZtI4wxesFjSG6zuFGJfRoisPCx1A9YOQJnxzi66yACh9qpBGbf6hA==}
+  '@happy-dom/global-registrator@15.4.3':
+    resolution: {integrity: sha512-8iqfJKbRjbszLFNKIq63IIbomOXuZl+sradJYJBszAqhXNqjtmf7oMcE7WMfxGctuhPUY9X5AXbDXuizrOk/ag==}
     engines: {node: '>=18.0.0'}
 
   '@humanwhocodes/config-array@0.11.14':
@@ -3615,8 +3615,8 @@ packages:
     resolution: {integrity: sha512-3nwi8abkBUHzdq/6UhseErN6b6J1obWZFl5XKKMUEp+OL4Vq7AIiLSVDmXQp83qykJHjhdrBxsae3CTA5nB36A==}
     engines: {node: '>=18.0.0'}
 
-  happy-dom@15.4.2:
-    resolution: {integrity: sha512-51hYdtgiPcXQ3Rqs5THI3Rj8UMH75syfIIzubXxPkn85nGdgU2Y9u57qjQS2Vu+HKsPxYr8mFgxwHjlluZNk8w==}
+  happy-dom@15.5.0:
+    resolution: {integrity: sha512-c8N0Klh92d7/C55erpCxplUtHGs/6r/keEdyed2HLgKNeOL/BdwflAkovHzbs1axyUmUqucddX8bLK3LpvhFww==}
     engines: {node: '>=18.0.0'}
 
   has-ansi@2.0.0:
@@ -7153,9 +7153,9 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
-  '@happy-dom/global-registrator@15.4.2':
+  '@happy-dom/global-registrator@15.4.3':
     dependencies:
-      happy-dom: 15.4.2
+      happy-dom: 15.5.0
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
@@ -9706,7 +9706,7 @@ snapshots:
       webidl-conversions: 7.0.0
       whatwg-mimetype: 3.0.0
 
-  happy-dom@15.4.2:
+  happy-dom@15.5.0:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
