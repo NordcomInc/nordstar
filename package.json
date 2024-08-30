@@ -71,7 +71,7 @@
         "@changesets/cli": "2.27.7",
         "@changesets/types": "6.0.0",
         "@codecov/vite-plugin": "0.0.1-beta.10",
-        "@happy-dom/global-registrator": "15.6.0",
+        "@happy-dom/global-registrator": "15.7.0",
         "@nordcom/prettier": "0.1.1",
         "@storybook/react": "8.2.9",
         "@testing-library/jest-dom": "6.5.0",
