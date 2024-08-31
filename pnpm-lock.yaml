@@ -21,8 +21,8 @@ importers:
         specifier: 0.0.1-beta.10
         version: 0.0.1-beta.10(vite@5.4.2(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
       '@happy-dom/global-registrator':
-        specifier: 15.7.1
-        version: 15.7.1
+        specifier: 15.7.2
+        version: 15.7.2
       '@nordcom/prettier':
         specifier: 0.1.1
         version: 0.1.1
@@ -1585,8 +1585,8 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@happy-dom/global-registrator@15.7.1':
-    resolution: {integrity: sha512-OORSfO9SOGt8qX907UvKLx7r2FrjSaDCgP3QKP4doyl/KEWblZGJ6FgvuTtfmHWQmnJhSQcz9sgxBXIprTWa+Q==}
+  '@happy-dom/global-registrator@15.7.2':
+    resolution: {integrity: sha512-QFmwhO8hLEx38QlffPW63Ifr6+j8Q7VzRu3JWisItCLPc+DQdj6BJ04tYD4pI6D0g3NBJ1edpHGpK4SHIWruWw==}
     engines: {node: '>=18.0.0'}
 
   '@humanwhocodes/config-array@0.11.14':
@@ -7153,7 +7153,7 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
-  '@happy-dom/global-registrator@15.7.1':
+  '@happy-dom/global-registrator@15.7.2':
     dependencies:
       happy-dom: 15.7.2
 
