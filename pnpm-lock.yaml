@@ -21,8 +21,8 @@ importers:
         specifier: 0.0.1-beta.10
         version: 0.0.1-beta.10(vite@5.4.2(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
       '@happy-dom/global-registrator':
-        specifier: 15.7.2
-        version: 15.7.2
+        specifier: 15.7.3
+        version: 15.7.3
       '@nordcom/prettier':
         specifier: 0.1.1
         version: 0.1.1
@@ -1585,8 +1585,8 @@ packages:
     resolution: {integrity: sha512-Ys+3g2TaW7gADOJzPt83SJtCDhMjndcDMFVQ/Tj9iA1BfJzFKD9mAUXT3OenpuPHbI6P/myECxRJrofUsDx/5g==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
 
-  '@happy-dom/global-registrator@15.7.2':
-    resolution: {integrity: sha512-QFmwhO8hLEx38QlffPW63Ifr6+j8Q7VzRu3JWisItCLPc+DQdj6BJ04tYD4pI6D0g3NBJ1edpHGpK4SHIWruWw==}
+  '@happy-dom/global-registrator@15.7.3':
+    resolution: {integrity: sha512-pxhR1xWFSU/Jtycar/ErXOFoheasVKLm7iFJb9zVwz8eGQ0dr3UBvjrtzloQEwXxomGGXUNgTOhGwPnkiCq2Ag==}
     engines: {node: '>=18.0.0'}
 
   '@humanwhocodes/config-array@0.11.14':
@@ -3613,6 +3613,10 @@ packages:
 
   happy-dom@15.7.2:
     resolution: {integrity: sha512-ZU4a27Sj+J7fgd+Kx3PVZ5NbANQxQS4gGZ1SaNMA4zvSDB5ZNkXg4UHLCkMko0fogg9XowI4f51p5FzgDfhVeQ==}
+    engines: {node: '>=18.0.0'}
+
+  happy-dom@15.7.3:
+    resolution: {integrity: sha512-w3RUaYNXFJX5LiNVhOJLK4GqCB1bFj1FvELtpon3HrN8gUpS09V0Vvm4/BBRRj7mLUE1+ch8PKv1JxEp/0IHjA==}
     engines: {node: '>=18.0.0'}
 
   has-ansi@2.0.0:
@@ -7153,9 +7157,9 @@ snapshots:
 
   '@eslint/js@8.57.0': {}
 
-  '@happy-dom/global-registrator@15.7.2':
+  '@happy-dom/global-registrator@15.7.3':
     dependencies:
-      happy-dom: 15.7.2
+      happy-dom: 15.7.3
 
   '@humanwhocodes/config-array@0.11.14':
     dependencies:
@@ -9701,6 +9705,12 @@ snapshots:
       uglify-js: 3.19.1
 
   happy-dom@15.7.2:
+    dependencies:
+      entities: 4.5.0
+      webidl-conversions: 7.0.0
+      whatwg-mimetype: 3.0.0
+
+  happy-dom@15.7.3:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
