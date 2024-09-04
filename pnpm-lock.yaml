@@ -19,7 +19,7 @@ importers:
         version: 6.0.0
       '@codecov/vite-plugin':
         specifier: 0.0.1-beta.10
-        version: 0.0.1-beta.10(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
+        version: 0.0.1-beta.10(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))
       '@happy-dom/global-registrator':
         specifier: 15.7.3
         version: 15.7.3
@@ -55,10 +55,10 @@ importers:
         version: 8.0.0(eslint@8.57.0)(typescript@5.5.4)
       '@vitejs/plugin-react':
         specifier: 4.3.1
-        version: 4.3.1(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
+        version: 4.3.1(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))
       '@vitest/coverage-v8':
         specifier: 2.0.5
-        version: 2.0.5(vitest@2.0.5(@types/node@20.16.2)(happy-dom@15.7.3)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
+        version: 2.0.5(vitest@2.0.5(@types/node@20.16.2)(happy-dom@15.7.3)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))
       chalk:
         specifier: 5.3.0
         version: 5.3.0
@@ -129,8 +129,8 @@ importers:
         specifier: 1.1.1
         version: 1.1.1(rollup@4.21.1)
       sass:
-        specifier: 1.77.8
-        version: 1.77.8
+        specifier: 1.78.0
+        version: 1.78.0
       strip-ansi:
         specifier: 7.1.0
         version: 7.1.0
@@ -145,19 +145,19 @@ importers:
         version: 5.1.0(typescript@5.5.4)
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
       vite-plugin-dts:
         specifier: 4.1.0
-        version: 4.1.0(@types/node@20.16.2)(rollup@4.21.1)(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
+        version: 4.1.0(@types/node@20.16.2)(rollup@4.21.1)(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))
       vite-plugin-lib-inject-css:
         specifier: 2.1.1
-        version: 2.1.1(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
+        version: 2.1.1(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))
       vite-tsconfig-paths:
         specifier: 4.3.2
-        version: 4.3.2(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
+        version: 4.3.2(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))
       vitest:
         specifier: 2.0.5
-        version: 2.0.5(@types/node@20.16.2)(happy-dom@15.7.3)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 2.0.5(@types/node@20.16.2)(happy-dom@15.7.3)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   docs:
     dependencies:
@@ -166,7 +166,7 @@ importers:
         version: link:../packages/core/nordstar
       next:
         specifier: 14.2.7
-        version: 14.2.7(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.8)
+        version: 14.2.7(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.78.0)
       react:
         specifier: 18.3.1
         version: 18.3.1
@@ -213,7 +213,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   packages/components/button:
     dependencies:
@@ -247,7 +247,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   packages/components/card:
     dependencies:
@@ -281,7 +281,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   packages/components/details:
     dependencies:
@@ -321,7 +321,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   packages/components/header:
     dependencies:
@@ -361,7 +361,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   packages/components/heading:
     dependencies:
@@ -395,7 +395,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   packages/components/input:
     dependencies:
@@ -429,7 +429,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   packages/components/label:
     dependencies:
@@ -463,7 +463,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   packages/components/view:
     dependencies:
@@ -497,7 +497,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   packages/core/nordstar:
     dependencies:
@@ -558,7 +558,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   packages/core/system:
     dependencies:
@@ -595,7 +595,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   packages/storybook:
     dependencies:
@@ -626,7 +626,7 @@ importers:
         version: 8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)
       '@storybook/react-vite':
         specifier: 8.2.9
-        version: 8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.21.1)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
+        version: 8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.21.1)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))
       '@types/node':
         specifier: 20.16.2
         version: 20.16.2
@@ -638,7 +638,7 @@ importers:
         version: 18.3.0
       '@vitejs/plugin-react':
         specifier: 4.3.1
-        version: 4.3.1(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
+        version: 4.3.1(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))
       prettier:
         specifier: 3.3.3
         version: 3.3.3
@@ -650,7 +650,7 @@ importers:
         version: 5.5.4
       vite:
         specifier: 5.4.3
-        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+        version: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
 packages:
 
@@ -5127,8 +5127,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  sass@1.77.8:
-    resolution: {integrity: sha512-4UHg6prsrycW20fqLGPShtEvo/WyHRVRHwOP4DzkUrObWoWI05QBSfzU71TVB7PFaL104TwNaHpjlWXAZbQiNQ==}
+  sass@1.78.0:
+    resolution: {integrity: sha512-AaIqGSrjo5lA2Yg7RvFZrlXDBCp3nV4XP73GrLGvdRWWwk+8H3l0SDvq/5bA4eF+0RFPLuWUk3E+P1U/YqnpsQ==}
     engines: {node: '>=14.0.0'}
     hasBin: true
 
@@ -7057,11 +7057,11 @@ snapshots:
       unplugin: 1.12.0
       zod: 3.23.8
 
-  '@codecov/vite-plugin@0.0.1-beta.10(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))':
+  '@codecov/vite-plugin@0.0.1-beta.10(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))':
     dependencies:
       '@codecov/bundler-plugin-core': 0.0.1-beta.10
       unplugin: 1.12.0
-      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
   '@es-joy/jsdoccomment@0.48.0':
     dependencies:
@@ -7289,13 +7289,13 @@ snapshots:
     dependencies:
       '@sinclair/typebox': 0.27.8
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.3.1(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.3.1(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))':
     dependencies:
       glob: 7.2.3
       glob-promise: 4.2.2(glob@7.2.3)
       magic-string: 0.27.0
       react-docgen-typescript: 2.2.2(typescript@5.5.4)
-      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
     optionalDependencies:
       typescript: 5.5.4
 
@@ -7622,7 +7622,7 @@ snapshots:
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
 
-  '@storybook/builder-vite@8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))':
+  '@storybook/builder-vite@8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))':
     dependencies:
       '@storybook/csf-plugin': 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))
       '@types/find-cache-dir': 3.2.1
@@ -7634,7 +7634,7 @@ snapshots:
       magic-string: 0.30.11
       storybook: 8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))
       ts-dedent: 2.2.0
-      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
     optionalDependencies:
       typescript: 5.5.4
     transitivePeerDependencies:
@@ -7733,11 +7733,11 @@ snapshots:
       react-dom: 18.3.1(react@18.3.1)
       storybook: 8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))
 
-  '@storybook/react-vite@8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.21.1)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))':
+  '@storybook/react-vite@8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(rollup@4.21.1)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))':
     dependencies:
-      '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
+      '@joshwooding/vite-plugin-react-docgen-typescript': 0.3.1(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))
       '@rollup/pluginutils': 5.1.0(rollup@4.21.1)
-      '@storybook/builder-vite': 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))
+      '@storybook/builder-vite': 8.2.9(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))
       '@storybook/react': 8.2.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(storybook@8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2)))(typescript@5.5.4)
       find-up: 5.0.0
       magic-string: 0.30.11
@@ -7747,7 +7747,7 @@ snapshots:
       resolve: 1.22.8
       storybook: 8.2.9(@babel/preset-env@7.25.3(@babel/core@7.25.2))
       tsconfig-paths: 4.2.0
-      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
     transitivePeerDependencies:
       - '@preact/preset-vite'
       - rollup
@@ -8120,18 +8120,18 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vitejs/plugin-react@4.3.1(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))':
+  '@vitejs/plugin-react@4.3.1(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))':
     dependencies:
       '@babel/core': 7.25.2
       '@babel/plugin-transform-react-jsx-self': 7.24.7(@babel/core@7.25.2)
       '@babel/plugin-transform-react-jsx-source': 7.24.7(@babel/core@7.25.2)
       '@types/babel__core': 7.20.5
       react-refresh: 0.14.2
-      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-v8@2.0.5(vitest@2.0.5(@types/node@20.16.2)(happy-dom@15.7.3)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0))':
+  '@vitest/coverage-v8@2.0.5(vitest@2.0.5(@types/node@20.16.2)(happy-dom@15.7.3)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -8145,7 +8145,7 @@ snapshots:
       std-env: 3.7.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.0.5(@types/node@20.16.2)(happy-dom@15.7.3)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+      vitest: 2.0.5(@types/node@20.16.2)(happy-dom@15.7.3)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -10506,7 +10506,7 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next@14.2.7(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.77.8):
+  next@14.2.7(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.78.0):
     dependencies:
       '@next/env': 14.2.7
       '@swc/helpers': 0.5.5
@@ -10527,7 +10527,7 @@ snapshots:
       '@next/swc-win32-arm64-msvc': 14.2.7
       '@next/swc-win32-ia32-msvc': 14.2.7
       '@next/swc-win32-x64-msvc': 14.2.7
-      sass: 1.77.8
+      sass: 1.78.0
     transitivePeerDependencies:
       - '@babel/core'
       - babel-plugin-macros
@@ -11279,7 +11279,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  sass@1.77.8:
+  sass@1.78.0:
     dependencies:
       chokidar: 3.6.0
       immutable: 4.3.7
@@ -11849,7 +11849,7 @@ snapshots:
       postcss-modules-local-by-default: 4.0.5(postcss@8.4.41)
       postcss-modules-scope: 3.2.0(postcss@8.4.41)
       reserved-words: 0.1.2
-      sass: 1.77.8
+      sass: 1.78.0
       source-map-js: 1.2.0
       stylus: 0.62.0
       tsconfig-paths: 4.2.0
@@ -11965,13 +11965,13 @@ snapshots:
 
   vary@1.1.2: {}
 
-  vite-node@2.0.5(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0):
+  vite-node@2.0.5(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0):
     dependencies:
       cac: 6.7.14
       debug: 4.3.6
       pathe: 1.1.2
       tinyrainbow: 1.2.0
-      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
     transitivePeerDependencies:
       - '@types/node'
       - less
@@ -11983,7 +11983,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-dts@4.1.0(@types/node@20.16.2)(rollup@4.21.1)(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)):
+  vite-plugin-dts@4.1.0(@types/node@20.16.2)(rollup@4.21.1)(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)):
     dependencies:
       '@microsoft/api-extractor': 7.47.4(@types/node@20.16.2)
       '@rollup/pluginutils': 5.1.0(rollup@4.21.1)
@@ -11997,31 +11997,31 @@ snapshots:
       typescript: 5.5.4
       vue-tsc: 2.0.29(typescript@5.5.4)
     optionalDependencies:
-      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
     transitivePeerDependencies:
       - '@types/node'
       - rollup
       - supports-color
 
-  vite-plugin-lib-inject-css@2.1.1(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)):
+  vite-plugin-lib-inject-css@2.1.1(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)):
     dependencies:
       '@ast-grep/napi': 0.22.6
       magic-string: 0.30.11
       picocolors: 1.0.1
-      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
 
-  vite-tsconfig-paths@4.3.2(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)):
+  vite-tsconfig-paths@4.3.2(typescript@5.5.4)(vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)):
     dependencies:
       debug: 4.3.6
       globrex: 0.1.2
       tsconfck: 3.1.1(typescript@5.5.4)
     optionalDependencies:
-      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
     transitivePeerDependencies:
       - supports-color
       - typescript
 
-  vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0):
+  vite@5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0):
     dependencies:
       esbuild: 0.21.5
       postcss: 8.4.44
@@ -12030,10 +12030,10 @@ snapshots:
       '@types/node': 20.16.2
       fsevents: 2.3.3
       less: 4.2.0
-      sass: 1.77.8
+      sass: 1.78.0
       stylus: 0.62.0
 
-  vitest@2.0.5(@types/node@20.16.2)(happy-dom@15.7.3)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0):
+  vitest@2.0.5(@types/node@20.16.2)(happy-dom@15.7.3)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0):
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@vitest/expect': 2.0.5
@@ -12051,8 +12051,8 @@ snapshots:
       tinybench: 2.9.0
       tinypool: 1.0.0
       tinyrainbow: 1.2.0
-      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
-      vite-node: 2.0.5(@types/node@20.16.2)(less@4.2.0)(sass@1.77.8)(stylus@0.62.0)
+      vite: 5.4.3(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
+      vite-node: 2.0.5(@types/node@20.16.2)(less@4.2.0)(sass@1.78.0)(stylus@0.62.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 20.16.2
