@@ -97,7 +97,7 @@
         "eslint-plugin-unused-imports": "4.1.3",
         "glob": "11.0.0",
         "happy-dom": "15.7.3",
-        "inquirer": "10.2.1",
+        "inquirer": "10.2.2",
         "inquirer-directory": "2.2.0",
         "lint-staged": "15.2.10",
         "magic-string": "0.30.11",
