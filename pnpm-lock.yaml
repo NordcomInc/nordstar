@@ -99,8 +99,8 @@ importers:
         specifier: 15.7.4
         version: 15.7.4
       inquirer:
-        specifier: 11.0.1
-        version: 11.0.1
+        specifier: 11.0.2
+        version: 11.0.2
       inquirer-directory:
         specifier: 2.2.0
         version: 2.2.0
@@ -3769,8 +3769,8 @@ packages:
   inquirer@1.2.3:
     resolution: {integrity: sha512-diSnpgfv/Ozq6QKuV2mUcwZ+D24b03J3W6EVxzvtkCWJTPrH2gKLsqgSW0vzRMZZFhFdhnvzka0RUJxIm7AOxQ==}
 
-  inquirer@11.0.1:
-    resolution: {integrity: sha512-G+GdcKg7AaWER6H3UuccHkDZSJYxE1x12V2AbmJQNY5/WYSBVEDip1nDy0yoQQz21Qm+CscYEXw09lG6OGqTeA==}
+  inquirer@11.0.2:
+    resolution: {integrity: sha512-pnbn3nL+JFrTw/pLhzyE/IQ3+gA3n5JxTAZQDjB6qu4gbjOaiTnpZbxT6HY2DDCT7bzDjTTsd3snRP+B6N//Pg==}
     engines: {node: '>=18'}
 
   inquirer@9.3.6:
@@ -9842,7 +9842,7 @@ snapshots:
       strip-ansi: 3.0.1
       through: 2.3.8
 
-  inquirer@11.0.1:
+  inquirer@11.0.2:
     dependencies:
       '@inquirer/core': 9.2.1
       '@inquirer/prompts': 6.0.1
