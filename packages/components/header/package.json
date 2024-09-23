@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-header",
     "type": "module",
-    "version": "0.0.61",
+    "version": "0.0.62",
     "description": "Generic simple component to render headers for landing pages and similar.",
     "files": [
         "dist"
