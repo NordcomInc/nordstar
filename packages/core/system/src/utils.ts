@@ -1,4 +1,5 @@
-import { type ClassValue, clsx } from 'clsx';
+import type { ClassValue } from 'clsx';
+import { clsx } from 'clsx';
 import type {
     ComponentPropsWithoutRef,
     ElementType,
@@ -65,7 +66,7 @@ export function forwardRef<Component extends As, Props extends object, OmitKeys 
         }
     >
 ) {
-    return baseForwardRef(component) as InternalForwardRefRenderFunction<Component, Props, OmitKeys>;
+    return baseForwardRef(component as any) as InternalForwardRefRenderFunction<Component, Props, OmitKeys>;
 }
 
 export function cn(...inputs: ClassValue[]) {
