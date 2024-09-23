@@ -136,12 +136,17 @@
     }
 
     .input {
+        -webkit-appearance: none;
+        appearance: none;
+        padding: 0;
+
         height: 100%;
         width: 100%;
 
         font-size: inherit;
 
         background: transparent;
+        border-width: 0;
 
         &:is(input) {
             line-height: 1;

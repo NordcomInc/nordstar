@@ -81,7 +81,7 @@ const Input = forwardRef<'input', InputProps>(
                         className={styles.input}
                         placeholder={placeholder}
                         value={contents}
-                        onChange={(e: any) => setContents(() => e.target.value)}
+                        onChange={(e: any) => e?.target && setContents(() => e.target.value)}
                     />
                 </div>
             </>
