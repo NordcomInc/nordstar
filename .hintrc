@@ -5,7 +5,13 @@
         "compat-api/css": [
             "default",
             {
-                "ignore": ["backdrop-filter", "font-smooth", "overscroll-behavior", "text-size-adjust"]
+                "ignore": [
+                    "backdrop-filter",
+                    "font-smooth",
+                    "overflow: clip",
+                    "overscroll-behavior",
+                    "text-size-adjust"
+                ]
             }
         ]
     }

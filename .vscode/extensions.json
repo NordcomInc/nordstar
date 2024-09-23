@@ -3,13 +3,11 @@
         "aaron-bond.better-comments",
         "bierner.markdown-footnotes",
         "bierner.markdown-preview-github-styles",
-        "davidanson.vscode-markdownlint",
         "dbaeumer.vscode-eslint",
         "formulahendry.auto-close-tag",
         "formulahendry.auto-rename-tag",
         "jgclark.vscode-todo-highlight",
         "medo64.render-crlf",
-        "mikestead.dotenv",
-        "rvest.vs-code-prettier-eslint"
+        "mikestead.dotenv"
     ]
 }

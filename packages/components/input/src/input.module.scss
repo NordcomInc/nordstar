@@ -2,6 +2,8 @@
     // FIXME: Re-do this style entirely when there's a bit of free time.
 
     position: relative;
+    overflow: hidden;
+    overflow: clip;
     display: inline-flex;
     flex-direction: column;
     gap: 0.15em;
@@ -138,6 +140,8 @@
         width: 100%;
 
         font-size: inherit;
+
+        background: transparent;
 
         &:is(input) {
             line-height: 1;

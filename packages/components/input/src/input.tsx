@@ -1,7 +1,7 @@
 'use client';
 
-import type { NordstarColor } from '@nordcom/nordstar-system';
-import { forwardRef, type As } from '@nordcom/nordstar-system';
+import type { As, NordstarColor } from '@nordcom/nordstar-system';
+import { cn, forwardRef } from '@nordcom/nordstar-system';
 import type { HTMLInputTypeAttribute } from 'react';
 import { useEffect, useState } from 'react';
 import styles from './input.module.scss';
@@ -68,7 +68,7 @@ const Input = forwardRef<'input', InputProps>(
 
                 <div className={styles.container} data-variant={variant} data-color={color}>
                     {label && labelPosition === 'inside' ? (
-                        <label className={`${styles.label} ${!placeholder && !contents ? styles['full-height'] : ''}`}>
+                        <label className={cn(styles.label, !placeholder && !contents && styles['full-height'])}>
                             {label}
                         </label>
                     ) : null}
