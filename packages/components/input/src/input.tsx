@@ -49,6 +49,7 @@ const Input = forwardRef<'input', InputProps>(
             value,
             defaultValue,
 
+            className,
             ...props
         },
         ref
@@ -66,7 +67,7 @@ const Input = forwardRef<'input', InputProps>(
             <>
                 {label && labelPosition === 'outside' ? <label className={styles.label}>{label}</label> : null}
 
-                <div className={styles.container} data-variant={variant} data-color={color}>
+                <div className={cn(styles.container, className)} data-variant={variant} data-color={color}>
                     {label && labelPosition === 'inside' ? (
                         <label className={cn(styles.label, !placeholder && !contents && styles['full-height'])}>
                             {label}
