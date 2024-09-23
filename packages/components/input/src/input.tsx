@@ -6,22 +6,31 @@ import type { HTMLInputTypeAttribute } from 'react';
 import { useEffect, useState } from 'react';
 import styles from './input.module.scss';
 
-export type InputProps = {
+type InputBaseProps = {
     as?: As;
 
     variant?: 'outline' | 'solid';
     color?: NordstarColor;
 
     label?: string;
-    labelPosition?: 'inside' | 'outside';
+};
 
-    value?: string | number;
-    defaultValue?: string | number;
+type InputTextProps = {
+    value?: string;
+    defaultValue?: string;
 
-    type?: Omit<HTMLInputTypeAttribute, 'number'>;
+    type?: Omit<HTMLInputTypeAttribute, 'number' | 'textarea'>;
+};
+type InputNumberProps = {
+    value?: number;
+    defaultValue?: number;
+
+    type: Extract<HTMLInputTypeAttribute, 'number'>;
     min?: number;
     max?: number;
 };
+
+export type InputProps = InputBaseProps & (InputTextProps | InputNumberProps);
 
 /**
  * `<Input/>`, generalized input element.
@@ -42,7 +51,6 @@ const Input = forwardRef<'input', InputProps>(
             color = 'default',
 
             label,
-            labelPosition = 'inside',
 
             placeholder,
 
@@ -50,6 +58,7 @@ const Input = forwardRef<'input', InputProps>(
             defaultValue,
 
             className,
+            style = undefined,
             ...props
         },
         ref
@@ -58,29 +67,34 @@ const Input = forwardRef<'input', InputProps>(
         const [contents, setContents] = useState<typeof defaultValue>(defaultValue || '');
 
         useEffect(() => {
-            if (!value) return;
+            if (!value) {
+                return;
+            }
 
             setContents(() => value);
         }, [value]);
 
         return (
             <>
-                {label && labelPosition === 'outside' ? <label className={styles.label}>{label}</label> : null}
-
-                <div className={cn(styles.container, className)} data-variant={variant} data-color={color}>
-                    {label && labelPosition === 'inside' ? (
+                <div
+                    className={cn(styles.container, className)}
+                    style={style}
+                    data-variant={variant}
+                    data-color={color}
+                >
+                    {!!label ? (
                         <label className={cn(styles.label, !placeholder && !contents && styles['full-height'])}>
                             {label}
                         </label>
                     ) : null}
 
                     <Tag
-                        {...props}
+                        {...(props as any)}
                         ref={ref}
-                        type={type}
                         className={styles.input}
+                        type={type}
                         placeholder={placeholder}
-                        value={contents}
+                        value={contents || undefined}
                         onChange={(e: any) => e?.target && setContents(() => e.target.value)}
                     />
                 </div>

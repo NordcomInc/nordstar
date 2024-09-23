@@ -27,12 +27,6 @@ const story: Meta<typeof Input> = {
         as: {
             control: 'select',
             options: [null, 'textarea']
-        },
-
-        labelPosition: {
-            control: 'inline-radio',
-            options: ['inside', 'outside'],
-            defaultValue: 'inside'
         }
     }
 };
@@ -46,7 +40,8 @@ const Template = (args: InputProps) => (
             <Input key="simple" defaultValue="This is a bit of text!" {...args} />,
             <Input key="placeholder" placeholder="Search for Songs, Albums and Artists..." {...args} />,
             <Input key="label" label="First Name" {...args} />,
-            <Input key="label-with-placeholder" label="Company Name" placeholder="Acme Inc." {...args} />
+            <Input key="label-with-placeholder" label="Company Name" placeholder="Acme Inc." {...args} />,
+            <Input key="textarea" as="textarea" label="Review content" {...args} />
         ]}
     </>
 );
