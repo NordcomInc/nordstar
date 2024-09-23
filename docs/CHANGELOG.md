@@ -1,5 +1,14 @@
 # @nordcom/nordstar-docs
 
+## 0.0.61
+
+### Patch Changes
+
+-   [#830](https://github.com/NordcomInc/nordstar/pull/830) [`0fd5c12`](https://github.com/NordcomInc/nordstar/commit/0fd5c1263c40b5fad497ad1d9f5859598fd4c048) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.6.2.
+
+-   Updated dependencies [[`1acb17c`](https://github.com/NordcomInc/nordstar/commit/1acb17c033f54e0a727859edb99d7077b1eeaefd), [`b33edda`](https://github.com/NordcomInc/nordstar/commit/b33eddaa9a843084ca3b7be3db8c6e4fdfb6d7ce), [`0fd5c12`](https://github.com/NordcomInc/nordstar/commit/0fd5c1263c40b5fad497ad1d9f5859598fd4c048), [`69e50e1`](https://github.com/NordcomInc/nordstar/commit/69e50e1935bf93cbc2bcc8391dceab8dc165cdc6), [`cefb2ed`](https://github.com/NordcomInc/nordstar/commit/cefb2ede635e9f61ea3c0a3c653c326287f710a3), [`387a46b`](https://github.com/NordcomInc/nordstar/commit/387a46b578832fe64d223e4b452d59142d5cb3cb), [`0ca65ef`](https://github.com/NordcomInc/nordstar/commit/0ca65efb4042d8f4feccf0e4bb27a6b030992c2c), [`1591dc9`](https://github.com/NordcomInc/nordstar/commit/1591dc93b9158dfbeb3a3295919fa264cea1ab31), [`7ccdbbb`](https://github.com/NordcomInc/nordstar/commit/7ccdbbbccec91d4c6e9629e620dc790dac970cfc)]:
+    -   @nordcom/nordstar@0.0.61
+
 ## 0.0.60
 
 ### Patch Changes

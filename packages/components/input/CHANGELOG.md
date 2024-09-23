@@ -1,5 +1,34 @@
 # @nordcom/nordstar-input
 
+## 0.0.61
+
+### Patch Changes
+
+-   [#867](https://github.com/NordcomInc/nordstar/pull/867) [`8ea9f43`](https://github.com/NordcomInc/nordstar/commit/8ea9f4328443a3b66c358a6d7b86499f72860cab) Thanks [@filiphsps](https://github.com/filiphsps)! - - Fix `className` usage.
+
+-   [#801](https://github.com/NordcomInc/nordstar/pull/801) [`1acb17c`](https://github.com/NordcomInc/nordstar/commit/1acb17c033f54e0a727859edb99d7077b1eeaefd) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.3.5.
+
+-   [#817](https://github.com/NordcomInc/nordstar/pull/817) [`b33edda`](https://github.com/NordcomInc/nordstar/commit/b33eddaa9a843084ca3b7be3db8c6e4fdfb6d7ce) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.4.3.
+
+-   [#830](https://github.com/NordcomInc/nordstar/pull/830) [`0fd5c12`](https://github.com/NordcomInc/nordstar/commit/0fd5c1263c40b5fad497ad1d9f5859598fd4c048) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.6.2.
+
+-   [#834](https://github.com/NordcomInc/nordstar/pull/834) [`69e50e1`](https://github.com/NordcomInc/nordstar/commit/69e50e1935bf93cbc2bcc8391dceab8dc165cdc6) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.4.4.
+
+-   [#851](https://github.com/NordcomInc/nordstar/pull/851) [`cefb2ed`](https://github.com/NordcomInc/nordstar/commit/cefb2ede635e9f61ea3c0a3c653c326287f710a3) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.3.6.
+
+-   [#854](https://github.com/NordcomInc/nordstar/pull/854) [`387a46b`](https://github.com/NordcomInc/nordstar/commit/387a46b578832fe64d223e4b452d59142d5cb3cb) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.3.7.
+
+-   [#855](https://github.com/NordcomInc/nordstar/pull/855) [`0ca65ef`](https://github.com/NordcomInc/nordstar/commit/0ca65efb4042d8f4feccf0e4bb27a6b030992c2c) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.4.6[SECURITY]
+
+-   [#860](https://github.com/NordcomInc/nordstar/pull/860) [`1591dc9`](https://github.com/NordcomInc/nordstar/commit/1591dc93b9158dfbeb3a3295919fa264cea1ab31) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.3.8.
+
+-   [#863](https://github.com/NordcomInc/nordstar/pull/863) [`7ccdbbb`](https://github.com/NordcomInc/nordstar/commit/7ccdbbbccec91d4c6e9629e620dc790dac970cfc) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.4.7.
+
+-   [#867](https://github.com/NordcomInc/nordstar/pull/867) [`353bad3`](https://github.com/NordcomInc/nordstar/commit/353bad327e3ec6069d058471eac11d045ceaa0f0) Thanks [@filiphsps](https://github.com/filiphsps)! - - Fix input overflowing by setting `.container` to `overflow-hidden` or `overflow-clip` depending on browser version.
+    -   Fix input background color.
+-   Updated dependencies [[`1acb17c`](https://github.com/NordcomInc/nordstar/commit/1acb17c033f54e0a727859edb99d7077b1eeaefd), [`b33edda`](https://github.com/NordcomInc/nordstar/commit/b33eddaa9a843084ca3b7be3db8c6e4fdfb6d7ce), [`0fd5c12`](https://github.com/NordcomInc/nordstar/commit/0fd5c1263c40b5fad497ad1d9f5859598fd4c048), [`69e50e1`](https://github.com/NordcomInc/nordstar/commit/69e50e1935bf93cbc2bcc8391dceab8dc165cdc6), [`cefb2ed`](https://github.com/NordcomInc/nordstar/commit/cefb2ede635e9f61ea3c0a3c653c326287f710a3), [`387a46b`](https://github.com/NordcomInc/nordstar/commit/387a46b578832fe64d223e4b452d59142d5cb3cb), [`0ca65ef`](https://github.com/NordcomInc/nordstar/commit/0ca65efb4042d8f4feccf0e4bb27a6b030992c2c), [`1591dc9`](https://github.com/NordcomInc/nordstar/commit/1591dc93b9158dfbeb3a3295919fa264cea1ab31), [`7ccdbbb`](https://github.com/NordcomInc/nordstar/commit/7ccdbbbccec91d4c6e9629e620dc790dac970cfc)]:
+    -   @nordcom/nordstar-system@0.0.61
+
 ## 0.0.60
 
 ### Patch Changes
