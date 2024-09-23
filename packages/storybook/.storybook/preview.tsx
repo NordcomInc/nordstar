@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { NordstarProvider, View } from '@nordcom/nordstar';
-
+import { addons } from '@storybook/manager-api';
 import type { Preview } from '@storybook/react';
+import { darkTheme, lightTheme } from './manager';
 
-import './style.css';
+import './globals.css';
 
 const decorators: Preview['decorators'] = [
     (Story) => {
@@ -16,56 +17,22 @@ const decorators: Preview['decorators'] = [
                         secondary: '#1e79ed'
                     },
                     fonts: {
-                        heading: 'Montserrat, sans-serif',
-                        body: 'Montserrat, sans-serif'
+                        heading: 'Montserrat',
+                        body: 'Montserrat'
                     }
                 }}
             >
-                <View withoutWrapper>
-                    <div style={{ display: 'flex', flexDirection: 'column', gap: 'var(--layout-page-spacing)' }}>
+                <View withoutWrapper={true}>
+                    <article className="flex flex-col gap-3">
                         <Story />
-                    </div>
+                    </article>
                 </View>
             </NordstarProvider>
         );
     }
 ];
 
-const brand = {
-    brandImage: 'https://nordcom.io/logo-light.svg',
-    brandTarget: '_self',
-    brandTitle: "Nordcom Group Inc.'s Nordstar",
-    brandUrl: 'https://nordstar.nordcom.io/'
-};
-
-const theme: any = {
-    ...brand,
-    appBg: '#262626',
-    appBorderColor: '#262626',
-    appBorderRadius: 0,
-    appContentBg: '#000000',
-    appPreviewBg: '#000000',
-    barBg: '#262626',
-    barHoverColor: '',
-    barSelectedColor: '#ed1e79',
-    barTextColor: '#fefefe',
-    booleanBg: '#ed1e79',
-    booleanSelectedBg: '#000000',
-    buttonBg: '#ed1e79',
-    buttonBorder: '#ed1e79',
-    colorPrimary: '#ed1e79',
-    colorSecondary: '#ed1e79',
-    fontBase: `Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Helvetica Neue', sans-serif`,
-    gridCellSize: 5,
-    inputBg: '#000000',
-    inputBorder: '#fefefe',
-    inputBorderRadius: 0,
-    inputTextColor: '#fefefe',
-    textColor: '#fefefe',
-    textInverseColor: '#000000',
-    textMutedColor: '#262626'
-};
-
+const currentTheme = addons.getConfig().theme || darkTheme;
 const parameters: Preview['parameters'] = {
     actions: { argTypesRegex: '^on[A-Z].*' },
     options: {
@@ -74,7 +41,11 @@ const parameters: Preview['parameters'] = {
         }
     },
     controls: {
-        matchers: {}
+        matchers: {
+            color: /(background|color|borderColor)$/i,
+            date: /Date$/,
+            number: /[0-9]+/
+        }
     },
     layout: 'fullscreen',
     backgrounds: {
@@ -83,6 +54,10 @@ const parameters: Preview['parameters'] = {
             {
                 name: 'dark',
                 value: '#000000'
+            },
+            {
+                name: 'white',
+                value: '#fefefe'
             }
         ]
     },
@@ -92,18 +67,27 @@ const parameters: Preview['parameters'] = {
         darkClass: 'dark',
         lightClass: 'light',
         classTarget: 'html',
-        dark: theme
+        dark: darkTheme,
+        light: lightTheme
+    },
+    grid: {
+        cellSize: currentTheme.gridCellSize
     },
     docs: {
-        theme,
+        inlineStories: true,
+        theme: currentTheme,
         toc: true,
         story: {
-            inline: false
+            inline: true,
+            //iframeHeight: 145,
+            height: '100%',
+            maxHeight: '300px'
         }
     }
 };
 
 export default {
+    tags: ['autodocs'],
     decorators,
     parameters
 } satisfies Preview;

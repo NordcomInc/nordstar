@@ -1,6 +1,5 @@
 import type { As } from '@nordcom/nordstar-system';
-import { forwardRef } from '@nordcom/nordstar-system';
-import styles from './view.module.scss';
+import { cn, forwardRef } from '@nordcom/nordstar-system';
 
 export type ViewProps = {
     as?: As;
@@ -21,12 +20,25 @@ export type ViewProps = {
  */
 const View = forwardRef<'main', ViewProps>(
     ({ as: Tag = 'article', outerAs: Wrapper = 'main', withoutWrapper, className, outerClassName, ...props }, ref) => {
-        const classes = `${styles.content}${className ? ` ${className}` : ''}`;
+        const inner = (
+            <Tag
+                ref={ref}
+                {...props}
+                className={cn(
+                    'm-3 w-[calc(100%-calc(var(--layout-page-spacing)*2))] max-w-[min(var(--layout-page-width),100vw)]',
+                    className
+                )}
+            />
+        );
+        if (withoutWrapper) {
+            return inner;
+        }
 
-        const inner = <Tag ref={ref} {...props} className={classes} />;
-        if (withoutWrapper) return inner;
-
-        return <Wrapper className={`${styles.container} ${outerClassName || ''}`}>{inner}</Wrapper>;
+        return (
+            <Wrapper className={cn('flex w-screen max-w-full flex-col items-center justify-start', outerClassName)}>
+                {inner}
+            </Wrapper>
+        );
     }
 );
 

@@ -35,7 +35,7 @@ export default mergeConfig(
                 external: ['react', 'react/jsx-runtime', 'react-dom', 'clsx'],
                 input: input,
                 output: {
-                    globals: { react: 'React', 'react-dom': 'ReactDOM' }
+                    globals: { 'react': 'React', 'react-dom': 'ReactDOM' }
                 }
             }
         },

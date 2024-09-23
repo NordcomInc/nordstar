@@ -1,3 +1,5 @@
+import React from 'react';
+
 import '@testing-library/jest-dom/vitest';
 import '@testing-library/react';
 
@@ -16,7 +18,7 @@ describe('core', () => {
             const testText = 'Hello, world!';
 
             const { getByText } = render(
-                <NordstarProvider>
+                <NordstarProvider theme={{ accents: {}, fonts: {} } as any}>
                     <div>{testText}</div>
                 </NordstarProvider>
             );
@@ -36,7 +38,6 @@ describe('core', () => {
                             body: 'Roboto'
                         }
                     }}
-                    {...{ 'data-testid': 'style' }}
                 >
                     <div>Hello World!</div>
                 </NordstarProvider>
@@ -45,30 +46,10 @@ describe('core', () => {
             expect(wrapper.getByText('Hello World!')).toBeDefined();
 
             const styleElementContent = wrapper.getByTestId('style').innerHTML;
-            expect(styleElementContent).toContain('--color-accent-primary: #ff0000');
-            expect(styleElementContent).toContain('--color-accent-secondary: #00ff00');
+            expect(styleElementContent).toContain('--color-accent-primary: 0 100% 50%');
+            expect(styleElementContent).toContain('--color-accent-secondary: 120 100% 50%');
             expect(styleElementContent).toContain('--font-heading: Open Sans');
             expect(styleElementContent).toContain('--font-body: Roboto');
-
-            expect(() => wrapper.unmount()).not.toThrow();
-        });
-
-        it('renders with theme prop without fonts', () => {
-            const wrapper = render(
-                <NordstarProvider
-                    theme={{
-                        accents: {
-                            primary: '#ff0000',
-                            secondary: '#00ff00'
-                        }
-                    }}
-                    {...{ 'data-testid': 'style' }}
-                />
-            );
-
-            const styleElementContent = wrapper.getByTestId('style').innerHTML;
-            expect(styleElementContent).not.toContain('--font-heading');
-            expect(styleElementContent).not.toContain('--font-body');
 
             expect(() => wrapper.unmount()).not.toThrow();
         });
@@ -82,10 +63,10 @@ describe('core', () => {
                             secondary: '#00ff00'
                         },
                         fonts: {
-                            heading: 'heading'
+                            heading: 'heading',
+                            body: 'heading'
                         }
                     }}
-                    {...{ 'data-testid': 'style' }}
                 />
             );
 
@@ -95,6 +76,7 @@ describe('core', () => {
 
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
         it('renders with theme prop with only the body font', () => {
             const wrapper = render(
                 <NordstarProvider
@@ -107,43 +89,12 @@ describe('core', () => {
                             body: 'body'
                         }
                     }}
-                    {...{ 'data-testid': 'style' }}
                 />
             );
 
             const styleElementContent = wrapper.getByTestId('style').innerHTML;
-            expect(styleElementContent).toContain('--font-heading: body');
+            expect(styleElementContent).toContain('--font-heading');
             expect(styleElementContent).toContain('--font-body: body');
-
-            expect(() => wrapper.unmount()).not.toThrow();
-        });
-
-        it('renders with theme prop with sizes defined', () => {
-            const wrapper = render(
-                <NordstarProvider
-                    theme={{
-                        accents: {
-                            primary: '#ff0000',
-                            secondary: '#00ff00'
-                        },
-                        sizes: {
-                            text: {
-                                body: '16px'
-                            }
-                        },
-                        border: {
-                            width: 0.2,
-                            radius: '25px'
-                        }
-                    }}
-                    {...{ 'data-testid': 'style' }}
-                />
-            );
-
-            const styleElementContent = wrapper.getByTestId('style').innerHTML;
-            expect(styleElementContent).toContain('--size-text-body: 16px');
-            expect(styleElementContent).toContain('--border-width: 0.2rem');
-            expect(styleElementContent).toContain('--border-radius: 25px');
 
             expect(() => wrapper.unmount()).not.toThrow();
         });

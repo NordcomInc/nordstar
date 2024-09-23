@@ -1,5 +1,13 @@
 {
     "extends": ["development"],
+    "browserslist": [
+        "defaults",
+        "not ie 11",
+        "not ie <= 10",
+        "not and_ff <= 119",
+        "not firefox <= 121",
+        "not opera <= 104"
+    ],
     "hints": {
         "typescript-config/is-valid": "off",
         "compat-api/css": [
@@ -10,9 +18,15 @@
                     "font-smooth",
                     "overflow: clip",
                     "overscroll-behavior",
-                    "text-size-adjust"
+                    "text-size-adjust",
+                    "user-select"
                 ]
             }
-        ]
+        ],
+        "no-inline-styles": "off",
+        "typescript-config/strict": "off",
+        "typescript-config/consistent-casing": "off",
+        "disown-opener": "off",
+        "manifest-is-valid": "off"
     }
 }

@@ -33,12 +33,20 @@
         "strictNullChecks": true,
         "strictPropertyInitialization": true,
         "target": "ESNext",
-        "types": [],
         "useDefineForClassFields": true,
         "paths": {
             "@nordcom/nordstar": ["./packages/core/nordstar"],
             "@nordcom/nordstar-system": ["./packages/core/system"],
-            "@nordcom/nordstar-*": ["./packages/components/*"]
+            "@nordcom/nordstar-storybook": ["./packages/storybook"],
+            "@nordcom/nordstar-accented": ["./packages/components/accented"],
+            "@nordcom/nordstar-button": ["./packages/components/button"],
+            "@nordcom/nordstar-card": ["./packages/components/card"],
+            "@nordcom/nordstar-details": ["./packages/components/details"],
+            "@nordcom/nordstar-header": ["./packages/components/header"],
+            "@nordcom/nordstar-heading": ["./packages/components/heading"],
+            "@nordcom/nordstar-input": ["./packages/components/input"],
+            "@nordcom/nordstar-label": ["./packages/components/label"],
+            "@nordcom/nordstar-view": ["./packages/components/view"]
         },
         "plugins": [{ "name": "typescript-plugin-css-modules" }]
     },
@@ -49,6 +57,7 @@
         "**/*.test.*",
         "**/coverage",
         "**/dist",
+        "**/node_modules",
         "**/src/**/*.d.ts",
         "node_modules"
     ],

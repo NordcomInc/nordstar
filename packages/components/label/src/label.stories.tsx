@@ -19,3 +19,11 @@ export const Standard: Story = {
     render: Template,
     args: {}
 };
+
+export const WithColor: Story = {
+    name: 'With color',
+    render: Template,
+    args: {
+        color: 'primary'
+    }
+};

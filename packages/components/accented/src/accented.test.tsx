@@ -1,3 +1,5 @@
+import React from 'react';
+
 import '@testing-library/jest-dom/vitest';
 import '@testing-library/react';
 
@@ -18,7 +20,7 @@ describe('components', () => {
         });
 
         it('renders with secondary accent', () => {
-            const wrapper = render(<Accented data-testid="accented" secondary />);
+            const wrapper = render(<Accented data-testid="accented" color="secondary" />);
 
             expect(() => wrapper.unmount()).not.toThrow();
         });
@@ -31,7 +33,7 @@ describe('components', () => {
         });
 
         it('renders as secondary with className', () => {
-            const wrapper = render(<Accented data-testid="accented" secondary className="hello-world" />);
+            const wrapper = render(<Accented data-testid="accented" color="secondary" className="hello-world" />);
 
             expect(wrapper.getByTestId('accented')).toHaveClass('hello-world');
             expect(() => wrapper.unmount()).not.toThrow();

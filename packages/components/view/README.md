@@ -1,4 +1,4 @@
-# @nordcom/nordstar-view
+# [@nordcom/nordstar-view](https://nordstar.dev/docs/components/view/?utm_source=nordstar&utm_campaign=oss)
 
 Display a dedicated `view`; (aka `page`) somewhere in your app.
 

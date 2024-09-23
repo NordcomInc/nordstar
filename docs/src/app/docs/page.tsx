@@ -4,14 +4,14 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'Documentation',
     alternates: {
-        canonical: 'https://nordstar.nordcom.io/docs/'
+        canonical: 'https://nordstar.dev/docs/'
     }
 };
 
 export default async function DocsPage() {
     return (
         <>
-            <Heading level="h1">Overview</Heading>
+            <Heading level="h1">Docs</Heading>
         </>
     );
 }

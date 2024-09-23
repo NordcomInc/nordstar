@@ -1,4 +1,4 @@
-# @nordcom/nordstar-input
+# [@nordcom/nordstar-input](https://nordstar.dev/docs/components/input/?utm_source=nordstar&utm_campaign=oss)
 
 Generalized input element.
 

@@ -1,18 +1,19 @@
 {
     "$schema": "https://turbo.build/schema.json",
     "ui": "stream",
-    "globalDependencies": ["tsconfig.json", "package.json"],
+    "globalDependencies": [
+        ".env",
+        "package.json",
+        "pnpm-lock.yaml",
+        "postcss.config.cjs",
+        "tailwind.config.cjs",
+        "tsconfig.json",
+        "vite.config.ts"
+    ],
     "tasks": {
         "build": {
             "dependsOn": ["^build"],
-            "outputs": [
-                ".next/**",
-                "!.next/cache/**",
-                "dist/**",
-                "lib/**",
-                "storybook-static/**",
-                "packages/**/package.json"
-            ]
+            "outputs": [".next/**", "!.next/cache/**", "dist/**", "lib/**", "storybook-static/**"]
         },
         "clean": {
             "cache": false
@@ -29,9 +30,13 @@
             "cache": false,
             "dependsOn": ["^typecheck"]
         },
+        "fix": {
+            "cache": false,
+            "dependsOn": ["^fix"]
+        },
         "start": {
-            "dependsOn": ["^build"],
-            "outputs": []
+            "persistent": true,
+            "dependsOn": ["^build"]
         }
     }
 }

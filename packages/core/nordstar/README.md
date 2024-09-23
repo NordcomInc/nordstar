@@ -1,4 +1,4 @@
-# [@nordcom/nordstar](https://nordstar.nordcom.io/?utm_source=nordstar&utm_campaign=oss)
+# [@nordcom/nordstar](https://nordstar.dev/?utm_source=nordstar&utm_campaign=oss)
 
 [![License](https://img.shields.io/npm/l/%40nordcom%2Fnordstar?style=flat&color=EE4266)](LICENSE)
 [![Downloads on npm](https://img.shields.io/npm/dt/@nordcom/nordstar.svg?style=flat)](https://www.npmjs.com/package/@nordcom/nordstar)
@@ -7,9 +7,9 @@
 [![GitHub Commit Activity](https://img.shields.io/github/commit-activity/t/NordcomInc/nordstar?style=flat)](https://github.com/NordcomInc/nordstar/graphs/commit-activity)
 [![GitHub Contributors](https://img.shields.io/github/contributors/NordcomInc/nordstar?style=flat&color=48A9A6)](https://github.com/NordcomInc/nordstar/graphs/contributors)
 
-**Nordcom Group Inc.**'s component library. An opinionated component library for building human-centric user interfaces in React/Next.js.
+**Nordcom AB**'s component library. An opinionated component library for building human-centric user interfaces in React/Next.js.
 
-[Join our Discord server](https://discord.gg/WgYVtCbR6J) and come hang out with the community and the Nordstar team at Nordcom Group Inc.!
+[Join our Discord server](https://discord.gg/WgYVtCbR6J) and come hang out with the community and the Nordstar team at Nordcom AB!
 
 ## 🚀 Getting Started
 
@@ -22,11 +22,11 @@ npm install @nordcom/nordstar
 
 ## 📚 Documentation
 
-Visit [https://nordstar.nordcom.io/docs/](https://nordstar.nordcom.io/docs/?utm_source=nordstar&utm_campaign=oss) to read the documentation.
+Visit [https://nordstar.dev/docs/](https://nordstar.dev/docs/?utm_source=nordstar&utm_campaign=oss) to read the documentation.
 
 ## 🏢 Real World Usage
 
-• We here at Nordcom Group Inc. use Nordstar in for our applications and services, like on [Nordcom Commerce](https://shops.nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss), [Sweet Side of Sweden](https://www.sweetsideofsweden.com/?utm_source=nordstar&utm_medium=github&utm_campaign=oss) (soon) and [nordcom.io](https://nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss).
+• We here at Nordcom AB use Nordstar in for our applications and services, like on [Nordcom Commerce](https://shops.nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss), [Sweet Side of Sweden](https://www.sweetsideofsweden.com/?utm_source=nordstar&utm_medium=github&utm_campaign=oss) (soon) and [nordcom.io](https://nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss).
 
 > If you use Nordstar in one your or your company's project, please let us know! We'd love to feature you here and on Nordstar's website.
 
@@ -43,4 +43,4 @@ To get started, please read our [Contribution Guidelines](/CONTRIBUTING.md) as i
 
 ## 📝 License
 
-Licensed under the [MIT License](/LICENSE). Created by **[Nordcom Group Inc.](https://nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss)** with the help of outside contributors.
+Licensed under the [MIT License](/LICENSE). Created by **[Nordcom AB](https://nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss)** with the help of outside contributors.

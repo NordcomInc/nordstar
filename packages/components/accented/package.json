@@ -7,7 +7,6 @@
     "files": [
         "dist"
     ],
-    "prettier": "@nordcom/prettier",
     "main": "./dist/index.js",
     "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
@@ -59,7 +58,11 @@
         "build": "tsc && vite build",
         "dev": "vite build --watch",
         "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
-        "typecheck": "tsc --noEmit"
+        "typecheck": "tsc --noEmit",
+        "lint": "concurrently -i pnpm:lint:*",
+        "lint:prettier": "prettier --check src/**/*.*",
+        "fix": "concurrently -i pnpm:fix:*",
+        "fix:prettier": "prettier  --write \"./**/*.{cjs,mjs,ts,tsx,json}\""
     },
     "keywords": [
         "nordstar",
@@ -70,7 +73,7 @@
         "nordstar-accented"
     ],
     "author": {
-        "name": "Nordcom Group Inc.",
+        "name": "Nordcom AB",
         "email": "opensource@nordcom.io",
         "url": "https://nordcom.io/"
     },
@@ -90,7 +93,7 @@
     "bugs": {
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
-    "homepage": "https://nordstar.nordcom.io/docs/components/accented/",
+    "homepage": "https://nordstar.dev/docs/components/accented/",
     "dependencies": {
         "@nordcom/nordstar-system": "workspace:*"
     },
@@ -103,9 +106,12 @@
         "@types/node": "20.16.2",
         "@types/react-dom": "18.3.0",
         "@types/react": "18.3.8",
+        "autoprefixer": "10.4.20",
+        "postcss": "8.4.47",
         "prettier": "3.3.3",
         "react-dom": "18.3.1",
         "react": "18.3.1",
+        "tailwindcss": "3.4.12",
         "typescript": "5.6.2",
         "vite": "5.4.7"
     }

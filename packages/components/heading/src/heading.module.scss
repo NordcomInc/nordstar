@@ -1,44 +1,5 @@
 .container {
-    font-family: var(--font-heading);
-
     &:not(:empty):is([data-level='h1'], [data-level='h2']):after {
         content: '.';
-    }
-
-    &[data-level='h1'] {
-        hyphens: auto;
-
-        font-weight: 800;
-        font-size: 2.5em;
-        text-transform: uppercase;
-
-        @media (min-width: 950px) {
-            font-size: 3em;
-        }
-    }
-    &[data-level='h2'] {
-        color: var(--color-foreground-secondary);
-
-        font-weight: 400;
-        font-size: 1.65em;
-        text-transform: lowercase;
-
-        @media (min-width: 950px) {
-            font-size: 2em;
-        }
-    }
-    &[data-level='h3'] {
-        font-size: 1.6em;
-        font-weight: 800;
-        text-transform: lowercase;
-
-        @media (min-width: 950px) {
-            font-size: 1.75em;
-        }
-    }
-    &[data-level='h4'] {
-        font-size: 1em;
-        font-weight: 700;
-        text-transform: uppercase;
     }
 }

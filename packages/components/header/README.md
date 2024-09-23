@@ -1,4 +1,4 @@
-# @nordcom/nordstar-header
+# [@nordcom/nordstar-header](https://nordstar.dev/docs/components/header/?utm_source=nordstar&utm_campaign=oss)
 
 Standardized header component.
 

@@ -41,6 +41,7 @@
     "cSpell.words": [
         "Brandly",
         "compat",
+        "Docgen",
         "Filiph",
         "lockb",
         "Nordcom",
@@ -52,6 +53,8 @@
         "registrator",
         "Sandström",
         "Siitam",
+        "tailwindcss",
+        "testid",
         "treeshake",
         "tsbuildinfo",
         "typecheck",
@@ -75,5 +78,23 @@
     },
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "tailwindCSS.classAttributes": ["class", "className", ".*ClassName", ".*Styles"],
+    "tailwindCSS.lint.invalidVariant": "warning",
+    "tailwindCSS.colorDecorators": true,
+    "tailwindCSS.experimental.classRegex": [
+        "[a-zA-Z]*ClassName='([^']+)'",
+        "[a-zA-Z]*ClassName=\"([^\"]+)\"",
+        "[a-zA-Z]*ClassName={`([^`]+)`}",
+        ["Styles\\s*=\\s*([^;]*);", "'([^']*)'"],
+        ["Styles\\s*=\\s*([^;]*);", "\"([^\"]*)\""],
+        ["Styles\\s*=\\s*([^;]*);", "\\`([^\\`]*)\\`"],
+        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+        ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ],
+    "tailwindCSS.includeLanguages": {
+        "html": "html",
+        "javascript": "javascript",
+        "css": "css"
     }
 }

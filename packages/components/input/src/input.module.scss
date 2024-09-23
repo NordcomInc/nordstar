@@ -1,37 +1,16 @@
 .container {
-    // FIXME: Re-do this style entirely when there's a bit of free time.
-
-    position: relative;
-    overflow: hidden;
-    overflow: clip;
-    display: inline-flex;
-    flex-direction: column;
-    gap: 0.15em;
-
-    height: 3.5em;
-    padding: var(--layout-block-padding-half) var(--layout-block-padding);
-
-    font-family: var(--font-mono, var(--font-body));
-    font-size: 1em;
-
-    transition:
-        150ms ease-in-out border-color,
-        150ms ease-in-out color;
-    border-radius: var(--border-radius);
-    border-style: solid;
-
     &:is([data-variant='outline'], :not([data-variant])) {
         border-width: var(--border-width-small);
 
         &:not(:is([data-color='primary'], [data-color='secondary'])) {
             &[data-color='default'] {
-                --color: var(--color-foreground-secondary);
-                --color-highlight: var(--color-foreground-secondary);
+                --color: hsl(var(--color-foreground-secondary));
+                --color-highlight: hsl(var(--color-foreground-secondary));
             }
 
             &[data-color='foreground'] {
-                --color: var(--color-foreground-secondary);
-                --color-highlight: var(--color-foreground);
+                --color: hsl(var(--color-foreground-secondary));
+                --color-highlight: hsl(var(--color-foreground));
             }
 
             & {
@@ -43,15 +22,15 @@
             }
 
             :is(:focus, :focus-within) > & {
-                border-color: var(--color-highlight);
+                border-color: hsl(var(--color-highlight));
             }
         }
 
         &[data-color='primary'] {
-            border-color: var(--color-accent-primary);
+            border-color: hsl(var(--color-accent-primary));
         }
         &[data-color='secondary'] {
-            border-color: var(--color-accent-secondary);
+            border-color: hsl(var(--color-accent-secondary));
         }
 
         &:is([data-color='primary'], [data-color='secondary']) {
@@ -66,7 +45,7 @@
             opacity: 1;
 
             &[data-color='default'] {
-                border-color: var(--color-foreground);
+                border-color: hsl(var(--color-foreground));
             }
 
             .label {
@@ -87,80 +66,22 @@
     }
 
     &:is([data-variant='solid'], :not([data-variant])) {
-        --background: var(--color-foreground);
-        --foreground: var(--color-background);
+        --background: hsl(var(--color-foreground));
+        --foreground: hsl(var(--color-background));
+
+        &[data-color='primary'] {
+            --background: hsl(var(--color-accent-primary));
+            --foreground: hsl(var(--color-accent-primary-foreground));
+        }
+        &[data-color='secondary'] {
+            --background: hsl(var(--color-accent-secondary));
+            --foreground: hsl(var(--color-accent-secondary-foreground));
+        }
 
         border-width: var(--border-width-small);
         border-color: var(--background);
 
         color: var(--foreground);
         background: var(--background);
-
-        &[data-color='primary'] {
-            --background: var(--color-accent-primary);
-            --foreground: var(--color-accent-primary-foreground);
-        }
-        &[data-color='secondary'] {
-            --background: var(--color-accent-secondary);
-            --foreground: var(--color-accent-secondary-foreground);
-        }
-    }
-
-    .label {
-        font-size: 0.65em;
-        font-weight: 700;
-        text-transform: uppercase;
-
-        -webkit-user-select: none;
-        user-select: none;
-        pointer-events: none;
-        transform: translateZ(0) translateY(0);
-
-        &.full-height {
-            transition:
-                75ms ease-out transform,
-                150ms ease-out margin,
-                150ms ease-out font-size,
-                150ms ease-out color;
-
-            font-size: 0.65em;
-        }
-    }
-
-    &:not(:focus-within, :focus, :has(:focus-within, :focus, select)) {
-        .label.full-height {
-            transform: translateY(0.45em);
-            margin-bottom: -0.5em;
-            font-size: 1em;
-        }
-    }
-
-    .input {
-        -webkit-appearance: none;
-        appearance: none;
-        padding: 0;
-
-        height: 100%;
-        width: 100%;
-
-        font-size: inherit;
-
-        background: transparent;
-        border-width: 0;
-        outline-width: 0;
-
-        &:is(input) {
-            line-height: 1;
-        }
-
-        &::placeholder {
-            transition: 150ms ease-in-out opacity;
-
-            font-size: inherit;
-        }
-
-        &:not(:focus)::placeholder {
-            color: var(--color-foreground-secondary);
-        }
     }
 }

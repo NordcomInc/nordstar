@@ -1,23 +1,35 @@
 import '@/styles/base.scss';
 
-import { Card, Header, NordstarProvider, View } from '@nordcom/nordstar';
+import { Providers } from '@/components/providers';
+import { Card, cn, Header, View } from '@nordcom/nordstar';
+import { GeistMono } from 'geist/font/mono';
 import type { Metadata, Viewport } from 'next';
 import { Montserrat } from 'next/font/google';
 import Link from 'next/link';
-import styles from './layout.module.scss';
 
 const font = Montserrat({
     weight: 'variable',
     subsets: ['latin'],
     display: 'swap',
-    variable: '--font-primary',
+    variable: '--font-sans',
     preload: true
 });
 
 export const metadata: Metadata = {
+    metadataBase: new URL(`https://nordstar.dev/`),
     title: {
         default: '',
         template: `%s | Nordstar Component Library`
+    },
+    robots: {
+        follow: true,
+        index: true
+    },
+    referrer: 'origin',
+    formatDetection: {
+        email: false,
+        address: false,
+        telephone: false
     }
 };
 
@@ -34,21 +46,18 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     return (
         <html lang="en">
             <head />
-            <body className={`${font.variable}`}>
-                <NordstarProvider
-                    theme={{
-                        accents: {
-                            primary: '#ed1e79',
-                            secondary: '#ed1e79'
-                        },
-                        fonts: {
-                            heading: font.style.fontFamily,
-                            body: font.style.fontFamily
-                        }
+            <body className={cn(font.variable, GeistMono.variable)}>
+                <Providers
+                    fonts={{
+                        heading: font.style.fontFamily,
+                        body: font.style.fontFamily,
+                        code: GeistMono.style.fontFamily
                     }}
                 >
-                    <Header className={styles.header}>
-                        <Header.Logo className={styles.logo}>nordstar</Header.Logo>
+                    <Header>
+                        <Header.Logo as={Link} href="/">
+                            Nordstar
+                        </Header.Logo>
                         <Header.Menu>
                             <Header.Menu.Link as={Link} href="/">
                                 Home
@@ -68,10 +77,25 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         </Header.Menu>
                     </Header>
 
-                    {children}
+                    <View>{children}</View>
 
-                    <Card as={View} variant="solid" color="primary" borderless={true} className={styles.footer}></Card>
-                </NordstarProvider>
+                    <Card as={View} variant="solid" color="primary" borderless={true}>
+                        <footer className="flex flex-row flex-wrap items-center justify-center gap-1 md:gap-3">
+                            <Link href="https://nordcom.io/" className="block text-inherit">
+                                Nordcom AB
+                            </Link>
+
+                            <div>{' • '}</div>
+
+                            <Link
+                                href="https://swedish-candy-store.com/?utm_campaign=footer&utm_source=nordstar"
+                                className="block text-inherit"
+                            >
+                                Swedish Candy Store
+                            </Link>
+                        </footer>
+                    </Card>
+                </Providers>
             </body>
         </html>
     );

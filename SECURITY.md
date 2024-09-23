@@ -1,6 +1,6 @@
 # Security
 
-Nordcom Group Inc. takes the security of its software extremely seriously. However, due to our size and being such a new and novel company, we do not accept and cannot offer any form of liability (legal or otherwise) as per the included license unless otherwise explicitly granted in writing.
+Nordcom AB takes the security of its software extremely seriously. However, due to our size and being such a new and novel company, we do not accept and cannot offer any form of liability (legal or otherwise) as per the included license unless otherwise explicitly granted in writing.
 
 If you believe you have found a security flaw or vulnerability, If you believe you have found a security flaw or vulnerability, please report it to us following the instructions below.
 
@@ -21,7 +21,7 @@ For any questions or need for clarification, feel free to reach out to us on
 
 ## Policy
 
-**Nordcom Group Inc. is committed to the security of its software and the safety of its users.**
+**Nordcom AB is committed to the security of its software and the safety of its users.**
 
 We will investigate all reported security vulnerabilities promptly and responsibly. We will prioritize and address vulnerabilities based on their severity and potential impact to our users.
 
