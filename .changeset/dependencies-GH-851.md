@@ -10,7 +10,6 @@
 "@nordcom/nordstar-view": patch
 "@nordcom/nordstar": patch
 "@nordcom/nordstar-system": patch
-"@nordcom/nordstar-storybook": patch
 ---
 
 Deps: Update dependency @types/react to v18.3.6.
