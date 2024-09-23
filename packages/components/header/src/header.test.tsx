@@ -1,3 +1,5 @@
+import React from 'react';
+
 import '@testing-library/jest-dom/vitest';
 import '@testing-library/react';
 
@@ -10,7 +12,7 @@ describe('components', () => {
     describe('layout', () => {
         describe('Header', () => {
             it('has correct displayName', () => {
-                expect(Header).toHaveProperty('displayName', 'Nordstar.Layout.Header');
+                expect(Header).toHaveProperty('displayName', 'Nordstar.Header');
             });
 
             it('renders correctly', () => {
@@ -37,7 +39,7 @@ describe('components', () => {
 
         describe('Header.Logo', () => {
             it('has correct displayName', () => {
-                expect(Header.Logo).toHaveProperty('displayName', 'Nordstar.Layout.Header.Logo');
+                expect(Header.Logo).toHaveProperty('displayName', 'Nordstar.Header.Logo');
             });
 
             it('renders correctly', () => {
@@ -56,7 +58,7 @@ describe('components', () => {
 
         describe('Header.Menu', () => {
             it('has correct displayName', () => {
-                expect(Header.Menu).toHaveProperty('displayName', 'Nordstar.Layout.Header.Menu');
+                expect(Header.Menu).toHaveProperty('displayName', 'Nordstar.Header.Menu');
             });
 
             it('renders correctly', () => {
@@ -93,7 +95,7 @@ describe('components', () => {
 
         describe('Header.Menu.Link', () => {
             it('has correct displayName', () => {
-                expect(Header.Menu.Link).toHaveProperty('displayName', 'Nordstar.Layout.Header.Menu.Link');
+                expect(Header.Menu.Link).toHaveProperty('displayName', 'Nordstar.Header.Menu.Link');
             });
 
             it('renders correctly', () => {

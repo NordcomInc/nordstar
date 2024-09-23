@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite';
 
+import reactDocgenTypescript from '@joshwooding/vite-plugin-react-docgen-typescript';
 import react from '@vitejs/plugin-react';
 import tsConfigPaths from 'vite-tsconfig-paths';
 
@@ -13,9 +14,9 @@ export default defineConfig({
         rollupOptions: {
             external: ['react', 'react/jsx-runtime', 'react-dom', 'clsx'],
             output: {
-                globals: { react: 'React', 'react-dom': 'ReactDOM' }
+                globals: { 'react': 'React', 'react-dom': 'ReactDOM' }
             }
         }
     },
-    plugins: [tsConfigPaths(), react()]
+    plugins: [reactDocgenTypescript(), tsConfigPaths(), react()]
 });

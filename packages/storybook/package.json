@@ -3,7 +3,6 @@
     "name": "@nordcom/nordstar-storybook",
     "version": "0.0.62",
     "main": "src/index.ts",
-    "prettier": "@nordcom/prettier",
     "sideEffects": true,
     "private": true,
     "files": [
@@ -21,17 +20,28 @@
         "storybook": "8.3.2"
     },
     "devDependencies": {
+        "@joshwooding/vite-plugin-react-docgen-typescript": "0.4.0",
         "@nordcom/prettier": "0.1.1",
+        "@storybook/addon-controls": "8.3.2",
+        "@storybook/addon-docs": "8.3.2",
         "@storybook/addon-essentials": "8.3.2",
-        "@storybook/cli": "8.3.2",
+        "@storybook/blocks": "8.3.2",
+        "@storybook/core": "8.3.2",
+        "@storybook/manager-api": "8.3.2",
         "@storybook/react-vite": "8.3.2",
         "@storybook/react": "8.3.2",
+        "@storybook/theming": "8.3.2",
         "@types/node": "20.16.2",
         "@types/react-dom": "18.3.0",
         "@types/react": "18.3.8",
         "@vitejs/plugin-react": "4.3.1",
+        "autoprefixer": "10.4.20",
+        "postcss": "8.4.47",
         "prettier": "3.3.3",
+        "storybook-addon-react-docgen": "1.2.44",
+        "storybook-addon-sass-postcss": "0.3.2",
         "storybook-dark-mode": "4.0.1",
+        "tailwindcss": "3.4.12",
         "typescript": "5.6.2",
         "vite": "5.4.7"
     }

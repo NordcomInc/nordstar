@@ -1,4 +1,4 @@
-# @nordcom/nordstar-heading
+# [@nordcom/nordstar-heading](https://nordstar.dev/docs/components/heading/?utm_source=nordstar&utm_campaign=oss)
 
 Component used to display title/heading text.
 

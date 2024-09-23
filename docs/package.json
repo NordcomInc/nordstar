@@ -8,15 +8,18 @@
     "cacheDirectories": [
         ".next/cache"
     ],
-    "prettier": "@nordcom/prettier",
     "scripts": {
         "build": "next build",
         "dev": "next dev",
         "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
         "start": "next start -p $PORT",
+        "typecheck": "tsc --noEmit",
         "lint": "concurrently -i pnpm:lint:*",
         "lint:next": "next lint",
-        "lint:prettier": "prettier src/**/*.* --check"
+        "lint:prettier": "prettier --check \"./**/*.{ts,tsx}\"",
+        "fix": "concurrently -i pnpm:fix:*",
+        "fix:next": "next lint --fix",
+        "fix:prettier": "prettier --write \"./**/*.{cjs,mjs,ts,tsx,scss,json}\""
     },
     "keywords": [
         "nordstar",
@@ -24,7 +27,7 @@
         "docs"
     ],
     "author": {
-        "name": "Nordcom Group Inc.",
+        "name": "Nordcom AB",
         "email": "opensource@nordcom.io",
         "url": "https://nordcom.io/"
     },
@@ -44,15 +47,25 @@
     "bugs": {
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
-    "homepage": "https://nordstar.nordcom.io/",
+    "homepage": "https://nordstar.dev/",
     "dependencies": {
         "@nordcom/nordstar": "workspace:*",
+        "@vercel/toolbar": "0.1.20",
+        "geist": "1.3.1",
         "next": "14.2.10",
-        "react": "18.3.1",
-        "react-dom": "18.3.1"
+        "react-dom": "18.3.1",
+        "react": "18.3.1"
     },
     "devDependencies": {
         "@nordcom/prettier": "0.1.1",
+        "autoprefixer": "10.4.20",
+        "concurrently": "9.0.1",
+        "eslint-config-next": "15.0.0-canary.162",
+        "eslint": "8.57.1",
+        "postcss": "8.4.47",
+        "prettier": "3.3.3",
+        "rimraf": "6.0.1",
+        "tailwindcss": "3.4.13",
         "typescript": "5.6.2"
     }
 }

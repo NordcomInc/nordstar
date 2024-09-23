@@ -1,4 +1,4 @@
-# @nordcom/nordstar-details
+# [@nordcom/nordstar-details](https://nordstar.dev/docs/components/details/?utm_source=nordstar&utm_campaign=oss)
 
 Hide/Show content using a styled &lt;details&gt; element.
 

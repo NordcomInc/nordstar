@@ -8,6 +8,7 @@ import type {
     WeakValidationMap
 } from 'react';
 import { forwardRef as baseForwardRef } from 'react';
+import { twMerge } from 'tailwind-merge';
 
 export type As<Props = any> = ElementType<Props>;
 
@@ -70,5 +71,5 @@ export function forwardRef<Component extends As, Props extends object, OmitKeys 
 }
 
 export function cn(...inputs: ClassValue[]) {
-    return clsx(inputs);
+    return twMerge(clsx(inputs)) || undefined;
 }

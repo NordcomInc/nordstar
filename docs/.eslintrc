@@ -1,24 +1,30 @@
 {
-    "extends": ["../.eslintrc"],
-    "ignorePatterns": ["!**/*"],
+    "$schema": "https://json.schemastore.org/eslintrc.json",
+    "extends": ["next/core-web-vitals", "../.eslintrc"],
+    "ignorePatterns": [ "!**/*", "/*"],
+    "env": {
+        "browser": true,
+        "es2024": true,
+        "node": true
+    },
     "overrides": [
         {
-            "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+            "files": ["*.ts", "*.tsx", "*.mdx"],
+            "parser": "@typescript-eslint/parser",
             "parserOptions": {
-                "project": ["docs/tsconfig(.*)?.json"],
                 "ecmaFeatures": {
                     "jsx": true
-                }
+                },
+                "sourceType": "module",
+                "ecmaVersion": "latest",
+                "project": ["./tsconfig.json", "./tsconfig.test.json"]
             },
             "rules": {}
-        },
-        {
-            "files": ["*.ts", "*.tsx"],
-            "rules": {}
-        },
-        {
-            "files": ["*.js", "*.jsx"],
-            "rules": {}
         }
-    ]
+    ],
+    "settings": {
+        "next": {
+            "rootDir": "docs/"
+        }
+    }
 }

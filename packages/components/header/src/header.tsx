@@ -2,57 +2,92 @@ import { Card } from '@nordcom/nordstar-card';
 import { cn, forwardRef } from '@nordcom/nordstar-system';
 import { View } from '@nordcom/nordstar-view';
 import type { ComponentProps } from 'react';
-import styles from './header.module.scss';
 
-import type { As, CSSCustomProperties, NordstarColor } from '@nordcom/nordstar-system';
+import type { As, CSSCustomProperties } from '@nordcom/nordstar-system';
 
 export type HeaderProps = {
-    color?: NordstarColor;
-    style?: CSSCustomProperties;
-} & ComponentProps<'header'>;
+    sticky?: boolean;
+    style?: CSSCustomProperties | undefined;
+} & Omit<ComponentProps<'header'>, 'color'>;
 
-const Header = ({ className, children, ...props }: HeaderProps) => {
+const Header = ({ sticky = true, className, children, ...props }: HeaderProps) => {
     return (
-        <Card as="header" borderless={true} {...props} className={cn(styles.container, className)}>
-            <View as="div" className={styles.content} withoutWrapper={true}>
+        <Card
+            {...props}
+            as="header"
+            borderless={true}
+            className={cn(
+                'z-10 mb-3 flex h-20 w-full items-center justify-center rounded-none border-0 border-none bg-background/95 px-0 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/60',
+                sticky &&
+                    'sticky inset-0 bottom-auto z-40 border-0 border-b-2 border-solid border-background-highlight',
+                className
+            )}
+            data-sticky={sticky}
+        >
+            <View
+                as="div"
+                className={cn(
+                    'm-0 grid h-full w-full grid-cols-[1fr] items-center justify-center gap-3 border-0 border-none p-0 md:grid-cols-[1fr_auto]'
+                )}
+                withoutWrapper={true}
+            >
                 {children}
             </View>
         </Card>
     );
 };
-Header.displayName = 'Nordstar.Layout.Header';
 
-export type HeaderLogoProps = {} & ComponentProps<'nav'>;
+export type HeaderLogoProps = {
+    as?: As;
+} & ComponentProps<'nav'>;
 
 /**
  * `<Header.Logo/>`, a component to render a header's logo.
  * @param {HeaderLogoProps} props - `<Header.Logo/>` props.
  * @returns {React.ReactNode} The `<Header.Logo/>` component.
  */
-const Logo = ({ className, ...props }: HeaderLogoProps) => {
-    return <section {...props} draggable={false} className={cn(styles.logo, className)} />;
-};
-Logo.displayName = 'Nordstar.Layout.Header.Logo';
+const Logo = forwardRef<'section', HeaderLogoProps>(({ as, className, ...props }, ref) => {
+    const Tag = as || 'section';
+    return (
+        <Tag
+            {...props}
+            ref={ref}
+            draggable={false}
+            className={cn(
+                'px-3 text-lg font-extrabold uppercase *:h-full *:object-contain *:object-left [&>a]:transition-colors [&>a]:hover:text-primary',
+                className
+            )}
+        />
+    );
+});
 
 export type HeaderMenuProps = {
-    noOverflowShadow?: boolean;
-} & ComponentProps<'nav'>;
+    as?: As;
+    overflowShadow?: boolean;
+};
 
 /**
  * `<Header.Menu/>`, a component to render a header's content.
  * @param {HeaderMenuProps} props - `<Header.Menu/>` props.
  * @returns {React.ReactNode} The `<Header.Menu/>` component.
  */
-const Menu = ({ className, noOverflowShadow = false, ...props }: HeaderMenuProps) => {
+const Menu = forwardRef<'nav', HeaderMenuProps>(({ as, className, overflowShadow = true, ...props }, ref) => {
+    const Tag = as || 'nav';
+
     return (
-        <nav
+        <Tag
             {...props}
+            ref={ref}
             draggable={false}
-            className={cn(styles.nav, !noOverflowShadow && styles.overflowShadow, className)}
+            className={cn(
+                'md:overflow-x flex w-full touch-auto select-none items-center gap-6 overflow-x-auto scroll-smooth px-3 py-3 md:justify-end',
+                overflowShadow && 'animate-scroll-shadow-inset [animation-timeline:scroll(self_inline)]',
+                className
+            )}
+            data-overflow-shadow={overflowShadow}
         />
     );
-};
-Menu.displayName = 'Nordstar.Layout.Header.Menu';
+});
 
 export type HeaderMenuLinkProps = {
     as?: As;
@@ -66,8 +101,28 @@ export type HeaderMenuLinkProps = {
 const Link = forwardRef<'a', HeaderMenuLinkProps>(({ as, className, ...props }, ref) => {
     const Tag = as || 'a';
 
-    return <Tag ref={ref} draggable={false} {...props} className={cn(styles.link, className)} />;
+    return (
+        <Tag
+            {...props}
+            ref={ref}
+            draggable={false}
+            className={cn(
+                'font-base cursor-pointer whitespace-nowrap break-all text-sm font-extrabold uppercase leading-none transition-colors hover:text-primary active:text-primary md:text-base',
+                className
+            )}
+        />
+    );
 });
-Link.displayName = 'Nordstar.Layout.Header.Menu.Link';
 
-export default Object.assign(Header, { Logo, Menu: Object.assign(Menu, { Link }) });
+export default Object.assign(Header, {
+    displayName: 'Nordstar.Header',
+    Logo: Object.assign(Logo, {
+        displayName: 'Nordstar.Header.Logo'
+    }),
+    Menu: Object.assign(Menu, {
+        displayName: 'Nordstar.Header.Menu',
+        Link: Object.assign(Link, {
+            displayName: 'Nordstar.Header.Menu.Link'
+        })
+    })
+});

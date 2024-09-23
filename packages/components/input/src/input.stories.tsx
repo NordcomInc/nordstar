@@ -1,6 +1,3 @@
-import React from 'react';
-
-import type { InputProps } from '@nordcom/nordstar-input';
 import { Input } from '@nordcom/nordstar-input';
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -8,10 +5,15 @@ const story: Meta<typeof Input> = {
     title: 'System/Components/Input',
     component: Input,
     argTypes: {
+        as: {
+            control: 'select',
+            options: [undefined, 'textarea']
+        },
+
         variant: {
             control: 'inline-radio',
             options: ['outline', 'solid'],
-            defaultValue: 'default'
+            defaultValue: 'outline'
         },
         color: {
             control: 'inline-radio',
@@ -24,9 +26,14 @@ const story: Meta<typeof Input> = {
             options: ['text', 'email', 'number', 'password', 'search']
         },
 
-        as: {
-            control: 'select',
-            options: [null, 'textarea']
+        label: {
+            control: 'text'
+        },
+        placeholder: {
+            control: 'text'
+        },
+        value: {
+            control: 'text'
         }
     }
 };
@@ -34,25 +41,71 @@ const story: Meta<typeof Input> = {
 export default story;
 type Story = StoryObj<typeof Input>;
 
-const Template = (args: InputProps) => (
-    <>
-        {[
-            <Input key="simple" defaultValue="This is a bit of text!" {...args} />,
-            <Input key="placeholder" placeholder="Search for Songs, Albums and Artists..." {...args} />,
-            <Input key="label" label="First Name" {...args} />,
-            <Input key="label-with-placeholder" label="Company Name" placeholder="Acme Inc." {...args} />,
-            <Input key="textarea" as="textarea" label="Review content" {...args} />
-        ]}
-    </>
-);
-
 export const Standard: Story = {
-    render: Template,
     args: {
         variant: 'outline',
         color: 'default',
         type: 'text',
-        labelPosition: 'inside',
-        value: ''
+        value: 'hello world!'
+    }
+};
+
+export const Solid: Story = {
+    args: {
+        ...Standard.args,
+        variant: 'solid'
+    }
+};
+
+export const WithColor: Story = {
+    name: 'With color',
+    args: {
+        ...Standard.args,
+        color: 'primary'
+    }
+};
+
+export const SolidWithColor: Story = {
+    name: 'Solid with color',
+    args: {
+        ...Standard.args,
+        color: 'primary',
+        variant: 'solid'
+    }
+};
+
+export const Placeholder: Story = {
+    args: {
+        ...Standard.args,
+        placeholder: 'Search for Songs, Albums and Artists...'
+    }
+};
+
+export const Label: Story = {
+    args: {
+        ...Standard.args,
+        value: undefined,
+        label: 'Company Name'
+    }
+};
+
+export const LabelPlaceholder: Story = {
+    name: 'Label with placeholder',
+    args: {
+        ...Standard.args,
+        value: undefined,
+        label: 'Company Name',
+        placeholder: 'Acme Inc.'
+    }
+};
+
+export const Textarea: Story = {
+    args: {
+        ...Standard.args,
+        type: undefined,
+        as: 'textarea',
+        value: 'Hello World!\nSecond line.',
+        label: 'Company Name',
+        placeholder: 'Acme Inc.'
     }
 };

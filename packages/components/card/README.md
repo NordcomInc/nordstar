@@ -1,4 +1,4 @@
-# @nordcom/nordstar-card
+# [@nordcom/nordstar-card](https://nordstar.dev/docs/components/card/?utm_source=nordstar&utm_campaign=oss)
 
 `<Card/>` is a consistent card-like container for blocks of content.
 

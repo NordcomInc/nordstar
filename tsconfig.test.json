@@ -1,21 +1,30 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
-    "extends": "./tsconfig.json",
+    "extends": ["./tsconfig.json"],
     "compilerOptions": {
+        "allowSyntheticDefaultImports": true,
+        "esModuleInterop": true,
         "jsx": "react-jsx",
         "jsxImportSource": "react",
+        "module": "ESNext",
+        "moduleDetection": "force",
         "noEmit": true,
         "strictNullChecks": true,
-        "types": ["vitest/globals", "@testing-library/react", "happy-dom"]
+        "target": "ESNext",
+        "types": ["vitest/globals", "@testing-library/react", "happy-dom", "react"]
     },
     "include": [
-        "packages/**/*.test.*",
-        "packages/**/*.stories.*",
-        "packages/**/vitest.config.ts",
-        "packages/vite.config.ts",
+        "**/*.test.*",
+        "**/*.stories.*",
+        "**/vitest.config.ts",
+        "vite.config.ts",
         "vitest.config.ts",
         "vitest.setup.ts",
-        "vitest.workspace.ts"
+        "vitest.workspace.ts",
+        "**/tailwind.config.*",
+        "tailwind.config.*",
+        "**/postcss.config.*",
+        "postcss.config.*"
     ],
     "exclude": [
         "**/.next",
@@ -25,6 +34,8 @@
         "**/dist",
         "**/node_modules",
         "**/public",
-        "**/storybook-static"
+        "**/storybook-static",
+        "**/src/**/*.d.ts",
+        "node_modules"
     ]
 }

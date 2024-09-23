@@ -1,5 +1,5 @@
 import type { As } from '@nordcom/nordstar-system';
-import { forwardRef } from '@nordcom/nordstar-system';
+import { cn, forwardRef } from '@nordcom/nordstar-system';
 import styles from './heading.module.scss';
 
 export type HeadingProps = {
@@ -17,9 +17,23 @@ export type HeadingProps = {
  */
 const Heading = forwardRef<'h1', HeadingProps>(({ as, level = 'h1', className, ...props }, ref) => {
     const Tag = as || level;
-    const classes = `${styles.container} ${styles[level]}${className ? ` ${className}` : ''}`;
 
-    return <Tag ref={ref} data-level={level} {...props} className={classes} />;
+    return (
+        <Tag
+            {...props}
+            ref={ref}
+            className={cn(
+                styles.container,
+                'font-heading',
+                level === 'h1' && 'hyphens-auto text-4xl font-extrabold uppercase leading-none',
+                level === 'h2' && 'text-2xl font-normal lowercase leading-tight text-foreground-highlight',
+                level === 'h3' && 'text-xl font-extrabold lowercase leading-tight',
+                level === 'h4' && 'text-base font-bold uppercase leading-none',
+                className
+            )}
+            data-level={level}
+        />
+    );
 });
 
 Heading.displayName = 'Nordstar.Typography.Heading';

@@ -1,5 +1,6 @@
 import MagicString from 'magic-string';
-import { dirname, resolve } from 'node:path';
+import { dirname, join, resolve } from 'node:path';
+import { cwd } from 'node:process';
 import { fileURLToPath } from 'node:url';
 
 import type { Plugin } from 'vite';
@@ -19,7 +20,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
  * directives are hoisted to the top of the file.
  */
 function hoistUseClient(): Plugin {
-    let resolvedConfig;
+    let resolvedConfig: any;
 
     return {
         // TODO: Turn this into a proper plugin or figure out a better way to do this.
@@ -65,7 +66,7 @@ export default defineConfig({
         sourcemap: true,
         target: 'esnext',
         rollupOptions: {
-            external: [/^@nordcom\/nordstar-/, 'clsx'],
+            external: [/^@nordcom\/nordstar-/, 'class-variance-authority', 'clsx', 'tailwind-merge'],
             treeshake: false,
             output: {
                 intro: (chunk) => {
@@ -78,10 +79,8 @@ export default defineConfig({
                 esModule: true,
                 exports: 'auto',
                 format: 'esm',
-                hoistTransitiveImports: false,
                 interop: 'esModule',
                 noConflict: true,
-                minifyInternalExports: false,
                 preserveModules: false,
                 preserveModulesRoot: 'src',
                 strict: true,
@@ -92,6 +91,9 @@ export default defineConfig({
     },
     esbuild: {
         jsx: 'preserve'
+    },
+    css: {
+        postcss: resolve(join(cwd(), 'postcss.config.cjs'))
     },
     plugins: [
         react(),

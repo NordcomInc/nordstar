@@ -1,9 +1,0 @@
-.container {
-    &:is([data-color='default'], [data-color='foreground'], [data-color='primary']) {
-        color: var(--color-accent-primary);
-    }
-
-    &:is([data-color='secondary']) {
-        color: var(--color-accent-secondary);
-    }
-}

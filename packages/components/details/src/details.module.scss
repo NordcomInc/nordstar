@@ -13,6 +13,7 @@ details.container {
         align-items: center;
 
         cursor: pointer;
+        -webkit-user-select: none;
         user-select: none;
 
         transition: var(--duration-short) ease-in-out all;
@@ -56,17 +57,17 @@ details.container {
     }
 
     &[open] {
-        --border-color: var(--color-accent-primary);
+        --border-color: hsl(var(--color-accent-primary));
 
         & > summary {
-            color: var(--color-accent-primary);
+            color: hsl(var(--color-accent-primary));
 
             &:before {
                 content: '';
 
                 transform: rotate(90deg);
 
-                border-color: transparent transparent transparent var(--color-accent-primary);
+                border-color: transparent transparent transparent hsl(var(--color-accent-primary));
                 color: transparent;
             }
         }

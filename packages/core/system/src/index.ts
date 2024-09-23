@@ -1,3 +1,5 @@
+import './globals.css';
+
 import { NordstarProvider } from './nordstar-provider';
 import { cn, forwardRef } from './utils';
 

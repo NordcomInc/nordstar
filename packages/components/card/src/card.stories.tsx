@@ -1,6 +1,5 @@
 import React from 'react';
 
-import type { CardProps } from '@nordcom/nordstar-card';
 import { Card } from '@nordcom/nordstar-card';
 import type { Meta, StoryObj } from '@storybook/react';
 
@@ -8,6 +7,11 @@ const story: Meta<typeof Card> = {
     title: 'System/Components/Card',
     component: Card,
     argTypes: {
+        children: {
+            table: {
+                disable: true
+            }
+        },
         variant: {
             control: 'inline-radio',
             options: ['outline', 'solid'],
@@ -32,54 +36,69 @@ const story: Meta<typeof Card> = {
 export default story;
 type Story = StoryObj<typeof Card>;
 
-const Template = (args: CardProps) => (
-    <>
-        {[
-            <Card key="simple" {...args} style={{ width: '18rem', maxWidth: '100%' }}>
-                This is a simple card
-            </Card>,
-
-            <Card key="card" {...args} style={{ width: '18rem', maxWidth: '100%' }}>
-                Hello World!
+export const Standard: Story = {
+    args: {
+        children: (
+            <>
+                <Card.Header>Header</Card.Header>
                 <Card.Divider />
-                Content inside of the card
+                Hello World! Content inside of the card
                 <br />
                 Another line of content inside of the card.
                 <br />
                 And another one.
                 <Card.Divider />
                 Imaginary footer
-            </Card>
-        ]}
-    </>
-);
-
-export const Standard: Story = {
-    render: Template,
-    args: {}
+            </>
+        ),
+        variant: 'outline',
+        color: 'foreground'
+    }
 };
 
 export const Solid: Story = {
-    render: Template,
     args: {
+        ...Standard.args,
+        variant: 'solid'
+    }
+};
+
+export const WithColor: Story = {
+    name: 'With color',
+    args: {
+        ...Standard.args,
+        color: 'primary'
+    }
+};
+
+export const SolidWithColor: Story = {
+    name: 'Solid with color',
+    args: {
+        ...Standard.args,
         variant: 'solid',
-        color: 'primary',
-        borderless: false
+        color: 'primary'
     }
 };
 
 export const Borderless: Story = {
-    render: Template,
     args: {
-        variant: 'solid',
-        color: 'default',
+        ...Standard.args,
         borderless: true
     }
 };
 
 export const NoPadding: Story = {
-    render: Template,
     args: {
+        ...Standard.args,
+        padding: false
+    }
+};
+
+export const BorderlessNoPadding: Story = {
+    name: 'Borderless with no padding',
+    args: {
+        ...Standard.args,
+        borderless: true,
         padding: false
     }
 };

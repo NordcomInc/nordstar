@@ -1,7 +1,13 @@
-import './styling.scss';
+import hexToHsl from 'hex-to-hsl';
+import type { HTMLAttributes, ReactNode } from 'react';
+import { cn } from './utils';
 
-import type { ReactNode } from 'react';
-import styles from './nordstar-provider.module.scss';
+const toHsl = (input?: string) =>
+    input
+        ? hexToHsl(input)
+              ?.map((val, index) => (index > 0 ? `${val}%` : val))
+              .join(' ')
+        : null;
 
 export type NordstarTheme = {
     accents: {
@@ -10,20 +16,15 @@ export type NordstarTheme = {
     };
     colors?: {
         background?: string;
+        backgroundHighlight?: string;
         foreground?: string;
-        foregroundSecondary?: string;
-        highlight?: string;
+        foregroundHighlight?: string;
         error?: string;
     };
-    fonts?: {
+    fonts: {
         heading?: string;
-        body?: string;
+        body: string;
         code?: string;
-    };
-    sizes?: {
-        text?: {
-            body?: string;
-        };
     };
     border?: {
         width?: number;
@@ -49,53 +50,59 @@ export type NordstarTheme = {
 };
 
 export type NordstarProviderProps = {
-    theme?: NordstarTheme;
-    children?: ReactNode;
-};
+    theme: NordstarTheme;
+    children?: ReactNode | ReactNode[];
+} & Omit<HTMLAttributes<HTMLDivElement>, 'children'>;
 
 /**
  * `<NordstarProvider/>`, a component that should wrap the entire application.
  * @note When using Next.js make sure to to extract all providers into a client component used inside of your `RootLayout`.
  *
  * @param {object} props - `<NordstarProvider/>` props.
- * @param {ReactNode} props.children - The children of the `<NordstarProvider/>` component.
+ * @param {ReactNode | ReactNode[]} props.children - The children of the `<NordstarProvider/>` component.
+ * @param {string | undefined} [props.className] - The class name for the wrapper element.
  * @param {NordstarTheme} [props.theme] - The theme to use for the application.
  * @returns {ReactNode} The `<NordstarProvider/>` component.
  */
-export const NordstarProvider = ({ children, theme, ...props }: NordstarProviderProps) => {
-    const { accents, colors, fonts, sizes, layout } = theme || {};
+export const NordstarProvider = ({ theme, children, className, ...props }: NordstarProviderProps) => {
+    const { accents, colors, fonts, layout } = theme;
 
-    const headingFont =
-        fonts?.heading || fonts?.body ? `--font-heading: ${(fonts.heading || fonts.body)!.replaceAll("'", '')};` : '';
-    const bodyFont =
-        fonts?.body || fonts?.heading ? `--font-body: ${(fonts.body || fonts.heading)!.replaceAll("'", '')};` : '';
+    const headingFont = fonts.heading
+        ? `--font-heading: ${(fonts.heading || fonts.body).replaceAll("'", '')};`
+        : '--font-heading: var(--font-primary, var(--font-fallback));';
+    const bodyFont = `--font-body: ${(fonts.body || fonts.heading)?.replaceAll("'", '') || 'var(--font-primary, var(--font-fallback))'};`;
 
-    const borderWidth = theme?.border?.width || 0.2;
+    const borderWidth = theme.border?.width || 0.2;
+    const borderStyles = borderWidth
+        ? `
+            --border-width-small: ${borderWidth / 1.45}rem;
+            --border-width: ${borderWidth}rem;
+            --border-width-large: ${borderWidth * 1.45}rem;`.trim()
+        : '';
 
     // TODO: Maybe create a utility function for this to better handle optional values (and to hide this away from view).
-    const css = `
+    const css = /* css */ `
         :root {
-            --color-accent-primary: ${accents?.primary};
-            --color-accent-primary-foreground: #fefefe;
-            --color-accent-secondary: ${accents?.secondary};
-            --color-accent-secondary-foreground: #fefefe;
+            --color-accent-primary: ${toHsl(accents.primary)};
+            --color-accent-primary-foreground: ${toHsl('#fefefe')};
+            --color-accent-secondary: ${toHsl(accents.secondary)};
+            --color-accent-secondary-foreground: ${toHsl('#fefefe')};
 
-            --color-background: ${colors?.background ?? '#000000'};
-            --color-background-highlight: ${colors?.highlight ?? '#262626'};
-            --color-foreground: ${colors?.foreground ?? '#fefefe'};
-            --color-foreground-secondary: ${colors?.foregroundSecondary ?? '#828282'};
+            --color-background: ${toHsl(colors?.background ?? '#000000')};
+            --color-background-highlight: ${toHsl(colors?.backgroundHighlight ?? '#262626')};
+            --color-foreground: ${toHsl(colors?.foreground ?? '#fefefe')};
+            --color-foreground-highlight: ${toHsl(colors?.foregroundHighlight ?? '#828282')};
 
-            --color-error: ${colors?.error ?? '#ba3e3e'};
+            --color-error: ${toHsl(colors?.error ?? '#ba3e3e')};
+
 
             ${headingFont}
             ${bodyFont}
+            --font-sans: var(--font-body, var(--font-primary, var(--font-fallback)));
+            --font-mono: ${fonts.code ?? 'monospace'};
 
-            --size-text-body: ${sizes?.text?.body ?? '14px'};
-
-            --border-width: ${borderWidth}rem;
-            --border-width-small: ${borderWidth / 1.45}rem;
-            --border-width-large: ${borderWidth * 1.45}rem;
-            --border-radius: ${theme?.border?.radius ?? '0.45rem'};
+            ${borderStyles}
+            --border-radius: ${theme.border?.radius ?? '0.45rem'};
             --border-radius-half: calc(var(--border-radius) / 2);
 
             --layout-page-width: ${layout?.page?.width ?? '1200px'};
@@ -110,15 +117,19 @@ export const NordstarProvider = ({ children, theme, ...props }: NordstarProvider
             --layout-block-padding-half: calc(var(--layout-block-padding) / 2);
             --layout-block-padding-quarter: calc(var(--layout-block-padding) / 4);
 
-            --duration-short: ${theme?.duration?.short ?? '0.25s'};
-            --duration-medium: ${theme?.duration?.medium ?? '0.5s'};
+            --duration-short: ${theme.duration?.short ?? '0.25s'};
+            --duration-medium: ${theme.duration?.medium ?? '0.5s'};
         }
-    `;
+    `.trim();
 
     return (
         <>
-            <style {...props}>{css}</style>
-            <div id="nordstar" role="document" className={styles.container || ''}>
+            <style data-testid="style">{css}</style>
+            <div
+                id="nordstar"
+                className={cn('contents bg-background text-[16px] font-medium text-foreground', className)}
+                {...props}
+            >
                 {children}
             </div>
         </>

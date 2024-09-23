@@ -8,6 +8,7 @@
         "formulahendry.auto-rename-tag",
         "jgclark.vscode-todo-highlight",
         "medo64.render-crlf",
-        "mikestead.dotenv"
+        "mikestead.dotenv",
+        "bradlc.vscode-tailwindcss"
     ]
 }

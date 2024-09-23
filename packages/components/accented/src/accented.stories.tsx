@@ -8,8 +8,10 @@ const story: Meta<typeof Accented> = {
     title: 'System/Typography/Accented',
     component: Accented,
     argTypes: {
-        secondary: {
-            control: { type: 'boolean' }
+        color: {
+            control: 'inline-radio',
+            options: ['default', 'primary', 'secondary', 'foreground'],
+            defaultValue: 'default'
         }
     }
 };
@@ -25,7 +27,27 @@ const Template = (args: AccentedProps) => (
 
 export const Standard: Story = {
     render: Template,
+    args: {}
+};
+
+export const Primary: Story = {
+    render: Template,
     args: {
-        secondary: false
+        ...Standard.args,
+        color: 'primary'
+    }
+};
+export const Secondary: Story = {
+    render: Template,
+    args: {
+        ...Standard.args,
+        color: 'secondary'
+    }
+};
+export const Foreground: Story = {
+    render: Template,
+    args: {
+        ...Standard.args,
+        color: 'foreground'
     }
 };

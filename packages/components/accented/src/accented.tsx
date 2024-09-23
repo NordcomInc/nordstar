@@ -1,14 +1,10 @@
 import type { As, NordstarColor } from '@nordcom/nordstar-system';
-import { forwardRef } from '@nordcom/nordstar-system';
-import styles from './accented.module.scss';
+import { cn, forwardRef } from '@nordcom/nordstar-system';
 
 export type AccentedProps = {
     as?: As;
 
     color?: NordstarColor;
-
-    /** @deprecated use the `color` prop instead */
-    secondary?: boolean;
 };
 
 /**
@@ -20,13 +16,17 @@ export type AccentedProps = {
  * @returns {React.ReactNode} The `<Accented/>` component.
  */
 const Accented = forwardRef<'span', AccentedProps>(
-    ({ as: Tag = 'span', color = 'default', secondary, className, ...props }, ref) => {
+    ({ as: Tag = 'span', color = 'default', className, ...props }, ref) => {
         return (
             <Tag
                 ref={ref}
-                data-color={!!secondary ? 'secondary' : color}
                 {...props}
-                className={`${styles.container}${className ? ` ${className}` : ''}`}
+                className={cn(
+                    color === 'foreground' && 'text-foreground',
+                    (color === 'default' || color === 'primary') && 'text-primary',
+                    color === 'secondary' && 'text-secondary',
+                    className
+                )}
             />
         );
     }

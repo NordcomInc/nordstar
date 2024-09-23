@@ -2,9 +2,12 @@
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "composite": true,
+        "forceConsistentCasingInFileNames": true,
         "module": "ESNext",
         "moduleResolution": "Bundler",
-        "skipLibCheck": true
+        "skipLibCheck": true,
+        "strict": true,
+        "types": ["node"]
     },
     "exclude": ["node_modules"],
     "include": ["./vite.config.ts", "packages/**/vite.config.ts", "packages/storybook/vite.config.ts.bak"]

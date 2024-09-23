@@ -59,7 +59,15 @@
                 "prefer": "type-imports"
             }
         ],
-        "@typescript-eslint/no-require-imports": "error",
+        "@typescript-eslint/no-require-imports": [
+            "error",
+            {
+                "allow": [
+                    "tailwindcss",
+                    "autoprefixer"
+                ]
+            }
+        ],
         "@typescript-eslint/no-unnecessary-condition": "warn",
         "brace-style": [
             "error",
