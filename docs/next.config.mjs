@@ -2,14 +2,6 @@ import createVercelToolbar from '@vercel/toolbar/plugins/next';
 
 const withVercelToolbar = createVercelToolbar();
 
-export function getBaseUrl() {
-    if (process.env.VERCEL_ENV === 'production') {
-        return 'https://nordstar.dev';
-    }
-
-    return process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : undefined;
-}
-
 /** @type {import('next').NextConfig} */
 let config = {
     poweredByHeader: false,
@@ -18,12 +10,9 @@ let config = {
     swcMinify: true,
     productionBrowserSourceMaps: true,
     compress: true,
-    assetPrefix: getBaseUrl(),
     experimental: {
         appNavFailHandling: true,
         caseSensitiveRoutes: true,
-        cssChunking: 'strict',
-        esmExternals: true,
         optimizePackageImports: [],
         optimizeServerReact: true,
         parallelServerBuildTraces: true,
