@@ -1,5 +1,16 @@
 # @nordcom/nordstar-storybook
 
+## 0.0.66
+
+### Patch Changes
+
+-   [#876](https://github.com/NordcomInc/nordstar/pull/876) [`b56d07f`](https://github.com/NordcomInc/nordstar/commit/b56d07f2d33676f34b3a879ac9142991360e0958) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update storybook monorepo to v8.3.3.
+
+-   [#878](https://github.com/NordcomInc/nordstar/pull/878) [`d65f264`](https://github.com/NordcomInc/nordstar/commit/d65f26470d11530f4cf1cc5f493571c5d7a33121) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.3.9.
+
+-   Updated dependencies [[`d65f264`](https://github.com/NordcomInc/nordstar/commit/d65f26470d11530f4cf1cc5f493571c5d7a33121), [`16fd8e2`](https://github.com/NordcomInc/nordstar/commit/16fd8e259cd01f6687135ff44c8f7da21cc4a4a3)]:
+    -   @nordcom/nordstar@0.0.66
+
 ## 0.0.65
 
 ### Patch Changes

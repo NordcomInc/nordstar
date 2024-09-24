@@ -1,5 +1,16 @@
 # @nordcom/nordstar-docs
 
+## 0.0.66
+
+### Patch Changes
+
+-   [#878](https://github.com/NordcomInc/nordstar/pull/878) [`d65f264`](https://github.com/NordcomInc/nordstar/commit/d65f26470d11530f4cf1cc5f493571c5d7a33121) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.3.9.
+
+-   [#880](https://github.com/NordcomInc/nordstar/pull/880) [`424fba9`](https://github.com/NordcomInc/nordstar/commit/424fba944894c545f3054e917e6a5f282cb08d84) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @vercel/toolbar to v0.1.21.
+
+-   Updated dependencies [[`d65f264`](https://github.com/NordcomInc/nordstar/commit/d65f26470d11530f4cf1cc5f493571c5d7a33121), [`16fd8e2`](https://github.com/NordcomInc/nordstar/commit/16fd8e259cd01f6687135ff44c8f7da21cc4a4a3)]:
+    -   @nordcom/nordstar@0.0.66
+
 ## 0.0.65
 
 ### Patch Changes
