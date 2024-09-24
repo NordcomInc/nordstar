@@ -181,13 +181,13 @@ importers:
         version: link:../packages/core/nordstar
       '@vercel/toolbar':
         specifier: 0.1.20
-        version: 0.1.20(next@14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)(vite@5.4.7(@types/node@22.5.5)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0))
+        version: 0.1.20(next@14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)(vite@5.4.7(@types/node@22.5.5)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0))
       geist:
         specifier: 1.3.1
-        version: 1.3.1(next@14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))
+        version: 1.3.1(next@14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))
       next:
         specifier: 14.2.13
-        version: 14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
       next-mdx-remote:
         specifier: 5.0.0
         version: 5.0.0(@types/react@18.3.8)(react@18.3.1)
@@ -249,6 +249,9 @@ importers:
       postcss:
         specifier: 8.4.47
         version: 8.4.47
+      postcss-import:
+        specifier: 16.1.0
+        version: 16.1.0(postcss@8.4.47)
       prettier:
         specifier: 3.3.3
         version: 3.3.3
@@ -5130,6 +5133,12 @@ packages:
     peerDependencies:
       postcss: ^8.0.0
 
+  postcss-import@16.1.0:
+    resolution: {integrity: sha512-7hsAZ4xGXl4MW+OKEWCnF6T5jqBw80/EE9aXg1r2yyn1RsVEU8EtKXbijEODa+rg7iih4bKf7vlvTGYR4CnPNg==}
+    engines: {node: '>=18.0.0'}
+    peerDependencies:
+      postcss: ^8.0.0
+
   postcss-js@4.0.1:
     resolution: {integrity: sha512-dDLF8pEO191hJMtlHFPRa8xsizHaM82MLfNkUHdUtVEV3tgTp5oj+8qbEqYM57SLfc74KSbw//4SeJma2LRVIw==}
     engines: {node: ^12 || ^14 || >= 16}
@@ -8354,7 +8363,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vercel/toolbar@0.1.20(next@14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)(vite@5.4.7(@types/node@22.5.5)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0))':
+  '@vercel/toolbar@0.1.20(next@14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)(vite@5.4.7(@types/node@22.5.5)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0))':
     dependencies:
       '@tinyhttp/app': 1.3.0
       chokidar: 3.6.0
@@ -8363,7 +8372,7 @@ snapshots:
       get-port: 5.1.1
       strip-ansi: 6.0.1
     optionalDependencies:
-      next: 14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+      next: 14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
       react: 18.3.1
       vite: 5.4.7(@types/node@22.5.5)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0)
 
@@ -10004,9 +10013,9 @@ snapshots:
 
   functions-have-names@1.2.3: {}
 
-  geist@1.3.1(next@14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)):
+  geist@1.3.1(next@14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)):
     dependencies:
-      next: 14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+      next: 14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
 
   gensync@1.0.0-beta.2: {}
 
@@ -11499,7 +11508,7 @@ snapshots:
       - '@types/react'
       - supports-color
 
-  next@14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3):
+  next@14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3):
     dependencies:
       '@next/env': 14.2.13
       '@swc/helpers': 0.5.5
@@ -11509,7 +11518,7 @@ snapshots:
       postcss: 8.4.31
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      styled-jsx: 5.1.1(react@18.3.1)
+      styled-jsx: 5.1.1(@babel/core@7.25.2)(react@18.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.2.13
       '@next/swc-darwin-x64': 14.2.13
@@ -11880,6 +11889,13 @@ snapshots:
   possible-typed-array-names@1.0.0: {}
 
   postcss-import@15.1.0(postcss@8.4.47):
+    dependencies:
+      postcss: 8.4.47
+      postcss-value-parser: 4.2.0
+      read-cache: 1.0.0
+      resolve: 1.22.8
+
+  postcss-import@16.1.0(postcss@8.4.47):
     dependencies:
       postcss: 8.4.47
       postcss-value-parser: 4.2.0
@@ -12828,10 +12844,12 @@ snapshots:
     dependencies:
       inline-style-parser: 0.2.4
 
-  styled-jsx@5.1.1(react@18.3.1):
+  styled-jsx@5.1.1(@babel/core@7.25.2)(react@18.3.1):
     dependencies:
       client-only: 0.0.1
       react: 18.3.1
+    optionalDependencies:
+      '@babel/core': 7.25.2
 
   stylus@0.62.0:
     dependencies:

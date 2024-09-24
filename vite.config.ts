@@ -58,8 +58,8 @@ export default defineConfig({
     root: resolve(__dirname),
     build: {
         copyPublicDir: false,
-        cssCodeSplit: true,
-        cssMinify: true,
+        cssCodeSplit: false,
+        cssMinify: false,
         emptyOutDir: true,
         minify: false,
         outDir: 'dist',

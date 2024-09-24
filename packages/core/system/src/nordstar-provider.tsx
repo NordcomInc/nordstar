@@ -124,7 +124,9 @@ export const NordstarProvider = ({ theme, children, className, ...props }: Nords
 
     return (
         <>
-            <style data-testid="style">{css}</style>
+            <style data-testid="style" suppressHydrationWarning={true}>
+                {css}
+            </style>
             <div
                 id="nordstar"
                 className={cn('contents bg-background text-[16px] font-medium text-foreground', className)}

@@ -15,3 +15,8 @@ public/
 
 vite.config.ts
 vitest.config.ts
+
+postcss.config.cjs
+postcss.config.js
+
+tailwind.config.cjs

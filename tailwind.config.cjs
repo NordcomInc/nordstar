@@ -2,7 +2,7 @@
 module.exports = {
     darkMode: ['class'],
     content: ['./{src,.storybook}/**/*.{ts,tsx}'],
-    prefix: '',
+    prefix: 'nordstar-',
     theme: {
         container: {
             center: true,
@@ -87,6 +87,9 @@ module.exports = {
     },
     future: {
         hoverOnlyWhenSupported: true
+    },
+    corePlugins: {
+        preflight: false
     },
     plugins: []
 };
