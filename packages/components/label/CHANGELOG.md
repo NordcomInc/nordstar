@@ -1,5 +1,20 @@
 # @nordcom/nordstar-label
 
+## 0.0.63
+
+### Patch Changes
+
+-   [#809](https://github.com/NordcomInc/nordstar/pull/809) [`b2d7ad0`](https://github.com/NordcomInc/nordstar/commit/b2d7ad0e1b489a1229f7adf5752546b78dfef27d) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.16.6.
+
+-   [#871](https://github.com/NordcomInc/nordstar/pull/871) [`8fbb855`](https://github.com/NordcomInc/nordstar/commit/8fbb855a1b85f7e6e2449b142702d95a002fa90a) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tailwindcss to v3.4.13.
+
+-   [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6) Thanks [@filiphsps](https://github.com/filiphsps)! - - Refactor components to use tailwind and `cva`.
+
+-   [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6) Thanks [@filiphsps](https://github.com/filiphsps)! - - Update domain to `https://nordstar.dev/`
+
+-   Updated dependencies [[`b2d7ad0`](https://github.com/NordcomInc/nordstar/commit/b2d7ad0e1b489a1229f7adf5752546b78dfef27d), [`8fbb855`](https://github.com/NordcomInc/nordstar/commit/8fbb855a1b85f7e6e2449b142702d95a002fa90a), [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6), [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6), [`e586f33`](https://github.com/NordcomInc/nordstar/commit/e586f337007468d313af9741f9015d1c2a1f0aed)]:
+    -   @nordcom/nordstar-system@0.0.63
+
 ## 0.0.62
 
 ### Patch Changes
