@@ -17,7 +17,7 @@ const Header = ({ sticky = true, className, children, ...props }: HeaderProps) =
             as="header"
             borderless={true}
             className={cn(
-                'z-10 mb-3 flex h-20 w-full items-center justify-center rounded-none border-0 border-none bg-background/95 px-0 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/75',
+                'z-10 mb-3 flex min-h-20 w-full items-center justify-center rounded-none border-0 border-none bg-background/95 px-0 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/75 md:h-20',
                 sticky &&
                     'sticky inset-0 bottom-auto z-40 border-0 border-b-2 border-solid border-background-highlight',
                 className
