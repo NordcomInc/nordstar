@@ -31,7 +31,7 @@ const variants = cva(cn('group overflow-hidden rounded-lg border-2 border-solid 
         {
             color: 'foreground',
             variant: 'solid',
-            class: 'border-background-highlight [&>[data-divider]]:bg-background-highlight'
+            class: 'border-background-highlight text-background [&>[data-divider]]:bg-background-highlight'
         }
     ],
     defaultVariants: {
