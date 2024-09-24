@@ -1,5 +1,12 @@
 # @nordcom/nordstar-button
 
+## 0.0.65
+
+### Patch Changes
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-system@0.0.65
+
 ## 0.0.64
 
 ### Patch Changes

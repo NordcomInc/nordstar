@@ -1,5 +1,12 @@
 # @nordcom/nordstar-docs
 
+## 0.0.65
+
+### Patch Changes
+
+-   Updated dependencies [[`dd8deb1`](https://github.com/NordcomInc/nordstar/commit/dd8deb14ca8dd89cc7c1850f7ee3108156765af8)]:
+    -   @nordcom/nordstar@0.0.65
+
 ## 0.0.64
 
 ### Patch Changes
