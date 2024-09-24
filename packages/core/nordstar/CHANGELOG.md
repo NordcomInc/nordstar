@@ -1,5 +1,23 @@
 # @nordcom/nordstar
 
+## 0.0.65
+
+### Patch Changes
+
+-   [`dd8deb1`](https://github.com/NordcomInc/nordstar/commit/dd8deb14ca8dd89cc7c1850f7ee3108156765af8) Thanks [@filiphsps](https://github.com/filiphsps)! - - Add tailwind prefix.
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-accented@0.0.65
+    -   @nordcom/nordstar-button@0.0.65
+    -   @nordcom/nordstar-card@0.0.65
+    -   @nordcom/nordstar-details@0.0.65
+    -   @nordcom/nordstar-header@0.0.65
+    -   @nordcom/nordstar-heading@0.0.65
+    -   @nordcom/nordstar-input@0.0.65
+    -   @nordcom/nordstar-label@0.0.65
+    -   @nordcom/nordstar-view@0.0.65
+    -   @nordcom/nordstar-system@0.0.65
+
 ## 0.0.64
 
 ### Patch Changes
