@@ -1,5 +1,18 @@
 # @nordcom/nordstar-header
 
+## 0.0.64
+
+### Patch Changes
+
+-   [`3b006f0`](https://github.com/NordcomInc/nordstar/commit/3b006f0a4df4bde5980b1a6b9de23f0e62af17b8) Thanks [@filiphsps](https://github.com/filiphsps)! - - Fix header height on mobile.
+
+-   [`256c135`](https://github.com/NordcomInc/nordstar/commit/256c135376cce133a1d60d1d12016f35d88d870d) Thanks [@filiphsps](https://github.com/filiphsps)! - - Fix padding on desktop by limiting it to devices smaller than `var(--layout-page-width)`.
+
+-   Updated dependencies [[`7bc47f8`](https://github.com/NordcomInc/nordstar/commit/7bc47f86caeada2845f30479477c4b00688f089e)]:
+    -   @nordcom/nordstar-card@0.0.64
+    -   @nordcom/nordstar-view@0.0.64
+    -   @nordcom/nordstar-system@0.0.64
+
 ## 0.0.63
 
 ### Patch Changes
