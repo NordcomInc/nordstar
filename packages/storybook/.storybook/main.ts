@@ -1,9 +1,7 @@
 import { StorybookConfig } from '@storybook/react-vite';
-import path from 'node:path';
-
 const config: StorybookConfig = {
     stories: ['../../**/src/**/*.mdx', '../../**/src/**/*.stories.@(ts|tsx)'],
-    staticDirs: ['../public'],
+    staticDirs: [],
     addons: [
         {
             name: '@storybook/addon-essentials',
@@ -26,14 +24,14 @@ const config: StorybookConfig = {
     typescript: {
         reactDocgen: 'react-docgen-typescript',
         reactDocgenTypescriptOptions: {
-            shouldExtractLiteralValuesFromEnum: true,
-            propFilter: (prop) => (prop.parent ? !/node_modules/.test(prop.parent.fileName) : true),
-            tsconfigPath: path.resolve(path.join(process.cwd().split('/packages')[0], 'tsconfig.json'))
-        }
+            shouldExtractLiteralValuesFromEnum: true
+            //tsconfigPath: path.resolve(path.join(process.cwd().split('/packages')[0], 'tsconfig.json'))
+        },
+        check: true
     },
     docs: {
-        defaultName: 'Overview',
-        docsMode: false
+        defaultName: 'Documentation',
+        docsMode: true
     },
     core: {
         disableTelemetry: true,

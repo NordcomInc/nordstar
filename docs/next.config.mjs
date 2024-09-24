@@ -1,18 +1,33 @@
+import createMDX from '@next/mdx';
 import createVercelToolbar from '@vercel/toolbar/plugins/next';
+
+import remarkGfm from 'remark-gfm';
 
 const withVercelToolbar = createVercelToolbar();
 
+const withMDX = createMDX({
+    options: {
+        remarkPlugins: [remarkGfm],
+        rehypePlugins: []
+    }
+});
+
 /** @type {import('next').NextConfig} */
 let config = {
+    pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
     poweredByHeader: false,
     reactStrictMode: true,
     trailingSlash: true,
     swcMinify: true,
     productionBrowserSourceMaps: true,
+    transpilePackages: ['next-mdx-remote'],
     compress: true,
     experimental: {
         appNavFailHandling: true,
         caseSensitiveRoutes: true,
+        mdxRs: {
+            mdxType: 'gfm'
+        },
         optimizePackageImports: [],
         optimizeServerReact: true,
         parallelServerBuildTraces: true,
@@ -70,4 +85,4 @@ let config = {
     }
 };
 
-export default withVercelToolbar(config);
+export default withVercelToolbar(withMDX(config));

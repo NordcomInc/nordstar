@@ -1,4 +1,5 @@
-import { Input } from '@nordcom/nordstar-input';
+import Input from '@nordcom/nordstar-input/input';
+
 import type { Meta, StoryObj } from '@storybook/react';
 
 const story: Meta<typeof Input> = {
