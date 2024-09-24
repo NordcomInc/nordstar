@@ -6,11 +6,11 @@
     "rewrites": [
         {
             "source": "/storybook/",
-            "destination": "https://docs.nordstar.dev/"
+            "destination": "https://nordstar-storybook.vercel.app/"
         },
         {
             "source": "/storybook/:path*",
-            "destination": "https://docs.nordstar.dev/:path*"
+            "destination": "https://nordstar-storybook.vercel.app/:path*"
         }
     ],
     "github": {
