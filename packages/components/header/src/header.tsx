@@ -17,7 +17,7 @@ const Header = ({ sticky = true, className, children, ...props }: HeaderProps) =
             as="header"
             borderless={true}
             className={cn(
-                'z-10 mb-3 flex min-h-20 w-full items-center justify-center rounded-none border-0 border-none bg-background/95 px-0 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/75 md:h-20',
+                '[var(--layout-page-width)]:px-0 z-10 mb-3 flex min-h-20 w-full items-center justify-center rounded-none border-0 border-none bg-background/95 px-3 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/75 md:h-20',
                 sticky &&
                     'sticky inset-0 bottom-auto z-40 border-0 border-b-2 border-solid border-background-highlight',
                 className
@@ -54,7 +54,7 @@ const Logo = forwardRef<'section', HeaderLogoProps>(({ as, className, ...props }
             ref={ref}
             draggable={false}
             className={cn(
-                '[var(--layout-page-width)]:px-0 px-3 text-lg font-extrabold uppercase *:h-full *:object-contain *:object-left [&>a]:transition-colors [&>a]:hover:text-primary',
+                'text-lg font-extrabold uppercase *:h-full *:object-contain *:object-left [&>a]:transition-colors [&>a]:hover:text-primary',
                 className
             )}
         />
@@ -80,7 +80,7 @@ const Menu = forwardRef<'nav', HeaderMenuProps>(({ as, className, overflowShadow
             ref={ref}
             draggable={false}
             className={cn(
-                'md:overflow-x [var(--layout-page-width)]:px-0 flex w-full touch-auto select-none items-center gap-6 overflow-x-auto scroll-smooth px-3 py-3 md:justify-end',
+                'md:overflow-x flex w-full touch-auto select-none items-center gap-6 overflow-x-auto scroll-smooth py-3 md:justify-end',
                 overflowShadow && 'animate-scroll-shadow-inset [animation-timeline:scroll(self_inline)]',
                 className
             )}

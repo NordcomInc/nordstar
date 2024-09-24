@@ -1,3 +1,5 @@
+import './globals.css';
+
 import hexToHsl from 'hex-to-hsl';
 import type { HTMLAttributes, ReactNode } from 'react';
 import { cn } from './utils';

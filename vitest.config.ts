@@ -45,6 +45,7 @@ export default defineConfig({
         }
     },
     test: {
+        workspace: 'vitest.workspace.ts',
         bail: 2,
         environment: 'happy-dom',
         exclude,

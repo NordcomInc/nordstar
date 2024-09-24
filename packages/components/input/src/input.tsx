@@ -150,7 +150,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                                 'pointer-events-none select-none text-xs font-extrabold uppercase transition-all [transform:translateZ(0)_translateY(0)]',
                                 !placeholder &&
                                     !contents &&
-                                    '-mb-2 text-inherit group-first-of-type:-mb-0 group-focus-within:translate-y-0 group-focus-within:text-sm [transform:translateY(.65rem)]'
+                                    '-mb-2 text-inherit [transform:translateY(.65rem)] group-first-of-type:-mb-0 group-focus-within:translate-y-0 group-focus-within:text-sm'
                             )}
                             data-full-height={!placeholder && !contents}
                         >
@@ -168,7 +168,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                         ref={ref}
                         className={cn(
                             styles.input,
-                            'relative h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 placeholder:text-foreground-highlight placeholder:transition-opacity [font-size:inherit] placeholder:[font-size:inherit]',
+                            'relative h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:text-foreground-highlight placeholder:transition-opacity placeholder:[font-size:inherit]',
                             label && as !== 'textarea' && 'absolute inset-y-0 h-15 pt-3',
                             as === 'textarea' && 'h-full min-h-20 leading-normal'
                         )}

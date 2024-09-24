@@ -1,6 +1,5 @@
 import MagicString from 'magic-string';
-import { dirname, join, resolve } from 'node:path';
-import { cwd } from 'node:process';
+import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import type { Plugin } from 'vite';
@@ -58,16 +57,16 @@ export default defineConfig({
     root: resolve(__dirname),
     build: {
         copyPublicDir: false,
-        cssCodeSplit: false,
-        cssMinify: false,
+        cssCodeSplit: true,
+        cssMinify: true,
         emptyOutDir: true,
-        minify: false,
+        minify: true,
         outDir: 'dist',
         sourcemap: true,
         target: 'esnext',
         rollupOptions: {
             external: [/^@nordcom\/nordstar-/, 'class-variance-authority', 'clsx', 'tailwind-merge'],
-            treeshake: false,
+            treeshake: true,
             output: {
                 intro: (chunk) => {
                     if (chunk.isEntry && chunk.facadeModuleId?.endsWith('.tsx')) {
@@ -91,9 +90,6 @@ export default defineConfig({
     },
     esbuild: {
         jsx: 'preserve'
-    },
-    css: {
-        postcss: resolve(join(cwd(), 'postcss.config.cjs'))
     },
     plugins: [
         react(),

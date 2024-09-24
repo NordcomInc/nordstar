@@ -3,8 +3,5 @@ const path = require('node:path');
 const process = require('node:process');
 
 module.exports = {
-    plugins: [
-        require('tailwindcss')(path.resolve(path.join(process.cwd().split('/packages')[0], 'tailwind.config.cjs'))),
-        require('autoprefixer')
-    ]
+    plugins: [require('postcss-import')(), require('tailwindcss')('tailwind.config.cjs'), require('autoprefixer')]
 };

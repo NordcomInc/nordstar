@@ -1,5 +1,3 @@
-import './globals.css';
-
 // Core
 export type {
     As,

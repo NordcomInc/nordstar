@@ -1,5 +1,3 @@
-import './globals.css';
-
 import Heading from './heading';
 
 export type { HeadingProps } from './heading';
