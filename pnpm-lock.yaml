@@ -153,8 +153,8 @@ importers:
         specifier: 5.4.7
         version: 5.4.7(@types/node@20.16.6)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0)
       vite-plugin-dts:
-        specifier: 4.2.1
-        version: 4.2.1(@types/node@20.16.6)(rollup@4.21.1)(typescript@5.6.2)(vite@5.4.7(@types/node@20.16.6)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0))
+        specifier: 4.2.2
+        version: 4.2.2(@types/node@20.16.6)(rollup@4.21.1)(typescript@5.6.2)(vite@5.4.7(@types/node@20.16.6)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0))
       vite-plugin-lib-inject-css:
         specifier: 2.1.1
         version: 2.1.1(vite@5.4.7(@types/node@20.16.6)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0))
@@ -181,13 +181,13 @@ importers:
         version: link:../packages/core/nordstar
       '@vercel/toolbar':
         specifier: 0.1.20
-        version: 0.1.20(next@14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)(vite@5.4.7(@types/node@22.5.5)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0))
+        version: 0.1.20(next@14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)(vite@5.4.7(@types/node@22.5.5)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0))
       geist:
         specifier: 1.3.1
-        version: 1.3.1(next@14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))
+        version: 1.3.1(next@14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))
       next:
         specifier: 14.2.13
-        version: 14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+        version: 14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
       next-mdx-remote:
         specifier: 5.0.0
         version: 5.0.0(@types/react@18.3.8)(react@18.3.1)
@@ -6399,8 +6399,8 @@ packages:
     engines: {node: ^18.0.0 || >=20.0.0}
     hasBin: true
 
-  vite-plugin-dts@4.2.1:
-    resolution: {integrity: sha512-/QlYvgUMiv8+ZTEerhNCYnYaZMM07cdlX6hQCR/w/g/nTh0tUXPoYwbT6SitizLJ9BybT1lnrcZgqheI6wromQ==}
+  vite-plugin-dts@4.2.2:
+    resolution: {integrity: sha512-USwTMReZFf8yXV+cKkm4WOMqmFjbReAvkyxON5xzdnZzJEBnFgax6BBDZIGGr9WMJYvhHdpaIHLrOjXDcla4OA==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       typescript: '*'
@@ -8354,7 +8354,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vercel/toolbar@0.1.20(next@14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)(vite@5.4.7(@types/node@22.5.5)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0))':
+  '@vercel/toolbar@0.1.20(next@14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3))(react@18.3.1)(vite@5.4.7(@types/node@22.5.5)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0))':
     dependencies:
       '@tinyhttp/app': 1.3.0
       chokidar: 3.6.0
@@ -8363,7 +8363,7 @@ snapshots:
       get-port: 5.1.1
       strip-ansi: 6.0.1
     optionalDependencies:
-      next: 14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+      next: 14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
       react: 18.3.1
       vite: 5.4.7(@types/node@22.5.5)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0)
 
@@ -10004,9 +10004,9 @@ snapshots:
 
   functions-have-names@1.2.3: {}
 
-  geist@1.3.1(next@14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)):
+  geist@1.3.1(next@14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)):
     dependencies:
-      next: 14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
+      next: 14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3)
 
   gensync@1.0.0-beta.2: {}
 
@@ -11499,7 +11499,7 @@ snapshots:
       - '@types/react'
       - supports-color
 
-  next@14.2.13(@babel/core@7.25.2)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3):
+  next@14.2.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.79.3):
     dependencies:
       '@next/env': 14.2.13
       '@swc/helpers': 0.5.5
@@ -11509,7 +11509,7 @@ snapshots:
       postcss: 8.4.31
       react: 18.3.1
       react-dom: 18.3.1(react@18.3.1)
-      styled-jsx: 5.1.1(@babel/core@7.25.2)(react@18.3.1)
+      styled-jsx: 5.1.1(react@18.3.1)
     optionalDependencies:
       '@next/swc-darwin-arm64': 14.2.13
       '@next/swc-darwin-x64': 14.2.13
@@ -12828,12 +12828,10 @@ snapshots:
     dependencies:
       inline-style-parser: 0.2.4
 
-  styled-jsx@5.1.1(@babel/core@7.25.2)(react@18.3.1):
+  styled-jsx@5.1.1(react@18.3.1):
     dependencies:
       client-only: 0.0.1
       react: 18.3.1
-    optionalDependencies:
-      '@babel/core': 7.25.2
 
   stylus@0.62.0:
     dependencies:
@@ -13330,7 +13328,7 @@ snapshots:
       - supports-color
       - terser
 
-  vite-plugin-dts@4.2.1(@types/node@20.16.6)(rollup@4.21.1)(typescript@5.6.2)(vite@5.4.7(@types/node@20.16.6)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0)):
+  vite-plugin-dts@4.2.2(@types/node@20.16.6)(rollup@4.21.1)(typescript@5.6.2)(vite@5.4.7(@types/node@20.16.6)(less@4.2.0)(sass@1.79.3)(stylus@0.62.0)(terser@5.33.0)):
     dependencies:
       '@microsoft/api-extractor': 7.47.7(@types/node@20.16.6)
       '@rollup/pluginutils': 5.1.0(rollup@4.21.1)
