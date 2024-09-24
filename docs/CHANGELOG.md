@@ -1,5 +1,16 @@
 # @nordcom/nordstar-docs
 
+## 0.0.63
+
+### Patch Changes
+
+-   [#843](https://github.com/NordcomInc/nordstar/pull/843) [`f4c6684`](https://github.com/NordcomInc/nordstar/commit/f4c6684737ff115e7f9fc4e1dd8ea46237444561) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency next to v14.2.13.
+
+-   [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6) Thanks [@filiphsps](https://github.com/filiphsps)! - - Update domain to `https://nordstar.dev/`
+
+-   Updated dependencies [[`b2d7ad0`](https://github.com/NordcomInc/nordstar/commit/b2d7ad0e1b489a1229f7adf5752546b78dfef27d), [`8fbb855`](https://github.com/NordcomInc/nordstar/commit/8fbb855a1b85f7e6e2449b142702d95a002fa90a), [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6), [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6)]:
+    -   @nordcom/nordstar@0.0.63
+
 ## 0.0.62
 
 ### Patch Changes
