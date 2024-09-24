@@ -1,5 +1,3 @@
-import './globals.css';
-
 import Button from './button';
 
 export type { ButtonProps } from './button';

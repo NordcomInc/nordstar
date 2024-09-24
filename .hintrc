@@ -19,7 +19,8 @@
                     "overflow: clip",
                     "overscroll-behavior",
                     "text-size-adjust",
-                    "user-select"
+                    "user-select",
+                    "-webkit-text-size-adjust"
                 ]
             }
         ],

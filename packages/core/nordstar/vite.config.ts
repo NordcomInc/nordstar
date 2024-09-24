@@ -20,6 +20,16 @@ export default mergeConfig(
                 }
             }
         },
+        css: {
+            postcss: 'postcss.config.cjs',
+            transformer: 'postcss',
+            devSourcemap: true,
+            modules: {
+                scopeBehaviour: 'local',
+                exportGlobals: true,
+                hashPrefix: 'TEST___'
+            }
+        },
         plugins: [
             codecovVitePlugin({
                 enableBundleAnalysis: !!process.env.CODECOV_TOKEN,

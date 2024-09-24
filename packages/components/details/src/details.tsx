@@ -30,6 +30,6 @@ const Details = forwardRef<typeof Card, DetailsProps>(({ label, className, child
     );
 });
 
-Details.displayName = 'Nordstar.Details';
-
-export default Details;
+export default Object.assign(Details, {
+    displayName: 'Nordstar.Details'
+});

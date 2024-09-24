@@ -19,9 +19,10 @@ const Accented = forwardRef<'span', AccentedProps>(
     ({ as: Tag = 'span', color = 'default', className, ...props }, ref) => {
         return (
             <Tag
-                ref={ref}
                 {...props}
+                ref={ref}
                 className={cn(
+                    'contents',
                     color === 'foreground' && 'text-foreground',
                     (color === 'default' || color === 'primary') && 'text-primary',
                     color === 'secondary' && 'text-secondary',
