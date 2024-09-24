@@ -1,5 +1,14 @@
 # @nordcom/nordstar-card
 
+## 0.0.64
+
+### Patch Changes
+
+-   [`7bc47f8`](https://github.com/NordcomInc/nordstar/commit/7bc47f86caeada2845f30479477c4b00688f089e) Thanks [@filiphsps](https://github.com/filiphsps)! - - Fix text color on solid foreground variant.
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-system@0.0.64
+
 ## 0.0.63
 
 ### Patch Changes

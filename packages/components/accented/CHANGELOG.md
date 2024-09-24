@@ -1,5 +1,12 @@
 # @nordcom/nordstar-accented
 
+## 0.0.64
+
+### Patch Changes
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-system@0.0.64
+
 ## 0.0.63
 
 ### Patch Changes
