@@ -1,6 +1,7 @@
 import createMDX from '@next/mdx';
 import createVercelToolbar from '@vercel/toolbar/plugins/next';
 
+import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 
 const withVercelToolbar = createVercelToolbar();
@@ -8,7 +9,7 @@ const withVercelToolbar = createVercelToolbar();
 const withMDX = createMDX({
     options: {
         remarkPlugins: [remarkGfm],
-        rehypePlugins: []
+        rehypePlugins: [rehypeSlug]
     }
 });
 

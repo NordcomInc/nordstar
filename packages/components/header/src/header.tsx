@@ -54,7 +54,7 @@ const Logo = forwardRef<'section', HeaderLogoProps>(({ as, className, ...props }
             ref={ref}
             draggable={false}
             className={cn(
-                'px-3 text-lg font-extrabold uppercase *:h-full *:object-contain *:object-left [&>a]:transition-colors [&>a]:hover:text-primary',
+                '[var(--layout-page-width)]:px-0 px-3 text-lg font-extrabold uppercase *:h-full *:object-contain *:object-left [&>a]:transition-colors [&>a]:hover:text-primary',
                 className
             )}
         />
@@ -80,7 +80,7 @@ const Menu = forwardRef<'nav', HeaderMenuProps>(({ as, className, overflowShadow
             ref={ref}
             draggable={false}
             className={cn(
-                'md:overflow-x flex w-full touch-auto select-none items-center gap-6 overflow-x-auto scroll-smooth px-3 py-3 md:justify-end',
+                'md:overflow-x [var(--layout-page-width)]:px-0 flex w-full touch-auto select-none items-center gap-6 overflow-x-auto scroll-smooth px-3 py-3 md:justify-end',
                 overflowShadow && 'animate-scroll-shadow-inset [animation-timeline:scroll(self_inline)]',
                 className
             )}
