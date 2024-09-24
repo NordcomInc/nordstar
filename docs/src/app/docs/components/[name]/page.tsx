@@ -21,7 +21,9 @@ export default async function ComponentDocsPage({ params: { name } }: { params: 
 
     return (
         <>
-            <Heading level="h1">{name}</Heading>
+            <Heading level="h1" className="capitalize">
+                {name}
+            </Heading>
         </>
     );
 }

@@ -26,9 +26,7 @@ let config = {
     experimental: {
         appNavFailHandling: true,
         caseSensitiveRoutes: true,
-        mdxRs: {
-            mdxType: 'gfm'
-        },
+        mdxRs: true,
         optimizePackageImports: [],
         optimizeServerReact: true,
         parallelServerBuildTraces: true,

@@ -1,4 +1,4 @@
-import '@/styles/base.scss';
+import '@/styles/globals.css';
 
 import { Providers } from '@/components/providers';
 import { Card, cn, Header, View } from '@nordcom/nordstar';
