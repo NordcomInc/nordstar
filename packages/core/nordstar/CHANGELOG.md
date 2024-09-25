@@ -1,5 +1,23 @@
 # @nordcom/nordstar
 
+## 0.0.67
+
+### Patch Changes
+
+-   [`78e00ee`](https://github.com/NordcomInc/nordstar/commit/78e00eef7ffd221faa7764f80210ce22ea8d4576) Thanks [@filiphsps](https://github.com/filiphsps)! - - Bogus change to trigger another npm publish (the previous release failed).
+
+-   Updated dependencies [[`78e00ee`](https://github.com/NordcomInc/nordstar/commit/78e00eef7ffd221faa7764f80210ce22ea8d4576)]:
+    -   @nordcom/nordstar-accented@0.0.67
+    -   @nordcom/nordstar-button@0.0.67
+    -   @nordcom/nordstar-card@0.0.67
+    -   @nordcom/nordstar-details@0.0.67
+    -   @nordcom/nordstar-header@0.0.67
+    -   @nordcom/nordstar-heading@0.0.67
+    -   @nordcom/nordstar-input@0.0.67
+    -   @nordcom/nordstar-label@0.0.67
+    -   @nordcom/nordstar-view@0.0.67
+    -   @nordcom/nordstar-system@0.0.67
+
 ## 0.0.66
 
 ### Patch Changes
