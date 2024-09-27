@@ -99,7 +99,7 @@
         "glob": "11.0.0",
         "happy-dom": "15.7.4",
         "inquirer-directory": "2.2.0",
-        "inquirer": "11.0.2",
+        "inquirer": "11.1.0",
         "lint-staged": "15.2.10",
         "magic-string": "0.30.11",
         "plop": "4.0.1",
