@@ -26,7 +26,7 @@ Visit [https://nordstar.dev/docs/](https://nordstar.dev/docs/?utm_source=nordsta
 
 ## 🏢 Real World Usage
 
-• We here at Nordcom AB use Nordstar in for our applications and services, like on [Nordcom Commerce](https://shops.nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss), [Sweet Side of Sweden](https://www.sweetsideofsweden.com/?utm_source=nordstar&utm_medium=github&utm_campaign=oss) (soon) and [nordcom.io](https://nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss).
+• We here at Nordcom AB use Nordstar in for our applications and services, like on [Nordcom Commerce](https://shops.nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss), [Swedish Candy Store](https://swedish-candy-store.com/?utm_source=nordstar&utm_medium=github&utm_campaign=oss) and [nordcom.io](https://nordcom.io/?utm_source=nordstar&utm_medium=github&utm_campaign=oss).
 
 > If you use Nordstar in one your or your company's project, please let us know! We'd love to feature you here and on Nordstar's website.
 
