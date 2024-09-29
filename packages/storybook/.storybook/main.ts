@@ -1,4 +1,6 @@
 import { StorybookConfig } from '@storybook/react-vite';
+import path from 'node:path';
+
 const config: StorybookConfig = {
     stories: ['../../**/src/**/*.mdx', '../../**/src/**/*.stories.@(ts|tsx)'],
     staticDirs: [],
@@ -24,8 +26,8 @@ const config: StorybookConfig = {
     typescript: {
         reactDocgen: 'react-docgen-typescript',
         reactDocgenTypescriptOptions: {
-            shouldExtractLiteralValuesFromEnum: true
-            //tsconfigPath: path.resolve(path.join(process.cwd().split('/packages')[0], 'tsconfig.json'))
+            shouldExtractLiteralValuesFromEnum: true,
+            tsconfigPath: path.resolve(path.join(process.cwd().split('/packages')[0], 'tsconfig.json'))
         },
         check: true
     },
