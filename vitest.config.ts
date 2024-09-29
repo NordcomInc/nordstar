@@ -25,10 +25,11 @@ const exclude = [
     '**/vite.*.ts',
     '**/vitest.*.ts',
     '**/postcss.config.*',
-    'tailwind.config.cjs,',
+    'tailwind.config.cjs',
     'vite.config.ts',
     'vitest.config.ts',
-    'vitest.workspace.ts'
+    'vitest.workspace.ts',
+    '.prettierrc.cjs'
 ];
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
