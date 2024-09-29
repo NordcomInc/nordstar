@@ -5,7 +5,9 @@
     "version": "0.0.69",
     "description": "Card is a consistent card-like container for blocks of content.",
     "files": [
-        "dist"
+        "dist",
+        "CHANGELOG.md",
+        "README.md"
     ],
     "main": "./dist/index.js",
     "module": "./dist/index.js",

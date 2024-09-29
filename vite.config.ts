@@ -65,7 +65,6 @@ export default defineConfig({
         sourcemap: true,
         target: 'esnext',
         rollupOptions: {
-            external: [/^@nordcom\/nordstar-/, 'class-variance-authority', 'clsx', 'tailwind-merge'],
             treeshake: true,
             output: {
                 intro: (chunk) => {

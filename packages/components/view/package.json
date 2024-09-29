@@ -5,7 +5,9 @@
     "version": "0.0.69",
     "description": "Display a dedicated view; (aka page) somewhere in your app.",
     "files": [
-        "dist"
+        "dist",
+        "CHANGELOG.md",
+        "README.md"
     ],
     "main": "./dist/index.js",
     "module": "./dist/index.js",

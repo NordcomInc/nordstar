@@ -15,7 +15,7 @@ export default mergeConfig(
         root: resolve(__dirname),
         build: {
             rollupOptions: {
-                external: [/^@nordcom\/nordstar-/, 'clsx']
+                external: [/^@nordcom\/nordstar-/, 'class-variance-authority', 'clsx', 'tailwind-merge']
             }
         },
         plugins: [

@@ -5,7 +5,9 @@
     "version": "0.0.69",
     "description": "Hide/Show content using a styled &lt;details&gt; element.",
     "files": [
-        "dist"
+        "dist",
+        "CHANGELOG.md",
+        "README.md"
     ],
     "main": "./dist/index.js",
     "module": "./dist/index.js",

@@ -5,7 +5,9 @@
     "version": "0.0.69",
     "description": "An opinionated component library for building human-centric user interfaces.",
     "files": [
-        "dist"
+        "dist",
+        "CHANGELOG.md",
+        "README.md"
     ],
     "main": "./dist/index.js",
     "module": "./dist/index.js",
@@ -87,7 +89,8 @@
         "@nordcom/nordstar-input": "workspace:*",
         "@nordcom/nordstar-label": "workspace:*",
         "@nordcom/nordstar-system": "workspace:*",
-        "@nordcom/nordstar-view": "workspace:*"
+        "@nordcom/nordstar-view": "workspace:*",
+        "class-variance-authority": "0.7.0"
     },
     "peerDependencies": {
         "react": ">=18",
@@ -99,6 +102,7 @@
         "@types/react-dom": "18.3.0",
         "@types/react": "18.3.10",
         "autoprefixer": "10.4.20",
+        "postcss-import": "16.1.0",
         "postcss": "8.4.47",
         "prettier": "3.3.3",
         "react-dom": "18.3.1",

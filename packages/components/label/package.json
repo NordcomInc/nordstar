@@ -5,7 +5,9 @@
     "version": "0.0.69",
     "description": "A component used to describe other components or groups of components.",
     "files": [
-        "dist"
+        "dist",
+        "CHANGELOG.md",
+        "README.md"
     ],
     "main": "./dist/index.js",
     "module": "./dist/index.js",

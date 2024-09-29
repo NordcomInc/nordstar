@@ -5,7 +5,9 @@
     "version": "0.0.69",
     "description": "Component for single-line text and number input with formatting support.",
     "files": [
-        "dist"
+        "dist",
+        "CHANGELOG.md",
+        "README.md"
     ],
     "main": "./dist/index.js",
     "module": "./dist/index.js",

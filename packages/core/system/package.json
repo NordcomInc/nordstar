@@ -5,7 +5,9 @@
     "version": "0.0.69",
     "description": "Utilities used by all of the Nordstar Components, shouldn't be used directly outside of the Nordstar library.",
     "files": [
-        "dist"
+        "dist",
+        "CHANGELOG.md",
+        "README.md"
     ],
     "main": "./dist/index.js",
     "module": "./dist/index.js",

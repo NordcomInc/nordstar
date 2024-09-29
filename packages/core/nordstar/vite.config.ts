@@ -15,8 +15,10 @@ export default mergeConfig(
         root: resolve(__dirname),
         build: {
             rollupOptions: {
+                external: ['@nordcom/nordstar-system', 'class-variance-authority', 'clsx', 'tailwind-merge'],
                 output: {
-                    name
+                    name,
+                    preserveModules: true
                 }
             }
         },

@@ -6,7 +6,9 @@
     "sideEffects": true,
     "private": true,
     "files": [
-        "dist"
+        "dist",
+        "CHANGELOG.md",
+        "README.md"
     ],
     "scripts": {
         "build": "storybook build --disable-telemetry",
