@@ -38,7 +38,7 @@ const variants = cva(
             {
                 color: 'foreground',
                 variant: 'outline',
-                class: 'group-data[value]:border-foreground group-data[value]:text-foreground group-data[value]:*:text-foreground border-foreground-highlight text-foreground-highlight hover:border-foreground hover:text-foreground group-focus-within:border-foreground group-focus-within:text-foreground'
+                class: 'border-foreground-highlight text-foreground-highlight focus-within:border-foreground focus-within:text-foreground hover:border-foreground hover:text-foreground data-[value]:border-foreground data-[value]:text-foreground data-[value]:*:text-foreground'
             }
         ],
         defaultVariants: {
