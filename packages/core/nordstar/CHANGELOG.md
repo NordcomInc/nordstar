@@ -1,5 +1,23 @@
 # @nordcom/nordstar
 
+## 0.0.70
+
+### Patch Changes
+
+-   [`d44088d`](https://github.com/NordcomInc/nordstar/commit/d44088d4b8d5b3c531b794ae4f64419ef806aa15) Thanks [@filiphsps](https://github.com/filiphsps)! - - Combine components in the primary nordstar package.
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-accented@0.0.70
+    -   @nordcom/nordstar-button@0.0.70
+    -   @nordcom/nordstar-card@0.0.70
+    -   @nordcom/nordstar-details@0.0.70
+    -   @nordcom/nordstar-header@0.0.70
+    -   @nordcom/nordstar-heading@0.0.70
+    -   @nordcom/nordstar-input@0.0.70
+    -   @nordcom/nordstar-label@0.0.70
+    -   @nordcom/nordstar-view@0.0.70
+    -   @nordcom/nordstar-system@0.0.70
+
 ## 0.0.69
 
 ### Patch Changes
