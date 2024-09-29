@@ -1,5 +1,16 @@
 # @nordcom/nordstar-storybook
 
+## 0.0.69
+
+### Patch Changes
+
+-   [#897](https://github.com/NordcomInc/nordstar/pull/897) [`3011ba6`](https://github.com/NordcomInc/nordstar/commit/3011ba6aa54931d195af47efc112c9fc29014816) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @joshwooding/vite-plugin-react-docgen-typescript to v0.4.1.
+
+-   [`d168a21`](https://github.com/NordcomInc/nordstar/commit/d168a2129563cbaaf64101fad334e706cbe4ca4e) Thanks [@filiphsps](https://github.com/filiphsps)! - - Try to fix `react-docgen-typescript`.
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar@0.0.69
+
 ## 0.0.68
 
 ### Patch Changes

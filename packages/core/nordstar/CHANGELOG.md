@@ -1,5 +1,21 @@
 # @nordcom/nordstar
 
+## 0.0.69
+
+### Patch Changes
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-accented@0.0.69
+    -   @nordcom/nordstar-button@0.0.69
+    -   @nordcom/nordstar-card@0.0.69
+    -   @nordcom/nordstar-details@0.0.69
+    -   @nordcom/nordstar-header@0.0.69
+    -   @nordcom/nordstar-heading@0.0.69
+    -   @nordcom/nordstar-input@0.0.69
+    -   @nordcom/nordstar-label@0.0.69
+    -   @nordcom/nordstar-view@0.0.69
+    -   @nordcom/nordstar-system@0.0.69
+
 ## 0.0.68
 
 ### Patch Changes
