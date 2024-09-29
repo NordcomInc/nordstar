@@ -1,5 +1,21 @@
 # @nordcom/nordstar-system
 
+## 0.0.68
+
+### Patch Changes
+
+-   [#883](https://github.com/NordcomInc/nordstar/pull/883) [`f1276d3`](https://github.com/NordcomInc/nordstar/commit/f1276d3da92689043c8e0facc25ead5323828b73) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.16.7.
+
+-   [#885](https://github.com/NordcomInc/nordstar/pull/885) [`ab2834b`](https://github.com/NordcomInc/nordstar/commit/ab2834bdf7f087e4a963e65e971215f1e001cda2) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.4.8.
+
+-   [#886](https://github.com/NordcomInc/nordstar/pull/886) [`acc51bf`](https://github.com/NordcomInc/nordstar/commit/acc51bf41e14fad4a3dc790809071cd4ae944a6b) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.16.8.
+
+-   [#887](https://github.com/NordcomInc/nordstar/pull/887) [`d8cc5cd`](https://github.com/NordcomInc/nordstar/commit/d8cc5cde27b6deedf9ee49bf43786c40c3daf7b0) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.16.9.
+
+-   [#892](https://github.com/NordcomInc/nordstar/pull/892) [`605e0d0`](https://github.com/NordcomInc/nordstar/commit/605e0d0b525f4a327b24f42ab63c054bdad5f2d6) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.16.10.
+
+-   [#893](https://github.com/NordcomInc/nordstar/pull/893) [`c27d71c`](https://github.com/NordcomInc/nordstar/commit/c27d71cf2afdc4f6166d9c0317217bd960a9edee) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.3.10.
+
 ## 0.0.67
 
 ### Patch Changes
