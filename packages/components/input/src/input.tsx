@@ -10,7 +10,7 @@ import styles from './input.module.scss';
 
 const variants = cva(
     cn(
-        'group relative inline-flex h-15 flex-col gap-[.1rem] overflow-clip rounded-lg px-4 py-2 text-base transition-colors'
+        'group relative inline-flex h-15 flex-col gap-[.1rem] overflow-clip rounded-lg px-4 py-2 text-base transition-colors bg-transparent'
     ),
     {
         variants: {
