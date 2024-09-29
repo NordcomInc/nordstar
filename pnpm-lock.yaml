@@ -811,8 +811,8 @@ importers:
         version: 8.3.4
     devDependencies:
       '@joshwooding/vite-plugin-react-docgen-typescript':
-        specifier: 0.4.0
-        version: 0.4.0(typescript@5.6.2)(vite@5.4.8(@types/node@20.16.10)(less@4.2.0)(sass@1.79.4)(stylus@0.62.0)(terser@5.33.0))
+        specifier: 0.4.1
+        version: 0.4.1(typescript@5.6.2)(vite@5.4.8(@types/node@20.16.10)(less@4.2.0)(sass@1.79.4)(stylus@0.62.0)(terser@5.33.0))
       '@nordcom/prettier':
         specifier: 0.1.1
         version: 0.1.1
@@ -1394,8 +1394,8 @@ packages:
       typescript:
         optional: true
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.4.0':
-    resolution: {integrity: sha512-/qX72XQbN56BDxYLz0VuUvU7ozFtRf0Iz97XOVQnl5aonqLO6bWR1T5YQd/oIvMVo2qy/qbpN4aRitcu8voQHw==}
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.4.1':
+    resolution: {integrity: sha512-zfGnz27HWDogsz9sfx6TOGaeWM0asSO9YENwaXdwMxhPAirEgDrYR38q+9ddDrAR94rmwqOiXTuRdqYphSZvEw==}
     peerDependencies:
       typescript: '>= 4.3.x'
       vite: ^3.0.0 || ^4.0.0 || ^5.0.0
@@ -7261,9 +7261,8 @@ snapshots:
     optionalDependencies:
       typescript: 5.6.2
 
-  '@joshwooding/vite-plugin-react-docgen-typescript@0.4.0(typescript@5.6.2)(vite@5.4.8(@types/node@20.16.10)(less@4.2.0)(sass@1.79.4)(stylus@0.62.0)(terser@5.33.0))':
+  '@joshwooding/vite-plugin-react-docgen-typescript@0.4.1(typescript@5.6.2)(vite@5.4.8(@types/node@20.16.10)(less@4.2.0)(sass@1.79.4)(stylus@0.62.0)(terser@5.33.0))':
     dependencies:
-      glob: 10.4.5
       magic-string: 0.27.0
       react-docgen-typescript: 2.2.2(typescript@5.6.2)
       vite: 5.4.8(@types/node@20.16.10)(less@4.2.0)(sass@1.79.4)(stylus@0.62.0)(terser@5.33.0)
