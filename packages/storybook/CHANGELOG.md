@@ -1,5 +1,14 @@
 # @nordcom/nordstar-storybook
 
+## 0.0.70
+
+### Patch Changes
+
+-   [#902](https://github.com/NordcomInc/nordstar/pull/902) [`eab5787`](https://github.com/NordcomInc/nordstar/commit/eab5787814e33232ab0112f58207407d916beb75) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency storybook-dark-mode to v4.0.2.
+
+-   Updated dependencies [[`d44088d`](https://github.com/NordcomInc/nordstar/commit/d44088d4b8d5b3c531b794ae4f64419ef806aa15)]:
+    -   @nordcom/nordstar@0.0.70
+
 ## 0.0.69
 
 ### Patch Changes
