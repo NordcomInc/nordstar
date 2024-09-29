@@ -1,5 +1,20 @@
 # @nordcom/nordstar-docs
 
+## 0.0.68
+
+### Patch Changes
+
+-   [#891](https://github.com/NordcomInc/nordstar/pull/891) [`51fa458`](https://github.com/NordcomInc/nordstar/commit/51fa458ccec5db6e24a35df01bbb096d2957cbf3) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @vercel/toolbar to v0.1.22.
+
+-   [#893](https://github.com/NordcomInc/nordstar/pull/893) [`c27d71c`](https://github.com/NordcomInc/nordstar/commit/c27d71cf2afdc4f6166d9c0317217bd960a9edee) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v18.3.10.
+
+-   [#894](https://github.com/NordcomInc/nordstar/pull/894) [`336df3e`](https://github.com/NordcomInc/nordstar/commit/336df3ee4231c4ba031c0e3687f78f9b86b3d768) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency rehype to v13.0.2.
+
+-   [#895](https://github.com/NordcomInc/nordstar/pull/895) [`4e079c0`](https://github.com/NordcomInc/nordstar/commit/4e079c09f31ff3595e5635962579451065560cd7) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency rehype-parse to v9.0.1.
+
+-   Updated dependencies [[`f1276d3`](https://github.com/NordcomInc/nordstar/commit/f1276d3da92689043c8e0facc25ead5323828b73), [`ab2834b`](https://github.com/NordcomInc/nordstar/commit/ab2834bdf7f087e4a963e65e971215f1e001cda2), [`acc51bf`](https://github.com/NordcomInc/nordstar/commit/acc51bf41e14fad4a3dc790809071cd4ae944a6b), [`d8cc5cd`](https://github.com/NordcomInc/nordstar/commit/d8cc5cde27b6deedf9ee49bf43786c40c3daf7b0), [`605e0d0`](https://github.com/NordcomInc/nordstar/commit/605e0d0b525f4a327b24f42ab63c054bdad5f2d6), [`c27d71c`](https://github.com/NordcomInc/nordstar/commit/c27d71cf2afdc4f6166d9c0317217bd960a9edee), [`c153ccf`](https://github.com/NordcomInc/nordstar/commit/c153ccf74a8617cbbb5d3c6c2e02aae31940ec3f)]:
+    -   @nordcom/nordstar@0.0.68
+
 ## 0.0.67
 
 ### Patch Changes
