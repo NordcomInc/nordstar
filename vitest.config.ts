@@ -13,7 +13,6 @@ const exclude = [
     '**/*.js*',
     '**/*.mjs*',
     '**/*.stories.*',
-    '**/*.test.*',
     '**/coverage',
     '**/dist',
     '**/docs',
