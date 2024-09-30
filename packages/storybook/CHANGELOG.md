@@ -1,5 +1,14 @@
 # @nordcom/nordstar-storybook
 
+## 0.0.71
+
+### Patch Changes
+
+-   [#905](https://github.com/NordcomInc/nordstar/pull/905) [`b7cac08`](https://github.com/NordcomInc/nordstar/commit/b7cac087b8396fee7af6fe3e29e5d1b1725ce139) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @vitejs/plugin-react to v4.3.2.
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar@0.0.71
+
 ## 0.0.70
 
 ### Patch Changes
