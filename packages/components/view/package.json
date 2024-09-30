@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-view",
     "type": "module",
-    "version": "0.0.70",
+    "version": "0.0.71",
     "description": "Display a dedicated view; (aka page) somewhere in your app.",
     "files": [
         "dist",

@@ -1,5 +1,14 @@
 # @nordcom/nordstar-input
 
+## 0.0.71
+
+### Patch Changes
+
+-   [`90402f0`](https://github.com/NordcomInc/nordstar/commit/90402f0b06bf85249906f690ff85922040eb44b6) Thanks [@filiphsps](https://github.com/filiphsps)! - - Fix `group` usage.
+
+-   Updated dependencies []:
+    -   @nordcom/nordstar-system@0.0.71
+
 ## 0.0.70
 
 ### Patch Changes
