@@ -108,7 +108,7 @@
         "prettier": "3.3.3",
         "react-dom": "18.3.1",
         "react": "18.3.1",
-        "rollup-preserve-directives": "1.1.1",
+        "rollup-preserve-directives": "1.1.2",
         "sass": "1.79.4",
         "strip-ansi": "7.1.0",
         "tailwindcss": "3.4.13",
