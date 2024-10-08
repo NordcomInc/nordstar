@@ -1,5 +1,25 @@
 # @nordcom/nordstar
 
+## 0.0.72
+
+### Patch Changes
+
+-   [#928](https://github.com/NordcomInc/nordstar/pull/928) [`648662c`](https://github.com/NordcomInc/nordstar/commit/648662cdbf457bbae0be948446c3109e499a708e) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.16.11.
+
+-   [#929](https://github.com/NordcomInc/nordstar/pull/929) [`011e4d7`](https://github.com/NordcomInc/nordstar/commit/011e4d7621cd876c3292369a4a2b95ad62756ff7) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.6.3.
+
+-   Updated dependencies [[`87b25b6`](https://github.com/NordcomInc/nordstar/commit/87b25b63b23848ff6cfaea7f2de57a9be4c6495e), [`648662c`](https://github.com/NordcomInc/nordstar/commit/648662cdbf457bbae0be948446c3109e499a708e), [`011e4d7`](https://github.com/NordcomInc/nordstar/commit/011e4d7621cd876c3292369a4a2b95ad62756ff7)]:
+    -   @nordcom/nordstar-system@0.0.72
+    -   @nordcom/nordstar-accented@0.0.72
+    -   @nordcom/nordstar-button@0.0.72
+    -   @nordcom/nordstar-card@0.0.72
+    -   @nordcom/nordstar-details@0.0.72
+    -   @nordcom/nordstar-header@0.0.72
+    -   @nordcom/nordstar-heading@0.0.72
+    -   @nordcom/nordstar-input@0.0.72
+    -   @nordcom/nordstar-label@0.0.72
+    -   @nordcom/nordstar-view@0.0.72
+
 ## 0.0.71
 
 ### Patch Changes
