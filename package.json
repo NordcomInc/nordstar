@@ -109,7 +109,7 @@
         "react-dom": "18.3.1",
         "react": "18.3.1",
         "rollup-preserve-directives": "1.1.2",
-        "sass": "1.80.0",
+        "sass": "1.80.1",
         "strip-ansi": "7.1.0",
         "tailwindcss": "3.4.14",
         "turbo": "2.1.3",
