@@ -1,5 +1,20 @@
 # @nordcom/nordstar-docs
 
+## 0.0.72
+
+### Patch Changes
+
+-   [#912](https://github.com/NordcomInc/nordstar/pull/912) [`c118fa1`](https://github.com/NordcomInc/nordstar/commit/c118fa17f8bc2d2cf7c05392528dc0578a077681) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update remark to v8.
+
+-   [#915](https://github.com/NordcomInc/nordstar/pull/915) [`29d77ff`](https://github.com/NordcomInc/nordstar/commit/29d77ff2242304c83c4e50d329951a33dc771e4c) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update nextjs monorepo to v14.2.14.
+
+-   [#929](https://github.com/NordcomInc/nordstar/pull/929) [`011e4d7`](https://github.com/NordcomInc/nordstar/commit/011e4d7621cd876c3292369a4a2b95ad62756ff7) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.6.3.
+
+-   [#942](https://github.com/NordcomInc/nordstar/pull/942) [`2d034ae`](https://github.com/NordcomInc/nordstar/commit/2d034ae189be8c3a0f9ccef81d869e4e6dd3ba55) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tailwindcss to v3.4.14.
+
+-   Updated dependencies [[`648662c`](https://github.com/NordcomInc/nordstar/commit/648662cdbf457bbae0be948446c3109e499a708e), [`011e4d7`](https://github.com/NordcomInc/nordstar/commit/011e4d7621cd876c3292369a4a2b95ad62756ff7), [`abe372a`](https://github.com/NordcomInc/nordstar/commit/abe372a1d671bb4b056f5cbe87afdd43012ce848), [`2d034ae`](https://github.com/NordcomInc/nordstar/commit/2d034ae189be8c3a0f9ccef81d869e4e6dd3ba55)]:
+    -   @nordcom/nordstar@0.0.72
+
 ## 0.0.71
 
 ### Patch Changes
