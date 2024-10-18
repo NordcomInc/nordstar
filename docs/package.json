@@ -49,8 +49,8 @@
     },
     "homepage": "https://nordstar.dev/",
     "dependencies": {
-        "@mdx-js/loader": "3.0.1",
-        "@mdx-js/react": "3.0.1",
+        "@mdx-js/loader": "3.1.0",
+        "@mdx-js/react": "3.1.0",
         "@next/mdx": "14.2.14",
         "@nordcom/nordstar": "workspace:*",
         "@vercel/toolbar": "0.1.22",
