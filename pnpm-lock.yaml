@@ -180,8 +180,8 @@ importers:
         specifier: workspace:*
         version: link:../packages/core/nordstar
       '@vercel/toolbar':
-        specifier: 0.1.22
-        version: 0.1.22(next@14.2.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.80.5))(react@18.3.1)(vite@5.4.10(@types/node@22.5.5)(less@4.2.0)(sass@1.80.5)(stylus@0.62.0)(terser@5.33.0))
+        specifier: 0.1.24
+        version: 0.1.24(next@14.2.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.80.5))(react@18.3.1)(vite@5.4.10(@types/node@22.5.5)(less@4.2.0)(sass@1.80.5)(stylus@0.62.0)(terser@5.33.0))
       geist:
         specifier: 1.3.1
         version: 1.3.1(next@14.2.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.80.5))
@@ -2428,13 +2428,16 @@ packages:
   '@ungap/structured-clone@1.2.0':
     resolution: {integrity: sha512-zuVdFrMJiuCDQUMCzQaD6KL28MjnqqN8XnAqiEq9PNm/hCPTSGfrXCOfwj1ow4LFb/tNymJPwsNbVePc1xFqrQ==}
 
-  '@vercel/toolbar@0.1.22':
-    resolution: {integrity: sha512-f+IbPrWn1t3PpbBYtQXbvkrJ7xLzxu1f29bx5ZPF1r2OMXJYOw48/Q/0kz5ukPXGVhOHYyOX/0c8OpYYy8tt2Q==}
+  '@vercel/toolbar@0.1.24':
+    resolution: {integrity: sha512-r+B0bNjVAtHGMk4aVhCrtCDkdpe7mcrVx4VeZHsfaomR+v3fZp0JFMIR6muYqmhJ42niHofCddQX1erKZTr08Q==}
     peerDependencies:
+      '@vercel/micro-frontends-internal': ^0.7.0
       next: '>=11.0.0'
       react: '>=17'
       vite: '>=5'
     peerDependenciesMeta:
+      '@vercel/micro-frontends-internal':
+        optional: true
       next:
         optional: true
       react:
@@ -8460,7 +8463,7 @@ snapshots:
 
   '@ungap/structured-clone@1.2.0': {}
 
-  '@vercel/toolbar@0.1.22(next@14.2.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.80.5))(react@18.3.1)(vite@5.4.10(@types/node@22.5.5)(less@4.2.0)(sass@1.80.5)(stylus@0.62.0)(terser@5.33.0))':
+  '@vercel/toolbar@0.1.24(next@14.2.14(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(sass@1.80.5))(react@18.3.1)(vite@5.4.10(@types/node@22.5.5)(less@4.2.0)(sass@1.80.5)(stylus@0.62.0)(terser@5.33.0))':
     dependencies:
       '@tinyhttp/app': 1.3.0
       chokidar: 3.6.0
