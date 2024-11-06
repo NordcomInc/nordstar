@@ -21,8 +21,8 @@ importers:
         specifier: 1.2.1
         version: 1.2.1(vite@5.4.10(@types/node@20.16.11)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0))
       '@happy-dom/global-registrator':
-        specifier: 15.10.0
-        version: 15.10.0
+        specifier: 15.10.1
+        version: 15.10.1
       '@nordcom/prettier':
         specifier: 0.1.1
         version: 0.1.1
@@ -1320,8 +1320,8 @@ packages:
     resolution: {integrity: sha512-vBZP4NlzfOlerQTnba4aqZoMhE/a9HY7HRqoOPaETQcSQuWEIyZMHGfVu6w9wGtGK5fED5qRs2DteVCjOH60sA==}
     engines: {node: '>=14'}
 
-  '@happy-dom/global-registrator@15.10.0':
-    resolution: {integrity: sha512-hZ77wKVJuTrc09IiacyQqsVpqpw4MqVdnyOFS3G4I4No22RIFvrWNLmW4d54l7fL2+VDvPVxwIuQIQLgNdRk6w==}
+  '@happy-dom/global-registrator@15.10.1':
+    resolution: {integrity: sha512-XdFWUDju07BvuztUVBcY/XgceSXMaicTjISGPnxDvFPCmEhBH/K9TNuGYNg4pe0wNN2WrBIp32tgAo78EJ+ODw==}
     engines: {node: '>=18.0.0'}
 
   '@humanwhocodes/config-array@0.13.0':
@@ -3861,6 +3861,10 @@ packages:
 
   happy-dom@15.10.0:
     resolution: {integrity: sha512-l0DD4nTVearx2ODsrF3ywfdP+TLYPCVvNbG4ph2RmfB39HKiPY5tvk5a4EPGvcygKVykpwYw+Bh+7IDtnvkotQ==}
+    engines: {node: '>=18.0.0'}
+
+  happy-dom@15.10.1:
+    resolution: {integrity: sha512-FuGnj/qIB4QnBL6fWmD7Wnh6STxevLgOVWB6+nopDGgWG1+t9CXkNB2ldZ+iqwD2UKxD2D0SU8el8A6AX6Q1+g==}
     engines: {node: '>=18.0.0'}
 
   has-ansi@2.0.0:
@@ -7133,9 +7137,9 @@ snapshots:
 
   '@fastify/busboy@2.1.1': {}
 
-  '@happy-dom/global-registrator@15.10.0':
+  '@happy-dom/global-registrator@15.10.1':
     dependencies:
-      happy-dom: 15.10.0
+      happy-dom: 15.10.1
 
   '@humanwhocodes/config-array@0.13.0':
     dependencies:
@@ -9586,7 +9590,7 @@ snapshots:
       debug: 4.3.6
       enhanced-resolve: 5.17.1
       eslint: 8.57.1
-      eslint-module-utils: 2.9.0(@typescript-eslint/parser@8.8.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
+      eslint-module-utils: 2.9.0(@typescript-eslint/parser@8.8.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.8.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(@typescript-eslint/parser@8.8.0(eslint@8.57.1)(typescript@5.6.3))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
       fast-glob: 3.3.2
       get-tsconfig: 4.8.1
       is-bun-module: 1.2.1
@@ -9609,7 +9613,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  eslint-module-utils@2.9.0(@typescript-eslint/parser@8.8.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1):
+  eslint-module-utils@2.9.0(@typescript-eslint/parser@8.8.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.8.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(@typescript-eslint/parser@8.8.0(eslint@8.57.1)(typescript@5.6.3))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1):
     dependencies:
       debug: 3.2.7
     optionalDependencies:
@@ -9631,7 +9635,7 @@ snapshots:
       doctrine: 2.1.0
       eslint: 8.57.1
       eslint-import-resolver-node: 0.3.9
-      eslint-module-utils: 2.9.0(@typescript-eslint/parser@8.8.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3)(eslint@8.57.1)
+      eslint-module-utils: 2.9.0(@typescript-eslint/parser@8.8.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-import-resolver-typescript@3.6.3(@typescript-eslint/parser@8.8.0(eslint@8.57.1)(typescript@5.6.3))(eslint-import-resolver-node@0.3.9)(eslint-plugin-import@2.30.0(@typescript-eslint/parser@8.8.0(eslint@8.57.1)(typescript@5.6.3))(eslint@8.57.1))(eslint@8.57.1))(eslint@8.57.1)
       hasown: 2.0.2
       is-core-module: 2.15.1
       is-glob: 4.0.3
@@ -10237,6 +10241,12 @@ snapshots:
       uglify-js: 3.19.1
 
   happy-dom@15.10.0:
+    dependencies:
+      entities: 4.5.0
+      webidl-conversions: 7.0.0
+      whatwg-mimetype: 3.0.0
+
+  happy-dom@15.10.1:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
