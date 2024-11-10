@@ -39,7 +39,7 @@
         "@vitejs/plugin-react": "4.3.3",
         "autoprefixer": "10.4.20",
         "postcss-import": "16.1.0",
-        "postcss": "8.4.47",
+        "postcss": "8.4.48",
         "prettier": "3.3.3",
         "storybook-addon-react-docgen": "1.2.44",
         "storybook-addon-sass-postcss": "0.3.2",
