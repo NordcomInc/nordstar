@@ -40,7 +40,7 @@ jobs:
               uses: davelosert/vitest-coverage-report-action@v2.7.0
 
             - name: 🦺 Codecov Coverage Reports
-              uses: codecov/codecov-action@v4
+              uses: codecov/codecov-action@v5
               env:
                   CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
