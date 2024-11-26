@@ -85,7 +85,7 @@
     "homepage": "https://nordstar.dev/docs/components/input/",
     "dependencies": {
         "@nordcom/nordstar-system": "workspace:*",
-        "class-variance-authority": "0.7.0"
+        "class-variance-authority": "0.7.1"
     },
     "peerDependencies": {
         "react": ">=18",

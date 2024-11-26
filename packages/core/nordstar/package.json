@@ -90,7 +90,7 @@
         "@nordcom/nordstar-label": "workspace:*",
         "@nordcom/nordstar-system": "workspace:*",
         "@nordcom/nordstar-view": "workspace:*",
-        "class-variance-authority": "0.7.0"
+        "class-variance-authority": "0.7.1"
     },
     "peerDependencies": {
         "react": ">=18",
