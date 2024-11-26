@@ -108,8 +108,8 @@ importers:
         specifier: 15.2.10
         version: 15.2.10
       magic-string:
-        specifier: 0.30.12
-        version: 0.30.12
+        specifier: 0.30.14
+        version: 0.30.14
       plop:
         specifier: 4.0.1
         version: 4.0.1
@@ -4539,6 +4539,9 @@ packages:
   magic-string@0.30.12:
     resolution: {integrity: sha512-Ea8I3sQMVXr8JhN4z+H/d8zwo+tYDgHE9+5G4Wnrwhs0gaK9fXTKx0Tw5Xwsd/bCPTTZNRAdpyzvoeORe9LYpw==}
 
+  magic-string@0.30.14:
+    resolution: {integrity: sha512-5c99P1WKTed11ZC0HMJOj6CDIue6F8ySu+bJL+85q1zBEIY8IklrJ1eiKC2NDRh3Ct3FcvmJPyQHb9erXMTJNw==}
+
   magicast@0.3.5:
     resolution: {integrity: sha512-L0WhttDl+2BOsybvEOLK7fW3UA0OQ0IQ2d6Zl2x/a6vVRs3bAY0ECOSHHeL5jD+SbOpOCUEi0y1DgHEn9Qn1AQ==}
 
@@ -8494,7 +8497,7 @@ snapshots:
       istanbul-lib-report: 3.0.1
       istanbul-lib-source-maps: 5.0.6
       istanbul-reports: 3.1.7
-      magic-string: 0.30.12
+      magic-string: 0.30.14
       magicast: 0.3.5
       std-env: 3.7.0
       test-exclude: 7.0.1
@@ -8514,7 +8517,7 @@ snapshots:
     dependencies:
       '@vitest/spy': 2.1.4
       estree-walker: 3.0.3
-      magic-string: 0.30.12
+      magic-string: 0.30.14
     optionalDependencies:
       vite: 5.4.10(@types/node@20.16.11)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0)
 
@@ -8530,7 +8533,7 @@ snapshots:
   '@vitest/snapshot@2.1.4':
     dependencies:
       '@vitest/pretty-format': 2.1.4
-      magic-string: 0.30.12
+      magic-string: 0.30.14
       pathe: 1.1.2
 
   '@vitest/spy@2.1.4':
@@ -10985,6 +10988,10 @@ snapshots:
     dependencies:
       '@jridgewell/sourcemap-codec': 1.5.0
 
+  magic-string@0.30.14:
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.5.0
+
   magicast@0.3.5:
     dependencies:
       '@babel/parser': 7.26.1
@@ -12382,7 +12389,7 @@ snapshots:
 
   rollup-preserve-directives@1.1.2(rollup@4.21.1):
     dependencies:
-      magic-string: 0.30.12
+      magic-string: 0.30.14
       rollup: 4.21.1
 
   rollup@4.21.1:
@@ -13270,7 +13277,7 @@ snapshots:
       debug: 4.3.6
       kolorist: 1.8.0
       local-pkg: 0.5.0
-      magic-string: 0.30.12
+      magic-string: 0.30.14
       typescript: 5.6.3
     optionalDependencies:
       vite: 5.4.10(@types/node@20.16.11)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0)
@@ -13282,7 +13289,7 @@ snapshots:
   vite-plugin-lib-inject-css@2.1.1(vite@5.4.10(@types/node@20.16.11)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0)):
     dependencies:
       '@ast-grep/napi': 0.22.6
-      magic-string: 0.30.12
+      magic-string: 0.30.14
       picocolors: 1.0.1
       vite: 5.4.10(@types/node@20.16.11)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0)
 
@@ -13336,7 +13343,7 @@ snapshots:
       chai: 5.1.2
       debug: 4.3.7
       expect-type: 1.1.0
-      magic-string: 0.30.12
+      magic-string: 0.30.14
       pathe: 1.1.2
       std-env: 3.7.0
       tinybench: 2.9.0
