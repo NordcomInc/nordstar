@@ -216,8 +216,8 @@ importers:
         specifier: 8.0.0
         version: 8.0.0
       remark-gfm:
-        specifier: 4.0.0
-        version: 4.0.0
+        specifier: 4.0.1
+        version: 4.0.1
       remark-slug:
         specifier: 8.0.0
         version: 8.0.0
@@ -4466,6 +4466,7 @@ packages:
 
   lodash.get@4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+    deprecated: This package is deprecated. Use the optional chaining (?.) operator instead.
 
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
@@ -5542,8 +5543,8 @@ packages:
     resolution: {integrity: sha512-vzbpYmQsTLuwlmbnET5UK1sceR6qGRtb1vFBpc4uOZ+9j2vysSBryPDp6Lw2VfjFQTH73bHJJDTNB1LYOFrNpg==}
     deprecated: 'Deprecated: use `rehype-autolink-headings`'
 
-  remark-gfm@4.0.0:
-    resolution: {integrity: sha512-U92vJgBPkbw4Zfu/IiW2oTZLSL3Zpv+uI7My2eq8JxKgqraFdU8YUGicEJCEgSbeaG+QDFqIcwwfMTOEelPxuA==}
+  remark-gfm@4.0.1:
+    resolution: {integrity: sha512-1quofZ2RQ9EWdeN34S79+KExV1764+wCUGop5CPL1WGdD0ocPpu91lzPGbwWMECpEpd42kJGQwzRfyov9j4yNg==}
 
   remark-mdx@3.0.1:
     resolution: {integrity: sha512-3Pz3yPQ5Rht2pM5R+0J2MrGoBSrzf+tJG94N+t/ilfdh8YLyyKYtidAYwTveB20BoHAcwIopOUqhcmh2F7hGYA==}
@@ -12262,7 +12263,7 @@ snapshots:
 
   remark-autolink-headings@8.0.0: {}
 
-  remark-gfm@4.0.0:
+  remark-gfm@4.0.1:
     dependencies:
       '@types/mdast': 4.0.4
       mdast-util-gfm: 3.0.0
