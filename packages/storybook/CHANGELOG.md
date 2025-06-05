@@ -1,5 +1,32 @@
 # @nordcom/nordstar-storybook
 
+## 0.0.72
+
+### Patch Changes
+
+-   [#922](https://github.com/NordcomInc/nordstar/pull/922) [`f9b8d92`](https://github.com/NordcomInc/nordstar/commit/f9b8d920e2194669ff6305c1bd5a6363b811df97) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update storybook monorepo to v8.3.5.
+
+-   [#928](https://github.com/NordcomInc/nordstar/pull/928) [`648662c`](https://github.com/NordcomInc/nordstar/commit/648662cdbf457bbae0be948446c3109e499a708e) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v20.16.11.
+
+-   [#929](https://github.com/NordcomInc/nordstar/pull/929) [`011e4d7`](https://github.com/NordcomInc/nordstar/commit/011e4d7621cd876c3292369a4a2b95ad62756ff7) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.6.3.
+
+-   [#938](https://github.com/NordcomInc/nordstar/pull/938) [`abe372a`](https://github.com/NordcomInc/nordstar/commit/abe372a1d671bb4b056f5cbe87afdd43012ce848) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.4.9.
+
+-   [#942](https://github.com/NordcomInc/nordstar/pull/942) [`2d034ae`](https://github.com/NordcomInc/nordstar/commit/2d034ae189be8c3a0f9ccef81d869e4e6dd3ba55) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tailwindcss to v3.4.14.
+
+-   [#952](https://github.com/NordcomInc/nordstar/pull/952) [`28634e3`](https://github.com/NordcomInc/nordstar/commit/28634e3ce4531eb6bae03c013ee7946217ef2923) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update storybook monorepo to v8.3.6.
+
+-   [#958](https://github.com/NordcomInc/nordstar/pull/958) [`5a506c5`](https://github.com/NordcomInc/nordstar/commit/5a506c5bbd8b904cb51c32e5ce3b1e14d9a419a9) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @vitejs/plugin-react to v4.3.3.
+
+-   [#965](https://github.com/NordcomInc/nordstar/pull/965) [`ef074d2`](https://github.com/NordcomInc/nordstar/commit/ef074d22dd02c042288827104cf76532c4227761) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v5.4.10.
+
+-   [#978](https://github.com/NordcomInc/nordstar/pull/978) [`b290bb2`](https://github.com/NordcomInc/nordstar/commit/b290bb2586b3ea16cf43057940c0b11445bba190) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update storybook monorepo to v8.4.0.
+
+-   [`9c20df0`](https://github.com/NordcomInc/nordstar/commit/9c20df0be1ddbc9539ebf5d4209b37a9f8440993) Thanks [@filiphsps](https://github.com/filiphsps)! - Upgrade deps
+
+-   Updated dependencies [[`648662c`](https://github.com/NordcomInc/nordstar/commit/648662cdbf457bbae0be948446c3109e499a708e), [`011e4d7`](https://github.com/NordcomInc/nordstar/commit/011e4d7621cd876c3292369a4a2b95ad62756ff7), [`abe372a`](https://github.com/NordcomInc/nordstar/commit/abe372a1d671bb4b056f5cbe87afdd43012ce848), [`2d034ae`](https://github.com/NordcomInc/nordstar/commit/2d034ae189be8c3a0f9ccef81d869e4e6dd3ba55), [`ef074d2`](https://github.com/NordcomInc/nordstar/commit/ef074d22dd02c042288827104cf76532c4227761), [`9c20df0`](https://github.com/NordcomInc/nordstar/commit/9c20df0be1ddbc9539ebf5d4209b37a9f8440993)]:
+    -   @nordcom/nordstar@0.0.72
+
 ## 0.0.71
 
 ### Patch Changes
