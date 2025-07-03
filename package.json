@@ -100,7 +100,7 @@
         "happy-dom": "15.11.0",
         "inquirer-directory": "2.2.0",
         "inquirer": "12.0.1",
-        "lint-staged": "15.2.10",
+        "lint-staged": "16.1.2",
         "magic-string": "0.30.12",
         "plop": "4.0.1",
         "prettier-eslint": "16.3.0",
