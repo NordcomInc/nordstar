@@ -1,12 +1,7 @@
 import type { ClassValue } from 'clsx';
 import { clsx } from 'clsx';
-import type {
-    ComponentPropsWithoutRef,
-    ElementType,
-    ForwardRefRenderFunction,
-    ReactElement,
-    WeakValidationMap
-} from 'react';
+import type { WeakValidationMap } from 'prop-types';
+import type { ComponentPropsWithoutRef, ElementType, ForwardRefRenderFunction, ReactElement } from 'react';
 import { forwardRef as baseForwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 

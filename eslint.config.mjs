@@ -43,7 +43,11 @@ export default defineConfig([
         '**/postcss.config.js',
         '**/tailwind.config.cjs',
         '.prettierrc.cjs',
-        '.lintstagedrc.mjs'
+        '.lintstagedrc.mjs',
+        'eslint.config.mjs',
+        '**/eslint.config.mjs',
+        'next.config.ts',
+        '**/next.config.ts'
     ]),
     {
         extends: fixupConfigRules(

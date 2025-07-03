@@ -1,20 +1,20 @@
 import createMDX from '@next/mdx';
 import createVercelToolbar from '@vercel/toolbar/plugins/next';
-
+import type { NextConfig } from 'next';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 
-const withVercelToolbar = createVercelToolbar();
+const withVercelToolbar = createVercelToolbar({});
 
 const withMDX = createMDX({
     options: {
         remarkPlugins: [remarkGfm],
-        rehypePlugins: [rehypeSlug]
+        rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
     }
 });
 
-/** @type {import('next').NextConfig} */
-let config = {
+const config: NextConfig = {
     pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
     poweredByHeader: false,
     reactStrictMode: true,

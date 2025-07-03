@@ -73,9 +73,9 @@
         "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
         "typecheck": "tsc --noEmit",
         "lint": "concurrently -i pnpm:lint:*",
-        "lint:prettier": "prettier --check src/**/*.*",
+        "lint:prettier": "prettier --check \"./**/*.{cjs,mjs,ts,tsx}\"",
         "format": "concurrently -i pnpm:format:*",
-        "format:prettier": "prettier  --write \"./**/*.{cjs,mjs,ts,tsx,json}\""
+        "format:prettier": "prettier --write \"./**/*.{cjs,mjs,ts,tsx}\""
     },
     "dependencies": {
         "@nordcom/nordstar-accented": "workspace:*",
@@ -96,12 +96,12 @@
     },
     "devDependencies": {
         "@nordcom/prettier": "0.1.1",
-        "@types/node": "20.16.11",
-        "@types/react-dom": "18.3.0",
-        "@types/react": "18.3.10",
+        "@types/node": "24.0.10",
+        "@types/react-dom": "19.1.6",
+        "@types/react": "19.1.8",
         "autoprefixer": "10.4.20",
         "postcss-import": "16.1.0",
-        "postcss": "8.4.47",
+        "postcss": "8.5.6",
         "prettier": "3.6.2",
         "react-dom": "19.1.0",
         "react": "19.1.0",

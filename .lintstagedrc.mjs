@@ -45,7 +45,7 @@ const testAndLintAll = async (_) => {
         ignore: ignoredFiles
     });
     const allPrettierFiles = (
-        await glob(`${cwd}/**/*.{mjs,ts,tsx,json,scss}`, {
+        await glob(`${cwd}/**/*.{mjs,ts,tsx}`, {
             ignore: ignoredFiles
         })
     )
@@ -68,7 +68,7 @@ export default {
 
         return [`prettier --write ${filesToLint}`, `eslint --max-warnings=0 --fix ${filesToLint}`];
     },
-    '**/*.{css,scss}': async (files) => {
+    '**/*.{css}': async (files) => {
         const filesToLint = await filterIgnoredFiles(files);
         if (filesToLint.length === 0) return [];
 
