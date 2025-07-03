@@ -27,7 +27,7 @@ jobs:
               uses: ./.github/common/install
 
             - name: 🚚 Update PR
-              uses: mscharley/dependency-changesets-action@v1.1.1
+              uses: mscharley/dependency-changesets-action@v1.1.8
               with:
                   token: ${{ secrets.MACHINE_USER }}
                   use-conventional-commits: false
