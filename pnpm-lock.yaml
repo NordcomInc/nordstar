@@ -58,7 +58,7 @@ importers:
         version: 4.3.3(vite@7.0.0(@types/node@20.16.11)(jiti@1.21.6)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0)(yaml@2.5.0))
       '@vitest/coverage-v8':
         specifier: 2.1.4
-        version: 2.1.4(vitest@2.1.4(@types/node@20.16.11)(happy-dom@15.11.0)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0))
+        version: 2.1.4(vitest@2.1.4(@types/node@20.16.11)(happy-dom@15.11.7)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0))
       chalk:
         specifier: 5.3.0
         version: 5.3.0
@@ -96,8 +96,8 @@ importers:
         specifier: 11.0.0
         version: 11.0.0
       happy-dom:
-        specifier: 15.11.0
-        version: 15.11.0
+        specifier: 15.11.7
+        version: 15.11.7
       inquirer:
         specifier: 12.0.1
         version: 12.0.1(@types/node@20.16.11)
@@ -163,7 +163,7 @@ importers:
         version: 5.1.4(typescript@5.8.3)(vite@7.0.0(@types/node@20.16.11)(jiti@1.21.6)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0)(yaml@2.5.0))
       vitest:
         specifier: 2.1.4
-        version: 2.1.4(@types/node@20.16.11)(happy-dom@15.11.0)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0)
+        version: 2.1.4(@types/node@20.16.11)(happy-dom@15.11.7)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0)
 
   docs:
     dependencies:
@@ -4256,8 +4256,8 @@ packages:
     engines: {node: '>=0.4.7'}
     hasBin: true
 
-  happy-dom@15.11.0:
-    resolution: {integrity: sha512-/zyxHbXriYJ8b9Urh43ILk/jd9tC07djURnJuAimJ3tJCOLOzOUp7dEHDwJOZyzROlrrooUhr/0INZIDBj1Bjw==}
+  happy-dom@15.11.7:
+    resolution: {integrity: sha512-KyrFvnl+J9US63TEzwoiJOQzZBJY7KgBushJA8X61DMbNsH+2ONkDuLDnCnwUiPTF42tLoEmrPyoqbenVA5zrg==}
     engines: {node: '>=18.0.0'}
 
   happy-dom@17.6.3:
@@ -4868,6 +4868,7 @@ packages:
 
   lodash.get@4.4.2:
     resolution: {integrity: sha512-z+Uw/vLuy6gQe8cfaFWD7p0wVv8fJl3mbzXh33RS+0oW2wvUqiRXiQ69gLWSLpgB5/6sU+r6BlQR0MBILadqTQ==}
+    deprecated: This package is deprecated. Use the optional chaining (?.) operator instead.
 
   lodash.merge@4.6.2:
     resolution: {integrity: sha512-0KpjqXRVvrYyCsX1swR/XTK0va6VQkQM6MNo7PqW77ByjAhoARA8EfrP1N4+KlKj8YS0ZUCtRT/YUuhyYDujIQ==}
@@ -9145,7 +9146,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-v8@2.1.4(vitest@2.1.4(@types/node@20.16.11)(happy-dom@15.11.0)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0))':
+  '@vitest/coverage-v8@2.1.4(vitest@2.1.4(@types/node@20.16.11)(happy-dom@15.11.7)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 0.2.3
@@ -9159,7 +9160,7 @@ snapshots:
       std-env: 3.7.0
       test-exclude: 7.0.1
       tinyrainbow: 1.2.0
-      vitest: 2.1.4(@types/node@20.16.11)(happy-dom@15.11.0)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0)
+      vitest: 2.1.4(@types/node@20.16.11)(happy-dom@15.11.7)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -10944,7 +10945,7 @@ snapshots:
     optionalDependencies:
       uglify-js: 3.19.1
 
-  happy-dom@15.11.0:
+  happy-dom@15.11.7:
     dependencies:
       entities: 4.5.0
       webidl-conversions: 7.0.0
@@ -14097,7 +14098,7 @@ snapshots:
       terser: 5.33.0
       yaml: 2.5.0
 
-  vitest@2.1.4(@types/node@20.16.11)(happy-dom@15.11.0)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0):
+  vitest@2.1.4(@types/node@20.16.11)(happy-dom@15.11.7)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0):
     dependencies:
       '@vitest/expect': 2.1.4
       '@vitest/mocker': 2.1.4(vite@5.4.10(@types/node@20.16.11)(less@4.2.0)(sass@1.80.6)(stylus@0.62.0)(terser@5.33.0))
@@ -14121,7 +14122,7 @@ snapshots:
       why-is-node-running: 2.3.0
     optionalDependencies:
       '@types/node': 20.16.11
-      happy-dom: 15.11.0
+      happy-dom: 15.11.7
     transitivePeerDependencies:
       - less
       - lightningcss
