@@ -39,6 +39,6 @@ export default mergeConfig(
                 }
             }
         },
-        plugins: [tsConfigPaths()]
+        plugins: [tsConfigPaths({ root: resolve(__dirname) })]
     })
 );

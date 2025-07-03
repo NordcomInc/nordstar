@@ -3,6 +3,8 @@ import { fileURLToPath } from 'node:url';
 
 import { codecovVitePlugin } from '@codecov/vite-plugin';
 import { defineConfig, mergeConfig } from 'vite';
+import dts from 'vite-plugin-dts';
+import tsConfigPaths from 'vite-tsconfig-paths';
 
 import base from '../vite.config';
 
@@ -14,6 +16,16 @@ export default mergeConfig(
     defineConfig({
         root: resolve(__dirname),
         plugins: [
+            tsConfigPaths({ root: resolve(__dirname) }),
+            dts({
+                clearPureImport: false,
+                copyDtsFiles: true,
+                entryRoot: 'src',
+                insertTypesEntry: true,
+                rollupTypes: false,
+                tsconfigPath: `./tsconfig.json`,
+                include: ['**/src']
+            }),
             codecovVitePlugin({
                 enableBundleAnalysis: !!process.env.CODECOV_TOKEN,
                 bundleName: name,

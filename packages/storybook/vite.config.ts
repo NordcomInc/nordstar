@@ -18,5 +18,5 @@ export default defineConfig({
             }
         }
     },
-    plugins: [reactDocgenTypescript(), tsConfigPaths(), react()]
+    plugins: [reactDocgenTypescript(), tsConfigPaths({ root: resolve(__dirname) }), react()]
 });

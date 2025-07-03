@@ -8,7 +8,8 @@
         "postcss.config.cjs",
         "tailwind.config.cjs",
         "tsconfig.json",
-        "vite.config.ts"
+        "vite.config.ts",
+        "packages/**/vite.config.ts"
     ],
     "tasks": {
         "build": {
@@ -30,9 +31,9 @@
             "cache": false,
             "dependsOn": ["^typecheck"]
         },
-        "fix": {
+        "format": {
             "cache": false,
-            "dependsOn": ["^fix"]
+            "dependsOn": ["^format"]
         },
         "start": {
             "persistent": true,

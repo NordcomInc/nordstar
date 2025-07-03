@@ -3,6 +3,7 @@ import { fileURLToPath } from 'node:url';
 
 import { codecovVitePlugin } from '@codecov/vite-plugin';
 import { defineConfig, mergeConfig } from 'vite';
+import dts from 'vite-plugin-dts';
 
 import base from '../vite.config';
 
@@ -15,7 +16,13 @@ export default mergeConfig(
         root: resolve(__dirname),
         build: {
             rollupOptions: {
-                external: ['@nordcom/nordstar-system', 'class-variance-authority', 'clsx', 'tailwind-merge'],
+                external: [
+                    /^@nordcom\/nordstar-/,
+                    '@nordcom/nordstar-system',
+                    'class-variance-authority',
+                    'clsx',
+                    'tailwind-merge'
+                ],
                 output: {
                     name,
                     preserveModules: true
@@ -33,6 +40,15 @@ export default mergeConfig(
             }
         },
         plugins: [
+            dts({
+                clearPureImport: false,
+                copyDtsFiles: true,
+                entryRoot: 'src',
+                insertTypesEntry: true,
+                rollupTypes: false,
+                tsconfigPath: `./tsconfig.json`,
+                include: ['**/src']
+            }),
             codecovVitePlugin({
                 enableBundleAnalysis: !!process.env.CODECOV_TOKEN,
                 bundleName: name,

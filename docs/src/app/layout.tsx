@@ -1,7 +1,8 @@
 import '@/styles/globals.css';
 
 import { Providers } from '@/components/providers';
-import { Card, cn, Header, View } from '@nordcom/nordstar';
+import { cn } from '@/utils/cn';
+import { Card, Header, View } from '@nordcom/nordstar';
 import { GeistMono } from 'geist/font/mono';
 import type { Metadata, Viewport } from 'next';
 import { Montserrat } from 'next/font/google';

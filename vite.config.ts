@@ -92,7 +92,7 @@ export default defineConfig({
     },
     plugins: [
         react(),
-        tsConfigPaths(),
+        tsConfigPaths({ root: resolve(__dirname) }),
         libInjectCss(),
         hoistUseClient(),
         dts({
