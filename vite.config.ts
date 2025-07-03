@@ -88,7 +88,8 @@ export default defineConfig({
         }
     },
     esbuild: {
-        jsx: 'preserve'
+        keepNames: true,
+        minifyIdentifiers: false
     },
     plugins: [
         react(),
