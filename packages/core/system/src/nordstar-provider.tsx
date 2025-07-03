@@ -2,6 +2,7 @@ import './globals.css';
 
 import hexToHsl from 'hex-to-hsl';
 import type { HTMLAttributes, ReactNode } from 'react';
+import { Fragment } from 'react';
 import { cn } from './utils';
 
 const toHsl = (input?: string) =>
@@ -125,7 +126,7 @@ export const NordstarProvider = ({ theme, children, className, ...props }: Nords
     `.trim();
 
     return (
-        <>
+        <Fragment>
             <style data-testid="style" suppressHydrationWarning={true}>
                 {css}
             </style>
@@ -136,7 +137,7 @@ export const NordstarProvider = ({ theme, children, className, ...props }: Nords
             >
                 {children}
             </div>
-        </>
+        </Fragment>
     );
 };
 NordstarProvider.displayName = 'Nordstar.Core.NordstarProvider';

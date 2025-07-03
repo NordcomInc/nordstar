@@ -24,7 +24,8 @@
         "**/tailwind.config.*",
         "tailwind.config.*",
         "**/postcss.config.*",
-        "postcss.config.*"
+        "postcss.config.*",
+        "eslint.config.mjs"
     ],
     "exclude": [
         "**/.next",
