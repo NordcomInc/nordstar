@@ -34,7 +34,9 @@
         "editor.formatOnSave": false
     },
     "[git-commit]": {
-        "editor.rulers": [72],
+        "editor.rulers": [
+            72
+        ],
         "editor.wordWrap": "off",
         "workbench.editor.restoreViewState": false
     },
@@ -42,6 +44,7 @@
         "Behaviour",
         "Brandly",
         "compat",
+        "davelosert",
         "Docgen",
         "Filiph",
         "lintstagedrc",
@@ -65,7 +68,9 @@
     "markdown.extension.list.indentationSize": "inherit",
     "markdown.extension.toc.levels": "2..6",
     "markdown.extension.toc.omittedFromToc": {
-        "CONTRIBUTING.md": ["## Table of Contents"]
+        "CONTRIBUTING.md": [
+            "## Table of Contents"
+        ]
     },
     "markdown.extension.toc.slugifyMode": "github",
     "typescript.preferences.importModuleSpecifier": "non-relative",
@@ -81,18 +86,38 @@
     "[json]": {
         "editor.defaultFormatter": "esbenp.prettier-vscode"
     },
-    "tailwindCSS.classAttributes": ["class", "className", ".*ClassName", ".*Styles"],
+    "tailwindCSS.classAttributes": [
+        "class",
+        "className",
+        ".*ClassName",
+        ".*Styles"
+    ],
     "tailwindCSS.lint.invalidVariant": "warning",
     "tailwindCSS.colorDecorators": true,
     "tailwindCSS.experimental.classRegex": [
         "[a-zA-Z]*ClassName='([^']+)'",
         "[a-zA-Z]*ClassName=\"([^\"]+)\"",
         "[a-zA-Z]*ClassName={`([^`]+)`}",
-        ["Styles\\s*=\\s*([^;]*);", "'([^']*)'"],
-        ["Styles\\s*=\\s*([^;]*);", "\"([^\"]*)\""],
-        ["Styles\\s*=\\s*([^;]*);", "\\`([^\\`]*)\\`"],
-        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
-        ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+        [
+            "Styles\\s*=\\s*([^;]*);",
+            "'([^']*)'"
+        ],
+        [
+            "Styles\\s*=\\s*([^;]*);",
+            "\"([^\"]*)\""
+        ],
+        [
+            "Styles\\s*=\\s*([^;]*);",
+            "\\`([^\\`]*)\\`"
+        ],
+        [
+            "cva\\(([^)]*)\\)",
+            "[\"'`]([^\"'`]*).*?[\"'`]"
+        ],
+        [
+            "cx\\(([^)]*)\\)",
+            "(?:'|\"|`)([^']*)(?:'|\"|`)"
+        ]
     ],
     "tailwindCSS.includeLanguages": {
         "html": "html",

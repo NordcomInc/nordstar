@@ -73,9 +73,9 @@
         "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
         "typecheck": "tsc --noEmit",
         "lint": "concurrently -i pnpm:lint:*",
-        "lint:prettier": "prettier --check \"./**/*.{cjs,mjs,ts,tsx}\"",
+        "lint:prettier": "prettier --check \"./**/src/**/*.{cjs,mjs,ts,tsx}\"",
         "format": "concurrently -i pnpm:format:*",
-        "format:prettier": "prettier --write \"./**/*.{cjs,mjs,ts,tsx}\""
+        "format:prettier": "prettier --write \"./**/src/**/*.{cjs,mjs,ts,tsx}\""
     },
     "dependencies": {
         "@nordcom/nordstar-accented": "workspace:*",
