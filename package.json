@@ -106,7 +106,7 @@
         "magic-string": "0.30.21",
         "plop": "4.0.5",
         "prettier-eslint": "16.4.2",
-        "prettier-plugin-tailwindcss": "0.6.13",
+        "prettier-plugin-tailwindcss": "0.8.0",
         "prettier": "3.8.3",
         "react-dom": "19.1.0",
         "react": "19.1.0",
