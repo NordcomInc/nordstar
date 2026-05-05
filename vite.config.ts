@@ -28,7 +28,7 @@ function hoistUseClient(): Plugin {
         configResolved(config) {
             resolvedConfig = config;
         },
-        generateBundle({ format }, bundle) {
+        generateBundle(_options, bundle) {
             for (const chunk of Object.values(bundle)) {
                 if (
                     chunk.type !== 'chunk' ||
@@ -45,7 +45,7 @@ function hoistUseClient(): Plugin {
 
                 chunk.code = ms.toString();
                 if (resolvedConfig.build.sourcemap) {
-                    chunk.map = ms.generateMap({ hires: 'boundary' });
+                    chunk.map = ms.generateMap({ hires: 'boundary' }) as typeof chunk.map;
                 }
             }
         },
@@ -64,7 +64,7 @@ export default defineConfig({
         cssCodeSplit: true,
         cssMinify: true,
         emptyOutDir: true,
-        minify: true,
+        minify: false,
         outDir: 'dist',
         sourcemap: true,
         target: 'esnext',
