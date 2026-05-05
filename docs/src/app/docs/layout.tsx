@@ -2,7 +2,7 @@ import { Label } from '@nordcom/nordstar';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
-import { getAvailableComponents } from '@/utils/components';
+import { components } from '@/content/component-meta';
 
 export const metadata: Metadata = {
     metadataBase: new URL(`https://nordcominc.github.io/nordstar/docs/`),
@@ -53,13 +53,13 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
                 </NavBlock>
 
                 <NavBlock href="/docs/components" label="Components">
-                    {getAvailableComponents().map((key) => (
+                    {components.map((c) => (
                         <Link
                             className="hover:text-primary"
-                            href={`/docs/components/${key.toLowerCase()}` as Parameters<typeof Link>[0]['href']}
-                            key={key}
+                            href={`/docs/components/${c.slug}` as Parameters<typeof Link>[0]['href']}
+                            key={c.slug}
                         >
-                            {key}
+                            {c.name}
                         </Link>
                     ))}
                 </NavBlock>
