@@ -4,6 +4,12 @@
  */
 
 export const examples = {
+    'button/disabled': () => import('./button/disabled'),
+    'button/icon': () => import('./button/icon'),
+    'button/outline': () => import('./button/outline'),
+    'button/outline-with-color': () => import('./button/outline-with-color'),
+    'button/standard': () => import('./button/standard'),
+    'button/with-color': () => import('./button/with-color'),
 } as const;
 
 export type ExampleName = keyof typeof examples;
