@@ -31,7 +31,7 @@ export default async function DocsComponentsComponentPage({ params: { name } }: 
                 {key || name}
             </Heading>
 
-            <div className="mt-3 rounded-lg border border-background-highlight p-3">
+            <div className="border-background-highlight mt-3 rounded-lg border p-3">
                 <SpoofedComponent withoutWrapper={true} label={key}>
                     {key}
                 </SpoofedComponent>
