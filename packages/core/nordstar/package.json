@@ -68,7 +68,7 @@
     },
     "homepage": "https://nordcominc.github.io/nordstar/",
     "scripts": {
-        "build": "tsc && vite build",
+        "build": "tsc && vite build && node scripts/build-css.mjs",
         "dev": "vite build --watch",
         "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
         "typecheck": "tsc --noEmit",
