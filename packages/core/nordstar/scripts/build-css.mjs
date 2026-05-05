@@ -17,8 +17,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const pkgRoot   = resolve(__dirname, '..');           // packages/core/nordstar
-const repoRoot  = resolve(pkgRoot, '../../..');        // workspace root
+const pkgRoot   = resolve(__dirname, '..');  // packages/core/nordstar
 const distDir   = resolve(pkgRoot, 'dist');
 
 const pkg = JSON.parse(readFileSync(resolve(pkgRoot, 'package.json'), 'utf8'));
@@ -57,7 +56,10 @@ const entryCss = `@import "tailwindcss";\n@import "../src/styles/tailwind.css";\
 writeFileSync(resolve(distDir, '_entry.css'), entryCss);
 
 // 3. Precompile styles.css for non-Tailwind consumers.
-const cli = resolve(repoRoot, 'node_modules/.bin/tailwindcss');
+//    Resolve the CLI from the umbrella's LOCAL node_modules — the workspace root
+//    may have v3 hoisted because storybook/docs still pin v3 until those packages
+//    are migrated. The umbrella's local @tailwindcss/cli@4 is the right binary.
+const cli = resolve(pkgRoot, 'node_modules/.bin/tailwindcss');
 execSync(`"${cli}" -i dist/_entry.css -o dist/styles.css --minify`, {
     stdio: 'inherit',
     cwd: pkgRoot
