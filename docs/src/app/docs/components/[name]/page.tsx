@@ -14,7 +14,7 @@ export async function generateMetadata({ params: { name } }: { params: Component
     return {
         title: name,
         alternates: {
-            canonical: `https://nordstar.dev/docs/components/${name}/`
+            canonical: `https://nordcominc.github.io/nordstar/docs/components/${name}/`
         }
     };
 }

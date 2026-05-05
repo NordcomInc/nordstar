@@ -29,6 +29,7 @@
         "prettier": "prettier --check  \"./**/*.{cjs,mjs,ts,tsx}\" \"!\\packages/**\"",
         "format": "concurrently -i pnpm:format:*",
         "format:packages": "turbo format --filter=!@nordcom/nordstar-docs --filter=!@nordcom/nordstar-storybook",
+        "format:docs": "turbo format --filter=@nordcom/nordstar-docs",
         "test": "vitest run --coverage",
         "clean": "turbo clean --filter=!@nordcom/nordstar-docs --filter=!@nordcom/nordstar-storybook && concurrently -i pnpm:clean:*",
         "clean:repo": "rm -rf dist coverage storybook-static .turbo .next .tsbuildinfo *.log",
@@ -63,7 +64,7 @@
     "bugs": {
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
-    "homepage": "https://nordstar.dev/",
+    "homepage": "https://nordcominc.github.io/nordstar/",
     "devDependencies": {
         "@changesets/changelog-github": "0.7.0",
         "@changesets/cli": "2.31.0",

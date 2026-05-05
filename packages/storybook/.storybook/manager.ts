@@ -11,7 +11,7 @@ export const darkTheme: Theme = create({
     brandImage: 'https://nordcom.io/logo-light.svg',
     brandTarget: '_self',
     brandTitle: "Nordcom AB's Nordstar",
-    brandUrl: 'https://nordstar.dev/',
+    brandUrl: 'https://nordcominc.github.io/nordstar/',
 
     appBg: '#262626',
     appBorderColor: '#262626',
@@ -45,7 +45,7 @@ export const lightTheme: Theme = create({
     brandImage: 'https://nordcom.io/logo-dark.svg',
     brandTarget: '_self',
     brandTitle: "Nordcom AB's Nordstar",
-    brandUrl: 'https://nordstar.dev/',
+    brandUrl: 'https://nordcominc.github.io/nordstar/',
 
     appBg: '#e5e7eb',
     appBorderColor: '#e5e7eb',

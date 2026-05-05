@@ -15,7 +15,8 @@
         "start": "next start -p $PORT",
         "typecheck": "tsc --noEmit",
         "lint": "exit 0",
-        "format": "exit 0"
+        "format": "concurrently -i pnpm:format:*",
+        "format:prettier": "prettier --write \"./**/src/**/*.{cjs,mjs,ts,tsx}\""
     },
     "keywords": [
         "nordstar",
@@ -43,7 +44,7 @@
     "bugs": {
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
-    "homepage": "https://nordstar.dev/",
+    "homepage": "https://nordcominc.github.io/nordstar/",
     "dependencies": {
         "@mdx-js/loader": "3.1.1",
         "@mdx-js/react": "3.1.1",

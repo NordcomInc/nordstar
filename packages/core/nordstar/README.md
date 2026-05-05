@@ -1,4 +1,4 @@
-# [@nordcom/nordstar](https://nordstar.dev/?utm_source=nordstar&utm_campaign=oss)
+# [@nordcom/nordstar](https://nordcominc.github.io/nordstar/?utm_source=nordstar&utm_campaign=oss)
 
 [![License](https://img.shields.io/npm/l/%40nordcom%2Fnordstar?style=flat&color=EE4266)](LICENSE)
 [![Downloads on npm](https://img.shields.io/npm/dt/@nordcom/nordstar.svg?style=flat)](https://www.npmjs.com/package/@nordcom/nordstar)
@@ -22,7 +22,7 @@ npm install @nordcom/nordstar
 
 ## 📚 Documentation
 
-Visit [https://nordstar.dev/docs/](https://nordstar.dev/docs/?utm_source=nordstar&utm_campaign=oss) to read the documentation.
+Visit [https://nordcominc.github.io/nordstar/docs/](https://nordcominc.github.io/nordstar/docs/?utm_source=nordstar&utm_campaign=oss) to read the documentation.
 
 ## 🏢 Real World Usage
 

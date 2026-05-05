@@ -10,7 +10,7 @@ export const metadata: Metadata = {
     description:
         'An opinionated component library for building human-centric user interfaces by Nordcom AB and contributors.',
     alternates: {
-        canonical: 'https://nordstar.dev/'
+        canonical: 'https://nordcominc.github.io/nordstar/'
     }
 };
 

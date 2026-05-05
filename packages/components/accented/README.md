@@ -1,4 +1,4 @@
-# [@nordcom/nordstar-accented](https://nordstar.dev/docs/components/accented/?utm_source=nordstar&utm_campaign=oss)
+# [@nordcom/nordstar-accented](https://nordcominc.github.io/nordstar/docs/components/accented/?utm_source=nordstar&utm_campaign=oss)
 
 Highlight text with an accent color.
 

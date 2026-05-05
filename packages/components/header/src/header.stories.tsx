@@ -1,9 +1,8 @@
-import React, { Fragment } from 'react';
-
 import type { HeaderProps } from '@nordcom/nordstar-header';
 import { Header } from '@nordcom/nordstar-header';
 import { Label } from '@nordcom/nordstar-label';
 import type { Meta, StoryObj } from '@storybook/react';
+import { Fragment } from 'react';
 
 const story: Meta<typeof Header> = {
     title: 'System/Layout/Header',
@@ -31,7 +30,7 @@ const Template = (args: HeaderProps) => (
     >
         <Header {...args} style={{ width: 'calc(100% + 1.25rem)' }}>
             <Header.Logo>
-                <a title="Nordstar" href="https://nordstar.dev/" target="_blank" rel="noreferrer">
+                <a title="Nordstar" href="https://nordcominc.github.io/nordstar/" target="_blank" rel="noreferrer">
                     Nordstar
                 </a>
             </Header.Logo>

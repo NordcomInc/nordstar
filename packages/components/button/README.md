@@ -1,4 +1,4 @@
-# [@nordcom/nordstar-button](https://nordstar.dev/docs/components/button/?utm_source=nordstar&utm_campaign=oss)
+# [@nordcom/nordstar-button](https://nordcominc.github.io/nordstar/docs/components/button/?utm_source=nordstar&utm_campaign=oss)
 
 A button component for the Nordstar design system.
 

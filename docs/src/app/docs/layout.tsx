@@ -6,7 +6,7 @@ import Link from 'next/link';
 import type { ReactNode } from 'react';
 
 export const metadata: Metadata = {
-    metadataBase: new URL(`https://nordstar.dev/docs/`),
+    metadataBase: new URL(`https://nordcominc.github.io/nordstar/docs/`),
     title: {
         default: 'Docs | Nordstar Component Library',
         template: `%s - Docs | Nordstar Component Library`

@@ -80,7 +80,7 @@
     "bugs": {
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
-    "homepage": "https://nordstar.dev/docs/components/header/",
+    "homepage": "https://nordcominc.github.io/nordstar/docs/components/header/",
     "dependencies": {
         "@nordcom/nordstar-card": "workspace:*",
         "@nordcom/nordstar-system": "workspace:*",

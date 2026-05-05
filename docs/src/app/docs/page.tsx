@@ -4,7 +4,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'Documentation',
     alternates: {
-        canonical: 'https://nordstar.dev/docs/'
+        canonical: 'https://nordcominc.github.io/nordstar/docs/'
     }
 };
 

@@ -93,7 +93,7 @@
     "bugs": {
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
-    "homepage": "https://nordstar.dev/docs/components/accented/",
+    "homepage": "https://nordcominc.github.io/nordstar/docs/components/accented/",
     "dependencies": {
         "@nordcom/nordstar-system": "workspace:*"
     },

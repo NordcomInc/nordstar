@@ -80,7 +80,7 @@
     "bugs": {
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
-    "homepage": "https://nordstar.dev/docs/components/button/",
+    "homepage": "https://nordcominc.github.io/nordstar/docs/components/button/",
     "dependencies": {
         "@nordcom/nordstar-system": "workspace:*",
         "class-variance-authority": "0.7.0"

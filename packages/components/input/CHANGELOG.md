@@ -120,7 +120,7 @@
 
 - [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6) Thanks [@filiphsps](https://github.com/filiphsps)! - - Refactor components to use tailwind and `cva`.
 
-- [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6) Thanks [@filiphsps](https://github.com/filiphsps)! - - Update domain to `https://nordstar.dev/`
+- [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6) Thanks [@filiphsps](https://github.com/filiphsps)! - - Update domain to `https://nordcominc.github.io/nordstar/`
 
 - [`69a26c5`](https://github.com/NordcomInc/nordstar/commit/69a26c59e4d5492db2f39798ac1d628411fbb7d4) Thanks [@filiphsps](https://github.com/filiphsps)! - - Remove `labelPosition`, the component shouldn't have to deal with content outside of itself.
     - Improve typings.

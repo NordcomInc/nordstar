@@ -76,7 +76,7 @@
     "bugs": {
         "url": "https://github.com/NordcomInc/nordstar/issues"
     },
-    "homepage": "https://nordstar.dev/docs/components/card/",
+    "homepage": "https://nordcominc.github.io/nordstar/docs/components/card/",
     "dependencies": {
         "@nordcom/nordstar-system": "workspace:*",
         "class-variance-authority": "0.7.0"

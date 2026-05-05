@@ -80,7 +80,7 @@
 
 - [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6) Thanks [@filiphsps](https://github.com/filiphsps)! - - Refactor components to use tailwind and `cva`.
 
-- [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6) Thanks [@filiphsps](https://github.com/filiphsps)! - - Update domain to `https://nordstar.dev/`
+- [`9dfeb3f`](https://github.com/NordcomInc/nordstar/commit/9dfeb3f0a233a67144d415d8d44d95d211807ea6) Thanks [@filiphsps](https://github.com/filiphsps)! - - Update domain to `https://nordcominc.github.io/nordstar/`
 
 - [`e586f33`](https://github.com/NordcomInc/nordstar/commit/e586f337007468d313af9741f9015d1c2a1f0aed) Thanks [@filiphsps](https://github.com/filiphsps)! - - Fix typings.
 

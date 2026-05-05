@@ -17,7 +17,7 @@ const font = Montserrat({
 });
 
 export const metadata: Metadata = {
-    metadataBase: new URL(`https://nordstar.dev/`),
+    metadataBase: new URL(`https://nordcominc.github.io/nordstar/`),
     title: {
         default: '',
         template: `%s | Nordstar Component Library`
@@ -66,14 +66,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                             <Header.Menu.Link as={Link} href="https://github.com/NordcomInc/nordstar" target="_blank">
                                 GitHub
                             </Header.Menu.Link>
-                            <Header.Menu.Link as={Link} href="/docs/" prefetch={false}>
+                            <Header.Menu.Link as={Link} href="/docs/">
                                 Docs
-                            </Header.Menu.Link>
-                            <Header.Menu.Link as={Link} href="/storybook/" prefetch={false}>
-                                Storybook
-                            </Header.Menu.Link>
-                            <Header.Menu.Link as={Link} href="https://nordcom.io/" prefetch={false}>
-                                Nordcom AB
                             </Header.Menu.Link>
                         </Header.Menu>
                     </Header>
@@ -82,17 +76,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                     <Card as={View} variant="solid" color="primary" borderless={true}>
                         <footer className="flex flex-row flex-wrap items-center justify-center gap-1 md:gap-3">
-                            <Link href="https://nordcom.io/" className="block text-inherit">
-                                Nordcom AB
-                            </Link>
-
-                            <div>{' • '}</div>
-
-                            <Link
-                                href="https://swedish-candy-store.com/?utm_campaign=footer&utm_source=nordstar"
-                                className="block text-inherit"
-                            >
-                                Swedish Candy Store
+                            <Link href="https://github.com/filiphsps" className="block text-inherit">
+                                Filiph Sandström
                             </Link>
                         </footer>
                     </Card>
