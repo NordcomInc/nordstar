@@ -65,7 +65,7 @@
     },
     "homepage": "https://nordcominc.github.io/nordstar/",
     "scripts": {
-        "build": "concurrently -i pnpm:build:* --",
+        "build": "pnpm build:compile && pnpm build:scripts",
         "build:compile": "vite build",
         "build:scripts": "concurrently -i pnpm:build:scripts:* --",
         "build:scripts:build-css": "node scripts/build-css.mjs",
