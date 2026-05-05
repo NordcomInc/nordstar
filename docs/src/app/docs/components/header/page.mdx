@@ -1,0 +1,84 @@
+export const metadata = {
+    title: 'Header',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/header/' }
+};
+
+# Header
+
+A site or section header with a logo slot and an optional menu. Sticks to the top of the viewport by default.
+
+## When to use
+
+- As the first child of a top-level <C>View</C> on a page route.
+- For section dividers inside long pages where each section has its own primary navigation.
+
+### When not to use
+
+- For inline content cards — use <C>Card.Header</C> instead.
+- For the title row of a settings panel — that's <C>Heading</C> + <C>Card</C>.
+
+## Installation
+
+<Install package="@nordcom/nordstar-header" />
+
+```tsx
+import { Header } from '@nordcom/nordstar';
+```
+
+## Anatomy
+
+`Header` exposes three sub-components, composed inside the wrapper:
+
+- `Header.Logo` — the leftmost identity slot. Often wraps a brand mark or a `<Link>` back to the home page.
+- `Header.Menu` — the navigation list, typically rightmost on desktop.
+- `Header.Menu.Link` — one nav entry. Renders as a styled link.
+
+## Basic usage
+
+<Preview name="header/standard" />
+
+## With navigation menu
+
+<Preview name="header/with-menu" />
+
+(The examples above pass `sticky={false}` so the header doesn't stick to the preview frame's top — in production, leave it sticky.)
+
+## Composition
+
+Pair `Header` with <C>View</C> for full-page layouts:
+
+```tsx
+<View>
+    <Header>
+        <Header.Logo>
+            <Link href="/">Acme</Link>
+        </Header.Logo>
+        <Header.Menu>
+            <Header.Menu.Link>
+                <Link href="/docs">Docs</Link>
+            </Header.Menu.Link>
+            <Header.Menu.Link>
+                <Link href="/blog">Blog</Link>
+            </Header.Menu.Link>
+        </Header.Menu>
+    </Header>
+    <main>…</main>
+</View>
+```
+
+Wrap the children of `Header.Logo` and each `Header.Menu.Link` in real `<Link>` elements when they navigate — Nordstar leaves routing to the host app.
+
+## Props
+
+<PropsTable component="Header" />
+
+## Accessibility
+
+<Callout type="info" title="Landmark">
+    `Header` renders an HTML `<header>`, which is a landmark element — screen readers expose it in their landmark navigation lists. Don't nest multiple top-level headers on a page; reserve them for one site-wide and (optionally) one per major page region.
+</Callout>
+
+- Make sure `Header.Logo`'s child has accessible text. An icon-only logo needs an `aria-label` or visually-hidden text.
+- Inside `Header.Menu`, prefer real anchor elements (`<a>`, `<Link>`) over click-only buttons so the URL is real and the page is bookmarkable.
+
+<Related of="header" />
