@@ -1,0 +1,87 @@
+export const metadata = {
+    title: 'Button',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/button/' }
+};
+
+# Button
+
+An interactive control for triggering actions — submitting a form, opening a dialog, navigating somewhere, or running any user-initiated command.
+
+## When to use
+
+- Whenever the user needs to **do** something: submit, save, cancel, open, retry.
+- For inline actions inside cards, headers, or forms.
+- For destructive actions (combined with an appropriate `color`).
+
+### When not to use
+
+- For navigation between pages — use a styled `<a>` (or <C>Header</C>'s menu links) so the URL is real.
+- For toggling boolean state in a form — use a checkbox or switch instead.
+
+## Installation
+
+<Install package="@nordcom/nordstar-button" />
+
+```tsx
+import { Button } from '@nordcom/nordstar';
+```
+
+You can also import the standalone package directly if you don't pull in the umbrella, but the umbrella tree-shakes the same code.
+
+## Basic usage
+
+A button always renders as a real `<button>` element by default. Pass `children` for the label and any standard HTML button props (`onClick`, `type`, `form`, etc.).
+
+<Preview name="button/standard" />
+
+## Variants
+
+Two visual variants — `outline` (the default for emphasis-light contexts) and `solid` (filled). Pair with a `color` to escalate emphasis.
+
+<Preview name="button/outline" caption='variant="outline"' />
+
+<Preview name="button/with-color" caption='color="primary"' />
+
+<Preview name="button/outline-with-color" caption='variant="outline" color="primary"' />
+
+## Disabled
+
+Disabled buttons don't fire `onClick` and are removed from the keyboard tab order. Use them sparingly — usually only when the user has just submitted and you're waiting for a response.
+
+<Preview name="button/disabled" />
+
+## With an icon
+
+Pass any node to `icon`. The button arranges it next to the label automatically.
+
+<Preview name="button/icon" />
+
+## Composition
+
+Buttons combine cleanly with <C>Card</C> and <C>Header</C>:
+
+```tsx
+<Card>
+    <Card.Header>Settings</Card.Header>
+    <Card.Divider />
+    <p>Update your account preferences.</p>
+    <Button color="primary">Save changes</Button>
+</Card>
+```
+
+## Props
+
+<PropsTable component="Button" />
+
+## Accessibility
+
+<Callout type="info" title="Keyboard">
+    Buttons receive focus via Tab, activate on Space and Enter, and respect the standard `disabled` attribute. The
+    component renders a real `<button>` so all assistive technologies treat it correctly.
+</Callout>
+
+- Always provide a meaningful label — either visible text or, for icon-only buttons, an `aria-label`.
+- Use `type="submit"` only on the primary form action; secondary actions should set `type="button"` to avoid accidental submits.
+- For destructive actions, pair the `color` with explicit confirmation copy ("Delete account" reads more clearly than "Confirm").
+
+<Related of="button" />
