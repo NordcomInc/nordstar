@@ -67,7 +67,7 @@ importers:
         version: 4.7.0(vite@7.0.0(@types/node@24.0.10)(jiti@1.21.6)(less@4.2.0)(sass@1.89.2)(stylus@0.62.0)(terser@5.33.0)(yaml@2.8.0))
       '@vitest/coverage-v8':
         specifier: 3.2.4
-        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.0.10)(happy-dom@18.0.1)(jiti@1.21.6)(less@4.2.0)(sass@1.89.2)(stylus@0.62.0)(terser@5.33.0)(yaml@2.8.0))
+        version: 3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.0.10)(happy-dom@20.9.0)(jiti@1.21.6)(less@4.2.0)(sass@1.89.2)(stylus@0.62.0)(terser@5.33.0)(yaml@2.8.0))
       chalk:
         specifier: 5.6.2
         version: 5.6.2
@@ -108,8 +108,8 @@ importers:
         specifier: 16.5.0
         version: 16.5.0
       happy-dom:
-        specifier: 18.0.1
-        version: 18.0.1
+        specifier: 20.9.0
+        version: 20.9.0
       inquirer:
         specifier: 13.4.2
         version: 13.4.2(@types/node@24.0.10)
@@ -175,7 +175,7 @@ importers:
         version: 5.1.4(typescript@5.8.3)(vite@7.0.0(@types/node@24.0.10)(jiti@1.21.6)(less@4.2.0)(sass@1.89.2)(stylus@0.62.0)(terser@5.33.0)(yaml@2.8.0))
       vitest:
         specifier: 3.2.4
-        version: 3.2.4(@types/debug@4.1.12)(@types/node@24.0.10)(happy-dom@18.0.1)(jiti@1.21.6)(less@4.2.0)(sass@1.89.2)(stylus@0.62.0)(terser@5.33.0)(yaml@2.8.0)
+        version: 3.2.4(@types/debug@4.1.12)(@types/node@24.0.10)(happy-dom@20.9.0)(jiti@1.21.6)(less@4.2.0)(sass@1.89.2)(stylus@0.62.0)(terser@5.33.0)(yaml@2.8.0)
 
   docs:
     dependencies:
@@ -2928,9 +2928,6 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@20.16.11':
-    resolution: {integrity: sha512-y+cTCACu92FyA5fgQSAI8A1H429g7aSK2HsO7K4XYUWc4dY5IUz55JSDIYT6/VsOLfGy8vmvQYC2hfb0iF16Uw==}
-
   '@types/node@24.0.10':
     resolution: {integrity: sha512-ENHwaH+JIRTDIEEbDK6QSQntAYGtbvdDXnMXnZaZ6k13Du1dPMmprkEHIL7ok2Wl2aZevetwTAb5S+7yIF+enA==}
 
@@ -4619,10 +4616,6 @@ packages:
     resolution: {integrity: sha512-vafaFqs8MZkRrSX7sFVUdo3ap/eNiLnb4IakshzvP56X5Nr1iGKAIqdX6tMlm6HcNRIkr6AxO5jFEoJzzpT8aQ==}
     engines: {node: '>=0.4.7'}
     hasBin: true
-
-  happy-dom@18.0.1:
-    resolution: {integrity: sha512-qn+rKOW7KWpVTtgIUi6RVmTBZJSe2k0Db0vh1f7CWrWclkkc7/Q+FrOfkZIb2eiErLyqu5AXEzE7XthO9JVxRA==}
-    engines: {node: '>=20.0.0'}
 
   happy-dom@20.9.0:
     resolution: {integrity: sha512-GZZ9mKe8r646NUAf/zemnGbjYh4Bt8/MqASJY+pSm5ZDtc3YQox+4gsLI7yi1hba6o+eCsGxpHn5+iEVn31/FQ==}
@@ -7172,9 +7165,6 @@ packages:
     resolution: {integrity: sha512-eXL4nmJT7oCpkZsHZUOJo8hcX3GbsiDOa0Qu9F646fi8dT3XuSVopVqAcEiVzSKKH7UoDti23wNX3qGFxcW5Qg==}
     engines: {node: '>=0.10.0'}
 
-  undici-types@6.19.6:
-    resolution: {integrity: sha512-e/vggGopEfTKSvj4ihnOLTsqhrKRN3LeO6qSN/GxohhuRv8qH9bNQ4B8W7e/vFL+0XTnmHPB4/kegunZGA4Org==}
-
   undici-types@7.8.0:
     resolution: {integrity: sha512-9UJ2xGDvQ43tYyVMpuHlsgApydB8ZKfVYTsLDhXkFL/6gfkp+U8xTGdh8pMJv1SpZna0zxG1DwsKZsreLbXBxw==}
 
@@ -9626,10 +9616,6 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@20.16.11':
-    dependencies:
-      undici-types: 6.19.6
-
   '@types/node@24.0.10':
     dependencies:
       undici-types: 7.8.0
@@ -9877,7 +9863,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vitest/coverage-v8@3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.0.10)(happy-dom@18.0.1)(jiti@1.21.6)(less@4.2.0)(sass@1.89.2)(stylus@0.62.0)(terser@5.33.0)(yaml@2.8.0))':
+  '@vitest/coverage-v8@3.2.4(vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.0.10)(happy-dom@20.9.0)(jiti@1.21.6)(less@4.2.0)(sass@1.89.2)(stylus@0.62.0)(terser@5.33.0)(yaml@2.8.0))':
     dependencies:
       '@ampproject/remapping': 2.3.0
       '@bcoe/v8-coverage': 1.0.2
@@ -9892,7 +9878,7 @@ snapshots:
       std-env: 3.9.0
       test-exclude: 7.0.1
       tinyrainbow: 2.0.0
-      vitest: 3.2.4(@types/debug@4.1.12)(@types/node@24.0.10)(happy-dom@18.0.1)(jiti@1.21.6)(less@4.2.0)(sass@1.89.2)(stylus@0.62.0)(terser@5.33.0)(yaml@2.8.0)
+      vitest: 3.2.4(@types/debug@4.1.12)(@types/node@24.0.10)(happy-dom@20.9.0)(jiti@1.21.6)(less@4.2.0)(sass@1.89.2)(stylus@0.62.0)(terser@5.33.0)(yaml@2.8.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -11710,12 +11696,6 @@ snapshots:
       wordwrap: 1.0.0
     optionalDependencies:
       uglify-js: 3.19.1
-
-  happy-dom@18.0.1:
-    dependencies:
-      '@types/node': 20.16.11
-      '@types/whatwg-mimetype': 3.0.2
-      whatwg-mimetype: 3.0.0
 
   happy-dom@20.9.0:
     dependencies:
@@ -14824,8 +14804,6 @@ snapshots:
 
   unc-path-regex@0.1.2: {}
 
-  undici-types@6.19.6: {}
-
   undici-types@7.8.0: {}
 
   undici@5.28.4:
@@ -15089,7 +15067,7 @@ snapshots:
       terser: 5.33.0
       yaml: 2.8.0
 
-  vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.0.10)(happy-dom@18.0.1)(jiti@1.21.6)(less@4.2.0)(sass@1.89.2)(stylus@0.62.0)(terser@5.33.0)(yaml@2.8.0):
+  vitest@3.2.4(@types/debug@4.1.12)(@types/node@24.0.10)(happy-dom@20.9.0)(jiti@1.21.6)(less@4.2.0)(sass@1.89.2)(stylus@0.62.0)(terser@5.33.0)(yaml@2.8.0):
     dependencies:
       '@types/chai': 5.2.2
       '@vitest/expect': 3.2.4
@@ -15117,7 +15095,7 @@ snapshots:
     optionalDependencies:
       '@types/debug': 4.1.12
       '@types/node': 24.0.10
-      happy-dom: 18.0.1
+      happy-dom: 20.9.0
     transitivePeerDependencies:
       - jiti
       - less
