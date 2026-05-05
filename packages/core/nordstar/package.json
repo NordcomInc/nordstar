@@ -14,26 +14,17 @@
     "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "import": [
-                "./dist/index.js"
-            ],
-            "module": [
-                "./dist/index.js"
-            ],
-            "types": [
-                "./dist/index.d.ts"
-            ]
+            "style":   "./dist/tailwind.css",
+            "import":  "./dist/index.js",
+            "module":  "./dist/index.js",
+            "types":   "./dist/index.d.ts"
         },
+        "./styles.css":   "./dist/styles.css",
+        "./tailwind.css": "./dist/tailwind.css",
         "./*": {
-            "import": [
-                "./dist/*.js"
-            ],
-            "module": [
-                "./dist/*.js"
-            ],
-            "types": [
-                "./dist/*.d.ts"
-            ]
+            "import": ["./dist/*.js"],
+            "module": ["./dist/*.js"],
+            "types":  ["./dist/*.d.ts"]
         },
         "./package.json": "./package.json"
     },
