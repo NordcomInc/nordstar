@@ -9,6 +9,9 @@ import { PreviewActions } from './preview-actions';
 
 const EXAMPLES_ROOT = path.resolve(process.cwd(), 'src', 'examples');
 
+type ExampleLoader = () => Promise<{ default: React.ComponentType }>;
+const registry = examples as Record<string, ExampleLoader>;
+
 export type PreviewProps = {
     name: ExampleName;
     /** Optional caption shown above the example. */
@@ -16,10 +19,10 @@ export type PreviewProps = {
 };
 
 export async function Preview({ name, caption }: PreviewProps) {
-    const loader = examples[name];
+    const loader = registry[name];
     if (!loader) throw new Error(`<Preview>: unknown example "${name}"`);
 
-    const mod = (await loader()) as { default: React.ComponentType };
+    const mod = await loader();
     const Example = mod.default;
 
     const sourcePath = path.join(EXAMPLES_ROOT, `${name}.tsx`);
