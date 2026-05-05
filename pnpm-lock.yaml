@@ -124,13 +124,13 @@ importers:
     dependencies:
       '@mdx-js/loader':
         specifier: 3.1.1
-        version: 3.1.1(webpack@5.94.0(esbuild@0.27.7))
+        version: 3.1.1(webpack@5.94.0)
       '@mdx-js/react':
         specifier: 3.1.1
         version: 3.1.1(@types/react@19.1.8)(react@19.2.5)
       '@next/mdx':
         specifier: 15.5.15
-        version: 15.5.15(@mdx-js/loader@3.1.1(webpack@5.94.0(esbuild@0.27.7)))(@mdx-js/react@3.1.1(@types/react@19.1.8)(react@19.2.5))
+        version: 15.5.15(@mdx-js/loader@3.1.1(webpack@5.94.0))(@mdx-js/react@3.1.1(@types/react@19.1.8)(react@19.2.5))
       '@nordcom/nordstar':
         specifier: workspace:*
         version: link:../packages/core/nordstar
@@ -139,10 +139,10 @@ importers:
         version: 2.1.1
       geist:
         specifier: 1.7.0
-        version: 1.7.0(next@15.5.15(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(sass@1.99.0))
+        version: 1.7.0(next@15.5.15(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(sass@1.99.0))
       next:
         specifier: 15.5.15
-        version: 15.5.15(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(sass@1.99.0)
+        version: 15.5.15(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(sass@1.99.0)
       next-mdx-remote:
         specifier: 6.0.0
         version: 6.0.0(@types/react@19.1.8)(react@19.2.5)
@@ -6958,12 +6958,12 @@ snapshots:
       globby: 11.1.0
       read-yaml-file: 1.1.0
 
-  '@mdx-js/loader@3.1.1(webpack@5.94.0(esbuild@0.27.7))':
+  '@mdx-js/loader@3.1.1(webpack@5.94.0)':
     dependencies:
       '@mdx-js/mdx': 3.0.1
       source-map: 0.7.4
     optionalDependencies:
-      webpack: 5.94.0(esbuild@0.27.7)
+      webpack: 5.94.0
     transitivePeerDependencies:
       - supports-color
 
@@ -7055,11 +7055,11 @@ snapshots:
 
   '@next/env@15.5.15': {}
 
-  '@next/mdx@15.5.15(@mdx-js/loader@3.1.1(webpack@5.94.0(esbuild@0.27.7)))(@mdx-js/react@3.1.1(@types/react@19.1.8)(react@19.2.5))':
+  '@next/mdx@15.5.15(@mdx-js/loader@3.1.1(webpack@5.94.0))(@mdx-js/react@3.1.1(@types/react@19.1.8)(react@19.2.5))':
     dependencies:
       source-map: 0.7.6
     optionalDependencies:
-      '@mdx-js/loader': 3.1.1(webpack@5.94.0(esbuild@0.27.7))
+      '@mdx-js/loader': 3.1.1(webpack@5.94.0)
       '@mdx-js/react': 3.1.1(@types/react@19.1.8)(react@19.2.5)
 
   '@next/swc-darwin-arm64@15.5.15':
@@ -8986,9 +8986,9 @@ snapshots:
 
   function-bind@1.1.2: {}
 
-  geist@1.7.0(next@15.5.15(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(sass@1.99.0)):
+  geist@1.7.0(next@15.5.15(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(sass@1.99.0)):
     dependencies:
-      next: 15.5.15(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(sass@1.99.0)
+      next: 15.5.15(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(sass@1.99.0)
 
   generator-function@2.0.1: {}
 
@@ -10287,7 +10287,7 @@ snapshots:
       - '@types/react'
       - supports-color
 
-  next@15.5.15(@babel/core@7.29.0)(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(sass@1.99.0):
+  next@15.5.15(react-dom@19.2.5(react@19.2.5))(react@19.2.5)(sass@1.99.0):
     dependencies:
       '@next/env': 15.5.15
       '@swc/helpers': 0.5.15
@@ -10295,7 +10295,7 @@ snapshots:
       postcss: 8.4.31
       react: 19.2.5
       react-dom: 19.2.5(react@19.2.5)
-      styled-jsx: 5.1.6(@babel/core@7.29.0)(react@19.2.5)
+      styled-jsx: 5.1.6(react@19.2.5)
     optionalDependencies:
       '@next/swc-darwin-arm64': 15.5.15
       '@next/swc-darwin-x64': 15.5.15
@@ -11259,12 +11259,10 @@ snapshots:
     dependencies:
       inline-style-parser: 0.2.4
 
-  styled-jsx@5.1.6(@babel/core@7.29.0)(react@19.2.5):
+  styled-jsx@5.1.6(react@19.2.5):
     dependencies:
       client-only: 0.0.1
       react: 19.2.5
-    optionalDependencies:
-      '@babel/core': 7.29.0
 
   stylus@0.62.0:
     dependencies:
@@ -11324,6 +11322,15 @@ snapshots:
       webpack: 5.94.0(esbuild@0.27.7)
     optionalDependencies:
       esbuild: 0.27.7
+    optional: true
+
+  terser-webpack-plugin@5.5.0(webpack@5.94.0):
+    dependencies:
+      '@jridgewell/trace-mapping': 0.3.31
+      jest-worker: 27.5.1
+      schema-utils: 4.3.3
+      terser: 5.46.2
+      webpack: 5.94.0
     optional: true
 
   terser@5.46.2:
@@ -11766,6 +11773,37 @@ snapshots:
   webpack-sources@3.4.1: {}
 
   webpack-virtual-modules@0.6.2: {}
+
+  webpack@5.94.0:
+    dependencies:
+      '@types/estree': 1.0.8
+      '@webassemblyjs/ast': 1.14.1
+      '@webassemblyjs/wasm-edit': 1.14.1
+      '@webassemblyjs/wasm-parser': 1.14.1
+      acorn: 8.16.0
+      acorn-import-attributes: 1.9.5(acorn@8.16.0)
+      browserslist: 4.28.2
+      chrome-trace-event: 1.0.4
+      enhanced-resolve: 5.21.0
+      es-module-lexer: 1.7.0
+      eslint-scope: 5.1.1
+      events: 3.3.0
+      glob-to-regexp: 0.4.1
+      graceful-fs: 4.2.11
+      json-parse-even-better-errors: 2.3.1
+      loader-runner: 4.3.2
+      mime-types: 2.1.35
+      neo-async: 2.6.2
+      schema-utils: 3.3.0
+      tapable: 2.3.3
+      terser-webpack-plugin: 5.5.0(webpack@5.94.0)
+      watchpack: 2.5.1
+      webpack-sources: 3.4.1
+    transitivePeerDependencies:
+      - '@swc/core'
+      - esbuild
+      - uglify-js
+    optional: true
 
   webpack@5.94.0(esbuild@0.25.5):
     dependencies:

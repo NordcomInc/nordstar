@@ -1,0 +1,2247 @@
+{
+    "Accented": {
+        "displayName": "Accented",
+        "description": "",
+        "props": {
+            "as": {
+                "name": "as",
+                "required": false,
+                "description": "",
+                "type": "As | undefined",
+                "defaultValue": null
+            },
+            "color": {
+                "name": "color",
+                "required": false,
+                "description": "",
+                "type": "NordstarColor | undefined",
+                "defaultValue": null
+            }
+        }
+    },
+    "Button": {
+        "displayName": "Button",
+        "description": "",
+        "props": {
+            "as": {
+                "name": "as",
+                "required": false,
+                "description": "",
+                "type": "As | undefined",
+                "defaultValue": null
+            },
+            "variant": {
+                "name": "variant",
+                "required": false,
+                "description": "",
+                "type": "\"outline\" | \"solid\" | undefined",
+                "defaultValue": null
+            },
+            "color": {
+                "name": "color",
+                "required": false,
+                "description": "",
+                "type": "NordstarColor | undefined",
+                "defaultValue": null
+            },
+            "icon": {
+                "name": "icon",
+                "required": false,
+                "description": "",
+                "type": "string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined",
+                "defaultValue": null
+            },
+            "disabled": {
+                "name": "disabled",
+                "required": false,
+                "description": "",
+                "type": "boolean | undefined",
+                "defaultValue": null
+            },
+            "contentClassName": {
+                "name": "contentClassName",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "iconClassName": {
+                "name": "iconClassName",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            }
+        }
+    },
+    "Card": {
+        "displayName": "Card",
+        "description": "",
+        "props": {
+            "as": {
+                "name": "as",
+                "required": false,
+                "description": "",
+                "type": "As | undefined",
+                "defaultValue": null
+            },
+            "variant": {
+                "name": "variant",
+                "required": false,
+                "description": "",
+                "type": "\"outline\" | \"solid\" | undefined",
+                "defaultValue": null
+            },
+            "color": {
+                "name": "color",
+                "required": false,
+                "description": "",
+                "type": "NordstarColor | undefined",
+                "defaultValue": null
+            },
+            "borderless": {
+                "name": "borderless",
+                "required": false,
+                "description": "",
+                "type": "boolean | undefined",
+                "defaultValue": null
+            },
+            "padding": {
+                "name": "padding",
+                "required": false,
+                "description": "",
+                "type": "boolean | undefined",
+                "defaultValue": null
+            },
+            "style": {
+                "name": "style",
+                "required": false,
+                "description": "",
+                "type": "CSSCustomProperties | undefined",
+                "defaultValue": null
+            }
+        }
+    },
+    "Details": {
+        "displayName": "Details",
+        "description": "",
+        "props": {
+            "label": {
+                "name": "label",
+                "required": true,
+                "description": "",
+                "type": "string",
+                "defaultValue": null
+            },
+            "style": {
+                "name": "style",
+                "required": false,
+                "description": "",
+                "type": "CSSCustomProperties | undefined",
+                "defaultValue": null
+            }
+        }
+    },
+    "Header": {
+        "displayName": "Header",
+        "description": "",
+        "props": {
+            "sticky": {
+                "name": "sticky",
+                "required": false,
+                "description": "",
+                "type": "boolean | undefined",
+                "defaultValue": null
+            },
+            "style": {
+                "name": "style",
+                "required": false,
+                "description": "",
+                "type": "({ [key: `--${string}`]: string | number; } & CSSProperties) | undefined",
+                "defaultValue": null
+            },
+            "slot": {
+                "name": "slot",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "title": {
+                "name": "title",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "className": {
+                "name": "className",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "ref": {
+                "name": "ref",
+                "required": false,
+                "description": "Allows getting a ref to the component instance.\nOnce the component unmounts, React will set `ref.current` to `null`\n(or call the ref with `null` if you passed a callback ref).",
+                "type": "Ref<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "key": {
+                "name": "key",
+                "required": false,
+                "description": "",
+                "type": "Key | null | undefined",
+                "defaultValue": null
+            },
+            "defaultChecked": {
+                "name": "defaultChecked",
+                "required": false,
+                "description": "",
+                "type": "boolean | undefined",
+                "defaultValue": null
+            },
+            "defaultValue": {
+                "name": "defaultValue",
+                "required": false,
+                "description": "",
+                "type": "string | number | readonly string[] | undefined",
+                "defaultValue": null
+            },
+            "suppressContentEditableWarning": {
+                "name": "suppressContentEditableWarning",
+                "required": false,
+                "description": "",
+                "type": "boolean | undefined",
+                "defaultValue": null
+            },
+            "suppressHydrationWarning": {
+                "name": "suppressHydrationWarning",
+                "required": false,
+                "description": "",
+                "type": "boolean | undefined",
+                "defaultValue": null
+            },
+            "accessKey": {
+                "name": "accessKey",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "autoCapitalize": {
+                "name": "autoCapitalize",
+                "required": false,
+                "description": "",
+                "type": "(string & {}) | \"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\" | undefined",
+                "defaultValue": null
+            },
+            "autoFocus": {
+                "name": "autoFocus",
+                "required": false,
+                "description": "",
+                "type": "boolean | undefined",
+                "defaultValue": null
+            },
+            "contentEditable": {
+                "name": "contentEditable",
+                "required": false,
+                "description": "",
+                "type": "Booleanish | \"inherit\" | \"plaintext-only\" | undefined",
+                "defaultValue": null
+            },
+            "contextMenu": {
+                "name": "contextMenu",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "dir": {
+                "name": "dir",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "draggable": {
+                "name": "draggable",
+                "required": false,
+                "description": "",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "enterKeyHint": {
+                "name": "enterKeyHint",
+                "required": false,
+                "description": "",
+                "type": "\"search\" | \"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"send\" | undefined",
+                "defaultValue": null
+            },
+            "hidden": {
+                "name": "hidden",
+                "required": false,
+                "description": "",
+                "type": "boolean | undefined",
+                "defaultValue": null
+            },
+            "id": {
+                "name": "id",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "lang": {
+                "name": "lang",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "nonce": {
+                "name": "nonce",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "spellCheck": {
+                "name": "spellCheck",
+                "required": false,
+                "description": "",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "tabIndex": {
+                "name": "tabIndex",
+                "required": false,
+                "description": "",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "translate": {
+                "name": "translate",
+                "required": false,
+                "description": "",
+                "type": "\"yes\" | \"no\" | undefined",
+                "defaultValue": null
+            },
+            "radioGroup": {
+                "name": "radioGroup",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "role": {
+                "name": "role",
+                "required": false,
+                "description": "",
+                "type": "AriaRole | undefined",
+                "defaultValue": null
+            },
+            "about": {
+                "name": "about",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "content": {
+                "name": "content",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "datatype": {
+                "name": "datatype",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "inlist": {
+                "name": "inlist",
+                "required": false,
+                "description": "",
+                "type": "any",
+                "defaultValue": null
+            },
+            "prefix": {
+                "name": "prefix",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "property": {
+                "name": "property",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "rel": {
+                "name": "rel",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "resource": {
+                "name": "resource",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "rev": {
+                "name": "rev",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "typeof": {
+                "name": "typeof",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "vocab": {
+                "name": "vocab",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "autoCorrect": {
+                "name": "autoCorrect",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "autoSave": {
+                "name": "autoSave",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "itemProp": {
+                "name": "itemProp",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "itemScope": {
+                "name": "itemScope",
+                "required": false,
+                "description": "",
+                "type": "boolean | undefined",
+                "defaultValue": null
+            },
+            "itemType": {
+                "name": "itemType",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "itemID": {
+                "name": "itemID",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "itemRef": {
+                "name": "itemRef",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "results": {
+                "name": "results",
+                "required": false,
+                "description": "",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "security": {
+                "name": "security",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "unselectable": {
+                "name": "unselectable",
+                "required": false,
+                "description": "",
+                "type": "\"off\" | \"on\" | undefined",
+                "defaultValue": null
+            },
+            "popover": {
+                "name": "popover",
+                "required": false,
+                "description": "",
+                "type": "\"\" | \"auto\" | \"manual\" | undefined",
+                "defaultValue": null
+            },
+            "popoverTargetAction": {
+                "name": "popoverTargetAction",
+                "required": false,
+                "description": "",
+                "type": "\"toggle\" | \"show\" | \"hide\" | undefined",
+                "defaultValue": null
+            },
+            "popoverTarget": {
+                "name": "popoverTarget",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "inert": {
+                "name": "inert",
+                "required": false,
+                "description": "",
+                "type": "boolean | undefined",
+                "defaultValue": null
+            },
+            "inputMode": {
+                "name": "inputMode",
+                "required": false,
+                "description": "Hints at the type of data that might be entered by the user while editing the element or its contents",
+                "type": "\"search\" | \"text\" | \"none\" | \"tel\" | \"url\" | \"email\" | \"numeric\" | \"decimal\" | undefined",
+                "defaultValue": null
+            },
+            "is": {
+                "name": "is",
+                "required": false,
+                "description": "Specify that a standard HTML element should behave like a defined custom built-in element",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "exportparts": {
+                "name": "exportparts",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "part": {
+                "name": "part",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-activedescendant": {
+                "name": "aria-activedescendant",
+                "required": false,
+                "description": "Identifies the currently active element when DOM focus is on a composite widget, textbox, group, or application.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-atomic": {
+                "name": "aria-atomic",
+                "required": false,
+                "description": "Indicates whether assistive technologies will present all, or only parts of, the changed region based on the change notifications defined by the aria-relevant attribute.",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "aria-autocomplete": {
+                "name": "aria-autocomplete",
+                "required": false,
+                "description": "Indicates whether inputting text could trigger display of one or more predictions of the user's intended value for an input and specifies how predictions would be\npresented if they are made.",
+                "type": "\"none\" | \"list\" | \"inline\" | \"both\" | undefined",
+                "defaultValue": null
+            },
+            "aria-braillelabel": {
+                "name": "aria-braillelabel",
+                "required": false,
+                "description": "Defines a string value that labels the current element, which is intended to be converted into Braille.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-brailleroledescription": {
+                "name": "aria-brailleroledescription",
+                "required": false,
+                "description": "Defines a human-readable, author-localized abbreviated description for the role of an element, which is intended to be converted into Braille.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-busy": {
+                "name": "aria-busy",
+                "required": false,
+                "description": "",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "aria-checked": {
+                "name": "aria-checked",
+                "required": false,
+                "description": "Indicates the current \"checked\" state of checkboxes, radio buttons, and other widgets.",
+                "type": "boolean | \"true\" | \"false\" | \"mixed\" | undefined",
+                "defaultValue": null
+            },
+            "aria-colcount": {
+                "name": "aria-colcount",
+                "required": false,
+                "description": "Defines the total number of columns in a table, grid, or treegrid.",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "aria-colindex": {
+                "name": "aria-colindex",
+                "required": false,
+                "description": "Defines an element's column index or position with respect to the total number of columns within a table, grid, or treegrid.",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "aria-colindextext": {
+                "name": "aria-colindextext",
+                "required": false,
+                "description": "Defines a human readable text alternative of aria-colindex.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-colspan": {
+                "name": "aria-colspan",
+                "required": false,
+                "description": "Defines the number of columns spanned by a cell or gridcell within a table, grid, or treegrid.",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "aria-controls": {
+                "name": "aria-controls",
+                "required": false,
+                "description": "Identifies the element (or elements) whose contents or presence are controlled by the current element.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-current": {
+                "name": "aria-current",
+                "required": false,
+                "description": "Indicates the element that represents the current item within a container or set of related elements.",
+                "type": "boolean | \"time\" | \"true\" | \"false\" | \"page\" | \"step\" | \"location\" | \"date\" | undefined",
+                "defaultValue": null
+            },
+            "aria-describedby": {
+                "name": "aria-describedby",
+                "required": false,
+                "description": "Identifies the element (or elements) that describes the object.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-description": {
+                "name": "aria-description",
+                "required": false,
+                "description": "Defines a string value that describes or annotates the current element.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-details": {
+                "name": "aria-details",
+                "required": false,
+                "description": "Identifies the element that provides a detailed, extended description for the object.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-disabled": {
+                "name": "aria-disabled",
+                "required": false,
+                "description": "Indicates that the element is perceivable but disabled, so it is not editable or otherwise operable.",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "aria-dropeffect": {
+                "name": "aria-dropeffect",
+                "required": false,
+                "description": "Indicates what functions can be performed when a dragged object is released on the drop target.",
+                "type": "\"link\" | \"none\" | \"copy\" | \"execute\" | \"move\" | \"popup\" | undefined",
+                "defaultValue": null
+            },
+            "aria-errormessage": {
+                "name": "aria-errormessage",
+                "required": false,
+                "description": "Identifies the element that provides an error message for the object.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-expanded": {
+                "name": "aria-expanded",
+                "required": false,
+                "description": "Indicates whether the element, or another grouping element it controls, is currently expanded or collapsed.",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "aria-flowto": {
+                "name": "aria-flowto",
+                "required": false,
+                "description": "Identifies the next element (or elements) in an alternate reading order of content which, at the user's discretion,\nallows assistive technology to override the general default of reading in document source order.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-grabbed": {
+                "name": "aria-grabbed",
+                "required": false,
+                "description": "Indicates an element's \"grabbed\" state in a drag-and-drop operation.",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "aria-haspopup": {
+                "name": "aria-haspopup",
+                "required": false,
+                "description": "Indicates the availability and type of interactive popup element, such as menu or dialog, that can be triggered by an element.",
+                "type": "boolean | \"dialog\" | \"menu\" | \"true\" | \"false\" | \"grid\" | \"listbox\" | \"tree\" | undefined",
+                "defaultValue": null
+            },
+            "aria-hidden": {
+                "name": "aria-hidden",
+                "required": false,
+                "description": "Indicates whether the element is exposed to an accessibility API.",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "aria-invalid": {
+                "name": "aria-invalid",
+                "required": false,
+                "description": "Indicates the entered value does not conform to the format expected by the application.",
+                "type": "boolean | \"true\" | \"false\" | \"grammar\" | \"spelling\" | undefined",
+                "defaultValue": null
+            },
+            "aria-keyshortcuts": {
+                "name": "aria-keyshortcuts",
+                "required": false,
+                "description": "Indicates keyboard shortcuts that an author has implemented to activate or give focus to an element.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-label": {
+                "name": "aria-label",
+                "required": false,
+                "description": "Defines a string value that labels the current element.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-labelledby": {
+                "name": "aria-labelledby",
+                "required": false,
+                "description": "Identifies the element (or elements) that labels the current element.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-level": {
+                "name": "aria-level",
+                "required": false,
+                "description": "Defines the hierarchical level of an element within a structure.",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "aria-live": {
+                "name": "aria-live",
+                "required": false,
+                "description": "Indicates that an element will be updated, and describes the types of updates the user agents, assistive technologies, and user can expect from the live region.",
+                "type": "\"off\" | \"assertive\" | \"polite\" | undefined",
+                "defaultValue": null
+            },
+            "aria-modal": {
+                "name": "aria-modal",
+                "required": false,
+                "description": "Indicates whether an element is modal when displayed.",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "aria-multiline": {
+                "name": "aria-multiline",
+                "required": false,
+                "description": "Indicates whether a text box accepts multiple lines of input or only a single line.",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "aria-multiselectable": {
+                "name": "aria-multiselectable",
+                "required": false,
+                "description": "Indicates that the user may select more than one item from the current selectable descendants.",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "aria-orientation": {
+                "name": "aria-orientation",
+                "required": false,
+                "description": "Indicates whether the element's orientation is horizontal, vertical, or unknown/ambiguous.",
+                "type": "\"horizontal\" | \"vertical\" | undefined",
+                "defaultValue": null
+            },
+            "aria-owns": {
+                "name": "aria-owns",
+                "required": false,
+                "description": "Identifies an element (or elements) in order to define a visual, functional, or contextual parent/child relationship\nbetween DOM elements where the DOM hierarchy cannot be used to represent the relationship.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-placeholder": {
+                "name": "aria-placeholder",
+                "required": false,
+                "description": "Defines a short hint (a word or short phrase) intended to aid the user with data entry when the control has no value.\nA hint could be a sample value or a brief description of the expected format.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-posinset": {
+                "name": "aria-posinset",
+                "required": false,
+                "description": "Defines an element's number or position in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "aria-pressed": {
+                "name": "aria-pressed",
+                "required": false,
+                "description": "Indicates the current \"pressed\" state of toggle buttons.",
+                "type": "boolean | \"true\" | \"false\" | \"mixed\" | undefined",
+                "defaultValue": null
+            },
+            "aria-readonly": {
+                "name": "aria-readonly",
+                "required": false,
+                "description": "Indicates that the element is not editable, but is otherwise operable.",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "aria-relevant": {
+                "name": "aria-relevant",
+                "required": false,
+                "description": "Indicates what notifications the user agent will trigger when the accessibility tree within a live region is modified.",
+                "type": "\"text\" | \"additions\" | \"additions removals\" | \"additions text\" | \"all\" | \"removals\" | \"removals additions\" | \"removals text\" | \"text additions\" | \"text removals\" | undefined",
+                "defaultValue": null
+            },
+            "aria-required": {
+                "name": "aria-required",
+                "required": false,
+                "description": "Indicates that user input is required on the element before a form may be submitted.",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "aria-roledescription": {
+                "name": "aria-roledescription",
+                "required": false,
+                "description": "Defines a human-readable, author-localized description for the role of an element.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-rowcount": {
+                "name": "aria-rowcount",
+                "required": false,
+                "description": "Defines the total number of rows in a table, grid, or treegrid.",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "aria-rowindex": {
+                "name": "aria-rowindex",
+                "required": false,
+                "description": "Defines an element's row index or position with respect to the total number of rows within a table, grid, or treegrid.",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "aria-rowindextext": {
+                "name": "aria-rowindextext",
+                "required": false,
+                "description": "Defines a human readable text alternative of aria-rowindex.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "aria-rowspan": {
+                "name": "aria-rowspan",
+                "required": false,
+                "description": "Defines the number of rows spanned by a cell or gridcell within a table, grid, or treegrid.",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "aria-selected": {
+                "name": "aria-selected",
+                "required": false,
+                "description": "Indicates the current \"selected\" state of various widgets.",
+                "type": "Booleanish | undefined",
+                "defaultValue": null
+            },
+            "aria-setsize": {
+                "name": "aria-setsize",
+                "required": false,
+                "description": "Defines the number of items in the current set of listitems or treeitems. Not required if all elements in the set are present in the DOM.",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "aria-sort": {
+                "name": "aria-sort",
+                "required": false,
+                "description": "Indicates if items in a table or grid are sorted in ascending or descending order.",
+                "type": "\"none\" | \"ascending\" | \"descending\" | \"other\" | undefined",
+                "defaultValue": null
+            },
+            "aria-valuemax": {
+                "name": "aria-valuemax",
+                "required": false,
+                "description": "Defines the maximum allowed value for a range widget.",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "aria-valuemin": {
+                "name": "aria-valuemin",
+                "required": false,
+                "description": "Defines the minimum allowed value for a range widget.",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "aria-valuenow": {
+                "name": "aria-valuenow",
+                "required": false,
+                "description": "Defines the current value for a range widget.",
+                "type": "number | undefined",
+                "defaultValue": null
+            },
+            "aria-valuetext": {
+                "name": "aria-valuetext",
+                "required": false,
+                "description": "Defines the human readable text alternative of aria-valuenow for a range widget.",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "children": {
+                "name": "children",
+                "required": false,
+                "description": "",
+                "type": "string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined",
+                "defaultValue": null
+            },
+            "dangerouslySetInnerHTML": {
+                "name": "dangerouslySetInnerHTML",
+                "required": false,
+                "description": "",
+                "type": "{ __html: string | TrustedHTML; } | undefined",
+                "defaultValue": null
+            },
+            "onCopy": {
+                "name": "onCopy",
+                "required": false,
+                "description": "",
+                "type": "ClipboardEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCopyCapture": {
+                "name": "onCopyCapture",
+                "required": false,
+                "description": "",
+                "type": "ClipboardEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCut": {
+                "name": "onCut",
+                "required": false,
+                "description": "",
+                "type": "ClipboardEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCutCapture": {
+                "name": "onCutCapture",
+                "required": false,
+                "description": "",
+                "type": "ClipboardEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPaste": {
+                "name": "onPaste",
+                "required": false,
+                "description": "",
+                "type": "ClipboardEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPasteCapture": {
+                "name": "onPasteCapture",
+                "required": false,
+                "description": "",
+                "type": "ClipboardEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCompositionEnd": {
+                "name": "onCompositionEnd",
+                "required": false,
+                "description": "",
+                "type": "CompositionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCompositionEndCapture": {
+                "name": "onCompositionEndCapture",
+                "required": false,
+                "description": "",
+                "type": "CompositionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCompositionStart": {
+                "name": "onCompositionStart",
+                "required": false,
+                "description": "",
+                "type": "CompositionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCompositionStartCapture": {
+                "name": "onCompositionStartCapture",
+                "required": false,
+                "description": "",
+                "type": "CompositionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCompositionUpdate": {
+                "name": "onCompositionUpdate",
+                "required": false,
+                "description": "",
+                "type": "CompositionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCompositionUpdateCapture": {
+                "name": "onCompositionUpdateCapture",
+                "required": false,
+                "description": "",
+                "type": "CompositionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onFocus": {
+                "name": "onFocus",
+                "required": false,
+                "description": "",
+                "type": "FocusEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onFocusCapture": {
+                "name": "onFocusCapture",
+                "required": false,
+                "description": "",
+                "type": "FocusEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onBlur": {
+                "name": "onBlur",
+                "required": false,
+                "description": "",
+                "type": "FocusEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onBlurCapture": {
+                "name": "onBlurCapture",
+                "required": false,
+                "description": "",
+                "type": "FocusEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onChange": {
+                "name": "onChange",
+                "required": false,
+                "description": "",
+                "type": "FormEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onChangeCapture": {
+                "name": "onChangeCapture",
+                "required": false,
+                "description": "",
+                "type": "FormEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onBeforeInput": {
+                "name": "onBeforeInput",
+                "required": false,
+                "description": "",
+                "type": "InputEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onBeforeInputCapture": {
+                "name": "onBeforeInputCapture",
+                "required": false,
+                "description": "",
+                "type": "FormEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onInput": {
+                "name": "onInput",
+                "required": false,
+                "description": "",
+                "type": "FormEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onInputCapture": {
+                "name": "onInputCapture",
+                "required": false,
+                "description": "",
+                "type": "FormEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onReset": {
+                "name": "onReset",
+                "required": false,
+                "description": "",
+                "type": "FormEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onResetCapture": {
+                "name": "onResetCapture",
+                "required": false,
+                "description": "",
+                "type": "FormEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onSubmit": {
+                "name": "onSubmit",
+                "required": false,
+                "description": "",
+                "type": "FormEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onSubmitCapture": {
+                "name": "onSubmitCapture",
+                "required": false,
+                "description": "",
+                "type": "FormEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onInvalid": {
+                "name": "onInvalid",
+                "required": false,
+                "description": "",
+                "type": "FormEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onInvalidCapture": {
+                "name": "onInvalidCapture",
+                "required": false,
+                "description": "",
+                "type": "FormEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onLoad": {
+                "name": "onLoad",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onLoadCapture": {
+                "name": "onLoadCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onError": {
+                "name": "onError",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onErrorCapture": {
+                "name": "onErrorCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onKeyDown": {
+                "name": "onKeyDown",
+                "required": false,
+                "description": "",
+                "type": "KeyboardEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onKeyDownCapture": {
+                "name": "onKeyDownCapture",
+                "required": false,
+                "description": "",
+                "type": "KeyboardEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onKeyPress": {
+                "name": "onKeyPress",
+                "required": false,
+                "description": "",
+                "type": "KeyboardEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onKeyPressCapture": {
+                "name": "onKeyPressCapture",
+                "required": false,
+                "description": "",
+                "type": "KeyboardEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onKeyUp": {
+                "name": "onKeyUp",
+                "required": false,
+                "description": "",
+                "type": "KeyboardEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onKeyUpCapture": {
+                "name": "onKeyUpCapture",
+                "required": false,
+                "description": "",
+                "type": "KeyboardEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onAbort": {
+                "name": "onAbort",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onAbortCapture": {
+                "name": "onAbortCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCanPlay": {
+                "name": "onCanPlay",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCanPlayCapture": {
+                "name": "onCanPlayCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCanPlayThrough": {
+                "name": "onCanPlayThrough",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onCanPlayThroughCapture": {
+                "name": "onCanPlayThroughCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDurationChange": {
+                "name": "onDurationChange",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDurationChangeCapture": {
+                "name": "onDurationChangeCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onEmptied": {
+                "name": "onEmptied",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onEmptiedCapture": {
+                "name": "onEmptiedCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onEncrypted": {
+                "name": "onEncrypted",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onEncryptedCapture": {
+                "name": "onEncryptedCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onEnded": {
+                "name": "onEnded",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onEndedCapture": {
+                "name": "onEndedCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onLoadedData": {
+                "name": "onLoadedData",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onLoadedDataCapture": {
+                "name": "onLoadedDataCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onLoadedMetadata": {
+                "name": "onLoadedMetadata",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onLoadedMetadataCapture": {
+                "name": "onLoadedMetadataCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onLoadStart": {
+                "name": "onLoadStart",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onLoadStartCapture": {
+                "name": "onLoadStartCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPause": {
+                "name": "onPause",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPauseCapture": {
+                "name": "onPauseCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPlay": {
+                "name": "onPlay",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPlayCapture": {
+                "name": "onPlayCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPlaying": {
+                "name": "onPlaying",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPlayingCapture": {
+                "name": "onPlayingCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onProgress": {
+                "name": "onProgress",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onProgressCapture": {
+                "name": "onProgressCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onRateChange": {
+                "name": "onRateChange",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onRateChangeCapture": {
+                "name": "onRateChangeCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onSeeked": {
+                "name": "onSeeked",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onSeekedCapture": {
+                "name": "onSeekedCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onSeeking": {
+                "name": "onSeeking",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onSeekingCapture": {
+                "name": "onSeekingCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onStalled": {
+                "name": "onStalled",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onStalledCapture": {
+                "name": "onStalledCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onSuspend": {
+                "name": "onSuspend",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onSuspendCapture": {
+                "name": "onSuspendCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTimeUpdate": {
+                "name": "onTimeUpdate",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTimeUpdateCapture": {
+                "name": "onTimeUpdateCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onVolumeChange": {
+                "name": "onVolumeChange",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onVolumeChangeCapture": {
+                "name": "onVolumeChangeCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onWaiting": {
+                "name": "onWaiting",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onWaitingCapture": {
+                "name": "onWaitingCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onAuxClick": {
+                "name": "onAuxClick",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onAuxClickCapture": {
+                "name": "onAuxClickCapture",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onClick": {
+                "name": "onClick",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onClickCapture": {
+                "name": "onClickCapture",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onContextMenu": {
+                "name": "onContextMenu",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onContextMenuCapture": {
+                "name": "onContextMenuCapture",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDoubleClick": {
+                "name": "onDoubleClick",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDoubleClickCapture": {
+                "name": "onDoubleClickCapture",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDrag": {
+                "name": "onDrag",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragCapture": {
+                "name": "onDragCapture",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragEnd": {
+                "name": "onDragEnd",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragEndCapture": {
+                "name": "onDragEndCapture",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragEnter": {
+                "name": "onDragEnter",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragEnterCapture": {
+                "name": "onDragEnterCapture",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragExit": {
+                "name": "onDragExit",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragExitCapture": {
+                "name": "onDragExitCapture",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragLeave": {
+                "name": "onDragLeave",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragLeaveCapture": {
+                "name": "onDragLeaveCapture",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragOver": {
+                "name": "onDragOver",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragOverCapture": {
+                "name": "onDragOverCapture",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragStart": {
+                "name": "onDragStart",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDragStartCapture": {
+                "name": "onDragStartCapture",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDrop": {
+                "name": "onDrop",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onDropCapture": {
+                "name": "onDropCapture",
+                "required": false,
+                "description": "",
+                "type": "DragEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onMouseDown": {
+                "name": "onMouseDown",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onMouseDownCapture": {
+                "name": "onMouseDownCapture",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onMouseEnter": {
+                "name": "onMouseEnter",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onMouseLeave": {
+                "name": "onMouseLeave",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onMouseMove": {
+                "name": "onMouseMove",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onMouseMoveCapture": {
+                "name": "onMouseMoveCapture",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onMouseOut": {
+                "name": "onMouseOut",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onMouseOutCapture": {
+                "name": "onMouseOutCapture",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onMouseOver": {
+                "name": "onMouseOver",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onMouseOverCapture": {
+                "name": "onMouseOverCapture",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onMouseUp": {
+                "name": "onMouseUp",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onMouseUpCapture": {
+                "name": "onMouseUpCapture",
+                "required": false,
+                "description": "",
+                "type": "MouseEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onSelect": {
+                "name": "onSelect",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onSelectCapture": {
+                "name": "onSelectCapture",
+                "required": false,
+                "description": "",
+                "type": "ReactEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTouchCancel": {
+                "name": "onTouchCancel",
+                "required": false,
+                "description": "",
+                "type": "TouchEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTouchCancelCapture": {
+                "name": "onTouchCancelCapture",
+                "required": false,
+                "description": "",
+                "type": "TouchEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTouchEnd": {
+                "name": "onTouchEnd",
+                "required": false,
+                "description": "",
+                "type": "TouchEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTouchEndCapture": {
+                "name": "onTouchEndCapture",
+                "required": false,
+                "description": "",
+                "type": "TouchEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTouchMove": {
+                "name": "onTouchMove",
+                "required": false,
+                "description": "",
+                "type": "TouchEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTouchMoveCapture": {
+                "name": "onTouchMoveCapture",
+                "required": false,
+                "description": "",
+                "type": "TouchEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTouchStart": {
+                "name": "onTouchStart",
+                "required": false,
+                "description": "",
+                "type": "TouchEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTouchStartCapture": {
+                "name": "onTouchStartCapture",
+                "required": false,
+                "description": "",
+                "type": "TouchEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerDown": {
+                "name": "onPointerDown",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerDownCapture": {
+                "name": "onPointerDownCapture",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerMove": {
+                "name": "onPointerMove",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerMoveCapture": {
+                "name": "onPointerMoveCapture",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerUp": {
+                "name": "onPointerUp",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerUpCapture": {
+                "name": "onPointerUpCapture",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerCancel": {
+                "name": "onPointerCancel",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerCancelCapture": {
+                "name": "onPointerCancelCapture",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerEnter": {
+                "name": "onPointerEnter",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerLeave": {
+                "name": "onPointerLeave",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerOver": {
+                "name": "onPointerOver",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerOverCapture": {
+                "name": "onPointerOverCapture",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerOut": {
+                "name": "onPointerOut",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onPointerOutCapture": {
+                "name": "onPointerOutCapture",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onGotPointerCapture": {
+                "name": "onGotPointerCapture",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onGotPointerCaptureCapture": {
+                "name": "onGotPointerCaptureCapture",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onLostPointerCapture": {
+                "name": "onLostPointerCapture",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onLostPointerCaptureCapture": {
+                "name": "onLostPointerCaptureCapture",
+                "required": false,
+                "description": "",
+                "type": "PointerEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onScroll": {
+                "name": "onScroll",
+                "required": false,
+                "description": "",
+                "type": "UIEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onScrollCapture": {
+                "name": "onScrollCapture",
+                "required": false,
+                "description": "",
+                "type": "UIEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onScrollEnd": {
+                "name": "onScrollEnd",
+                "required": false,
+                "description": "",
+                "type": "UIEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onScrollEndCapture": {
+                "name": "onScrollEndCapture",
+                "required": false,
+                "description": "",
+                "type": "UIEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onWheel": {
+                "name": "onWheel",
+                "required": false,
+                "description": "",
+                "type": "WheelEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onWheelCapture": {
+                "name": "onWheelCapture",
+                "required": false,
+                "description": "",
+                "type": "WheelEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onAnimationStart": {
+                "name": "onAnimationStart",
+                "required": false,
+                "description": "",
+                "type": "AnimationEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onAnimationStartCapture": {
+                "name": "onAnimationStartCapture",
+                "required": false,
+                "description": "",
+                "type": "AnimationEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onAnimationEnd": {
+                "name": "onAnimationEnd",
+                "required": false,
+                "description": "",
+                "type": "AnimationEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onAnimationEndCapture": {
+                "name": "onAnimationEndCapture",
+                "required": false,
+                "description": "",
+                "type": "AnimationEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onAnimationIteration": {
+                "name": "onAnimationIteration",
+                "required": false,
+                "description": "",
+                "type": "AnimationEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onAnimationIterationCapture": {
+                "name": "onAnimationIterationCapture",
+                "required": false,
+                "description": "",
+                "type": "AnimationEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onToggle": {
+                "name": "onToggle",
+                "required": false,
+                "description": "",
+                "type": "ToggleEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onBeforeToggle": {
+                "name": "onBeforeToggle",
+                "required": false,
+                "description": "",
+                "type": "ToggleEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTransitionCancel": {
+                "name": "onTransitionCancel",
+                "required": false,
+                "description": "",
+                "type": "TransitionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTransitionCancelCapture": {
+                "name": "onTransitionCancelCapture",
+                "required": false,
+                "description": "",
+                "type": "TransitionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTransitionEnd": {
+                "name": "onTransitionEnd",
+                "required": false,
+                "description": "",
+                "type": "TransitionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTransitionEndCapture": {
+                "name": "onTransitionEndCapture",
+                "required": false,
+                "description": "",
+                "type": "TransitionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTransitionRun": {
+                "name": "onTransitionRun",
+                "required": false,
+                "description": "",
+                "type": "TransitionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTransitionRunCapture": {
+                "name": "onTransitionRunCapture",
+                "required": false,
+                "description": "",
+                "type": "TransitionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTransitionStart": {
+                "name": "onTransitionStart",
+                "required": false,
+                "description": "",
+                "type": "TransitionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            },
+            "onTransitionStartCapture": {
+                "name": "onTransitionStartCapture",
+                "required": false,
+                "description": "",
+                "type": "TransitionEventHandler<HTMLElement> | undefined",
+                "defaultValue": null
+            }
+        }
+    },
+    "Heading": {
+        "displayName": "Heading",
+        "description": "",
+        "props": {
+            "level": {
+                "name": "level",
+                "required": false,
+                "description": "",
+                "type": "\"h1\" | \"h2\" | \"h3\" | \"h4\" | undefined",
+                "defaultValue": null
+            },
+            "as": {
+                "name": "as",
+                "required": false,
+                "description": "",
+                "type": "As | undefined",
+                "defaultValue": null
+            }
+        }
+    },
+    "Input": {
+        "displayName": "Input",
+        "description": "",
+        "props": {
+            "color": {
+                "name": "color",
+                "required": false,
+                "description": "",
+                "type": "NordstarColor | undefined",
+                "defaultValue": null
+            },
+            "label": {
+                "name": "label",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "variant": {
+                "name": "variant",
+                "required": false,
+                "description": "",
+                "type": "\"outline\" | \"solid\" | null | undefined",
+                "defaultValue": null
+            },
+            "as": {
+                "name": "as",
+                "required": false,
+                "description": "",
+                "type": "\"symbol\" | \"object\" | \"a\" | \"abbr\" | \"address\" | \"area\" | \"article\" | \"aside\" | \"audio\" | \"b\" | \"base\" | \"bdi\" | \"bdo\" | \"big\" | \"blockquote\" | \"body\" | \"br\" | \"button\" | \"canvas\" | \"caption\" | \"center\" | \"cite\" | \"code\" | \"col\" | \"colgroup\" | \"data\" | \"datalist\" | \"dd\" | \"del\" | \"details\" | \"dfn\" | \"dialog\" | \"div\" | \"dl\" | \"dt\" | \"em\" | \"embed\" | \"fieldset\" | \"figcaption\" | \"figure\" | \"footer\" | \"form\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"head\" | \"header\" | \"hgroup\" | \"hr\" | \"html\" | \"i\" | \"iframe\" | \"img\" | \"input\" | \"ins\" | \"kbd\" | \"keygen\" | \"label\" | \"legend\" | \"li\" | \"link\" | \"main\" | \"map\" | \"mark\" | \"menu\" | \"menuitem\" | \"meta\" | \"meter\" | \"nav\" | \"noindex\" | \"noscript\" | \"ol\" | \"optgroup\" | \"option\" | \"output\" | \"p\" | \"param\" | \"picture\" | \"pre\" | \"progress\" | \"q\" | \"rp\" | \"rt\" | \"ruby\" | \"s\" | \"samp\" | \"search\" | \"slot\" | \"script\" | \"section\" | \"select\" | \"small\" | \"source\" | \"span\" | \"strong\" | \"style\" | \"sub\" | \"summary\" | \"sup\" | \"table\" | \"template\" | \"tbody\" | \"td\" | \"textarea\" | \"tfoot\" | \"th\" | \"thead\" | \"time\" | \"title\" | \"tr\" | \"track\" | \"u\" | \"ul\" | \"var\" | \"video\" | \"wbr\" | \"webview\" | \"svg\" | \"animate\" | \"animateMotion\" | \"animateTransform\" | \"circle\" | \"clipPath\" | \"defs\" | \"desc\" | \"ellipse\" | \"feBlend\" | \"feColorMatrix\" | \"feComponentTransfer\" | \"feComposite\" | \"feConvolveMatrix\" | \"feDiffuseLighting\" | \"feDisplacementMap\" | \"feDistantLight\" | \"feDropShadow\" | \"feFlood\" | \"feFuncA\" | \"feFuncB\" | \"feFuncG\" | \"feFuncR\" | \"feGaussianBlur\" | \"feImage\" | \"feMerge\" | \"feMergeNode\" | \"feMorphology\" | \"feOffset\" | \"fePointLight\" | \"feSpecularLighting\" | \"feSpotLight\" | \"feTile\" | \"feTurbulence\" | \"filter\" | \"foreignObject\" | \"g\" | \"image\" | \"line\" | \"linearGradient\" | \"marker\" | \"mask\" | \"metadata\" | \"mpath\" | \"path\" | \"pattern\" | \"polygon\" | \"polyline\" | \"radialGradient\" | \"rect\" | \"set\" | \"stop\" | \"switch\" | \"text\" | \"textPath\" | \"tspan\" | \"use\" | \"view\" | ComponentType<any> | undefined",
+                "defaultValue": null
+            },
+            "value": {
+                "name": "value",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "defaultValue": {
+                "name": "defaultValue",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            },
+            "type": {
+                "name": "type",
+                "required": false,
+                "description": "",
+                "type": "\"button\" | \"search\" | \"time\" | \"image\" | \"text\" | \"color\" | (string & {}) | \"hidden\" | \"checkbox\" | \"radio\" | \"tel\" | \"url\" | \"email\" | \"date\" | \"datetime-local\" | \"file\" | \"month\" | \"password\" | \"range\" | \"reset\" | \"submit\" | \"week\" | undefined",
+                "defaultValue": null
+            }
+        }
+    },
+    "Label": {
+        "displayName": "Label",
+        "description": "",
+        "props": {
+            "as": {
+                "name": "as",
+                "required": false,
+                "description": "",
+                "type": "As | undefined",
+                "defaultValue": null
+            },
+            "color": {
+                "name": "color",
+                "required": false,
+                "description": "",
+                "type": "NordstarColor | undefined",
+                "defaultValue": null
+            },
+            "children": {
+                "name": "children",
+                "required": false,
+                "description": "",
+                "type": "string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined",
+                "defaultValue": null
+            }
+        }
+    },
+    "View": {
+        "displayName": "View",
+        "description": "",
+        "props": {
+            "as": {
+                "name": "as",
+                "required": false,
+                "description": "",
+                "type": "As | undefined",
+                "defaultValue": null
+            },
+            "outerAs": {
+                "name": "outerAs",
+                "required": false,
+                "description": "",
+                "type": "As | undefined",
+                "defaultValue": null
+            },
+            "withoutWrapper": {
+                "name": "withoutWrapper",
+                "required": false,
+                "description": "",
+                "type": "boolean | undefined",
+                "defaultValue": null
+            },
+            "outerClassName": {
+                "name": "outerClassName",
+                "required": false,
+                "description": "",
+                "type": "string | undefined",
+                "defaultValue": null
+            }
+        }
+    }
+}
