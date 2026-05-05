@@ -1,0 +1,260 @@
+{
+    "$schema": "https://biomejs.dev/schemas/2.4.10/schema.json",
+    "assist": {
+        "actions": {
+            "source": {
+                "organizeImports": "on",
+                "useSortedAttributes": "on",
+                "useSortedKeys": {
+                    "level": "on",
+                    "options": {
+                        "groupByNesting": true
+                    }
+                },
+                "useSortedProperties": "on"
+            }
+        },
+        "includes": [
+            "**",
+            "!**/package.json",
+            "!**/node_modules",
+            "!**/dist",
+            "!**/.next",
+            "!**/.turbo",
+            "!**/coverage",
+            "!**/storybook-static",
+            "!**/build",
+            "!**/out",
+            "!**/*.d.ts",
+            "!**/.tsbuildinfo",
+            "!docs/superpowers/**",
+            "!plop/**/*.hbs",
+            "!packages/**/CHANGELOG.md",
+            "!**/postcss.config.*",
+            "!**/vite.config.ts",
+            "!**/vitest.config.ts",
+            "!**/vitest.workspace.ts",
+            "!**/vitest.setup.ts",
+            "!**/next.config.ts"
+        ]
+    },
+    "files": {
+        "includes": [
+            "**",
+            "!**/node_modules",
+            "!**/dist",
+            "!**/.next",
+            "!**/.turbo",
+            "!**/coverage",
+            "!**/storybook-static",
+            "!**/build",
+            "!**/out",
+            "!**/*.d.ts",
+            "!**/.tsbuildinfo",
+            "!docs/superpowers/**",
+            "!plop/**/*.hbs",
+            "!packages/**/CHANGELOG.md",
+            "!**/postcss.config.*",
+            "!**/vite.config.ts",
+            "!**/vitest.config.ts",
+            "!**/vitest.workspace.ts",
+            "!**/vitest.setup.ts",
+            "!**/next.config.ts"
+        ]
+    },
+    "formatter": {
+        "enabled": true,
+        "indentStyle": "space",
+        "indentWidth": 4,
+        "lineEnding": "lf",
+        "lineWidth": 120
+    },
+    "javascript": {
+        "experimentalEmbeddedSnippetsEnabled": true,
+        "formatter": {
+            "arrowParentheses": "always",
+            "bracketSpacing": true,
+            "quoteStyle": "single",
+            "semicolons": "always",
+            "trailingCommas": "all"
+        },
+        "jsxRuntime": "transparent"
+    },
+    "css": {
+        "formatter": {
+            "enabled": true
+        },
+        "linter": {
+            "enabled": true
+        },
+        "parser": {
+            "tailwindDirectives": true
+        }
+    },
+    "linter": {
+        "enabled": true,
+        "rules": {
+            "recommended": true,
+            "a11y": {
+                "recommended": false
+            },
+            "complexity": {
+                "noBannedTypes": "off"
+            },
+            "correctness": {
+                "noEmptyPattern": "off",
+                "noUnusedImports": "error",
+                "noUnusedVariables": {
+                    "fix": "unsafe",
+                    "level": "error"
+                },
+                "useExhaustiveDependencies": "warn",
+                "useHookAtTopLevel": "error"
+            },
+            "nursery": {
+                "useSortedClasses": {
+                    "fix": "unsafe",
+                    "level": "error",
+                    "options": {
+                        "functions": ["cn", "cva", "clsx", "twMerge"]
+                    }
+                }
+            },
+            "performance": {
+                "noNamespaceImport": "off",
+                "recommended": true
+            },
+            "security": {
+                "noDangerouslySetInnerHtml": "off"
+            },
+            "style": {
+                "noCommonJs": "error",
+                "noNonNullAssertion": "off",
+                "useConst": "error",
+                "useExportType": "error",
+                "useFilenamingConvention": {
+                    "level": "on",
+                    "options": {
+                        "filenameCases": ["kebab-case"],
+                        "match": "%?(.+?)[.](.+)",
+                        "requireAscii": true,
+                        "strictCase": true
+                    }
+                },
+                "useImportType": "error",
+                "useNamingConvention": {
+                    "fix": "unsafe",
+                    "level": "on",
+                    "options": {
+                        "conventions": [
+                            {
+                                "formats": ["camelCase", "CONSTANT_CASE", "PascalCase"],
+                                "selector": {
+                                    "kind": "const",
+                                    "scope": "global"
+                                }
+                            },
+                            {
+                                "formats": ["CONSTANT_CASE"],
+                                "selector": {
+                                    "kind": "enumMember"
+                                }
+                            },
+                            {
+                                "formats": ["camelCase", "snake_case", "CONSTANT_CASE", "PascalCase"],
+                                "match": "_*(.+)",
+                                "selector": {
+                                    "kind": "objectLiteralProperty"
+                                }
+                            },
+                            {
+                                "formats": ["camelCase", "snake_case", "CONSTANT_CASE"],
+                                "match": "_*(.+)",
+                                "selector": {
+                                    "kind": "typeProperty"
+                                }
+                            },
+                            {
+                                "formats": ["PascalCase", "camelCase"],
+                                "selector": {
+                                    "kind": "indexParameter"
+                                }
+                            },
+                            {
+                                "formats": ["PascalCase", "camelCase"],
+                                "selector": {
+                                    "kind": "typeParameter"
+                                }
+                            }
+                        ],
+                        "requireAscii": true,
+                        "strictCase": false
+                    }
+                }
+            },
+            "suspicious": {
+                "noArrayIndexKey": "off",
+                "noConsole": {
+                    "level": "warn",
+                    "options": {
+                        "allow": ["warn", "error", "info"]
+                    }
+                },
+                "noDebugger": "warn",
+                "noDocumentCookie": "off",
+                "noEmptyInterface": "off",
+                "noExplicitAny": "warn",
+                "noShadowRestrictedNames": "off",
+                "noVar": "error"
+            }
+        }
+    },
+    "overrides": [
+        {
+            "includes": ["**/*.test.*", "**/*.spec.*", "**/*.stories.*"],
+            "linter": {
+                "rules": {
+                    "performance": {
+                        "useTopLevelRegex": "off"
+                    },
+                    "style": {
+                        "useFilenamingConvention": "off"
+                    },
+                    "suspicious": {
+                        "noConsole": "off",
+                        "noExplicitAny": "off",
+                        "noVar": "off"
+                    }
+                }
+            }
+        },
+        {
+            "includes": ["docs/**"],
+            "linter": {
+                "rules": {
+                    "style": {
+                        "noNonNullAssertion": "off"
+                    }
+                }
+            }
+        },
+        {
+            "includes": ["packages/storybook/**"],
+            "linter": {
+                "rules": {
+                    "performance": {
+                        "noNamespaceImport": "off"
+                    },
+                    "style": {
+                        "useFilenamingConvention": "off"
+                    }
+                }
+            }
+        }
+    ],
+    "vcs": {
+        "clientKind": "git",
+        "enabled": true,
+        "useIgnoreFile": true
+    }
+}
