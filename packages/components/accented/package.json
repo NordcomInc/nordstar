@@ -73,14 +73,14 @@
         "nordstar-accented"
     ],
     "author": {
-        "name": "Nordcom AB",
-        "email": "opensource@nordcom.io",
-        "url": "https://nordcom.io/"
+        "name": "Filiph Sandström",
+        "email": "filfat@hotmail.se",
+        "url": "https://github.com/filiphsps/"
     },
     "contributors": [
         {
-            "name": "Filiph Siitam Sandström",
-            "email": "filiph@nordcom.io",
+            "name": "Filiph Sandström",
+            "email": "filfat@hotmail.se",
             "url": "https://github.com/filiphsps/"
         }
     ],
@@ -98,8 +98,8 @@
         "@nordcom/nordstar-system": "workspace:*"
     },
     "peerDependencies": {
-        "react": ">=18",
-        "react-dom": ">=18"
+        "react": ">=19",
+        "react-dom": ">=19"
     },
     "devDependencies": {
         "@nordcom/prettier": "0.1.1",
@@ -107,11 +107,11 @@
         "@types/react-dom": "19.1.6",
         "@types/react": "19.1.8",
         "prettier": "3.8.3",
-        "react-dom": "19.1.0",
-        "react": "19.1.0",
-        "typescript": "5.8.3",
+        "react-dom": "19.2.5",
+        "react": "19.2.5",
+        "typescript": "6.0.3",
         "vite-plugin-dts": "5.0.0",
         "vite-tsconfig-paths": "6.1.1",
-        "vite": "7.0.0"
+        "vite": "8.0.10"
     }
 }

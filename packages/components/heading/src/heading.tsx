@@ -25,10 +25,10 @@ const Heading = forwardRef<'h1', HeadingProps>(({ as, level = 'h1', className, .
             className={cn(
                 styles.container,
                 'font-heading',
-                level === 'h1' && 'hyphens-auto text-4xl font-extrabold uppercase leading-none',
-                level === 'h2' && 'text-foreground-highlight text-2xl font-normal lowercase leading-tight',
-                level === 'h3' && 'text-xl font-extrabold lowercase leading-tight',
-                level === 'h4' && 'text-base font-bold uppercase leading-none',
+                level === 'h1' && 'text-4xl leading-none font-extrabold hyphens-auto uppercase',
+                level === 'h2' && 'text-foreground-highlight text-2xl leading-tight font-normal lowercase',
+                level === 'h3' && 'text-xl leading-tight font-extrabold lowercase',
+                level === 'h4' && 'text-base leading-none font-bold uppercase',
                 className
             )}
             data-level={level}

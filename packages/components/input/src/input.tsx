@@ -147,10 +147,10 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                         <label
                             className={cn(
                                 styles.label,
-                                'pointer-events-none select-none text-xs font-extrabold uppercase transition-all [transform:translateZ(0)_translateY(0)]',
+                                'pointer-events-none [transform:translateZ(0)_translateY(0)] text-xs font-extrabold uppercase transition-all select-none',
                                 !placeholder &&
                                     !contents &&
-                                    '-mb-2 text-inherit [transform:translateY(.65rem)] group-first-of-type:-mb-0 group-focus-within:translate-y-0 group-focus-within:text-sm'
+                                    '-mb-2 [transform:translateY(.65rem)] text-inherit group-first-of-type:-mb-0 group-focus-within:translate-y-0 group-focus-within:text-sm'
                             )}
                             data-full-height={!placeholder && !contents}
                         >
@@ -168,8 +168,8 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                         ref={ref}
                         className={cn(
                             styles.input,
-                            'placeholder:text-foreground-highlight relative h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:transition-opacity placeholder:[font-size:inherit]',
-                            label && as !== 'textarea' && 'h-15 absolute inset-y-0 pt-3',
+                            'placeholder:text-foreground-highlight relative h-full w-full appearance-none border-0 bg-transparent p-0 text-sm [font-size:inherit] leading-none outline-0 placeholder:[font-size:inherit] placeholder:transition-opacity',
+                            label && as !== 'textarea' && 'absolute inset-y-0 h-15 pt-3',
                             as === 'textarea' && 'h-full min-h-20 leading-normal'
                         )}
                         placeholder={placeholder}

@@ -72,6 +72,7 @@ const additionalDemoContent = (
             }}
         >
             <img
+                alt="placeholder"
                 title="placeholder"
                 src="https://picsum.photos/1920/1080"
                 style={{

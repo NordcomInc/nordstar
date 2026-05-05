@@ -134,7 +134,7 @@ const Button = forwardRef<'button', ButtonProps>(
                 ) : null}
                 <div
                     className={cn(
-                        'font-heading font-inherit block text-center uppercase text-inherit',
+                        'font-heading font-inherit block text-center text-inherit uppercase',
                         contentClassName
                     )}
                 >
