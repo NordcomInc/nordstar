@@ -13,11 +13,7 @@
         "dev": "next dev --turbo",
         "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
         "start": "next start -p $PORT",
-        "typecheck": "tsc --noEmit",
-        "lint": "concurrently -i pnpm:lint:*",
-        "lint:prettier": "prettier --check \"./**/src/**/*.{cjs,mjs,ts,tsx}\"",
-        "format": "concurrently -i pnpm:format:*",
-        "format:prettier": "prettier --write \"./**/*.{cjs,mjs,ts,tsx,json}\""
+        "typecheck": "tsc --noEmit"
     },
     "keywords": [
         "nordstar",
@@ -67,7 +63,6 @@
         "tailwind-merge": "3.5.0"
     },
     "devDependencies": {
-        "@nordcom/prettier": "0.1.1",
         "@tailwindcss/postcss": "^4",
         "@types/mdx": "2.0.13",
         "@types/react-dom": "19.1.6",
@@ -75,7 +70,6 @@
         "concurrently": "9.2.1",
         "globals": "17.6.0",
         "postcss": "8.5.14",
-        "prettier": "3.8.3",
         "rimraf": "6.1.3",
         "tailwindcss": "4.2.4",
         "typescript": "6.0.3"

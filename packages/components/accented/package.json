@@ -58,11 +58,7 @@
         "build": "tsc && vite build",
         "dev": "vite build --watch",
         "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
-        "typecheck": "tsc --noEmit",
-        "lint": "concurrently -i pnpm:lint:*",
-        "lint:prettier": "prettier --check \"./**/src/**/*.{cjs,mjs,ts,tsx}\"",
-        "format": "concurrently -i pnpm:format:*",
-        "format:prettier": "prettier --write \"./**/*.{cjs,mjs,ts,tsx,json}\""
+        "typecheck": "tsc --noEmit"
     },
     "keywords": [
         "nordstar",
@@ -102,11 +98,9 @@
         "react-dom": ">=19"
     },
     "devDependencies": {
-        "@nordcom/prettier": "0.1.1",
         "@types/node": "24.0.10",
         "@types/react-dom": "19.1.6",
         "@types/react": "19.1.8",
-        "prettier": "3.8.3",
         "react-dom": "19.2.5",
         "react": "19.2.5",
         "typescript": "6.0.3",
