@@ -1,0 +1,86 @@
+export const metadata = {
+    title: 'System',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/customization/system/' }
+};
+
+# System
+
+The conventions that make Nordstar components compose cleanly. This page documents the shared idioms — they're not enforced by the type system, but following them keeps your app's surface area small and predictable.
+
+## Polymorphism via `as`
+
+Most Nordstar components accept an `as` prop to render as a different element while keeping their styling and behavior. This is the system's way of saying "I know what this should look like; you tell me what it should be in the document."
+
+```tsx
+<Heading as="h2" level="h1">Welcome</Heading>
+<Label as={Link} href="/docs">Docs</Label>
+<Button as="a" href="/signup">Sign up</Button>
+```
+
+The visual treatment comes from the component's role; the rendered element comes from `as`. Use this when the visual hierarchy and the document outline diverge — the most common case is rendering a heading-styled element at a different `<h*>` level.
+
+## Color tokens
+
+Every component that takes color exposes the same union: `'default' | 'primary' | 'secondary' | 'foreground'`. Pick by intent, not by hue:
+
+- `default` — the component's own neutral state. No emphasis.
+- `primary` — your primary brand action. The default for "do this thing."
+- `secondary` — a complementary accent for less-emphasized actions or marketing-flavored callouts.
+- `foreground` — maximum contrast against whatever surface the component sits on. Use for solid surfaces inside dark cards, or for accent text that needs to scream.
+
+Components consume the token; the token's actual color comes from [Theme](/docs/customization/theme).
+
+## Composition rhythm
+
+The system has a small set of layout containers — <C>View</C>, <C>Card</C>, <C>Header</C> — and they're meant to nest in a predictable way:
+
+- A page route's outermost element is a `View`.
+- The first child of `View` is typically a `Header`.
+- The page body is whatever you want, often containing one or more `Card`s.
+- A `Card` may contain `Card.Header` and `Card.Divider`, plus arbitrary content.
+
+```tsx
+<View>
+    <Header>
+        <Header.Logo>App</Header.Logo>
+        <Header.Menu>…</Header.Menu>
+    </Header>
+    <main>
+        <Card>
+            <Card.Header>Settings</Card.Header>
+            <Card.Divider />
+            <p>Body content.</p>
+        </Card>
+    </main>
+</View>
+```
+
+## Variants
+
+`outline` and `solid` are the two visual variants used across surfaces (<C>Button</C>, <C>Card</C>, <C>Input</C>):
+
+- `outline` — bordered, transparent fill. Default. Works on any background.
+- `solid` — filled, the strongest emphasis. Use sparingly.
+
+If a component takes a `color` and you set `variant="solid"`, the result is the most visually loud combination available. Reserve it for the call to action.
+
+## Spacing
+
+Spacing tokens come from Tailwind v4's defaults — `p-3`, `gap-4`, `mt-6`, etc. — applied consistently inside components. When composing, keep the rhythm: prefer `gap-3`, `gap-4`, or `gap-6` over arbitrary values; prefer `p-3` for cards and `p-6` for hero sections.
+
+## Working with Tailwind classes
+
+Every Nordstar component accepts `className` and merges it sensibly via `tailwind-merge`. You can always escalate:
+
+```tsx
+<Card className="p-6 md:p-8">
+    <Card.Header>Spacious card</Card.Header>
+</Card>
+```
+
+The default `p-3` is overridden by your `p-6 md:p-8` because tailwind-merge recognizes both as padding rules. This is the right way to fine-tune spacing — don't fight the component, just override the class.
+
+## Related
+
+- [Theme](/docs/customization/theme) — token reference and override mechanisms.
+- [Components](/docs/components) — every component honors these idioms.

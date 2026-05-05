@@ -1,0 +1,100 @@
+export const metadata = {
+    title: 'Theme',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/customization/theme/' }
+};
+
+# Theme
+
+Nordstar's visual identity is driven by a small set of CSS custom properties. Every component reads from the same tokens, so changing one variable updates everything that uses it. There are two ways to override them — via React (the `theme` prop on `<NordstarProvider>`) or via raw CSS (writing to `:root` or any scope).
+
+## The token namespace
+
+All tokens live under the `--nordstar-*` namespace. The library never reads or writes anything outside that namespace, so you can collapse a Nordstar theme into your own design system without conflicts.
+
+### Colors
+
+```css
+--nordstar-color-foreground:           0 0% 100%;
+--nordstar-color-foreground-highlight: 0 0% 51%;
+--nordstar-color-background:           0 0% 0%;
+--nordstar-color-background-highlight: 0 0% 15%;
+--nordstar-color-primary:              220 50% 50%;
+--nordstar-color-primary-foreground:   0 0% 100%;
+--nordstar-color-secondary:            280 50% 50%;
+--nordstar-color-secondary-foreground: 0 0% 100%;
+--nordstar-color-error:                0 51% 49%;
+```
+
+Color values are **HSL components** (no `hsl()` wrapper), so utilities like `bg-primary/50` can apply alpha modifiers cleanly. Provide your own colors in the same format.
+
+### Fonts
+
+```css
+--nordstar-font-heading: …;   /* falls back to --nordstar-font-sans */
+--nordstar-font-body:    …;   /* falls back to --nordstar-font-sans */
+--nordstar-font-sans:    …;   /* falls back to --nordstar-font-fallback */
+--nordstar-font-mono:    monospace;
+```
+
+Set `--nordstar-font-sans` once and both heading and body inherit it. Override `--nordstar-font-heading` for a display face that differs from body copy.
+
+## Override via `<NordstarProvider>`
+
+The fastest path for runtime overrides — useful for per-tenant theming or A/B branches:
+
+```tsx
+<NordstarProvider
+    theme={{
+        accents: {
+            primary: '#ed1e79',
+            secondary: '#9b59b6'
+        },
+        fonts: {
+            heading: 'var(--font-display)',
+            body: 'var(--font-sans)'
+        }
+    }}
+>
+    {children}
+</NordstarProvider>
+```
+
+The provider converts the values to `--nordstar-*` variables and applies them at the React tree's root. Pass primitives (hex, font-family strings) — the provider handles HSL conversion under the hood.
+
+## Override via CSS
+
+For static themes (e.g., your global stylesheet), set the variables directly:
+
+```css
+:root {
+    --nordstar-color-primary:   338 84% 52%;   /* equivalent to #ed1e79 */
+    --nordstar-color-secondary: 282 41% 54%;
+    --nordstar-font-sans:       'Geist', system-ui, sans-serif;
+}
+```
+
+This is the right path when:
+- You're not using `<NordstarProvider>`'s `theme` prop for anything else.
+- You want themes scoped to specific routes or media queries (`[data-theme="dim"] { ... }`).
+- You're shipping a marketing page where avoiding extra runtime work matters.
+
+## Per-scope overrides
+
+Because tokens are CSS variables, you can scope them anywhere — a single component subtree, a card, a route. This pattern lets you swap accents inside a hero without affecting the rest of the page:
+
+```tsx
+<section className="[--nordstar-color-primary:340_84%_52%]">
+    <Button color="primary">Get started</Button>
+</section>
+```
+
+The button picks up the new primary color; everything outside the scope keeps the global theme.
+
+## Checking it worked
+
+Open devtools, inspect any styled element, and confirm the computed style references `var(--nordstar-color-primary)` (or whichever token you overrode). If you see the original token value resolving to its default, your override isn't being applied — check selector specificity or import order.
+
+## Related
+
+- [System](/docs/customization/system) — composition patterns and layout tokens.
+- [Components](/docs/components) — every component picks up theme tokens automatically.
