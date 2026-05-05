@@ -17,6 +17,11 @@ export const examples = {
     'card/solid-with-color': () => import('./card/solid-with-color'),
     'card/standard': () => import('./card/standard'),
     'card/with-color': () => import('./card/with-color'),
+    'heading/h1': () => import('./heading/h1'),
+    'heading/h2': () => import('./heading/h2'),
+    'heading/h3': () => import('./heading/h3'),
+    'heading/h4': () => import('./heading/h4'),
+    'heading/levels': () => import('./heading/levels'),
 } as const;
 
 export type ExampleName = keyof typeof examples;

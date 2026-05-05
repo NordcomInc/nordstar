@@ -1,0 +1,72 @@
+export const metadata = {
+    title: 'Heading',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/heading/' }
+};
+
+# Heading
+
+Display titles for pages, sections, and subsections. Each heading carries a typographic role and a semantic level — both should match the document's outline.
+
+## When to use
+
+- For the page title (`level="h1"`).
+- For section breaks within a long page (`level="h2"`, `level="h3"`).
+- For dense subsections inside cards or settings panels (`level="h4"`).
+
+### When not to use
+
+- For body emphasis — reach for <C>Accented</C> or simple `<strong>`.
+- For small caption-like text — that's <C>Label</C>'s job.
+
+## Installation
+
+<Install package="@nordcom/nordstar-heading" />
+
+```tsx
+import { Heading } from '@nordcom/nordstar';
+```
+
+## Levels
+
+The four levels render with distinct typographic weights. Pick by document outline first, then visual hierarchy second — don't pick `h2` because you want the size; pick it because the reader is moving down a level.
+
+<Preview name="heading/levels" />
+
+Each level on its own:
+
+<Preview name="heading/h1" caption='level="h1"' />
+
+<Preview name="heading/h2" caption='level="h2"' />
+
+<Preview name="heading/h3" caption='level="h3"' />
+
+<Preview name="heading/h4" caption='level="h4"' />
+
+## Polymorphism
+
+The `as` prop swaps the underlying tag without changing the level. Useful when a heading sits inside a hero where it should look like an `h1` but the outline already has one earlier:
+
+```tsx
+<Heading as="h2" level="h1">
+    Welcome
+</Heading>
+```
+
+## Composition
+
+Inside a <C>Card</C> the conventional choice is `level="h3"` (the card's `Card.Header` is itself a section break inside the page); inside a <C>Header</C>'s logo slot, the conventional choice is `level="h4"` or a <C>Label</C>.
+
+## Props
+
+<PropsTable component="Heading" />
+
+## Accessibility
+
+<Callout type="info" title="Outline">
+    Don't skip levels. A page should have one `h1`, then `h2`s for top-level sections, then `h3`s nested inside, and so on. Screen readers expose this outline as a navigation aid.
+</Callout>
+
+- The visual size of a heading should not drive the level — set `level` for semantics, then use the `as` prop if the rendered tag needs to differ.
+- Avoid duplicate text across multiple headings on the same page; readers landing via search expect a unique title.
+
+<Related of="heading" />
