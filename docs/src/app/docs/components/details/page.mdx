@@ -1,0 +1,74 @@
+export const metadata = {
+    title: 'Details',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/details/' }
+};
+
+# Details
+
+A collapsible disclosure widget. Wraps the native `<details>` element with Nordstar styling, so keyboard handling and screen-reader behavior are inherited from the platform.
+
+## When to use
+
+- For FAQ entries on a marketing page.
+- For optional advanced settings inside a configuration panel.
+- For long content that the user may not need on first read (e.g., debugging output, full error stack).
+
+### When not to use
+
+- For mutually exclusive options — that's a tab control or radio group.
+- For modal-style hidden content that should trap focus when shown — that's a dialog.
+
+## Installation
+
+<Install package="@nordcom/nordstar-details" />
+
+```tsx
+import { Details } from '@nordcom/nordstar';
+```
+
+## Basic usage
+
+`Details` renders a styled <C>Card</C> with the `label` prop showing as the always-visible summary; `children` becomes the body that toggles on click.
+
+<Preview name="details/standard" />
+
+## Initially open
+
+Pass the native HTML `open` attribute to start the disclosure expanded:
+
+<Preview name="details/open" />
+
+## Composition
+
+Because `Details` is built on `<details>`, it integrates with the platform: form submission preserves the open state, browsers can find text inside collapsed details on Ctrl-F, and screen readers announce the expanded/collapsed state automatically.
+
+For richer summary content, render markup inside the `label`:
+
+```tsx
+<Details
+    label={
+        <>
+            <Label color="primary">New</Label> Releases
+        </>
+    }
+>
+    Read the changelog
+</Details>
+```
+
+(The `label` accepts any `ReactNode` — the type permits `string` for the common case, but markup works too.)
+
+## Props
+
+<PropsTable component="Details" />
+
+## Accessibility
+
+<Callout type="info" title="Native semantics">
+    Because the component wraps `<details>`/`<summary>`, the toggle is keyboard-accessible (Enter or Space) and screen readers announce the expanded/collapsed state without any extra ARIA. Don't add `aria-expanded` — it's already there.
+</Callout>
+
+- Make the `label` self-explanatory — a screen-reader user only hears it when navigating by headings or controls.
+- Avoid nesting interactive elements (links, buttons) inside the `label` — clicking them would also toggle the disclosure.
+
+<Related of="details" />
