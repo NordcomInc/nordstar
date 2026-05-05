@@ -14,7 +14,8 @@
         "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
         "start": "next start -p $PORT",
         "typecheck": "tsc --noEmit",
-        "lint": "exit 0",
+        "lint": "concurrently -i pnpm:lint:*",
+        "lint:prettier": "prettier --check \"./**/src/**/*.{cjs,mjs,ts,tsx}\"",
         "format": "concurrently -i pnpm:format:*",
         "format:prettier": "prettier --write \"./**/src/**/*.{cjs,mjs,ts,tsx}\""
     },
