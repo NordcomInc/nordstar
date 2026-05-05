@@ -100,7 +100,7 @@ const Divider = ({ className, ...props }: CardDividerProps) => {
         <div
             {...props}
             className={cn(
-                'h-[var(--border-width,2px)] bg-foreground-highlight group-data-[padding=true]:m-3 group-data-[padding=true]:-mx-3 group-data-[padding=true]:w-[calc(100%+calc(.75rem*2))]',
+                'bg-foreground-highlight h-[var(--border-width,2px)] group-data-[padding=true]:m-3 group-data-[padding=true]:-mx-3 group-data-[padding=true]:w-[calc(100%+calc(.75rem*2))]',
                 className
             )}
             draggable={false}

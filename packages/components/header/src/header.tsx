@@ -17,9 +17,9 @@ const Header = ({ sticky = true, className, children, ...props }: HeaderProps) =
             as="header"
             borderless={true}
             className={cn(
-                '[var(--layout-page-width)]:px-0 z-10 mb-3 flex min-h-20 w-full items-center justify-center rounded-none border-0 border-none bg-background/95 px-3 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/75 md:h-20',
+                '[var(--layout-page-width)]:px-0 bg-background/95 supports-[backdrop-filter]:bg-background/75 z-10 mb-3 flex min-h-20 w-full items-center justify-center rounded-none border-0 border-none px-3 py-2 backdrop-blur md:h-20',
                 sticky &&
-                    'sticky inset-0 bottom-auto z-40 border-0 border-b-2 border-solid border-background-highlight',
+                    'border-background-highlight sticky inset-0 bottom-auto z-40 border-0 border-b-2 border-solid',
                 className
             )}
             data-sticky={sticky}
@@ -54,7 +54,7 @@ const Logo = forwardRef<'section', HeaderLogoProps>(({ as, className, ...props }
             ref={ref}
             draggable={false}
             className={cn(
-                'text-lg font-extrabold uppercase *:h-full *:object-contain *:object-left [&>a]:transition-colors [&>a]:hover:text-primary',
+                '[&>a]:hover:text-primary text-lg font-extrabold uppercase *:h-full *:object-contain *:object-left [&>a]:transition-colors',
                 className
             )}
         />
@@ -107,7 +107,7 @@ const Link = forwardRef<'a', HeaderMenuLinkProps>(({ as, className, ...props }, 
             ref={ref}
             draggable={false}
             className={cn(
-                'font-base cursor-pointer whitespace-nowrap break-all text-sm font-extrabold uppercase leading-none transition-colors hover:text-primary active:text-primary md:text-base',
+                'font-base hover:text-primary active:text-primary cursor-pointer whitespace-nowrap break-all text-sm font-extrabold uppercase leading-none transition-colors md:text-base',
                 className
             )}
         />

@@ -125,7 +125,7 @@ const Button = forwardRef<'button', ButtonProps>(
                 {icon ? (
                     <div
                         className={cn(
-                            'contents *:block *:aspect-square *:w-4 *:stroke-1 *:text-[length:inherit] *:text-inherit *:font-inherit',
+                            '*:font-inherit contents *:block *:aspect-square *:w-4 *:stroke-1 *:text-[length:inherit] *:text-inherit',
                             iconClassName
                         )}
                     >
@@ -134,7 +134,7 @@ const Button = forwardRef<'button', ButtonProps>(
                 ) : null}
                 <div
                     className={cn(
-                        'block text-center font-heading text-inherit font-inherit uppercase',
+                        'font-heading font-inherit block text-center uppercase text-inherit',
                         contentClassName
                     )}
                 >
