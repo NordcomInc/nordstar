@@ -4,7 +4,11 @@ import type { NextConfig } from 'next';
 const withMDX = createMDX({
     options: {
         remarkPlugins: ['remark-gfm'],
-        rehypePlugins: ['rehype-slug', 'rehype-autolink-headings']
+        rehypePlugins: [
+            'rehype-slug',
+            'rehype-autolink-headings',
+            ['rehype-pretty-code', { theme: 'github-dark-dimmed', keepBackground: false }]
+        ]
     } as never
 });
 
