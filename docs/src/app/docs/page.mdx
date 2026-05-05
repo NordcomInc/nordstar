@@ -1,0 +1,59 @@
+import Link from 'next/link';
+
+export const metadata = {
+    title: 'Documentation',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/' }
+};
+
+# Nordstar
+
+A small, opinionated React component library for building dark, human-centric interfaces. Pre-1.0, used in production at Nordcom AB, and meant to be small enough that you can read all of it in an afternoon.
+
+export const Cards = () => (
+    <ul className="my-6 grid gap-3 sm:grid-cols-2">
+        <li>
+            <Link
+                href="/docs/getting-started"
+                className="block rounded-lg border border-background-highlight px-4 py-3 transition-colors hover:border-primary"
+            >
+                <div className="font-medium">Getting Started</div>
+                <div className="text-foreground-highlight text-sm">Philosophy, first install, hello-world example.</div>
+            </Link>
+        </li>
+        <li>
+            <Link
+                href="/docs/installation"
+                className="block rounded-lg border border-background-highlight px-4 py-3 transition-colors hover:border-primary"
+            >
+                <div className="font-medium">Installation</div>
+                <div className="text-foreground-highlight text-sm">Tailwind v4, the precompiled stylesheet, and provider setup.</div>
+            </Link>
+        </li>
+        <li>
+            <Link
+                href="/docs/components"
+                className="block rounded-lg border border-background-highlight px-4 py-3 transition-colors hover:border-primary"
+            >
+                <div className="font-medium">Components</div>
+                <div className="text-foreground-highlight text-sm">The full reference — usage, variants, props, accessibility.</div>
+            </Link>
+        </li>
+        <li>
+            <Link
+                href="/docs/customization/theme"
+                className="block rounded-lg border border-background-highlight px-4 py-3 transition-colors hover:border-primary"
+            >
+                <div className="font-medium">Customization</div>
+                <div className="text-foreground-highlight text-sm">Theme tokens, runtime overrides, system idioms.</div>
+            </Link>
+        </li>
+    </ul>
+);
+
+<Cards />
+
+## What's new
+
+Nordstar tracks per-package changelogs alongside its source. The release notes for the latest cut are on [GitHub Releases](https://github.com/NordcomInc/nordstar/releases) — every change shipped recently has been a pre-1.0 patch as we stabilize the API.
+
+If you're upgrading and hit something unexpected, please [open an issue](https://github.com/NordcomInc/nordstar/issues).
