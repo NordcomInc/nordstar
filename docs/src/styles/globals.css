@@ -1,3 +1,7 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@import "@nordcom/nordstar";
+
+/* Docs-only theming. */
+@theme {
+    --font-sans: 'Montserrat', sans-serif;
+}
