@@ -80,8 +80,8 @@ export default defineConfig({
                 exports: 'named',
                 format: 'esm',
                 preserveModules: true,
-                strict: true
-            }
+                strict: true,
+            },
         },
     },
     plugins: [

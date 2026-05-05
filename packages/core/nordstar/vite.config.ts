@@ -52,7 +52,7 @@ export default mergeConfig(
                 entryRoot: 'src',
                 insertTypesEntry: true,
                 tsconfigPath: `./tsconfig.json`,
-                include: ['**/src'],
+                include: ['./**/src'],
             }),
             codecovVitePlugin({
                 enableBundleAnalysis: !!process.env.CODECOV_TOKEN,

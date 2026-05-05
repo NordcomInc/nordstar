@@ -24,18 +24,17 @@ const View = forwardRef<'main', ViewProps>(
             <Tag
                 ref={ref}
                 {...props}
-                className={cn('mx-auto my-3 w-full max-w-[var(--nordstar-layout-page-width)]', className)}
+                className={cn(
+                    'mx-auto my-3 w-full max-w-[var(--nordstar-layout-page-width)] overflow-hidden',
+                    className,
+                )}
             />
         );
         if (withoutWrapper) {
             return inner;
         }
 
-        return (
-            <Wrapper className={cn('flex w-screen max-w-full flex-col items-center justify-start', outerClassName)}>
-                {inner}
-            </Wrapper>
-        );
+        return <Wrapper className={cn('flex flex-col items-center justify-start', outerClassName)}>{inner}</Wrapper>;
     },
 );
 
