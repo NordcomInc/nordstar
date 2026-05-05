@@ -35,7 +35,7 @@ const config: NextConfig = {
         contentDispositionType: 'inline'
     },
     typescript: {
-        ignoreBuildErrors: true,
+        ignoreBuildErrors: false,
         tsconfigPath: 'tsconfig.json'
     },
 

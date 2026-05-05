@@ -43,7 +43,7 @@ export default async function IndexPage() {
 
                     <Card.Divider />
 
-                    <Button as={Link} color="primary" href="/docs/getting-started/" variant="solid">
+                    <Button as={Link} color="primary" href="/docs/getting-started" variant="solid">
                         Get Started
                     </Button>
                 </Card>
@@ -63,7 +63,7 @@ export default async function IndexPage() {
 
                     <Card.Divider />
 
-                    <Button as={Link} color="foreground" href="/docs/installation/" variant="solid">
+                    <Button as={Link} color="foreground" href="/docs/installation" variant="solid">
                         Get Started
                     </Button>
                 </Card>
@@ -83,7 +83,7 @@ export default async function IndexPage() {
 
                     <Card.Divider />
 
-                    <Button as={Link} color="foreground" href="/docs/components/" variant="outline">
+                    <Button as={Link} color="foreground" href="/docs/components" variant="outline">
                         Get Started
                     </Button>
                 </Card>
