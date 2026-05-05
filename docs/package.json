@@ -11,7 +11,7 @@
     "scripts": {
         "build": "next build",
         "dev": "next dev --turbo",
-        "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
+        "clean": "rm -rf dist coverage .turbo .next *.tsbuildinfo *.log",
         "generate": "concurrently -i pnpm:generate:examples pnpm:generate:props",
         "generate:examples": "tsx scripts/generate-examples.ts",
         "generate:props": "tsx scripts/generate-props.ts",

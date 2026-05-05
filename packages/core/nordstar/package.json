@@ -65,9 +65,12 @@
     },
     "homepage": "https://nordcominc.github.io/nordstar/",
     "scripts": {
-        "build": "tsc && vite build && node scripts/build-css.mjs",
+        "build": "concurrently -i pnpm:build:* --",
+        "build:compile": "vite build",
+        "build:scripts": "concurrently -i pnpm:build:scripts:* --",
+        "build:scripts:build-css": "node scripts/build-css.mjs",
         "dev": "vite build --watch",
-        "clean": "rm -rf dist coverage storybook-static .turbo .next *.tsbuildinfo *.log",
+        "clean": "rm -rf dist coverage .turbo .next *.tsbuildinfo *.log",
         "typecheck": "tsc --noEmit"
     },
     "dependencies": {
@@ -103,7 +106,6 @@
         "tailwindcss": "4.2.4",
         "typescript": "6.0.3",
         "vite-plugin-dts": "5.0.0",
-        "vite-tsconfig-paths": "6.1.1",
         "vite": "8.0.10"
     }
 }
