@@ -22,6 +22,14 @@ export const examples = {
     'heading/h3': () => import('./heading/h3'),
     'heading/h4': () => import('./heading/h4'),
     'heading/levels': () => import('./heading/levels'),
+    'input/label': () => import('./input/label'),
+    'input/label-placeholder': () => import('./input/label-placeholder'),
+    'input/placeholder': () => import('./input/placeholder'),
+    'input/solid': () => import('./input/solid'),
+    'input/solid-with-color': () => import('./input/solid-with-color'),
+    'input/standard': () => import('./input/standard'),
+    'input/textarea': () => import('./input/textarea'),
+    'input/with-color': () => import('./input/with-color'),
 } as const;
 
 export type ExampleName = keyof typeof examples;

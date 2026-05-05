@@ -1,0 +1,78 @@
+export const metadata = {
+    title: 'Input',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/input/' }
+};
+
+# Input
+
+A form control for collecting short text from the user. Renders as a real `<input>` by default — pass `as="textarea"` for multi-line entry.
+
+## When to use
+
+- Any single-line text field: name, email, search, password.
+- Multi-line free-form text — set `as="textarea"`.
+
+### When not to use
+
+- For options from a fixed list — use a select or radio group instead.
+- For binary choices — use a checkbox or switch.
+
+## Installation
+
+<Install package="@nordcom/nordstar-input" />
+
+```tsx
+import { Input } from '@nordcom/nordstar';
+```
+
+## Basic usage
+
+A standard text input with a default value.
+
+<Preview name="input/standard" />
+
+## Variants
+
+`outline` (default) for forms inside light surfaces; `solid` for input that should sit prominently against a darker background.
+
+<Preview name="input/solid" caption='variant="solid"' />
+
+<Preview name="input/with-color" caption='color="primary"' />
+
+<Preview name="input/solid-with-color" caption='variant="solid" color="primary"' />
+
+## With a placeholder
+
+Placeholder text disappears as the user types. Use it for an example or format hint, not as a substitute for a label.
+
+<Preview name="input/placeholder" />
+
+## With a label
+
+The built-in `label` prop creates an accessible association without an external <C>Label</C> element. Combine with a placeholder for the most common form pattern:
+
+<Preview name="input/label" />
+
+<Preview name="input/label-placeholder" />
+
+## Textarea
+
+Pass `as="textarea"` for multi-line entry. The component still accepts `label`, `placeholder`, and `defaultValue` — but `type` is no longer relevant.
+
+<Preview name="input/textarea" />
+
+## Props
+
+<PropsTable component="Input" />
+
+## Accessibility
+
+<Callout type="info" title="Labels">
+    Always associate a label with the input — either via the built-in `label` prop or by wrapping in a <C>Label</C>. Inputs without labels are unusable for keyboard and screen-reader users.
+</Callout>
+
+- Use the right `type` (`email`, `tel`, `number`) so mobile keyboards adapt.
+- Mark required fields with the standard `required` attribute, not just visual hints.
+- For error states, surface a clear message after the input — color alone is not enough for users with low vision.
+
+<Related of="input" />
