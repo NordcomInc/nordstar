@@ -23,6 +23,7 @@ out/
 # misc
 .DS_Store
 .swc
+superpowers/
 
 # debug
 npm-debug.log*
