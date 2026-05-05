@@ -20,9 +20,6 @@ jobs:
             - name: 🔨 Build Packages
               run: pnpm run build:packages
 
-            - name: 📄 Configure GitHub Pages
-              uses: actions/configure-pages@v5
-
     test:
         name: 🧪 Test
         timeout-minutes: 15
@@ -86,7 +83,7 @@ jobs:
 
     build-docs:
         name: 🔨 Build Docs
-        needs: [build, test]
+        needs: [test]
         timeout-minutes: 15
         runs-on: ubuntu-latest
         steps:
