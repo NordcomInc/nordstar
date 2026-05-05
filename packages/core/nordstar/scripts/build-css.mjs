@@ -12,7 +12,7 @@
  */
 
 import { execSync } from 'node:child_process';
-import { mkdirSync, readFileSync, writeFileSync } from 'node:fs';
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -64,6 +64,9 @@ execSync(`"${cli}" -i dist/_entry.css -o dist/styles.css --minify`, {
     stdio: 'inherit',
     cwd: pkgRoot
 });
+
+// Clean up the internal precompile entry — it must NOT ship in the published tarball.
+rmSync(resolve(distDir, '_entry.css'));
 
 console.log(
     `[nordstar:build-css] dist/tailwind.css and dist/styles.css written ` +
