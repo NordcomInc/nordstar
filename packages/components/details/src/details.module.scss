@@ -3,7 +3,7 @@ details.container {
     overflow: auto;
     overflow-x: hidden;
 
-    transition: var(--duration-short) ease-in-out all;
+    transition: var(--nordstar-duration-short) ease-in-out all;
 
     summary {
         height: 1em;
@@ -16,7 +16,7 @@ details.container {
         -webkit-user-select: none;
         user-select: none;
 
-        transition: var(--duration-short) ease-in-out all;
+        transition: var(--nordstar-duration-short) ease-in-out all;
 
         &::-webkit-details-marker {
             display: none;
@@ -29,7 +29,7 @@ details.container {
             content: '+';
             height: 0.5em;
             width: 0.5em;
-            margin-right: var(--layout-block-padding-quarter);
+            margin-right: var(--nordstar-layout-block-padding-quarter);
 
             font-weight: 700;
             font-size: 1.15em;
@@ -37,11 +37,11 @@ details.container {
             transform: rotate(0);
             transform-origin: 0.25em 50%;
             transition:
-                var(--duration-short) ease-in-out border-color,
-                calc(var(--duration-short) / 2) ease-in-out color,
-                calc(var(--duration-short) / 2) ease-out transform;
+                var(--nordstar-duration-short) ease-in-out border-color,
+                calc(var(--nordstar-duration-short) / 2) ease-in-out color,
+                calc(var(--nordstar-duration-short) / 2) ease-out transform;
 
-            border-width: var(--border-width-large);
+            border-width: var(--nordstar-border-width-large);
             border-style: solid;
             border-color: transparent transparent transparent transparent;
         }
@@ -57,23 +57,23 @@ details.container {
     }
 
     &[open] {
-        --border-color: hsl(var(--color-accent-primary));
+        --border-color: hsl(var(--nordstar-color-primary));
 
         & > summary {
-            color: hsl(var(--color-accent-primary));
+            color: hsl(var(--nordstar-color-primary));
 
             &:before {
                 content: '';
 
                 transform: rotate(90deg);
 
-                border-color: transparent transparent transparent hsl(var(--color-accent-primary));
+                border-color: transparent transparent transparent hsl(var(--nordstar-color-primary));
                 color: transparent;
             }
         }
 
         .content {
-            padding-top: var(--layout-block-padding-quarter);
+            padding-top: var(--nordstar-layout-block-padding-quarter);
         }
     }
 }

@@ -25,7 +25,7 @@ const View = forwardRef<'main', ViewProps>(
                 ref={ref}
                 {...props}
                 className={cn(
-                    'm-3 w-[calc(100%-calc(var(--layout-page-spacing)*2))] max-w-[min(var(--layout-page-width),100vw)]',
+                    'm-3 w-[calc(100%-calc(var(--nordstar-layout-page-spacing)*2))] max-w-[min(var(--nordstar-layout-page-width),100vw)]',
                     className
                 )}
             />

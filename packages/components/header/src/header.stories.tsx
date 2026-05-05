@@ -68,7 +68,7 @@ const additionalDemoContent = (
             style={{
                 width: '100%',
                 marginTop: '-0.75rem',
-                backgroundColor: 'hsl(var(--color-background-highlight))'
+                backgroundColor: 'hsl(var(--nordstar-color-background-highlight))'
             }}
         >
             <img
@@ -97,13 +97,13 @@ const additionalDemoContent = (
                             left: '0',
                             right: '0',
                             width: '100%',
-                            backgroundColor: 'hsl(var(--color-accent-primary))'
+                            backgroundColor: 'hsl(var(--nordstar-color-primary))'
                         }}
                     >
                         <Label
                             style={{
                                 padding: '1.5rem .75rem',
-                                color: 'hsl(var(--color-accent-primary-foreground))'
+                                color: 'hsl(var(--nordstar-color-primary-foreground))'
                             }}
                         >
                             Section {index}
@@ -139,7 +139,7 @@ const additionalDemoContent = (
                 height: 'calc(100dvh - 5.75rem)',
                 width: '100%',
                 padding: '.75rem',
-                backgroundColor: 'hsl(var(--color-background-highlight))'
+                backgroundColor: 'hsl(var(--nordstar-color-background-highlight))'
             }}
         >
             <Label
