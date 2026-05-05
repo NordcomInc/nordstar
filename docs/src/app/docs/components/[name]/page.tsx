@@ -6,7 +6,8 @@ export type ComponentDocsPageParams = {
     name: string;
 };
 
-export async function generateMetadata({ params: { name } }: { params: ComponentDocsPageParams }): Promise<Metadata> {
+export async function generateMetadata({ params }: { params: Promise<ComponentDocsPageParams> }): Promise<Metadata> {
+    const { name } = await params;
     const { key } = getComponentByName(name);
 
     return {
@@ -21,7 +22,8 @@ export function generateStaticParams(): ComponentDocsPageParams[] {
     return getAvailableComponents().map((name) => ({ name: name.toLowerCase() }));
 }
 
-export default async function DocsComponentsComponentPage({ params: { name } }: { params: ComponentDocsPageParams }) {
+export default async function DocsComponentsComponentPage({ params }: { params: Promise<ComponentDocsPageParams> }) {
+    const { name } = await params;
     const { Component, key } = getComponentByName(name);
     const SpoofedComponent = Component as React.ComponentType<any>;
 
