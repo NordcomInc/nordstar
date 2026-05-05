@@ -11,6 +11,7 @@ export default mergeConfig(
     base,
     defineConfig({
         resolve: {
+            tsconfigPaths: true,
             alias: {
                 '@': resolve(__dirname, '.'),
             },

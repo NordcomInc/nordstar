@@ -4,7 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vitest/config';
 
 const reporters = ['verbose'];
-const extraReporters = !!process.env.GITHUB_ACTIONS ? ['github-actions'] : [];
+const extraReporters = process.env.GITHUB_ACTIONS ? ['github-actions'] : [];
 const exclude = [
     '**/.next',
     '**/.turbo',
@@ -23,8 +23,6 @@ const exclude = [
     '**/public',
     '**/scripts/**',
     '**/src/index.ts',
-    '**/storybook-static',
-    '**/storybook',
     '**/vite.*.ts',
     '**/vitest.*.ts',
     '**/postcss.config.*',

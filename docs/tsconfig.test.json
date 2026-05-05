@@ -6,13 +6,5 @@
     "compilerOptions": {
         "types": ["vitest/globals"]
     },
-    "exclude": [
-        "**/node_modules",
-        "**/dist",
-        "**/.turbo",
-        "**/storybook-static",
-        "**/coverage",
-        "**/build",
-        "**/public"
-    ]
+    "exclude": ["**/node_modules", "**/dist", "**/.turbo", "**/coverage", "**/build", "**/public"]
 }

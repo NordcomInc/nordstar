@@ -15,20 +15,6 @@ export default mergeConfig(
             typecheck: {
                 tsconfig: `${__dirname}/tsconfig.test.json`,
             },
-            coverage: {
-                exclude: [
-                    '__tests__/*.*',
-                    '.vitest/*.*',
-
-                    '**/__snapshots__/**/*.*',
-                    '**/__tests__/**/*.*',
-                    '**/*.d.*',
-                    '**/*.test.*',
-                    '**/utils/test/**/*.*',
-                    '**/src/**/index.*',
-                    '**/src/**/config/*.*',
-                ],
-            },
         },
     }),
 );

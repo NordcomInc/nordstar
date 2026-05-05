@@ -44,7 +44,6 @@
             "@nordcom/nordstar-heading": ["./packages/components/heading"],
             "@nordcom/nordstar-input": ["./packages/components/input"],
             "@nordcom/nordstar-label": ["./packages/components/label"],
-            "@nordcom/nordstar-storybook": ["./packages/storybook"],
             "@nordcom/nordstar-system": ["./packages/core/system"],
             "@nordcom/nordstar-view": ["./packages/components/view"]
         },

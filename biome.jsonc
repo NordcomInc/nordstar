@@ -22,7 +22,6 @@
             "!**/.next",
             "!**/.turbo",
             "!**/coverage",
-            "!**/storybook-static",
             "!**/build",
             "!**/out",
             "!**/*.d.ts",
@@ -57,7 +56,6 @@
             "!**/.next",
             "!**/.turbo",
             "!**/coverage",
-            "!**/storybook-static",
             "!**/build",
             "!**/out",
             "!**/*.d.ts",
@@ -235,19 +233,6 @@
                 "rules": {
                     "style": {
                         "noNonNullAssertion": "off"
-                    }
-                }
-            }
-        },
-        {
-            "includes": ["packages/storybook/**"],
-            "linter": {
-                "rules": {
-                    "performance": {
-                        "noNamespaceImport": "off"
-                    },
-                    "style": {
-                        "useFilenamingConvention": "off"
                     }
                 }
             }

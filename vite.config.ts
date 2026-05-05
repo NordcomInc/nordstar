@@ -47,6 +47,16 @@ function hoistUseClient(): Plugin {
                 if (resolvedConfig.build.sourcemap) {
                     chunk.map = ms.generateMap({ hires: 'boundary' }) as typeof chunk.map;
                 }
+
+                if (resolvedConfig.build.sourcemap) {
+                    const sourceMap = ms.generateMap({ hires: 'boundary' });
+                    if (!(sourceMap as unknown)) {
+                        console.warn('Failed to generate source map for chunk:', chunk.fileName);
+                        continue;
+                    }
+
+                    chunk.map = sourceMap  as typeof chunk.map;
+                }
             }
         },
     };

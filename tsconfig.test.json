@@ -21,7 +21,6 @@
         "**/dist",
         "**/node_modules",
         "**/public",
-        "**/storybook-static",
         "**/src/**/*.d.ts",
         "node_modules"
     ],
