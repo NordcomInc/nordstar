@@ -1,68 +1,37 @@
 import createMDX from '@next/mdx';
 import createVercelToolbar from '@vercel/toolbar/plugins/next';
 import type { NextConfig } from 'next';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeSlug from 'rehype-slug';
-import remarkGfm from 'remark-gfm';
 
 const withVercelToolbar = createVercelToolbar({});
 
 const withMDX = createMDX({
     options: {
-        remarkPlugins: [remarkGfm],
-        rehypePlugins: [rehypeSlug, rehypeAutolinkHeadings]
-    }
+        remarkPlugins: ['remark-gfm'],
+      rehypePlugins: ['rehype-slug', 'rehype-autolink-headings']
+    } as never
 });
 
 const config: NextConfig = {
+    output: 'export',
+    basePath: "/nordstar",
     pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
     poweredByHeader: false,
     reactStrictMode: true,
     trailingSlash: true,
-    swcMinify: true,
-    productionBrowserSourceMaps: true,
     transpilePackages: ['next-mdx-remote'],
-    compress: true,
+    typedRoutes: true,
     experimental: {
         appNavFailHandling: true,
         caseSensitiveRoutes: true,
         mdxRs: true,
         optimizePackageImports: [],
-        optimizeServerReact: true,
-        parallelServerBuildTraces: true,
-        parallelServerCompiles: true,
-        scrollRestoration: true,
         serverComponentsHmrCache: true,
-        serverSourceMaps: true,
-        useEarlyImport: true,
-        webpackBuildWorker: true
+        typedEnv: true
     },
     images: {
+        unoptimized: true,
         dangerouslyAllowSVG: true,
-        minimumCacheTTL: 60,
-        contentDispositionType: 'inline',
-        remotePatterns: [
-            {
-                protocol: 'https',
-                hostname: 'nordcom.io'
-            },
-            {
-                protocol: 'https',
-                hostname: '**.nordcom.io'
-            },
-            {
-                protocol: 'https',
-                hostname: '**.github.io'
-            },
-            {
-                protocol: 'https',
-                hostname: '**.gravatar.com'
-            }
-        ],
-        formats: ['image/webp', 'image/avif']
-    },
-    eslint: {
-        ignoreDuringBuilds: true
+        contentDispositionType: 'inline'
     },
     typescript: {
         ignoreBuildErrors: true,
@@ -72,16 +41,6 @@ const config: NextConfig = {
     async generateBuildId() {
         return process.env.VERCEL_GIT_COMMIT_SHA || 'unknown';
     },
-
-    webpack(config, _context) {
-        return {
-            ...config,
-            experiments: {
-                ...config.experiments,
-                topLevelAwait: true
-            }
-        };
-    }
 };
 
 export default withVercelToolbar(withMDX(config));

@@ -16,6 +16,8 @@ public/robots.txt*
 
 # production
 build/
+.dist/
+out/
 .env.local
 
 # misc

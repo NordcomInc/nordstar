@@ -2,6 +2,8 @@ name: CI
 
 on: [push, pull_request]
 
+permissions: write-all
+
 jobs:
     build:
         name: 🔨 Build
@@ -15,8 +17,11 @@ jobs:
             - name: 📦 Install
               uses: ./.github/common/install
 
-            - name: 🔨 Build Everything
+            - name: 🔨 Build Packages
               run: pnpm run build:packages
+
+            - name: 📄 Configure GitHub Pages
+              uses: actions/configure-pages@v5
 
     test:
         name: 🧪 Test
@@ -77,3 +82,44 @@ jobs:
 
             - name: ✅ Typecheck
               run: pnpm run typecheck
+
+
+    build-docs:
+        name: 🔨 Build Docs
+        needs: [build, test]
+        timeout-minutes: 15
+        runs-on: ubuntu-latest
+        steps:
+            - name: 🕶️ Checkout repository
+              uses: actions/checkout@v6
+
+            - name: 📦 Install
+              uses: ./.github/common/install
+
+            - name: 🔨 Build Docs
+              run: pnpm run build:docs
+
+            - name: 📄 Configure GitHub Pages
+              uses: actions/configure-pages@v5
+
+            - name: 📤 Upload Pages artifact
+              uses: actions/upload-pages-artifact@v3
+              with:
+                  path: ./docs/out
+
+    deploy-docs:
+        name: 📚 Deploy Docs
+        needs: [build-docs]
+        if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+        timeout-minutes: 15
+        runs-on: ubuntu-latest
+        permissions:
+            pages: write
+            id-token: write
+        environment:
+            name: github-pages
+            url: ${{ steps.deployment.outputs.page_url }}
+        steps:
+            - name: 🚀 Deploy docs to GitHub Pages
+              id: deployment
+              uses: actions/deploy-pages@v5
