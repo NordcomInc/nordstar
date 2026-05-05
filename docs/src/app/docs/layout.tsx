@@ -19,12 +19,12 @@ function NavBlock({ label, href, children }: { label: string; href: string; chil
             <Label
                 as={Link}
                 href={href as Parameters<typeof Link>[0]['href']}
-                className="block text-base leading-none text-foreground"
+                className="text-foreground block text-base leading-none"
             >
                 {label}
             </Label>
 
-            <div className="flex flex-col gap-4 px-3 text-base font-normal leading-none text-foreground-highlight *:flex *:gap-3 *:text-inherit *:leading-none *:transition-colors *:before:block *:before:content-['•']">
+            <div className="text-foreground-highlight flex flex-col gap-4 px-3 text-base font-normal leading-none *:flex *:gap-3 *:leading-none *:text-inherit *:transition-colors *:before:block *:before:content-['•']">
                 {children}
             </div>
         </section>
