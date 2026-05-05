@@ -1,5 +1,6 @@
 {
     "$schema": "https://turbo.build/schema.json",
+    "cacheMaxAge": "1s",
     "ui": "stream",
     "globalDependencies": [
         ".env",

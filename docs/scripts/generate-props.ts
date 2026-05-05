@@ -75,7 +75,10 @@ function getDefaultTag(symbol: ts.Symbol): string | null {
     const tags = symbol.getJsDocTags();
     const tag = tags.find((t) => t.name === 'default' || t.name === 'defaultValue');
     if (!tag) return null;
-    const text = tag.text?.map((t) => t.text).join('').trim();
+    const text = tag.text
+        ?.map((t) => t.text)
+        .join('')
+        .trim();
     return text || null;
 }
 
@@ -85,12 +88,7 @@ function typeToString(type: ts.Type, checker: ts.TypeChecker): string {
         .replace(/\s+/g, ' ');
 }
 
-function extractProps(
-    file: string,
-    name: string,
-    checker: ts.TypeChecker,
-    program: ts.Program
-): ManifestEntry | null {
+function extractProps(file: string, name: string, checker: ts.TypeChecker, program: ts.Program): ManifestEntry | null {
     const source = program.getSourceFile(file);
     if (!source) return null;
 
@@ -129,14 +127,14 @@ function extractProps(
             required: !optional,
             description: getJsDoc(prop, checker),
             type: typeToString(propType, checker),
-            defaultValue: getDefaultTag(prop)
+            defaultValue: getDefaultTag(prop),
         };
     }
 
     return {
         displayName: name,
         description,
-        props
+        props,
     };
 }
 
@@ -145,7 +143,7 @@ async function main() {
     const options = readTsConfig();
     const program = ts.createProgram({
         rootNames: entries.map((e) => e.file),
-        options: { ...options, noEmit: true }
+        options: { ...options, noEmit: true },
     });
     const checker = program.getTypeChecker();
 

@@ -13,6 +13,11 @@ const name = 'Nordstar';
 export default mergeConfig(
     base,
     defineConfig({
+        resolve: {
+            alias: {
+                '@': resolve(__dirname, '.'),
+            },
+        },
         root: resolve(__dirname),
         build: {
             rollupOptions: {
@@ -21,13 +26,13 @@ export default mergeConfig(
                     '@nordcom/nordstar-system',
                     'class-variance-authority',
                     'clsx',
-                    'tailwind-merge'
+                    'tailwind-merge',
                 ],
                 output: {
                     name,
-                    preserveModules: true
-                }
-            }
+                    preserveModules: true,
+                },
+            },
         },
         css: {
             postcss: 'postcss.config.cjs',
@@ -36,8 +41,8 @@ export default mergeConfig(
             modules: {
                 scopeBehaviour: 'local',
                 exportGlobals: true,
-                hashPrefix: 'TEST___'
-            }
+                hashPrefix: 'TEST___',
+            },
         },
         plugins: [
             dts({
@@ -45,15 +50,14 @@ export default mergeConfig(
                 copyDtsFiles: true,
                 entryRoot: 'src',
                 insertTypesEntry: true,
-                rollupTypes: false,
                 tsconfigPath: `./tsconfig.json`,
-                include: ['**/src']
+                include: ['**/src'],
             }),
             codecovVitePlugin({
                 enableBundleAnalysis: !!process.env.CODECOV_TOKEN,
                 bundleName: name,
-                uploadToken: process.env.CODECOV_TOKEN
-            })
-        ]
-    })
+                uploadToken: process.env.CODECOV_TOKEN,
+            }),
+        ],
+    }),
 );

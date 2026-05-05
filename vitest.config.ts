@@ -30,8 +30,7 @@ const exclude = [
     '**/postcss.config.*',
     'vite.config.ts',
     'vitest.config.ts',
-    'vitest.workspace.ts',
-    '.prettierrc.cjs'
+    '.prettierrc.cjs',
 ];
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
@@ -42,13 +41,13 @@ export default defineConfig({
         force: true,
         esbuildOptions: {
             define: {
-                global: 'globalThis'
+                global: 'globalThis',
             },
-            plugins: []
-        }
+            plugins: [],
+        },
     },
     test: {
-        workspace: 'vitest.workspace.ts',
+        projects: ['packages/**/vitest.config.ts'],
         bail: 2,
         environment: 'happy-dom',
         exclude,
@@ -62,15 +61,14 @@ export default defineConfig({
         setupFiles: [`${__dirname}/vitest.setup.ts`],
 
         coverage: {
-            all: true,
             exclude,
             provider: 'v8',
             reporter: ['json', 'json-summary', 'text'],
-            reportOnFailure: true
+            reportOnFailure: true,
         },
 
         typecheck: {
-            tsconfig: './tsconfig.test.json'
-        }
-    }
+            tsconfig: './tsconfig.test.json',
+        },
+    },
 });

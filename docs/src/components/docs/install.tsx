@@ -5,7 +5,7 @@ import { useState } from 'react';
 const MANAGERS = [
     { id: 'pnpm', label: 'pnpm', cmd: (pkg: string) => `pnpm add ${pkg}` },
     { id: 'npm', label: 'npm', cmd: (pkg: string) => `npm install ${pkg}` },
-    { id: 'yarn', label: 'yarn', cmd: (pkg: string) => `yarn add ${pkg}` }
+    { id: 'yarn', label: 'yarn', cmd: (pkg: string) => `yarn add ${pkg}` },
 ] as const;
 
 type ManagerId = (typeof MANAGERS)[number]['id'];

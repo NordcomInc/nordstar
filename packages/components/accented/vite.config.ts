@@ -13,13 +13,18 @@ const name = 'Nordstar.Component.Accented';
 export default mergeConfig(
     base,
     defineConfig({
+        resolve: {
+            alias: {
+                '@': resolve(__dirname, '.'),
+            },
+        },
         root: resolve(__dirname),
         build: {
             rollupOptions: {
                 output: {
-                    name
-                }
-            }
+                    name,
+                },
+            },
         },
         plugins: [
             dts({
@@ -27,15 +32,14 @@ export default mergeConfig(
                 copyDtsFiles: true,
                 entryRoot: 'src',
                 insertTypesEntry: true,
-                rollupTypes: false,
                 tsconfigPath: `./tsconfig.json`,
-                include: ['**/src']
+                include: ['**/src'],
             }),
             codecovVitePlugin({
                 enableBundleAnalysis: !!process.env.CODECOV_TOKEN,
                 bundleName: name,
-                uploadToken: process.env.CODECOV_TOKEN
-            })
-        ]
-    })
+                uploadToken: process.env.CODECOV_TOKEN,
+            }),
+        ],
+    }),
 );

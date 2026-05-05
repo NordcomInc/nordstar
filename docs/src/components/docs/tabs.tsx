@@ -13,7 +13,7 @@ export function TabPane({ children }: TabPaneProps) {
 
 export function Tabs({ children }: { children: ReactNode }) {
     const panes = Children.toArray(children).filter(
-        (c): c is ReactElement<TabPaneProps> => isValidElement(c) && c.type === TabPane
+        (c): c is ReactElement<TabPaneProps> => isValidElement(c) && c.type === TabPane,
     );
     const [active, setActive] = useState(0);
 

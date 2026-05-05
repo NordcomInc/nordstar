@@ -10,13 +10,18 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 export default mergeConfig(
     base,
     defineConfig({
+        resolve: {
+            alias: {
+                '@': resolve(__dirname, '.'),
+            },
+        },
         root: resolve(__dirname),
         build: {
             rollupOptions: {
                 output: {
-                    name: 'Nordstar.Component.Details'
-                }
-            }
-        }
-    })
+                    name: 'Nordstar.Component.Details',
+                },
+            },
+        },
+    }),
 );

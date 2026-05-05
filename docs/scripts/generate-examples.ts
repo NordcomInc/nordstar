@@ -35,7 +35,7 @@ async function main() {
         ' * Do not edit by hand — re-run `pnpm generate:examples` instead.',
         ' */',
         '',
-        'export const examples = {'
+        'export const examples = {',
     ];
     for (const { key, importPath } of entries) {
         lines.push(`    '${key}': () => import('${importPath}'),`);

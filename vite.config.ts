@@ -9,7 +9,6 @@ import react from '@vitejs/plugin-react';
 import preserveDirectives from 'rollup-preserve-directives';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
-import tsConfigPaths from 'vite-tsconfig-paths';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -49,11 +48,16 @@ function hoistUseClient(): Plugin {
                     chunk.map = ms.generateMap({ hires: 'boundary' });
                 }
             }
-        }
+        },
     };
 }
 
 export default defineConfig({
+    resolve: {
+        alias: {
+            '@': resolve(__dirname, '.'),
+        },
+    },
     root: resolve(__dirname),
     build: {
         copyPublicDir: false,
@@ -75,25 +79,20 @@ export default defineConfig({
                     return '';
                 },
                 esModule: true,
-                exports: 'auto',
+                exports: 'named',
                 format: 'esm',
-                interop: 'esModule',
-                noConflict: true,
-                preserveModules: false,
+                preserveModules: true,
                 preserveModulesRoot: 'src',
                 strict: true,
-                validate: true
             },
-            plugins: [preserveDirectives()]
-        }
+            plugins: [preserveDirectives()],
+        },
     },
     esbuild: {
         keepNames: true,
-        minifyIdentifiers: false
     },
     plugins: [
         react(),
-        tsConfigPaths({ root: resolve(__dirname) }),
         libInjectCss(),
         hoistUseClient(),
         dts({
@@ -104,7 +103,7 @@ export default defineConfig({
             insertTypesEntry: true,
             staticImport: true,
             pathsToAliases: true,
-            tsconfigPath: `${__dirname}/tsconfig.json`
-        })
-    ]
+            tsconfigPath: `${__dirname}/tsconfig.json`,
+        }),
+    ],
 });

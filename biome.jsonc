@@ -64,13 +64,13 @@
             "!**/.tsbuildinfo",
             "!docs/superpowers",
             "!plop/**/*.hbs",
-            "!packages/**/CHANGELOG.md",
-            "!**/postcss.config.*",
-            "!**/vite.config.ts",
-            "!**/vitest.config.ts",
-            "!**/vitest.workspace.ts",
-            "!**/vitest.setup.ts",
-            "!**/next.config.ts"
+            "!packages/**/CHANGELOG.md"
+            // "!**/postcss.config.*",
+            // "!**/vite.config.ts",
+            // "!**/vitest.config.ts",
+            // "!**/vitest.workspace.ts",
+            // "!**/vitest.setup.ts",
+            // "!**/next.config.ts"
         ]
     },
     "formatter": {

@@ -13,7 +13,7 @@ export default mergeConfig(
         root: resolve(__dirname),
         test: {
             typecheck: {
-                tsconfig: `${__dirname}/tsconfig.test.json`
+                tsconfig: `${__dirname}/tsconfig.test.json`,
             },
             coverage: {
                 exclude: [
@@ -26,9 +26,9 @@ export default mergeConfig(
                     '**/*.test.*',
                     '**/utils/test/**/*.*',
                     '**/src/**/index.*',
-                    '**/src/**/config/*.*'
-                ]
-            }
-        }
-    })
+                    '**/src/**/config/*.*',
+                ],
+            },
+        },
+    }),
 );

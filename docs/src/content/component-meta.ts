@@ -33,7 +33,7 @@ export const components = [
         category: 'controls',
         tagline: 'An interactive control for triggering actions.',
         related: ['input', 'label'],
-        hasA11y: true
+        hasA11y: true,
     },
     {
         name: 'Card',
@@ -42,7 +42,7 @@ export const components = [
         category: 'surfaces',
         tagline: 'A bordered container that groups related content.',
         related: ['view', 'header', 'heading'],
-        hasA11y: false
+        hasA11y: false,
     },
     {
         name: 'Heading',
@@ -51,7 +51,7 @@ export const components = [
         category: 'typography',
         tagline: 'Display titles for pages and sections.',
         related: ['accented', 'label'],
-        hasA11y: true
+        hasA11y: true,
     },
     {
         name: 'Input',
@@ -60,7 +60,7 @@ export const components = [
         category: 'controls',
         tagline: 'A text or textarea form control with optional label.',
         related: ['label', 'button'],
-        hasA11y: true
+        hasA11y: true,
     },
     {
         name: 'Label',
@@ -69,7 +69,7 @@ export const components = [
         category: 'typography',
         tagline: 'Small uppercase text used for captions and form labels.',
         related: ['input', 'heading'],
-        hasA11y: true
+        hasA11y: true,
     },
     {
         name: 'View',
@@ -78,7 +78,7 @@ export const components = [
         category: 'layout',
         tagline: 'A page-level layout wrapper.',
         related: ['header', 'card'],
-        hasA11y: false
+        hasA11y: false,
     },
     {
         name: 'Details',
@@ -87,7 +87,7 @@ export const components = [
         category: 'surfaces',
         tagline: 'A collapsible disclosure widget.',
         related: ['card'],
-        hasA11y: true
+        hasA11y: true,
     },
     {
         name: 'Header',
@@ -96,7 +96,7 @@ export const components = [
         category: 'layout',
         tagline: 'A site or section header with a logo slot and menu.',
         related: ['view', 'label'],
-        hasA11y: true
+        hasA11y: true,
     },
     {
         name: 'Accented',
@@ -105,8 +105,8 @@ export const components = [
         category: 'typography',
         tagline: 'Inline text with an accent color, used to draw the eye.',
         related: ['heading', 'label'],
-        hasA11y: false
-    }
+        hasA11y: false,
+    },
 ] as const satisfies readonly ComponentMeta[];
 
 export type ComponentSlug = (typeof components)[number]['slug'];

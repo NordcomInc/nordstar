@@ -13,8 +13,8 @@ export default mergeConfig(
         root: resolve(__dirname),
         test: {
             typecheck: {
-                tsconfig: `${__dirname}/tsconfig.test.json`
-            }
-        }
-    })
+                tsconfig: `${__dirname}/tsconfig.test.json`,
+            },
+        },
+    }),
 );

@@ -30,12 +30,14 @@ export async function Preview({ name, caption }: PreviewProps) {
 
     const html = await codeToHtml(source, {
         lang: 'tsx',
-        theme: 'github-dark-dimmed'
+        theme: 'github-dark-dimmed',
     });
 
     return (
         <figure className="my-6 overflow-hidden rounded-lg border border-background-highlight">
-            {caption ? <figcaption className="px-4 py-2 text-foreground-highlight text-xs">{caption}</figcaption> : null}
+            {caption ? (
+                <figcaption className="px-4 py-2 text-foreground-highlight text-xs">{caption}</figcaption>
+            ) : null}
             <div className="flex items-center justify-center bg-background p-8">
                 <Example />
             </div>

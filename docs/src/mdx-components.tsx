@@ -67,10 +67,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             />
         ),
         code: (props) => (
-            <code
-                className="rounded bg-background-highlight/40 px-1 py-0.5 font-mono text-[0.9em]"
-                {...props}
-            />
-        )
+            <code className="rounded bg-background-highlight/40 px-1 py-0.5 font-mono text-[0.9em]" {...props} />
+        ),
     };
 }

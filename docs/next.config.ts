@@ -7,9 +7,9 @@ const withMDX = createMDX({
         rehypePlugins: [
             'rehype-slug',
             'rehype-autolink-headings',
-            ['rehype-pretty-code', { theme: 'github-dark-dimmed', keepBackground: false }]
-        ]
-    } as never
+            ['rehype-pretty-code', { theme: 'github-dark-dimmed', keepBackground: false }],
+        ],
+    } as never,
 });
 
 const config: NextConfig = {
@@ -27,21 +27,21 @@ const config: NextConfig = {
         mdxRs: true,
         optimizePackageImports: [],
         serverComponentsHmrCache: true,
-        typedEnv: true
+        typedEnv: true,
     },
     images: {
         unoptimized: true,
         dangerouslyAllowSVG: true,
-        contentDispositionType: 'inline'
+        contentDispositionType: 'inline',
     },
     typescript: {
         ignoreBuildErrors: false,
-        tsconfigPath: 'tsconfig.json'
+        tsconfigPath: 'tsconfig.json',
     },
 
     async generateBuildId() {
         return process.env.VERCEL_GIT_COMMIT_SHA || 'unknown';
-    }
+    },
 };
 
 export default withMDX(config);
