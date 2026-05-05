@@ -1,0 +1,45 @@
+export const metadata = {
+    title: 'Getting Started',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/getting-started/' }
+};
+
+# Getting Started
+
+Nordstar is a small, opinionated React component library for building dark-themed, human-centric interfaces. Pair it with [Tailwind CSS v4](/docs/installation) (or use the precompiled stylesheet) and wrap your app in `<NordstarProvider>` — that's the entire setup.
+
+<Callout type="warning" title="Early development">
+    Nordstar is pre-1.0 and the API is still in motion. We try not to break things, but every release is published as a `patch` while we're stabilizing — pin loosely.
+</Callout>
+
+## Philosophy
+
+- **Thin components, real composition.** Each component does one thing and exposes a small surface. Composition is encouraged — see the patterns shown on each component page.
+- **Tokens-first theming.** Colors, fonts, and spacing are CSS variables. Override them once at the root and the whole library follows.
+- **Use the platform.** <C>Details</C> wraps `<details>`, <C>Heading</C> renders the right tag for the level you ask for, <C>Input</C> is just an `<input>` with sensible defaults. Keyboard, screen-reader, and form behaviors come from the browser.
+- **Server-component friendly.** Most components are presentational and render on the server. Only the components that need state (like <C>Tabs</C> in this docs site) opt into `"use client"`.
+
+## Hello, Button
+
+The smallest possible Nordstar app:
+
+```tsx
+import { Button, NordstarProvider } from '@nordcom/nordstar';
+
+export default function App() {
+    return (
+        <NordstarProvider>
+            <Button color="primary" onClick={() => alert('hi')}>
+                Hello, Nordstar
+            </Button>
+        </NordstarProvider>
+    );
+}
+```
+
+The provider sets up the theme tokens and runtime context — every Nordstar component expects to live inside one. From there, every component documented in this site is yours to compose.
+
+## Next steps
+
+- [Installation](/docs/installation) — full setup including Tailwind v4 wiring and `NordstarProvider` configuration.
+- [Components](/docs/components) — the full component reference with usage, variants, props, and accessibility notes.
+- [Customization → Theme](/docs/customization/theme) — override colors, fonts, and tokens to match your brand.
