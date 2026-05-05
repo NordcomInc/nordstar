@@ -25,7 +25,6 @@ const exclude = [
     '**/vite.*.ts',
     '**/vitest.*.ts',
     '**/postcss.config.*',
-    'tailwind.config.cjs',
     'vite.config.ts',
     'vitest.config.ts',
     'vitest.workspace.ts',

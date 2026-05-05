@@ -41,7 +41,6 @@ export default defineConfig([
 		"**/vitest.config.ts",
 		"**/postcss.config.cjs",
 		"**/postcss.config.js",
-		"**/tailwind.config.cjs",
 		".prettierrc.cjs",
 		".lintstagedrc.mjs",
 		"eslint.config.mjs",
