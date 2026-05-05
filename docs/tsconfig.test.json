@@ -5,7 +5,7 @@
         "types": ["vitest/globals"]
     },
 
-    "include": ["src/**/*.test.*", "tailwind.config.cjs", "postcss.config.cjs"],
+    "include": ["src/**/*.test.*", "postcss.config.js"],
     "exclude": [
         "**/node_modules",
         "**/dist",
