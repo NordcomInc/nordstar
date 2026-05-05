@@ -19,7 +19,7 @@
         "@nordcom/nordstar": "workspace:*",
         "react-dom": "19.1.0",
         "react": "19.1.0",
-        "storybook": "8.4.0"
+        "storybook": "8.6.17"
     },
     "devDependencies": {
         "@joshwooding/vite-plugin-react-docgen-typescript": "0.4.1",
