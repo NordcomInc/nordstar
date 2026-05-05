@@ -1,0 +1,88 @@
+export const metadata = {
+    title: 'Installation',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/installation/' }
+};
+
+# Installation
+
+Nordstar ships as a single npm package with two CSS entry points — one for [Tailwind CSS v4](https://tailwindcss.com) consumers, one for everyone else. Pick the path that matches your setup.
+
+## Prerequisites
+
+- **Node** — 24.x (see the repository's `.nvmrc`).
+- **React** — 19 or later. Nordstar uses Server Components and the React 19 compiler-friendly APIs.
+
+## Install the package
+
+<Install package="@nordcom/nordstar" />
+
+## Wire up the styles
+
+### Tailwind v4 users
+
+Add a single `@import` after the Tailwind import in your global stylesheet:
+
+```css
+@import "tailwindcss";
+@import "@nordcom/nordstar";
+```
+
+That's it — Nordstar's tokens become Tailwind utilities (`bg-primary`, `font-heading`, etc.), and component classes resolve against your project's Tailwind compiler.
+
+### Non-Tailwind users
+
+Import the precompiled stylesheet directly:
+
+```css
+@import "@nordcom/nordstar/styles.css";
+```
+
+This bundle includes everything Nordstar's components need at runtime, no Tailwind required. The trade-off is bundle size (~50% larger than the Tailwind path) — fine for prototypes and small apps, less ideal for production.
+
+## Provider setup
+
+Wrap your app in `<NordstarProvider>`. Most apps do this once at the root layout:
+
+```tsx
+// app/layout.tsx
+import { NordstarProvider } from '@nordcom/nordstar';
+import '@/styles/globals.css';
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+    return (
+        <html lang="en">
+            <body>
+                <NordstarProvider>{children}</NordstarProvider>
+            </body>
+        </html>
+    );
+}
+```
+
+The provider injects token defaults at runtime and exposes them to descendants. Custom theme overrides (colors, fonts) go on the provider's `theme` prop — see the [Theme guide](/docs/customization/theme) for the shape.
+
+## Per-component packages
+
+<Callout type="info" title="Tree-shaking by omission">
+    Each component also publishes as its own package — `@nordcom/nordstar-button`, `@nordcom/nordstar-card`, and so on. The umbrella `@nordcom/nordstar` re-exports them all, so for normal use there's nothing to gain from the standalone packages — your bundler tree-shakes the umbrella the same way. Reach for the per-component packages only if you have a hard constraint like "this build can never depend on an unused module."
+</Callout>
+
+## Verify
+
+A minimal sanity check — render a `<Button>` inside a route:
+
+```tsx
+import { Button } from '@nordcom/nordstar';
+
+export default function Home() {
+    return <Button color="primary">It works</Button>;
+}
+```
+
+If the button renders styled (rounded corners, primary color, uppercase Heading-styled label), the install is good. If you see an unstyled button, the CSS import is missing or applied after another rule that resets it — re-check the order of the imports in your global stylesheet.
+
+## Next
+
+- [Components](/docs/components) — the full component reference.
+- [Customization → Theme](/docs/customization/theme) — override colors, fonts, and tokens.
+- [Customization → System](/docs/customization/system) — composition patterns.
