@@ -17,7 +17,6 @@ export const examples = {
     'card/solid-with-color': () => import('./card/solid-with-color'),
     'card/standard': () => import('./card/standard'),
     'card/with-color': () => import('./card/with-color'),
-    'details/open': () => import('./details/open'),
     'details/standard': () => import('./details/standard'),
     'heading/h1': () => import('./heading/h1'),
     'heading/h2': () => import('./heading/h2'),
