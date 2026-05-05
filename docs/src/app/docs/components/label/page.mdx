@@ -1,0 +1,76 @@
+export const metadata = {
+    title: 'Label',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/label/' }
+};
+
+# Label
+
+Small uppercase text used for captions, form labels, and tag-like microcopy. Carries a typographic role rather than a semantic one — pair it with the right element via the `as` prop when the role matters.
+
+## When to use
+
+- For inline captions next to images or media.
+- For form labels when not using <C>Input</C>'s built-in `label` prop.
+- For metadata strips ("4 min read", "Updated yesterday").
+- As a navigation block heading inside a sidebar.
+
+### When not to use
+
+- For section titles — that's <C>Heading</C>'s job.
+- For body emphasis — reach for <C>Accented</C>.
+
+## Installation
+
+<Install package="@nordcom/nordstar-label" />
+
+```tsx
+import { Label } from '@nordcom/nordstar';
+```
+
+## Basic usage
+
+<Preview name="label/standard" />
+
+## With a color
+
+<Preview name="label/with-color" />
+
+## Polymorphism
+
+`Label` accepts `as` to render as any element. The most common use is wrapping a `<Link>` for navigation block headings:
+
+```tsx
+<Label as={Link} href="/docs/components">
+    Components
+</Label>
+```
+
+The pattern appears in this docs site's own sidebar.
+
+## Composition
+
+A label above a form control is a robust, framework-agnostic alternative to <C>Input</C>'s built-in `label` prop — useful when you need the label to share styling with other labels on the page, or when the input lives inside a custom wrapper. Just make sure the association is real (use `htmlFor` on the label, `id` on the input).
+
+```tsx
+<>
+    <Label as="label" htmlFor="company">
+        Company
+    </Label>
+    <Input id="company" type="text" />
+</>
+```
+
+## Props
+
+<PropsTable component="Label" />
+
+## Accessibility
+
+<Callout type="info" title="Decorative vs. associated">
+    Plain `<Label>` is decorative — screen readers won't link it to a form control. For real label-input association, render it as an actual `<label>` element via `as="label"` and connect it with `htmlFor`, OR rely on <C>Input</C>'s built-in `label` prop which handles the association for you.
+</Callout>
+
+- All-caps text reads slowly for users with cognitive load — keep label copy short.
+- Don't make labels the only conveyer of state ("REQUIRED" — pair with `*` or another visible cue).
+
+<Related of="label" />
