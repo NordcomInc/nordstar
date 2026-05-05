@@ -17,7 +17,7 @@ const Header = ({ sticky = true, className, children, ...props }: HeaderProps) =
             as="header"
             borderless={true}
             className={cn(
-                '[var(--nordstar-layout-page-width)]:px-0 bg-background/95 supports-[backdrop-filter]:bg-background/75 z-10 mb-3 flex min-h-20 w-full items-center justify-center rounded-none border-0 border-none px-3 py-2 backdrop-blur md:h-20',
+                'bg-background/95 supports-[backdrop-filter]:bg-background/75 z-10 mb-3 flex min-h-20 w-full items-center justify-center rounded-none border-0 border-none px-3 py-2 backdrop-blur md:h-20 [var(--nordstar-layout-page-width)]:px-0',
                 sticky &&
                     'border-background-highlight sticky inset-0 bottom-auto z-40 border-0 border-b-2 border-solid',
                 className
@@ -80,7 +80,7 @@ const Menu = forwardRef<'nav', HeaderMenuProps>(({ as, className, overflowShadow
             ref={ref}
             draggable={false}
             className={cn(
-                'md:overflow-x flex w-full touch-auto select-none items-center gap-6 overflow-x-auto scroll-smooth py-3 md:justify-end',
+                'md:overflow-x flex w-full touch-auto items-center gap-6 overflow-x-auto scroll-smooth py-3 select-none md:justify-end',
                 overflowShadow && 'animate-scroll-shadow-inset [animation-timeline:scroll(self_inline)]',
                 className
             )}
@@ -107,7 +107,7 @@ const Link = forwardRef<'a', HeaderMenuLinkProps>(({ as, className, ...props }, 
             ref={ref}
             draggable={false}
             className={cn(
-                'font-base hover:text-primary active:text-primary cursor-pointer whitespace-nowrap break-all text-sm font-extrabold uppercase leading-none transition-colors md:text-base',
+                'font-base hover:text-primary active:text-primary cursor-pointer text-sm leading-none font-extrabold break-all whitespace-nowrap uppercase transition-colors md:text-base',
                 className
             )}
         />

@@ -1,8 +1,8 @@
 .header {
     display: flex;
     flex-direction: column;
-    gap: calc(var(--layout-section-spacing) / 3);
-    padding-bottom: var(--layout-section-spacing);
+    gap: calc(var(--nordstar-layout-section-spacing) / 3);
+    padding-bottom: var(--nordstar-layout-section-spacing);
     width: 52rem;
     max-width: 100%;
 }
@@ -10,7 +10,7 @@
 .content {
     display: grid;
     grid-template-columns: 1fr;
-    gap: var(--layout-block-padding);
+    gap: var(--nordstar-layout-block-padding);
 
     @media (min-width: 950px) {
         grid-template-columns: 1fr 1fr 1fr;
@@ -18,7 +18,7 @@
 
     .block {
         p {
-            margin-top: calc(var(--layout-block-padding) / 4);
+            margin-top: calc(var(--nordstar-layout-block-padding) / 4);
 
             font-size: 0.95em;
         }

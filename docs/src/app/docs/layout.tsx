@@ -24,7 +24,7 @@ function NavBlock({ label, href, children }: { label: string; href: string; chil
                 {label}
             </Label>
 
-            <div className="text-foreground-highlight flex flex-col gap-4 px-3 text-base font-normal leading-none *:flex *:gap-3 *:leading-none *:text-inherit *:transition-colors *:before:block *:before:content-['•']">
+            <div className="text-foreground-highlight flex flex-col gap-4 px-3 text-base leading-none font-normal *:flex *:gap-3 *:leading-none *:text-inherit *:transition-colors *:before:block *:before:content-['•']">
                 {children}
             </div>
         </section>

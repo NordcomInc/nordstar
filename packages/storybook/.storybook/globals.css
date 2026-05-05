@@ -1,30 +1,12 @@
 @import "tailwindcss";
 @import "@nordcom/nordstar";
 
-@layer base {
-    :root {
-        --font-fallback: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell,
-            'Helvetica Neue', sans-serif;
-        --font-sans: 'Montserrat', sans-serif;
-        --font-primary: 'Montserrat', sans-serif;
-
-        background: var(--color-background);
-        color: var(--color-foreground);
-        font-family: 'Montserrat', sans-serif;
-        font-size: 16px;
-    }
-
-    #nordstar {
-        font-size: 16px;
-    }
-
-    body {
-        font-family: 'Montserrat', sans-serif;
-        color: hsl(var(--color-foreground));
-        background-color: hsl(var(--color-background));
-    }
+/* Docs-only override: pin the sans font to Montserrat for the Storybook frame. */
+@theme {
+    --font-sans: 'Montserrat', sans-serif;
 }
 
+/* Storybook docs-frame customizations. */
 .sbdocs .sbdocs-preview .docs-story .innerZoomElementWrapper .sb-story.sb-unstyled {
     max-height: 38rem;
     height: min-content;
@@ -43,7 +25,7 @@
 
 .sbdocs h2 {
     text-transform: lowercase;
-    color: hsl(var(--color-foreground-secondary));
+    color: var(--color-foreground-highlight);
     font-weight: 400;
     font-size: 1.95em;
     letter-spacing: unset;
@@ -55,13 +37,13 @@
 }
 
 .sbdocs .sbdocs-preview {
-    border-width: var(--border-width-large, .2rem);
-    border-color: hsl(var(--color-background-highlight, 0 0% 15%));
+    border-width: var(--nordstar-border-width-large, 0.29rem);
+    border-color: var(--color-background-highlight);
 
-    margin: .75rem 0;
+    margin: 0.75rem 0;
 }
 .sbdocs button {
-    padding: var(--layout-block-padding-half, 0.5rem) var(--layout-block-padding, 1rem);
+    padding: calc(var(--nordstar-layout-block-padding, 1rem) / 2) var(--nordstar-layout-block-padding, 1rem);
 
     text-transform: uppercase;
     font-weight: 700;

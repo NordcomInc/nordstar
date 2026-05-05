@@ -34,16 +34,22 @@ if (subPackageShortNames.length === 0) {
 
 mkdirSync(distDir, { recursive: true });
 
-// 1. Build dist/tailwind.css = src/styles/tailwind.css + PUBLISHED-layout @source lines.
-//    From dist/tailwind.css's published location (node_modules/@nordcom/nordstar/dist/),
-//    sub-packages live at ../../nordstar-<name>/dist/.
+// 1. Build dist/tailwind.css = src/styles/tailwind.css + @source lines for every
+//    layout this file may be loaded from. Tailwind v4 silently skips paths that
+//    don't resolve, so listing every reasonable layout is safe.
+//    Layouts:
+//      - npm install:     dist/tailwind.css → ../../nordstar-<name>/dist
+//      - pnpm install:    same as npm (sub-packages are siblings via .pnpm symlinks)
+//      - pnpm workspace:  dist/tailwind.css's realpath is packages/core/nordstar/dist/
+//                         → sub-packages live at ../../../components/<name>/dist
 const tailwindCssSource = readFileSync(resolve(pkgRoot, 'src/styles/tailwind.css'), 'utf8');
-const publishedSources = subPackageShortNames
-    .map((name) => `@source "../../nordstar-${name}/dist";`)
-    .join('\n');
+const sourceDirectives = subPackageShortNames.flatMap((name) => [
+    `@source "../../nordstar-${name}/dist";`,
+    `@source "../../../components/${name}/dist";`
+]).join('\n');
 writeFileSync(
     resolve(distDir, 'tailwind.css'),
-    `${tailwindCssSource}\n\n/* @source directives appended at build time. */\n${publishedSources}\n`
+    `${tailwindCssSource}\n\n/* @source directives appended at build time. */\n${sourceDirectives}\n`
 );
 
 // 2. Build dist/_entry.css for the precompile, with WORKSPACE-layout @source paths.
