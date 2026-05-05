@@ -1,0 +1,64 @@
+export const metadata = {
+    title: 'View',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/view/' }
+};
+
+# View
+
+A page-level layout wrapper. Use it as the outermost element of a page route — it sets up the base spacing, max-width, and content rhythm that the rest of the system expects.
+
+## When to use
+
+- As the root element of every page in your app.
+- Inside a page section that needs the same content rhythm as the page itself (e.g., a settings card filled with form rows).
+
+### When not to use
+
+- For inline content blocks — `View` is a layout primitive, not a styled `<div>`.
+- For card-like containers — reach for <C>Card</C>.
+
+## Installation
+
+<Install package="@nordcom/nordstar-view" />
+
+```tsx
+import { View } from '@nordcom/nordstar';
+```
+
+## Basic usage
+
+<Preview name="view/standard" />
+
+## With and without the wrapper
+
+The default `View` includes a wrapper element that constrains content width and applies horizontal padding. Pass `withoutWrapper` when you want to opt out — useful when the parent is already a `View` (e.g., a route that renders inside a layout's `View`):
+
+```tsx
+<View withoutWrapper>
+    <p>Already wrapped by a parent View.</p>
+</View>
+```
+
+## Composition
+
+A typical page composes `View` at the top, with a <C>Header</C> as its first child and content below:
+
+```tsx
+<View>
+    <Header>
+        <Header.Logo>App</Header.Logo>
+        <Header.Menu>
+            <Header.Menu.Link>Docs</Header.Menu.Link>
+        </Header.Menu>
+    </Header>
+    <main>{/* page body */}</main>
+</View>
+```
+
+For nested layouts (e.g., a docs subsection with its own sidebar), keep one outer `View` and reuse `View withoutWrapper` for inner sections that should inherit width and rhythm without re-applying padding.
+
+## Props
+
+<PropsTable component="View" />
+
+<Related of="view" />

@@ -32,6 +32,7 @@ export const examples = {
     'input/with-color': () => import('./input/with-color'),
     'label/standard': () => import('./label/standard'),
     'label/with-color': () => import('./label/with-color'),
+    'view/standard': () => import('./view/standard'),
 } as const;
 
 export type ExampleName = keyof typeof examples;
