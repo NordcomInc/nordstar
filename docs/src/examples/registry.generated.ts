@@ -10,6 +10,13 @@ export const examples = {
     'button/outline-with-color': () => import('./button/outline-with-color'),
     'button/standard': () => import('./button/standard'),
     'button/with-color': () => import('./button/with-color'),
+    'card/borderless': () => import('./card/borderless'),
+    'card/borderless-no-padding': () => import('./card/borderless-no-padding'),
+    'card/no-padding': () => import('./card/no-padding'),
+    'card/solid': () => import('./card/solid'),
+    'card/solid-with-color': () => import('./card/solid-with-color'),
+    'card/standard': () => import('./card/standard'),
+    'card/with-color': () => import('./card/with-color'),
 } as const;
 
 export type ExampleName = keyof typeof examples;

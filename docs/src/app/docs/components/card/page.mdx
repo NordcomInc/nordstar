@@ -1,0 +1,77 @@
+export const metadata = {
+    title: 'Card',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/card/' }
+};
+
+# Card
+
+A bordered surface that groups related content. Use it to delimit a section, frame a settings block, or contain a feature card on a marketing page.
+
+## When to use
+
+- To group related content into a single visual unit.
+- To distinguish a content block from the surrounding page.
+- For settings panels, preference forms, or summary tiles.
+
+### When not to use
+
+- For full-page layouts — reach for <C>View</C> instead.
+- For inline content where the surrounding text already provides context.
+
+## Installation
+
+<Install package="@nordcom/nordstar-card" />
+
+```tsx
+import { Card } from '@nordcom/nordstar';
+```
+
+`Card` ships with two sub-components — `Card.Header` for the title slot and `Card.Divider` for an inset separator line.
+
+## Basic usage
+
+A card with a header, a divider, body content, and an imaginary footer.
+
+<Preview name="card/standard" />
+
+## Variants
+
+`outline` (default) is a thin-bordered surface; `solid` is a filled block. Combine each with `color` to escalate emphasis.
+
+<Preview name="card/solid" caption='variant="solid"' />
+
+<Preview name="card/with-color" caption='color="primary"' />
+
+<Preview name="card/solid-with-color" caption='variant="solid" color="primary"' />
+
+## Borderless and padding-less
+
+Drop the border for cards that sit inside other surfaces, or remove the inner padding when you need to control spacing yourself (e.g., a card whose body is a media element that should bleed to the edges).
+
+<Preview name="card/borderless" caption="borderless" />
+
+<Preview name="card/no-padding" caption="padding={false}" />
+
+<Preview name="card/borderless-no-padding" caption="borderless padding={false}" />
+
+## Composition
+
+`Card.Header` typically holds a <C>Heading</C> or <C>Label</C>; the body accepts arbitrary content. `Card.Divider` works inside the card to delimit header from body or body from footer.
+
+```tsx
+<Card>
+    <Card.Header>
+        <Heading level="h3">Account</Heading>
+    </Card.Header>
+    <Card.Divider />
+    <p>Update your account preferences.</p>
+</Card>
+```
+
+For larger compositions, nest a card inside a <C>View</C> to position it within the page layout.
+
+## Props
+
+<PropsTable component="Card" />
+
+<Related of="card" />
