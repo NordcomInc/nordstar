@@ -1,44 +1,38 @@
 {
-    "typescript.tsdk": "node_modules/typescript/lib",
-    "typescript.locale": "en",
-    "typescript.surveys.enabled": false,
+    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.formatOnSave": true,
+    "files.autoSave": "off",
+    "files.eol": "\n",
+    "files.trimFinalNewlines": false,
+    "files.trimTrailingWhitespace": true,
     "git.autofetch": "all",
     "git.countBadge": "tracked",
     "git.fetchOnPull": true,
-    "git.inputValidationSubjectLength": 72,
-    "git.inputValidationLength": 72,
     "git.inputValidation": true,
+    "git.inputValidationLength": 72,
+    "git.inputValidationSubjectLength": 72,
     "git.showPushSuccessNotification": true,
-    "github.copilot.enable": {
-        "plaintext": "true",
-        "markdown": "true"
-    },
-    "editor.formatOnSave": true,
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-    "editor.codeActionsOnSave": {
-        "source.fixAll": "explicit",
-        "source.organizeImports": "explicit",
-        "source.sortMembers": "explicit"
-    },
-    "files.associations": {
-        "**/*.hbs": "plaintext",
-        "LICENSE": "plaintext",
-        ".eslintrc": "json",
-        ".renovaterc": "json"
-    },
-    "files.autoSave": "off",
-    "files.trimTrailingWhitespace": true,
-    "files.eol": "\n",
-    "files.trimFinalNewlines": false,
-    "[plaintext]": {
-        "editor.formatOnSave": false
-    },
+    "github.copilot.chat.localeOverride": "en",
+    "markdown.extension.list.indentationSize": "inherit",
+    "markdown.extension.toc.levels": "2..6",
+    "markdown.extension.toc.slugifyMode": "github",
+    "tailwindCSS.classAttributes": ["class", "className", ".*ClassName", ".*Styles"],
+    "tailwindCSS.colorDecorators": true,
+    "tailwindCSS.lint.invalidVariant": "warning",
+    "typescript.locale": "en",
+    "typescript.preferences.importModuleSpecifier": "non-relative",
+    "typescript.surveys.enabled": false,
+    "typescript.tsdk": "node_modules/typescript/lib",
     "[git-commit]": {
-        "editor.rulers": [
-            72
-        ],
+        "editor.rulers": [72],
         "editor.wordWrap": "off",
         "workbench.editor.restoreViewState": false
+    },
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[plaintext]": {
+        "editor.formatOnSave": false
     },
     "cSpell.words": [
         "Behaviour",
@@ -65,63 +59,45 @@
         "typecheck",
         "vite"
     ],
-    "markdown.extension.list.indentationSize": "inherit",
-    "markdown.extension.toc.levels": "2..6",
-    "markdown.extension.toc.omittedFromToc": {
-        "CONTRIBUTING.md": [
-            "## Table of Contents"
-        ]
+    "editor.codeActionsOnSave": {
+        "source.fixAll": "explicit",
+        "source.organizeImports": "explicit",
+        "source.sortMembers": "explicit"
     },
-    "markdown.extension.toc.slugifyMode": "github",
-    "typescript.preferences.importModuleSpecifier": "non-relative",
-    "github.copilot.chat.localeOverride": "en",
-    "github.copilot.advanced": {
-        "length": 1500,
-        "temperature": "0.75"
+    "files.associations": {
+        ".eslintrc": "json",
+        ".renovaterc": "json",
+        "**/*.hbs": "plaintext",
+        "LICENSE": "plaintext"
     },
     "github.copilot-labs.advanced": {
         "length": 1500,
         "temperature": "0.75"
     },
-    "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    "github.copilot.advanced": {
+        "length": 1500,
+        "temperature": "0.75"
     },
-    "tailwindCSS.classAttributes": [
-        "class",
-        "className",
-        ".*ClassName",
-        ".*Styles"
-    ],
-    "tailwindCSS.lint.invalidVariant": "warning",
-    "tailwindCSS.colorDecorators": true,
+    "github.copilot.enable": {
+        "markdown": "true",
+        "plaintext": "true"
+    },
+    "markdown.extension.toc.omittedFromToc": {
+        "CONTRIBUTING.md": ["## Table of Contents"]
+    },
     "tailwindCSS.experimental.classRegex": [
         "[a-zA-Z]*ClassName='([^']+)'",
         "[a-zA-Z]*ClassName=\"([^\"]+)\"",
         "[a-zA-Z]*ClassName={`([^`]+)`}",
-        [
-            "Styles\\s*=\\s*([^;]*);",
-            "'([^']*)'"
-        ],
-        [
-            "Styles\\s*=\\s*([^;]*);",
-            "\"([^\"]*)\""
-        ],
-        [
-            "Styles\\s*=\\s*([^;]*);",
-            "\\`([^\\`]*)\\`"
-        ],
-        [
-            "cva\\(([^)]*)\\)",
-            "[\"'`]([^\"'`]*).*?[\"'`]"
-        ],
-        [
-            "cx\\(([^)]*)\\)",
-            "(?:'|\"|`)([^']*)(?:'|\"|`)"
-        ]
+        ["Styles\\s*=\\s*([^;]*);", "'([^']*)'"],
+        ["Styles\\s*=\\s*([^;]*);", "\"([^\"]*)\""],
+        ["Styles\\s*=\\s*([^;]*);", "\\`([^\\`]*)\\`"],
+        ["cva\\(([^)]*)\\)", "[\"'`]([^\"'`]*).*?[\"'`]"],
+        ["cx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
     ],
     "tailwindCSS.includeLanguages": {
+        "css": "css",
         "html": "html",
-        "javascript": "javascript",
-        "css": "css"
+        "javascript": "javascript"
     }
 }

@@ -1,18 +1,16 @@
-import React from 'react';
-
 import type { DetailsProps } from '@nordcom/nordstar-details';
 import { Details } from '@nordcom/nordstar-details';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const story: Meta<typeof Details> = {
-    title: 'System/Components/Details',
     component: Details,
+    title: 'System/Components/Details',
     argTypes: {
         open: {
             control: 'boolean',
-            defaultValue: false
-        }
-    }
+            defaultValue: false,
+        },
+    },
 };
 
 export default story;
@@ -28,6 +26,6 @@ export const Standard: Story = {
     render: Template,
     args: {
         label: 'This is a label',
-        open: false
-    }
+        open: false,
+    },
 };

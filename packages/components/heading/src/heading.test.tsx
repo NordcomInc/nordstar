@@ -1,8 +1,5 @@
-import React from 'react';
-
-import { describe, expect, it } from 'vitest';
-
 import { render } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
 import { Heading } from '.';
 
 describe('components', () => {
@@ -25,7 +22,7 @@ describe('components', () => {
                 const wrapper = render(
                     <Heading as="article" data-testid="nordstar-heading">
                         Hello World!
-                    </Heading>
+                    </Heading>,
                 );
 
                 const element = wrapper.getByTestId('nordstar-heading');

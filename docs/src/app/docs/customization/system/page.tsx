@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'Documentation',
     alternates: {
-        canonical: 'https://nordcominc.github.io/nordstar/docs/customization/system/'
-    }
+        canonical: 'https://nordcominc.github.io/nordstar/docs/customization/system/',
+    },
 };
 
 export default async function DocsCustomizationSystemPage() {

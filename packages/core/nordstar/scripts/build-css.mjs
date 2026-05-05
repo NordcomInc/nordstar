@@ -16,8 +16,8 @@ import { mkdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const pkgRoot = resolve(__dirname, '..'); // packages/core/nordstar
+const Dirname = dirname(fileURLToPath(import.meta.url));
+const pkgRoot = resolve(Dirname, '..'); // packages/core/nordstar
 const distDir = resolve(pkgRoot, 'dist');
 
 const pkg = JSON.parse(readFileSync(resolve(pkgRoot, 'package.json'), 'utf8'));
@@ -48,7 +48,7 @@ const sourceDirectives = subPackageShortNames
     .join('\n');
 writeFileSync(
     resolve(distDir, 'tailwind.css'),
-    `${tailwindCssSource}\n\n/* @source directives appended at build time. */\n${sourceDirectives}\n`
+    `${tailwindCssSource}\n\n/* @source directives appended at build time. */\n${sourceDirectives}\n`,
 );
 
 // 2. Build dist/_entry.css for the precompile, with WORKSPACE-layout @source paths.
@@ -64,14 +64,9 @@ writeFileSync(resolve(distDir, '_entry.css'), entryCss);
 //    are migrated. The umbrella's local @tailwindcss/cli@4 is the right binary.
 const cli = resolve(pkgRoot, 'node_modules/.bin/tailwindcss');
 execSync(`"${cli}" -i dist/_entry.css -o dist/styles.css --minify`, {
+    cwd: pkgRoot,
     stdio: 'inherit',
-    cwd: pkgRoot
 });
 
 // Clean up the internal precompile entry — it must NOT ship in the published tarball.
 rmSync(resolve(distDir, '_entry.css'));
-
-console.log(
-    `[nordstar:build-css] dist/tailwind.css and dist/styles.css written ` +
-        `(${subPackageShortNames.length} sub-packages: ${subPackageShortNames.join(', ')}).`
-);

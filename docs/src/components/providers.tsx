@@ -8,9 +8,9 @@ export function Providers({ fonts, children }: { fonts: NordstarTheme['fonts']; 
             theme={{
                 accents: {
                     primary: '#ed1e79',
-                    secondary: '#ed1e79'
+                    secondary: '#ed1e79',
                 },
-                fonts
+                fonts,
             }}
         >
             {children}

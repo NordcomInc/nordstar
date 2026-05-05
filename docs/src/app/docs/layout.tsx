@@ -1,16 +1,15 @@
-import { getAvailableComponents } from '@/utils/components';
 import { Label } from '@nordcom/nordstar';
-
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import { getAvailableComponents } from '@/utils/components';
 
 export const metadata: Metadata = {
     metadataBase: new URL(`https://nordcominc.github.io/nordstar/docs/`),
     title: {
         default: 'Docs | Nordstar Component Library',
-        template: `%s - Docs | Nordstar Component Library`
-    }
+        template: `%s - Docs | Nordstar Component Library`,
+    },
 };
 
 function NavBlock({ label, href, children }: { label: string; href: string; children: ReactNode }) {
@@ -18,13 +17,13 @@ function NavBlock({ label, href, children }: { label: string; href: string; chil
         <section className="flex flex-col gap-4">
             <Label
                 as={Link}
+                className="block text-base text-foreground leading-none"
                 href={href as Parameters<typeof Link>[0]['href']}
-                className="text-foreground block text-base leading-none"
             >
                 {label}
             </Label>
 
-            <div className="text-foreground-highlight flex flex-col gap-4 px-3 text-base leading-none font-normal *:flex *:gap-3 *:leading-none *:text-inherit *:transition-colors *:before:block *:before:content-['•']">
+            <div className="flex flex-col gap-4 px-3 font-normal text-base text-foreground-highlight leading-none *:flex *:gap-3 *:text-inherit *:leading-none *:transition-colors *:before:block *:before:content-['•']">
                 {children}
             </div>
         </section>
@@ -35,30 +34,30 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
     return (
         <div className="flex flex-col gap-6 md:grid md:grid-cols-[18rem_1fr]">
             <nav className="flex flex-col gap-6">
-                <NavBlock label="Guide" href="/docs">
-                    <Link href="/docs/getting-started" className="hover:text-primary">
+                <NavBlock href="/docs" label="Guide">
+                    <Link className="hover:text-primary" href="/docs/getting-started">
                         Introduction
                     </Link>
-                    <Link href="/docs/installation" className="hover:text-primary">
+                    <Link className="hover:text-primary" href="/docs/installation">
                         Installation
                     </Link>
                 </NavBlock>
 
-                <NavBlock label="Customization" href="/docs/customization">
-                    <Link href="/docs/customization/theme" className="hover:text-primary">
+                <NavBlock href="/docs/customization" label="Customization">
+                    <Link className="hover:text-primary" href="/docs/customization/theme">
                         Theme
                     </Link>
-                    <Link href="/docs/customization/system" className="hover:text-primary">
+                    <Link className="hover:text-primary" href="/docs/customization/system">
                         System
                     </Link>
                 </NavBlock>
 
-                <NavBlock label="Components" href="/docs/components">
+                <NavBlock href="/docs/components" label="Components">
                     {getAvailableComponents().map((key) => (
                         <Link
-                            key={key}
-                            href={`/docs/components/${key.toLowerCase()}` as Parameters<typeof Link>[0]['href']}
                             className="hover:text-primary"
+                            href={`/docs/components/${key.toLowerCase()}` as Parameters<typeof Link>[0]['href']}
+                            key={key}
                         >
                             {key}
                         </Link>

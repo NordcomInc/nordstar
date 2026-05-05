@@ -1,46 +1,46 @@
 import '@/styles/globals.css';
 
-import { Providers } from '@/components/providers';
-import { cn } from '@/utils/cn';
 import { Card, Header, View } from '@nordcom/nordstar';
 import { GeistMono } from 'geist/font/mono';
 import type { Metadata, Viewport } from 'next';
 import { Montserrat } from 'next/font/google';
 import Link from 'next/link';
+import { Providers } from '@/components/providers';
+import { cn } from '@/utils/cn';
 
 const font = Montserrat({
-    weight: 'variable',
-    subsets: ['latin'],
     display: 'swap',
+    preload: true,
+    subsets: ['latin'],
     variable: '--font-sans',
-    preload: true
+    weight: 'variable',
 });
 
 export const metadata: Metadata = {
     metadataBase: new URL(`https://nordcominc.github.io/nordstar/`),
-    title: {
-        default: '',
-        template: `%s | Nordstar Component Library`
+    referrer: 'origin',
+    formatDetection: {
+        address: false,
+        email: false,
+        telephone: false,
     },
     robots: {
         follow: true,
-        index: true
+        index: true,
     },
-    referrer: 'origin',
-    formatDetection: {
-        email: false,
-        address: false,
-        telephone: false
-    }
+    title: {
+        default: '',
+        template: `%s | Nordstar Component Library`,
+    },
 };
 
 export const viewport: Viewport = {
+    colorScheme: 'dark',
     initialScale: 1,
-    userScalable: true,
-    width: 'device-width',
     interactiveWidget: 'resizes-visual',
     themeColor: '#000000',
-    colorScheme: 'dark'
+    userScalable: true,
+    width: 'device-width',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -50,9 +50,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             <body className={cn(font.variable, GeistMono.variable)}>
                 <Providers
                     fonts={{
-                        heading: font.style.fontFamily,
                         body: font.style.fontFamily,
-                        code: GeistMono.style.fontFamily
+                        code: GeistMono.style.fontFamily,
+                        heading: font.style.fontFamily,
                     }}
                 >
                     <Header>
@@ -74,9 +74,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                     <View>{children}</View>
 
-                    <Card as={View} variant="solid" color="primary" borderless={true}>
+                    <Card as={View} borderless={true} color="primary" variant="solid">
                         <footer className="flex flex-row flex-wrap items-center justify-center gap-1 md:gap-3">
-                            <Link href="https://github.com/filiphsps" className="block text-inherit">
+                            <Link className="block text-inherit" href="https://github.com/filiphsps">
                                 A component library by Filiph Sandström
                             </Link>
                         </footer>

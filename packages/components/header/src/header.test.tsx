@@ -1,11 +1,8 @@
-import React from 'react';
-
 import '@testing-library/jest-dom/vitest';
 import '@testing-library/react';
 
-import { describe, expect, it } from 'vitest';
-
 import { render } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
 import { Header } from '.';
 
 describe('components', () => {
@@ -27,7 +24,7 @@ describe('components', () => {
                         <Header.Menu>
                             <Header.Menu.Link data-testid="nordstar-header-menu-link">Hello World!</Header.Menu.Link>
                         </Header.Menu>
-                    </Header>
+                    </Header>,
                 );
 
                 const element = wrapper.getByTestId('nordstar-header-menu-link');
@@ -46,7 +43,7 @@ describe('components', () => {
                 const wrapper = render(
                     <Header>
                         <Header.Logo data-testid="nordstar-header-logo">Hello World!</Header.Logo>
-                    </Header>
+                    </Header>,
                 );
 
                 const element = wrapper.getByTestId('nordstar-header-logo');
@@ -65,7 +62,7 @@ describe('components', () => {
                 const wrapper = render(
                     <Header>
                         <Header.Menu data-testid="nordstar-header-menu">Hello World!</Header.Menu>
-                    </Header>
+                    </Header>,
                 );
 
                 const element = wrapper.getByTestId('nordstar-header-menu');
@@ -78,11 +75,11 @@ describe('components', () => {
                 const wrapper = render(
                     <Header>
                         <Header.Menu>
-                            <Header.Menu.Link data-testid="nordstar-header-menu-link" as="article">
+                            <Header.Menu.Link as="article" data-testid="nordstar-header-menu-link">
                                 Hello World!
                             </Header.Menu.Link>
                         </Header.Menu>
-                    </Header>
+                    </Header>,
                 );
 
                 const element = wrapper.getByTestId('nordstar-header-menu-link');
@@ -104,7 +101,7 @@ describe('components', () => {
                         <Header.Menu>
                             <Header.Menu.Link data-testid="nordstar-header-menu-link">Hello World!</Header.Menu.Link>
                         </Header.Menu>
-                    </Header>
+                    </Header>,
                 );
 
                 const element = wrapper.getByTestId('nordstar-header-menu-link');

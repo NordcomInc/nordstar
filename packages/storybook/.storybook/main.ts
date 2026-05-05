@@ -1,8 +1,9 @@
-import { StorybookConfig } from '@storybook/react-vite';
+import type { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
-    stories: ['../../**/src/**/*.mdx', '../../**/src/**/*.stories.@(ts|tsx)'],
+    framework: '@storybook/react-vite',
     staticDirs: [],
+    stories: ['../../**/src/**/*.mdx', '../../**/src/**/*.stories.@(ts|tsx)'],
     addons: [
         {
             name: '@storybook/addon-essentials',
@@ -11,33 +12,32 @@ const config: StorybookConfig = {
                 backgrounds: true,
                 controls: true,
                 docs: true,
+                toolbars: true,
                 viewport: true,
-                toolbars: true
-            }
+            },
         },
         '@storybook/addon-controls',
         '@storybook/addon-docs',
         'storybook-addon-react-docgen',
         'storybook-addon-sass-postcss',
-        'storybook-dark-mode'
+        'storybook-dark-mode',
     ],
-    framework: '@storybook/react-vite',
-    typescript: {
-        reactDocgen: 'react-docgen-typescript',
-        reactDocgenTypescriptOptions: {
-            shouldExtractLiteralValuesFromEnum: true
-        },
-        check: false
+    core: {
+        crossOriginIsolated: false,
+        disableTelemetry: true,
+        disableWhatsNewNotifications: true,
     },
     docs: {
         defaultName: 'Documentation',
-        docsMode: true
+        docsMode: true,
     },
-    core: {
-        disableTelemetry: true,
-        disableWhatsNewNotifications: true,
-        crossOriginIsolated: false
-    }
+    typescript: {
+        check: false,
+        reactDocgen: 'react-docgen-typescript',
+        reactDocgenTypescriptOptions: {
+            shouldExtractLiteralValuesFromEnum: true,
+        },
+    },
 };
 
 export default config;

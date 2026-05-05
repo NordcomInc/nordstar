@@ -5,15 +5,15 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { Fragment } from 'react';
 
 const story: Meta<typeof Header> = {
-    title: 'System/Layout/Header',
     component: Header,
+    title: 'System/Layout/Header',
     argTypes: {
         children: {
             table: {
-                disable: true
-            }
-        }
-    }
+                disable: true,
+            },
+        },
+    },
 };
 
 export default story;
@@ -22,15 +22,15 @@ type Story = StoryObj<typeof Header>;
 const Template = (args: HeaderProps) => (
     <div
         style={{
-            margin: '-0.75rem',
             height: '100%',
+            margin: '-0.75rem',
+            maxWidth: 'calc(100% + .75rem)',
             width: '100dvw',
-            maxWidth: 'calc(100% + .75rem)'
         }}
     >
         <Header {...args} style={{ width: 'calc(100% + 1.25rem)' }}>
             <Header.Logo>
-                <a title="Nordstar" href="https://nordcominc.github.io/nordstar/" target="_blank" rel="noreferrer">
+                <a href="https://nordcominc.github.io/nordstar/" rel="noreferrer" target="_blank" title="Nordstar">
                     Nordstar
                 </a>
             </Header.Logo>
@@ -48,42 +48,42 @@ const Template = (args: HeaderProps) => (
 );
 
 export const Standard: Story = {
+    args: {},
     render: Template,
-    args: {}
 };
 
 const additionalDemoContent = (
     <div
         style={{
+            alignItems: 'center',
             display: 'flex',
             flexDirection: 'column',
-            alignItems: 'center',
             justifyItems: 'start',
-            width: '850px',
+            margin: '0 auto',
             maxWidth: 'calc(100% + 1.25rem)',
-            margin: '0 auto'
+            width: '850px',
         }}
     >
         <div
             style={{
-                width: '100%',
+                backgroundColor: 'hsl(var(--nordstar-color-background-highlight))',
                 marginTop: '-0.75rem',
-                backgroundColor: 'hsl(var(--nordstar-color-background-highlight))'
+                width: '100%',
             }}
         >
             <img
                 alt="placeholder"
-                title="placeholder"
                 src="https://picsum.photos/1920/1080"
                 style={{
-                    width: '100%',
                     maxHeight: '28rem',
 
                     objectFit: 'cover',
-                    objectPosition: 'center'
+                    objectPosition: 'center',
+                    width: '100%',
                 }}
+                title="placeholder"
             />
-            <Label style={{ padding: '1rem .75rem', fontSize: '.75rem' }}>
+            <Label style={{ fontSize: '.75rem', padding: '1rem .75rem' }}>
                 Images from <a href="https://picsum.photos/">Lorem Picsum</a>.
             </Label>
         </div>
@@ -93,24 +93,24 @@ const additionalDemoContent = (
                 <p style={{ width: '100%' }}>
                     <div
                         style={{
-                            position: 'sticky',
-                            top: '5rem',
+                            backgroundColor: 'hsl(var(--nordstar-color-primary))',
                             left: '0',
+                            position: 'sticky',
                             right: '0',
+                            top: '5rem',
                             width: '100%',
-                            backgroundColor: 'hsl(var(--nordstar-color-primary))'
                         }}
                     >
                         <Label
                             style={{
+                                color: 'hsl(var(--nordstar-color-primary-foreground))',
                                 padding: '1.5rem .75rem',
-                                color: 'hsl(var(--nordstar-color-primary-foreground))'
                             }}
                         >
                             Section {index}
                         </Label>
                     </div>
-                    <div style={{ padding: '0 .75rem', marginBottom: '6rem' }}>
+                    <div style={{ marginBottom: '6rem', padding: '0 .75rem' }}>
                         <br />
                         Lorem ipsum odor amet, consectetuer adipiscing elit. Volutpat maximus netus varius netus integer
                         <br />
@@ -134,23 +134,23 @@ const additionalDemoContent = (
 
         <div
             style={{
-                display: 'flex',
-                justifyItems: 'center',
                 alignItems: 'end',
+                backgroundColor: 'hsl(var(--nordstar-color-background-highlight))',
+                display: 'flex',
                 height: 'calc(100dvh - 5.75rem)',
-                width: '100%',
+                justifyItems: 'center',
                 padding: '.75rem',
-                backgroundColor: 'hsl(var(--nordstar-color-background-highlight))'
+                width: '100%',
             }}
         >
             <Label
                 style={{
-                    opacity: '.75',
                     fontSize: '.75rem',
                     lineHeight: '1.25rem',
+                    opacity: '.75',
                     textAlign: 'center',
                     textTransform: 'unset',
-                    width: '100%'
+                    width: '100%',
                 }}
             >
                 Added padding to allow for demo content to be fully scrolled through.

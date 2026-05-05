@@ -1,11 +1,8 @@
-import React from 'react';
-
 import '@testing-library/jest-dom/vitest';
 import '@testing-library/react';
 
-import { describe, expect, it } from 'vitest';
-
 import { render } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
 import { NordstarProvider } from './nordstar-provider';
 
 describe('core', () => {
@@ -20,7 +17,7 @@ describe('core', () => {
             const { getByText } = render(
                 <NordstarProvider theme={{ accents: {}, fonts: {} } as any}>
                     <div>{testText}</div>
-                </NordstarProvider>
+                </NordstarProvider>,
             );
             expect(getByText(testText)).toBeDefined();
         });
@@ -31,16 +28,16 @@ describe('core', () => {
                     theme={{
                         accents: {
                             primary: '#ff0000',
-                            secondary: '#00ff00'
+                            secondary: '#00ff00',
                         },
                         fonts: {
+                            body: 'Roboto',
                             heading: 'Open Sans',
-                            body: 'Roboto'
-                        }
+                        },
                     }}
                 >
                     <div>Hello World!</div>
-                </NordstarProvider>
+                </NordstarProvider>,
             );
 
             expect(wrapper.getByText('Hello World!')).toBeDefined();
@@ -60,14 +57,14 @@ describe('core', () => {
                     theme={{
                         accents: {
                             primary: '#ff0000',
-                            secondary: '#00ff00'
+                            secondary: '#00ff00',
                         },
                         fonts: {
+                            body: 'heading',
                             heading: 'heading',
-                            body: 'heading'
-                        }
+                        },
                     }}
-                />
+                />,
             );
 
             const styleElementContent = wrapper.getByTestId('style').innerHTML;
@@ -83,13 +80,13 @@ describe('core', () => {
                     theme={{
                         accents: {
                             primary: '#ff0000',
-                            secondary: '#00ff00'
+                            secondary: '#00ff00',
                         },
                         fonts: {
-                            body: 'body'
-                        }
+                            body: 'body',
+                        },
                     }}
-                />
+                />,
             );
 
             const styleElementContent = wrapper.getByTestId('style').innerHTML;

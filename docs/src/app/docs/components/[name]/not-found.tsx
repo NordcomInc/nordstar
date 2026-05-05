@@ -3,17 +3,17 @@ import { Heading, View } from '@nordcom/nordstar';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
+    referrer: 'origin',
     title: '404: Page Not Found',
     icons: {
+        apple: ['/favicon.png'],
         icon: ['/favicon.png'],
         shortcut: ['/favicon.png'],
-        apple: ['/favicon.png']
     },
     robots: {
+        follow: false,
         index: false,
-        follow: false
     },
-    referrer: 'origin'
 };
 
 export default function NotFound() {

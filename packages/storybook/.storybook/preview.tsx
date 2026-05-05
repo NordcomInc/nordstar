@@ -1,5 +1,3 @@
-import React from 'react';
-
 import { NordstarProvider, View } from '@nordcom/nordstar';
 import { addons } from '@storybook/manager-api';
 import type { Preview } from '@storybook/react';
@@ -15,12 +13,12 @@ const decorators: Preview['decorators'] = [
                 theme={{
                     accents: {
                         primary: '#ed1e79',
-                        secondary: '#1e79ed'
+                        secondary: '#1e79ed',
                     },
                     fonts: {
+                        body: 'Montserrat',
                         heading: 'Montserrat',
-                        body: 'Montserrat'
-                    }
+                    },
                 }}
             >
                 <View withoutWrapper={true}>
@@ -30,75 +28,75 @@ const decorators: Preview['decorators'] = [
                 </View>
             </NordstarProvider>
         );
-    }
+    },
 ];
 
 const currentTheme = addons.getConfig().theme || darkTheme;
 const parameters: Preview['parameters'] = {
     actions: { argTypesRegex: '^on[A-Z].*' },
-    options: {
-        storySort: {
-            method: 'alphabetical'
-        }
-    },
-    controls: {
-        matchers: {
-            color: /(background|color|borderColor)$/i,
-            date: /Date$/,
-            number: /[0-9]+/
-        }
-    },
     layout: 'fullscreen',
     backgrounds: {
         default: 'dark',
         values: [
             {
                 name: 'dark',
-                value: '#000000'
+                value: '#000000',
             },
             {
                 name: 'white',
-                value: '#fefefe'
-            }
-        ]
+                value: '#fefefe',
+            },
+        ],
+    },
+    controls: {
+        matchers: {
+            color: /(background|color|borderColor)$/i,
+            date: /Date$/,
+            number: /[0-9]+/,
+        },
     },
     darkMode: {
-        current: 'dark',
-        stylePreview: true,
-        darkClass: 'dark',
-        lightClass: 'light',
         classTarget: 'html',
+        current: 'dark',
         dark: darkTheme,
-        light: lightTheme
-    },
-    grid: {
-        cellSize: currentTheme.gridCellSize
+        darkClass: 'dark',
+        light: lightTheme,
+        lightClass: 'light',
+        stylePreview: true,
     },
     docs: {
+        inlineStories: true,
         page: DocTemplate,
+        theme: currentTheme,
+        story: {
+            //iframeHeight: 145,
+            height: '100%',
+            inline: true,
+            maxHeight: '300px',
+        },
         toc: {
             contentSelector: '.sbdocs-content',
+            disable: false,
             headingSelector: 'h1, h2, h3',
             ignoreSelector: '#primary',
             title: 'Table of Contents',
-            disable: false,
             unsafeTocbotOptions: {
-                orderedList: false
-            }
+                orderedList: false,
+            },
         },
-        inlineStories: true,
-        theme: currentTheme,
-        story: {
-            inline: true,
-            //iframeHeight: 145,
-            height: '100%',
-            maxHeight: '300px'
-        }
-    }
+    },
+    grid: {
+        cellSize: currentTheme.gridCellSize,
+    },
+    options: {
+        storySort: {
+            method: 'alphabetical',
+        },
+    },
 };
 
 export default {
     tags: ['autodocs'],
     decorators,
-    parameters
+    parameters,
 } satisfies Preview;

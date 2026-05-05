@@ -7,7 +7,7 @@ export type {
     NordstarTheme,
     OmitCommonProps,
     PropsOf,
-    RightJoinProps
+    RightJoinProps,
 } from '@nordcom/nordstar-system';
 
 // Components
@@ -22,37 +22,34 @@ import { Label } from '@nordcom/nordstar-label';
 import { NordstarProvider } from '@nordcom/nordstar-system';
 import { View } from '@nordcom/nordstar-view';
 
+export type * from '@nordcom/nordstar-accented';
 // Component Types
 export type { AccentedProps } from '@nordcom/nordstar-accented';
-export type { ButtonProps } from '@nordcom/nordstar-button';
-export type { CardDividerProps, CardProps } from '@nordcom/nordstar-card';
-export type { DetailsProps } from '@nordcom/nordstar-details';
-export type { HeaderLogoProps, HeaderMenuLinkProps, HeaderMenuProps, HeaderProps } from '@nordcom/nordstar-header';
-export type { HeadingProps } from '@nordcom/nordstar-heading';
-export type { InputProps } from '@nordcom/nordstar-input';
-export type { LabelProps } from '@nordcom/nordstar-label';
-export type { ViewProps } from '@nordcom/nordstar-view';
-
-export { Accented, Button, Card, Details, Header, Heading, Input, Label, NordstarProvider, View };
-
 export * from '@nordcom/nordstar-accented';
-export * from '@nordcom/nordstar-button';
-export * from '@nordcom/nordstar-card';
-export * from '@nordcom/nordstar-details';
-export * from '@nordcom/nordstar-header';
-export * from '@nordcom/nordstar-heading';
-export * from '@nordcom/nordstar-input';
-export * from '@nordcom/nordstar-label';
-export * from '@nordcom/nordstar-system';
-export * from '@nordcom/nordstar-view';
-
-export type * from '@nordcom/nordstar-accented';
 export type * from '@nordcom/nordstar-button';
+export type { ButtonProps } from '@nordcom/nordstar-button';
+export * from '@nordcom/nordstar-button';
 export type * from '@nordcom/nordstar-card';
+export type { CardDividerProps, CardProps } from '@nordcom/nordstar-card';
+export * from '@nordcom/nordstar-card';
 export type * from '@nordcom/nordstar-details';
+export type { DetailsProps } from '@nordcom/nordstar-details';
+export * from '@nordcom/nordstar-details';
 export type * from '@nordcom/nordstar-header';
+export type { HeaderLogoProps, HeaderMenuLinkProps, HeaderMenuProps, HeaderProps } from '@nordcom/nordstar-header';
+export * from '@nordcom/nordstar-header';
 export type * from '@nordcom/nordstar-heading';
+export type { HeadingProps } from '@nordcom/nordstar-heading';
+export * from '@nordcom/nordstar-heading';
 export type * from '@nordcom/nordstar-input';
+export type { InputProps } from '@nordcom/nordstar-input';
+export * from '@nordcom/nordstar-input';
 export type * from '@nordcom/nordstar-label';
+export type { LabelProps } from '@nordcom/nordstar-label';
+export * from '@nordcom/nordstar-label';
 export type * from '@nordcom/nordstar-system';
+export * from '@nordcom/nordstar-system';
 export type * from '@nordcom/nordstar-view';
+export type { ViewProps } from '@nordcom/nordstar-view';
+export * from '@nordcom/nordstar-view';
+export { Accented, Button, Card, Details, Header, Heading, Input, Label, NordstarProvider, View };

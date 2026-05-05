@@ -6,13 +6,6 @@ type NonNullable<T> = Exclude<T, null | undefined>;
 type Theme = NonNullable<Parameters<(typeof addons)['setConfig']>['0']['theme']>;
 
 export const darkTheme: Theme = create({
-    base: 'dark',
-
-    brandImage: 'https://nordcom.io/logo-light.svg',
-    brandTarget: '_self',
-    brandTitle: "Nordcom AB's Nordstar",
-    brandUrl: 'https://nordcominc.github.io/nordstar/',
-
     appBg: '#262626',
     appBorderColor: '#262626',
     appBorderRadius: 0,
@@ -22,8 +15,14 @@ export const darkTheme: Theme = create({
     barHoverColor: '#ed1e79',
     barSelectedColor: '#ed1e79',
     barTextColor: '#fefefe',
+    base: 'dark',
     booleanBg: '#ed1e79',
     booleanSelectedBg: '#000000',
+
+    brandImage: 'https://nordcom.io/logo-light.svg',
+    brandTarget: '_self',
+    brandTitle: "Nordcom AB's Nordstar",
+    brandUrl: 'https://nordcominc.github.io/nordstar/',
     buttonBg: '#ed1e79',
     buttonBorder: '#ed1e79',
     colorPrimary: '#ed1e79',
@@ -37,16 +36,9 @@ export const darkTheme: Theme = create({
     inputTextColor: '#fefefe',
     textColor: '#fefefe',
     textInverseColor: '#000000',
-    textMutedColor: '#e5e7eb'
+    textMutedColor: '#e5e7eb',
 });
 export const lightTheme: Theme = create({
-    base: 'light',
-
-    brandImage: 'https://nordcom.io/logo-dark.svg',
-    brandTarget: '_self',
-    brandTitle: "Nordcom AB's Nordstar",
-    brandUrl: 'https://nordcominc.github.io/nordstar/',
-
     appBg: '#e5e7eb',
     appBorderColor: '#e5e7eb',
     appBorderRadius: 0,
@@ -56,8 +48,14 @@ export const lightTheme: Theme = create({
     barHoverColor: '#ed1e79',
     barSelectedColor: '#ed1e79',
     barTextColor: '#000000',
+    base: 'light',
     booleanBg: '#ed1e79',
     booleanSelectedBg: '#fefefe',
+
+    brandImage: 'https://nordcom.io/logo-dark.svg',
+    brandTarget: '_self',
+    brandTitle: "Nordcom AB's Nordstar",
+    brandUrl: 'https://nordcominc.github.io/nordstar/',
     buttonBg: '#ed1e79',
     buttonBorder: '#ed1e79',
     colorPrimary: '#ed1e79',
@@ -71,9 +69,9 @@ export const lightTheme: Theme = create({
     inputTextColor: '#000000',
     textColor: '#000000',
     textInverseColor: '#fefefe',
-    textMutedColor: '#262626'
+    textMutedColor: '#262626',
 });
 
 addons.setConfig({
-    theme: window.matchMedia('(prefers-color-scheme: dark)').matches ? darkTheme : lightTheme
+    theme: window.matchMedia('(prefers-color-scheme: dark)').matches ? darkTheme : lightTheme,
 });

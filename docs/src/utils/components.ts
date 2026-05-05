@@ -1,16 +1,14 @@
-import * as Nordstar from '@nordcom/nordstar';
 import { readdir } from 'node:fs/promises';
 import { join } from 'node:path';
+import * as Nordstar from '@nordcom/nordstar';
 
 export async function getAvailableComponentsFromFS() {
     const componentsDir = join(process.cwd(), '..', 'packages', 'components');
     const componentNames = (await readdir(componentsDir, { withFileTypes: true }))
         .filter((entry) => entry.isDirectory())
         .map((entry) => ({
-            name: entry.name.toLowerCase().split('.').slice(0, -1).join('.')
+            name: entry.name.toLowerCase().split('.').slice(0, -1).join('.'),
         }));
-
-    console.log(componentNames);
     return componentNames;
 }
 
@@ -31,6 +29,6 @@ export function getComponentByName(name: string) {
 
     return {
         Component: Nordstar[componentKey as keyof typeof Nordstar],
-        key: componentKey
+        key: componentKey,
     };
 }

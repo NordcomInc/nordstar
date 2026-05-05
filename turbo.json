@@ -21,13 +21,13 @@
             "cache": false,
             "persistent": true
         },
+        "start": {
+            "dependsOn": ["^build"],
+            "persistent": true
+        },
         "typecheck": {
             "cache": false,
             "dependsOn": ["^typecheck"]
-        },
-        "start": {
-            "persistent": true,
-            "dependsOn": ["^build"]
         }
     }
 }

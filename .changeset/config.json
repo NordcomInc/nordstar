@@ -1,11 +1,11 @@
 {
     "$schema": "https://unpkg.com/@changesets/config@latest/schema.json",
+    "access": "public",
+    "baseBranch": "master",
     "changelog": ["@changesets/changelog-github", { "repo": "NordcomInc/nordstar" }],
     "commit": false,
     "fixed": [["{,@nordcom/}nordstar{,-*}"]],
     "linked": [],
-    "access": "public",
-    "baseBranch": "master",
     "updateInternalDependencies": "patch",
     "privatePackages": {
         "tag": true,

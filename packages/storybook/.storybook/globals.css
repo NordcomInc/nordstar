@@ -3,31 +3,31 @@
 
 /* Docs-only override: pin the sans font to Montserrat for the Storybook frame. */
 @theme {
-    --font-sans: 'Montserrat', sans-serif;
+    --font-sans: "Montserrat", sans-serif;
 }
 
 /* Storybook docs-frame customizations. */
 .sbdocs .sbdocs-preview .docs-story .innerZoomElementWrapper .sb-story.sb-unstyled {
-    max-height: 38rem;
-    height: min-content;
     width: 100%;
+    height: min-content;
+    max-height: 38rem;
 }
 
 .sbdocs .sbdocs-title {
-    text-transform: uppercase;
-    font-weight: 800;
-    font-size: 2.5em;
     margin-bottom: 1rem;
+    font-size: 2.5em;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 .sbdocs :is(.sbdocs-title, h2)::after {
-    content: '.';
+    content: ".";
 }
 
 .sbdocs h2 {
-    text-transform: lowercase;
-    color: var(--color-foreground-highlight);
-    font-weight: 400;
     font-size: 1.95em;
+    font-weight: 400;
+    color: var(--color-foreground-highlight);
+    text-transform: lowercase;
     letter-spacing: unset;
 }
 .sbdocs h3 {
@@ -37,14 +37,13 @@
 }
 
 .sbdocs .sbdocs-preview {
-    border-width: var(--nordstar-border-width-large, 0.29rem);
-    border-color: var(--color-background-highlight);
-
     margin: 0.75rem 0;
+    border-color: var(--color-background-highlight);
+    border-width: var(--nordstar-border-width-large, 0.29rem);
 }
 .sbdocs button {
     padding: calc(var(--nordstar-layout-block-padding, 1rem) / 2) var(--nordstar-layout-block-padding, 1rem);
+    font-weight: 700;
 
     text-transform: uppercase;
-    font-weight: 700;
 }

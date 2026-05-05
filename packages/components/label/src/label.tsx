@@ -14,15 +14,15 @@ const Label = forwardRef<'label', LabelProps>(({ as: Tag = 'label', color, class
     return (
         <Tag
             {...props}
-            ref={ref}
             className={cn(
-                'font-heading text-foreground-highlight [&>a]:hover:text-primary block text-base leading-none font-bold uppercase [&>a]:underline [&>a]:transition-colors',
+                'block font-bold font-heading text-base text-foreground-highlight uppercase leading-none [&>a]:underline [&>a]:transition-colors [&>a]:hover:text-primary',
                 color === 'foreground' && 'text-foreground',
                 color === 'primary' && 'text-primary',
                 color === 'secondary' && 'text-secondary',
-                className
+                className,
             )}
             data-color={color}
+            ref={ref}
         >
             {children}
         </Tag>

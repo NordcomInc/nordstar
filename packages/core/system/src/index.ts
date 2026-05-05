@@ -10,7 +10,7 @@ export type {
     MergeWithAs,
     OmitCommonProps,
     PropsOf,
-    RightJoinProps
+    RightJoinProps,
 } from './utils';
 
 export { cn, forwardRef, NordstarProvider };

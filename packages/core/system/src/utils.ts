@@ -26,7 +26,7 @@ export type MergeWithAs<
     ComponentProps extends object,
     AsProps extends object,
     AdditionalProps extends object = {},
-    AsComponent extends As = As
+    AsComponent extends As = As,
 > = (RightJoinProps<ComponentProps, AdditionalProps> | RightJoinProps<AsProps, AdditionalProps>) & {
     as?: AsComponent;
 };
@@ -34,7 +34,7 @@ export type MergeWithAs<
 export type InternalForwardRefRenderFunction<
     Component extends As,
     Props extends object = {},
-    OmitKeys extends keyof any = never
+    OmitKeys extends keyof any = never,
 > = {
     <AsComponent extends As = Component>(
         props: MergeWithAs<
@@ -42,7 +42,7 @@ export type InternalForwardRefRenderFunction<
             Omit<ComponentPropsWithoutRef<AsComponent>, OmitKeys>,
             Props,
             AsComponent
-        >
+        >,
     ): ReactElement | null;
     readonly $$typeof: symbol;
     defaultProps?: Partial<Props> | undefined;
@@ -60,7 +60,7 @@ export function forwardRef<Component extends As, Props extends object, OmitKeys 
         RightJoinProps<PropsOf<Component>, Props> & {
             as?: As;
         }
-    >
+    >,
 ) {
     return baseForwardRef(component as any) as InternalForwardRefRenderFunction<Component, Props, OmitKeys>;
 }

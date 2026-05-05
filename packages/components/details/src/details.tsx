@@ -19,7 +19,7 @@ export type DetailsProps = {
  */
 const Details = forwardRef<typeof Card, DetailsProps>(({ label, className, children, ...props }, ref) => {
     return (
-        <Card ref={ref} as="details" {...props} color="foreground" className={cn(styles.container, className)}>
+        <Card as="details" ref={ref} {...props} className={cn(styles.container, className)} color="foreground">
             <summary>
                 <Label as="div" className={styles.label}>
                     {label}
@@ -31,5 +31,5 @@ const Details = forwardRef<typeof Card, DetailsProps>(({ label, className, child
 });
 
 export default Object.assign(Details, {
-    displayName: 'Nordstar.Details'
+    displayName: 'Nordstar.Details',
 });

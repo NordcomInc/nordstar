@@ -21,17 +21,17 @@ const Heading = forwardRef<'h1', HeadingProps>(({ as, level = 'h1', className, .
     return (
         <Tag
             {...props}
-            ref={ref}
             className={cn(
                 styles.container,
                 'font-heading',
-                level === 'h1' && 'text-4xl leading-none font-extrabold hyphens-auto uppercase',
-                level === 'h2' && 'text-foreground-highlight text-2xl leading-tight font-normal lowercase',
-                level === 'h3' && 'text-xl leading-tight font-extrabold lowercase',
-                level === 'h4' && 'text-base leading-none font-bold uppercase',
-                className
+                level === 'h1' && 'hyphens-auto font-extrabold text-4xl uppercase leading-none',
+                level === 'h2' && 'font-normal text-2xl text-foreground-highlight lowercase leading-tight',
+                level === 'h3' && 'font-extrabold text-xl lowercase leading-tight',
+                level === 'h4' && 'font-bold text-base uppercase leading-none',
+                className,
             )}
             data-level={level}
+            ref={ref}
         />
     );
 });

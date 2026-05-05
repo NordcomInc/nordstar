@@ -1,10 +1,8 @@
-import React from 'react';
-
 import '@testing-library/jest-dom/vitest';
 import '@testing-library/react';
-import { describe, expect, it } from 'vitest';
 
 import { render } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
 import { Input } from '.';
 
 describe('components', () => {
@@ -59,7 +57,7 @@ describe('components', () => {
             const wrapper = render(
                 <Input as="article" data-testid="nordstar-input">
                     Hello World!
-                </Input>
+                </Input>,
             );
 
             const element = wrapper.getByTestId('nordstar-input');

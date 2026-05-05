@@ -5,39 +5,39 @@ import { cva } from 'class-variance-authority';
 import type { ComponentProps, HTMLAttributes } from 'react';
 
 const variants = cva(cn('group overflow-hidden rounded-lg border-2 border-solid font-body'), {
-    variants: {
-        color: {
-            primary: 'bg-primary border-primary [&>[data-divider]]:bg-primary',
-            secondary: 'border-secondary bg-secondary [&>[data-divider]]:bg-secondary',
-            foreground:
-                'border-foreground border-foreground-highlight bg-foreground [&>[data-divider]]:bg-foreground-highlight'
-        },
-        variant: {
-            outline: 'bg-transparent border-2 border-solid',
-            solid: ''
-        }
-    },
     compoundVariants: [
         {
+            class: 'border-primary-foreground [&>[data-divider]]:bg-primary-foreground',
             color: 'primary',
             variant: 'solid',
-            class: 'border-primary-foreground [&>[data-divider]]:bg-primary-foreground'
         },
         {
+            class: 'border-secondary-foreground [&>[data-divider]]:bg-secondary-foreground',
             color: 'secondary',
             variant: 'solid',
-            class: 'border-secondary-foreground [&>[data-divider]]:bg-secondary-foreground'
         },
         {
+            class: 'border-background-highlight text-background [&>[data-divider]]:bg-background-highlight',
             color: 'foreground',
             variant: 'solid',
-            class: 'border-background-highlight text-background [&>[data-divider]]:bg-background-highlight'
-        }
+        },
     ],
     defaultVariants: {
         color: 'foreground',
-        variant: 'outline'
-    }
+        variant: 'outline',
+    },
+    variants: {
+        color: {
+            foreground:
+                'border-foreground border-foreground-highlight bg-foreground [&>[data-divider]]:bg-foreground-highlight',
+            primary: 'border-primary bg-primary [&>[data-divider]]:bg-primary',
+            secondary: 'border-secondary bg-secondary [&>[data-divider]]:bg-secondary',
+        },
+        variant: {
+            outline: 'border-2 border-solid bg-transparent',
+            solid: '',
+        },
+    },
 });
 
 export type CardProps = {
@@ -69,24 +69,24 @@ const Card = forwardRef<'section', CardProps>(
         return (
             <Tag
                 {...props}
-                ref={ref}
-                draggable={false}
                 className={cn(
                     variants({
                         variant,
-                        color: color === 'default' ? 'foreground' : color
+                        color: color === 'default' ? 'foreground' : color,
                     }),
                     padding && 'p-3',
                     borderless && 'border-0',
-                    className
+                    className,
                 )}
-                data-variant={variant}
-                data-color={color}
                 data-borderless={borderless}
+                data-color={color}
                 data-padding={padding}
+                data-variant={variant}
+                draggable={false}
+                ref={ref}
             />
         );
-    }
+    },
 );
 
 export type CardDividerProps = {} & ComponentProps<'hr'>;
@@ -100,11 +100,11 @@ const Divider = ({ className, ...props }: CardDividerProps) => {
         <div
             {...props}
             className={cn(
-                'bg-foreground-highlight h-[var(--nordstar-border-width,2px)] group-data-[padding=true]:m-3 group-data-[padding=true]:-mx-3 group-data-[padding=true]:w-[calc(100%+calc(.75rem*2))]',
-                className
+                'h-[var(--nordstar-border-width,2px)] bg-foreground-highlight group-data-[padding=true]:m-3 group-data-[padding=true]:-mx-3 group-data-[padding=true]:w-[calc(100%+calc(.75rem*2))]',
+                className,
             )}
-            draggable={false}
             data-divider
+            draggable={false}
         />
     );
 };
@@ -124,11 +124,11 @@ const Header = ({ children, className, ...props }: HeaderProps) => {
 };
 
 export default Object.assign(Card, {
+    Divider: Object.assign(Divider, {
+        displayName: 'Nordstar.Card.Divider',
+    }),
     displayName: 'Nordstar.Card',
     Header: Object.assign(Header, {
-        displayName: 'Nordstar.Card.Header'
+        displayName: 'Nordstar.Card.Header',
     }),
-    Divider: Object.assign(Divider, {
-        displayName: 'Nordstar.Card.Divider'
-    })
 });

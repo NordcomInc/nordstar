@@ -5,13 +5,13 @@
             "source": {
                 "organizeImports": "on",
                 "useSortedAttributes": "on",
+                "useSortedProperties": "on",
                 "useSortedKeys": {
                     "level": "on",
                     "options": {
                         "groupByNesting": true
                     }
-                },
-                "useSortedProperties": "on"
+                }
             }
         },
         "includes": [
@@ -38,6 +38,17 @@
             "!**/next.config.ts"
         ]
     },
+    "css": {
+        "formatter": {
+            "enabled": true
+        },
+        "linter": {
+            "enabled": true
+        },
+        "parser": {
+            "tailwindDirectives": true
+        }
+    },
     "files": {
         "includes": [
             "**",
@@ -51,7 +62,7 @@
             "!**/out",
             "!**/*.d.ts",
             "!**/.tsbuildinfo",
-            "!docs/superpowers/**",
+            "!docs/superpowers",
             "!plop/**/*.hbs",
             "!packages/**/CHANGELOG.md",
             "!**/postcss.config.*",
@@ -71,24 +82,13 @@
     },
     "javascript": {
         "experimentalEmbeddedSnippetsEnabled": true,
+        "jsxRuntime": "transparent",
         "formatter": {
             "arrowParentheses": "always",
             "bracketSpacing": true,
             "quoteStyle": "single",
             "semicolons": "always",
             "trailingCommas": "all"
-        },
-        "jsxRuntime": "transparent"
-    },
-    "css": {
-        "formatter": {
-            "enabled": true
-        },
-        "linter": {
-            "enabled": true
-        },
-        "parser": {
-            "tailwindDirectives": true
         }
     },
     "linter": {
@@ -104,12 +104,12 @@
             "correctness": {
                 "noEmptyPattern": "off",
                 "noUnusedImports": "error",
+                "useExhaustiveDependencies": "warn",
+                "useHookAtTopLevel": "error",
                 "noUnusedVariables": {
                     "fix": "unsafe",
                     "level": "error"
-                },
-                "useExhaustiveDependencies": "warn",
-                "useHookAtTopLevel": "error"
+                }
             },
             "nursery": {
                 "useSortedClasses": {
@@ -132,6 +132,7 @@
                 "noNonNullAssertion": "off",
                 "useConst": "error",
                 "useExportType": "error",
+                "useImportType": "error",
                 "useFilenamingConvention": {
                     "level": "on",
                     "options": {
@@ -141,11 +142,12 @@
                         "strictCase": true
                     }
                 },
-                "useImportType": "error",
                 "useNamingConvention": {
                     "fix": "unsafe",
                     "level": "on",
                     "options": {
+                        "requireAscii": true,
+                        "strictCase": false,
                         "conventions": [
                             {
                                 "formats": ["camelCase", "CONSTANT_CASE", "PascalCase"],
@@ -186,26 +188,24 @@
                                     "kind": "typeParameter"
                                 }
                             }
-                        ],
-                        "requireAscii": true,
-                        "strictCase": false
+                        ]
                     }
                 }
             },
             "suspicious": {
                 "noArrayIndexKey": "off",
-                "noConsole": {
-                    "level": "warn",
-                    "options": {
-                        "allow": ["warn", "error", "info"]
-                    }
-                },
                 "noDebugger": "warn",
                 "noDocumentCookie": "off",
                 "noEmptyInterface": "off",
                 "noExplicitAny": "warn",
                 "noShadowRestrictedNames": "off",
-                "noVar": "error"
+                "noVar": "error",
+                "noConsole": {
+                    "level": "warn",
+                    "options": {
+                        "allow": ["warn", "error", "info"]
+                    }
+                }
             }
         }
     },

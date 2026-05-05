@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
     title: 'Documentation',
     alternates: {
-        canonical: 'https://nordcominc.github.io/nordstar/docs/installation/'
-    }
+        canonical: 'https://nordcominc.github.io/nordstar/docs/installation/',
+    },
 };
 
 export default async function DocsInstallationPage() {

@@ -13,6 +13,18 @@
         "target": "ESNext",
         "types": ["vitest/globals", "@testing-library/react", "happy-dom", "react"]
     },
+    "exclude": [
+        "**/.next",
+        "**/.turbo",
+        "**/build",
+        "**/coverage",
+        "**/dist",
+        "**/node_modules",
+        "**/public",
+        "**/storybook-static",
+        "**/src/**/*.d.ts",
+        "node_modules"
+    ],
     "include": [
         "**/*.test.*",
         "**/*.stories.*",
@@ -26,17 +38,5 @@
         "**/postcss.config.*",
         "postcss.config.*",
         "eslint.config.mjs"
-    ],
-    "exclude": [
-        "**/.next",
-        "**/.turbo",
-        "**/build",
-        "**/coverage",
-        "**/dist",
-        "**/node_modules",
-        "**/public",
-        "**/storybook-static",
-        "**/src/**/*.d.ts",
-        "node_modules"
     ]
 }

@@ -10,42 +10,42 @@ import styles from './input.module.scss';
 
 const variants = cva(
     cn(
-        'group relative inline-flex h-15 flex-col gap-[.1rem] overflow-clip rounded-lg px-4 py-2 text-base transition-colors bg-transparent'
+        'group relative inline-flex h-15 flex-col gap-[.1rem] overflow-clip rounded-lg bg-transparent px-4 py-2 text-base transition-colors',
     ),
     {
-        variants: {
-            color: {
-                primary: 'bg-primary border-primary text-primary-foreground',
-                secondary: 'bg-secondary border-secondary text-secondary-foreground',
-                foreground: 'bg-foreground border-foreground text-background'
-            },
-            variant: {
-                outline: 'bg-transparent border-2 border-solid',
-                solid: 'hover:brightness-75 focus-visible:brightness-75 active:brightness-50'
-            }
-        },
         compoundVariants: [
             {
+                class: 'text-primary hover:bg-primary hover:text-primary-foreground',
                 color: 'primary',
                 variant: 'outline',
-                class: 'text-primary hover:bg-primary hover:text-primary-foreground'
             },
             {
+                class: 'text-secondary hover:bg-secondary hover:text-secondary-foreground',
                 color: 'secondary',
                 variant: 'outline',
-                class: 'text-secondary hover:bg-secondary hover:text-secondary-foreground'
             },
             {
+                class: 'border-foreground-highlight text-foreground-highlight focus-within:border-foreground focus-within:text-foreground hover:border-foreground hover:text-foreground data-[value]:border-foreground data-[value]:text-foreground data-[value]:*:text-foreground',
                 color: 'foreground',
                 variant: 'outline',
-                class: 'border-foreground-highlight text-foreground-highlight focus-within:border-foreground focus-within:text-foreground hover:border-foreground hover:text-foreground data-[value]:border-foreground data-[value]:text-foreground data-[value]:*:text-foreground'
-            }
+            },
         ],
         defaultVariants: {
             color: 'foreground',
-            variant: 'outline'
-        }
-    }
+            variant: 'outline',
+        },
+        variants: {
+            color: {
+                foreground: 'border-foreground bg-foreground text-background',
+                primary: 'border-primary bg-primary text-primary-foreground',
+                secondary: 'border-secondary bg-secondary text-secondary-foreground',
+            },
+            variant: {
+                outline: 'border-2 border-solid bg-transparent',
+                solid: 'hover:brightness-75 focus-visible:brightness-75 active:brightness-50',
+            },
+        },
+    },
 );
 
 type InputBaseProps = {
@@ -114,7 +114,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
             style = undefined,
             ...props
         },
-        ref
+        ref,
     ) => {
         const Tag = as || 'input';
         const [contents, setContents] = useState<string | number | undefined>(defaultValue);
@@ -128,60 +128,58 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
         }, [value]);
 
         return (
-            <>
-                <div
-                    style={style}
-                    className={cn(
-                        variants({
-                            variant,
-                            color: color === 'default' ? 'foreground' : color
-                        }),
-                        as === 'textarea' && 'h-auto',
-                        className
-                    )}
-                    data-value={value || undefined}
-                    data-variant={variant}
-                    data-color={color}
-                >
-                    {label ? (
-                        <label
-                            className={cn(
-                                styles.label,
-                                'pointer-events-none [transform:translateZ(0)_translateY(0)] text-xs font-extrabold uppercase transition-all select-none',
-                                !placeholder &&
-                                    !contents &&
-                                    '-mb-2 [transform:translateY(.65rem)] text-inherit group-first-of-type:-mb-0 group-focus-within:translate-y-0 group-focus-within:text-sm'
-                            )}
-                            data-full-height={!placeholder && !contents}
-                        >
-                            {label}
-                        </label>
-                    ) : null}
-
-                    <Tag
-                        {...(props as any)}
-                        {...(as !== 'textarea'
-                            ? 'type' in props
-                                ? { type: props.type || 'text' }
-                                : { type: 'text' }
-                            : {})}
-                        ref={ref}
+            <div
+                className={cn(
+                    variants({
+                        variant,
+                        color: color === 'default' ? 'foreground' : color,
+                    }),
+                    as === 'textarea' && 'h-auto',
+                    className,
+                )}
+                data-color={color}
+                data-value={value || undefined}
+                data-variant={variant}
+                style={style}
+            >
+                {label ? (
+                    <label
                         className={cn(
-                            styles.input,
-                            'placeholder:text-foreground-highlight relative h-full w-full appearance-none border-0 bg-transparent p-0 text-sm [font-size:inherit] leading-none outline-0 placeholder:[font-size:inherit] placeholder:transition-opacity',
-                            label && as !== 'textarea' && 'absolute inset-y-0 h-15 pt-3',
-                            as === 'textarea' && 'h-full min-h-20 leading-normal'
+                            styles.label,
+                            'pointer-events-none select-none font-extrabold text-xs uppercase transition-all [transform:translateZ(0)_translateY(0)]',
+                            !placeholder &&
+                                !contents &&
+                                '-mb-2 text-inherit [transform:translateY(.65rem)] group-first-of-type:-mb-0 group-focus-within:translate-y-0 group-focus-within:text-sm',
                         )}
-                        placeholder={placeholder}
-                        value={contents || undefined}
-                        onChange={(e: any) => e?.target && setContents(e.target.value)}
-                    />
-                </div>
-            </>
+                        data-full-height={!placeholder && !contents}
+                    >
+                        {label}
+                    </label>
+                ) : null}
+
+                <Tag
+                    {...(props as any)}
+                    {...(as !== 'textarea'
+                        ? 'type' in props
+                            ? { type: props.type || 'text' }
+                            : { type: 'text' }
+                        : {})}
+                    className={cn(
+                        styles.input,
+                        'relative h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:text-foreground-highlight placeholder:transition-opacity placeholder:[font-size:inherit]',
+                        label && as !== 'textarea' && 'absolute inset-y-0 h-15 pt-3',
+                        as === 'textarea' && 'h-full min-h-20 leading-normal',
+                    )}
+                    onChange={(e: any) => e?.target && setContents(e.target.value)}
+                    placeholder={placeholder}
+                    ref={ref}
+                    value={contents || undefined}
+                />
+            </div>
         );
-    }
+    },
 );
 
 export default Object.assign(Input, {
-    displayName: 'Nordstar.Input'
+    displayName: 'Nordstar.Input',
 });

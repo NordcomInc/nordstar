@@ -1,9 +1,9 @@
-import chalk from 'chalk';
-import DirectoryPrompt from 'inquirer-directory';
-import InputPrompt from 'inquirer/lib/prompts/input.js';
 import { mkdir } from 'node:fs';
 import path from 'node:path';
 import { moveCursor } from 'node:readline';
+import chalk from 'chalk';
+import InputPrompt from 'inquirer/lib/prompts/input.js';
+import DirectoryPrompt from 'inquirer-directory';
 import stripAnsi from 'strip-ansi';
 
 const themeColor = chalk.reset.hex('#ed1e79').bold;
@@ -117,11 +117,36 @@ export default function main(plop) {
     ['component'].forEach((gen) => {
         plop.setGenerator(gen, {
             description: `Generate a new ${gen}.`,
+            actions(answers) {
+                const actions = [];
+
+                if (!answers) return actions;
+
+                const { description, outDir } = answers;
+                const generatorName = answers[`${gen}Name`] ?? '';
+
+                const data = {
+                    [`${gen}Name`]: generatorName,
+                    description,
+                    outDir,
+                };
+
+                actions.push({
+                    base: `${gen}`,
+                    destination: `../packages/{{outDir}}/{{dashCase ${gen}Name}}`,
+                    templateFiles: `${gen}/**`,
+                    type: 'addMany',
+                    data,
+                    abortOnFail: true,
+                });
+
+                return actions;
+            },
             prompts: [
                 {
-                    type: 'input',
-                    name: `${gen}Name`,
                     message: `Enter ${gen} name:`,
+                    name: `${gen}Name`,
+                    type: 'input',
 
                     validate: (value) => {
                         if (!value) {
@@ -139,12 +164,12 @@ export default function main(plop) {
                         }
 
                         return true;
-                    }
+                    },
                 },
                 {
-                    type: 'input',
-                    name: 'description',
                     message: `The description of this ${gen}:`,
+                    name: 'description',
+                    type: 'input',
 
                     validate: (value) => {
                         if (!value) {
@@ -156,14 +181,14 @@ export default function main(plop) {
                         }
 
                         return true;
-                    }
+                    },
                 },
                 {
-                    type: 'directory',
-                    name: 'outDir',
-                    message: `Where should this ${gen} live?`,
                     basePath: './packages',
                     default: './packages/components',
+                    message: `Where should this ${gen} live?`,
+                    name: 'outDir',
+                    type: 'directory',
 
                     validate: (value) => {
                         if (!value) {
@@ -171,45 +196,39 @@ export default function main(plop) {
                         }
 
                         return true;
-                    }
-                }
+                    },
+                },
             ],
-            actions(answers) {
-                const actions = [];
-
-                if (!answers) return actions;
-
-                const { description, outDir } = answers;
-                const generatorName = answers[`${gen}Name`] ?? '';
-
-                const data = {
-                    [`${gen}Name`]: generatorName,
-                    description,
-                    outDir
-                };
-
-                actions.push({
-                    type: 'addMany',
-                    templateFiles: `${gen}/**`,
-                    destination: `../packages/{{outDir}}/{{dashCase ${gen}Name}}`,
-                    base: `${gen}`,
-                    data,
-                    abortOnFail: true
-                });
-
-                return actions;
-            }
         });
     });
 
     plop.setGenerator('page', {
         description: `(TODO) Create a page for the docs app.`,
+
+        actions(answers) {
+            if (!ansers) return [];
+
+            const { name, path } = answers;
+            return [
+                {
+                    abortOnFail: true,
+                    base: `page`,
+                    destination: `../docs/src/app/{{path}}`,
+                    templateFiles: `page/**`,
+                    type: 'addMany',
+                    data: {
+                        name,
+                        path,
+                    },
+                },
+            ];
+        },
         prompts: async ({ prompt }) => {
             return prompt([
                 {
-                    type: 'naming',
-                    name: `name`,
                     message: `Enter the page name:`,
+                    name: `name`,
+                    type: 'naming',
 
                     transformer(value) {
                         if (value.length <= 0) return value;
@@ -237,14 +256,14 @@ export default function main(plop) {
                         }
 
                         return true;
-                    }
+                    },
                 },
                 {
-                    type: 'list',
-                    name: 'create_dir',
-                    message: `Create a new subdirectory?`,
-                    default: 'Use existing',
                     choices: ['Use existing', 'Create new'],
+                    default: 'Use existing',
+                    message: `Create a new subdirectory?`,
+                    name: 'create_dir',
+                    type: 'list',
 
                     validate(value) {
                         if (!value) {
@@ -252,28 +271,21 @@ export default function main(plop) {
                         }
 
                         return true;
-                    }
+                    },
                 },
                 {
-                    type: 'directory',
-                    name: 'create_dir_root',
-                    message: `Where should we create the subdirectory?`,
                     basePath: './docs/src/app',
+                    message: `Where should we create the subdirectory?`,
+                    name: 'create_dir_root',
+                    type: 'directory',
                     async when(answers) {
                         return answers.create_dir === 'Create new';
-                    }
+                    },
                 },
                 {
-                    type: 'input',
-                    name: `create_dir_name`,
                     message: `Enter the name of the subdirectory:`,
-                    async when(answers) {
-                        return answers.create_dir === 'Create new';
-                    },
-
-                    transformer(value) {
-                        return value;
-                    },
+                    name: `create_dir_name`,
+                    type: 'input',
 
                     filter(value) {
                         return new Promise((resolve, reject) => {
@@ -285,19 +297,26 @@ export default function main(plop) {
                         });
                     },
 
+                    transformer(value) {
+                        return value;
+                    },
+
                     validate(value) {
                         if (!value) {
                             return `The name of the page is required.`;
                         }
 
                         return true;
-                    }
+                    },
+                    async when(answers) {
+                        return answers.create_dir === 'Create new';
+                    },
                 },
                 {
-                    type: 'directory',
-                    name: 'path',
-                    message: `Where should we create the page`,
                     basePath: './docs/src/app',
+                    message: `Where should we create the page`,
+                    name: 'path',
+                    type: 'directory',
 
                     validate: (value) => {
                         if (!value) {
@@ -305,28 +324,9 @@ export default function main(plop) {
                         }
 
                         return true;
-                    }
-                }
+                    },
+                },
             ]);
         },
-
-        actions(answers) {
-            if (!ansers) return [];
-
-            const { name, path } = answers;
-            return [
-                {
-                    type: 'addMany',
-                    templateFiles: `page/**`,
-                    destination: `../docs/src/app/{{path}}`,
-                    base: `page`,
-                    data: {
-                        name,
-                        path
-                    },
-                    abortOnFail: true
-                }
-            ];
-        }
     });
 }

@@ -4,14 +4,14 @@ import Link from 'next/link';
 import styles from './page.module.scss';
 
 export const metadata: Metadata = {
-    title: {
-        absolute: 'Nordstar Component Library'
-    },
     description:
         'An opinionated component library for building human-centric user interfaces by Nordcom AB and contributors.',
     alternates: {
-        canonical: 'https://nordcominc.github.io/nordstar/'
-    }
+        canonical: 'https://nordcominc.github.io/nordstar/',
+    },
+    title: {
+        absolute: 'Nordstar Component Library',
+    },
 };
 
 export default async function IndexPage() {
@@ -43,7 +43,7 @@ export default async function IndexPage() {
 
                     <Card.Divider />
 
-                    <Button variant="solid" color="primary" as={Link} href="/docs/getting-started/">
+                    <Button as={Link} color="primary" href="/docs/getting-started/" variant="solid">
                         Get Started
                     </Button>
                 </Card>
@@ -63,7 +63,7 @@ export default async function IndexPage() {
 
                     <Card.Divider />
 
-                    <Button variant="solid" color="foreground" as={Link} href="/docs/installation/">
+                    <Button as={Link} color="foreground" href="/docs/installation/" variant="solid">
                         Get Started
                     </Button>
                 </Card>
@@ -83,7 +83,7 @@ export default async function IndexPage() {
 
                     <Card.Divider />
 
-                    <Button variant="outline" color="foreground" as={Link} href="/docs/components/">
+                    <Button as={Link} color="foreground" href="/docs/components/" variant="outline">
                         Get Started
                     </Button>
                 </Card>

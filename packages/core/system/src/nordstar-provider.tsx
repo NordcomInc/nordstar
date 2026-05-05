@@ -127,7 +127,7 @@ export const NordstarProvider = ({ theme, children, className, ...props }: Nords
             <style data-testid="style" suppressHydrationWarning={true}>
                 {css}
             </style>
-            <div id="nordstar" className={cn('contents font-medium', className)} {...props}>
+            <div className={cn('contents font-medium', className)} id="nordstar" {...props}>
                 {children}
             </div>
         </Fragment>

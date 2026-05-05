@@ -1,10 +1,8 @@
-import React from 'react';
-
 import '@testing-library/jest-dom/vitest';
 import '@testing-library/react';
-import { describe, expect, it } from 'vitest';
 
 import { render } from '@testing-library/react';
+import { describe, expect, it } from 'vitest';
 import { Details } from '.';
 
 describe('components', () => {

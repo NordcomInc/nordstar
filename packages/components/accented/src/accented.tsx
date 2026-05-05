@@ -20,17 +20,17 @@ const Accented = forwardRef<'span', AccentedProps>(
         return (
             <Tag
                 {...props}
-                ref={ref}
                 className={cn(
                     'contents',
                     color === 'foreground' && 'text-foreground',
                     (color === 'default' || color === 'primary') && 'text-primary',
                     color === 'secondary' && 'text-secondary',
-                    className
+                    className,
                 )}
+                ref={ref}
             />
         );
-    }
+    },
 );
 
 Accented.displayName = 'Nordstar.Typography.Accented';

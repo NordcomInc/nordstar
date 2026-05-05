@@ -1,4 +1,6 @@
 {
+    "exclude": ["node_modules"],
+    "include": ["./vite.config.ts", "packages/**/vite.config.ts", "packages/storybook/vite.config.ts.bak"],
     "compilerOptions": {
         "allowSyntheticDefaultImports": true,
         "composite": true,
@@ -8,7 +10,5 @@
         "skipLibCheck": true,
         "strict": true,
         "types": ["node"]
-    },
-    "exclude": ["node_modules"],
-    "include": ["./vite.config.ts", "packages/**/vite.config.ts", "packages/storybook/vite.config.ts.bak"]
+    }
 }

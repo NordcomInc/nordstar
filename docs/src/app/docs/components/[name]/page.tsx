@@ -1,6 +1,6 @@
-import { getAvailableComponents, getComponentByName } from '@/utils/components';
 import { Heading, View } from '@nordcom/nordstar';
 import type { Metadata } from 'next';
+import { getAvailableComponents, getComponentByName } from '@/utils/components';
 
 export type ComponentDocsPageParams = {
     name: string;
@@ -14,8 +14,8 @@ export async function generateMetadata({ params }: { params: ComponentDocsPagePa
     return {
         title: key,
         alternates: {
-            canonical: `https://nordcominc.github.io/nordstar/docs/components/${name}/`
-        }
+            canonical: `https://nordcominc.github.io/nordstar/docs/components/${name}/`,
+        },
     };
 }
 
@@ -31,12 +31,12 @@ export default async function DocsComponentsComponentPage({ params }: { params: 
 
     return (
         <View withoutWrapper={true}>
-            <Heading level="h1" className="capitalize">
+            <Heading className="capitalize" level="h1">
                 {key || name}
             </Heading>
 
-            <div className="border-background-highlight mt-3 rounded-lg border p-3">
-                <SpoofedComponent withoutWrapper={true} label={key}>
+            <div className="mt-3 rounded-lg border border-background-highlight p-3">
+                <SpoofedComponent label={key} withoutWrapper={true}>
                     {key}
                 </SpoofedComponent>
             </div>

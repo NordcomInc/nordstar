@@ -1,19 +1,17 @@
-import React from 'react';
-
 import type { AccentedProps } from '@nordcom/nordstar-accented';
 import { Accented } from '@nordcom/nordstar-accented';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const story: Meta<typeof Accented> = {
-    title: 'System/Typography/Accented',
     component: Accented,
+    title: 'System/Typography/Accented',
     argTypes: {
         color: {
             control: 'inline-radio',
+            defaultValue: 'default',
             options: ['default', 'primary', 'secondary', 'foreground'],
-            defaultValue: 'default'
-        }
-    }
+        },
+    },
 };
 
 export default story;
@@ -26,28 +24,28 @@ const Template = (args: AccentedProps) => (
 );
 
 export const Standard: Story = {
+    args: {},
     render: Template,
-    args: {}
 };
 
 export const Primary: Story = {
     render: Template,
     args: {
         ...Standard.args,
-        color: 'primary'
-    }
+        color: 'primary',
+    },
 };
 export const Secondary: Story = {
     render: Template,
     args: {
         ...Standard.args,
-        color: 'secondary'
-    }
+        color: 'secondary',
+    },
 };
 export const Foreground: Story = {
     render: Template,
     args: {
         ...Standard.args,
-        color: 'foreground'
-    }
+        color: 'foreground',
+    },
 };

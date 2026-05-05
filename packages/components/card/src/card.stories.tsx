@@ -1,36 +1,34 @@
-import React from 'react';
-
 import { Card } from '@nordcom/nordstar-card';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const story: Meta<typeof Card> = {
-    title: 'System/Components/Card',
     component: Card,
+    title: 'System/Components/Card',
     argTypes: {
+        borderless: {
+            control: 'boolean',
+            defaultValue: false,
+        },
         children: {
             table: {
-                disable: true
-            }
-        },
-        variant: {
-            control: 'inline-radio',
-            options: ['outline', 'solid'],
-            defaultValue: 'default'
+                disable: true,
+            },
         },
         color: {
             control: 'inline-radio',
+            defaultValue: 'default',
             options: ['default', 'primary', 'secondary'],
-            defaultValue: 'default'
-        },
-        borderless: {
-            control: 'boolean',
-            defaultValue: false
         },
         padding: {
             control: 'boolean',
-            defaultValue: true
-        }
-    }
+            defaultValue: true,
+        },
+        variant: {
+            control: 'inline-radio',
+            defaultValue: 'default',
+            options: ['outline', 'solid'],
+        },
+    },
 };
 
 export default story;
@@ -51,47 +49,47 @@ export const Standard: Story = {
                 Imaginary footer
             </>
         ),
+        color: 'foreground',
         variant: 'outline',
-        color: 'foreground'
-    }
+    },
 };
 
 export const Solid: Story = {
     args: {
         ...Standard.args,
-        variant: 'solid'
-    }
+        variant: 'solid',
+    },
 };
 
 export const WithColor: Story = {
     name: 'With color',
     args: {
         ...Standard.args,
-        color: 'primary'
-    }
+        color: 'primary',
+    },
 };
 
 export const SolidWithColor: Story = {
     name: 'Solid with color',
     args: {
         ...Standard.args,
+        color: 'primary',
         variant: 'solid',
-        color: 'primary'
-    }
+    },
 };
 
 export const Borderless: Story = {
     args: {
         ...Standard.args,
-        borderless: true
-    }
+        borderless: true,
+    },
 };
 
 export const NoPadding: Story = {
     args: {
         ...Standard.args,
-        padding: false
-    }
+        padding: false,
+    },
 };
 
 export const BorderlessNoPadding: Story = {
@@ -99,6 +97,6 @@ export const BorderlessNoPadding: Story = {
     args: {
         ...Standard.args,
         borderless: true,
-        padding: false
-    }
+        padding: false,
+    },
 };

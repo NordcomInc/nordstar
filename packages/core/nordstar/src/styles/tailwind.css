@@ -13,55 +13,56 @@
 
 @theme {
     /* Colors — HSL components for clean alpha modifiers (bg-primary/50). */
-    --color-foreground:           hsl(var(--nordstar-color-foreground, 0 0% 100%));
+    --color-foreground: hsl(var(--nordstar-color-foreground, 0 0% 100%));
     --color-foreground-highlight: hsl(var(--nordstar-color-foreground-highlight, 0 0% 51%));
-    --color-background:           hsl(var(--nordstar-color-background, 0 0% 0%));
+    --color-background: hsl(var(--nordstar-color-background, 0 0% 0%));
     --color-background-highlight: hsl(var(--nordstar-color-background-highlight, 0 0% 15%));
-    --color-primary:              hsl(var(--nordstar-color-primary, 220 50% 50%));
-    --color-primary-foreground:   hsl(var(--nordstar-color-primary-foreground, 0 0% 100%));
-    --color-secondary:            hsl(var(--nordstar-color-secondary, 280 50% 50%));
+    --color-primary: hsl(var(--nordstar-color-primary, 220 50% 50%));
+    --color-primary-foreground: hsl(var(--nordstar-color-primary-foreground, 0 0% 100%));
+    --color-secondary: hsl(var(--nordstar-color-secondary, 280 50% 50%));
     --color-secondary-foreground: hsl(var(--nordstar-color-secondary-foreground, 0 0% 100%));
-    --color-error:                hsl(var(--nordstar-color-error, 0 51% 49%));
+    --color-error: hsl(var(--nordstar-color-error, 0 51% 49%));
 
     /* Fonts. */
     --font-heading: var(--nordstar-font-heading, var(--nordstar-font-sans, var(--nordstar-font-fallback)));
-    --font-body:    var(--nordstar-font-body, var(--nordstar-font-sans, var(--nordstar-font-fallback)));
-    --font-sans:    var(--nordstar-font-sans, var(--nordstar-font-fallback));
-    --font-mono:    var(--nordstar-font-mono, monospace);
+    --font-body: var(--nordstar-font-body, var(--nordstar-font-sans, var(--nordstar-font-fallback)));
+    --font-sans: var(--nordstar-font-sans, var(--nordstar-font-fallback));
+    --font-mono: var(--nordstar-font-mono, monospace);
 
     /* Borders — referenced as border-1/2/4 (custom Nordstar widths). */
     --border-width-1: var(--nordstar-border-width-small, 1px);
-    --border-width-2: var(--nordstar-border-width,       2px);
+    --border-width-2: var(--nordstar-border-width, 2px);
     --border-width-4: var(--nordstar-border-width-large, 4px);
 
     /* Inheritance helpers (preserves text-inherit / font-inherit semantics from v3 config). */
-    --text-inherit:        inherit;
+    --text-inherit: inherit;
     --font-weight-inherit: inherit;
 }
 
 /* :root baseline — works without <NordstarProvider/>. */
 :root {
-    --nordstar-font-fallback: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Ubuntu, Cantarell,
-        'Helvetica Neue', sans-serif;
+    --nordstar-font-fallback:
+        system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, Cantarell, "Helvetica Neue",
+        sans-serif;
 
     --nordstar-border-width-small: 0.138rem;
-    --nordstar-border-width:       0.2rem;
+    --nordstar-border-width: 0.2rem;
     --nordstar-border-width-large: 0.29rem;
-    --nordstar-border-radius:      0.45rem;
+    --nordstar-border-radius: 0.45rem;
 
-    --nordstar-layout-page-width:    1200px;
-    --nordstar-layout-page-spacing:  1rem;
+    --nordstar-layout-page-width: 1200px;
+    --nordstar-layout-page-spacing: 1rem;
     --nordstar-layout-section-spacing: 1rem;
     --nordstar-layout-section-padding: 1.75rem;
     --nordstar-layout-block-padding: 1rem;
 
-    --nordstar-duration-short:  0.25s;
+    --nordstar-duration-short: 0.25s;
     --nordstar-duration-medium: 0.5s;
-
-    background: hsl(var(--nordstar-color-background, 0 0% 0%));
-    color:      hsl(var(--nordstar-color-foreground, 0 0% 100%));
     font-family: var(--font-sans);
     font-size: 16px;
+    color: hsl(var(--nordstar-color-foreground, 0 0% 100%));
+
+    background: hsl(var(--nordstar-color-background, 0 0% 0%));
 }
 
 #nordstar {

@@ -1,18 +1,16 @@
-import React from 'react';
-
 import type { HeadingProps } from '@nordcom/nordstar-heading';
 import { Heading } from '@nordcom/nordstar-heading';
 import type { Meta, StoryObj } from '@storybook/react';
 
 const story: Meta<typeof Heading> = {
-    title: 'System/Typography/Heading',
     component: Heading,
+    title: 'System/Typography/Heading',
     argTypes: {
         level: {
+            control: { type: 'inline-radio' },
             options: ['h1', 'h2', 'h3', 'h4'],
-            control: { type: 'inline-radio' }
-        }
-    }
+        },
+    },
 };
 
 export default story;
@@ -32,12 +30,12 @@ const Template = (args: HeadingProps) => (
             </Heading>,
             <Heading key="h4" level="h4" {...args}>
                 4. Heading used for subsection headers
-            </Heading>
+            </Heading>,
         ]}
     </>
 );
 
 export const Standard: Story = {
+    args: {},
     render: Template,
-    args: {}
 };
