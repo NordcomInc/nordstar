@@ -90,7 +90,7 @@
         "@types/node": "24.0.10",
         "@types/react-dom": "19.1.6",
         "@types/react": "19.1.8",
-        "autoprefixer": "10.4.20",
+        "autoprefixer": "10.5.0",
         "postcss": "8.5.14",
         "prettier": "3.6.2",
         "react-dom": "19.1.0",
