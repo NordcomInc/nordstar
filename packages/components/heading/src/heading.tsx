@@ -26,7 +26,7 @@ const Heading = forwardRef<'h1', HeadingProps>(({ as, level = 'h1', className, .
                 styles.container,
                 'font-heading',
                 level === 'h1' && 'hyphens-auto text-4xl font-extrabold uppercase leading-none',
-                level === 'h2' && 'text-2xl font-normal lowercase leading-tight text-foreground-highlight',
+                level === 'h2' && 'text-foreground-highlight text-2xl font-normal lowercase leading-tight',
                 level === 'h3' && 'text-xl font-extrabold lowercase leading-tight',
                 level === 'h4' && 'text-base font-bold uppercase leading-none',
                 className

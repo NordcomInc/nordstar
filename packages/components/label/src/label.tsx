@@ -16,7 +16,7 @@ const Label = forwardRef<'label', LabelProps>(({ as: Tag = 'label', color, class
             {...props}
             ref={ref}
             className={cn(
-                'block font-heading text-base font-bold uppercase leading-none text-foreground-highlight [&>a]:underline [&>a]:transition-colors [&>a]:hover:text-primary',
+                'font-heading text-foreground-highlight [&>a]:hover:text-primary block text-base font-bold uppercase leading-none [&>a]:underline [&>a]:transition-colors',
                 color === 'foreground' && 'text-foreground',
                 color === 'primary' && 'text-primary',
                 color === 'secondary' && 'text-secondary',

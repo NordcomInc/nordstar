@@ -168,8 +168,8 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                         ref={ref}
                         className={cn(
                             styles.input,
-                            'relative h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:text-foreground-highlight placeholder:transition-opacity placeholder:[font-size:inherit]',
-                            label && as !== 'textarea' && 'absolute inset-y-0 h-15 pt-3',
+                            'placeholder:text-foreground-highlight relative h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:transition-opacity placeholder:[font-size:inherit]',
+                            label && as !== 'textarea' && 'h-15 absolute inset-y-0 pt-3',
                             as === 'textarea' && 'h-full min-h-20 leading-normal'
                         )}
                         placeholder={placeholder}
