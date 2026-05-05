@@ -52,7 +52,7 @@
         "@vercel/toolbar": "0.2.2",
         "clsx": "2.1.1",
         "geist": "1.7.0",
-        "next-mdx-remote": "5.0.0",
+        "next-mdx-remote": "6.0.0",
         "next": "15.5.10",
         "react-dom": "19.1.0",
         "react": "19.1.0",
