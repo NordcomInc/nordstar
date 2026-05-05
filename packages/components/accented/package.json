@@ -62,7 +62,7 @@
         "lint": "concurrently -i pnpm:lint:*",
         "lint:prettier": "prettier --check \"./**/src/**/*.{cjs,mjs,ts,tsx}\"",
         "format": "concurrently -i pnpm:format:*",
-        "format:prettier": "prettier --write \"./**/src/**/*.{cjs,mjs,ts,tsx}\""
+        "format:prettier": "prettier --write \"./**/*.{cjs,mjs,ts,tsx,json}\""
     },
     "keywords": [
         "nordstar",

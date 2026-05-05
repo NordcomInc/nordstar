@@ -14,17 +14,23 @@
     "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "style":   "./dist/tailwind.css",
-            "import":  "./dist/index.js",
-            "module":  "./dist/index.js",
-            "types":   "./dist/index.d.ts"
+            "style": "./dist/tailwind.css",
+            "import": "./dist/index.js",
+            "module": "./dist/index.js",
+            "types": "./dist/index.d.ts"
         },
-        "./styles.css":   "./dist/styles.css",
+        "./styles.css": "./dist/styles.css",
         "./tailwind.css": "./dist/tailwind.css",
         "./*": {
-            "import": ["./dist/*.js"],
-            "module": ["./dist/*.js"],
-            "types":  ["./dist/*.d.ts"]
+            "import": [
+                "./dist/*.js"
+            ],
+            "module": [
+                "./dist/*.js"
+            ],
+            "types": [
+                "./dist/*.d.ts"
+            ]
         },
         "./package.json": "./package.json"
     },
@@ -66,7 +72,7 @@
         "lint": "concurrently -i pnpm:lint:*",
         "lint:prettier": "prettier --check \"./**/src/**/*.{cjs,mjs,ts,tsx}\"",
         "format": "concurrently -i pnpm:format:*",
-        "format:prettier": "prettier --write \"./**/src/**/*.{cjs,mjs,ts,tsx}\""
+        "format:prettier": "prettier --write \"./**/*.{cjs,mjs,ts,tsx,json}\""
     },
     "dependencies": {
         "@nordcom/nordstar-accented": "workspace:*",
@@ -87,7 +93,9 @@
         "tailwindcss": ">=4"
     },
     "peerDependenciesMeta": {
-        "tailwindcss": { "optional": true }
+        "tailwindcss": {
+            "optional": true
+        }
     },
     "devDependencies": {
         "@nordcom/prettier": "0.1.1",
