@@ -57,11 +57,8 @@ jobs:
             - name: 📦 Install
               uses: ./.github/common/install
 
-            - name: 🔨 Build Packages
-              run: pnpm run build:packages
-
             - name: 📋 Lint
-              run: pnpm run lint
+              run: pnpm run ci
 
     typecheck:
         name: ✅ Typecheck
