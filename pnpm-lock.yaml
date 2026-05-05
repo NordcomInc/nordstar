@@ -231,8 +231,8 @@ importers:
         specifier: 4.0.1
         version: 4.0.1
       tailwind-merge:
-        specifier: 3.3.1
-        version: 3.3.1
+        specifier: 3.5.0
+        version: 3.5.0
     devDependencies:
       '@nordcom/prettier':
         specifier: 0.1.1
@@ -6645,6 +6645,9 @@ packages:
 
   tailwind-merge@3.3.1:
     resolution: {integrity: sha512-gBXpgUm/3rp1lMZZrM/w7D8GKqshif0zAymAhbCyIt8KMe+0v9DQ7cdYLR4FHH/cKpdTXb+A/tKKU3eolfsI+g==}
+
+  tailwind-merge@3.5.0:
+    resolution: {integrity: sha512-I8K9wewnVDkL1NTGoqWmVEIlUcB9gFriAEkXkfCjX5ib8ezGxtR3xD7iZIxrfArjEsH7F1CHD4RFUtxefdqV/A==}
 
   tailwindcss@3.4.19:
     resolution: {integrity: sha512-3ofp+LL8E+pK/JuPLPggVAIaEuhvIz4qNcf3nA1Xn2o/7fb7s/TYpHhwGDv1ZU3PkBluUVaF8PyCHcm48cKLWQ==}
@@ -13930,6 +13933,8 @@ snapshots:
       '@pkgr/core': 0.2.9
 
   tailwind-merge@3.3.1: {}
+
+  tailwind-merge@3.5.0: {}
 
   tailwindcss@3.4.19:
     dependencies:
