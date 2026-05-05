@@ -40,7 +40,7 @@
         "postversion": "pnpm install",
         "version:unstable": "changeset version --snapshot unstable",
         "release": "changeset publish",
-        "release:unstable": "changeset publish --snapshot --no-git-tag --tag unstable",
+        "release:unstable": "changeset publish --no-git-tag --tag unstable",
         "changeset": "changeset"
     },
     "author": {
