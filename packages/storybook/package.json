@@ -43,7 +43,7 @@
         "storybook-addon-sass-postcss": "0.4.0",
         "storybook-dark-mode": "5.0.0",
         "tailwindcss": "^4",
-        "typescript": "5.8.3",
+        "typescript": "6.0.3",
         "vite-plugin-dts": "5.0.0",
         "vite-tsconfig-paths": "6.1.1",
         "vite": "7.0.0"
