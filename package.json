@@ -36,7 +36,6 @@
         "clean:storybook": "turbo clean --filter=@nordcom/nordstar-storybook",
         "create": "plop --plopfile ./plop/plopfile.js",
         "create:component": "plop --plopfile ./plop/plopfile.js component",
-        "update:browserlist": "turbo update:browserlist",
         "version": "changeset version",
         "postversion": "pnpm install",
         "version:unstable": "changeset version --snapshot unstable",

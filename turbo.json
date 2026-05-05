@@ -38,10 +38,6 @@
         "start": {
             "persistent": true,
             "dependsOn": ["^build"]
-        },
-        "update:browserlist": {
-            "cache": false,
-            "outputs": [""]
         }
     }
 }

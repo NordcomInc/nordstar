@@ -15,8 +15,7 @@
         "start": "next start -p $PORT",
         "typecheck": "tsc --noEmit",
         "lint": "exit 0",
-        "format": "exit 0",
-        "update:browserlist": "pnpx update-browserslist-db@latest"
+        "format": "exit 0"
     },
     "keywords": [
         "nordstar",
