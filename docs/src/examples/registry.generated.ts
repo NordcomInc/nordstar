@@ -4,6 +4,10 @@
  */
 
 export const examples = {
+    'accented/foreground': () => import('./accented/foreground'),
+    'accented/primary': () => import('./accented/primary'),
+    'accented/secondary': () => import('./accented/secondary'),
+    'accented/standard': () => import('./accented/standard'),
     'button/disabled': () => import('./button/disabled'),
     'button/icon': () => import('./button/icon'),
     'button/outline': () => import('./button/outline'),

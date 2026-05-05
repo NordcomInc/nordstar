@@ -1,0 +1,67 @@
+export const metadata = {
+    title: 'Accented',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/accented/' }
+};
+
+# Accented
+
+Inline text with an accent color, used to draw the eye to a key noun or phrase inside body copy. Renders as a `<span>` and inherits surrounding typography — only the color changes.
+
+## When to use
+
+- For the most important noun in a sentence ("Welcome to **Acme**").
+- For inline status accents inside metadata strips ("Updated **just now**").
+- Inside a <C>Heading</C> when one word should pop without changing the heading's level.
+
+### When not to use
+
+- For body emphasis where italics or bold reads better (`<em>` / `<strong>`).
+- As a structural element — `Accented` is decorative; don't rely on its color to convey state.
+
+## Installation
+
+<Install package="@nordcom/nordstar-accented" />
+
+```tsx
+import { Accented } from '@nordcom/nordstar';
+```
+
+## Basic usage
+
+Without a `color` prop, `Accented` falls back to its theme's default accent — useful inside contexts that already pick a brand-aligned color.
+
+<Preview name="accented/standard" />
+
+## Colors
+
+Pick from the system's palette. `primary` and `secondary` are the brand accents; `foreground` snaps to the maximum-contrast text color (useful inside colored surfaces).
+
+<Preview name="accented/primary" caption='color="primary"' />
+
+<Preview name="accented/secondary" caption='color="secondary"' />
+
+<Preview name="accented/foreground" caption='color="foreground"' />
+
+## Composition
+
+Use `Accented` inside a <C>Heading</C> to call out a single noun without breaking the heading's outline level:
+
+```tsx
+<Heading level="h1">
+    Build with <Accented color="primary">Nordstar</Accented>
+</Heading>
+```
+
+Or inside a <C>Label</C> for inline metadata accents:
+
+```tsx
+<Label>
+    <Accented color="primary">New</Accented> · Released today
+</Label>
+```
+
+## Props
+
+<PropsTable component="Accented" />
+
+<Related of="accented" />
