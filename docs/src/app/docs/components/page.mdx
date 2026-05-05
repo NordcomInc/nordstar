@@ -1,0 +1,43 @@
+import Link from 'next/link';
+import { components } from '@/content/component-meta';
+
+export const metadata = {
+    title: 'Components',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/' }
+};
+
+# Components
+
+Every component shipped by Nordstar, grouped by role. Click any card for the full reference: usage, variants, props, and accessibility notes.
+
+export const Grid = ({ category }) => (
+    <ul className="my-6 grid gap-3 sm:grid-cols-2">
+        {components.filter((c) => c.category === category).map((c) => (
+            <li key={c.slug}>
+                <Link
+                    href={`/docs/components/${c.slug}`}
+                    className="block rounded-lg border border-background-highlight px-4 py-3 transition-colors hover:border-primary"
+                >
+                    <div className="font-medium">{c.name}</div>
+                    <div className="text-foreground-highlight text-sm">{c.tagline}</div>
+                </Link>
+            </li>
+        ))}
+    </ul>
+);
+
+## Layout
+
+<Grid category="layout" />
+
+## Surfaces
+
+<Grid category="surfaces" />
+
+## Typography
+
+<Grid category="typography" />
+
+## Controls
+
+<Grid category="controls" />
