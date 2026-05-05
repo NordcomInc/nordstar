@@ -46,10 +46,10 @@ describe('core', () => {
             expect(wrapper.getByText('Hello World!')).toBeDefined();
 
             const styleElementContent = wrapper.getByTestId('style').innerHTML;
-            expect(styleElementContent).toContain('--color-accent-primary: 0 100% 50%');
-            expect(styleElementContent).toContain('--color-accent-secondary: 120 100% 50%');
-            expect(styleElementContent).toContain('--font-heading: Open Sans');
-            expect(styleElementContent).toContain('--font-body: Roboto');
+            expect(styleElementContent).toContain('--nordstar-color-primary:              0 100% 50%');
+            expect(styleElementContent).toContain('--nordstar-color-secondary:            120 100% 50%');
+            expect(styleElementContent).toContain('--nordstar-font-heading: Open Sans');
+            expect(styleElementContent).toContain('--nordstar-font-body: Roboto');
 
             expect(() => wrapper.unmount()).not.toThrow();
         });
@@ -71,8 +71,8 @@ describe('core', () => {
             );
 
             const styleElementContent = wrapper.getByTestId('style').innerHTML;
-            expect(styleElementContent).toContain('--font-heading: heading');
-            expect(styleElementContent).toContain('--font-body: heading');
+            expect(styleElementContent).toContain('--nordstar-font-heading: heading');
+            expect(styleElementContent).toContain('--nordstar-font-body: heading');
 
             expect(() => wrapper.unmount()).not.toThrow();
         });
@@ -93,8 +93,8 @@ describe('core', () => {
             );
 
             const styleElementContent = wrapper.getByTestId('style').innerHTML;
-            expect(styleElementContent).toContain('--font-heading');
-            expect(styleElementContent).toContain('--font-body: body');
+            expect(styleElementContent).toContain('--nordstar-font-heading');
+            expect(styleElementContent).toContain('--nordstar-font-body: body');
 
             expect(() => wrapper.unmount()).not.toThrow();
         });
