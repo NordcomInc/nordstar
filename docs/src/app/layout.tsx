@@ -77,7 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <Card as={View} variant="solid" color="primary" borderless={true}>
                         <footer className="flex flex-row flex-wrap items-center justify-center gap-1 md:gap-3">
                             <Link href="https://github.com/filiphsps" className="block text-inherit">
-                                Filiph Sandström
+                                A component library by Filiph Sandström
                             </Link>
                         </footer>
                     </Card>

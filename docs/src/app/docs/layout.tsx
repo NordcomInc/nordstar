@@ -1,3 +1,4 @@
+import { getAvailableComponents } from '@/utils/components';
 import * as Nordstar from '@nordcom/nordstar';
 import { Label } from '@nordcom/nordstar';
 
@@ -16,7 +17,11 @@ export const metadata: Metadata = {
 function NavBlock({ label, href, children }: { label: string; href: string; children: ReactNode }) {
     return (
         <section className="flex flex-col gap-4">
-            <Label as={Link} href={href} className="block text-base leading-none text-foreground">
+            <Label
+                as={Link}
+                href={href as Parameters<typeof Link>[0]['href']}
+                className="block text-base leading-none text-foreground"
+            >
                 {label}
             </Label>
 
@@ -31,32 +36,34 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
     return (
         <div className="flex flex-col gap-6 md:grid md:grid-cols-[18rem_1fr]">
             <nav className="flex flex-col gap-6">
-                <NavBlock label="Guide" href="/docs/">
-                    <Link href="/docs/getting-started/" className="hover:text-primary">
+                <NavBlock label="Guide" href="/docs">
+                    <Link href="/docs/getting-started" className="hover:text-primary">
                         Introduction
                     </Link>
-                    <Link href="/docs/installation/" className="hover:text-primary">
+                    <Link href="/docs/installation" className="hover:text-primary">
                         Installation
                     </Link>
                 </NavBlock>
 
-                <NavBlock label="Customization" href="/docs/customization/">
-                    <Link href="/docs/customization/theme/" className="hover:text-primary">
+                <NavBlock label="Customization" href="/docs/customization">
+                    <Link href="/docs/customization/theme" className="hover:text-primary">
                         Theme
                     </Link>
-                    <Link href="/docs/customization/system/" className="hover:text-primary">
+                    <Link href="/docs/customization/system" className="hover:text-primary">
                         System
                     </Link>
                 </NavBlock>
 
-                <NavBlock label="Components" href="/docs/components/">
-                    {Object.keys(Nordstar)
-                        .filter((key) => (Nordstar as any)[key].displayName)
-                        .map((key) => (
-                            <Link key={key} href={`/docs/components/${key}/`} className="hover:text-primary">
-                                {key}
-                            </Link>
-                        ))}
+                <NavBlock label="Components" href="/docs/components">
+                    {getAvailableComponents().map((key) => (
+                        <Link
+                            key={key}
+                            href={`/docs/components/${key.toLowerCase()}` as Parameters<typeof Link>[0]['href']}
+                            className="hover:text-primary"
+                        >
+                            {key}
+                        </Link>
+                    ))}
                 </NavBlock>
             </nav>
             <section>{children}</section>

@@ -2,16 +2,16 @@ import { Heading, View } from '@nordcom/nordstar';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-    title: 'Components',
+    title: 'Documentation',
     alternates: {
-        canonical: 'https://nordcominc.github.io/nordstar/docs/components/'
+        canonical: 'https://nordcominc.github.io/nordstar/docs/getting-started/'
     }
 };
 
-export default async function DocsComponentsPage() {
+export default async function DocsGettingStartedPage() {
     return (
         <View withoutWrapper={true}>
-            <Heading level="h1">Components</Heading>
+            <Heading level="h1">Getting Started</Heading>
         </View>
     );
 }

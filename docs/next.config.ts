@@ -7,17 +7,17 @@ const withVercelToolbar = createVercelToolbar({});
 const withMDX = createMDX({
     options: {
         remarkPlugins: ['remark-gfm'],
-      rehypePlugins: ['rehype-slug', 'rehype-autolink-headings']
+        rehypePlugins: ['rehype-slug', 'rehype-autolink-headings']
     } as never
 });
 
 const config: NextConfig = {
     output: 'export',
-    basePath: "/nordstar",
+    basePath: '/nordstar',
     pageExtensions: ['ts', 'tsx', 'md', 'mdx'],
     poweredByHeader: false,
     reactStrictMode: true,
-    trailingSlash: true,
+    trailingSlash: false,
     transpilePackages: ['next-mdx-remote'],
     typedRoutes: true,
     experimental: {
@@ -40,7 +40,7 @@ const config: NextConfig = {
 
     async generateBuildId() {
         return process.env.VERCEL_GIT_COMMIT_SHA || 'unknown';
-    },
+    }
 };
 
 export default withVercelToolbar(withMDX(config));

@@ -1,7 +1,5 @@
-import { readdirSync } from 'node:fs';
-import { join } from 'node:path';
-
-import { Heading } from '@nordcom/nordstar';
+import { getAvailableComponents, getComponentByName } from '@/utils/components';
+import { Heading, View } from '@nordcom/nordstar';
 import type { Metadata } from 'next';
 
 export type ComponentDocsPageParams = {
@@ -9,10 +7,10 @@ export type ComponentDocsPageParams = {
 };
 
 export async function generateMetadata({ params: { name } }: { params: ComponentDocsPageParams }): Promise<Metadata> {
-    // TODO: Get component.
+    const { key } = getComponentByName(name);
 
     return {
-        title: name,
+        title: key,
         alternates: {
             canonical: `https://nordcominc.github.io/nordstar/docs/components/${name}/`
         }
@@ -20,20 +18,24 @@ export async function generateMetadata({ params: { name } }: { params: Component
 }
 
 export function generateStaticParams(): ComponentDocsPageParams[] {
-    const componentsDir = join(process.cwd(), '..', 'packages', 'components');
-    return readdirSync(componentsDir, { withFileTypes: true })
-        .filter((entry) => entry.isDirectory())
-        .map((entry) => ({ name: entry.name }));
+    return getAvailableComponents().map((name) => ({ name: name.toLowerCase() }));
 }
 
-export default async function ComponentDocsPage({ params: { name } }: { params: ComponentDocsPageParams }) {
-    // TODO: Get component.
+export default async function DocsComponentsComponentPage({ params: { name } }: { params: ComponentDocsPageParams }) {
+    const { Component, key } = getComponentByName(name);
+    const SpoofedComponent = Component as React.ComponentType<any>;
 
     return (
-        <>
+        <View withoutWrapper={true}>
             <Heading level="h1" className="capitalize">
-                {name}
+                {key || name}
             </Heading>
-        </>
+
+            <div className="mt-3 rounded-lg border border-background-highlight p-3">
+                <SpoofedComponent withoutWrapper={true} label={key}>
+                    {key}
+                </SpoofedComponent>
+            </div>
+        </View>
     );
 }

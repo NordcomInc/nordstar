@@ -1,4 +1,4 @@
-import { Heading } from '@nordcom/nordstar';
+import { Heading, View } from '@nordcom/nordstar';
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
@@ -10,8 +10,8 @@ export const metadata: Metadata = {
 
 export default async function DocsPage() {
     return (
-        <>
+        <View>
             <Heading level="h1">Docs</Heading>
-        </>
+        </View>
     );
 }

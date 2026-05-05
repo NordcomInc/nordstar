@@ -1,4 +1,4 @@
-import { Heading } from '@nordcom/nordstar';
+import { Heading, View } from '@nordcom/nordstar';
 
 import type { Metadata } from 'next';
 
@@ -18,9 +18,9 @@ export const metadata: Metadata = {
 
 export default function NotFound() {
     return (
-        <>
+        <View withoutWrapper={true}>
             <Heading>Page not found</Heading>
             <Heading level="h2">Error 404</Heading>
-        </>
+        </View>
     );
 }

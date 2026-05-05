@@ -12,7 +12,7 @@ export type DetailsProps = {
 /**
  * `<Details/>`, hide/Show content using a styled &lt;details&gt; element.
  *
- * @param {CardProps} props - `<Details/>` props.
+ * @param {DetailsProps} props - `<Details/>` props.
  * @param {string} props.label - The label of the details.
  * @param {CSSCustomProperties} [props.style] - Custom CSS properties.
  * @returns {React.ReactNode} The `<Details/>` component.
