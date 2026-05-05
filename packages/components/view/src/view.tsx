@@ -24,10 +24,7 @@ const View = forwardRef<'main', ViewProps>(
             <Tag
                 ref={ref}
                 {...props}
-                className={cn(
-                    'm-3 w-[calc(100%-calc(var(--nordstar-layout-page-spacing)*2))] max-w-[min(var(--nordstar-layout-page-width),100vw)]',
-                    className,
-                )}
+                className={cn('m-3 w-(--nordstar-layout-page-width) w-full max-w-screen', className)}
             />
         );
         if (withoutWrapper) {

@@ -210,7 +210,7 @@
     },
     "overrides": [
         {
-            "includes": ["**/*.test.*", "**/*.spec.*", "**/*.stories.*"],
+            "includes": ["**/*.test.*", "**/*.spec.*", "**/*.stories.*", "!**/tsconfig.test.json"],
             "linter": {
                 "rules": {
                     "performance": {

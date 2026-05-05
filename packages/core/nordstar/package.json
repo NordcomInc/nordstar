@@ -69,7 +69,7 @@
         "build:compile": "vite build",
         "build:scripts": "concurrently -i pnpm:build:scripts:* --",
         "build:scripts:build-css": "node scripts/build-css.mjs",
-        "dev": "vite build --watch",
+        "dev": "vite build --watch --emptyOutDir false",
         "clean": "rm -rf dist coverage .turbo .next *.tsbuildinfo *.log",
         "typecheck": "tsc --noEmit"
     },

@@ -16,7 +16,7 @@
     ],
     "scripts": {
         "dev": "concurrently -i pnpm:dev:* --",
-        "dev:docs": "turbo dev --filter=@nordcom/nordstar-docs",
+        "dev:docs": "pnpm build:packages && concurrently -i -k pnpm:dev:packages \"turbo dev --filter=@nordcom/nordstar-docs\"",
         "dev:packages": "turbo dev --filter=!@nordcom/nordstar-docs --filter=!@nordcom/nordstar --filter=!@nordcom/nordstar-system",
         "build": "turbo build",
         "build:docs": "turbo build --filter=@nordcom/nordstar-docs",

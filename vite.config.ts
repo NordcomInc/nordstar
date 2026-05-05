@@ -2,7 +2,7 @@ import MagicString from 'magic-string';
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
-import type { Plugin } from 'vite';
+import type { Plugin, ResolvedConfig } from 'vite';
 import { defineConfig } from 'vite';
 
 import react from '@vitejs/plugin-react';
@@ -18,7 +18,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
  * directives are hoisted to the top of the file.
  */
 function hoistUseClient(): Plugin {
-    let resolvedConfig: any;
+    let resolvedConfig: ResolvedConfig;
 
     return {
         // TODO: Turn this into a proper plugin or figure out a better way to do this.
@@ -55,7 +55,7 @@ function hoistUseClient(): Plugin {
                         continue;
                     }
 
-                    chunk.map = sourceMap  as typeof chunk.map;
+                    chunk.map = sourceMap as typeof chunk.map;
                 }
             }
         },
@@ -64,9 +64,7 @@ function hoistUseClient(): Plugin {
 
 export default defineConfig({
     resolve: {
-        alias: {
-            '@': resolve(__dirname, '.'),
-        },
+        tsconfigPaths: true,
     },
     root: resolve(__dirname),
     build: {
@@ -91,15 +89,12 @@ export default defineConfig({
                 esModule: true,
                 exports: 'named',
                 format: 'esm',
-                preserveModules: true,
+                preserveModules: false,
                 preserveModulesRoot: 'src',
                 strict: true,
             },
             plugins: [preserveDirectives()],
         },
-    },
-    esbuild: {
-        keepNames: true,
     },
     plugins: [
         react(),
