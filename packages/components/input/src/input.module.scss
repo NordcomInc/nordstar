@@ -1,16 +1,16 @@
 .container {
     &:is([data-variant='outline'], :not([data-variant])) {
-        border-width: var(--border-width-small);
+        border-width: var(--nordstar-border-width-small);
 
         &:not(:is([data-color='primary'], [data-color='secondary'])) {
             &[data-color='default'] {
-                --color: hsl(var(--color-foreground-secondary));
-                --color-highlight: hsl(var(--color-foreground-secondary));
+                --color: hsl(var(--nordstar-color-foreground-highlight));
+                --color-highlight: hsl(var(--nordstar-color-foreground-highlight));
             }
 
             &[data-color='foreground'] {
-                --color: hsl(var(--color-foreground-secondary));
-                --color-highlight: hsl(var(--color-foreground));
+                --color: hsl(var(--nordstar-color-foreground-highlight));
+                --color-highlight: hsl(var(--nordstar-color-foreground));
             }
 
             & {
@@ -27,10 +27,10 @@
         }
 
         &[data-color='primary'] {
-            border-color: hsl(var(--color-accent-primary));
+            border-color: hsl(var(--nordstar-color-primary));
         }
         &[data-color='secondary'] {
-            border-color: hsl(var(--color-accent-secondary));
+            border-color: hsl(var(--nordstar-color-secondary));
         }
 
         &:is([data-color='primary'], [data-color='secondary']) {
@@ -45,7 +45,7 @@
             opacity: 1;
 
             &[data-color='default'] {
-                border-color: hsl(var(--color-foreground));
+                border-color: hsl(var(--nordstar-color-foreground));
             }
 
             .label {
@@ -56,29 +56,29 @@
         &:has(.input:invalid) {
             opacity: 1;
 
-            border-color: var(--color-error);
-            color: var(--color-error);
+            border-color: hsl(var(--nordstar-color-error));
+            color: hsl(var(--nordstar-color-error));
 
             .input::placeholder {
-                color: var(--color-error);
+                color: hsl(var(--nordstar-color-error));
             }
         }
     }
 
     &:is([data-variant='solid'], :not([data-variant])) {
-        --background: hsl(var(--color-foreground));
-        --foreground: hsl(var(--color-background));
+        --background: hsl(var(--nordstar-color-foreground));
+        --foreground: hsl(var(--nordstar-color-background));
 
         &[data-color='primary'] {
-            --background: hsl(var(--color-accent-primary));
-            --foreground: hsl(var(--color-accent-primary-foreground));
+            --background: hsl(var(--nordstar-color-primary));
+            --foreground: hsl(var(--nordstar-color-primary-foreground));
         }
         &[data-color='secondary'] {
-            --background: hsl(var(--color-accent-secondary));
-            --foreground: hsl(var(--color-accent-secondary-foreground));
+            --background: hsl(var(--nordstar-color-secondary));
+            --foreground: hsl(var(--nordstar-color-secondary-foreground));
         }
 
-        border-width: var(--border-width-small);
+        border-width: var(--nordstar-border-width-small);
         border-color: var(--background);
 
         color: var(--foreground);
