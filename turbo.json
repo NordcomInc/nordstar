@@ -21,17 +21,9 @@
             "cache": false,
             "persistent": true
         },
-        "lint": {
-            "cache": false,
-            "outputs": [""]
-        },
         "typecheck": {
             "cache": false,
             "dependsOn": ["^typecheck"]
-        },
-        "format": {
-            "cache": false,
-            "dependsOn": ["^format"]
         },
         "start": {
             "persistent": true,
