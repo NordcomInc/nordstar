@@ -11,7 +11,7 @@ export type RelatedProps = {
 export function Related({ of }: RelatedProps) {
     const source = getComponent(of);
     const items = source.related
-        .map((slug) => bySlug.get(slug))
+        .map((slug) => bySlug.get(slug as ComponentSlug))
         .filter((c): c is NonNullable<typeof c> => Boolean(c));
 
     if (items.length === 0) return null;
