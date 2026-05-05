@@ -105,7 +105,7 @@ export const NordstarProvider = ({ theme, children, className, ...props }: Nords
         --nordstar-border-radius:      ${theme.border?.radius ?? '0.45rem'};
         --nordstar-border-radius-half: calc(var(--nordstar-border-radius) / 2);
 
-        --nordstar-layout-page-width:    ${layout?.page?.width ?? '1200px'};
+        --nordstar-layout-page-width:    ${layout?.page?.width ?? 'min(1200px, 100% - 2rem)'};
         --nordstar-layout-page-spacing:  ${layout?.page?.spacing ?? '1rem'};
         --nordstar-layout-page-spacing-half: calc(var(--nordstar-layout-page-spacing) / 2);
 

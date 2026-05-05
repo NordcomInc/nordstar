@@ -50,7 +50,7 @@
     --nordstar-border-width-large: 0.29rem;
     --nordstar-border-radius: 0.45rem;
 
-    --nordstar-layout-page-width: 1200px;
+    --nordstar-layout-page-width: min(1200px, 100% - 2rem);
     --nordstar-layout-page-spacing: 1rem;
     --nordstar-layout-section-spacing: 1rem;
     --nordstar-layout-section-padding: 1.75rem;

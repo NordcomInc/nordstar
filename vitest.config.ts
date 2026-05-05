@@ -1,4 +1,4 @@
-import { dirname, resolve } from 'node:path';
+import { dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { defineConfig } from 'vitest/config';
@@ -34,7 +34,6 @@ const exclude = [
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
-    root: resolve(__dirname),
     optimizeDeps: {
         force: true,
         esbuildOptions: {
@@ -61,8 +60,16 @@ export default defineConfig({
         coverage: {
             exclude,
             provider: 'v8',
-            reporter: ['json', 'json-summary', 'text'],
+            reporter: ['text', 'lcov', 'json'],
             reportOnFailure: true,
+            reportsDirectory: './coverage',
+            thresholds: {
+                autoUpdate: false,
+                branches: 0,
+                functions: 0,
+                lines: 0,
+                statements: 0,
+            },
         },
 
         typecheck: {

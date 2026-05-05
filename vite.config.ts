@@ -6,7 +6,6 @@ import type { Plugin, ResolvedConfig } from 'vite';
 import { defineConfig } from 'vite';
 
 import react from '@vitejs/plugin-react';
-import preserveDirectives from 'rollup-preserve-directives';
 import dts from 'vite-plugin-dts';
 import { libInjectCss } from 'vite-plugin-lib-inject-css';
 
@@ -63,37 +62,26 @@ function hoistUseClient(): Plugin {
 }
 
 export default defineConfig({
+    root: resolve(__dirname),
+    envDir: process.cwd(),
     resolve: {
         tsconfigPaths: true,
     },
-    root: resolve(__dirname),
     build: {
         copyPublicDir: false,
-        cssCodeSplit: true,
-        cssMinify: true,
-        emptyOutDir: true,
+        emptyOutDir: !!process.env.CI,
         minify: false,
         outDir: 'dist',
-        sourcemap: true,
+        sourcemap: 'inline',
         target: 'esnext',
         rollupOptions: {
             treeshake: true,
             output: {
-                intro: (chunk) => {
-                    if (chunk.isEntry && chunk.facadeModuleId?.endsWith('.tsx')) {
-                        return `import 'react';`;
-                    }
-
-                    return '';
-                },
-                esModule: true,
                 exports: 'named',
                 format: 'esm',
-                preserveModules: false,
-                preserveModulesRoot: 'src',
-                strict: true,
-            },
-            plugins: [preserveDirectives()],
+                preserveModules: true,
+                strict: true
+            }
         },
     },
     plugins: [
@@ -104,7 +92,7 @@ export default defineConfig({
             clearPureImport: false,
             copyDtsFiles: true,
             entryRoot: 'src',
-            include: ['**/src', `${__dirname}/@types/declaration.d.ts`],
+            include: ['./**/src', `${__dirname}/@types/declaration.d.ts`],
             insertTypesEntry: true,
             staticImport: true,
             pathsToAliases: true,
