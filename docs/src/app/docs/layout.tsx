@@ -1,5 +1,4 @@
 import { getAvailableComponents } from '@/utils/components';
-import * as Nordstar from '@nordcom/nordstar';
 import { Label } from '@nordcom/nordstar';
 
 import type { Metadata } from 'next';
