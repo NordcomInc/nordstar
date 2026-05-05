@@ -14,6 +14,8 @@ env:
     GITHUB_TOKEN: ${{ secrets.MACHINE_USER }}
     CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
+permissions: write-all
+
 jobs:
     release:
         name: 🚚 Release
@@ -23,6 +25,7 @@ jobs:
               uses: actions/checkout@v6
               with:
                   fetch-depth: 0
+                  submodules: 'recursive'
 
             - name: 📦 Install
               uses: ./.github/common/install
