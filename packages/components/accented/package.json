@@ -98,7 +98,7 @@
         "react-dom": ">=19"
     },
     "devDependencies": {
-        "@types/node": "24.0.10",
+        "@types/node": "24.12.2",
         "@types/react-dom": "19.1.6",
         "@types/react": "19.1.8",
         "react-dom": "19.2.5",
