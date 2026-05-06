@@ -10,7 +10,7 @@
     ],
     "scripts": {
         "build": "next build",
-        "dev": "next dev --turbo",
+        "dev": "next dev",
         "clean": "rm -rf dist coverage .turbo .next *.tsbuildinfo *.log",
         "generate": "concurrently -i pnpm:generate:examples pnpm:generate:props",
         "generate:examples": "tsx scripts/generate-examples.ts",
@@ -50,11 +50,11 @@
     "dependencies": {
         "@mdx-js/loader": "3.1.1",
         "@mdx-js/react": "3.1.1",
-        "@next/mdx": "15.5.15",
+        "@next/mdx": "16.0.3",
         "@nordcom/nordstar": "workspace:*",
         "clsx": "2.1.1",
         "geist": "1.7.0",
-        "next": "15.5.15",
+        "next": "16.2.4",
         "next-mdx-remote": "6.0.0",
         "react": "19.2.5",
         "react-dom": "19.2.5",
