@@ -38,9 +38,9 @@ export function PropsTable({ component }: PropsTableProps) {
     }
 
     return (
-        <div className="my-6 overflow-x-auto rounded-lg border border-background-highlight">
-            <table className="w-full text-left text-sm">
-                <thead className="border-b border-background-highlight bg-background-highlight/30">
+        <div className="my-6 overflow-x-auto rounded-lg-2 border border-foreground-highlight">
+            <table className="w-full table-auto text-left text-sm">
+                <thead className="bg-background-highlight/30">
                     <tr>
                         <th className="px-3 py-2 font-medium">Prop</th>
                         <th className="px-3 py-2 font-medium">Type</th>
@@ -50,13 +50,13 @@ export function PropsTable({ component }: PropsTableProps) {
                 </thead>
                 <tbody>
                     {rows.map((p) => (
-                        <tr key={p.name} className="border-t border-background-highlight/50">
+                        <tr className="border-foreground-highlight/50 border-t" key={p.name}>
                             <td className="px-3 py-2 font-mono text-xs">
                                 {p.name}
                                 {p.required ? <span className="text-primary"> *</span> : null}
                             </td>
-                            <td className="px-3 py-2 font-mono text-xs text-foreground-highlight">{p.type || '—'}</td>
-                            <td className="px-3 py-2 font-mono text-xs text-foreground-highlight">
+                            <td className="px-3 py-2 font-mono text-foreground-highlight text-xs">{p.type || '—'}</td>
+                            <td className="px-3 py-2 font-mono text-foreground-highlight text-xs">
                                 {p.defaultValue ?? '—'}
                             </td>
                             <td className="px-3 py-2 text-foreground-highlight">{p.description || '—'}</td>

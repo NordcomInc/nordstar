@@ -15,19 +15,19 @@ export function Install({ package: pkg }: { package: string }) {
     const cmd = MANAGERS.find((m) => m.id === active)!.cmd(pkg);
 
     return (
-        <div className="my-6 overflow-hidden rounded-lg border border-background-highlight">
-            <div className="flex border-b border-background-highlight">
+        <div className="my-6 overflow-hidden border-2 border-foreground-highlight">
+            <div className="flex border-background-highlight border-b-2">
                 {MANAGERS.map((m) => (
                     <button
-                        key={m.id}
-                        type="button"
-                        onClick={() => setActive(m.id)}
                         className={
-                            'px-4 py-2 text-xs transition-colors ' +
+                            'px-4 py-2 text-xs transition-colors' +
                             (active === m.id
-                                ? 'text-foreground border-b-2 border-primary'
+                                ? 'border-primary border-b-2 text-foreground'
                                 : 'text-foreground-highlight hover:text-foreground')
                         }
+                        key={m.id}
+                        onClick={() => setActive(m.id)}
+                        type="button"
                     >
                         {m.label}
                     </button>

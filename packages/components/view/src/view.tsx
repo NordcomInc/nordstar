@@ -25,7 +25,7 @@ const View = forwardRef<'main', ViewProps>(
                 ref={ref}
                 {...props}
                 className={cn(
-                    'mx-auto my-3 w-full max-w-[var(--nordstar-layout-page-width)] overflow-hidden',
+                    'mx-auto my-3 flex w-full max-w-[var(--nordstar-layout-page-width)] flex-col gap-8 overflow-hidden',
                     className,
                 )}
             />

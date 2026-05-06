@@ -1,10 +1,9 @@
-import 'server-only';
+import { type ExampleName, examples } from '@/examples/registry.generated';
+import { Card } from '@nordcom/nordstar';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import 'server-only';
 import { codeToHtml } from 'shiki';
-
-import { examples, type ExampleName } from '@/examples/registry.generated';
-
 import { PreviewActions } from './preview-actions';
 
 const EXAMPLES_ROOT = path.resolve(process.cwd(), 'src', 'examples');
@@ -34,20 +33,26 @@ export async function Preview({ name, caption }: PreviewProps) {
     });
 
     return (
-        <figure className="my-6 overflow-hidden rounded-lg border border-background-highlight">
-            {caption ? (
-                <figcaption className="px-4 py-2 text-foreground-highlight text-xs">{caption}</figcaption>
-            ) : null}
-            <div className="flex items-center justify-center bg-background p-8">
-                <Example />
+        <Card
+            as={'figure'}
+            className="overflow-hidden rounded-none border-2 border-foreground-highlight border-solid p-0"
+        >
+            <div className="flex min-h-16 flex-col items-stretch justify-start">
+                {caption ? (
+                    <figcaption className="px-5 pt-3 text-foreground-highlight text-xs">{caption}</figcaption>
+                ) : null}
+                <div className="p-5">
+                    <Example />
+                </div>
+
+                <div className="bg-background-highlight/50 p-5 pt-0">
+                    <PreviewActions source={source} />
+                    <div
+                        className="overflow-x-auto text-sm leading-relaxed [&_pre]:bg-transparent!"
+                        dangerouslySetInnerHTML={{ __html: html }}
+                    />
+                </div>
             </div>
-            <div className="border-t border-background-highlight">
-                <PreviewActions source={source} />
-                <div
-                    className="overflow-x-auto px-4 py-3 text-sm leading-relaxed [&_pre]:!bg-transparent"
-                    dangerouslySetInnerHTML={{ __html: html }}
-                />
-            </div>
-        </figure>
+        </Card>
     );
 }

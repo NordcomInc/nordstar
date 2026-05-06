@@ -16,7 +16,7 @@ const Header = ({ sticky = true, className, children, ...props }: HeaderProps) =
             as="header"
             borderless={true}
             className={cn(
-                'z-10 mb-3 flex min-h-20 w-full items-center justify-center rounded-none border-0 border-none bg-background/95 px-3 py-2 backdrop-blur supports-[backdrop-filter]:bg-background/75 md:h-20',
+                'z-10 mb-3 flex min-h-20 w-full flex-1 grow items-center justify-center rounded-none border-0 border-none bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/75 md:h-20',
                 sticky &&
                     'sticky inset-0 bottom-auto z-40 border-0 border-background-highlight border-b-2 border-solid',
                 className,
@@ -26,7 +26,7 @@ const Header = ({ sticky = true, className, children, ...props }: HeaderProps) =
             <View
                 as="div"
                 className={cn(
-                    'm-0 grid h-full w-full max-w-[var(--nordstar-layout-page-width)] grid-cols-[1fr] items-center justify-center gap-3 border-0 border-none p-0 md:grid-cols-[1fr_auto]',
+                    'm-0 grid h-full w-full max-w-(--nordstar-layout-page-width) grid-cols-[1fr] items-center justify-center gap-3 border-0 border-none p-0 md:grid-cols-[1fr_auto]',
                 )}
                 withoutWrapper={true}
             >

@@ -23,7 +23,7 @@
         "build:packages": "turbo build --filter=!@nordcom/nordstar-docs",
         "typecheck": "turbo typecheck",
         "lint": "biome lint .",
-        "format": "biome format --write .",
+        "format": "biome format --unsafe --write .",
         "check": "biome check --write .",
         "ci": "biome ci .",
         "test": "vitest run --coverage",

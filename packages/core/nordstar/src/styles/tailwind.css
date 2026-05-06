@@ -61,7 +61,6 @@
     font-family: var(--font-sans);
     font-size: 16px;
     color: hsl(var(--nordstar-color-foreground, 0 0% 100%));
-
     background: hsl(var(--nordstar-color-background, 0 0% 0%));
 }
 

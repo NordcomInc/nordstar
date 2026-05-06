@@ -1,6 +1,6 @@
 'use client';
 
-import { Children, isValidElement, useState, type ReactElement, type ReactNode } from 'react';
+import { Children, isValidElement, type ReactElement, type ReactNode, useState } from 'react';
 
 export type TabPaneProps = {
     label: string;
@@ -20,19 +20,19 @@ export function Tabs({ children }: { children: ReactNode }) {
     if (panes.length === 0) return null;
 
     return (
-        <div className="my-6 overflow-hidden rounded-lg border border-background-highlight">
-            <div className="flex border-b border-background-highlight">
+        <div className="my-6 overflow-hidden rounded-lg border-2 border-foreground-highlight">
+            <div className="flex border-background-highlight border-b-2">
                 {panes.map((p, i) => (
                     <button
-                        key={i}
-                        type="button"
-                        onClick={() => setActive(i)}
                         className={
-                            'px-4 py-2 text-xs transition-colors ' +
+                            'px-3 py-1text-xs transition-colors' +
                             (active === i
-                                ? 'text-foreground border-b-2 border-primary'
+                                ? 'border-primary border-b-2 text-foreground'
                                 : 'text-foreground-highlight hover:text-foreground')
                         }
+                        key={i}
+                        onClick={() => setActive(i)}
+                        type="button"
                     >
                         {p.props.label}
                     </button>

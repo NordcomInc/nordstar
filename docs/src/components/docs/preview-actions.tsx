@@ -16,11 +16,11 @@ export function PreviewActions({ source }: { source: string }) {
     }
 
     return (
-        <div className="flex items-center justify-end px-2 py-1">
+        <div className="flex items-center justify-end">
             <button
-                type="button"
+                className="rounded-md p-3 text-foreground-highlight text-xs transition-colors hover:bg-background-highlight hover:text-foreground"
                 onClick={copy}
-                className="rounded-md px-2 py-1 text-xs text-foreground-highlight hover:bg-background-highlight hover:text-foreground transition-colors"
+                type="button"
             >
                 {copied ? 'Copied' : 'Copy'}
             </button>

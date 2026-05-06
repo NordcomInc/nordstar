@@ -15,8 +15,8 @@ function MdxLink({ href = '', children, ...rest }: AnchorHTMLAttributes<HTMLAnch
     if (internal) {
         return (
             <Link
-                href={href as Parameters<typeof Link>[0]['href']}
                 className="text-primary underline underline-offset-4 hover:no-underline"
+                href={href as Parameters<typeof Link>[0]['href']}
                 {...rest}
             >
                 {children}
@@ -25,10 +25,10 @@ function MdxLink({ href = '', children, ...rest }: AnchorHTMLAttributes<HTMLAnch
     }
     return (
         <a
-            href={href}
-            target="_blank"
-            rel="noreferrer noopener"
             className="text-primary underline underline-offset-4 hover:no-underline"
+            href={href}
+            rel="noreferrer noopener"
+            target="_blank"
             {...rest}
         >
             {children}
@@ -52,22 +52,22 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
 
         // Markdown overrides
         a: MdxLink,
-        h1: (props) => <h1 className="mt-2 mb-4 text-3xl font-semibold tracking-tight" {...props} />,
-        h2: (props) => <h2 className="mt-10 mb-3 text-2xl font-semibold tracking-tight" {...props} />,
-        h3: (props) => <h3 className="mt-8 mb-2 text-xl font-medium" {...props} />,
-        h4: (props) => <h4 className="mt-6 mb-2 text-lg font-medium" {...props} />,
-        p: (props) => <p className="my-3 text-base leading-relaxed text-foreground-highlight" {...props} />,
-        ul: (props) => <ul className="my-3 list-disc pl-6 text-foreground-highlight" {...props} />,
-        ol: (props) => <ol className="my-3 list-decimal pl-6 text-foreground-highlight" {...props} />,
-        li: (props) => <li className="my-1" {...props} />,
         blockquote: (props) => (
             <blockquote
-                className="my-4 border-l-2 border-primary/60 pl-4 text-foreground-highlight italic"
+                className="my-4 border-primary/60 border-l-2 pl-4 text-foreground-highlight italic"
                 {...props}
             />
         ),
         code: (props) => (
             <code className="rounded bg-background-highlight/40 px-1 py-0.5 font-mono text-[0.9em]" {...props} />
         ),
+        h1: (props) => <h1 className="mt-2 mb-4 font-semibold text-3xl tracking-tight" {...props} />,
+        h2: (props) => <h2 className="mt-10 mb-3 font-semibold text-2xl tracking-tight" {...props} />,
+        h3: (props) => <h3 className="mt-8 mb-2 font-medium text-xl" {...props} />,
+        h4: (props) => <h4 className="mt-6 mb-2 font-medium text-lg" {...props} />,
+        li: (props) => <li className="my-1" {...props} />,
+        ol: (props) => <ol className="my-3 list-decimal pl-6 text-foreground-highlight" {...props} />,
+        p: (props) => <p className="mt-3 text-base text-foreground-highlight leading-relaxed" {...props} />,
+        ul: (props) => <ul className="my-3 list-disc pl-6 text-foreground-highlight" {...props} />,
     };
 }

@@ -6,7 +6,7 @@ import type { ReactNode } from 'react';
 
 const variants = cva(
     cn(
-        'flex w-fit select-none appearance-none items-center justify-center gap-3 rounded-lg border-2 border-solid px-4 py-2 text-center font-bold text-sm no-underline transition-all',
+        'flex w-fit select-none appearance-none items-center justify-center gap-3 rounded-sm border-2 border-solid px-4 py-2 text-center font-bold text-sm no-underline transition-all',
     ),
     {
         compoundVariants: [
