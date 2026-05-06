@@ -62,7 +62,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
             <code className="rounded bg-background-highlight/40 px-1 py-0.5 font-mono text-[0.9em]" {...props} />
         ),
         h1: (props) => <h1 className="mt-2 mb-4 font-semibold text-3xl tracking-tight" {...props} />,
-        h2: (props) => <h2 className="mt-10 mb-3 font-semibold text-2xl tracking-tight" {...props} />,
+        h2: (props) => <h2 className="mt-6 mb-3 font-semibold text-2xl tracking-tight" {...props} />,
         h3: (props) => <h3 className="mt-8 mb-2 font-medium text-xl" {...props} />,
         h4: (props) => <h4 className="mt-6 mb-2 font-medium text-lg" {...props} />,
         li: (props) => <li className="my-1" {...props} />,

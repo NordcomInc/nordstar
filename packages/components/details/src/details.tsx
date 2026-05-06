@@ -20,12 +20,12 @@ export type DetailsProps = {
 const Details = forwardRef<typeof Card, DetailsProps>(({ label, className, children, ...props }, ref) => {
     return (
         <Card as="details" ref={ref} {...props} className={cn(styles.container, className)} color="foreground">
-            <summary>
+            <summary className="flex flex-row">
                 <Label as="div" className={styles.label}>
                     {label}
                 </Label>
             </summary>
-            <div className={styles.content}>{children}</div>
+            <div className={cn(styles.content, 'flex w-full')}>{children}</div>
         </Card>
     );
 });

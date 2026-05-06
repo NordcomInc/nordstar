@@ -5,7 +5,7 @@ import { cva } from 'class-variance-authority';
 import type { ComponentProps, HTMLAttributes } from 'react';
 
 const variants = cva(
-    cn('group relative flex-col gap-8 overflow-hidden overflow-clip rounded-xl border-2 border-solid font-body'),
+    cn('group relative flex-col overflow-hidden overflow-clip rounded-xl border-2 border-solid font-body'),
     {
         compoundVariants: [
             {

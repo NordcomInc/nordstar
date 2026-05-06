@@ -38,9 +38,7 @@ export async function Preview({ name, caption }: PreviewProps) {
             className="overflow-hidden rounded-none border-2 border-foreground-highlight border-solid p-0"
         >
             <div className="flex min-h-16 flex-col items-stretch justify-start">
-                {caption ? (
-                    <figcaption className="px-5 pt-3 text-foreground-highlight text-xs">{caption}</figcaption>
-                ) : null}
+                {caption ? <figcaption className="p-5 text-foreground-highlight text-xs">{caption}</figcaption> : null}
                 <div className="p-5">
                     <Example />
                 </div>
