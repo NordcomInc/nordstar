@@ -49,7 +49,7 @@ packages/**/*.backup.ts
 apps/**/sitemap.xml
 
 # turbo
-.turbo
+.turbo/
 packages/**/.turbo
 
 # content layer
