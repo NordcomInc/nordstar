@@ -51,7 +51,7 @@ export default defineConfig({
         maxConcurrency: 16,
         passWithNoTests: true,
         silent: false,
-        reporters: [...reporters, ...extraReporters, 'github-actions'],
+        reporters: [...reporters, ...extraReporters],
 
         pool: 'threads',
 
@@ -60,7 +60,7 @@ export default defineConfig({
         coverage: {
             exclude,
             provider: 'v8',
-            reporter: ['text', 'lcov', 'json'],
+            reporter: ['text', 'lcov', 'json', 'json-summary'],
             reportOnFailure: true,
             reportsDirectory: './coverage',
             thresholds: {

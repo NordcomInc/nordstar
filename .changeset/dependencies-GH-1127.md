@@ -11,7 +11,6 @@
 "@nordcom/nordstar-view": patch
 "@nordcom/nordstar": patch
 "@nordcom/nordstar-system": patch
-"@nordcom/nordstar-storybook": patch
 ---
 
 Deps: Update dependency postcss to v8.5.14.

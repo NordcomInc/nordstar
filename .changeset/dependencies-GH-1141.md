@@ -9,7 +9,6 @@
 "@nordcom/nordstar-label": patch
 "@nordcom/nordstar-view": patch
 "@nordcom/nordstar": patch
-"@nordcom/nordstar-storybook": patch
 ---
 
 Deps: Update dependency vite-plugin-dts to v5.

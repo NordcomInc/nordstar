@@ -11,7 +11,6 @@
 '@nordcom/nordstar-label': patch
 '@nordcom/nordstar-view': patch
 '@nordcom/nordstar-docs': patch
-'@nordcom/nordstar-storybook': patch
 ---
 
 Replace ESLint and Prettier with Biome 2.x. Single root `biome.jsonc` covers linting and formatting; turbo no longer orchestrates lint/format; CI now runs `biome ci`. Source files reformatted (trailing commas, sorted Tailwind classes, organized imports). No public API changes.

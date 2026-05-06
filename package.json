@@ -68,9 +68,6 @@
         "*.{js,jsx,ts,tsx,css,json}": [
             "biome check --no-errors-on-unmatched --write --unsafe",
             "biome check --no-errors-on-unmatched"
-        ],
-        "*.{js,jsx,ts,tsx}": [
-            "vitest related --run"
         ]
     },
     "homepage": "https://nordcominc.github.io/nordstar/",
