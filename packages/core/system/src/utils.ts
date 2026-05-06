@@ -1,7 +1,13 @@
 import type { ClassValue } from 'clsx';
 import { clsx } from 'clsx';
 import type { WeakValidationMap } from 'prop-types';
-import type { ComponentPropsWithoutRef, ElementType, ForwardRefRenderFunction, ReactElement } from 'react';
+import type {
+    ComponentPropsWithoutRef,
+    ElementType,
+    ForwardRefRenderFunction,
+    PropsWithoutRef,
+    ReactElement,
+} from 'react';
 import { forwardRef as baseForwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 
@@ -58,9 +64,11 @@ export type CSSCustomProperties = {
 export function forwardRef<Component extends As, Props extends object, OmitKeys extends PropertyKey = never>(
     component: ForwardRefRenderFunction<
         unknown,
-        RightJoinProps<PropsOf<Component>, Props> & {
-            as?: As;
-        }
+        PropsWithoutRef<
+            RightJoinProps<PropsOf<Component>, Props> & {
+                as?: As;
+            }
+        >
     >,
 ) {
     return baseForwardRef(component) as unknown as InternalForwardRefRenderFunction<Component, Props, OmitKeys>;
