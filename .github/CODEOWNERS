@@ -1,20 +1,20 @@
 # Code
-/docs/                      filiph@nordcom.io
-/packages/core/             filiph@nordcom.io
-/packages/components/       filiph@nordcom.io
+/docs/                      filfat@hotmail.se
+/packages/core/             filfat@hotmail.se
+/packages/components/       filfat@hotmail.se
 
 # Documentation
-/SECURITY.md                filiph@nordcom.io
+/SECURITY.md                filfat@hotmail.se
 
 # Tooling
-/plop/                      filiph@nordcom.io
-/.husky/                    filiph@nordcom.io
-/.vscode/                   
-/.eslintrc                  filiph@nordcom.io
-/.lintstagedrc.mjs          
-/.nvmrc                     filiph@nordcom.io
-/.npmrc                     filiph@nordcom.io
-/.renovaterc                filiph@nordcom.io
-package.json                
-/plopfile.js                filiph@nordcom.io
-/tsconfig.json              filiph@nordcom.io
+/plop/                      filfat@hotmail.se
+/.husky/                    filfat@hotmail.se
+/.vscode/
+/.eslintrc                  filfat@hotmail.se
+/.lintstagedrc.mjs
+/.nvmrc                     filfat@hotmail.se
+/.npmrc                     filfat@hotmail.se
+/.renovaterc                filfat@hotmail.se
+package.json
+/plopfile.js                filfat@hotmail.se
+/tsconfig.json              filfat@hotmail.se
