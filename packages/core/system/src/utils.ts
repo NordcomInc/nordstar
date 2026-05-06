@@ -5,13 +5,13 @@ import type { ComponentPropsWithoutRef, ElementType, ForwardRefRenderFunction, R
 import { forwardRef as baseForwardRef } from 'react';
 import { twMerge } from 'tailwind-merge';
 
-export type As<Props = any> = ElementType<Props>;
+export type As = ElementType;
 
 export type PropsOf<T extends As> = ComponentPropsWithoutRef<T> & {
     as?: As;
 };
 
-export type OmitCommonProps<Target, OmitAdditionalProps extends keyof any = never> = Omit<
+export type OmitCommonProps<Target, OmitAdditionalProps extends PropertyKey = never> = Omit<
     Target,
     'as' | OmitAdditionalProps
 >;
@@ -34,7 +34,7 @@ export type MergeWithAs<
 export type InternalForwardRefRenderFunction<
     Component extends As,
     Props extends object = {},
-    OmitKeys extends keyof any = never,
+    OmitKeys extends PropertyKey = never,
 > = {
     <AsComponent extends As = Component>(
         props: MergeWithAs<
@@ -44,6 +44,7 @@ export type InternalForwardRefRenderFunction<
             AsComponent
         >,
     ): ReactElement | null;
+    // biome-ignore lint/style/useNamingConvention: React internal symbol marker
     readonly $$typeof: symbol;
     defaultProps?: Partial<Props> | undefined;
     propTypes?: WeakValidationMap<Props> | undefined;
@@ -54,15 +55,15 @@ export type CSSCustomProperties = {
     [key: `--${string}`]: string | number;
 } & React.CSSProperties;
 
-export function forwardRef<Component extends As, Props extends object, OmitKeys extends keyof any = never>(
+export function forwardRef<Component extends As, Props extends object, OmitKeys extends PropertyKey = never>(
     component: ForwardRefRenderFunction<
-        any,
+        unknown,
         RightJoinProps<PropsOf<Component>, Props> & {
             as?: As;
         }
     >,
 ) {
-    return baseForwardRef(component as any) as InternalForwardRefRenderFunction<Component, Props, OmitKeys>;
+    return baseForwardRef(component) as unknown as InternalForwardRefRenderFunction<Component, Props, OmitKeys>;
 }
 
 export function cn(...inputs: ClassValue[]) {

@@ -1,5 +1,5 @@
 import { Input } from '@nordcom/nordstar';
 
 export default function Example() {
-    return <Input type="text" label="Company Name" />;
+    return <Input label="Company Name" type="text" />;
 }

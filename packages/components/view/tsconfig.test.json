@@ -1,10 +1,10 @@
 {
     "$schema": "https://json.schemastore.org/tsconfig",
+    "exclude": ["**/node_modules", "**/dist", "**/.turbo", "**/coverage", "**/build", "**/public"],
     "extends": "./tsconfig.json",
 
     "include": ["src/**/*.test.*"],
     "compilerOptions": {
         "types": ["vitest/globals"]
-    },
-    "exclude": ["**/node_modules", "**/dist", "**/.turbo", "**/coverage", "**/build", "**/public"]
+    }
 }

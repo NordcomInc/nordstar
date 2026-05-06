@@ -43,7 +43,7 @@ async function main() {
     lines.push('} as const;', '', 'export type ExampleName = keyof typeof examples;', '');
 
     await fs.writeFile(REGISTRY_PATH, lines.join('\n'), 'utf8');
-    console.log(`Wrote ${entries.length} example entries to ${path.relative(process.cwd(), REGISTRY_PATH)}`);
+    console.info(`Wrote ${entries.length} example entries to ${path.relative(process.cwd(), REGISTRY_PATH)}`);
 }
 
 main().catch((err) => {

@@ -1,8 +1,8 @@
-import { components } from '@/content/component-meta';
 import { Label, View } from '@nordcom/nordstar';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import { components } from '@/content/component-meta';
 
 export const metadata: Metadata = {
     metadataBase: new URL(`https://nordcominc.github.io/nordstar/docs/`),

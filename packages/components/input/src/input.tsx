@@ -4,7 +4,7 @@ import type { As, NordstarColor } from '@nordcom/nordstar-system';
 import { cn, forwardRef } from '@nordcom/nordstar-system';
 import type { VariantProps } from 'class-variance-authority';
 import { cva } from 'class-variance-authority';
-import type { HTMLInputTypeAttribute } from 'react';
+import type { ChangeEvent, HTMLAttributes, HTMLInputTypeAttribute } from 'react';
 import { useEffect, useState } from 'react';
 import styles from './input.module.scss';
 
@@ -158,7 +158,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                 ) : null}
 
                 <Tag
-                    {...(props as any)}
+                    {...(props as HTMLAttributes<HTMLElement>)}
                     {...(as !== 'textarea'
                         ? 'type' in props
                             ? { type: props.type || 'text' }
@@ -170,7 +170,9 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                         label && as !== 'textarea' && 'absolute inset-y-0 h-15 pt-3',
                         as === 'textarea' && 'h-full min-h-20 leading-normal',
                     )}
-                    onChange={(e: any) => e?.target && setContents(e.target.value)}
+                    onChange={(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
+                        e?.target && setContents(e.target.value)
+                    }
                     placeholder={placeholder}
                     ref={ref}
                     value={contents || undefined}

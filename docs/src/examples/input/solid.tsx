@@ -1,5 +1,5 @@
 import { Input } from '@nordcom/nordstar';
 
 export default function Example() {
-    return <Input variant="solid" type="text" defaultValue="hello world!" />;
+    return <Input defaultValue="hello world!" type="text" variant="solid" />;
 }

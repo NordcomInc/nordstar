@@ -49,7 +49,7 @@ async function listComponentEntries(): Promise<{ slug: string; name: string; fil
         const file = path.join(COMPONENTS_DIR, d.name, 'src', `${d.name}.tsx`);
         try {
             await fs.access(file);
-            out.push({ slug: d.name, name: pascalCase(d.name), file });
+            out.push({ name: pascalCase(d.name), slug: d.name, file });
         } catch {
             // skip — no top-level <name>.tsx
         }
@@ -123,11 +123,11 @@ function extractProps(file: string, name: string, checker: ts.TypeChecker, progr
         const optional = (flags & ts.SymbolFlags.Optional) !== 0;
 
         props[prop.name] = {
+            defaultValue: getDefaultTag(prop),
+            description: getJsDoc(prop, checker),
             name: prop.name,
             required: !optional,
-            description: getJsDoc(prop, checker),
             type: typeToString(propType, checker),
-            defaultValue: getDefaultTag(prop),
         };
     }
 
@@ -142,8 +142,8 @@ async function main() {
     const entries = await listComponentEntries();
     const options = readTsConfig();
     const program = ts.createProgram({
-        rootNames: entries.map((e) => e.file),
         options: { ...options, noEmit: true },
+        rootNames: entries.map((e) => e.file),
     });
     const checker = program.getTypeChecker();
 
@@ -159,8 +159,8 @@ async function main() {
     }
 
     await fs.mkdir(path.dirname(OUT), { recursive: true });
-    await fs.writeFile(OUT, JSON.stringify(out, null, 4) + '\n', 'utf8');
-    console.log(`Wrote props for ${Object.keys(out).length} components to ${path.relative(process.cwd(), OUT)}`);
+    await fs.writeFile(OUT, `${JSON.stringify(out, null, 4)}\n`, 'utf8');
+    console.info(`Wrote props for ${Object.keys(out).length} components to ${path.relative(process.cwd(), OUT)}`);
     if (missing.length > 0) {
         console.warn(`Missing <Name>Props type for: ${missing.join(', ')}`);
     }

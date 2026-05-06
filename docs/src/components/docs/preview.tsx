@@ -1,7 +1,7 @@
-import { type ExampleName, examples } from '@/examples/registry.generated';
-import { Card } from '@nordcom/nordstar';
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { Card } from '@nordcom/nordstar';
+import { type ExampleName, examples } from '@/examples/registry.generated';
 import 'server-only';
 import { codeToHtml } from 'shiki';
 import { PreviewActions } from './preview-actions';
