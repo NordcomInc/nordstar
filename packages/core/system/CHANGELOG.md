@@ -1,5 +1,23 @@
 # @nordcom/nordstar-system
 
+## 0.0.74
+
+### Patch Changes
+
+- [`8462d28`](https://github.com/NordcomInc/nordstar/commit/8462d2814ba94a98a5f4919105cf2ba53948c54f) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix publishing.
+
+- [#1116](https://github.com/NordcomInc/nordstar/pull/1116) [`4b8f4b5`](https://github.com/NordcomInc/nordstar/commit/4b8f4b5c3df3d3bd0b4a63e1f28dcb2988884f05) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency prettier to v3.8.3.
+
+- [#1127](https://github.com/NordcomInc/nordstar/pull/1127) [`541a54c`](https://github.com/NordcomInc/nordstar/commit/541a54c0fda9525bd08b701e47afdc7d891c127a) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency postcss to v8.5.14.
+
+- [`956120e`](https://github.com/NordcomInc/nordstar/commit/956120e1687551663b9359e3ee639a2f25b0b940) Thanks [@filiphsps](https://github.com/filiphsps)! - Replace ESLint and Prettier with Biome 2.x. Single root `biome.jsonc` covers linting and formatting; turbo no longer orchestrates lint/format; CI now runs `biome ci`. Source files reformatted (trailing commas, sorted Tailwind classes, organized imports). No public API changes.
+
+- [#1161](https://github.com/NordcomInc/nordstar/pull/1161) [`79c8058`](https://github.com/NordcomInc/nordstar/commit/79c80587d8aa8867231b89a756303b10c14d15b5) Thanks [@filiphsps](https://github.com/filiphsps)! - Bump requirement to react 19.
+
+- [`ee84e1a`](https://github.com/NordcomInc/nordstar/commit/ee84e1a9446d90d634b6b55fc649e06136b5c1ce) Thanks [@filiphsps](https://github.com/filiphsps)! - Update homepage.
+
+- [#1156](https://github.com/NordcomInc/nordstar/pull/1156) [`6bae752`](https://github.com/NordcomInc/nordstar/commit/6bae75216fcf66d3144c4d67157cb31615df320d) Thanks [@filiphsps](https://github.com/filiphsps)! - Migrate to Tailwind v4 consumer DX. The lib now ships a `tailwind.css` contract (`@theme` + `@source`) for Tailwind v4 users and a precompiled `styles.css` for non-Tailwind users. Consumers no longer maintain a duplicate `tailwind.config.cjs` — instead, `@import "@nordcom/nordstar"` in their main CSS does it all. Runtime CSS variables move to the `--nordstar-*` namespace; the `<NordstarProvider/>` React API is unchanged.
+
 ## 0.0.73
 
 ### Patch Changes
@@ -353,15 +371,16 @@
 - [#397](https://github.com/NordcomInc/nordstar/pull/397) [`1993898`](https://github.com/NordcomInc/nordstar/commit/19938982af7abd2c4538001223c9e413b4c63961) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency typescript to v5.4.3.
 
 - [#388](https://github.com/NordcomInc/nordstar/pull/388) [`34dc5fb`](https://github.com/NordcomInc/nordstar/commit/34dc5fb8ae5080a72743f88f4c25c431aca3e5f8) Thanks [@filiphsps](https://github.com/filiphsps)! - - Improve testing setup to be more reliable and consistent.
-    - Substantially improve both the output from the transpiler/compiler and the built type definitions.
+  - Substantially improve both the output from the transpiler/compiler and the built type definitions.
 
 ## 0.0.43
 
 ### Patch Changes
 
 - [`11e5754`](https://github.com/NordcomInc/nordstar/commit/11e575480178c327aa95f1a13bb832c56c634d2b) Thanks [@filiphsps](https://github.com/filiphsps)! - - Improve exports.
-    - Fix types.
-    - Improve build output.
+
+  - Fix types.
+  - Improve build output.
 
 - [#374](https://github.com/NordcomInc/nordstar/pull/374) [`0b2ef6d`](https://github.com/NordcomInc/nordstar/commit/0b2ef6d8424b8a617ff560701d4b94499391b10a) Thanks [@filiphsps](https://github.com/filiphsps)! - - Substantially improve testing.
 
@@ -370,12 +389,13 @@
 ### Patch Changes
 
 - [#369](https://github.com/NordcomInc/nordstar/pull/369) [`85cda90`](https://github.com/NordcomInc/nordstar/commit/85cda9069f19cba8f3da958b02878cea549e48c8) Thanks [@filiphsps](https://github.com/filiphsps)! - - Remove `clean-package` and replace it with `publishConfig` _(this still needs testing)_.
-    - Switch from `"jsx": "preserve"` to `"jsx": "react-jsx"`.
-    - Substantially improve both the `vite` and `typescript` configurations.
-        - Use `references` instead of `extends` in `tsconfig.json`s. This allows for better type checking and faster builds.
-        - Properly create `entry` and `rollupOptions`' `input` file lists. This fixes a bunch of issues.
-        - Define `__dirname`, we previously tried using `__dirname ` under esm which is not supported, somehow it didn't error or break the build but it's fixed now anyway.
-    - Some groundwork done to eventually support [`jsr.io`](https://jsr.io/@nordcom)
+
+  - Switch from `"jsx": "preserve"` to `"jsx": "react-jsx"`.
+  - Substantially improve both the `vite` and `typescript` configurations.
+    - Use `references` instead of `extends` in `tsconfig.json`s. This allows for better type checking and faster builds.
+    - Properly create `entry` and `rollupOptions`' `input` file lists. This fixes a bunch of issues.
+    - Define `__dirname`, we previously tried using `__dirname ` under esm which is not supported, somehow it didn't error or break the build but it's fixed now anyway.
+  - Some groundwork done to eventually support [`jsr.io`](https://jsr.io/@nordcom)
 
 - [#367](https://github.com/NordcomInc/nordstar/pull/367) [`bd8b007`](https://github.com/NordcomInc/nordstar/commit/bd8b0079663eeb080e97f623ebec953061bc4e74) Thanks [@filiphsps](https://github.com/filiphsps)! - Meta: Migrate to `bun` from `npm`.
 
@@ -471,7 +491,7 @@
 
 - [`254168f`](https://github.com/NordcomInc/nordstar/commit/254168fe9b427ea56eef3c20185eb597df1ebb73) Thanks [@filiphsps](https://github.com/filiphsps)! - Add a modern (the-new-css-reset) style reset to `nordstar-system`.
 
-    See https://github.com/elad2412/the-new-css-reset.
+  See https://github.com/elad2412/the-new-css-reset.
 
 - [`961f9af`](https://github.com/NordcomInc/nordstar/commit/961f9af6d41ba187c928598ba17dc59782b5ba30) Thanks [@filiphsps](https://github.com/filiphsps)! - Improve general styling across all Nordstar components.
 
@@ -498,9 +518,9 @@
 ### Patch Changes
 
 - [#108](https://github.com/NordcomInc/nordstar/pull/108) [`2885663`](https://github.com/NordcomInc/nordstar/commit/28856638ececea0f598cf5f418456f8fd2f2114d) Thanks [@filiphsps](https://github.com/filiphsps)! - - Update release tooling, this should hopefully fix the issue with wildcard (`*`) dependencies. I will have to push a new release to verify.
-    - Completely refactored how packages are built, exported and reimported. We will have to look into a better way to deal with `clean-package` as we'd eventually like to be able to export the `scss`/`css` modules as well.
-        - Fixes code duplication inside of `@nordcom/nordstar`.
-        - No longer embeds jsx-runtime into every package.
+  - Completely refactored how packages are built, exported and reimported. We will have to look into a better way to deal with `clean-package` as we'd eventually like to be able to export the `scss`/`css` modules as well.
+    - Fixes code duplication inside of `@nordcom/nordstar`.
+    - No longer embeds jsx-runtime into every package.
 
 ## 0.0.14
 
@@ -531,7 +551,7 @@
 
 - [#72](https://github.com/NordcomInc/nordstar/pull/72) [`b98011e`](https://github.com/NordcomInc/nordstar/commit/b98011e2b7b3bb992d5db3bfe64abccc9ff72596) Thanks [@filiphsps](https://github.com/filiphsps)! - Use typescript codebase directly during development internally.
 
-    The `exports` get automatically replaced during packaging as a part of running `clean-package` in the `prepack` and `postpack` script(s).
+  The `exports` get automatically replaced during packaging as a part of running `clean-package` in the `prepack` and `postpack` script(s).
 
 ## 0.0.10
 
