@@ -35,5 +35,13 @@ describe('components', () => {
             expect(wrapper.container.outerHTML).toContain('custom-inner-class');
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('renders without the wrapper element when withoutWrapper is set', () => {
+            const wrapper = render(<View as="section" outerAs="header" withoutWrapper={true} />);
+
+            expect(wrapper.container.firstElementChild?.tagName).toBe('SECTION');
+            expect(wrapper.container.outerHTML).not.toContain('<header');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 });

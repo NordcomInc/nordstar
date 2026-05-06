@@ -1,0 +1,8 @@
+pnpm run clean:test
+
+pnpm exec lint-staged
+
+# Only type-check when source files are staged
+if git diff --cached --name-only --diff-filter=d | grep -qE '\.(ts|tsx|js|jsx)$'; then
+    pnpm run typecheck
+fi

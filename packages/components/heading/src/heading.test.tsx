@@ -31,6 +31,22 @@ describe('components', () => {
                 expect(element.tagName).toBe('ARTICLE');
                 expect(() => wrapper.unmount()).not.toThrow();
             });
+
+            (['h1', 'h2', 'h3', 'h4'] as const).forEach((level) => {
+                it(`renders with level ${level}`, () => {
+                    const wrapper = render(
+                        <Heading data-testid="nordstar-heading" level={level}>
+                            Hello World!
+                        </Heading>,
+                    );
+
+                    const element = wrapper.getByTestId('nordstar-heading');
+
+                    expect(element).toHaveAttribute('data-level', level);
+                    expect(element.tagName).toBe(level.toUpperCase());
+                    expect(() => wrapper.unmount()).not.toThrow();
+                });
+            });
         });
     });
 });

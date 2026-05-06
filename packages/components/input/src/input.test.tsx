@@ -1,7 +1,7 @@
 import '@testing-library/jest-dom/vitest';
 import '@testing-library/react';
 
-import { render } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 import { Input } from '.';
 
@@ -64,6 +64,49 @@ describe('components', () => {
 
             expect(element).toHaveTextContent('Hello World!');
             expect(element.tagName).toBe('ARTICLE');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('updates contents when typing', () => {
+            const wrapper = render(<Input data-testid="nordstar-input" />);
+
+            const element = wrapper.getByTestId('nordstar-input') as HTMLInputElement;
+
+            fireEvent.change(element, { target: { value: 'Hello World!' } });
+
+            expect(element).toHaveValue('Hello World!');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('renders as a textarea', () => {
+            const wrapper = render(<Input as="textarea" data-testid="nordstar-input" label="Note" />);
+
+            const element = wrapper.getByTestId('nordstar-input');
+
+            expect(element.tagName).toBe('TEXTAREA');
+            expect(element).not.toHaveAttribute('type');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('renders with explicit input type', () => {
+            const wrapper = render(<Input data-testid="nordstar-input" type="email" />);
+
+            expect(wrapper.getByTestId('nordstar-input')).toHaveAttribute('type', 'email');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('falls back to type="text" when type prop is empty', () => {
+            const wrapper = render(<Input data-testid="nordstar-input" type={'' as any} />);
+
+            expect(wrapper.getByTestId('nordstar-input')).toHaveAttribute('type', 'text');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('renders with non-default color', () => {
+            const wrapper = render(<Input color="primary" data-testid="nordstar-input" />);
+
+            const wrapperElement = wrapper.getByTestId('nordstar-input').parentElement;
+            expect(wrapperElement).toHaveAttribute('data-color', 'primary');
             expect(() => wrapper.unmount()).not.toThrow();
         });
     });

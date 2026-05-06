@@ -69,17 +69,15 @@ export const NordstarProvider = ({ theme, children, className, ...props }: Nords
     const { accents, colors, fonts, layout } = theme;
 
     const headingFont = fonts.heading
-        ? `--nordstar-font-heading: ${(fonts.heading || fonts.body).replaceAll("'", '')};`
+        ? `--nordstar-font-heading: ${fonts.heading.replaceAll("'", '')};`
         : '--nordstar-font-heading: var(--nordstar-font-sans, var(--nordstar-font-fallback));';
     const bodyFont = `--nordstar-font-body: ${(fonts.body || fonts.heading)?.replaceAll("'", '') || 'var(--nordstar-font-sans, var(--nordstar-font-fallback))'};`;
 
     const borderWidth = theme.border?.width || 0.2;
-    const borderStyles = borderWidth
-        ? `
+    const borderStyles = `
         --nordstar-border-width-small: ${borderWidth / 1.45}rem;
         --nordstar-border-width:       ${borderWidth}rem;
-        --nordstar-border-width-large: ${borderWidth * 1.45}rem;`.trim()
-        : '';
+        --nordstar-border-width-large: ${borderWidth * 1.45}rem;`.trim();
 
     // TODO: Maybe create a utility function for this to better handle optional values (and to hide this away from view).
     const css = /* css */ `

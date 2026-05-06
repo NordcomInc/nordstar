@@ -105,7 +105,6 @@
         "react": "19.2.5",
         "typescript": "6.0.3",
         "vite-plugin-dts": "5.0.0",
-        "vite-tsconfig-paths": "6.1.1",
         "vite": "8.0.10"
     }
 }

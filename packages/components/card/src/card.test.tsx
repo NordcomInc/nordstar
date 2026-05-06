@@ -53,6 +53,16 @@ describe('components', () => {
                 expect(() => wrapper.unmount()).not.toThrow();
             });
         });
+
+        it('renders without padding and as borderless', () => {
+            const wrapper = render(<Card borderless={true} data-testid="nordstar-card" padding={false} />);
+
+            const element = wrapper.getByTestId('nordstar-card');
+
+            expect(element).toHaveAttribute('data-borderless', 'true');
+            expect(element).toHaveAttribute('data-padding', 'false');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 
     describe('Card.Divider', () => {
@@ -69,6 +79,36 @@ describe('components', () => {
 
             const element = wrapper.getByTestId('nordstar-card');
             expect(element).toContainElement(wrapper.getByTestId('nordstar-card-divider'));
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+    });
+
+    describe('Card.Header', () => {
+        it('has correct displayName', () => {
+            expect(Card.Header).toHaveProperty('displayName', 'Nordstar.Card.Header');
+        });
+
+        it('renders correctly', () => {
+            const wrapper = render(
+                <Card data-testid="nordstar-card">
+                    <Card.Header data-testid="nordstar-card-header">Hello World!</Card.Header>
+                </Card>,
+            );
+
+            const element = wrapper.getByTestId('nordstar-card-header');
+            expect(element).toHaveTextContent('Hello World!');
+            expect(element.tagName).toBe('HEADER');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('renders with className', () => {
+            const wrapper = render(
+                <Card data-testid="nordstar-card">
+                    <Card.Header className="hello-world" data-testid="nordstar-card-header" />
+                </Card>,
+            );
+
+            expect(wrapper.getByTestId('nordstar-card-header')).toHaveClass('hello-world');
             expect(() => wrapper.unmount()).not.toThrow();
         });
     });

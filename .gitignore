@@ -26,6 +26,7 @@ dist
 .env.test.local
 .env.production.local
 .env.production
+.claude/
 
 # Logs
 logs

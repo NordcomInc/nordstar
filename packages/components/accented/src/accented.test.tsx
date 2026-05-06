@@ -36,5 +36,12 @@ describe('components', () => {
             expect(wrapper.getByTestId('accented')).toHaveClass('hello-world');
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('renders with foreground color', () => {
+            const wrapper = render(<Accented color="foreground" data-testid="accented" />);
+
+            expect(wrapper.getByTestId('accented')).toHaveClass('text-foreground');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 });

@@ -59,5 +59,12 @@ describe('components', () => {
             expect(wrapper.getByRole('button')).toHaveAttribute('data-color', 'primary');
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('renders with default color mapped to foreground', () => {
+            const wrapper = render(<Button color="default" />);
+
+            expect(wrapper.getByRole('button')).toHaveAttribute('data-color', 'default');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 });

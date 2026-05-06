@@ -1,7 +1,7 @@
 {
     "Accented": {
-        "displayName": "Accented",
         "description": "",
+        "displayName": "Accented",
         "props": {
             "as": {
                 "defaultValue": null,
@@ -20,8 +20,8 @@
         }
     },
     "Button": {
-        "displayName": "Button",
         "description": "",
+        "displayName": "Button",
         "props": {
             "as": {
                 "defaultValue": null,
@@ -30,33 +30,12 @@
                 "required": false,
                 "type": "As | undefined"
             },
-            "variant": {
-                "defaultValue": null,
-                "description": "",
-                "name": "variant",
-                "required": false,
-                "type": "\"outline\" | \"solid\" | undefined"
-            },
             "color": {
                 "defaultValue": null,
                 "description": "",
                 "name": "color",
                 "required": false,
                 "type": "NordstarColor | undefined"
-            },
-            "icon": {
-                "defaultValue": null,
-                "description": "",
-                "name": "icon",
-                "required": false,
-                "type": "string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined"
-            },
-            "disabled": {
-                "defaultValue": null,
-                "description": "",
-                "name": "disabled",
-                "required": false,
-                "type": "boolean | undefined"
             },
             "contentClassName": {
                 "defaultValue": null,
@@ -65,18 +44,39 @@
                 "required": false,
                 "type": "string | undefined"
             },
+            "disabled": {
+                "defaultValue": null,
+                "description": "",
+                "name": "disabled",
+                "required": false,
+                "type": "boolean | undefined"
+            },
+            "icon": {
+                "defaultValue": null,
+                "description": "",
+                "name": "icon",
+                "required": false,
+                "type": "string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined"
+            },
             "iconClassName": {
                 "defaultValue": null,
                 "description": "",
                 "name": "iconClassName",
                 "required": false,
                 "type": "string | undefined"
+            },
+            "variant": {
+                "defaultValue": null,
+                "description": "",
+                "name": "variant",
+                "required": false,
+                "type": "\"outline\" | \"solid\" | undefined"
             }
         }
     },
     "Card": {
-        "displayName": "Card",
         "description": "",
+        "displayName": "Card",
         "props": {
             "as": {
                 "defaultValue": null,
@@ -85,12 +85,12 @@
                 "required": false,
                 "type": "As | undefined"
             },
-            "variant": {
+            "borderless": {
                 "defaultValue": null,
                 "description": "",
-                "name": "variant",
+                "name": "borderless",
                 "required": false,
-                "type": "\"outline\" | \"solid\" | undefined"
+                "type": "boolean | undefined"
             },
             "color": {
                 "defaultValue": null,
@@ -98,13 +98,6 @@
                 "name": "color",
                 "required": false,
                 "type": "NordstarColor | undefined"
-            },
-            "borderless": {
-                "defaultValue": null,
-                "description": "",
-                "name": "borderless",
-                "required": false,
-                "type": "boolean | undefined"
             },
             "padding": {
                 "defaultValue": null,
@@ -119,12 +112,19 @@
                 "name": "style",
                 "required": false,
                 "type": "CSSCustomProperties | undefined"
+            },
+            "variant": {
+                "defaultValue": null,
+                "description": "",
+                "name": "variant",
+                "required": false,
+                "type": "\"outline\" | \"solid\" | undefined"
             }
         }
     },
     "Details": {
-        "displayName": "Details",
         "description": "",
+        "displayName": "Details",
         "props": {
             "label": {
                 "defaultValue": null,
@@ -143,205 +143,9 @@
         }
     },
     "Header": {
-        "displayName": "Header",
         "description": "",
+        "displayName": "Header",
         "props": {
-            "sticky": {
-                "defaultValue": null,
-                "description": "",
-                "name": "sticky",
-                "required": false,
-                "type": "boolean | undefined"
-            },
-            "style": {
-                "defaultValue": null,
-                "description": "",
-                "name": "style",
-                "required": false,
-                "type": "({ [key: `--${string}`]: string | number; } & CSSProperties) | undefined"
-            },
-            "slot": {
-                "defaultValue": null,
-                "description": "",
-                "name": "slot",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "title": {
-                "defaultValue": null,
-                "description": "",
-                "name": "title",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "className": {
-                "defaultValue": null,
-                "description": "",
-                "name": "className",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "ref": {
-                "defaultValue": null,
-                "description": "Allows getting a ref to the component instance.\nOnce the component unmounts, React will set `ref.current` to `null`\n(or call the ref with `null` if you passed a callback ref).",
-                "name": "ref",
-                "required": false,
-                "type": "Ref<HTMLElement> | undefined"
-            },
-            "key": {
-                "defaultValue": null,
-                "description": "",
-                "name": "key",
-                "required": false,
-                "type": "Key | null | undefined"
-            },
-            "defaultChecked": {
-                "defaultValue": null,
-                "description": "",
-                "name": "defaultChecked",
-                "required": false,
-                "type": "boolean | undefined"
-            },
-            "defaultValue": {
-                "defaultValue": null,
-                "description": "",
-                "name": "defaultValue",
-                "required": false,
-                "type": "string | number | readonly string[] | undefined"
-            },
-            "suppressContentEditableWarning": {
-                "defaultValue": null,
-                "description": "",
-                "name": "suppressContentEditableWarning",
-                "required": false,
-                "type": "boolean | undefined"
-            },
-            "suppressHydrationWarning": {
-                "defaultValue": null,
-                "description": "",
-                "name": "suppressHydrationWarning",
-                "required": false,
-                "type": "boolean | undefined"
-            },
-            "accessKey": {
-                "defaultValue": null,
-                "description": "",
-                "name": "accessKey",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "autoCapitalize": {
-                "defaultValue": null,
-                "description": "",
-                "name": "autoCapitalize",
-                "required": false,
-                "type": "(string & {}) | \"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\" | undefined"
-            },
-            "autoFocus": {
-                "defaultValue": null,
-                "description": "",
-                "name": "autoFocus",
-                "required": false,
-                "type": "boolean | undefined"
-            },
-            "contentEditable": {
-                "defaultValue": null,
-                "description": "",
-                "name": "contentEditable",
-                "required": false,
-                "type": "Booleanish | \"inherit\" | \"plaintext-only\" | undefined"
-            },
-            "contextMenu": {
-                "defaultValue": null,
-                "description": "",
-                "name": "contextMenu",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "dir": {
-                "defaultValue": null,
-                "description": "",
-                "name": "dir",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "draggable": {
-                "defaultValue": null,
-                "description": "",
-                "name": "draggable",
-                "required": false,
-                "type": "Booleanish | undefined"
-            },
-            "enterKeyHint": {
-                "defaultValue": null,
-                "description": "",
-                "name": "enterKeyHint",
-                "required": false,
-                "type": "\"search\" | \"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"send\" | undefined"
-            },
-            "hidden": {
-                "defaultValue": null,
-                "description": "",
-                "name": "hidden",
-                "required": false,
-                "type": "boolean | undefined"
-            },
-            "id": {
-                "defaultValue": null,
-                "description": "",
-                "name": "id",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "lang": {
-                "defaultValue": null,
-                "description": "",
-                "name": "lang",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "nonce": {
-                "defaultValue": null,
-                "description": "",
-                "name": "nonce",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "spellCheck": {
-                "defaultValue": null,
-                "description": "",
-                "name": "spellCheck",
-                "required": false,
-                "type": "Booleanish | undefined"
-            },
-            "tabIndex": {
-                "defaultValue": null,
-                "description": "",
-                "name": "tabIndex",
-                "required": false,
-                "type": "number | undefined"
-            },
-            "translate": {
-                "defaultValue": null,
-                "description": "",
-                "name": "translate",
-                "required": false,
-                "type": "\"yes\" | \"no\" | undefined"
-            },
-            "radioGroup": {
-                "defaultValue": null,
-                "description": "",
-                "name": "radioGroup",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "role": {
-                "defaultValue": null,
-                "description": "",
-                "name": "role",
-                "required": false,
-                "type": "AriaRole | undefined"
-            },
             "about": {
                 "defaultValue": null,
                 "description": "",
@@ -349,199 +153,10 @@
                 "required": false,
                 "type": "string | undefined"
             },
-            "content": {
+            "accessKey": {
                 "defaultValue": null,
                 "description": "",
-                "name": "content",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "datatype": {
-                "defaultValue": null,
-                "description": "",
-                "name": "datatype",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "inlist": {
-                "defaultValue": null,
-                "description": "",
-                "name": "inlist",
-                "required": false,
-                "type": "any"
-            },
-            "prefix": {
-                "defaultValue": null,
-                "description": "",
-                "name": "prefix",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "property": {
-                "defaultValue": null,
-                "description": "",
-                "name": "property",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "rel": {
-                "defaultValue": null,
-                "description": "",
-                "name": "rel",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "resource": {
-                "defaultValue": null,
-                "description": "",
-                "name": "resource",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "rev": {
-                "defaultValue": null,
-                "description": "",
-                "name": "rev",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "typeof": {
-                "defaultValue": null,
-                "description": "",
-                "name": "typeof",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "vocab": {
-                "defaultValue": null,
-                "description": "",
-                "name": "vocab",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "autoCorrect": {
-                "defaultValue": null,
-                "description": "",
-                "name": "autoCorrect",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "autoSave": {
-                "defaultValue": null,
-                "description": "",
-                "name": "autoSave",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "itemProp": {
-                "defaultValue": null,
-                "description": "",
-                "name": "itemProp",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "itemScope": {
-                "defaultValue": null,
-                "description": "",
-                "name": "itemScope",
-                "required": false,
-                "type": "boolean | undefined"
-            },
-            "itemType": {
-                "defaultValue": null,
-                "description": "",
-                "name": "itemType",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "itemID": {
-                "defaultValue": null,
-                "description": "",
-                "name": "itemID",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "itemRef": {
-                "defaultValue": null,
-                "description": "",
-                "name": "itemRef",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "results": {
-                "defaultValue": null,
-                "description": "",
-                "name": "results",
-                "required": false,
-                "type": "number | undefined"
-            },
-            "security": {
-                "defaultValue": null,
-                "description": "",
-                "name": "security",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "unselectable": {
-                "defaultValue": null,
-                "description": "",
-                "name": "unselectable",
-                "required": false,
-                "type": "\"off\" | \"on\" | undefined"
-            },
-            "popover": {
-                "defaultValue": null,
-                "description": "",
-                "name": "popover",
-                "required": false,
-                "type": "\"\" | \"auto\" | \"manual\" | undefined"
-            },
-            "popoverTargetAction": {
-                "defaultValue": null,
-                "description": "",
-                "name": "popoverTargetAction",
-                "required": false,
-                "type": "\"toggle\" | \"show\" | \"hide\" | undefined"
-            },
-            "popoverTarget": {
-                "defaultValue": null,
-                "description": "",
-                "name": "popoverTarget",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "inert": {
-                "defaultValue": null,
-                "description": "",
-                "name": "inert",
-                "required": false,
-                "type": "boolean | undefined"
-            },
-            "inputMode": {
-                "defaultValue": null,
-                "description": "Hints at the type of data that might be entered by the user while editing the element or its contents",
-                "name": "inputMode",
-                "required": false,
-                "type": "\"search\" | \"text\" | \"none\" | \"tel\" | \"url\" | \"email\" | \"numeric\" | \"decimal\" | undefined"
-            },
-            "is": {
-                "defaultValue": null,
-                "description": "Specify that a standard HTML element should behave like a defined custom built-in element",
-                "name": "is",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "exportparts": {
-                "defaultValue": null,
-                "description": "",
-                "name": "exportparts",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "part": {
-                "defaultValue": null,
-                "description": "",
-                "name": "part",
+                "name": "accessKey",
                 "required": false,
                 "type": "string | undefined"
             },
@@ -916,12 +531,68 @@
                 "required": false,
                 "type": "string | undefined"
             },
+            "autoCapitalize": {
+                "defaultValue": null,
+                "description": "",
+                "name": "autoCapitalize",
+                "required": false,
+                "type": "(string & {}) | \"off\" | \"none\" | \"on\" | \"sentences\" | \"words\" | \"characters\" | undefined"
+            },
+            "autoCorrect": {
+                "defaultValue": null,
+                "description": "",
+                "name": "autoCorrect",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "autoFocus": {
+                "defaultValue": null,
+                "description": "",
+                "name": "autoFocus",
+                "required": false,
+                "type": "boolean | undefined"
+            },
+            "autoSave": {
+                "defaultValue": null,
+                "description": "",
+                "name": "autoSave",
+                "required": false,
+                "type": "string | undefined"
+            },
             "children": {
                 "defaultValue": null,
                 "description": "",
                 "name": "children",
                 "required": false,
                 "type": "string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined"
+            },
+            "className": {
+                "defaultValue": null,
+                "description": "",
+                "name": "className",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "content": {
+                "defaultValue": null,
+                "description": "",
+                "name": "content",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "contentEditable": {
+                "defaultValue": null,
+                "description": "",
+                "name": "contentEditable",
+                "required": false,
+                "type": "Booleanish | \"inherit\" | \"plaintext-only\" | undefined"
+            },
+            "contextMenu": {
+                "defaultValue": null,
+                "description": "",
+                "name": "contextMenu",
+                "required": false,
+                "type": "string | undefined"
             },
             "dangerouslySetInnerHTML": {
                 "defaultValue": null,
@@ -930,47 +601,313 @@
                 "required": false,
                 "type": "{ __html: string | TrustedHTML; } | undefined"
             },
-            "onCopy": {
+            "datatype": {
                 "defaultValue": null,
                 "description": "",
-                "name": "onCopy",
+                "name": "datatype",
                 "required": false,
-                "type": "ClipboardEventHandler<HTMLElement> | undefined"
+                "type": "string | undefined"
             },
-            "onCopyCapture": {
+            "defaultChecked": {
                 "defaultValue": null,
                 "description": "",
-                "name": "onCopyCapture",
+                "name": "defaultChecked",
                 "required": false,
-                "type": "ClipboardEventHandler<HTMLElement> | undefined"
+                "type": "boolean | undefined"
             },
-            "onCut": {
+            "defaultValue": {
                 "defaultValue": null,
                 "description": "",
-                "name": "onCut",
+                "name": "defaultValue",
                 "required": false,
-                "type": "ClipboardEventHandler<HTMLElement> | undefined"
+                "type": "string | number | readonly string[] | undefined"
             },
-            "onCutCapture": {
+            "dir": {
                 "defaultValue": null,
                 "description": "",
-                "name": "onCutCapture",
+                "name": "dir",
                 "required": false,
-                "type": "ClipboardEventHandler<HTMLElement> | undefined"
+                "type": "string | undefined"
             },
-            "onPaste": {
+            "draggable": {
                 "defaultValue": null,
                 "description": "",
-                "name": "onPaste",
+                "name": "draggable",
                 "required": false,
-                "type": "ClipboardEventHandler<HTMLElement> | undefined"
+                "type": "Booleanish | undefined"
             },
-            "onPasteCapture": {
+            "enterKeyHint": {
                 "defaultValue": null,
                 "description": "",
-                "name": "onPasteCapture",
+                "name": "enterKeyHint",
                 "required": false,
-                "type": "ClipboardEventHandler<HTMLElement> | undefined"
+                "type": "\"search\" | \"enter\" | \"done\" | \"go\" | \"next\" | \"previous\" | \"send\" | undefined"
+            },
+            "exportparts": {
+                "defaultValue": null,
+                "description": "",
+                "name": "exportparts",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "hidden": {
+                "defaultValue": null,
+                "description": "",
+                "name": "hidden",
+                "required": false,
+                "type": "boolean | undefined"
+            },
+            "id": {
+                "defaultValue": null,
+                "description": "",
+                "name": "id",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "inert": {
+                "defaultValue": null,
+                "description": "",
+                "name": "inert",
+                "required": false,
+                "type": "boolean | undefined"
+            },
+            "inlist": {
+                "defaultValue": null,
+                "description": "",
+                "name": "inlist",
+                "required": false,
+                "type": "any"
+            },
+            "inputMode": {
+                "defaultValue": null,
+                "description": "Hints at the type of data that might be entered by the user while editing the element or its contents",
+                "name": "inputMode",
+                "required": false,
+                "type": "\"search\" | \"text\" | \"none\" | \"tel\" | \"url\" | \"email\" | \"numeric\" | \"decimal\" | undefined"
+            },
+            "is": {
+                "defaultValue": null,
+                "description": "Specify that a standard HTML element should behave like a defined custom built-in element",
+                "name": "is",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "itemID": {
+                "defaultValue": null,
+                "description": "",
+                "name": "itemID",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "itemProp": {
+                "defaultValue": null,
+                "description": "",
+                "name": "itemProp",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "itemRef": {
+                "defaultValue": null,
+                "description": "",
+                "name": "itemRef",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "itemScope": {
+                "defaultValue": null,
+                "description": "",
+                "name": "itemScope",
+                "required": false,
+                "type": "boolean | undefined"
+            },
+            "itemType": {
+                "defaultValue": null,
+                "description": "",
+                "name": "itemType",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "key": {
+                "defaultValue": null,
+                "description": "",
+                "name": "key",
+                "required": false,
+                "type": "Key | null | undefined"
+            },
+            "lang": {
+                "defaultValue": null,
+                "description": "",
+                "name": "lang",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "nonce": {
+                "defaultValue": null,
+                "description": "",
+                "name": "nonce",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "onAbort": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onAbort",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onAbortCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onAbortCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onAnimationEnd": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onAnimationEnd",
+                "required": false,
+                "type": "AnimationEventHandler<HTMLElement> | undefined"
+            },
+            "onAnimationEndCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onAnimationEndCapture",
+                "required": false,
+                "type": "AnimationEventHandler<HTMLElement> | undefined"
+            },
+            "onAnimationIteration": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onAnimationIteration",
+                "required": false,
+                "type": "AnimationEventHandler<HTMLElement> | undefined"
+            },
+            "onAnimationIterationCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onAnimationIterationCapture",
+                "required": false,
+                "type": "AnimationEventHandler<HTMLElement> | undefined"
+            },
+            "onAnimationStart": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onAnimationStart",
+                "required": false,
+                "type": "AnimationEventHandler<HTMLElement> | undefined"
+            },
+            "onAnimationStartCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onAnimationStartCapture",
+                "required": false,
+                "type": "AnimationEventHandler<HTMLElement> | undefined"
+            },
+            "onAuxClick": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onAuxClick",
+                "required": false,
+                "type": "MouseEventHandler<HTMLElement> | undefined"
+            },
+            "onAuxClickCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onAuxClickCapture",
+                "required": false,
+                "type": "MouseEventHandler<HTMLElement> | undefined"
+            },
+            "onBeforeInput": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onBeforeInput",
+                "required": false,
+                "type": "InputEventHandler<HTMLElement> | undefined"
+            },
+            "onBeforeInputCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onBeforeInputCapture",
+                "required": false,
+                "type": "FormEventHandler<HTMLElement> | undefined"
+            },
+            "onBeforeToggle": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onBeforeToggle",
+                "required": false,
+                "type": "ToggleEventHandler<HTMLElement> | undefined"
+            },
+            "onBlur": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onBlur",
+                "required": false,
+                "type": "FocusEventHandler<HTMLElement> | undefined"
+            },
+            "onBlurCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onBlurCapture",
+                "required": false,
+                "type": "FocusEventHandler<HTMLElement> | undefined"
+            },
+            "onCanPlay": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onCanPlay",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onCanPlayCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onCanPlayCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onCanPlayThrough": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onCanPlayThrough",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onCanPlayThroughCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onCanPlayThroughCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onChange": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onChange",
+                "required": false,
+                "type": "FormEventHandler<HTMLElement> | undefined"
+            },
+            "onChangeCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onChangeCapture",
+                "required": false,
+                "type": "FormEventHandler<HTMLElement> | undefined"
+            },
+            "onClick": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onClick",
+                "required": false,
+                "type": "MouseEventHandler<HTMLElement> | undefined"
+            },
+            "onClickCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onClickCapture",
+                "required": false,
+                "type": "MouseEventHandler<HTMLElement> | undefined"
             },
             "onCompositionEnd": {
                 "defaultValue": null,
@@ -1014,524 +951,6 @@
                 "required": false,
                 "type": "CompositionEventHandler<HTMLElement> | undefined"
             },
-            "onFocus": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onFocus",
-                "required": false,
-                "type": "FocusEventHandler<HTMLElement> | undefined"
-            },
-            "onFocusCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onFocusCapture",
-                "required": false,
-                "type": "FocusEventHandler<HTMLElement> | undefined"
-            },
-            "onBlur": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onBlur",
-                "required": false,
-                "type": "FocusEventHandler<HTMLElement> | undefined"
-            },
-            "onBlurCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onBlurCapture",
-                "required": false,
-                "type": "FocusEventHandler<HTMLElement> | undefined"
-            },
-            "onChange": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onChange",
-                "required": false,
-                "type": "FormEventHandler<HTMLElement> | undefined"
-            },
-            "onChangeCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onChangeCapture",
-                "required": false,
-                "type": "FormEventHandler<HTMLElement> | undefined"
-            },
-            "onBeforeInput": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onBeforeInput",
-                "required": false,
-                "type": "InputEventHandler<HTMLElement> | undefined"
-            },
-            "onBeforeInputCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onBeforeInputCapture",
-                "required": false,
-                "type": "FormEventHandler<HTMLElement> | undefined"
-            },
-            "onInput": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onInput",
-                "required": false,
-                "type": "FormEventHandler<HTMLElement> | undefined"
-            },
-            "onInputCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onInputCapture",
-                "required": false,
-                "type": "FormEventHandler<HTMLElement> | undefined"
-            },
-            "onReset": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onReset",
-                "required": false,
-                "type": "FormEventHandler<HTMLElement> | undefined"
-            },
-            "onResetCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onResetCapture",
-                "required": false,
-                "type": "FormEventHandler<HTMLElement> | undefined"
-            },
-            "onSubmit": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onSubmit",
-                "required": false,
-                "type": "FormEventHandler<HTMLElement> | undefined"
-            },
-            "onSubmitCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onSubmitCapture",
-                "required": false,
-                "type": "FormEventHandler<HTMLElement> | undefined"
-            },
-            "onInvalid": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onInvalid",
-                "required": false,
-                "type": "FormEventHandler<HTMLElement> | undefined"
-            },
-            "onInvalidCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onInvalidCapture",
-                "required": false,
-                "type": "FormEventHandler<HTMLElement> | undefined"
-            },
-            "onLoad": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onLoad",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onLoadCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onLoadCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onError": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onError",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onErrorCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onErrorCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onKeyDown": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onKeyDown",
-                "required": false,
-                "type": "KeyboardEventHandler<HTMLElement> | undefined"
-            },
-            "onKeyDownCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onKeyDownCapture",
-                "required": false,
-                "type": "KeyboardEventHandler<HTMLElement> | undefined"
-            },
-            "onKeyPress": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onKeyPress",
-                "required": false,
-                "type": "KeyboardEventHandler<HTMLElement> | undefined"
-            },
-            "onKeyPressCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onKeyPressCapture",
-                "required": false,
-                "type": "KeyboardEventHandler<HTMLElement> | undefined"
-            },
-            "onKeyUp": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onKeyUp",
-                "required": false,
-                "type": "KeyboardEventHandler<HTMLElement> | undefined"
-            },
-            "onKeyUpCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onKeyUpCapture",
-                "required": false,
-                "type": "KeyboardEventHandler<HTMLElement> | undefined"
-            },
-            "onAbort": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onAbort",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onAbortCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onAbortCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onCanPlay": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onCanPlay",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onCanPlayCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onCanPlayCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onCanPlayThrough": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onCanPlayThrough",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onCanPlayThroughCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onCanPlayThroughCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onDurationChange": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onDurationChange",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onDurationChangeCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onDurationChangeCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onEmptied": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onEmptied",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onEmptiedCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onEmptiedCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onEncrypted": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onEncrypted",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onEncryptedCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onEncryptedCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onEnded": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onEnded",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onEndedCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onEndedCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onLoadedData": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onLoadedData",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onLoadedDataCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onLoadedDataCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onLoadedMetadata": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onLoadedMetadata",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onLoadedMetadataCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onLoadedMetadataCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onLoadStart": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onLoadStart",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onLoadStartCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onLoadStartCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onPause": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPause",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onPauseCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPauseCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onPlay": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPlay",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onPlayCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPlayCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onPlaying": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPlaying",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onPlayingCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPlayingCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onProgress": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onProgress",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onProgressCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onProgressCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onRateChange": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onRateChange",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onRateChangeCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onRateChangeCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onSeeked": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onSeeked",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onSeekedCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onSeekedCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onSeeking": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onSeeking",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onSeekingCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onSeekingCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onStalled": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onStalled",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onStalledCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onStalledCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onSuspend": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onSuspend",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onSuspendCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onSuspendCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onTimeUpdate": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onTimeUpdate",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onTimeUpdateCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onTimeUpdateCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onVolumeChange": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onVolumeChange",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onVolumeChangeCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onVolumeChangeCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onWaiting": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onWaiting",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onWaitingCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onWaitingCapture",
-                "required": false,
-                "type": "ReactEventHandler<HTMLElement> | undefined"
-            },
-            "onAuxClick": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onAuxClick",
-                "required": false,
-                "type": "MouseEventHandler<HTMLElement> | undefined"
-            },
-            "onAuxClickCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onAuxClickCapture",
-                "required": false,
-                "type": "MouseEventHandler<HTMLElement> | undefined"
-            },
-            "onClick": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onClick",
-                "required": false,
-                "type": "MouseEventHandler<HTMLElement> | undefined"
-            },
-            "onClickCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onClickCapture",
-                "required": false,
-                "type": "MouseEventHandler<HTMLElement> | undefined"
-            },
             "onContextMenu": {
                 "defaultValue": null,
                 "description": "",
@@ -1545,6 +964,34 @@
                 "name": "onContextMenuCapture",
                 "required": false,
                 "type": "MouseEventHandler<HTMLElement> | undefined"
+            },
+            "onCopy": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onCopy",
+                "required": false,
+                "type": "ClipboardEventHandler<HTMLElement> | undefined"
+            },
+            "onCopyCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onCopyCapture",
+                "required": false,
+                "type": "ClipboardEventHandler<HTMLElement> | undefined"
+            },
+            "onCut": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onCut",
+                "required": false,
+                "type": "ClipboardEventHandler<HTMLElement> | undefined"
+            },
+            "onCutCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onCutCapture",
+                "required": false,
+                "type": "ClipboardEventHandler<HTMLElement> | undefined"
             },
             "onDoubleClick": {
                 "defaultValue": null,
@@ -1672,6 +1119,244 @@
                 "required": false,
                 "type": "DragEventHandler<HTMLElement> | undefined"
             },
+            "onDurationChange": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onDurationChange",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onDurationChangeCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onDurationChangeCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onEmptied": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onEmptied",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onEmptiedCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onEmptiedCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onEncrypted": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onEncrypted",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onEncryptedCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onEncryptedCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onEnded": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onEnded",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onEndedCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onEndedCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onError": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onError",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onErrorCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onErrorCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onFocus": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onFocus",
+                "required": false,
+                "type": "FocusEventHandler<HTMLElement> | undefined"
+            },
+            "onFocusCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onFocusCapture",
+                "required": false,
+                "type": "FocusEventHandler<HTMLElement> | undefined"
+            },
+            "onGotPointerCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onGotPointerCapture",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onGotPointerCaptureCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onGotPointerCaptureCapture",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onInput": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onInput",
+                "required": false,
+                "type": "FormEventHandler<HTMLElement> | undefined"
+            },
+            "onInputCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onInputCapture",
+                "required": false,
+                "type": "FormEventHandler<HTMLElement> | undefined"
+            },
+            "onInvalid": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onInvalid",
+                "required": false,
+                "type": "FormEventHandler<HTMLElement> | undefined"
+            },
+            "onInvalidCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onInvalidCapture",
+                "required": false,
+                "type": "FormEventHandler<HTMLElement> | undefined"
+            },
+            "onKeyDown": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onKeyDown",
+                "required": false,
+                "type": "KeyboardEventHandler<HTMLElement> | undefined"
+            },
+            "onKeyDownCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onKeyDownCapture",
+                "required": false,
+                "type": "KeyboardEventHandler<HTMLElement> | undefined"
+            },
+            "onKeyPress": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onKeyPress",
+                "required": false,
+                "type": "KeyboardEventHandler<HTMLElement> | undefined"
+            },
+            "onKeyPressCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onKeyPressCapture",
+                "required": false,
+                "type": "KeyboardEventHandler<HTMLElement> | undefined"
+            },
+            "onKeyUp": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onKeyUp",
+                "required": false,
+                "type": "KeyboardEventHandler<HTMLElement> | undefined"
+            },
+            "onKeyUpCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onKeyUpCapture",
+                "required": false,
+                "type": "KeyboardEventHandler<HTMLElement> | undefined"
+            },
+            "onLoad": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onLoad",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onLoadCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onLoadCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onLoadedData": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onLoadedData",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onLoadedDataCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onLoadedDataCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onLoadedMetadata": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onLoadedMetadata",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onLoadedMetadataCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onLoadedMetadataCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onLoadStart": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onLoadStart",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onLoadStartCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onLoadStartCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onLostPointerCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onLostPointerCapture",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onLostPointerCaptureCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onLostPointerCaptureCapture",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
             "onMouseDown": {
                 "defaultValue": null,
                 "description": "",
@@ -1756,6 +1441,258 @@
                 "required": false,
                 "type": "MouseEventHandler<HTMLElement> | undefined"
             },
+            "onPaste": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPaste",
+                "required": false,
+                "type": "ClipboardEventHandler<HTMLElement> | undefined"
+            },
+            "onPasteCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPasteCapture",
+                "required": false,
+                "type": "ClipboardEventHandler<HTMLElement> | undefined"
+            },
+            "onPause": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPause",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onPauseCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPauseCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onPlay": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPlay",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onPlayCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPlayCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onPlaying": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPlaying",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onPlayingCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPlayingCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerCancel": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerCancel",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerCancelCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerCancelCapture",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerDown": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerDown",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerDownCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerDownCapture",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerEnter": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerEnter",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerLeave": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerLeave",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerMove": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerMove",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerMoveCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerMoveCapture",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerOut": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerOut",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerOutCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerOutCapture",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerOver": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerOver",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerOverCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerOverCapture",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerUp": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerUp",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onPointerUpCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onPointerUpCapture",
+                "required": false,
+                "type": "PointerEventHandler<HTMLElement> | undefined"
+            },
+            "onProgress": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onProgress",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onProgressCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onProgressCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onRateChange": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onRateChange",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onRateChangeCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onRateChangeCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onReset": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onReset",
+                "required": false,
+                "type": "FormEventHandler<HTMLElement> | undefined"
+            },
+            "onResetCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onResetCapture",
+                "required": false,
+                "type": "FormEventHandler<HTMLElement> | undefined"
+            },
+            "onScroll": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onScroll",
+                "required": false,
+                "type": "UIEventHandler<HTMLElement> | undefined"
+            },
+            "onScrollCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onScrollCapture",
+                "required": false,
+                "type": "UIEventHandler<HTMLElement> | undefined"
+            },
+            "onScrollEnd": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onScrollEnd",
+                "required": false,
+                "type": "UIEventHandler<HTMLElement> | undefined"
+            },
+            "onScrollEndCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onScrollEndCapture",
+                "required": false,
+                "type": "UIEventHandler<HTMLElement> | undefined"
+            },
+            "onSeeked": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onSeeked",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onSeekedCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onSeekedCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onSeeking": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onSeeking",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onSeekingCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onSeekingCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
             "onSelect": {
                 "defaultValue": null,
                 "description": "",
@@ -1769,6 +1706,69 @@
                 "name": "onSelectCapture",
                 "required": false,
                 "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onStalled": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onStalled",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onStalledCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onStalledCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onSubmit": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onSubmit",
+                "required": false,
+                "type": "FormEventHandler<HTMLElement> | undefined"
+            },
+            "onSubmitCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onSubmitCapture",
+                "required": false,
+                "type": "FormEventHandler<HTMLElement> | undefined"
+            },
+            "onSuspend": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onSuspend",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onSuspendCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onSuspendCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onTimeUpdate": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onTimeUpdate",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onTimeUpdateCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onTimeUpdateCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onToggle": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onToggle",
+                "required": false,
+                "type": "ToggleEventHandler<HTMLElement> | undefined"
             },
             "onTouchCancel": {
                 "defaultValue": null,
@@ -1826,230 +1826,6 @@
                 "required": false,
                 "type": "TouchEventHandler<HTMLElement> | undefined"
             },
-            "onPointerDown": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerDown",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerDownCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerDownCapture",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerMove": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerMove",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerMoveCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerMoveCapture",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerUp": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerUp",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerUpCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerUpCapture",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerCancel": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerCancel",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerCancelCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerCancelCapture",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerEnter": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerEnter",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerLeave": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerLeave",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerOver": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerOver",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerOverCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerOverCapture",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerOut": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerOut",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onPointerOutCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onPointerOutCapture",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onGotPointerCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onGotPointerCapture",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onGotPointerCaptureCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onGotPointerCaptureCapture",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onLostPointerCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onLostPointerCapture",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onLostPointerCaptureCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onLostPointerCaptureCapture",
-                "required": false,
-                "type": "PointerEventHandler<HTMLElement> | undefined"
-            },
-            "onScroll": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onScroll",
-                "required": false,
-                "type": "UIEventHandler<HTMLElement> | undefined"
-            },
-            "onScrollCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onScrollCapture",
-                "required": false,
-                "type": "UIEventHandler<HTMLElement> | undefined"
-            },
-            "onScrollEnd": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onScrollEnd",
-                "required": false,
-                "type": "UIEventHandler<HTMLElement> | undefined"
-            },
-            "onScrollEndCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onScrollEndCapture",
-                "required": false,
-                "type": "UIEventHandler<HTMLElement> | undefined"
-            },
-            "onWheel": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onWheel",
-                "required": false,
-                "type": "WheelEventHandler<HTMLElement> | undefined"
-            },
-            "onWheelCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onWheelCapture",
-                "required": false,
-                "type": "WheelEventHandler<HTMLElement> | undefined"
-            },
-            "onAnimationStart": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onAnimationStart",
-                "required": false,
-                "type": "AnimationEventHandler<HTMLElement> | undefined"
-            },
-            "onAnimationStartCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onAnimationStartCapture",
-                "required": false,
-                "type": "AnimationEventHandler<HTMLElement> | undefined"
-            },
-            "onAnimationEnd": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onAnimationEnd",
-                "required": false,
-                "type": "AnimationEventHandler<HTMLElement> | undefined"
-            },
-            "onAnimationEndCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onAnimationEndCapture",
-                "required": false,
-                "type": "AnimationEventHandler<HTMLElement> | undefined"
-            },
-            "onAnimationIteration": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onAnimationIteration",
-                "required": false,
-                "type": "AnimationEventHandler<HTMLElement> | undefined"
-            },
-            "onAnimationIterationCapture": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onAnimationIterationCapture",
-                "required": false,
-                "type": "AnimationEventHandler<HTMLElement> | undefined"
-            },
-            "onToggle": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onToggle",
-                "required": false,
-                "type": "ToggleEventHandler<HTMLElement> | undefined"
-            },
-            "onBeforeToggle": {
-                "defaultValue": null,
-                "description": "",
-                "name": "onBeforeToggle",
-                "required": false,
-                "type": "ToggleEventHandler<HTMLElement> | undefined"
-            },
             "onTransitionCancel": {
                 "defaultValue": null,
                 "description": "",
@@ -2105,54 +1881,257 @@
                 "name": "onTransitionStartCapture",
                 "required": false,
                 "type": "TransitionEventHandler<HTMLElement> | undefined"
+            },
+            "onVolumeChange": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onVolumeChange",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onVolumeChangeCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onVolumeChangeCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onWaiting": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onWaiting",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onWaitingCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onWaitingCapture",
+                "required": false,
+                "type": "ReactEventHandler<HTMLElement> | undefined"
+            },
+            "onWheel": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onWheel",
+                "required": false,
+                "type": "WheelEventHandler<HTMLElement> | undefined"
+            },
+            "onWheelCapture": {
+                "defaultValue": null,
+                "description": "",
+                "name": "onWheelCapture",
+                "required": false,
+                "type": "WheelEventHandler<HTMLElement> | undefined"
+            },
+            "part": {
+                "defaultValue": null,
+                "description": "",
+                "name": "part",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "popover": {
+                "defaultValue": null,
+                "description": "",
+                "name": "popover",
+                "required": false,
+                "type": "\"\" | \"auto\" | \"manual\" | undefined"
+            },
+            "popoverTarget": {
+                "defaultValue": null,
+                "description": "",
+                "name": "popoverTarget",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "popoverTargetAction": {
+                "defaultValue": null,
+                "description": "",
+                "name": "popoverTargetAction",
+                "required": false,
+                "type": "\"toggle\" | \"show\" | \"hide\" | undefined"
+            },
+            "prefix": {
+                "defaultValue": null,
+                "description": "",
+                "name": "prefix",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "property": {
+                "defaultValue": null,
+                "description": "",
+                "name": "property",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "radioGroup": {
+                "defaultValue": null,
+                "description": "",
+                "name": "radioGroup",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "ref": {
+                "defaultValue": null,
+                "description": "Allows getting a ref to the component instance.\nOnce the component unmounts, React will set `ref.current` to `null`\n(or call the ref with `null` if you passed a callback ref).",
+                "name": "ref",
+                "required": false,
+                "type": "Ref<HTMLElement> | undefined"
+            },
+            "rel": {
+                "defaultValue": null,
+                "description": "",
+                "name": "rel",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "resource": {
+                "defaultValue": null,
+                "description": "",
+                "name": "resource",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "results": {
+                "defaultValue": null,
+                "description": "",
+                "name": "results",
+                "required": false,
+                "type": "number | undefined"
+            },
+            "rev": {
+                "defaultValue": null,
+                "description": "",
+                "name": "rev",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "role": {
+                "defaultValue": null,
+                "description": "",
+                "name": "role",
+                "required": false,
+                "type": "AriaRole | undefined"
+            },
+            "security": {
+                "defaultValue": null,
+                "description": "",
+                "name": "security",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "slot": {
+                "defaultValue": null,
+                "description": "",
+                "name": "slot",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "spellCheck": {
+                "defaultValue": null,
+                "description": "",
+                "name": "spellCheck",
+                "required": false,
+                "type": "Booleanish | undefined"
+            },
+            "sticky": {
+                "defaultValue": null,
+                "description": "",
+                "name": "sticky",
+                "required": false,
+                "type": "boolean | undefined"
+            },
+            "style": {
+                "defaultValue": null,
+                "description": "",
+                "name": "style",
+                "required": false,
+                "type": "({ [key: `--${string}`]: string | number; } & CSSProperties) | undefined"
+            },
+            "suppressContentEditableWarning": {
+                "defaultValue": null,
+                "description": "",
+                "name": "suppressContentEditableWarning",
+                "required": false,
+                "type": "boolean | undefined"
+            },
+            "suppressHydrationWarning": {
+                "defaultValue": null,
+                "description": "",
+                "name": "suppressHydrationWarning",
+                "required": false,
+                "type": "boolean | undefined"
+            },
+            "tabIndex": {
+                "defaultValue": null,
+                "description": "",
+                "name": "tabIndex",
+                "required": false,
+                "type": "number | undefined"
+            },
+            "title": {
+                "defaultValue": null,
+                "description": "",
+                "name": "title",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "translate": {
+                "defaultValue": null,
+                "description": "",
+                "name": "translate",
+                "required": false,
+                "type": "\"yes\" | \"no\" | undefined"
+            },
+            "typeof": {
+                "defaultValue": null,
+                "description": "",
+                "name": "typeof",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "unselectable": {
+                "defaultValue": null,
+                "description": "",
+                "name": "unselectable",
+                "required": false,
+                "type": "\"off\" | \"on\" | undefined"
+            },
+            "vocab": {
+                "defaultValue": null,
+                "description": "",
+                "name": "vocab",
+                "required": false,
+                "type": "string | undefined"
             }
         }
     },
     "Heading": {
-        "displayName": "Heading",
         "description": "",
+        "displayName": "Heading",
         "props": {
-            "level": {
-                "defaultValue": null,
-                "description": "",
-                "name": "level",
-                "required": false,
-                "type": "\"h1\" | \"h2\" | \"h3\" | \"h4\" | undefined"
-            },
             "as": {
                 "defaultValue": null,
                 "description": "",
                 "name": "as",
                 "required": false,
                 "type": "As | undefined"
+            },
+            "level": {
+                "defaultValue": null,
+                "description": "",
+                "name": "level",
+                "required": false,
+                "type": "\"h1\" | \"h2\" | \"h3\" | \"h4\" | undefined"
             }
         }
     },
     "Input": {
-        "displayName": "Input",
         "description": "",
+        "displayName": "Input",
         "props": {
-            "color": {
-                "defaultValue": null,
-                "description": "",
-                "name": "color",
-                "required": false,
-                "type": "NordstarColor | undefined"
-            },
-            "label": {
-                "defaultValue": null,
-                "description": "",
-                "name": "label",
-                "required": false,
-                "type": "string | undefined"
-            },
-            "variant": {
-                "defaultValue": null,
-                "description": "",
-                "name": "variant",
-                "required": false,
-                "type": "\"outline\" | \"solid\" | null | undefined"
-            },
             "as": {
                 "defaultValue": null,
                 "description": "",
@@ -2160,17 +2139,24 @@
                 "required": false,
                 "type": "\"symbol\" | \"object\" | \"a\" | \"abbr\" | \"address\" | \"area\" | \"article\" | \"aside\" | \"audio\" | \"b\" | \"base\" | \"bdi\" | \"bdo\" | \"big\" | \"blockquote\" | \"body\" | \"br\" | \"button\" | \"canvas\" | \"caption\" | \"center\" | \"cite\" | \"code\" | \"col\" | \"colgroup\" | \"data\" | \"datalist\" | \"dd\" | \"del\" | \"details\" | \"dfn\" | \"dialog\" | \"div\" | \"dl\" | \"dt\" | \"em\" | \"embed\" | \"fieldset\" | \"figcaption\" | \"figure\" | \"footer\" | \"form\" | \"h1\" | \"h2\" | \"h3\" | \"h4\" | \"h5\" | \"h6\" | \"head\" | \"header\" | \"hgroup\" | \"hr\" | \"html\" | \"i\" | \"iframe\" | \"img\" | \"input\" | \"ins\" | \"kbd\" | \"keygen\" | \"label\" | \"legend\" | \"li\" | \"link\" | \"main\" | \"map\" | \"mark\" | \"menu\" | \"menuitem\" | \"meta\" | \"meter\" | \"nav\" | \"noindex\" | \"noscript\" | \"ol\" | \"optgroup\" | \"option\" | \"output\" | \"p\" | \"param\" | \"picture\" | \"pre\" | \"progress\" | \"q\" | \"rp\" | \"rt\" | \"ruby\" | \"s\" | \"samp\" | \"search\" | \"slot\" | \"script\" | \"section\" | \"select\" | \"small\" | \"source\" | \"span\" | \"strong\" | \"style\" | \"sub\" | \"summary\" | \"sup\" | \"table\" | \"template\" | \"tbody\" | \"td\" | \"textarea\" | \"tfoot\" | \"th\" | \"thead\" | \"time\" | \"title\" | \"tr\" | \"track\" | \"u\" | \"ul\" | \"var\" | \"video\" | \"wbr\" | \"webview\" | \"svg\" | \"animate\" | \"animateMotion\" | \"animateTransform\" | \"circle\" | \"clipPath\" | \"defs\" | \"desc\" | \"ellipse\" | \"feBlend\" | \"feColorMatrix\" | \"feComponentTransfer\" | \"feComposite\" | \"feConvolveMatrix\" | \"feDiffuseLighting\" | \"feDisplacementMap\" | \"feDistantLight\" | \"feDropShadow\" | \"feFlood\" | \"feFuncA\" | \"feFuncB\" | \"feFuncG\" | \"feFuncR\" | \"feGaussianBlur\" | \"feImage\" | \"feMerge\" | \"feMergeNode\" | \"feMorphology\" | \"feOffset\" | \"fePointLight\" | \"feSpecularLighting\" | \"feSpotLight\" | \"feTile\" | \"feTurbulence\" | \"filter\" | \"foreignObject\" | \"g\" | \"image\" | \"line\" | \"linearGradient\" | \"marker\" | \"mask\" | \"metadata\" | \"mpath\" | \"path\" | \"pattern\" | \"polygon\" | \"polyline\" | \"radialGradient\" | \"rect\" | \"set\" | \"stop\" | \"switch\" | \"text\" | \"textPath\" | \"tspan\" | \"use\" | \"view\" | ComponentType<any> | undefined"
             },
-            "value": {
+            "color": {
                 "defaultValue": null,
                 "description": "",
-                "name": "value",
+                "name": "color",
                 "required": false,
-                "type": "string | undefined"
+                "type": "NordstarColor | undefined"
             },
             "defaultValue": {
                 "defaultValue": null,
                 "description": "",
                 "name": "defaultValue",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "label": {
+                "defaultValue": null,
+                "description": "",
+                "name": "label",
                 "required": false,
                 "type": "string | undefined"
             },
@@ -2180,12 +2166,26 @@
                 "name": "type",
                 "required": false,
                 "type": "\"button\" | \"search\" | \"time\" | \"image\" | \"text\" | \"color\" | (string & {}) | \"hidden\" | \"checkbox\" | \"radio\" | \"tel\" | \"url\" | \"email\" | \"date\" | \"datetime-local\" | \"file\" | \"month\" | \"password\" | \"range\" | \"reset\" | \"submit\" | \"week\" | undefined"
+            },
+            "value": {
+                "defaultValue": null,
+                "description": "",
+                "name": "value",
+                "required": false,
+                "type": "string | undefined"
+            },
+            "variant": {
+                "defaultValue": null,
+                "description": "",
+                "name": "variant",
+                "required": false,
+                "type": "\"outline\" | \"solid\" | null | undefined"
             }
         }
     },
     "Label": {
-        "displayName": "Label",
         "description": "",
+        "displayName": "Label",
         "props": {
             "as": {
                 "defaultValue": null,
@@ -2194,25 +2194,25 @@
                 "required": false,
                 "type": "As | undefined"
             },
-            "color": {
-                "defaultValue": null,
-                "description": "",
-                "name": "color",
-                "required": false,
-                "type": "NordstarColor | undefined"
-            },
             "children": {
                 "defaultValue": null,
                 "description": "",
                 "name": "children",
                 "required": false,
                 "type": "string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<AwaitedReactNode> | null | undefined"
+            },
+            "color": {
+                "defaultValue": null,
+                "description": "",
+                "name": "color",
+                "required": false,
+                "type": "NordstarColor | undefined"
             }
         }
     },
     "View": {
-        "displayName": "View",
         "description": "",
+        "displayName": "View",
         "props": {
             "as": {
                 "defaultValue": null,
@@ -2228,19 +2228,19 @@
                 "required": false,
                 "type": "As | undefined"
             },
-            "withoutWrapper": {
-                "defaultValue": null,
-                "description": "",
-                "name": "withoutWrapper",
-                "required": false,
-                "type": "boolean | undefined"
-            },
             "outerClassName": {
                 "defaultValue": null,
                 "description": "",
                 "name": "outerClassName",
                 "required": false,
                 "type": "string | undefined"
+            },
+            "withoutWrapper": {
+                "defaultValue": null,
+                "description": "",
+                "name": "withoutWrapper",
+                "required": false,
+                "type": "boolean | undefined"
             }
         }
     }

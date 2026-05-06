@@ -13,5 +13,18 @@ describe('components', () => {
 
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        (['foreground', 'primary', 'secondary'] as const).forEach((color) => {
+            it(`renders with color ${color}`, () => {
+                const wrapper = render(
+                    <Label color={color} data-testid="nordstar-label">
+                        Hello World
+                    </Label>,
+                );
+
+                expect(wrapper.getByTestId('nordstar-label')).toHaveAttribute('data-color', color);
+                expect(() => wrapper.unmount()).not.toThrow();
+            });
+        });
     });
 });
