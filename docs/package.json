@@ -4,7 +4,7 @@
     "sideEffects": false,
     "private": true,
     "type": "module",
-    "version": "0.0.73",
+    "version": "0.0.74",
     "cacheDirectories": [
         ".next/cache"
     ],
