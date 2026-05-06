@@ -76,17 +76,17 @@
     "dependencies": {
         "clsx": "2.1.1",
         "hex-to-hsl": "1.0.2",
-        "tailwind-merge": "^3"
+        "tailwind-merge": "3.5.0"
     },
     "peerDependencies": {
         "react": ">=19",
         "react-dom": ">=19"
     },
     "devDependencies": {
-        "@types/node": "24.0.10",
+        "@types/node": "25.6.0",
         "@types/prop-types": "15.7.15",
-        "@types/react-dom": "19.1.6",
-        "@types/react": "19.1.8",
+        "@types/react-dom": "19.2.3",
+        "@types/react": "19.2.14",
         "react-dom": "19.2.5",
         "react": "19.2.5",
         "typescript": "6.0.3",
