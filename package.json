@@ -103,7 +103,7 @@
         "sass": "1.99.0",
         "strip-ansi": "7.2.0",
         "tailwindcss": "4.2.4",
-        "turbo": "2.9.9",
+        "turbo": "2.9.10",
         "typescript-plugin-css-modules": "5.2.0",
         "typescript": "6.0.3",
         "vite-plugin-dts": "5.0.0",
