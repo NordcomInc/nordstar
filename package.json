@@ -93,7 +93,7 @@
         "husky": "9.1.7",
         "inquirer-directory": "2.2.0",
         "inquirer": "13.4.2",
-        "lint-staged": "17.0.2",
+        "lint-staged": "17.0.3",
         "magic-string": "0.30.21",
         "plop": "4.0.5",
         "react-dom": "19.2.6",
