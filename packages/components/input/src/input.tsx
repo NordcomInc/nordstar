@@ -120,12 +120,15 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
         const [contents, setContents] = useState<string | number | undefined>(defaultValue);
 
         useEffect(() => {
-            if (!value) {
+            if (value === null || value === undefined) {
                 return;
             }
 
             setContents(() => value);
         }, [value]);
+
+        const hasValue = !!contents || !!value || !!props.value;
+        const isFloating = hasValue || (props as any).autoFocus;
 
         return (
             <div
@@ -146,12 +149,12 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                     <label
                         className={cn(
                             styles.label,
-                            'pointer-events-none select-none font-extrabold text-xs uppercase transition-all [transform:translateZ(0)_translateY(0)]',
-                            !placeholder &&
-                                !contents &&
-                                '-mb-2 text-inherit [transform:translateY(.65rem)] group-first-of-type:-mb-0 group-focus-within:translate-y-0 group-focus-within:text-sm',
+                            'pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm transition-all duration-200',
+                            !placeholder && !hasValue && !isFloating
+                                ? 'text-base text-inherit'
+                                : 'top-1.5 -translate-y-0 text-xs uppercase',
+                            'group-focus-within:top-1.5 group-focus-within:-translate-y-0 group-focus-within:text-xs group-focus-within:uppercase'
                         )}
-                        data-full-height={!placeholder && !contents}
                     >
                         {label}
                     </label>
@@ -166,7 +169,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                         : {})}
                     className={cn(
                         styles.input,
-                        'relative h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:text-foreground-highlight placeholder:transition-opacity placeholder:[font-size:inherit]',
+                        'h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:text-foreground-highlight placeholder:transition-opacity placeholder:[font-size:inherit]',
                         label && as !== 'textarea' && 'absolute inset-y-0 h-15 pt-3',
                         as === 'textarea' && 'h-full min-h-20 leading-normal',
                     )}
