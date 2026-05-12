@@ -117,18 +117,17 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
         ref,
     ) => {
         const Tag = as || 'input';
-        const [contents, setContents] = useState<string | number | undefined>(defaultValue);
+        const [contents, setContents] = useState<string | number | undefined>(defaultValue ?? value);
 
         useEffect(() => {
-            if (value === null || value === undefined) {
+            if (value === undefined || value === null) {
                 return;
             }
 
-            setContents(() => value);
+            setContents(value);
         }, [value]);
 
-        const hasValue = !!contents || !!value || !!props.value;
-        const isFloating = hasValue || (props as any).autoFocus;
+        const hasValue = (value ?? contents) !== undefined && (value ?? contents) !== '';
 
         return (
             <div
@@ -149,8 +148,8 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                     <label
                         className={cn(
                             styles.label,
-                            'pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 text-sm transition-all duration-200',
-                            !placeholder && !hasValue && !isFloating
+                            'pointer-events-none·absolute·top-1/2·left-3·-translate-y-1/2·text-sm·transition-all·duration-200',
+                            !placeholder && !hasValue
                                 ? 'text-base text-inherit'
                                 : 'top-1.5 -translate-y-0 text-xs uppercase',
                             'group-focus-within:top-1.5 group-focus-within:-translate-y-0 group-focus-within:text-xs group-focus-within:uppercase'
@@ -178,7 +177,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                     }
                     placeholder={placeholder}
                     ref={ref}
-                    value={contents || undefined}
+                    value={contents ?? undefined}
                 />
             </div>
         );
