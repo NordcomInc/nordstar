@@ -59,11 +59,23 @@
     --nordstar-duration-short: 0.25s;
     --nordstar-duration-medium: 0.5s;
     font-family: var(--font-sans);
-    font-size: 16px;
     color: hsl(var(--nordstar-color-foreground, 0 0% 100%));
     background: hsl(var(--nordstar-color-background, 0 0% 0%));
+    
+    /* Engine/platform-specific tweaks */
+    -webkit-text-size-adjust: 100%;
 }
 
-#nordstar {
-    font-size: 16px;
+@layer base {
+    a, 
+    button, 
+    [role="button"], 
+    input, 
+    select, 
+    textarea,
+    img,
+    svg {
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+    }
 }
