@@ -61,17 +61,17 @@
     font-family: var(--font-sans);
     color: hsl(var(--nordstar-color-foreground, 0 0% 100%));
     background: hsl(var(--nordstar-color-background, 0 0% 0%));
-    
+
     /* Engine/platform-specific tweaks */
     -webkit-text-size-adjust: 100%;
 }
 
 @layer base {
-    a, 
-    button, 
-    [role="button"], 
-    input, 
-    select, 
+    a,
+    button,
+    [role="button"],
+    input,
+    select,
     textarea,
     img,
     svg {
