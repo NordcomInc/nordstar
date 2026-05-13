@@ -152,7 +152,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                             !placeholder && !hasValue
                                 ? 'text-base text-inherit'
                                 : 'top-1.5 -translate-y-0 text-xs uppercase',
-                            'group-focus-within:top-1.5 group-focus-within:-translate-y-0 group-focus-within:text-xs group-focus-within:uppercase'
+                            'group-focus-within:top-1.5 group-focus-within:-translate-y-0 group-focus-within:text-xs group-focus-within:uppercase',
                         )}
                     >
                         {label}
