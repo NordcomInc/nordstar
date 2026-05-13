@@ -1,5 +1,23 @@
 # @nordcom/nordstar-system
 
+## 0.0.75
+
+### Patch Changes
+
+- [#1155](https://github.com/NordcomInc/nordstar/pull/1155) [`385badd`](https://github.com/NordcomInc/nordstar/commit/385badd81b75aa9da7167387d9e64fff45a97f52) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.0.11.
+
+- [#1168](https://github.com/NordcomInc/nordstar/pull/1168) [`06958bb`](https://github.com/NordcomInc/nordstar/commit/06958bbc5090b7c63aafaab067bd08c7baeb552f) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update react monorepo to v19.2.6.
+
+- [#1170](https://github.com/NordcomInc/nordstar/pull/1170) [`e25ce8d`](https://github.com/NordcomInc/nordstar/commit/e25ce8d1c221f57cd79041f38ac816f1d03ce08b) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.6.1.
+
+- [#1174](https://github.com/NordcomInc/nordstar/pull/1174) [`2135b0a`](https://github.com/NordcomInc/nordstar/commit/2135b0a8106621f4d33b3af3f36e97d7982b08cb) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.6.2.
+
+- [#1181](https://github.com/NordcomInc/nordstar/pull/1181) [`210b4f1`](https://github.com/NordcomInc/nordstar/commit/210b4f1dd175f5ea88f7c33b2817537d94c36ea0) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tailwind-merge to v3.6.0.
+
+- [#1183](https://github.com/NordcomInc/nordstar/pull/1183) [`bf6163c`](https://github.com/NordcomInc/nordstar/commit/bf6163c51e908350109cf1e991f372db5685f5c4) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.0.12.
+
+- [#1185](https://github.com/NordcomInc/nordstar/pull/1185) [`0b8e5a0`](https://github.com/NordcomInc/nordstar/commit/0b8e5a0de70476af3cea1e7436d83353c66d122f) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.7.0.
+
 ## 0.0.74
 
 ### Patch Changes
