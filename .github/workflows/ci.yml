@@ -80,7 +80,6 @@ jobs:
 
     build-docs:
         name: 🔨 Build Docs
-        needs: [lint, typecheck]
         timeout-minutes: 15
         runs-on: ubuntu-latest
         steps:
