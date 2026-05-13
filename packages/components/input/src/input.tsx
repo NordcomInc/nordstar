@@ -152,9 +152,9 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                             'pointer-events-none absolute left-3 z-[1] origin-top-left',
                             'transition-all duration-200 ease-out',
                             hasValue || placeholder
-                                ? 'top-2 scale-75 text-sm uppercase opacity-100 font-semibold'
+                                ? 'top-2·scale-75·font-semibold·text-sm·uppercase·opacity-100'
                                 : 'top-1/2 -translate-y-1/2 scale-100 text-base opacity-50',
-                            'group-focus-within:top-2·group-focus-within:-translate-y-0 group-focus-within:scale-75·group-focus-within:text-sm·group-focus-within:uppercase group-focus-within:opacity-100 group-focus-within:font-semibold',
+                            'group-focus-within:top-2·group-focus-within:-translate-y-0·group-focus-within:font-semibold·group-focus-within:scale-75·group-focus-within:text-sm·group-focus-within:uppercase·group-focus-within:opacity-100',
                         )}
                     >
                         {label}
