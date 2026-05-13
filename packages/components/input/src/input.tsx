@@ -171,7 +171,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                     className={cn(
                         styles.input,
                         'h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:text-foreground-highlight placeholder:transition-opacity placeholder:[font-size:inherit]',
-                        label && 'pt-6',
+                        label && 'pt-3',
                         as === 'textarea' && 'h-full min-h-20 leading-normal',
                     )}
                     onChange={(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
