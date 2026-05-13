@@ -150,8 +150,10 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                             styles.label,
                             'pointer-events-none absolute left-3 z-[1] origin-top-left',
                             'transition-all duration-200 ease-out',
-                            hasValue ? 'top-1.5 scale-75 text-xs uppercase' : 'top-1/2 -translate-y-1/2 scale-100 text-sm',
-                            'group-focus-within:top-1.5 group-focus-within:scale-75 group-focus-within:text-xs group-focus-within:uppercase'
+                            hasValue
+                                ? 'top-1.5 scale-75 text-xs uppercase'
+                                : 'top-1/2 -translate-y-1/2 scale-100 text-sm',
+                            'group-focus-within:top-1.5·group-focus-within:scale-75·group-focus-within:text-xs·group-focus-within:uppercase',
                         )}
                     >
                         {label}
