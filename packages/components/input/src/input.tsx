@@ -6,7 +6,6 @@ import type { VariantProps } from 'class-variance-authority';
 import { cva } from 'class-variance-authority';
 import type { ChangeEvent, HTMLAttributes, HTMLInputTypeAttribute } from 'react';
 import { useEffect, useState } from 'react';
-import styles from './input.module.scss';
 
 const variants = cva(
     cn(
@@ -148,7 +147,6 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                 {label ? (
                     <label
                         className={cn(
-                            styles.label,
                             'pointer-events-none absolute top-0 left-3 z-[1] origin-top-left',
                             'transition-all duration-200 ease-out',
                             {
@@ -171,7 +169,6 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                             : { type: 'text' }
                         : {})}
                     className={cn(
-                        styles.input,
                         'h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:text-foreground-highlight placeholder:transition-opacity placeholder:[font-size:inherit]',
                         label && 'pt-3',
                         as === 'textarea' && 'h-full min-h-20 leading-normal',
