@@ -150,10 +150,10 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                             styles.label,
                             'pointer-events-none absolute left-3 z-[1] origin-top-left',
                             'transition-all duration-200 ease-out',
-                            hasValue
-                                ? 'top-1.5 scale-75 text-xs uppercase'
-                                : 'top-1/2 -translate-y-1/2 scale-100 text-sm',
-                            'group-focus-within:top-1.5·group-focus-within:scale-75·group-focus-within:text-xs·group-focus-within:uppercase',
+                            hasValue || placeholder
+                                ? 'top-2 scale-75 text-sm uppercase opacity-100'
+                                : 'top-1/2 -translate-y-1/2 scale-100 text-base opacity-50',
+                            'group-focus-within:top-2·group-focus-within:scale-75·group-focus-within:text-sm·group-focus-within:uppercase group-focus-within:opacity-100',
                         )}
                     >
                         {label}
@@ -170,7 +170,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                     className={cn(
                         styles.input,
                         'h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:text-foreground-highlight placeholder:transition-opacity placeholder:[font-size:inherit]',
-                        label && as !== 'textarea' && 'pt-7',
+                        label && 'pt-7',
                         as === 'textarea' && 'h-full min-h-20 leading-normal',
                     )}
                     onChange={(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
