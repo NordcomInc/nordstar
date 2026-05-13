@@ -10,7 +10,7 @@ import styles from './input.module.scss';
 
 const variants = cva(
     cn(
-        'group relative inline-flex h-15 flex-col gap-[.1rem] overflow-clip rounded-md bg-transparent px-3 text-base transition-colors',
+        'relative inline-flex h-15 flex-col gap-[.1rem] overflow-clip rounded-md bg-transparent px-3 text-base transition-colors',
     ),
     {
         compoundVariants: [
@@ -137,6 +137,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                         color: color === 'default' ? 'foreground' : color,
                     }),
                     as === 'textarea' && 'h-auto',
+                    'group',
                     className,
                 )}
                 data-color={color}
@@ -151,9 +152,9 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                             'pointer-events-none absolute left-3 z-[1] origin-top-left',
                             'transition-all duration-200 ease-out',
                             hasValue || placeholder
-                                ? 'top-2 scale-75 text-sm uppercase opacity-100'
+                                ? 'top-2 scale-75 text-sm uppercase opacity-100 font-semibold'
                                 : 'top-1/2 -translate-y-1/2 scale-100 text-base opacity-50',
-                            'group-focus-within:top-2·group-focus-within:-translate-y-0 group-focus-within:scale-75·group-focus-within:text-sm·group-focus-within:uppercase group-focus-within:opacity-100',
+                            'group-focus-within:top-2·group-focus-within:-translate-y-0 group-focus-within:scale-75·group-focus-within:text-sm·group-focus-within:uppercase group-focus-within:opacity-100 group-focus-within:font-semibold',
                         )}
                     >
                         {label}
@@ -170,7 +171,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                     className={cn(
                         styles.input,
                         'h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:text-foreground-highlight placeholder:transition-opacity placeholder:[font-size:inherit]',
-                        label && 'pt-7',
+                        label && 'pt-4',
                         as === 'textarea' && 'h-full min-h-20 leading-normal',
                     )}
                     onChange={(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
