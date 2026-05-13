@@ -1,5 +1,26 @@
 # @nordcom/nordstar-docs
 
+## 0.0.75
+
+### Patch Changes
+
+- [#1162](https://github.com/NordcomInc/nordstar/pull/1162) [`940d7f7`](https://github.com/NordcomInc/nordstar/commit/940d7f72073059e73c80c4b5ab39d375bda323df) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @next/mdx to v16.2.4.
+
+- [#1164](https://github.com/NordcomInc/nordstar/pull/1164) [`54556de`](https://github.com/NordcomInc/nordstar/commit/54556deca480fb29033638b5e124db8c6cca720d) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update react monorepo .
+
+- [#1166](https://github.com/NordcomInc/nordstar/pull/1166) [`2ff273b`](https://github.com/NordcomInc/nordstar/commit/2ff273b4f7d0ec9a2c835e92bc83dcd4e2b086f8) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update nextjs monorepo to v16.2.5.
+
+- [#1168](https://github.com/NordcomInc/nordstar/pull/1168) [`06958bb`](https://github.com/NordcomInc/nordstar/commit/06958bbc5090b7c63aafaab067bd08c7baeb552f) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update react monorepo to v19.2.6.
+
+- [#1172](https://github.com/NordcomInc/nordstar/pull/1172) [`fa78c81`](https://github.com/NordcomInc/nordstar/commit/fa78c81f65bd06b8fb33fdf97de032399553d1aa) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update nextjs monorepo to v16.2.6.
+
+- [#1176](https://github.com/NordcomInc/nordstar/pull/1176) [`b74c6db`](https://github.com/NordcomInc/nordstar/commit/b74c6db7ffca569ec102b831149b150eb725d5de) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update tailwindcss monorepo to v4.3.0.
+
+- [#1181](https://github.com/NordcomInc/nordstar/pull/1181) [`210b4f1`](https://github.com/NordcomInc/nordstar/commit/210b4f1dd175f5ea88f7c33b2817537d94c36ea0) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tailwind-merge to v3.6.0.
+
+- Updated dependencies [[`67a3f83`](https://github.com/NordcomInc/nordstar/commit/67a3f8350a06568921e306c7d392f5ad9edcbeef), [`b23f199`](https://github.com/NordcomInc/nordstar/commit/b23f199992afac84d767efba49832b024dd3deef), [`385badd`](https://github.com/NordcomInc/nordstar/commit/385badd81b75aa9da7167387d9e64fff45a97f52), [`54556de`](https://github.com/NordcomInc/nordstar/commit/54556deca480fb29033638b5e124db8c6cca720d), [`06958bb`](https://github.com/NordcomInc/nordstar/commit/06958bbc5090b7c63aafaab067bd08c7baeb552f), [`c567686`](https://github.com/NordcomInc/nordstar/commit/c567686180d6394af3878986c76533e57f5f5ef2), [`b74c6db`](https://github.com/NordcomInc/nordstar/commit/b74c6db7ffca569ec102b831149b150eb725d5de), [`bf6163c`](https://github.com/NordcomInc/nordstar/commit/bf6163c51e908350109cf1e991f372db5685f5c4), [`18dc32c`](https://github.com/NordcomInc/nordstar/commit/18dc32c28543d7bf4e060fdf084422119d5f7f01), [`ed87141`](https://github.com/NordcomInc/nordstar/commit/ed87141cd2809f89d3a48dd18075b2c860849418)]:
+  - @nordcom/nordstar@0.0.75
+
 ## 0.0.74
 
 ### Patch Changes
