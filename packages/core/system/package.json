@@ -83,7 +83,7 @@
         "react-dom": ">=19"
     },
     "devDependencies": {
-        "@types/node": "25.8.0",
+        "@types/node": "25.9.0",
         "@types/prop-types": "15.7.15",
         "@types/react-dom": "19.2.3",
         "@types/react": "19.2.14",
