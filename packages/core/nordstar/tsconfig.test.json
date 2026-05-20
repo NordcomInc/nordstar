@@ -3,8 +3,10 @@
     "exclude": ["**/node_modules", "**/dist", "**/.turbo", "**/coverage", "**/build", "**/public"],
     "extends": "./tsconfig.json",
 
-    "include": ["src/**/*.test.*"],
+    "include": ["src/**/*.test.*", "test/**/*.ts", "test/**/*.tsx"],
     "compilerOptions": {
-        "types": ["vitest/globals"]
+        "composite": false,
+        "rootDir": ".",
+        "types": []
     }
 }
