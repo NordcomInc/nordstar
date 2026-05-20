@@ -10,31 +10,17 @@
         "README.md"
     ],
     "main": "./dist/index.js",
-    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "exports": {
         ".": {
+            "types": "./dist/index.d.ts",
             "import": "./dist/index.js",
-            "module": "./dist/index.js",
-            "types": "./dist/index.d.ts"
+            "default": "./dist/index.js"
         },
         "./package.json": "./package.json"
     },
     "publishConfig": {
-        "access": "public",
-        "main": "dist/index.js",
-        "module": "dist/index.js",
-        "types": "dist/index.d.ts",
-        "exports": {
-            ".": {
-                "import": "./dist/index.js",
-                "module": "./dist/index.js",
-                "require": null,
-                "types": "./dist/index.d.ts"
-            },
-            "./dist/index.css": "./dist/index.css",
-            "./package.json": "./package.json"
-        }
+        "access": "public"
     },
     "sideEffects": false,
     "scripts": {

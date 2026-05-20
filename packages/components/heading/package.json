@@ -10,30 +10,12 @@
         "README.md"
     ],
     "main": "./dist/index.js",
-    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "import": [
-                "./dist/index.js"
-            ],
-            "module": [
-                "./dist/index.js"
-            ],
-            "types": [
-                "./dist/index.d.ts"
-            ]
-        },
-        "./*": {
-            "import": [
-                "./dist/*.js"
-            ],
-            "module": [
-                "./dist/*.js"
-            ],
-            "types": [
-                "./dist/*.d.ts"
-            ]
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "default": "./dist/index.js"
         },
         "./package.json": "./package.json"
     },
