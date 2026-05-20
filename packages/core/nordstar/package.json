@@ -58,9 +58,11 @@
         "build:compile": "vite build",
         "build:scripts": "concurrently -i pnpm:build:scripts:* --",
         "build:scripts:build-css": "node scripts/build-css.mjs",
-        "dev": "vite build --watch",
         "clean": "rm -rf dist coverage .turbo .next *.tsbuildinfo *.log",
-        "typecheck": "tsc --noEmit"
+        "dev": "vite build --watch",
+        "typecheck": "tsc --noEmit",
+        "verify:pack": "rm -f /tmp/nordcom-nordstar-*.tgz && pnpm pack --pack-destination /tmp && publint /tmp/nordcom-nordstar-*.tgz",
+        "verify:pack:attw": "rm -f /tmp/nordcom-nordstar-*.tgz && pnpm pack --pack-destination /tmp && attw /tmp/nordcom-nordstar-*.tgz"
     },
     "dependencies": {
         "class-variance-authority": "0.7.1",
