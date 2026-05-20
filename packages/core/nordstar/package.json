@@ -10,34 +10,23 @@
         "README.md"
     ],
     "main": "./dist/index.js",
-    "module": "./dist/index.js",
     "types": "./dist/index.d.ts",
     "exports": {
         ".": {
-            "style": "./dist/tailwind.css",
+            "types": "./dist/index.d.ts",
             "import": "./dist/index.js",
-            "module": "./dist/index.js",
-            "types": "./dist/index.d.ts"
+            "default": "./dist/index.js"
         },
         "./styles.css": "./dist/styles.css",
         "./tailwind.css": "./dist/tailwind.css",
-        "./*": {
-            "import": [
-                "./dist/*.js"
-            ],
-            "module": [
-                "./dist/*.js"
-            ],
-            "types": [
-                "./dist/*.d.ts"
-            ]
-        },
         "./package.json": "./package.json"
     },
     "publishConfig": {
         "access": "public"
     },
-    "sideEffects": false,
+    "sideEffects": [
+        "**/*.css"
+    ],
     "keywords": [
         "nordstar",
         "nordcom"
@@ -74,17 +63,10 @@
         "typecheck": "tsc --noEmit"
     },
     "dependencies": {
-        "@nordcom/nordstar-accented": "workspace:*",
-        "@nordcom/nordstar-button": "workspace:*",
-        "@nordcom/nordstar-card": "workspace:*",
-        "@nordcom/nordstar-details": "workspace:*",
-        "@nordcom/nordstar-header": "workspace:*",
-        "@nordcom/nordstar-heading": "workspace:*",
-        "@nordcom/nordstar-input": "workspace:*",
-        "@nordcom/nordstar-label": "workspace:*",
-        "@nordcom/nordstar-system": "workspace:*",
-        "@nordcom/nordstar-view": "workspace:*",
-        "class-variance-authority": "0.7.1"
+        "class-variance-authority": "0.7.1",
+        "clsx": "2.1.1",
+        "hex-to-hsl": "1.0.2",
+        "tailwind-merge": "3.6.0"
     },
     "peerDependencies": {
         "react": ">=19",
@@ -97,6 +79,16 @@
         }
     },
     "devDependencies": {
+        "@nordcom/nordstar-accented": "workspace:*",
+        "@nordcom/nordstar-button": "workspace:*",
+        "@nordcom/nordstar-card": "workspace:*",
+        "@nordcom/nordstar-details": "workspace:*",
+        "@nordcom/nordstar-header": "workspace:*",
+        "@nordcom/nordstar-heading": "workspace:*",
+        "@nordcom/nordstar-input": "workspace:*",
+        "@nordcom/nordstar-label": "workspace:*",
+        "@nordcom/nordstar-system": "workspace:*",
+        "@nordcom/nordstar-view": "workspace:*",
         "@tailwindcss/cli": "^4",
         "@types/node": "24.12.4",
         "@types/react-dom": "19.2.3",

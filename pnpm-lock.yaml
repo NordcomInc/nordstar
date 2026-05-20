@@ -534,6 +534,19 @@ importers:
 
   packages/core/nordstar:
     dependencies:
+      class-variance-authority:
+        specifier: 0.7.1
+        version: 0.7.1
+      clsx:
+        specifier: 2.1.1
+        version: 2.1.1
+      hex-to-hsl:
+        specifier: 1.0.2
+        version: 1.0.2
+      tailwind-merge:
+        specifier: 3.6.0
+        version: 3.6.0
+    devDependencies:
       '@nordcom/nordstar-accented':
         specifier: workspace:*
         version: link:../../components/accented
@@ -564,10 +577,6 @@ importers:
       '@nordcom/nordstar-view':
         specifier: workspace:*
         version: link:../../components/view
-      class-variance-authority:
-        specifier: 0.7.1
-        version: 0.7.1
-    devDependencies:
       '@tailwindcss/cli':
         specifier: ^4
         version: 4.3.0
