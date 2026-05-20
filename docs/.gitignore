@@ -31,8 +31,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # deployment
-.sentryclirc
 .vercel
 
 # typescript
 *.tsbuildinfo
+
+# Codegen
+src/**/*.generated.*

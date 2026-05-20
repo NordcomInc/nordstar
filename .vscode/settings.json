@@ -1,5 +1,5 @@
 {
-    "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
+    "editor.defaultFormatter": "biomejs.biome",
     "editor.formatOnSave": true,
     "files.autoSave": "off",
     "files.eol": "\n",
@@ -13,23 +13,19 @@
     "git.inputValidationSubjectLength": 72,
     "git.showPushSuccessNotification": true,
     "github.copilot.chat.localeOverride": "en",
-    "markdown.extension.list.indentationSize": "inherit",
-    "markdown.extension.toc.levels": "2..6",
-    "markdown.extension.toc.slugifyMode": "github",
+    "js/ts.locale": "en",
+    "js/ts.preferences.importModuleSpecifier": "non-relative",
+    "js/ts.tsdk.path": "node_modules/typescript/lib",
     "tailwindCSS.classAttributes": ["class", "className", ".*ClassName", ".*Styles"],
     "tailwindCSS.colorDecorators": true,
     "tailwindCSS.lint.invalidVariant": "warning",
-    "typescript.locale": "en",
-    "typescript.preferences.importModuleSpecifier": "non-relative",
-    "typescript.surveys.enabled": false,
-    "typescript.tsdk": "node_modules/typescript/lib",
     "[git-commit]": {
         "editor.rulers": [72],
         "editor.wordWrap": "off",
         "workbench.editor.restoreViewState": false
     },
     "[json]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
+        "editor.defaultFormatter": "biomejs.biome"
     },
     "[plaintext]": {
         "editor.formatOnSave": false
@@ -37,9 +33,11 @@
     "cSpell.words": [
         "Behaviour",
         "Brandly",
+        "Codegen",
         "compat",
         "davelosert",
         "Docgen",
+        "esbuild",
         "Filiph",
         "lintstagedrc",
         "lockb",
@@ -57,6 +55,7 @@
         "treeshake",
         "tsbuildinfo",
         "typecheck",
+        "vercel",
         "vite"
     ],
     "editor.codeActionsOnSave": {
@@ -79,8 +78,8 @@
         "temperature": "0.75"
     },
     "github.copilot.enable": {
-        "markdown": "true",
-        "plaintext": "true"
+        "markdown": true,
+        "plaintext": true
     },
     "markdown.extension.toc.omittedFromToc": {
         "CONTRIBUTING.md": ["## Table of Contents"]
