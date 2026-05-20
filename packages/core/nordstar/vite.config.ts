@@ -21,12 +21,14 @@ export default mergeConfig(
         },
         root: resolve(__dirname),
         build: {
-            rollupOptions: {
+            rolldownOptions: {
                 external: [
-                    /^@nordcom\/nordstar-/,
-                    '@nordcom/nordstar-system',
+                    'react',
+                    'react-dom',
+                    'react/jsx-runtime',
                     'class-variance-authority',
                     'clsx',
+                    'hex-to-hsl',
                     'tailwind-merge',
                 ],
                 output: {
@@ -47,12 +49,10 @@ export default mergeConfig(
         },
         plugins: [
             dts({
-                clearPureImport: false,
-                copyDtsFiles: true,
-                entryRoot: 'src',
+                bundleTypes: true,
                 insertTypesEntry: true,
-                tsconfigPath: `./tsconfig.json`,
-                include: ['./**/src'],
+                tsconfigPath: './tsconfig.json',
+                include: ['src/**/*.ts', 'src/**/*.tsx'],
             }),
             codecovVitePlugin({
                 enableBundleAnalysis: !!process.env.CODECOV_TOKEN,
