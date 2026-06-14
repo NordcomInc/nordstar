@@ -150,9 +150,9 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                             'pointer-events-none absolute top-0 left-3 z-[1] origin-top-left',
                             'transition-all duration-200 ease-out',
                             hasValue || placeholder
-                                ? 'top-4·translate-y-0 scale-65·font-bold·text-sm·uppercase·opacity-100'
+                                ? 'top-1 translate-y-0 scale-65 font-bold text-sm uppercase opacity-100'
                                 : 'top-1/2 -translate-y-1/2 scale-100 opacity-75',
-                            'group-focus-within:top-4·group-focus-within:translate-y-0·group-focus-within:font-bold·group-focus-within:scale-65·group-focus-within:text-sm·group-focus-within:uppercase·group-focus-within:opacity-100',
+                            'group-focus-within:top-1 group-focus-within:translate-y-0 group-focus-within:scale-65 group-focus-within:font-bold group-focus-within:text-sm group-focus-within:uppercase group-focus-within:opacity-100',
                         )}
                     >
                         {label}
@@ -168,7 +168,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                         : {})}
                     className={cn(
                         'h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:text-foreground-highlight placeholder:transition-opacity placeholder:[font-size:inherit]',
-                        label && 'pt-6',
+                        label && as === 'textarea' && 'pt-6 pb-2',
                         as === 'textarea' && 'h-full min-h-20 leading-normal',
                     )}
                     onChange={(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
