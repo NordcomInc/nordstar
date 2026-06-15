@@ -18,6 +18,11 @@ export type ViewProps = {
  * `outerAs="main"` — use `outerAs="section"` or `withoutWrapper` for secondary
  * regions to avoid duplicate `<main>` landmarks.
  *
+ * Both the wrapper and the content container set `min-w-0` so the component
+ * shrinks correctly inside flex/grid parents (e.g. app shells) instead of
+ * forcing a page-wide horizontal scrollbar when a single wide child (table,
+ * code block, carousel, long URL) would otherwise blow the layout out.
+ *
  * @param {object} props - `<View/>` props.
  * @param {As} [props.as] - The element to render the component as.
  * @param {As} [props.outerAs] - The element to render the outer part of the component as.
@@ -25,14 +30,14 @@ export type ViewProps = {
  * @param {string | undefined} [props.outerClassName] - The class name for the outer part of the component.
  * @returns {ReactNode} The `<View/>` component.
  */
-const View = forwardRef<'main', ViewProps>(
+const View = forwardRef<'article', ViewProps>(
     ({ as: Tag = 'article', outerAs: Wrapper = 'main', withoutWrapper, className, outerClassName, ...props }, ref) => {
         const inner = (
             <Tag
                 draggable={false}
                 {...props}
                 className={cn(
-                    'mx-auto my-3 flex w-full max-w-(--nordstar-layout-page-width) flex-col gap-3 overflow-x-clip',
+                    'mx-auto my-3 flex w-full min-w-0 max-w-(--nordstar-layout-page-width) flex-col gap-3 overflow-x-clip',
                     className,
                 )}
                 data-without-wrapper={!!withoutWrapper}
@@ -43,7 +48,11 @@ const View = forwardRef<'main', ViewProps>(
             return inner;
         }
 
-        return <Wrapper className={cn('flex flex-col items-center justify-start', outerClassName)}>{inner}</Wrapper>;
+        return (
+            <Wrapper className={cn('flex w-full min-w-0 flex-col items-center justify-start', outerClassName)}>
+                {inner}
+            </Wrapper>
+        );
     },
 );
 
