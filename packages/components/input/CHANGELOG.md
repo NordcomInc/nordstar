@@ -1,5 +1,60 @@
 # @nordcom/nordstar-input
 
+## 0.1.0
+
+### Patch Changes
+
+- [#1189](https://github.com/NordcomInc/nordstar/pull/1189) [`5199c66`](https://github.com/NordcomInc/nordstar/commit/5199c6601687e89d244bce6652049f1e1d18a051) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.0.13.
+
+- [#1201](https://github.com/NordcomInc/nordstar/pull/1201) [`1ef35d6`](https://github.com/NordcomInc/nordstar/commit/1ef35d6f7c9e55cc56c4bb0afa34d5fe7c739107) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite-plugin-dts to v5.0.1.
+
+- [#1204](https://github.com/NordcomInc/nordstar/pull/1204) [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v19.2.15.
+
+- [`5e0e5a3`](https://github.com/NordcomInc/nordstar/commit/5e0e5a3233403d70beb17ac802ecb53835624bc8) Thanks [@filiphsps](https://github.com/filiphsps)! - Deps: upgrade build/test tooling and docs dependencies to their latest releases
+  (biome 2.5.0, vite 8.0.16, vitest 4.1.8, turbo 2.9.18, tailwindcss 4.3.1, sass
+  1.101.0, @types/node 25, @types/react 19.2.17, react 19.2.7, next 16.2.9, shiki
+  4.2.0 and related). Only devDependencies changed, so there is no runtime impact
+  for consumers. The Biome config was migrated to the 2.5.0 schema (`recommended`
+  → `preset`) and the CI environment variables were declared in `turbo.json`.
+  `inquirer` is intentionally held at 13.x because the component generator relies
+  on its legacy prompt API.
+
+- [`a91b41e`](https://github.com/NordcomInc/nordstar/commit/a91b41ebe001e7a1c689d3419dd181ffffdd3310) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix `<Input/>` switching between uncontrolled and controlled. With no `value` or
+  `defaultValue`, the rendered element started as `value={undefined}` (uncontrolled)
+  and only became controlled after the first keystroke, triggering React's
+  "changing an uncontrolled input to be controlled" warning. The component now
+  seeds its internal value so the element is controlled from the first render. A
+  consumer-supplied `onChange` is also forwarded — previously it was overwritten by
+  the component's own handler, so a controlled `value` could never update. Finally,
+  rendering with a non-input `as` (e.g. `as="article"`) no longer applies an invalid
+  `type` attribute.
+
+- [`dd66327`](https://github.com/NordcomInc/nordstar/commit/dd66327a54ac6f632e5b4807d4f26240a842a3b7) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix `<Input/>` floating label. The label's active-state utility classes were
+  separated by `U+00B7` middle-dots instead of spaces, so Tailwind never parsed
+  them — the label stayed full-size at the top and covered the value. Separators
+  are now spaces, restoring the float/scale animation. Single-line inputs also
+  center their value for consistent top/bottom padding, and the floated label
+  sits clear of the text in every state (value, placeholder, focus, textarea).
+
+- [`35cd3c8`](https://github.com/NordcomInc/nordstar/commit/35cd3c8a4eb7013aa8b37d800fa928cac89f5427) Thanks [@filiphsps](https://github.com/filiphsps)! - Improve `<Input/>` accessibility and state handling:
+
+  - The floating `<label>` is now programmatically associated with the control via
+    `htmlFor`/`id` (using `useId`, while respecting a consumer-supplied `id`).
+    Previously the label was a purely visual overlay, so screen readers announced
+    an unlabeled textbox.
+  - Added a visible, semantic disabled state — disabled inputs now dim
+    (`opacity-50`), show a `not-allowed` cursor and expose `data-disabled`,
+    matching the affordance vocabulary of `<Button/>`. `disabled` is only forwarded
+    to real form controls.
+  - The floating-label motion now tracks the `--nordstar-duration-short` token and
+    transitions only the properties that actually animate, instead of the
+    hardcoded `duration-200` + `transition-all`.
+  - A placeholder-only field now brightens its border/text in step with the floated
+    label, fixing the previously half-applied "filled" appearance.
+
+- Updated dependencies [[`5199c66`](https://github.com/NordcomInc/nordstar/commit/5199c6601687e89d244bce6652049f1e1d18a051), [`5cf91f1`](https://github.com/NordcomInc/nordstar/commit/5cf91f1a6fa372c9496a6535e6e9f19c4b707494), [`7e71328`](https://github.com/NordcomInc/nordstar/commit/7e713282cba8eeb499e528eb1d71ba5f48219488), [`b7154b2`](https://github.com/NordcomInc/nordstar/commit/b7154b29ee3d5b3c96cd2918a005cf803cfa8fda), [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07), [`5e0e5a3`](https://github.com/NordcomInc/nordstar/commit/5e0e5a3233403d70beb17ac802ecb53835624bc8), [`3b67c90`](https://github.com/NordcomInc/nordstar/commit/3b67c901f8e40b047486b18da98ee07aa991e339)]:
+  - @nordcom/nordstar-system@0.1.0
+
 ## 0.0.75
 
 ### Patch Changes

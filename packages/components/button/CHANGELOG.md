@@ -1,5 +1,48 @@
 # @nordcom/nordstar-button
 
+## 0.1.0
+
+### Patch Changes
+
+- [#1189](https://github.com/NordcomInc/nordstar/pull/1189) [`5199c66`](https://github.com/NordcomInc/nordstar/commit/5199c6601687e89d244bce6652049f1e1d18a051) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.0.13.
+
+- [#1201](https://github.com/NordcomInc/nordstar/pull/1201) [`1ef35d6`](https://github.com/NordcomInc/nordstar/commit/1ef35d6f7c9e55cc56c4bb0afa34d5fe7c739107) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite-plugin-dts to v5.0.1.
+
+- [#1204](https://github.com/NordcomInc/nordstar/pull/1204) [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v19.2.15.
+
+- [`5e0e5a3`](https://github.com/NordcomInc/nordstar/commit/5e0e5a3233403d70beb17ac802ecb53835624bc8) Thanks [@filiphsps](https://github.com/filiphsps)! - Deps: upgrade build/test tooling and docs dependencies to their latest releases
+  (biome 2.5.0, vite 8.0.16, vitest 4.1.8, turbo 2.9.18, tailwindcss 4.3.1, sass
+  1.101.0, @types/node 25, @types/react 19.2.17, react 19.2.7, next 16.2.9, shiki
+  4.2.0 and related). Only devDependencies changed, so there is no runtime impact
+  for consumers. The Biome config was migrated to the 2.5.0 schema (`recommended`
+  → `preset`) and the CI environment variables were declared in `turbo.json`.
+  `inquirer` is intentionally held at 13.x because the component generator relies
+  on its legacy prompt API.
+
+- [`845ea81`](https://github.com/NordcomInc/nordstar/commit/845ea81e9d1782d3bf7f7e3940d087654248cd01) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix `<Button/>` accessibility and interaction states:
+
+  - No longer forces `role="button"` on every rendered element. Rendering as a link
+    (`as="a"`) previously hid the native link role behind a button role; native
+    semantics are now preserved for both `<button>` and other elements.
+  - `disabled` is now only applied as the native attribute on a real `<button>`.
+    Polymorphic elements (`as="a"`, `as="div"`, …) previously received an invalid
+    `disabled` attribute that browsers ignore, leaving them keyboard-focusable and
+    clickable while only appearing dimmed. They now reflect the state via
+    `aria-disabled` and are removed from the tab order so they are genuinely inert.
+  - The `outline` variant gains `focus-visible` and `active` feedback so keyboard
+    users get a visible affordance, matching the `solid` variant.
+  - Replaced `transition-all` with a targeted transition so layout properties are
+    no longer animated.
+  - `data-color`/`data-variant` and the JSDoc now reflect the real resolved
+    defaults (`solid`/`primary`).
+
+- [`a91b41e`](https://github.com/NordcomInc/nordstar/commit/a91b41ebe001e7a1c689d3419dd181ffffdd3310) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix `<Button/>` applying `type="button"` to non-button elements. Rendering with a
+  custom `as` (e.g. `as="a"` for a link styled as a button) produced an invalid
+  `type` attribute such as `<a type="button">`. The `type` attribute is now only
+  set when the button renders as a native `<button>`.
+- Updated dependencies [[`5199c66`](https://github.com/NordcomInc/nordstar/commit/5199c6601687e89d244bce6652049f1e1d18a051), [`5cf91f1`](https://github.com/NordcomInc/nordstar/commit/5cf91f1a6fa372c9496a6535e6e9f19c4b707494), [`7e71328`](https://github.com/NordcomInc/nordstar/commit/7e713282cba8eeb499e528eb1d71ba5f48219488), [`b7154b2`](https://github.com/NordcomInc/nordstar/commit/b7154b29ee3d5b3c96cd2918a005cf803cfa8fda), [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07), [`5e0e5a3`](https://github.com/NordcomInc/nordstar/commit/5e0e5a3233403d70beb17ac802ecb53835624bc8), [`3b67c90`](https://github.com/NordcomInc/nordstar/commit/3b67c901f8e40b047486b18da98ee07aa991e339)]:
+  - @nordcom/nordstar-system@0.1.0
+
 ## 0.0.75
 
 ### Patch Changes

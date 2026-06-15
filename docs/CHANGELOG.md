@@ -1,5 +1,28 @@
 # @nordcom/nordstar-docs
 
+## 0.1.0
+
+### Patch Changes
+
+- [#1188](https://github.com/NordcomInc/nordstar/pull/1188) [`b4ac875`](https://github.com/NordcomInc/nordstar/commit/b4ac8750e0107a4d07e89a7d819d1cec58bea1b6) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tsx to v4.21.1.
+
+- [#1192](https://github.com/NordcomInc/nordstar/pull/1192) [`9d85b58`](https://github.com/NordcomInc/nordstar/commit/9d85b586f127516797bcf2e9d1b9df527a75f0a5) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tsx to v4.22.0.
+
+- [#1196](https://github.com/NordcomInc/nordstar/pull/1196) [`f48e802`](https://github.com/NordcomInc/nordstar/commit/f48e80252fd1092eb704884b576cb290ca34bf78) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tsx to v4.22.1.
+
+- [#1197](https://github.com/NordcomInc/nordstar/pull/1197) [`c038977`](https://github.com/NordcomInc/nordstar/commit/c0389773c24678f0c4dbcb97419822c0129379bc) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tsx to v4.22.2.
+
+- [#1199](https://github.com/NordcomInc/nordstar/pull/1199) [`0320625`](https://github.com/NordcomInc/nordstar/commit/03206257d58d6b1327b9b9a72833a5e877e58e1d) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency postcss to v8.5.15.
+
+- [#1200](https://github.com/NordcomInc/nordstar/pull/1200) [`02fd4f4`](https://github.com/NordcomInc/nordstar/commit/02fd4f405bfa2f59abfb14215476f1ed2383ecde) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tsx to v4.22.3.
+
+- [#1202](https://github.com/NordcomInc/nordstar/pull/1202) [`710597d`](https://github.com/NordcomInc/nordstar/commit/710597dd0031061acc324d8c66a7d7215736bcee) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency shiki to v4.1.0.
+
+- [#1204](https://github.com/NordcomInc/nordstar/pull/1204) [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v19.2.15.
+
+- Updated dependencies [[`45a001b`](https://github.com/NordcomInc/nordstar/commit/45a001ba4a991e910720103fea8ce7f57ad0c2c3), [`5199c66`](https://github.com/NordcomInc/nordstar/commit/5199c6601687e89d244bce6652049f1e1d18a051), [`1ef35d6`](https://github.com/NordcomInc/nordstar/commit/1ef35d6f7c9e55cc56c4bb0afa34d5fe7c739107), [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07), [`5e0e5a3`](https://github.com/NordcomInc/nordstar/commit/5e0e5a3233403d70beb17ac802ecb53835624bc8), [`cbdee37`](https://github.com/NordcomInc/nordstar/commit/cbdee374f8128ecbc3d8d100df53e9383985a334)]:
+  - @nordcom/nordstar@0.1.0
+
 ## 0.0.75
 
 ### Patch Changes

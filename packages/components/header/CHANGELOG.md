@@ -1,5 +1,43 @@
 # @nordcom/nordstar-header
 
+## 0.1.0
+
+### Patch Changes
+
+- [#1189](https://github.com/NordcomInc/nordstar/pull/1189) [`5199c66`](https://github.com/NordcomInc/nordstar/commit/5199c6601687e89d244bce6652049f1e1d18a051) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.0.13.
+
+- [#1201](https://github.com/NordcomInc/nordstar/pull/1201) [`1ef35d6`](https://github.com/NordcomInc/nordstar/commit/1ef35d6f7c9e55cc56c4bb0afa34d5fe7c739107) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite-plugin-dts to v5.0.1.
+
+- [#1204](https://github.com/NordcomInc/nordstar/pull/1204) [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v19.2.15.
+
+- [`5e0e5a3`](https://github.com/NordcomInc/nordstar/commit/5e0e5a3233403d70beb17ac802ecb53835624bc8) Thanks [@filiphsps](https://github.com/filiphsps)! - Deps: upgrade build/test tooling and docs dependencies to their latest releases
+  (biome 2.5.0, vite 8.0.16, vitest 4.1.8, turbo 2.9.18, tailwindcss 4.3.1, sass
+  1.101.0, @types/node 25, @types/react 19.2.17, react 19.2.7, next 16.2.9, shiki
+  4.2.0 and related). Only devDependencies changed, so there is no runtime impact
+  for consumers. The Biome config was migrated to the 2.5.0 schema (`recommended`
+  → `preset`) and the CI environment variables were declared in `turbo.json`.
+  `inquirer` is intentionally held at 13.x because the component generator relies
+  on its legacy prompt API.
+
+- [`71f00b5`](https://github.com/NordcomInc/nordstar/commit/71f00b56648fff84881f91779c7f51441973a6ef) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix `<Header/>` ref forwarding, typing and keyboard accessibility:
+
+  - The root `<Header/>` now uses `forwardRef`, so a `ref` reaches the underlying
+    `<header>` element (e.g. to measure height for sticky offsets). Previously the
+    ref was silently dropped, making it the only component in the system that did
+    not forward refs.
+  - `Header.Menu.Link` and the `Header.Logo` anchor gain `focus-visible:text-primary`
+    states, so keyboard users get the same affordance mouse users already had,
+    consistent with `<Button/>`/`<Input/>`.
+  - Replaced the dead `font-base` utility on `Header.Menu.Link` with `font-body`
+    (there is no `--font-base` token, so links silently lost their intended font).
+  - `HeaderLogoProps` now describes `<section>` attributes to match the element it
+    actually renders by default, instead of `<nav>`.
+
+- Updated dependencies [[`5199c66`](https://github.com/NordcomInc/nordstar/commit/5199c6601687e89d244bce6652049f1e1d18a051), [`5cf91f1`](https://github.com/NordcomInc/nordstar/commit/5cf91f1a6fa372c9496a6535e6e9f19c4b707494), [`7e71328`](https://github.com/NordcomInc/nordstar/commit/7e713282cba8eeb499e528eb1d71ba5f48219488), [`1ef35d6`](https://github.com/NordcomInc/nordstar/commit/1ef35d6f7c9e55cc56c4bb0afa34d5fe7c739107), [`b7154b2`](https://github.com/NordcomInc/nordstar/commit/b7154b29ee3d5b3c96cd2918a005cf803cfa8fda), [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07), [`5e0e5a3`](https://github.com/NordcomInc/nordstar/commit/5e0e5a3233403d70beb17ac802ecb53835624bc8), [`b731726`](https://github.com/NordcomInc/nordstar/commit/b73172600a91965e7ac26769859c157acda43d07), [`3b67c90`](https://github.com/NordcomInc/nordstar/commit/3b67c901f8e40b047486b18da98ee07aa991e339), [`57e8160`](https://github.com/NordcomInc/nordstar/commit/57e8160c5a6318d03629e4cf29a41406fdca2526)]:
+  - @nordcom/nordstar-card@0.1.0
+  - @nordcom/nordstar-view@0.1.0
+  - @nordcom/nordstar-system@0.1.0
+
 ## 0.0.75
 
 ### Patch Changes
