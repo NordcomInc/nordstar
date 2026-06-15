@@ -29,23 +29,26 @@ const trackVariants = cva(
     },
 );
 
-const thumbVariants = cva(cn('pointer-events-none block rounded-full bg-foreground transition-transform'), {
-    defaultVariants: {
-        color: 'primary',
-        size: 'md',
-    },
-    variants: {
-        color: {
-            foreground: 'data-[state=checked]:bg-background',
-            primary: 'data-[state=checked]:bg-primary-foreground',
-            secondary: 'data-[state=checked]:bg-secondary-foreground',
+const thumbVariants = cva(
+    cn('pointer-events-none block rounded-full bg-foreground shadow-sm transition-transform duration-200 ease-spring'),
+    {
+        defaultVariants: {
+            color: 'primary',
+            size: 'md',
         },
-        size: {
-            md: 'size-4 data-[state=checked]:translate-x-5',
-            sm: 'size-3 data-[state=checked]:translate-x-4',
+        variants: {
+            color: {
+                foreground: 'data-[state=checked]:bg-background',
+                primary: 'data-[state=checked]:bg-primary-foreground',
+                secondary: 'data-[state=checked]:bg-secondary-foreground',
+            },
+            size: {
+                md: 'size-4 data-[state=checked]:translate-x-5',
+                sm: 'size-3 data-[state=checked]:translate-x-4',
+            },
         },
     },
-});
+);
 
 export type SwitchProps = ComponentPropsWithoutRef<typeof Primitive.Root> & {
     /** Size of the control. Defaults to `'md'`. */

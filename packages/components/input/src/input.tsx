@@ -9,7 +9,7 @@ import { useId, useState } from 'react';
 
 const variants = cva(
     cn(
-        'relative inline-flex h-15 flex-col gap-[.1rem] overflow-clip rounded-md bg-transparent px-3 text-base transition-colors',
+        'relative inline-flex h-15 flex-col gap-[.1rem] overflow-clip rounded-md bg-transparent px-3 text-base transition-colors duration-200 ease-out-soft',
     ),
     {
         compoundVariants: [

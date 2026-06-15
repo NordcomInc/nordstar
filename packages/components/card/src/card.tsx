@@ -34,7 +34,7 @@ const variants = cva(cn('group relative flex-col overflow-clip rounded-xl border
         },
         variant: {
             outline: 'bg-transparent',
-            solid: '',
+            solid: 'shadow-raised',
         },
     },
 });

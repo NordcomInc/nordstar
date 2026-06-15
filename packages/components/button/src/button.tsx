@@ -6,7 +6,7 @@ import type { ReactNode } from 'react';
 
 const variants = cva(
     cn(
-        'flex w-fit select-none appearance-none items-center justify-center gap-3 rounded-sm border-2 border-solid px-4 py-2 text-center font-bold text-sm no-underline transition-[color,background-color,border-color,filter]',
+        'flex w-fit select-none appearance-none items-center justify-center gap-3 rounded-sm border-2 border-solid px-4 py-2 text-center font-bold text-sm no-underline outline-none transition-[color,background-color,border-color,filter,transform,box-shadow] duration-200 ease-out-soft focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background',
     ),
     {
         compoundVariants: [
@@ -37,8 +37,8 @@ const variants = cva(
                 secondary: 'border-secondary bg-secondary text-secondary-foreground',
             },
             variant: {
-                outline: 'bg-transparent',
-                solid: 'hover:brightness-50 focus-visible:brightness-50 active:brightness-75',
+                outline: 'bg-transparent active:translate-y-0',
+                solid: 'shadow-raised hover:-translate-y-px hover:shadow-floating hover:brightness-50 focus-visible:brightness-50 active:translate-y-0 active:shadow-raised active:brightness-75',
             },
         },
     },

@@ -18,7 +18,7 @@ const TooltipContent = forwardRef<ComponentRef<typeof Primitive.Content>, Toolti
         <Primitive.Portal>
             <Primitive.Content
                 className={cn(
-                    'z-50 max-w-xs select-none text-balance rounded-sm border-2 border-foreground border-solid bg-foreground px-2 py-1 font-body font-semibold text-background text-xs leading-tight shadow-lg',
+                    'z-50 max-w-xs origin-[var(--radix-tooltip-content-transform-origin)] select-none text-balance rounded-md border-2 border-foreground border-solid bg-foreground px-2 py-1 font-body font-semibold text-background text-xs leading-tight shadow-overlay data-[state=delayed-open]:animate-overlay-in data-[state=instant-open]:animate-overlay-in',
                     className,
                 )}
                 ref={ref}

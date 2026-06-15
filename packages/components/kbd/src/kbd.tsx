@@ -4,7 +4,7 @@ import { cva } from 'class-variance-authority';
 
 const variants = cva(
     cn(
-        'inline-flex select-none items-center justify-center gap-1 rounded-sm border-2 border-foreground-highlight border-solid bg-background-highlight text-center font-mono font-semibold text-foreground leading-none',
+        'inline-flex select-none items-center justify-center gap-1 rounded-sm border-2 border-foreground-highlight border-solid bg-background-highlight text-center font-mono font-semibold text-foreground leading-none shadow-[inset_0_-0.125rem_0_0_hsl(0_0%_0%/0.45)]',
     ),
     {
         defaultVariants: {
