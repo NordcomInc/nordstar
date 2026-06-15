@@ -9,11 +9,12 @@ export type HeaderProps = {
     style?: CSSCustomProperties | undefined;
 } & Omit<ComponentProps<'header'>, 'color'>;
 
-const Header = ({ sticky = true, className, children, ...props }: HeaderProps) => {
+const Header = forwardRef<'header', HeaderProps>(({ sticky = true, className, children, ...props }, ref) => {
     return (
         <Card
-            {...props}
             as="header"
+            ref={ref}
+            {...props}
             borderless={true}
             className={cn(
                 'z-10 mb-3 flex min-h-20 w-full flex-1 grow items-center justify-center rounded-none border-0 border-none bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/75 md:h-20',
@@ -34,11 +35,11 @@ const Header = ({ sticky = true, className, children, ...props }: HeaderProps) =
             </View>
         </Card>
     );
-};
+});
 
 export type HeaderLogoProps = {
     as?: As;
-} & ComponentProps<'nav'>;
+} & ComponentProps<'section'>;
 
 /**
  * `<Header.Logo/>`, a component to render a header's logo.
@@ -51,7 +52,7 @@ const Logo = forwardRef<'section', HeaderLogoProps>(({ as, className, ...props }
         <Tag
             {...props}
             className={cn(
-                'font-extrabold text-lg uppercase *:h-full *:object-contain *:object-left [&>a]:transition-colors [&>a]:hover:text-primary',
+                'font-extrabold text-lg uppercase *:h-full *:object-contain *:object-left [&>a]:transition-colors [&>a]:hover:text-primary [&>a]:focus-visible:text-primary',
                 className,
             )}
             draggable={false}
@@ -104,7 +105,7 @@ const Link = forwardRef<'a', HeaderMenuLinkProps>(({ as, className, ...props }, 
         <Tag
             {...props}
             className={cn(
-                'cursor-pointer whitespace-nowrap break-all font-base font-extrabold text-sm uppercase leading-none transition-colors hover:text-primary active:text-primary md:text-base',
+                'cursor-pointer whitespace-nowrap break-all font-body font-extrabold text-sm uppercase leading-none transition-colors hover:text-primary focus-visible:text-primary active:text-primary md:text-base',
                 className,
             )}
             draggable={false}
