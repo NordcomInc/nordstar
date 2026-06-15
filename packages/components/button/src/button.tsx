@@ -6,22 +6,22 @@ import type { ReactNode } from 'react';
 
 const variants = cva(
     cn(
-        'flex w-fit select-none appearance-none items-center justify-center gap-3 rounded-sm border-2 border-solid px-4 py-2 text-center font-bold text-sm no-underline transition-all',
+        'flex w-fit select-none appearance-none items-center justify-center gap-3 rounded-sm border-2 border-solid px-4 py-2 text-center font-bold text-sm no-underline transition-[color,background-color,border-color,filter]',
     ),
     {
         compoundVariants: [
             {
-                class: 'text-primary hover:bg-primary hover:text-primary-foreground',
+                class: 'text-primary hover:bg-primary hover:text-primary-foreground focus-visible:bg-primary focus-visible:text-primary-foreground active:brightness-75',
                 color: 'primary',
                 variant: 'outline',
             },
             {
-                class: 'text-secondary hover:bg-secondary hover:text-secondary-foreground',
+                class: 'text-secondary hover:bg-secondary hover:text-secondary-foreground focus-visible:bg-secondary focus-visible:text-secondary-foreground active:brightness-75',
                 color: 'secondary',
                 variant: 'outline',
             },
             {
-                class: 'text-foreground hover:bg-foreground hover:text-background',
+                class: 'text-foreground hover:bg-foreground hover:text-background focus-visible:bg-foreground focus-visible:text-background active:brightness-75',
                 color: 'foreground',
                 variant: 'outline',
             },
@@ -71,8 +71,8 @@ export type ButtonProps = ButtonBaseProps & (ButtonIconProps | ButtonNoIconProps
  *
  * @param {object} props - `<Button/>` props.
  * @param {As} [props.as] - The element to render the component as.
- * @param {'outline' | 'solid'} [props.variant='outline'] - The variant.
- * @param {NordstarColor} [props.color='default'] - The color scheme.
+ * @param {'outline' | 'solid'} [props.variant='solid'] - The variant.
+ * @param {NordstarColor} [props.color='primary'] - The color scheme.
  * @returns {React.ReactNode} The `<Button/>` component.
  *
  * @example
@@ -83,8 +83,8 @@ export type ButtonProps = ButtonBaseProps & (ButtonIconProps | ButtonNoIconProps
 const Button = forwardRef<'button', ButtonProps>(
     (
         {
-            variant,
-            color,
+            variant = 'solid',
+            color = 'primary',
             icon = null,
             as: Tag = 'button',
             disabled,
@@ -102,8 +102,11 @@ const Button = forwardRef<'button', ButtonProps>(
             <Tag
                 {...props}
                 {...(typeof disabled !== 'undefined' && {
-                    disabled,
                     'aria-disabled': disabled,
+                    // `disabled` is only valid on form-associated elements. For any other
+                    // polymorphic `as` (e.g. `a`, `div`) reflect the state via `aria-disabled`
+                    // and drop the element out of the tab order so it is truly inert.
+                    ...(Tag === 'button' ? { disabled } : { tabIndex: disabled ? -1 : undefined }),
                 })}
                 className={cn(
                     variants({
@@ -118,7 +121,6 @@ const Button = forwardRef<'button', ButtonProps>(
                 data-variant={variant}
                 draggable={false}
                 ref={ref}
-                role="button"
                 {...(Tag === 'button' ? { type: type || 'button' } : {})}
             >
                 {icon ? (

@@ -82,5 +82,34 @@ describe('components', () => {
             expect(element).not.toHaveAttribute('type');
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('does not force an explicit role, preserving native semantics', () => {
+            const button = render(<Button data-testid="nordstar-button" />);
+            expect(button.getByTestId('nordstar-button')).not.toHaveAttribute('role');
+            button.unmount();
+
+            const link = render(<Button as="a" data-testid="nordstar-button" />);
+            expect(link.getByTestId('nordstar-button')).not.toHaveAttribute('role');
+            link.unmount();
+        });
+
+        it('reflects the resolved default variant and color in data-attributes', () => {
+            const wrapper = render(<Button data-testid="nordstar-button" />);
+
+            const element = wrapper.getByTestId('nordstar-button');
+            expect(element).toHaveAttribute('data-variant', 'solid');
+            expect(element).toHaveAttribute('data-color', 'primary');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('disables polymorphic elements without an invalid native disabled attribute', () => {
+            const wrapper = render(<Button as="a" data-testid="nordstar-button" disabled />);
+
+            const element = wrapper.getByTestId('nordstar-button');
+            expect(element).not.toHaveAttribute('disabled');
+            expect(element).toHaveAttribute('aria-disabled', 'true');
+            expect(element).toHaveAttribute('tabindex', '-1');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 });
