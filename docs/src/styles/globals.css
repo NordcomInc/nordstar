@@ -1,6 +1,14 @@
 @import "tailwindcss";
 @import "@nordcom/nordstar";
 
+/*
+ * Tailwind v4 ignores `node_modules` during automatic class detection, so the
+ * `@source "./"` shipped inside `@nordcom/nordstar` cannot register itself. As a
+ * consumer we must opt the package's compiled component code in explicitly,
+ * otherwise none of its utility classes are generated and the UI renders unstyled.
+ */
+@source "../../node_modules/@nordcom/nordstar/dist";
+
 @custom-variant dark (&:is(.dark *));
 
 @layer base {

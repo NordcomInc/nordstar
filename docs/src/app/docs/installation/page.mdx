@@ -20,14 +20,19 @@ Nordstar ships as a single npm package with two CSS entry points — one for [Ta
 
 ### Tailwind v4 users
 
-Add a single `@import` after the Tailwind import in your global stylesheet:
+Add Nordstar's import after Tailwind, then register its compiled components as a source so Tailwind emits their utility classes:
 
 ```css
 @import "tailwindcss";
 @import "@nordcom/nordstar";
+
+/* Tailwind v4 skips node_modules during automatic class detection, so opt
+   Nordstar's compiled components in explicitly. The path is relative to this
+   stylesheet — adjust the leading `../` to match where it lives. */
+@source "../node_modules/@nordcom/nordstar/dist";
 ```
 
-That's it — Nordstar's tokens become Tailwind utilities (`bg-primary`, `font-heading`, etc.), and component classes resolve against your project's Tailwind compiler.
+Nordstar's tokens become Tailwind utilities (`bg-primary`, `font-heading`, etc.), and the `@source` line ensures the component classes are generated. Without it Tailwind never scans Nordstar (it lives in `node_modules`, which Tailwind ignores by default) and the components render unstyled.
 
 ### Non-Tailwind users
 
@@ -79,7 +84,7 @@ export default function Home() {
 }
 ```
 
-If the button renders styled (rounded corners, primary color, uppercase Heading-styled label), the install is good. If you see an unstyled button, the CSS import is missing or applied after another rule that resets it — re-check the order of the imports in your global stylesheet.
+If the button renders styled (rounded corners, primary color, uppercase Heading-styled label), the install is good. If you see an unstyled button, the most common cause on the Tailwind path is a missing `@source` line (see above) — without it Tailwind never generates Nordstar's classes. Otherwise, re-check that the CSS import isn't applied after a rule that resets it.
 
 ## Next
 
