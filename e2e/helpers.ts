@@ -8,9 +8,11 @@
 export const BASE_PATH = '/nordstar';
 
 export const routes = {
+    changelog: `${BASE_PATH}/docs/changelog`,
     components: `${BASE_PATH}/docs/components`,
     docs: `${BASE_PATH}/docs`,
     home: `${BASE_PATH}/`,
     playground: `${BASE_PATH}/playground`,
+    changelogPackage: (slug: string) => `${BASE_PATH}/docs/changelog/${slug}`,
     component: (slug: string) => `${BASE_PATH}/docs/components/${slug}`,
 } as const;
