@@ -21,6 +21,7 @@ import { Input } from '@nordcom/nordstar-input';
 import { Kbd } from '@nordcom/nordstar-kbd';
 import { Label } from '@nordcom/nordstar-label';
 import { Separator } from '@nordcom/nordstar-separator';
+import { Switch } from '@nordcom/nordstar-switch';
 import { NordstarProvider } from '@nordcom/nordstar-system';
 import { View } from '@nordcom/nordstar-view';
 
@@ -55,9 +56,26 @@ export * from '@nordcom/nordstar-label';
 export type * from '@nordcom/nordstar-separator';
 export type { SeparatorProps } from '@nordcom/nordstar-separator';
 export * from '@nordcom/nordstar-separator';
+export type * from '@nordcom/nordstar-switch';
+export type { SwitchProps } from '@nordcom/nordstar-switch';
+export * from '@nordcom/nordstar-switch';
 export type * from '@nordcom/nordstar-system';
 export * from '@nordcom/nordstar-system';
 export type * from '@nordcom/nordstar-view';
 export type { ViewProps } from '@nordcom/nordstar-view';
 export * from '@nordcom/nordstar-view';
-export { Accented, Button, Card, Details, Header, Heading, Input, Kbd, Label, NordstarProvider, Separator, View };
+export {
+    Accented,
+    Button,
+    Card,
+    Details,
+    Header,
+    Heading,
+    Input,
+    Kbd,
+    Label,
+    NordstarProvider,
+    Separator,
+    Switch,
+    View,
+};

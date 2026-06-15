@@ -125,6 +125,15 @@ export const components = [
         slug: 'kbd',
         tagline: 'A keyboard-key indicator for documenting shortcuts.',
     },
+    {
+        category: 'controls',
+        hasA11y: true,
+        name: 'Switch',
+        package: '@nordcom/nordstar-switch',
+        related: ['input', 'button'],
+        slug: 'switch',
+        tagline: 'A boolean toggle with an animated thumb.',
+    },
 ] as const satisfies readonly ComponentMeta[];
 
 export type ComponentSlug = (typeof components)[number]['slug'];

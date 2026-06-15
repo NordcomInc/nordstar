@@ -1,0 +1,76 @@
+export const metadata = {
+    title: 'Switch',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/switch/' }
+};
+
+# Switch
+
+A control for toggling a single setting on or off, with an animated thumb that slides between states.
+
+## When to use
+
+- For a binary, immediately-applied setting: dark mode, notifications, Wi-Fi.
+- When the change takes effect instantly, without a separate save step.
+
+### When not to use
+
+- For a choice that only applies after submitting a form — use a checkbox.
+- For more than two mutually exclusive options — use a radio group or <C>Select</C>.
+
+## Installation
+
+<Install package="@nordcom/nordstar-switch" />
+
+```tsx
+import { Switch } from '@nordcom/nordstar';
+```
+
+## Basic usage
+
+Use `defaultChecked` for uncontrolled state. Always provide an accessible name — a wrapping <C>Label</C> or an `aria-label`.
+
+<Preview name="switch/standard" />
+
+## Sizes
+
+`md` (default) for standalone settings; `sm` to sit inline in dense rows.
+
+<Preview name="switch/sizes" caption='size="sm" and size="md"' />
+
+## Colors
+
+The `color` scheme applies to the checked state. `default` resolves to `foreground`.
+
+<Preview name="switch/colors" caption='color="primary" / "secondary" / "foreground"' />
+
+## Controlled
+
+Drive the value yourself with `checked` and `onCheckedChange`:
+
+```tsx
+'use client';
+
+import { Switch } from '@nordcom/nordstar';
+import { useState } from 'react';
+
+export function NotificationsToggle() {
+    const [enabled, setEnabled] = useState(false);
+    return <Switch checked={enabled} onCheckedChange={setEnabled} aria-label="Notifications" />;
+}
+```
+
+## Props
+
+<PropsTable component="Switch" />
+
+## Accessibility
+
+<Callout type="info" title="Always name the switch">
+    A switch with no label is meaningless to screen-reader users. Wrap it in a <C>Label</C> or pass `aria-label`. The control is keyboard operable — focus it and press <Kbd size="sm">Space</Kbd> to toggle.
+</Callout>
+
+- Built on `@radix-ui/react-switch`, so it exposes `role="switch"` and `aria-checked` automatically.
+- Works with native forms via `name` and `value`; the form submits the value only when checked.
+- Don't rely on color alone to convey the on/off state — the thumb position and an adjacent label carry the meaning too.
+
+<Related of="switch" />
