@@ -32,6 +32,37 @@ describe('components', () => {
                 expect(() => wrapper.unmount()).not.toThrow();
             });
 
+            it('exposes heading semantics when rendered as a non-heading element', () => {
+                const wrapper = render(
+                    <Heading as="div" data-testid="nordstar-heading" level="h2">
+                        Hello World!
+                    </Heading>,
+                );
+
+                const element = wrapper.getByTestId('nordstar-heading');
+
+                expect(element.tagName).toBe('DIV');
+                expect(element).toHaveAttribute('role', 'heading');
+                expect(element).toHaveAttribute('aria-level', '2');
+                expect(wrapper.getByRole('heading', { level: 2 })).toBe(element);
+                expect(() => wrapper.unmount()).not.toThrow();
+            });
+
+            it('does not add a redundant role to native heading elements', () => {
+                const wrapper = render(
+                    <Heading data-testid="nordstar-heading" level="h3">
+                        Hello World!
+                    </Heading>,
+                );
+
+                const element = wrapper.getByTestId('nordstar-heading');
+
+                expect(element.tagName).toBe('H3');
+                expect(element).not.toHaveAttribute('role');
+                expect(element).not.toHaveAttribute('aria-level');
+                expect(() => wrapper.unmount()).not.toThrow();
+            });
+
             (['h1', 'h2', 'h3', 'h4'] as const).forEach((level) => {
                 it(`renders with level ${level}`, () => {
                     const wrapper = render(

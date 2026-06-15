@@ -17,9 +17,16 @@ export type HeadingProps = {
  */
 const Heading = forwardRef<'h1', HeadingProps>(({ as, level = 'h1', className, ...props }, ref) => {
     const Tag = as || level;
+    // When rendered as a non-heading element (e.g. `as="div"`), the element still
+    // looks like a heading, so restore heading semantics for assistive tech. Native
+    // headings (and custom components) keep their own semantics.
+    const isNativeHeading = typeof Tag === 'string' && /^h[1-6]$/.test(Tag);
 
     return (
         <Tag
+            {...(typeof Tag === 'string' && !isNativeHeading
+                ? { 'aria-level': Number(level.slice(1)), role: 'heading' }
+                : {})}
             {...props}
             className={cn(
                 styles.container,

@@ -1,5 +1,7 @@
 .container {
+    // The trailing period is purely decorative; the `/ ''` alt-text keeps it out
+    // of the accessibility tree so screen readers don't announce "Title.".
     &:not(:empty):is([data-level='h1'], [data-level='h2']):after {
-        content: '.';
+        content: '.' / '';
     }
 }
