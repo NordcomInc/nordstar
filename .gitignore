@@ -11,6 +11,13 @@ coverage
 /.next/
 .next/
 /out/
+docs/out/
+
+# playwright
+/playwright-report/
+/test-results/
+/blob-report/
+/playwright/.cache/
 
 # production
 /build
