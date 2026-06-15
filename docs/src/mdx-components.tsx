@@ -1,3 +1,4 @@
+import { Kbd } from '@nordcom/nordstar';
 import type { MDXComponents } from 'mdx/types';
 import Link from 'next/link';
 import type { AnchorHTMLAttributes } from 'react';
@@ -49,6 +50,7 @@ export function useMDXComponents(components: MDXComponents): MDXComponents {
         TabPane,
         C,
         Related,
+        Kbd,
 
         // Markdown overrides
         a: MdxLink,
