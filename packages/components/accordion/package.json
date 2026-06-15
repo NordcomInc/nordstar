@@ -1,0 +1,81 @@
+{
+    "$schema": "https://json.schemastore.org/package.json",
+    "name": "@nordcom/nordstar-accordion",
+    "type": "module",
+    "version": "0.0.75",
+    "description": "A vertically stacked set of collapsible sections.",
+    "files": [
+        "dist",
+        "CHANGELOG.md",
+        "README.md"
+    ],
+    "main": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js",
+            "default": "./dist/index.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "sideEffects": false,
+    "scripts": {
+        "build": "tsc && vite build",
+        "dev": "vite build --watch",
+        "clean": "rm -rf dist coverage .turbo .next *.tsbuildinfo *.log",
+        "typecheck": "tsc --noEmit"
+    },
+    "keywords": [
+        "nordstar",
+        "nordcom",
+        "component",
+        "react",
+        "accordion",
+        "disclosure",
+        "nordstar-accordion"
+    ],
+    "author": {
+        "name": "Filiph Sandström",
+        "email": "filfat@hotmail.se",
+        "url": "https://github.com/filiphsps/"
+    },
+    "contributors": [
+        {
+            "name": "Filiph Sandström",
+            "email": "filfat@hotmail.se",
+            "url": "https://github.com/filiphsps/"
+        }
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/NordcomInc/nordstar.git",
+        "directory": "packages/components/accordion"
+    },
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/NordcomInc/nordstar/issues"
+    },
+    "homepage": "https://nordcominc.github.io/nordstar/docs/components/accordion/",
+    "dependencies": {
+        "@nordcom/nordstar-system": "workspace:*",
+        "@radix-ui/react-accordion": "1.2.13"
+    },
+    "peerDependencies": {
+        "react": ">=19",
+        "react-dom": ">=19"
+    },
+    "devDependencies": {
+        "@types/node": "25.9.3",
+        "@types/react": "19.2.17",
+        "@types/react-dom": "19.2.3",
+        "react": "19.2.7",
+        "react-dom": "19.2.7",
+        "typescript": "6.0.3",
+        "vite": "8.0.16",
+        "vite-plugin-dts": "5.0.2"
+    }
+}

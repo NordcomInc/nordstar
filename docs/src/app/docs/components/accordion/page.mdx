@@ -1,0 +1,53 @@
+export const metadata = {
+    title: 'Accordion',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/accordion/' }
+};
+
+# Accordion
+
+A vertically stacked set of collapsible sections — useful for FAQs and progressively disclosing dense content.
+
+## When to use
+
+- For an FAQ or any list of headings whose detail can stay hidden until needed.
+- To reduce scrolling on long pages by collapsing secondary content.
+
+### When not to use
+
+- For a single collapsible region — use <C>Details</C>.
+- For switching between mutually exclusive panels of equal importance — use tabs.
+
+## Installation
+
+<Install package="@nordcom/nordstar-accordion" />
+
+```tsx
+import { Accordion } from '@nordcom/nordstar';
+```
+
+## Basic usage
+
+Use `type="single"` with `collapsible` to allow one open section at a time (and let the open one close again).
+
+<Preview name="accordion/standard" />
+
+## Multiple
+
+Use `type="multiple"` to let several sections stay open at once. `defaultValue` accepts an array.
+
+<Preview name="accordion/multiple" />
+
+## Props
+
+<PropsTable component="Accordion" />
+
+## Accessibility
+
+<Callout type="info" title="Built-in disclosure semantics">
+    Each trigger is a real button exposing `aria-expanded` and controlling its panel. Arrow keys move between triggers, and `Home`/`End` jump to the first/last — all handled by `@radix-ui/react-accordion`.
+</Callout>
+
+- Keep trigger text concise and descriptive; it is the section's accessible name.
+- The chevron rotates on open as a visual cue, but the state is also conveyed via `aria-expanded`, so it does not rely on color or motion alone.
+
+<Related of="accordion" />
