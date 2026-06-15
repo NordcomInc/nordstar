@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-accordion",
     "type": "module",
-    "version": "0.1.1",
+    "version": "0.2.0",
     "description": "A vertically stacked set of collapsible sections.",
     "files": [
         "dist",
