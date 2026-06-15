@@ -140,5 +140,35 @@ describe('components', () => {
             expect(onChange).toHaveBeenCalledTimes(1);
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('associates the floating label with the control', () => {
+            const wrapper = render(<Input data-testid="nordstar-input" label="Greeting" />);
+
+            const input = wrapper.getByTestId('nordstar-input');
+            // The label resolves as the control's accessible name (htmlFor <-> id).
+            expect(wrapper.getByLabelText('Greeting')).toBe(input);
+            expect(wrapper.getByText('Greeting')).toHaveAttribute('for', input.getAttribute('id'));
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('preserves a consumer-supplied id for label association', () => {
+            const wrapper = render(<Input id="custom-id" label="Greeting" />);
+
+            const input = wrapper.getByLabelText('Greeting');
+            expect(input).toHaveAttribute('id', 'custom-id');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('applies a visible, semantic disabled state', () => {
+            const wrapper = render(<Input data-testid="nordstar-input" disabled label="Greeting" />);
+
+            const input = wrapper.getByTestId('nordstar-input');
+            expect(input).toBeDisabled();
+
+            const wrapperElement = input.parentElement;
+            expect(wrapperElement).toHaveAttribute('data-disabled', 'true');
+            expect(wrapperElement).toHaveClass('opacity-50');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 });

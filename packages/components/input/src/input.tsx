@@ -5,7 +5,7 @@ import { cn, forwardRef } from '@nordcom/nordstar-system';
 import type { VariantProps } from 'class-variance-authority';
 import { cva } from 'class-variance-authority';
 import type { ChangeEventHandler, HTMLAttributes, HTMLInputTypeAttribute } from 'react';
-import { useState } from 'react';
+import { useId, useState } from 'react';
 
 const variants = cva(
     cn(
@@ -109,6 +109,8 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
             value,
             defaultValue,
 
+            disabled,
+
             className,
             style = undefined,
             ...props
@@ -118,6 +120,12 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
         const Tag = as || 'input';
         const isInput = Tag === 'input';
         const isFormControl = isInput || Tag === 'textarea';
+
+        // Associate the floating <label> with the control for assistive tech. A
+        // consumer-supplied `id` always wins so external <label htmlFor>/aria wiring
+        // keeps working.
+        const generatedId = useId();
+        const controlId = (props as { id?: string }).id ?? generatedId;
 
         // Support both controlled (`value`) and uncontrolled (`defaultValue`) usage without ever
         // switching React between the two. Uncontrolled inputs are tracked internally, seeded with
@@ -144,10 +152,12 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                     }),
                     as === 'textarea' && 'h-auto',
                     'group',
+                    disabled && 'cursor-not-allowed opacity-50',
                     className,
                 )}
                 data-color={color}
-                data-value={hasValue || undefined}
+                data-disabled={disabled || undefined}
+                data-value={hasValue || !!placeholder || undefined}
                 data-variant={variant}
                 style={style}
             >
@@ -155,12 +165,13 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                     <label
                         className={cn(
                             'pointer-events-none absolute top-0 left-3 z-[1] origin-top-left',
-                            'transition-all duration-200 ease-out',
+                            'transition-[transform,top,opacity] ease-out [transition-duration:var(--nordstar-duration-short)]',
                             hasValue || placeholder
                                 ? 'top-1 translate-y-0 scale-65 font-bold text-sm uppercase opacity-100'
                                 : 'top-1/2 -translate-y-1/2 scale-100 opacity-75',
                             'group-focus-within:top-1 group-focus-within:translate-y-0 group-focus-within:scale-65 group-focus-within:font-bold group-focus-within:text-sm group-focus-within:uppercase group-focus-within:opacity-100',
                         )}
+                        htmlFor={controlId}
                     >
                         {label}
                     </label>
@@ -169,7 +180,9 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                 <Tag
                     {...(props as HTMLAttributes<HTMLElement>)}
                     {...(isInput ? ('type' in props ? { type: props.type || 'text' } : { type: 'text' }) : {})}
-                    {...(isFormControl ? { onChange: handleChange, placeholder, value: currentValue } : {})}
+                    {...(isFormControl
+                        ? { onChange: handleChange, placeholder, value: currentValue, disabled, id: controlId }
+                        : {})}
                     className={cn(
                         'h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:text-foreground-highlight placeholder:transition-opacity placeholder:[font-size:inherit]',
                         label && as === 'textarea' && 'pt-6 pb-2',
