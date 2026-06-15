@@ -72,8 +72,8 @@ importers:
         specifier: 9.1.7
         version: 9.1.7
       inquirer:
-        specifier: 13.4.3
-        version: 13.4.3(@types/node@25.9.3)
+        specifier: 14.0.2
+        version: 14.0.2(@types/node@25.9.3)
       inquirer-directory:
         specifier: 2.2.0
         version: 2.2.0
@@ -3669,9 +3669,9 @@ packages:
   inquirer@1.2.3:
     resolution: {integrity: sha512-diSnpgfv/Ozq6QKuV2mUcwZ+D24b03J3W6EVxzvtkCWJTPrH2gKLsqgSW0vzRMZZFhFdhnvzka0RUJxIm7AOxQ==}
 
-  inquirer@13.4.3:
-    resolution: {integrity: sha512-EPd3IqieHSavSOXh+LZhrIkdQcOELWeRblLT6kslQr+cF9XTh/HxZdSt1YkHH1iq4dvqBnV42uwg2YlorgOy6g==}
-    engines: {node: '>=23.5.0 || ^22.13.0 || ^21.7.0 || ^20.12.0'}
+  inquirer@14.0.2:
+    resolution: {integrity: sha512-VsSx1JneSNp3ld1veMTLe+UDcUD8Tw2/jjOthhkX3/IX2q+xHhVELifeb/hsb1fBw31pabEPNUf/xUOyb+KZjA==}
+    engines: {node: '>=23.5.0 || ^22.13.0 || ^20.17.0'}
     peerDependencies:
       '@types/node': '>=18'
     peerDependenciesMeta:
@@ -7958,7 +7958,7 @@ snapshots:
       strip-ansi: 3.0.1
       through: 2.3.8
 
-  inquirer@13.4.3(@types/node@25.9.3):
+  inquirer@14.0.2(@types/node@25.9.3):
     dependencies:
       '@inquirer/ansi': 2.0.7
       '@inquirer/core': 11.2.1(@types/node@25.9.3)
@@ -7966,7 +7966,6 @@ snapshots:
       '@inquirer/type': 4.0.7(@types/node@25.9.3)
       mute-stream: 3.0.0
       run-async: 4.0.6
-      rxjs: 7.8.2
     optionalDependencies:
       '@types/node': 25.9.3
 
