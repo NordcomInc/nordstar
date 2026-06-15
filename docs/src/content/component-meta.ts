@@ -152,6 +152,15 @@ export const components = [
         slug: 'select',
         tagline: 'A dropdown for choosing one option from a list.',
     },
+    {
+        category: 'surfaces',
+        hasA11y: true,
+        name: 'Accordion',
+        package: '@nordcom/nordstar-accordion',
+        related: ['details', 'card'],
+        slug: 'accordion',
+        tagline: 'A vertically stacked set of collapsible sections.',
+    },
 ] as const satisfies readonly ComponentMeta[];
 
 export type ComponentSlug = (typeof components)[number]['slug'];

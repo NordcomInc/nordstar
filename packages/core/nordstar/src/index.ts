@@ -12,6 +12,7 @@ export type {
 
 // Components
 import { Accented } from '@nordcom/nordstar-accented';
+import { Accordion } from '@nordcom/nordstar-accordion';
 import { Button } from '@nordcom/nordstar-button';
 import { Card } from '@nordcom/nordstar-card';
 import { Details } from '@nordcom/nordstar-details';
@@ -31,6 +32,14 @@ export type * from '@nordcom/nordstar-accented';
 // Component Types
 export type { AccentedProps } from '@nordcom/nordstar-accented';
 export * from '@nordcom/nordstar-accented';
+export type * from '@nordcom/nordstar-accordion';
+export type {
+    AccordionContentProps,
+    AccordionItemProps,
+    AccordionProps,
+    AccordionTriggerProps,
+} from '@nordcom/nordstar-accordion';
+export * from '@nordcom/nordstar-accordion';
 export type * from '@nordcom/nordstar-button';
 export type { ButtonProps } from '@nordcom/nordstar-button';
 export * from '@nordcom/nordstar-button';
@@ -79,6 +88,7 @@ export type { ViewProps } from '@nordcom/nordstar-view';
 export * from '@nordcom/nordstar-view';
 export {
     Accented,
+    Accordion,
     Button,
     Card,
     Details,
