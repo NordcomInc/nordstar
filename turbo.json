@@ -1,5 +1,6 @@
 {
     "$schema": "https://turbo.build/schema.json",
+    "globalPassThroughEnv": ["CODECOV_TOKEN", "GITHUB_ACTIONS"],
     "ui": "stream",
     "globalDependencies": [
         ".env",
