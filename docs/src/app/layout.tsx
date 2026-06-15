@@ -1,6 +1,6 @@
 import '@/styles/globals.css';
 
-import { Card, Header, View } from '@nordcom/nordstar';
+import { Header, View } from '@nordcom/nordstar';
 import { GeistMono } from 'geist/font/mono';
 import type { Metadata, Viewport } from 'next';
 import { Montserrat } from 'next/font/google';
@@ -59,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         <Header.Logo as={Link} href="/">
                             Nordstar
                         </Header.Logo>
-                        <Header.Menu>
+                        <Header.Menu aria-label="Primary">
                             <Header.Menu.Link as={Link} href="/">
                                 Home
                             </Header.Menu.Link>
@@ -74,13 +74,31 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                     <View>{children}</View>
 
-                    <Card as={View} borderless={true} color="primary" variant="solid">
-                        <footer className="flex flex-row flex-wrap items-center justify-center gap-1 md:gap-3">
-                            <Link className="block text-inherit" href="https://github.com/filiphsps">
+                    <footer className="mt-3 w-full border-0 bg-primary text-primary-foreground shadow-raised">
+                        <div className="mx-auto flex w-full max-w-(--nordstar-layout-page-width) flex-col items-center justify-between gap-2 px-4 py-4 text-center md:flex-row md:gap-3 md:text-left">
+                            <Link className="block font-medium text-inherit" href="https://github.com/filiphsps">
                                 A component library by Filiph Sandström
                             </Link>
-                        </footer>
-                    </Card>
+                            <nav
+                                aria-label="Footer"
+                                className="flex flex-row flex-wrap items-center justify-center gap-4 text-sm [&>a]:underline [&>a]:decoration-transparent [&>a]:underline-offset-4 [&>a]:transition-[text-decoration-color] hover:[&>a]:decoration-current"
+                            >
+                                <Link className="text-inherit" href="/docs/getting-started">
+                                    Docs
+                                </Link>
+                                <Link className="text-inherit" href="/docs/components">
+                                    Components
+                                </Link>
+                                <Link
+                                    className="text-inherit"
+                                    href="https://github.com/NordcomInc/nordstar"
+                                    target="_blank"
+                                >
+                                    GitHub
+                                </Link>
+                            </nav>
+                        </div>
+                    </footer>
                 </Providers>
             </body>
         </html>
