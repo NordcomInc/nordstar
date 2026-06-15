@@ -1,5 +1,41 @@
 # @nordcom/nordstar-system
 
+## 0.1.0
+
+### Patch Changes
+
+- [#1189](https://github.com/NordcomInc/nordstar/pull/1189) [`5199c66`](https://github.com/NordcomInc/nordstar/commit/5199c6601687e89d244bce6652049f1e1d18a051) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.0.13.
+
+- [#1191](https://github.com/NordcomInc/nordstar/pull/1191) [`5cf91f1`](https://github.com/NordcomInc/nordstar/commit/5cf91f1a6fa372c9496a6535e6e9f19c4b707494) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.8.0.
+
+- [#1198](https://github.com/NordcomInc/nordstar/pull/1198) [`7e71328`](https://github.com/NordcomInc/nordstar/commit/7e713282cba8eeb499e528eb1d71ba5f48219488) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.9.0.
+
+- [#1203](https://github.com/NordcomInc/nordstar/pull/1203) [`b7154b2`](https://github.com/NordcomInc/nordstar/commit/b7154b29ee3d5b3c96cd2918a005cf803cfa8fda) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.9.1.
+
+- [#1204](https://github.com/NordcomInc/nordstar/pull/1204) [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v19.2.15.
+
+- [`5e0e5a3`](https://github.com/NordcomInc/nordstar/commit/5e0e5a3233403d70beb17ac802ecb53835624bc8) Thanks [@filiphsps](https://github.com/filiphsps)! - Deps: upgrade build/test tooling and docs dependencies to their latest releases
+  (biome 2.5.0, vite 8.0.16, vitest 4.1.8, turbo 2.9.18, tailwindcss 4.3.1, sass
+  1.101.0, @types/node 25, @types/react 19.2.17, react 19.2.7, next 16.2.9, shiki
+  4.2.0 and related). Only devDependencies changed, so there is no runtime impact
+  for consumers. The Biome config was migrated to the 2.5.0 schema (`recommended`
+  → `preset`) and the CI environment variables were declared in `turbo.json`.
+  `inquirer` is intentionally held at 13.x because the component generator relies
+  on its legacy prompt API.
+
+- [`3b67c90`](https://github.com/NordcomInc/nordstar/commit/3b67c901f8e40b047486b18da98ee07aa991e339) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix `<NordstarProvider/>` theme generation and markup:
+
+  - A theme with missing accents no longer emits invalid `--nordstar-color-primary:
+null;` declarations. The accent lines are now omitted when absent, so the
+    `@theme` defaults apply (mirroring how every other optional color already
+    falls back).
+  - `fonts.code` is now quote-stripped just like `fonts.heading`/`fonts.body`, so a
+    quoted value such as `'Fira Code'` produces a valid `font-family` instead of a
+    malformed declaration.
+  - The structural `id="nordstar"` is now deterministic: props are spread before it
+    so a consumer-supplied `id` can no longer silently replace the wrapper's own
+    id.
+
 ## 0.0.75
 
 ### Patch Changes

@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-kbd",
     "type": "module",
-    "version": "0.0.75",
+    "version": "0.1.0",
     "description": "A keyboard-key indicator for documenting shortcuts.",
     "files": [
         "dist",

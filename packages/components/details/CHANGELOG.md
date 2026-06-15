@@ -1,5 +1,53 @@
 # @nordcom/nordstar-details
 
+## 0.1.0
+
+### Patch Changes
+
+- [#1189](https://github.com/NordcomInc/nordstar/pull/1189) [`5199c66`](https://github.com/NordcomInc/nordstar/commit/5199c6601687e89d244bce6652049f1e1d18a051) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.0.13.
+
+- [#1201](https://github.com/NordcomInc/nordstar/pull/1201) [`1ef35d6`](https://github.com/NordcomInc/nordstar/commit/1ef35d6f7c9e55cc56c4bb0afa34d5fe7c739107) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite-plugin-dts to v5.0.1.
+
+- [#1204](https://github.com/NordcomInc/nordstar/pull/1204) [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v19.2.15.
+
+- [`5e0e5a3`](https://github.com/NordcomInc/nordstar/commit/5e0e5a3233403d70beb17ac802ecb53835624bc8) Thanks [@filiphsps](https://github.com/filiphsps)! - Deps: upgrade build/test tooling and docs dependencies to their latest releases
+  (biome 2.5.0, vite 8.0.16, vitest 4.1.8, turbo 2.9.18, tailwindcss 4.3.1, sass
+  1.101.0, @types/node 25, @types/react 19.2.17, react 19.2.7, next 16.2.9, shiki
+  4.2.0 and related). Only devDependencies changed, so there is no runtime impact
+  for consumers. The Biome config was migrated to the 2.5.0 schema (`recommended`
+  → `preset`) and the CI environment variables were declared in `turbo.json`.
+  `inquirer` is intentionally held at 13.x because the component generator relies
+  on its legacy prompt API.
+
+- [`b7025ea`](https://github.com/NordcomInc/nordstar/commit/b7025ea22ce9a9bc06c4602d4c6a1a854f5aeb7c) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix `<Details/>` typing, layout and accessibility:
+
+  - `forwardRef` is now typed against `'details'` instead of `typeof Card`, so the
+    ref resolves to the underlying `HTMLDetailsElement` and native `<details>`
+    props (`open`, `onToggle`, `name`, …) are accepted by the public type.
+  - The `<summary>` no longer stacks its marker above the label: the SCSS forced
+    `flex-direction: column`, overriding the intended inline row. The marker and
+    label now sit side by side.
+  - The focusable `<summary>` gains hover and `focus-visible` affordances
+    (primary-colored text + a focus outline), so keyboard users get clear feedback.
+  - Marker spacing and the open-state padding now fall back to a sensible value
+    when `--nordstar-layout-block-padding-quarter` is not provided by
+    `<NordstarProvider/>`, so the component looks correct standalone.
+  - Removed dead CSS (an unreachable `summary .content` rule and an unused
+    `--border-color` custom property) and replaced `transition: all` with targeted
+    transitions.
+
+- [`2ca45c8`](https://github.com/NordcomInc/nordstar/commit/2ca45c8f176bb551cd6a75fc26ee3f863ee16983) Thanks [@filiphsps](https://github.com/filiphsps)! - Drop `<Details/>`'s SCSS module in favour of Tailwind utilities. The disclosure
+  marker (a "+" that morphs into a downward triangle when open), the hidden native
+  marker, hover/`focus-visible` colouring and outline, the open-state label colour
+  and the open-state content padding are now all expressed with Tailwind classes
+  (`group-open:`, `before:`, and a few arbitrary properties for the token-driven
+  values). The marker's transition is collapsed to a single targeted transition;
+  rendering is otherwise unchanged.
+- Updated dependencies [[`5199c66`](https://github.com/NordcomInc/nordstar/commit/5199c6601687e89d244bce6652049f1e1d18a051), [`5cf91f1`](https://github.com/NordcomInc/nordstar/commit/5cf91f1a6fa372c9496a6535e6e9f19c4b707494), [`7e71328`](https://github.com/NordcomInc/nordstar/commit/7e713282cba8eeb499e528eb1d71ba5f48219488), [`1ef35d6`](https://github.com/NordcomInc/nordstar/commit/1ef35d6f7c9e55cc56c4bb0afa34d5fe7c739107), [`b7154b2`](https://github.com/NordcomInc/nordstar/commit/b7154b29ee3d5b3c96cd2918a005cf803cfa8fda), [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07), [`5e0e5a3`](https://github.com/NordcomInc/nordstar/commit/5e0e5a3233403d70beb17ac802ecb53835624bc8), [`b731726`](https://github.com/NordcomInc/nordstar/commit/b73172600a91965e7ac26769859c157acda43d07), [`3b67c90`](https://github.com/NordcomInc/nordstar/commit/3b67c901f8e40b047486b18da98ee07aa991e339), [`0e06134`](https://github.com/NordcomInc/nordstar/commit/0e0613464834717a00c2c578219fd0b641680e07)]:
+  - @nordcom/nordstar-card@0.1.0
+  - @nordcom/nordstar-label@0.1.0
+  - @nordcom/nordstar-system@0.1.0
+
 ## 0.0.75
 
 ### Patch Changes

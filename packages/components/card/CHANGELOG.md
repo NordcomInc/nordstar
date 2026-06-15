@@ -1,5 +1,43 @@
 # @nordcom/nordstar-card
 
+## 0.1.0
+
+### Patch Changes
+
+- [#1189](https://github.com/NordcomInc/nordstar/pull/1189) [`5199c66`](https://github.com/NordcomInc/nordstar/commit/5199c6601687e89d244bce6652049f1e1d18a051) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.0.13.
+
+- [#1201](https://github.com/NordcomInc/nordstar/pull/1201) [`1ef35d6`](https://github.com/NordcomInc/nordstar/commit/1ef35d6f7c9e55cc56c4bb0afa34d5fe7c739107) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite-plugin-dts to v5.0.1.
+
+- [#1204](https://github.com/NordcomInc/nordstar/pull/1204) [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react to v19.2.15.
+
+- [`5e0e5a3`](https://github.com/NordcomInc/nordstar/commit/5e0e5a3233403d70beb17ac802ecb53835624bc8) Thanks [@filiphsps](https://github.com/filiphsps)! - Deps: upgrade build/test tooling and docs dependencies to their latest releases
+  (biome 2.5.0, vite 8.0.16, vitest 4.1.8, turbo 2.9.18, tailwindcss 4.3.1, sass
+  1.101.0, @types/node 25, @types/react 19.2.17, react 19.2.7, next 16.2.9, shiki
+  4.2.0 and related). Only devDependencies changed, so there is no runtime impact
+  for consumers. The Biome config was migrated to the 2.5.0 schema (`recommended`
+  → `preset`) and the CI environment variables were declared in `turbo.json`.
+  `inquirer` is intentionally held at 13.x because the component generator relies
+  on its legacy prompt API.
+
+- [`b731726`](https://github.com/NordcomInc/nordstar/commit/b73172600a91965e7ac26769859c157acda43d07) Thanks [@filiphsps](https://github.com/filiphsps)! - Fix `<Card/>` divider semantics, typing and styling consistency:
+
+  - `Card.Divider` now renders a real `<hr>` (its props were already typed as
+    `<hr>`), so it carries the implicit `separator` role and is exposed to
+    assistive tech instead of being an opaque `<div>`.
+  - `Card.Divider` and `Card.Header` apply their default `draggable={false}` before
+    spreading props, so a consumer-supplied `draggable` is no longer silently
+    dropped.
+  - Solid `primary`/`secondary` cards now pair their background with the matching
+    `text-primary-foreground`/`text-secondary-foreground` token, so themed
+    foreground colors are respected (consistent with `<Button/>`).
+  - `HeaderProps` (for `Card.Header`) is now re-exported from the package entry
+    point, alongside `CardProps`/`CardDividerProps`.
+  - Removed dead/duplicated utility classes (`border-foreground` shadowed by
+    `border-foreground-highlight`, and a duplicate `border-2 border-solid`).
+
+- Updated dependencies [[`5199c66`](https://github.com/NordcomInc/nordstar/commit/5199c6601687e89d244bce6652049f1e1d18a051), [`5cf91f1`](https://github.com/NordcomInc/nordstar/commit/5cf91f1a6fa372c9496a6535e6e9f19c4b707494), [`7e71328`](https://github.com/NordcomInc/nordstar/commit/7e713282cba8eeb499e528eb1d71ba5f48219488), [`b7154b2`](https://github.com/NordcomInc/nordstar/commit/b7154b29ee3d5b3c96cd2918a005cf803cfa8fda), [`97df330`](https://github.com/NordcomInc/nordstar/commit/97df33095a4625292ab4913a8a64d8f4902eab07), [`5e0e5a3`](https://github.com/NordcomInc/nordstar/commit/5e0e5a3233403d70beb17ac802ecb53835624bc8), [`3b67c90`](https://github.com/NordcomInc/nordstar/commit/3b67c901f8e40b047486b18da98ee07aa991e339)]:
+  - @nordcom/nordstar-system@0.1.0
+
 ## 0.0.75
 
 ### Patch Changes
