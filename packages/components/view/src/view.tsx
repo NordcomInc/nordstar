@@ -11,6 +11,13 @@ export type ViewProps = {
 /**
  * `<View/>`, a component to render the main content of a page.
  *
+ * @remarks
+ * `className`, `ref` and spread props target the inner content element (`as`,
+ * default `<article>`); use `outerClassName`/`outerAs` to style the landmark
+ * wrapper (default `<main>`). Only one `<View/>` per page should keep the default
+ * `outerAs="main"` — use `outerAs="section"` or `withoutWrapper` for secondary
+ * regions to avoid duplicate `<main>` landmarks.
+ *
  * @param {object} props - `<View/>` props.
  * @param {As} [props.as] - The element to render the component as.
  * @param {As} [props.outerAs] - The element to render the outer part of the component as.
@@ -22,12 +29,14 @@ const View = forwardRef<'main', ViewProps>(
     ({ as: Tag = 'article', outerAs: Wrapper = 'main', withoutWrapper, className, outerClassName, ...props }, ref) => {
         const inner = (
             <Tag
-                ref={ref}
+                draggable={false}
                 {...props}
                 className={cn(
-                    'mx-auto my-3 flex w-full max-w-[var(--nordstar-layout-page-width)] flex-col gap-3 overflow-hidden',
+                    'mx-auto my-3 flex w-full max-w-(--nordstar-layout-page-width) flex-col gap-3 overflow-x-clip',
                     className,
                 )}
+                data-without-wrapper={!!withoutWrapper}
+                ref={ref}
             />
         );
         if (withoutWrapper) {

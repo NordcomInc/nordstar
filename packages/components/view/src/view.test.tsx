@@ -43,5 +43,15 @@ describe('components', () => {
             expect(wrapper.container.outerHTML).not.toContain('<header');
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('reflects the wrapper state via data-without-wrapper', () => {
+            const withWrapper = render(<View as="section" data-testid="view" />);
+            expect(withWrapper.getByTestId('view')).toHaveAttribute('data-without-wrapper', 'false');
+            withWrapper.unmount();
+
+            const withoutWrapper = render(<View as="section" data-testid="view" withoutWrapper={true} />);
+            expect(withoutWrapper.getByTestId('view')).toHaveAttribute('data-without-wrapper', 'true');
+            withoutWrapper.unmount();
+        });
     });
 });
