@@ -43,5 +43,23 @@ describe('components', () => {
             expect(wrapper.getByTestId('accented')).toHaveClass('text-foreground');
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('defaults to the primary accent and exposes it via data-color', () => {
+            const wrapper = render(<Accented data-testid="accented" />);
+
+            const element = wrapper.getByTestId('accented');
+            expect(element).toHaveClass('text-primary');
+            expect(element).toHaveAttribute('data-color', 'primary');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('inherits the surrounding color when color="default"', () => {
+            const wrapper = render(<Accented color="default" data-testid="accented" />);
+
+            const element = wrapper.getByTestId('accented');
+            expect(element).not.toHaveClass('text-primary');
+            expect(element).toHaveAttribute('data-color', 'default');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 });
