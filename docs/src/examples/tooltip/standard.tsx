@@ -1,3 +1,5 @@
+'use client';
+
 import { Button, Tooltip } from '@nordcom/nordstar';
 
 export default function Example() {

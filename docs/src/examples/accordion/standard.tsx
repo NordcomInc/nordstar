@@ -1,3 +1,5 @@
+'use client';
+
 import { Accordion } from '@nordcom/nordstar';
 
 export default function Example() {

@@ -1,3 +1,5 @@
+'use client';
+
 import { Select } from '@nordcom/nordstar';
 
 export default function Example() {
