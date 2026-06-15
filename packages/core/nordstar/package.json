@@ -89,6 +89,7 @@
         "@nordcom/nordstar-header": "workspace:*",
         "@nordcom/nordstar-heading": "workspace:*",
         "@nordcom/nordstar-input": "workspace:*",
+        "@nordcom/nordstar-kbd": "workspace:*",
         "@nordcom/nordstar-label": "workspace:*",
         "@nordcom/nordstar-separator": "workspace:*",
         "@nordcom/nordstar-system": "workspace:*",

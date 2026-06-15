@@ -464,6 +464,40 @@ importers:
         specifier: 5.0.2
         version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
+  packages/components/kbd:
+    dependencies:
+      '@nordcom/nordstar-system':
+        specifier: workspace:*
+        version: link:../../core/system
+      class-variance-authority:
+        specifier: 0.7.1
+        version: 0.7.1
+    devDependencies:
+      '@types/node':
+        specifier: 25.9.3
+        version: 25.9.3
+      '@types/react':
+        specifier: 19.2.17
+        version: 19.2.17
+      '@types/react-dom':
+        specifier: 19.2.3
+        version: 19.2.3(@types/react@19.2.17)
+      react:
+        specifier: 19.2.7
+        version: 19.2.7
+      react-dom:
+        specifier: 19.2.7
+        version: 19.2.7(react@19.2.7)
+      typescript:
+        specifier: 6.0.3
+        version: 6.0.3
+      vite:
+        specifier: 8.0.16
+        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+      vite-plugin-dts:
+        specifier: 5.0.2
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+
   packages/components/label:
     dependencies:
       '@nordcom/nordstar-system':
@@ -593,6 +627,9 @@ importers:
       '@nordcom/nordstar-input':
         specifier: workspace:*
         version: link:../../components/input
+      '@nordcom/nordstar-kbd':
+        specifier: workspace:*
+        version: link:../../components/kbd
       '@nordcom/nordstar-label':
         specifier: workspace:*
         version: link:../../components/label

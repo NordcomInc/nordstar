@@ -116,6 +116,15 @@ export const components = [
         slug: 'separator',
         tagline: 'A thin rule that divides content visually or semantically.',
     },
+    {
+        category: 'typography',
+        hasA11y: false,
+        name: 'Kbd',
+        package: '@nordcom/nordstar-kbd',
+        related: ['button'],
+        slug: 'kbd',
+        tagline: 'A keyboard-key indicator for documenting shortcuts.',
+    },
 ] as const satisfies readonly ComponentMeta[];
 
 export type ComponentSlug = (typeof components)[number]['slug'];

@@ -1,0 +1,50 @@
+export const metadata = {
+    title: 'Kbd',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/kbd/' }
+};
+
+# Kbd
+
+A small chip that represents a keyboard key or shortcut, rendered as a real `<kbd>` element.
+
+## When to use
+
+- To document a keyboard shortcut inline in prose or a tooltip.
+- Inside menus, command palettes, and <C>Button</C> hints to show the key that triggers an action.
+
+### When not to use
+
+- For arbitrary inline code or tokens — use a `<code>` element instead.
+- As an interactive control — `Kbd` is presentational; wire the actual shortcut separately.
+
+## Installation
+
+<Install package="@nordcom/nordstar-kbd" />
+
+```tsx
+import { Kbd } from '@nordcom/nordstar';
+```
+
+## Basic usage
+
+Compose several keys to describe a chord.
+
+<Preview name="kbd/standard" />
+
+## Sizes
+
+`md` (default) sits comfortably in body text; `sm` fits dense rows such as menu items.
+
+<Preview name="kbd/sizes" caption='size="sm" and size="md"' />
+
+## Props
+
+<PropsTable component="Kbd" />
+
+## Accessibility
+
+<Callout type="info" title="Use a real key">
+    `Kbd` renders a native `<kbd>` element, which assistive tech announces as keyboard input. Keep the visible text equal to the actual key (e.g. `Esc`, `⌘`) so screen-reader users hear the same shortcut sighted users see.
+</Callout>
+
+<Related of="kbd" />
