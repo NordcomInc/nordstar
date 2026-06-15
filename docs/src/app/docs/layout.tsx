@@ -2,6 +2,7 @@ import { Label, View } from '@nordcom/nordstar';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import type { ReactNode } from 'react';
+import { NavLink } from '@/components/docs/nav-link';
 import { components } from '@/content/component-meta';
 
 export const metadata: Metadata = {
@@ -23,7 +24,7 @@ function NavBlock({ label, href, children }: { label: string; href: string; chil
                 {label}
             </Label>
 
-            <div className="flex flex-col gap-4 px-3 font-normal text-base text-foreground-highlight leading-none *:flex *:gap-3 *:text-inherit *:leading-none *:transition-colors *:before:block *:before:content-['•']">
+            <div className="flex flex-col gap-4 px-3 font-normal text-base text-foreground-highlight leading-none">
                 {children}
             </div>
         </section>
@@ -33,34 +34,22 @@ function NavBlock({ label, href, children }: { label: string; href: string; chil
 export default function DocsLayout({ children }: { children: ReactNode }) {
     return (
         <div className="flex flex-col gap-6 md:grid md:grid-cols-[18rem_1fr]">
-            <nav className="flex flex-col gap-6">
+            <nav aria-label="Documentation" className="flex flex-col gap-6">
                 <NavBlock href="/docs" label="Guide">
-                    <Link className="hover:text-primary" href="/docs/getting-started">
-                        Introduction
-                    </Link>
-                    <Link className="hover:text-primary" href="/docs/installation">
-                        Installation
-                    </Link>
+                    <NavLink href="/docs/getting-started">Introduction</NavLink>
+                    <NavLink href="/docs/installation">Installation</NavLink>
                 </NavBlock>
 
                 <NavBlock href="/docs/customization" label="Customization">
-                    <Link className="hover:text-primary" href="/docs/customization/theme">
-                        Theme
-                    </Link>
-                    <Link className="hover:text-primary" href="/docs/customization/system">
-                        System
-                    </Link>
+                    <NavLink href="/docs/customization/theme">Theme</NavLink>
+                    <NavLink href="/docs/customization/system">System</NavLink>
                 </NavBlock>
 
                 <NavBlock href="/docs/components" label="Components">
                     {components.map((c) => (
-                        <Link
-                            className="hover:text-primary"
-                            href={`/docs/components/${c.slug}` as Parameters<typeof Link>[0]['href']}
-                            key={c.slug}
-                        >
+                        <NavLink href={`/docs/components/${c.slug}`} key={c.slug}>
                             {c.name}
-                        </Link>
+                        </NavLink>
                     ))}
                 </NavBlock>
             </nav>

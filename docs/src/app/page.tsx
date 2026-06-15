@@ -13,79 +13,80 @@ export const metadata: Metadata = {
     },
 };
 
+const features = [
+    {
+        body: 'Install the library, wrap your app in a single provider, and ship your first themed component in minutes. Every step is copy-paste ready.',
+        cta: { color: 'primary', href: '/docs/getting-started', label: 'Get Started', variant: 'solid' },
+        eyebrow: '1. Guides',
+    },
+    {
+        body: 'Accessible, polymorphic building blocks — buttons, inputs, menus, switches and more — each fitted to the same token contract and keyboard-ready out of the box.',
+        cta: { color: 'foreground', href: '/docs/components', label: 'Browse Components', variant: 'solid' },
+        eyebrow: '2. Components',
+    },
+    {
+        body: 'Own the look. Drive color, type, spacing, borders and motion from one theme object — or plain CSS variables — without ejecting or overriding internals.',
+        cta: { color: 'foreground', href: '/docs/customization/theme', label: 'Make It Yours', variant: 'outline' },
+        eyebrow: '3. Customization',
+    },
+] as const;
+
 export default async function IndexPage() {
     return (
         <>
             <div className="flex w-[52rem] max-w-full flex-col gap-[calc(var(--nordstar-layout-section-spacing)/3)] pb-[var(--nordstar-layout-section-spacing)]">
+                <Label className="tracking-wide" color="secondary">
+                    Nordstar — by Nordcom Group Inc.
+                </Label>
                 <Heading>
                     Nordstar by <Accented>Nordcom</Accented> Group Inc. and contributors
                 </Heading>
                 <Heading level="h2">
                     An opinionated component library for building <Accented>human</Accented>-centric user interfaces
                 </Heading>
-            </div>
 
-            <div className="grid grid-cols-1 gap-[var(--nordstar-layout-block-padding)] min-[950px]:grid-cols-3">
-                <Card className="[&_a]:w-full [&_p]:mt-[calc(var(--nordstar-layout-block-padding)/4)] [&_p]:text-[0.95em]">
-                    <Card.Header>
-                        <Label className="leading-none" color="foreground">
-                            1. Guides
-                        </Label>
-                    </Card.Header>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc. Turpis egestas maecenas
-                        pharetra convallis posuere morbi leo urna. Amet consectetur adipiscing elit ut aliquam purus.
-                        Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo.
-                    </p>
-
-                    <Card.Divider />
-
+                <div className="mt-[calc(var(--nordstar-layout-block-padding)/2)] flex flex-row flex-wrap gap-3">
                     <Button as={Link} color="primary" href="/docs/getting-started" variant="solid">
                         Get Started
                     </Button>
-                </Card>
-                <Card className="[&_a]:w-full [&_p]:mt-[calc(var(--nordstar-layout-block-padding)/4)] [&_p]:text-[0.95em]">
-                    <Card.Header>
-                        <Label className="leading-none" color="foreground">
-                            2. Examples
-                        </Label>
-                    </Card.Header>
-
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc. Turpis egestas maecenas
-                        pharetra convallis posuere morbi leo urna. Amet consectetur adipiscing elit ut aliquam purus.
-                        Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo.
-                    </p>
-
-                    <Card.Divider />
-
-                    <Button as={Link} color="foreground" href="/docs/installation" variant="solid">
-                        Get Started
+                    <Button
+                        as={Link}
+                        color="foreground"
+                        href="https://github.com/NordcomInc/nordstar"
+                        target="_blank"
+                        variant="outline"
+                    >
+                        View on GitHub
                     </Button>
-                </Card>
-                <Card className="[&_a]:w-full [&_p]:mt-[calc(var(--nordstar-layout-block-padding)/4)] [&_p]:text-[0.95em]">
-                    <Card.Header>
-                        <Label className="leading-none" color="foreground">
-                            3. Documentation
-                        </Label>
-                    </Card.Header>
+                </div>
+            </div>
 
-                    <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore et dolore magna aliqua. Vitae elementum curabitur vitae nunc. Turpis egestas maecenas
-                        pharetra convallis posuere morbi leo urna. Amet consectetur adipiscing elit ut aliquam purus.
-                        Cursus mattis molestie a iaculis at erat pellentesque adipiscing commodo.
-                    </p>
+            <div className="grid grid-cols-1 gap-[var(--nordstar-layout-block-padding)] min-[950px]:grid-cols-3">
+                {features.map((feature) => (
+                    <Card
+                        className="transition-[transform,box-shadow,border-color] duration-200 ease-out-soft hover:-translate-y-1 hover:border-foreground-highlight hover:shadow-floating [&_a]:w-full [&_p]:mt-[calc(var(--nordstar-layout-block-padding)/4)] [&_p]:text-[0.95em] [&_p]:text-foreground-highlight"
+                        key={feature.eyebrow}
+                    >
+                        <Card.Header>
+                            <Label className="leading-none" color="foreground">
+                                {feature.eyebrow}
+                            </Label>
+                        </Card.Header>
 
-                    <Card.Divider />
+                        <p>{feature.body}</p>
 
-                    <Button as={Link} color="foreground" href="/docs/components" variant="outline">
-                        Get Started
-                    </Button>
-                </Card>
+                        <Card.Divider />
+
+                        <Button
+                            as={Link}
+                            color={feature.cta.color}
+                            href={feature.cta.href}
+                            variant={feature.cta.variant}
+                        >
+                            {feature.cta.label}
+                        </Button>
+                    </Card>
+                ))}
             </div>
         </>
     );
