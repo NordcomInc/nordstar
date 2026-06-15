@@ -77,7 +77,7 @@ const Menu = forwardRef<'nav', HeaderMenuProps>(({ as, className, overflowShadow
         <Tag
             {...props}
             className={cn(
-                'md:overflow-x flex w-full touch-auto select-none items-center gap-6 overflow-x-auto scroll-smooth py-3 md:justify-end',
+                'flex w-full touch-auto select-none items-center gap-6 overflow-x-auto scroll-smooth py-3 md:justify-end',
                 overflowShadow && 'animate-scroll-shadow-inset [animation-timeline:scroll(self_inline)]',
                 className,
             )}

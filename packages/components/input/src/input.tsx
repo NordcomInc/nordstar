@@ -4,8 +4,8 @@ import type { As, NordstarColor } from '@nordcom/nordstar-system';
 import { cn, forwardRef } from '@nordcom/nordstar-system';
 import type { VariantProps } from 'class-variance-authority';
 import { cva } from 'class-variance-authority';
-import type { ChangeEvent, HTMLAttributes, HTMLInputTypeAttribute } from 'react';
-import { useEffect, useState } from 'react';
+import type { ChangeEventHandler, HTMLAttributes, HTMLInputTypeAttribute } from 'react';
+import { useState } from 'react';
 
 const variants = cva(
     cn(
@@ -116,17 +116,24 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
         ref,
     ) => {
         const Tag = as || 'input';
-        const [contents, setContents] = useState<string | number | undefined>(defaultValue ?? value);
+        const isInput = Tag === 'input';
+        const isFormControl = isInput || Tag === 'textarea';
 
-        useEffect(() => {
-            if (value === undefined || value === null) {
-                return;
+        // Support both controlled (`value`) and uncontrolled (`defaultValue`) usage without ever
+        // switching React between the two. Uncontrolled inputs are tracked internally, seeded with
+        // an empty string so the rendered element is controlled from its first render.
+        const isControlled = value !== undefined && value !== null;
+        const [internalValue, setInternalValue] = useState<string | number>(defaultValue ?? '');
+        const currentValue = isControlled ? value : internalValue;
+        const hasValue = currentValue !== undefined && currentValue !== '';
+
+        const handleChange: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> = (event) => {
+            if (!isControlled) {
+                setInternalValue(event.target.value);
             }
 
-            setContents(value);
-        }, [value]);
-
-        const hasValue = (value ?? contents) !== undefined && (value ?? contents) !== '';
+            (props as { onChange?: ChangeEventHandler<HTMLInputElement | HTMLTextAreaElement> }).onChange?.(event);
+        };
 
         return (
             <div
@@ -140,7 +147,7 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
                     className,
                 )}
                 data-color={color}
-                data-value={value || undefined}
+                data-value={hasValue || undefined}
                 data-variant={variant}
                 style={style}
             >
@@ -161,22 +168,14 @@ const Input = forwardRef<'input' | 'textarea', InputProps<As>>(
 
                 <Tag
                     {...(props as HTMLAttributes<HTMLElement>)}
-                    {...(as !== 'textarea'
-                        ? 'type' in props
-                            ? { type: props.type || 'text' }
-                            : { type: 'text' }
-                        : {})}
+                    {...(isInput ? ('type' in props ? { type: props.type || 'text' } : { type: 'text' }) : {})}
+                    {...(isFormControl ? { onChange: handleChange, placeholder, value: currentValue } : {})}
                     className={cn(
                         'h-full w-full appearance-none border-0 bg-transparent p-0 text-sm leading-none outline-0 [font-size:inherit] placeholder:text-foreground-highlight placeholder:transition-opacity placeholder:[font-size:inherit]',
                         label && as === 'textarea' && 'pt-6 pb-2',
                         as === 'textarea' && 'h-full min-h-20 leading-normal',
                     )}
-                    onChange={(e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) =>
-                        e?.target && setContents(e.target.value)
-                    }
-                    placeholder={placeholder}
                     ref={ref}
-                    value={contents ?? undefined}
                 />
             </div>
         );

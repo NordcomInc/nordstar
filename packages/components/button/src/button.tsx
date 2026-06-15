@@ -119,7 +119,7 @@ const Button = forwardRef<'button', ButtonProps>(
                 draggable={false}
                 ref={ref}
                 role="button"
-                type={type || 'button'}
+                {...(Tag === 'button' ? { type: type || 'button' } : {})}
             >
                 {icon ? (
                     <div

@@ -4,44 +4,41 @@ import type { VariantProps } from 'class-variance-authority';
 import { cva } from 'class-variance-authority';
 import type { ComponentProps, HTMLAttributes } from 'react';
 
-const variants = cva(
-    cn('group relative flex-col overflow-hidden overflow-clip rounded-xl border-2 border-solid font-body'),
-    {
-        compoundVariants: [
-            {
-                class: 'border-primary-foreground [&>[data-divider]]:bg-primary-foreground',
-                color: 'primary',
-                variant: 'solid',
-            },
-            {
-                class: 'border-secondary-foreground [&>[data-divider]]:bg-secondary-foreground',
-                color: 'secondary',
-                variant: 'solid',
-            },
-            {
-                class: 'border-background-highlight text-background [&>[data-divider]]:bg-background-highlight',
-                color: 'foreground',
-                variant: 'solid',
-            },
-        ],
-        defaultVariants: {
-            color: 'foreground',
-            variant: 'outline',
+const variants = cva(cn('group relative flex-col overflow-clip rounded-xl border-2 border-solid font-body'), {
+    compoundVariants: [
+        {
+            class: 'border-primary-foreground [&>[data-divider]]:bg-primary-foreground',
+            color: 'primary',
+            variant: 'solid',
         },
-        variants: {
-            color: {
-                foreground:
-                    'border-foreground border-foreground-highlight bg-foreground [&>[data-divider]]:bg-foreground-highlight',
-                primary: 'border-primary bg-primary [&>[data-divider]]:bg-primary',
-                secondary: 'border-secondary bg-secondary [&>[data-divider]]:bg-secondary',
-            },
-            variant: {
-                outline: 'border-2 border-solid bg-transparent',
-                solid: '',
-            },
+        {
+            class: 'border-secondary-foreground [&>[data-divider]]:bg-secondary-foreground',
+            color: 'secondary',
+            variant: 'solid',
+        },
+        {
+            class: 'border-background-highlight text-background [&>[data-divider]]:bg-background-highlight',
+            color: 'foreground',
+            variant: 'solid',
+        },
+    ],
+    defaultVariants: {
+        color: 'foreground',
+        variant: 'outline',
+    },
+    variants: {
+        color: {
+            foreground:
+                'border-foreground border-foreground-highlight bg-foreground [&>[data-divider]]:bg-foreground-highlight',
+            primary: 'border-primary bg-primary [&>[data-divider]]:bg-primary',
+            secondary: 'border-secondary bg-secondary [&>[data-divider]]:bg-secondary',
+        },
+        variant: {
+            outline: 'border-2 border-solid bg-transparent',
+            solid: '',
         },
     },
-);
+});
 
 export type CardProps = {
     as?: As;

@@ -66,5 +66,21 @@ describe('components', () => {
             expect(wrapper.getByRole('button')).toHaveAttribute('data-color', 'default');
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('defaults native buttons to type="button"', () => {
+            const wrapper = render(<Button data-testid="nordstar-button" />);
+
+            expect(wrapper.getByTestId('nordstar-button')).toHaveAttribute('type', 'button');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('does not apply a type attribute to non-button elements', () => {
+            const wrapper = render(<Button as="a" data-testid="nordstar-button" />);
+
+            const element = wrapper.getByTestId('nordstar-button');
+            expect(element.tagName).toBe('A');
+            expect(element).not.toHaveAttribute('type');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 });

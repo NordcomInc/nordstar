@@ -2,7 +2,7 @@ import '@testing-library/jest-dom/vitest';
 import '@testing-library/react';
 
 import { fireEvent, render } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { Input } from '.';
 
 describe('components', () => {
@@ -107,6 +107,37 @@ describe('components', () => {
 
             const wrapperElement = wrapper.getByTestId('nordstar-input').parentElement;
             expect(wrapperElement).toHaveAttribute('data-color', 'primary');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('floats the label when a value is present', () => {
+            const wrapper = render(<Input data-testid="nordstar-input" defaultValue="Hello World!" label="Greeting" />);
+
+            const wrapperElement = wrapper.getByTestId('nordstar-input').parentElement;
+            expect(wrapperElement).toHaveAttribute('data-value');
+            expect(wrapper.getByText('Greeting')).toHaveClass('scale-65');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('forwards onChange to the consumer for uncontrolled inputs', () => {
+            const onChange = vi.fn();
+            const wrapper = render(<Input data-testid="nordstar-input" onChange={onChange} />);
+
+            const element = wrapper.getByTestId('nordstar-input') as HTMLInputElement;
+            fireEvent.change(element, { target: { value: 'Hello World!' } });
+
+            expect(onChange).toHaveBeenCalledTimes(1);
+            expect(element).toHaveValue('Hello World!');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('forwards onChange to the consumer for controlled inputs', () => {
+            const onChange = vi.fn();
+            const wrapper = render(<Input data-testid="nordstar-input" onChange={onChange} value="Fixed" />);
+
+            fireEvent.change(wrapper.getByTestId('nordstar-input'), { target: { value: 'Changed' } });
+
+            expect(onChange).toHaveBeenCalledTimes(1);
             expect(() => wrapper.unmount()).not.toThrow();
         });
     });
