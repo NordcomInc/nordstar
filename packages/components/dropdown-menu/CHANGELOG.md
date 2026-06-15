@@ -1,5 +1,12 @@
 # @nordcom/nordstar-dropdown-menu
 
+## 0.1.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @nordcom/nordstar-system@0.1.1
+
 ## 0.1.0
 
 ### Patch Changes
