@@ -4,23 +4,33 @@ details.container {
     overflow: auto;
     overflow-x: hidden;
 
-    transition: var(--nordstar-duration-short) ease-in-out all;
+    transition: var(--nordstar-duration-short) ease-in-out color;
 
     summary {
         display: flex;
         min-height: 1em;
         width: 100%;
         position: relative;
-        display: flex;
         justify-content: flex-start;
         align-items: center;
-        flex-direction: column;
+        flex-direction: row;
 
         cursor: pointer;
         -webkit-user-select: none;
         user-select: none;
 
-        transition: var(--nordstar-duration-short) ease-in-out all;
+        transition: var(--nordstar-duration-short) ease-in-out color;
+
+        &:hover,
+        &:focus-visible {
+            color: hsl(var(--nordstar-color-primary));
+        }
+
+        &:focus-visible {
+            outline: var(--nordstar-border-width-small, 1px) solid hsl(var(--nordstar-color-primary));
+            outline-offset: 0.2em;
+            border-radius: var(--nordstar-border-radius, 0.45rem);
+        }
 
         &::-webkit-details-marker {
             display: none;
@@ -33,7 +43,7 @@ details.container {
             content: '+';
             height: 0.5em;
             width: 0.5em;
-            margin-right: var(--nordstar-layout-block-padding-quarter);
+            margin-right: var(--nordstar-layout-block-padding-quarter, calc(var(--nordstar-layout-block-padding, 1rem) / 4));
 
             font-weight: 700;
             font-size: 1.15em;
@@ -54,15 +64,9 @@ details.container {
             display: contents;
             color: inherit;
         }
-
-        .content {
-            padding: 0;
-        }
     }
 
     &[open] {
-        --border-color: hsl(var(--nordstar-color-primary));
-
         & > summary {
             color: hsl(var(--nordstar-color-primary));
 
@@ -77,7 +81,7 @@ details.container {
         }
 
         .content {
-            padding-top: var(--nordstar-layout-block-padding-quarter);
+            padding-top: var(--nordstar-layout-block-padding-quarter, calc(var(--nordstar-layout-block-padding, 1rem) / 4));
         }
     }
 }

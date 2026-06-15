@@ -17,7 +17,7 @@ export type DetailsProps = {
  * @param {CSSCustomProperties} [props.style] - Custom CSS properties.
  * @returns {React.ReactNode} The `<Details/>` component.
  */
-const Details = forwardRef<typeof Card, DetailsProps>(({ label, className, children, ...props }, ref) => {
+const Details = forwardRef<'details', DetailsProps>(({ label, className, children, ...props }, ref) => {
     return (
         <Card as="details" ref={ref} {...props} className={cn(styles.container, className)} color="foreground">
             <summary className="flex flex-row">
