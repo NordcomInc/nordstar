@@ -1,7 +1,6 @@
 import { Accented, Button, Card, Heading, Label } from '@nordcom/nordstar';
 import type { Metadata } from 'next';
 import Link from 'next/link';
-import styles from './page.module.scss';
 
 export const metadata: Metadata = {
     description:
@@ -17,7 +16,7 @@ export const metadata: Metadata = {
 export default async function IndexPage() {
     return (
         <>
-            <div className={styles.header}>
+            <div className="flex w-[52rem] max-w-full flex-col gap-[calc(var(--nordstar-layout-section-spacing)/3)] pb-[var(--nordstar-layout-section-spacing)]">
                 <Heading>
                     Nordstar by <Accented>Nordcom</Accented> Group Inc. and contributors
                 </Heading>
@@ -26,8 +25,8 @@ export default async function IndexPage() {
                 </Heading>
             </div>
 
-            <div className={styles.content}>
-                <Card className={styles.block}>
+            <div className="grid grid-cols-1 gap-[var(--nordstar-layout-block-padding)] min-[950px]:grid-cols-3">
+                <Card className="[&_a]:w-full [&_p]:mt-[calc(var(--nordstar-layout-block-padding)/4)] [&_p]:text-[0.95em]">
                     <Card.Header>
                         <Label className="leading-none" color="foreground">
                             1. Guides
@@ -47,7 +46,7 @@ export default async function IndexPage() {
                         Get Started
                     </Button>
                 </Card>
-                <Card className={styles.block}>
+                <Card className="[&_a]:w-full [&_p]:mt-[calc(var(--nordstar-layout-block-padding)/4)] [&_p]:text-[0.95em]">
                     <Card.Header>
                         <Label className="leading-none" color="foreground">
                             2. Examples
@@ -67,7 +66,7 @@ export default async function IndexPage() {
                         Get Started
                     </Button>
                 </Card>
-                <Card className={styles.block}>
+                <Card className="[&_a]:w-full [&_p]:mt-[calc(var(--nordstar-layout-block-padding)/4)] [&_p]:text-[0.95em]">
                     <Card.Header>
                         <Label className="leading-none" color="foreground">
                             3. Documentation
