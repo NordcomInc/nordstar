@@ -90,6 +90,7 @@
         "@nordcom/nordstar-heading": "workspace:*",
         "@nordcom/nordstar-input": "workspace:*",
         "@nordcom/nordstar-label": "workspace:*",
+        "@nordcom/nordstar-separator": "workspace:*",
         "@nordcom/nordstar-system": "workspace:*",
         "@nordcom/nordstar-view": "workspace:*",
         "@tailwindcss/cli": "4.3.1",

@@ -107,6 +107,15 @@ export const components = [
         slug: 'accented',
         tagline: 'Inline text with an accent color, used to draw the eye.',
     },
+    {
+        category: 'layout',
+        hasA11y: true,
+        name: 'Separator',
+        package: '@nordcom/nordstar-separator',
+        related: ['card', 'view'],
+        slug: 'separator',
+        tagline: 'A thin rule that divides content visually or semantically.',
+    },
 ] as const satisfies readonly ComponentMeta[];
 
 export type ComponentSlug = (typeof components)[number]['slug'];
