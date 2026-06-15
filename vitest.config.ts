@@ -63,12 +63,15 @@ export default defineConfig({
             reporter: ['text', 'lcov', 'json', 'json-summary'],
             reportOnFailure: true,
             reportsDirectory: './coverage',
+            // Enforced coverage floor. The suite currently sits at ~100% lines/
+            // statements/functions and ~97% branches; these gates leave headroom for
+            // churn while still failing CI on a meaningful regression.
             thresholds: {
                 autoUpdate: false,
-                branches: 0,
-                functions: 0,
-                lines: 0,
-                statements: 0,
+                branches: 85,
+                functions: 90,
+                lines: 90,
+                statements: 90,
             },
         },
 

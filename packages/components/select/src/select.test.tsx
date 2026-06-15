@@ -78,5 +78,45 @@ describe('components', () => {
             expect(trigger).toHaveClass('rounded-sm');
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('renders its options, label and separator when open', () => {
+            const wrapper = render(
+                <Select defaultValue="apple" open={true}>
+                    <Select.Trigger>
+                        <Select.Value placeholder="Pick a fruit" />
+                    </Select.Trigger>
+                    <Select.Content>
+                        <Select.Group>
+                            <Select.Label>Fruit</Select.Label>
+                            <Select.Item value="apple">Apple</Select.Item>
+                            <Select.Separator />
+                            <Select.Item value="pear">Pear</Select.Item>
+                        </Select.Group>
+                    </Select.Content>
+                </Select>,
+            );
+
+            // The open content renders the label and the non-selected option exactly once.
+            expect(wrapper.getByText('Fruit')).toBeInTheDocument();
+            expect(wrapper.getByText('Pear')).toBeInTheDocument();
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('keeps a chevron wired to rotate while the listbox is open', () => {
+            const wrapper = render(
+                <Select>
+                    <Select.Trigger>
+                        <Select.Value placeholder="Pick a fruit" />
+                    </Select.Trigger>
+                    <Select.Content>
+                        <Select.Item value="apple">Apple</Select.Item>
+                    </Select.Content>
+                </Select>,
+            );
+
+            const trigger = wrapper.getByRole('combobox');
+            expect(trigger.querySelector('svg')).toHaveClass('group-data-[state=open]:rotate-180');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 });
