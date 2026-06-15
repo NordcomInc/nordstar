@@ -18,6 +18,7 @@
         "predev": "pnpm generate",
         "prebuild": "pnpm generate",
         "start": "next start -p $PORT",
+        "pretypecheck": "pnpm generate",
         "typecheck": "tsc --noEmit"
     },
     "keywords": [
