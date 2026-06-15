@@ -38,6 +38,7 @@ export default function DocsLayout({ children }: { children: ReactNode }) {
                 <NavBlock href="/docs" label="Guide">
                     <NavLink href="/docs/getting-started">Introduction</NavLink>
                     <NavLink href="/docs/installation">Installation</NavLink>
+                    <NavLink href="/docs/changelog">Changelog</NavLink>
                 </NavBlock>
 
                 <NavBlock href="/docs/customization" label="Customization">

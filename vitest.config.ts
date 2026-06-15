@@ -44,7 +44,24 @@ export default defineConfig({
         },
     },
     test: {
-        projects: ['packages/**/vitest.config.ts'],
+        // `packages/**` projects cover the published code (and feed the coverage
+        // floor); the inline `docs` project runs the documentation-site tooling
+        // tests — chiefly the changelog parser. It is intentionally *not* merged
+        // with this base config: it wants a plain `node` environment and must
+        // escape the `**/docs/**` / `**/scripts/**` excludes below. Docs files
+        // stay out of the coverage report (see `coverage.exclude`).
+        projects: [
+            'packages/**/vitest.config.ts',
+            {
+                test: {
+                    environment: 'node',
+                    exclude: ['**/node_modules/**', '**/dist/**', '**/.next/**'],
+                    include: ['src/**/*.test.ts'],
+                    name: 'docs',
+                    root: `${__dirname}/docs`,
+                },
+            },
+        ],
         bail: 2,
         environment: 'happy-dom',
         exclude,
