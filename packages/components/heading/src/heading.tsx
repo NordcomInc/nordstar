@@ -1,6 +1,5 @@
 import type { As } from '@nordcom/nordstar-system';
 import { cn, forwardRef } from '@nordcom/nordstar-system';
-import styles from './heading.module.scss';
 
 export type HeadingProps = {
     level?: 'h1' | 'h2' | 'h3' | 'h4';
@@ -29,8 +28,10 @@ const Heading = forwardRef<'h1', HeadingProps>(({ as, level = 'h1', className, .
                 : {})}
             {...props}
             className={cn(
-                styles.container,
                 'font-heading',
+                // Decorative trailing period on non-empty h1/h2. The `/ ''` alt-text keeps
+                // it out of the accessibility tree so screen readers don't say "Title.".
+                (level === 'h1' || level === 'h2') && "[&:not(:empty)]:after:[content:'.'_/_'']",
                 level === 'h1' && 'hyphens-auto font-extrabold text-4xl uppercase leading-12',
                 level === 'h2' && 'font-normal text-2xl text-foreground-highlight lowercase leading-8',
                 level === 'h3' && 'font-extrabold text-xl lowercase leading-8',
