@@ -95,5 +95,50 @@ describe('core', () => {
 
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('omits accent declarations instead of emitting invalid "null" values', () => {
+            const wrapper = render(
+                <NordstarProvider theme={{ accents: {}, fonts: {} } as any}>
+                    <div>Hello World!</div>
+                </NordstarProvider>,
+            );
+
+            const styleElementContent = wrapper.getByTestId('style').innerHTML;
+            // Missing accents must fall through to the @theme defaults, never `: null;`.
+            expect(styleElementContent).not.toContain('null');
+            expect(styleElementContent).not.toContain('--nordstar-color-primary:');
+            // Colors with a documented fallback are still emitted.
+            expect(styleElementContent).toContain('--nordstar-color-background:');
+
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('strips quotes from the code font like the heading/body fonts', () => {
+            const wrapper = render(
+                <NordstarProvider
+                    theme={{
+                        accents: { primary: '#ff0000', secondary: '#00ff00' },
+                        fonts: { body: 'Roboto', code: "'Fira Code'" },
+                    }}
+                />,
+            );
+
+            const styleElementContent = wrapper.getByTestId('style').innerHTML;
+            expect(styleElementContent).toContain('--nordstar-font-mono: Fira Code;');
+
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('keeps a deterministic #nordstar id even when a consumer passes one', () => {
+            const wrapper = render(
+                <NordstarProvider id="consumer-id" theme={{ accents: {}, fonts: {} } as any}>
+                    <div>Hello World!</div>
+                </NordstarProvider>,
+            );
+
+            expect(wrapper.container.querySelector('#nordstar')).not.toBeNull();
+
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 });

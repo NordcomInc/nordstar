@@ -82,9 +82,9 @@ export const NordstarProvider = ({ theme, children, className, ...props }: Nords
     // TODO: Maybe create a utility function for this to better handle optional values (and to hide this away from view).
     const css = /* css */ `
     :root {
-        --nordstar-color-primary:              ${toHsl(accents.primary)};
+        ${accents.primary ? `--nordstar-color-primary:              ${toHsl(accents.primary)};` : ''}
         --nordstar-color-primary-foreground:   ${toHsl('#fefefe')};
-        --nordstar-color-secondary:            ${toHsl(accents.secondary)};
+        ${accents.secondary ? `--nordstar-color-secondary:            ${toHsl(accents.secondary)};` : ''}
         --nordstar-color-secondary-foreground: ${toHsl('#fefefe')};
 
         --nordstar-color-background:           ${toHsl(colors?.background ?? '#000000')};
@@ -97,7 +97,7 @@ export const NordstarProvider = ({ theme, children, className, ...props }: Nords
         ${headingFont}
         ${bodyFont}
         --nordstar-font-sans: var(--nordstar-font-body, var(--nordstar-font-fallback));
-        --nordstar-font-mono: ${fonts.code ?? 'monospace'};
+        --nordstar-font-mono: ${fonts.code?.replaceAll("'", '') ?? 'monospace'};
 
         ${borderStyles}
         --nordstar-border-radius:      ${theme.border?.radius ?? '0.45rem'};
@@ -125,7 +125,7 @@ export const NordstarProvider = ({ theme, children, className, ...props }: Nords
             <style data-testid="style" suppressHydrationWarning={true}>
                 {css}
             </style>
-            <div className={cn('contents font-medium', className)} id="nordstar" {...props}>
+            <div {...props} className={cn('contents font-medium', className)} id="nordstar">
                 {children}
             </div>
         </Fragment>
