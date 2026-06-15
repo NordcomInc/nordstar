@@ -8,6 +8,7 @@
 "@nordcom/nordstar-dropdown-menu": patch
 "@nordcom/nordstar-select": patch
 "@nordcom/nordstar-tooltip": patch
+"@nordcom/nordstar-accordion": patch
 ---
 
 Elevate the Nordstar visual language with a shared depth and motion system,
@@ -19,8 +20,9 @@ then apply it across the components.
   - Easing — `ease-out-soft` (hard deceleration for entrances) and `ease-spring`
     (a slight overshoot for toggles and presses).
   - Motion — an `overlay-in` keyframe / `animate-overlay-in` utility used by
-    portalled surfaces. The existing `prefers-reduced-motion` reset neutralises
-    it for users who opt out.
+    portalled surfaces, plus `accordion-down`/`accordion-up` for disclosure
+    height transitions. The existing `prefers-reduced-motion` reset neutralises
+    them for users who opt out.
 - **Overlay surfaces** (`Select`, `DropdownMenu`, `Tooltip`) now lift on the new
   `shadow-overlay`, animate in from their transform origin, and round to `md`.
   The `Select` chevron rotates while the listbox is open.
@@ -29,6 +31,8 @@ then apply it across the components.
 - **`Card`** solid surfaces read as raised via `shadow-raised`.
 - **`Switch`** thumb slides on the springy easing with a touch of depth.
 - **`Kbd`** picks up a recessed keycap shadow.
+- **`Accordion`** sections now expand and collapse with a measured height
+  animation instead of snapping open.
 - Motion timings across `Input`, `Select`, and the dropdown items were aligned
   to the shared duration/easing language.
 
