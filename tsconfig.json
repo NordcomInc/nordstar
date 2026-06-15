@@ -37,14 +37,21 @@
         "paths": {
             "@nordcom/nordstar": ["./packages/core/nordstar"],
             "@nordcom/nordstar-accented": ["./packages/components/accented"],
+            "@nordcom/nordstar-accordion": ["./packages/components/accordion"],
             "@nordcom/nordstar-button": ["./packages/components/button"],
             "@nordcom/nordstar-card": ["./packages/components/card"],
             "@nordcom/nordstar-details": ["./packages/components/details"],
+            "@nordcom/nordstar-dropdown-menu": ["./packages/components/dropdown-menu"],
             "@nordcom/nordstar-header": ["./packages/components/header"],
             "@nordcom/nordstar-heading": ["./packages/components/heading"],
             "@nordcom/nordstar-input": ["./packages/components/input"],
+            "@nordcom/nordstar-kbd": ["./packages/components/kbd"],
             "@nordcom/nordstar-label": ["./packages/components/label"],
+            "@nordcom/nordstar-select": ["./packages/components/select"],
+            "@nordcom/nordstar-separator": ["./packages/components/separator"],
+            "@nordcom/nordstar-switch": ["./packages/components/switch"],
             "@nordcom/nordstar-system": ["./packages/core/system"],
+            "@nordcom/nordstar-tooltip": ["./packages/components/tooltip"],
             "@nordcom/nordstar-view": ["./packages/components/view"]
         }
     },
