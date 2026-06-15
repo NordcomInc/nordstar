@@ -81,6 +81,19 @@ describe('components', () => {
             expect(element).toContainElement(wrapper.getByTestId('nordstar-card-divider'));
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('renders as a semantic separator exposed to assistive tech', () => {
+            const wrapper = render(
+                <Card>
+                    <Card.Divider data-testid="nordstar-card-divider" />
+                </Card>,
+            );
+
+            const divider = wrapper.getByTestId('nordstar-card-divider');
+            expect(divider.tagName).toBe('HR');
+            expect(wrapper.getByRole('separator')).toBe(divider);
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 
     describe('Card.Header', () => {

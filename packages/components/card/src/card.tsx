@@ -28,13 +28,12 @@ const variants = cva(cn('group relative flex-col overflow-clip rounded-xl border
     },
     variants: {
         color: {
-            foreground:
-                'border-foreground border-foreground-highlight bg-foreground [&>[data-divider]]:bg-foreground-highlight',
-            primary: 'border-primary bg-primary [&>[data-divider]]:bg-primary',
-            secondary: 'border-secondary bg-secondary [&>[data-divider]]:bg-secondary',
+            foreground: 'border-foreground-highlight bg-foreground [&>[data-divider]]:bg-foreground-highlight',
+            primary: 'border-primary bg-primary text-primary-foreground [&>[data-divider]]:bg-primary',
+            secondary: 'border-secondary bg-secondary text-secondary-foreground [&>[data-divider]]:bg-secondary',
         },
         variant: {
-            outline: 'border-2 border-solid bg-transparent',
+            outline: 'bg-transparent',
             solid: '',
         },
     },
@@ -97,14 +96,14 @@ export type CardDividerProps = {} & ComponentProps<'hr'>;
  */
 const Divider = ({ className, ...props }: CardDividerProps) => {
     return (
-        <div
+        <hr
+            draggable={false}
             {...props}
             className={cn(
-                'h-[var(--nordstar-border-width,2px)] bg-foreground-highlight group-data-[padding=true]:m-3 group-data-[padding=true]:-mx-3 group-data-[padding=true]:w-[calc(100%+calc(.75rem*2))]',
+                'm-0 h-[var(--nordstar-border-width,2px)] border-0 bg-foreground-highlight group-data-[padding=true]:m-3 group-data-[padding=true]:-mx-3 group-data-[padding=true]:w-[calc(100%+calc(.75rem*2))]',
                 className,
             )}
             data-divider
-            draggable={false}
         />
     );
 };
@@ -117,7 +116,7 @@ export type HeaderProps = {} & HTMLAttributes<HTMLDivElement>;
  */
 const Header = ({ children, className, ...props }: HeaderProps) => {
     return (
-        <header {...props} className={cn('bg-transparent py-2', className)} draggable={false}>
+        <header draggable={false} {...props} className={cn('bg-transparent py-2', className)}>
             {children}
         </header>
     );
