@@ -56,11 +56,11 @@ function ChevronRight(props: SVGProps<SVGSVGElement>) {
 }
 
 const ITEM_CLASS =
-    'relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 font-body font-medium text-foreground text-sm outline-none transition-colors focus:bg-background-highlight data-[disabled]:pointer-events-none data-[disabled]:opacity-50';
+    'relative flex cursor-pointer select-none items-center gap-2 rounded-sm px-2 py-1.5 font-body font-medium text-foreground text-sm outline-none transition-colors duration-150 focus:bg-background-highlight focus:text-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50';
 const INDICATOR_ITEM_CLASS =
-    'relative flex cursor-pointer select-none items-center rounded-sm py-1.5 pr-2 pl-8 font-body font-medium text-foreground text-sm outline-none transition-colors focus:bg-background-highlight data-[disabled]:pointer-events-none data-[disabled]:opacity-50';
+    'relative flex cursor-pointer select-none items-center rounded-sm py-1.5 pr-2 pl-8 font-body font-medium text-foreground text-sm outline-none transition-colors duration-150 focus:bg-background-highlight focus:text-foreground data-[disabled]:pointer-events-none data-[disabled]:opacity-50';
 const PANEL_CLASS =
-    'z-50 min-w-40 overflow-hidden rounded-sm border-2 border-foreground border-solid bg-background p-1 text-foreground shadow-lg';
+    'z-50 min-w-40 origin-[var(--radix-dropdown-menu-content-transform-origin)] overflow-hidden rounded-md border-2 border-foreground border-solid bg-background p-1 text-foreground shadow-overlay data-[state=open]:animate-overlay-in';
 
 export type DropdownMenuProps = ComponentPropsWithoutRef<typeof Primitive.Root>;
 export type DropdownMenuContentProps = ComponentPropsWithoutRef<typeof Primitive.Content>;

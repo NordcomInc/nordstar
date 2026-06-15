@@ -59,7 +59,7 @@ const SelectTrigger = forwardRef<ComponentRef<typeof Primitive.Trigger>, SelectT
     ({ className, children, ...props }, ref) => (
         <Primitive.Trigger
             className={cn(
-                'flex h-10 w-full items-center justify-between gap-2 rounded-sm border-2 border-foreground-highlight border-solid bg-background px-3 font-body text-foreground text-sm outline-none transition-colors focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[placeholder]:text-foreground-highlight [&>span]:truncate',
+                'group flex h-10 w-full items-center justify-between gap-2 rounded-sm border-2 border-foreground-highlight border-solid bg-background px-3 font-body text-foreground text-sm outline-none transition-colors duration-150 hover:border-foreground focus-visible:border-foreground focus-visible:ring-2 focus-visible:ring-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:cursor-not-allowed disabled:opacity-50 data-[placeholder]:text-foreground-highlight [&>span]:truncate',
                 className,
             )}
             ref={ref}
@@ -67,7 +67,10 @@ const SelectTrigger = forwardRef<ComponentRef<typeof Primitive.Trigger>, SelectT
         >
             {children}
             <Primitive.Icon asChild>
-                <Chevron className="size-4 shrink-0 opacity-60" direction="down" />
+                <Chevron
+                    className="size-4 shrink-0 opacity-60 transition-transform duration-200 ease-out-soft group-data-[state=open]:rotate-180"
+                    direction="down"
+                />
             </Primitive.Icon>
         </Primitive.Trigger>
     ),
@@ -107,7 +110,7 @@ const SelectContent = forwardRef<ComponentRef<typeof Primitive.Content>, SelectC
         <Primitive.Portal>
             <Primitive.Content
                 className={cn(
-                    'relative z-50 max-h-96 min-w-32 overflow-hidden rounded-sm border-2 border-foreground border-solid bg-background text-foreground shadow-lg',
+                    'relative z-50 max-h-96 min-w-32 origin-[var(--radix-select-content-transform-origin)] overflow-hidden rounded-md border-2 border-foreground border-solid bg-background text-foreground shadow-overlay data-[state=open]:animate-overlay-in',
                     position === 'popper' && 'data-[side=bottom]:translate-y-1 data-[side=top]:-translate-y-1',
                     className,
                 )}

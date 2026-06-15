@@ -34,9 +34,45 @@
     --border-width-2: var(--nordstar-border-width, 2px);
     --border-width-4: var(--nordstar-border-width-large, 4px);
 
+    /*
+     * Easing — characterful curves shared across the system.
+     * `ease-out-soft` decelerates hard (good for entrances); `ease-spring`
+     * overshoots a touch (good for toggles/presses that should feel physical).
+     */
+    --ease-out-soft: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-spring: cubic-bezier(0.34, 1.4, 0.5, 1);
+
+    /*
+     * Elevation — a three-step shadow scale tuned to read on the near-black
+     * default surface (a tight contact shadow layered under a soft ambient one).
+     * `shadow-raised` lifts resting surfaces (cards, buttons); `shadow-overlay`
+     * and `shadow-floating` sit under portalled surfaces (menus, tooltips).
+     */
+    --shadow-raised: 0 1px 2px -1px hsl(0 0% 0% / 0.55), 0 6px 16px -8px hsl(0 0% 0% / 0.45);
+    --shadow-overlay: 0 8px 24px -6px hsl(0 0% 0% / 0.65), 0 4px 10px -4px hsl(0 0% 0% / 0.5);
+    --shadow-floating: 0 18px 48px -12px hsl(0 0% 0% / 0.72), 0 6px 16px -6px hsl(0 0% 0% / 0.55);
+
+    /*
+     * Overlay entrance choreography. Radix unmounts portalled surfaces on close,
+     * so only the enter is animated; the global prefers-reduced-motion reset
+     * neutralises it for users who opt out.
+     */
+    --animate-overlay-in: overlay-in 0.16s var(--ease-out-soft);
+
     /* Inheritance helpers (preserves text-inherit / font-inherit semantics from v3 config). */
     --text-inherit: inherit;
     --font-weight-inherit: inherit;
+
+    @keyframes overlay-in {
+        from {
+            opacity: 0;
+            transform: translateY(-0.25rem) scale(0.98);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
 }
 
 /* :root baseline — works without <NordstarProvider/>. */
