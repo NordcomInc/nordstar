@@ -16,6 +16,7 @@ import { Accordion } from '@nordcom/nordstar-accordion';
 import { Button } from '@nordcom/nordstar-button';
 import { Card } from '@nordcom/nordstar-card';
 import { Details } from '@nordcom/nordstar-details';
+import { DropdownMenu } from '@nordcom/nordstar-dropdown-menu';
 import { Header } from '@nordcom/nordstar-header';
 import { Heading } from '@nordcom/nordstar-heading';
 import { Input } from '@nordcom/nordstar-input';
@@ -49,6 +50,14 @@ export * from '@nordcom/nordstar-card';
 export type * from '@nordcom/nordstar-details';
 export type { DetailsProps } from '@nordcom/nordstar-details';
 export * from '@nordcom/nordstar-details';
+export type * from '@nordcom/nordstar-dropdown-menu';
+export type {
+    DropdownMenuContentProps,
+    DropdownMenuItemProps,
+    DropdownMenuLabelProps,
+    DropdownMenuProps,
+} from '@nordcom/nordstar-dropdown-menu';
+export * from '@nordcom/nordstar-dropdown-menu';
 export type * from '@nordcom/nordstar-header';
 export type { HeaderLogoProps, HeaderMenuLinkProps, HeaderMenuProps, HeaderProps } from '@nordcom/nordstar-header';
 export * from '@nordcom/nordstar-header';
@@ -92,6 +101,7 @@ export {
     Button,
     Card,
     Details,
+    DropdownMenu,
     Header,
     Heading,
     Input,

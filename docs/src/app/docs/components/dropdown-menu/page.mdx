@@ -1,0 +1,73 @@
+export const metadata = {
+    title: 'Dropdown Menu',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/dropdown-menu/' }
+};
+
+# Dropdown Menu
+
+A menu of actions revealed by a trigger button — for row actions, overflow menus, and account menus.
+
+## When to use
+
+- For a set of actions tied to a control or item (edit, duplicate, delete).
+- As an overflow ("…") menu when there isn't room for every action inline.
+
+### When not to use
+
+- For choosing a value to submit in a form — use a <C>Select</C>.
+- For primary navigation — use real links.
+
+## Installation
+
+<Install package="@nordcom/nordstar-dropdown-menu" />
+
+```tsx
+import { DropdownMenu } from '@nordcom/nordstar';
+```
+
+## Basic usage
+
+Compose `DropdownMenu` with a `DropdownMenu.Trigger` (use `asChild` to make a <C>Button</C> the trigger) and a `DropdownMenu.Content` of `DropdownMenu.Item`s, structured with `DropdownMenu.Label` and `DropdownMenu.Separator`.
+
+<Preview name="dropdown-menu/standard" />
+
+## Checkbox items
+
+Use `DropdownMenu.CheckboxItem` for toggLable options, driven by `checked` and `onCheckedChange`.
+
+<Preview name="dropdown-menu/checkboxes" />
+
+## Submenus
+
+Nest a `DropdownMenu.Sub` with a `DropdownMenu.SubTrigger` and `DropdownMenu.SubContent`:
+
+```tsx
+<DropdownMenu.Content>
+    <DropdownMenu.Item>Rename</DropdownMenu.Item>
+    <DropdownMenu.Sub>
+        <DropdownMenu.SubTrigger>Move to</DropdownMenu.SubTrigger>
+        <DropdownMenu.SubContent>
+            <DropdownMenu.Item>Inbox</DropdownMenu.Item>
+            <DropdownMenu.Item>Archive</DropdownMenu.Item>
+        </DropdownMenu.SubContent>
+    </DropdownMenu.Sub>
+</DropdownMenu.Content>
+```
+
+For a single set of mutually exclusive options, wrap `DropdownMenu.RadioItem`s in a `DropdownMenu.RadioGroup`.
+
+## Props
+
+<PropsTable component="DropdownMenu" />
+
+## Accessibility
+
+<Callout type="info" title="Full keyboard menu">
+    Built on `@radix-ui/react-dropdown-menu`: the trigger exposes `aria-haspopup`, the panel is a `menu` with `menuitem` children, and arrow keys, typeahead, and `Escape` all work out of the box.
+</Callout>
+
+- Give the trigger a clear accessible name — for an icon-only trigger, add `aria-label`.
+- Items run their action via `onSelect`; the menu closes automatically afterwards.
+- Use `DropdownMenu.Separator` and `DropdownMenu.Label` to group long menus so they stay scannable.
+
+<Related of="dropdown-menu" />
