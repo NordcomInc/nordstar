@@ -47,14 +47,14 @@ const AccordionTrigger = forwardRef<ComponentRef<typeof Primitive.Trigger>, Acco
         <Primitive.Header className="flex">
             <Primitive.Trigger
                 className={cn(
-                    'flex flex-1 cursor-pointer items-center justify-between gap-2 py-3 text-left font-body font-bold text-foreground text-sm outline-none transition-colors hover:text-foreground-highlight focus-visible:text-foreground-highlight [&[data-state=open]>svg]:rotate-180',
+                    'flex flex-1 cursor-pointer items-center justify-between gap-2 py-3 text-left font-body font-bold text-foreground text-sm outline-none transition-colors duration-150 ease-out-soft hover:text-foreground-highlight focus-visible:text-foreground-highlight [&[data-state=open]>svg]:rotate-180',
                     className,
                 )}
                 ref={ref}
                 {...props}
             >
                 {children}
-                <Chevron className="size-4 shrink-0 text-foreground-highlight transition-transform duration-200" />
+                <Chevron className="size-4 shrink-0 text-foreground-highlight transition-transform duration-200 ease-out-soft" />
             </Primitive.Trigger>
         </Primitive.Header>
     ),
@@ -63,7 +63,11 @@ AccordionTrigger.displayName = 'Nordstar.Accordion.Trigger';
 
 const AccordionContent = forwardRef<ComponentRef<typeof Primitive.Content>, AccordionContentProps>(
     ({ className, children, ...props }, ref) => (
-        <Primitive.Content className="overflow-hidden font-body text-foreground-highlight text-sm" ref={ref} {...props}>
+        <Primitive.Content
+            className="overflow-hidden font-body text-foreground-highlight text-sm data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+            ref={ref}
+            {...props}
+        >
             <div className={cn('pb-3', className)}>{children}</div>
         </Primitive.Content>
     ),

@@ -59,6 +59,14 @@
      */
     --animate-overlay-in: overlay-in 0.16s var(--ease-out-soft);
 
+    /*
+     * Disclosure (accordion) height choreography, driven by the height Radix
+     * measures onto `--radix-accordion-content-height`. Both directions animate
+     * because the content stays mounted while collapsing.
+     */
+    --animate-accordion-down: accordion-down 0.2s var(--ease-out-soft);
+    --animate-accordion-up: accordion-up 0.2s var(--ease-out-soft);
+
     /* Inheritance helpers (preserves text-inherit / font-inherit semantics from v3 config). */
     --text-inherit: inherit;
     --font-weight-inherit: inherit;
@@ -71,6 +79,24 @@
         to {
             opacity: 1;
             transform: translateY(0) scale(1);
+        }
+    }
+
+    @keyframes accordion-down {
+        from {
+            height: 0;
+        }
+        to {
+            height: var(--radix-accordion-content-height);
+        }
+    }
+
+    @keyframes accordion-up {
+        from {
+            height: var(--radix-accordion-content-height);
+        }
+        to {
+            height: 0;
         }
     }
 }
