@@ -1,5 +1,14 @@
 # @nordcom/nordstar-details
 
+## 0.1.1
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @nordcom/nordstar-card@0.1.1
+  - @nordcom/nordstar-label@0.1.1
+  - @nordcom/nordstar-system@0.1.1
+
 ## 0.1.0
 
 ### Patch Changes
