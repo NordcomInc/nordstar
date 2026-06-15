@@ -66,6 +66,7 @@
         "verify:pack:attw": "rm -f /tmp/nordcom-nordstar-*.tgz && pnpm pack --pack-destination /tmp && attw /tmp/nordcom-nordstar-*.tgz"
     },
     "dependencies": {
+        "@radix-ui/react-select": "2.3.0",
         "@radix-ui/react-switch": "1.3.0",
         "@radix-ui/react-tooltip": "1.2.9",
         "class-variance-authority": "0.7.1",
@@ -93,6 +94,7 @@
         "@nordcom/nordstar-input": "workspace:*",
         "@nordcom/nordstar-kbd": "workspace:*",
         "@nordcom/nordstar-label": "workspace:*",
+        "@nordcom/nordstar-select": "workspace:*",
         "@nordcom/nordstar-separator": "workspace:*",
         "@nordcom/nordstar-switch": "workspace:*",
         "@nordcom/nordstar-system": "workspace:*",

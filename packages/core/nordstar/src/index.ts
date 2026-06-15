@@ -20,6 +20,7 @@ import { Heading } from '@nordcom/nordstar-heading';
 import { Input } from '@nordcom/nordstar-input';
 import { Kbd } from '@nordcom/nordstar-kbd';
 import { Label } from '@nordcom/nordstar-label';
+import { Select } from '@nordcom/nordstar-select';
 import { Separator } from '@nordcom/nordstar-separator';
 import { Switch } from '@nordcom/nordstar-switch';
 import { NordstarProvider } from '@nordcom/nordstar-system';
@@ -54,6 +55,14 @@ export * from '@nordcom/nordstar-kbd';
 export type * from '@nordcom/nordstar-label';
 export type { LabelProps } from '@nordcom/nordstar-label';
 export * from '@nordcom/nordstar-label';
+export type * from '@nordcom/nordstar-select';
+export type {
+    SelectContentProps,
+    SelectItemProps,
+    SelectProps,
+    SelectTriggerProps,
+} from '@nordcom/nordstar-select';
+export * from '@nordcom/nordstar-select';
 export type * from '@nordcom/nordstar-separator';
 export type { SeparatorProps } from '@nordcom/nordstar-separator';
 export * from '@nordcom/nordstar-separator';
@@ -79,6 +88,7 @@ export {
     Kbd,
     Label,
     NordstarProvider,
+    Select,
     Separator,
     Switch,
     Tooltip,
