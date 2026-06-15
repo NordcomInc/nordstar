@@ -67,5 +67,16 @@ describe('components', () => {
             expect(element).toHaveClass('rounded-full');
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('resolves the `default` color to the foreground scheme', () => {
+            const wrapper = render(<Switch color="default" defaultChecked={true} />);
+            const element = wrapper.getByRole('switch');
+
+            // `default` is surfaced verbatim on the data attribute but resolves to the
+            // foreground checked styling internally.
+            expect(element).toHaveAttribute('data-color', 'default');
+            expect(element).toHaveClass('data-[state=checked]:bg-foreground');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 });

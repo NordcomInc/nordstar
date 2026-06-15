@@ -86,5 +86,80 @@ describe('components', () => {
             expect(wrapper.getByRole('menu')).toHaveClass('custom');
             expect(() => wrapper.unmount()).not.toThrow();
         });
+
+        it('renders checkbox items and reflects their checked state', () => {
+            const wrapper = render(
+                <DropdownMenu defaultOpen>
+                    <DropdownMenu.Trigger>Open</DropdownMenu.Trigger>
+                    <DropdownMenu.Content>
+                        <DropdownMenu.CheckboxItem checked={true}>Wrap text</DropdownMenu.CheckboxItem>
+                        <DropdownMenu.CheckboxItem checked={false}>Minimap</DropdownMenu.CheckboxItem>
+                    </DropdownMenu.Content>
+                </DropdownMenu>,
+            );
+
+            const items = wrapper.getAllByRole('menuitemcheckbox');
+            expect(items).toHaveLength(2);
+            expect(items[0]).toHaveAttribute('aria-checked', 'true');
+            expect(items[1]).toHaveAttribute('aria-checked', 'false');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('renders a radio group and indicates the selected item', () => {
+            const wrapper = render(
+                <DropdownMenu defaultOpen>
+                    <DropdownMenu.Trigger>Open</DropdownMenu.Trigger>
+                    <DropdownMenu.Content>
+                        <DropdownMenu.RadioGroup value="ascending">
+                            <DropdownMenu.RadioItem value="ascending">Ascending</DropdownMenu.RadioItem>
+                            <DropdownMenu.RadioItem value="descending">Descending</DropdownMenu.RadioItem>
+                        </DropdownMenu.RadioGroup>
+                    </DropdownMenu.Content>
+                </DropdownMenu>,
+            );
+
+            const items = wrapper.getAllByRole('menuitemradio');
+            expect(items).toHaveLength(2);
+            expect(items[0]).toHaveAttribute('aria-checked', 'true');
+            expect(items[1]).toHaveAttribute('aria-checked', 'false');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('insets labels and items past the indicator gutter', () => {
+            const wrapper = render(
+                <DropdownMenu defaultOpen>
+                    <DropdownMenu.Trigger>Open</DropdownMenu.Trigger>
+                    <DropdownMenu.Content>
+                        <DropdownMenu.Label inset={true}>Region</DropdownMenu.Label>
+                        <DropdownMenu.Item inset={true}>Inset action</DropdownMenu.Item>
+                    </DropdownMenu.Content>
+                </DropdownMenu>,
+            );
+
+            expect(wrapper.getByText('Region')).toHaveClass('pl-8');
+            expect(wrapper.getByText('Inset action')).toHaveClass('pl-8');
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
+
+        it('renders a submenu trigger with its chevron affordance', () => {
+            const wrapper = render(
+                <DropdownMenu defaultOpen>
+                    <DropdownMenu.Trigger>Open</DropdownMenu.Trigger>
+                    <DropdownMenu.Content>
+                        <DropdownMenu.Sub>
+                            <DropdownMenu.SubTrigger>More tools</DropdownMenu.SubTrigger>
+                            <DropdownMenu.SubContent>
+                                <DropdownMenu.Item>Nested action</DropdownMenu.Item>
+                            </DropdownMenu.SubContent>
+                        </DropdownMenu.Sub>
+                    </DropdownMenu.Content>
+                </DropdownMenu>,
+            );
+
+            const subTrigger = wrapper.getByText('More tools');
+            expect(subTrigger).toBeInTheDocument();
+            expect(subTrigger.querySelector('svg')).toBeInTheDocument();
+            expect(() => wrapper.unmount()).not.toThrow();
+        });
     });
 });
