@@ -1,0 +1,21 @@
+{
+    "tailwindcss": {
+        "command": "pnpm",
+        "args": [
+            "dlx",
+            "--package",
+            "tailwind-lsp-adapter@1.1.5",
+            "--package",
+            "@tailwindcss/language-server@0.14.29",
+            "tailwind-lsp-adapter"
+        ],
+        "extensionToLanguage": {
+            ".css": "css",
+            ".html": "html",
+            ".less": "less",
+            ".scss": "scss",
+            ".svelte": "svelte",
+            ".vue": "vue"
+        }
+    }
+}

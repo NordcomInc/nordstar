@@ -1,0 +1,105 @@
+{
+    "$schema": "https://json.schemastore.org/claude-code-settings.json",
+    "enableAllProjectMcpServers": true,
+    "includeCoAuthoredBy": false,
+    "showThinkingSummaries": true,
+    "useAutoModeDuringPlan": true,
+    "enabledPlugins": {
+        "double-shot-latte@superpowers-marketplace": true,
+        "frontend-design@claude-plugins-official": true,
+        "playwright@claude-plugins-official": true,
+        "superpowers@superpowers-marketplace": true,
+        "tailwind-lsp-adapter@nordstar-plugins": true,
+        "typescript-lsp@claude-plugins-official": false,
+        "typescript-lsp@nordstar-plugins": true
+    },
+    "extraKnownMarketplaces": {
+        "nordstar-plugins": {
+            "source": {
+                "path": ".claude/plugins/nordstar-plugins",
+                "source": "directory"
+            }
+        },
+        "superpowers-marketplace": {
+            "source": {
+                "repo": "obra/superpowers-marketplace",
+                "source": "github"
+            }
+        }
+    },
+    "hooks": {
+        "PostToolUse": [
+            {
+                "matcher": "Bash",
+                "hooks": [
+                    {
+                        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/block-npm.sh",
+                        "type": "command"
+                    }
+                ]
+            },
+            {
+                "matcher": "Edit|Write",
+                "hooks": [
+                    {
+                        "command": "pnpm biome check --write --unsafe $CLAUDE_FILE_PATHS 2>&1 || true",
+                        "type": "command"
+                    }
+                ]
+            }
+        ],
+        "PreToolUse": [
+            {
+                "matcher": "Bash",
+                "hooks": [
+                    {
+                        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/filter-test-output.sh",
+                        "type": "command"
+                    },
+                    {
+                        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/filter-lint-output.sh",
+                        "type": "command"
+                    },
+                    {
+                        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/filter-typecheck-output.sh",
+                        "type": "command"
+                    },
+                    {
+                        "command": "$CLAUDE_PROJECT_DIR/.claude/hooks/filter-build-output.sh",
+                        "type": "command"
+                    }
+                ]
+            },
+            {
+                "matcher": "Edit|Write",
+                "hooks": [
+                    {
+                        "command": "case \"$TOOL_INPUT_file_path\" in */.env*) echo 'BLOCK: env files contain secrets'; exit 1;; */pnpm-lock.yaml) echo 'BLOCK: lock file — use pnpm install'; exit 1;; */.vercel/*) echo 'BLOCK: .vercel is managed by Vercel CLI'; exit 1;; */.next/*) echo 'BLOCK: .next is a build output'; exit 1;; */out/*) echo 'BLOCK: out is a build output'; exit 1;; */dist/*) echo 'BLOCK: dist is a build output'; exit 1;; */playwright-report/*) echo 'BLOCK: playwright-report is generated output'; exit 1;; */test-results/*) echo 'BLOCK: test-results is generated output'; exit 1;; */coverage/*) echo 'BLOCK: coverage is generated output'; exit 1;; */*.tsbuildinfo) echo 'BLOCK: .tsbuildinfo is generated output'; exit 1;; *.generated.json) echo 'BLOCK: generated file — run pnpm generate'; exit 1;; esac",
+                        "type": "command"
+                    }
+                ]
+            }
+        ],
+        "SessionStart": [
+            {
+                "matcher": "compact",
+                "hooks": [
+                    {
+                        "command": "printf '## Project CLAUDE.md re-injected after compaction (these instructions override default behavior):\\n\\n'; cat \"$CLAUDE_PROJECT_DIR/CLAUDE.md\"",
+                        "type": "command"
+                    }
+                ]
+            }
+        ]
+    },
+    "permissions": {
+        "deny": [
+            "Read(**/.env*)",
+            "Read(**/secrets/**)",
+            "Read(**/*.pem)",
+            "Read(**/*.key)",
+            "Read(~/.ssh/**)",
+            "Read(~/.aws/**)"
+        ]
+    }
+}

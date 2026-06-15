@@ -33,7 +33,12 @@ dist
 .env.test.local
 .env.production.local
 .env.production
-.claude/
+
+# Claude Code — config is tracked; only machine-local runtime is ignored.
+.claude/settings.local.json
+.claude/scheduled_tasks.lock
+.claude/worktrees/
+.claude/.DS_Store
 
 # Logs
 logs

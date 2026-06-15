@@ -1,0 +1,16 @@
+{
+    "typescript": {
+        "args": ["dlx", "typescript-language-server@4.4.1", "--stdio"],
+        "command": "pnpm",
+        "extensionToLanguage": {
+            ".cjs": "javascript",
+            ".cts": "typescript",
+            ".js": "javascript",
+            ".jsx": "javascriptreact",
+            ".mjs": "javascript",
+            ".mts": "typescript",
+            ".ts": "typescript",
+            ".tsx": "typescriptreact"
+        }
+    }
+}

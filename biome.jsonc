@@ -26,7 +26,7 @@
             "!**/out",
             "!**/*.d.ts",
             "!**/.tsbuildinfo",
-            "!docs/superpowers/**",
+            "!.claude/**",
             "!plop/**/*.hbs",
             "!packages/**/CHANGELOG.md",
             "!**/postcss.config.*",
@@ -60,7 +60,7 @@
             "!**/out",
             "!**/*.d.ts",
             "!**/.tsbuildinfo",
-            "!docs/superpowers",
+            "!.claude",
             "!plop/**/*.hbs",
             "!packages/**/CHANGELOG.md"
             // "!**/postcss.config.*",

@@ -1,0 +1,9 @@
+{
+    "description": "TypeScript/JavaScript LSP for Claude Code - go-to-definition, find references, hover, and diagnostics.",
+    "name": "typescript-lsp",
+    "version": "1.0.0",
+    "author": {
+        "email": "dev@nordcom.io",
+        "name": "Nordcom"
+    }
+}
