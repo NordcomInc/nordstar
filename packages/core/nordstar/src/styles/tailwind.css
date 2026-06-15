@@ -79,3 +79,20 @@
         -webkit-touch-callout: none;
     }
 }
+
+/*
+ * Honor the user's reduced-motion preference. Only applies when the OS-level
+ * setting is enabled, so it never removes motion the user hasn't opted out of.
+ */
+@media (prefers-reduced-motion: reduce) {
+    /* biome-ignore-start lint/complexity/noImportantStyles: a universal reduced-motion reset must override Tailwind's transition/animation utilities, which a `*` selector can only do with !important */
+    *,
+    ::before,
+    ::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    /* biome-ignore-end lint/complexity/noImportantStyles: see above */
+}
