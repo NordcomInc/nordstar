@@ -46,12 +46,7 @@
             "@nordcom/nordstar-label": ["./packages/components/label"],
             "@nordcom/nordstar-system": ["./packages/core/system"],
             "@nordcom/nordstar-view": ["./packages/components/view"]
-        },
-        "plugins": [
-            {
-                "name": "typescript-plugin-css-modules"
-            }
-        ]
+        }
     },
     "exclude": [
         "**/.turbo",
