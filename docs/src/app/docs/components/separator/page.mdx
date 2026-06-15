@@ -1,0 +1,54 @@
+export const metadata = {
+    title: 'Separator',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/separator/' }
+};
+
+# Separator
+
+A thin rule that divides content along one axis — horizontally between stacked sections, or vertically between inline items.
+
+## When to use
+
+- To split a stack of content into clearly delimited sections.
+- To divide inline items, such as a row of metadata or breadcrumb-style links.
+- Inside a <C>Card</C> or <C>View</C> where you need a divider that is not a full `Card.Divider`.
+
+### When not to use
+
+- As decorative spacing — reach for margin or `gap` instead; a separator implies a boundary.
+- To outline a container — use a border on the container itself.
+
+## Installation
+
+<Install package="@nordcom/nordstar-separator" />
+
+```tsx
+import { Separator } from '@nordcom/nordstar';
+```
+
+## Basic usage
+
+A horizontal rule is the default. It is decorative by default, so assistive tech ignores it.
+
+<Preview name="separator/standard" />
+
+## Vertical
+
+Set `orientation="vertical"` for inline dividers. Give the parent a height (or let flex stretch it) so the rule has something to fill.
+
+<Preview name="separator/vertical" />
+
+## Props
+
+<PropsTable component="Separator" />
+
+## Accessibility
+
+<Callout type="info" title="Decorative by default">
+    A `Separator` is `decorative` by default and hidden from the accessibility tree (`role="none"`). Set `decorative={false}` only when the divider conveys a real grouping boundary — then it is announced as a `separator` with the correct `aria-orientation`.
+</Callout>
+
+- Don't make purely visual rules non-decorative; it adds noise to screen-reader output.
+- When a separator *does* carry meaning (e.g. between groups in a menu), `decorative={false}` lets assistive tech perceive the same structure sighted users do.
+
+<Related of="separator" />
