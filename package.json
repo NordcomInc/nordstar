@@ -103,7 +103,7 @@
         "react": "19.2.6",
         "rimraf": "6.1.3",
         "rollup-preserve-directives": "1.1.3",
-        "sass": "1.99.0",
+        "sass": "1.101.0",
         "strip-ansi": "7.2.0",
         "tailwindcss": "4.3.0",
         "turbo": "2.9.14",
