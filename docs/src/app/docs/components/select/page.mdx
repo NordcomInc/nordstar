@@ -1,0 +1,81 @@
+export const metadata = {
+    title: 'Select',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/select/' }
+};
+
+# Select
+
+A dropdown for choosing a single option from a list, with full keyboard support and typeahead.
+
+## When to use
+
+- To pick one value from a known, moderate-length list (roughly 5–15 options).
+- When the chosen value matters more than seeing every option at once.
+
+### When not to use
+
+- For two states — use a <C>Switch</C> or a checkbox.
+- For a handful of always-visible options — use a radio group.
+- For very long, searchable lists — use a combobox with filtering.
+
+## Installation
+
+<Install package="@nordcom/nordstar-select" />
+
+```tsx
+import { Select } from '@nordcom/nordstar';
+```
+
+## Basic usage
+
+Compose `Select` with a `Select.Trigger` (holding a `Select.Value`) and a `Select.Content` of `Select.Item`s. Use `defaultValue` for uncontrolled state.
+
+<Preview name="select/standard" />
+
+## Groups
+
+Organize long lists with `Select.Group`, `Select.Label`, and `Select.Separator`.
+
+<Preview name="select/groups" />
+
+## Controlled
+
+Drive the value yourself with `value` and `onValueChange`:
+
+```tsx
+'use client';
+
+import { Select } from '@nordcom/nordstar';
+import { useState } from 'react';
+
+export function FruitPicker() {
+    const [fruit, setFruit] = useState('apple');
+    return (
+        <Select value={fruit} onValueChange={setFruit}>
+            <Select.Trigger>
+                <Select.Value placeholder="Pick a fruit" />
+            </Select.Trigger>
+            <Select.Content>
+                <Select.Item value="apple">Apple</Select.Item>
+                <Select.Item value="pear">Pear</Select.Item>
+            </Select.Content>
+        </Select>
+    );
+}
+```
+
+## Props
+
+<PropsTable component="Select" />
+
+## Accessibility
+
+<Callout type="info" title="Give it a label">
+    Associate the trigger with a visible <C>Label</C> (or `aria-label`) so its purpose is clear. The trigger exposes `role="combobox"`; the list is a keyboard-navigable `listbox` with typeahead.
+</Callout>
+
+- Built on `@radix-ui/react-select`: arrow keys move between options, typing jumps to a match, and `Escape` closes the list.
+- Integrates with native forms via the `name` prop on `Select`.
+- The current value is shown in the trigger via `Select.Value`; provide a `placeholder` for the empty state.
+
+<Related of="select" />

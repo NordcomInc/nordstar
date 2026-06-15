@@ -143,6 +143,15 @@ export const components = [
         slug: 'tooltip',
         tagline: 'A floating label that explains an element on hover or focus.',
     },
+    {
+        category: 'controls',
+        hasA11y: true,
+        name: 'Select',
+        package: '@nordcom/nordstar-select',
+        related: ['input', 'button'],
+        slug: 'select',
+        tagline: 'A dropdown for choosing one option from a list.',
+    },
 ] as const satisfies readonly ComponentMeta[];
 
 export type ComponentSlug = (typeof components)[number]['slug'];
