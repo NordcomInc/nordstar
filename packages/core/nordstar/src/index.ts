@@ -23,6 +23,7 @@ import { Label } from '@nordcom/nordstar-label';
 import { Separator } from '@nordcom/nordstar-separator';
 import { Switch } from '@nordcom/nordstar-switch';
 import { NordstarProvider } from '@nordcom/nordstar-system';
+import { Tooltip } from '@nordcom/nordstar-tooltip';
 import { View } from '@nordcom/nordstar-view';
 
 export type * from '@nordcom/nordstar-accented';
@@ -61,6 +62,9 @@ export type { SwitchProps } from '@nordcom/nordstar-switch';
 export * from '@nordcom/nordstar-switch';
 export type * from '@nordcom/nordstar-system';
 export * from '@nordcom/nordstar-system';
+export type * from '@nordcom/nordstar-tooltip';
+export type { TooltipContentProps, TooltipProps } from '@nordcom/nordstar-tooltip';
+export * from '@nordcom/nordstar-tooltip';
 export type * from '@nordcom/nordstar-view';
 export type { ViewProps } from '@nordcom/nordstar-view';
 export * from '@nordcom/nordstar-view';
@@ -77,5 +81,6 @@ export {
     NordstarProvider,
     Separator,
     Switch,
+    Tooltip,
     View,
 };

@@ -1,0 +1,54 @@
+export const metadata = {
+    title: 'Tooltip',
+    alternates: { canonical: 'https://nordcominc.github.io/nordstar/docs/components/tooltip/' }
+};
+
+# Tooltip
+
+A small floating label that explains an element when the user hovers or focuses it.
+
+## When to use
+
+- To clarify an icon-only <C>Button</C> or a terse control.
+- To surface a keyboard shortcut or a short, supplementary hint.
+
+### When not to use
+
+- For essential information — tooltips are hidden by default and unavailable on touch.
+- For interactive content (links, buttons, forms) — use a popover or dialog instead.
+
+## Installation
+
+<Install package="@nordcom/nordstar-tooltip" />
+
+```tsx
+import { Tooltip } from '@nordcom/nordstar';
+```
+
+## Basic usage
+
+Mount `Tooltip.Provider` once (near the root of your app, or around a section) to share open/close timing, then compose a `Tooltip` with a `Tooltip.Trigger` and `Tooltip.Content`. Use `asChild` to make any element the trigger.
+
+<Preview name="tooltip/standard" />
+
+## Sides
+
+Position the bubble with `side` on the content. Radix flips it automatically when it would overflow the viewport.
+
+<Preview name="tooltip/sides" caption='side="top" and side="right"' />
+
+## Props
+
+<PropsTable component="Tooltip" />
+
+## Accessibility
+
+<Callout type="info" title="Supplementary, not essential">
+    Tooltips open on hover and on keyboard focus, but they never appear on touch devices and are easy to miss. Keep their content supplementary, and make sure the trigger is understandable on its own.
+</Callout>
+
+- Built on `@radix-ui/react-tooltip`: the trigger is wired to the content via `aria-describedby` automatically.
+- The trigger must be focusable — use a real `<button>` or pass `asChild` to a focusable element like <C>Button</C>.
+- Dismiss-on-`Escape` and pointer-leave are handled for you.
+
+<Related of="tooltip" />

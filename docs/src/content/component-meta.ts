@@ -134,6 +134,15 @@ export const components = [
         slug: 'switch',
         tagline: 'A boolean toggle with an animated thumb.',
     },
+    {
+        category: 'surfaces',
+        hasA11y: true,
+        name: 'Tooltip',
+        package: '@nordcom/nordstar-tooltip',
+        related: ['button'],
+        slug: 'tooltip',
+        tagline: 'A floating label that explains an element on hover or focus.',
+    },
 ] as const satisfies readonly ComponentMeta[];
 
 export type ComponentSlug = (typeof components)[number]['slug'];
