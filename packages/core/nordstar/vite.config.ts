@@ -30,6 +30,9 @@ export default mergeConfig(
                     'clsx',
                     'hex-to-hsl',
                     'tailwind-merge',
+                    // Radix primitives ship their own React context; bundling them would break
+                    // dedup and the 'use client' boundary, so keep every @radix-ui/* package external.
+                    /^@radix-ui\//,
                 ],
                 output: {
                     name,
