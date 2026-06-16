@@ -1,5 +1,5 @@
 ---
-"@nordcom/nordstar-docs": minor
+"@nordcom/nordstar-docs": patch
 ---
 
 Add a Changelog section to the documentation site, generated from each
