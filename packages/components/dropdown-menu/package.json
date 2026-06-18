@@ -62,7 +62,7 @@
     "homepage": "https://nordcominc.github.io/nordstar/docs/components/dropdown-menu/",
     "dependencies": {
         "@nordcom/nordstar-system": "workspace:*",
-        "@radix-ui/react-dropdown-menu": "2.1.17"
+        "@radix-ui/react-dropdown-menu": "2.1.18"
     },
     "peerDependencies": {
         "react": ">=19",
