@@ -76,7 +76,7 @@
         "@types/react": "19.2.17",
         "@types/react-dom": "19.2.3",
         "concurrently": "10.0.3",
-        "globals": "17.6.0",
+        "globals": "17.7.0",
         "postcss": "8.5.15",
         "postcss-load-config": "6.0.1",
         "rimraf": "6.1.3",
