@@ -19,19 +19,19 @@ importers:
         version: 0.7.0
       '@changesets/cli':
         specifier: 2.31.0
-        version: 2.31.0(@types/node@25.9.3)
+        version: 2.31.0(@types/node@25.9.4)
       '@changesets/types':
         specifier: 6.1.0
         version: 6.1.0
       '@codecov/vite-plugin':
         specifier: 2.0.1
-        version: 2.0.1(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 2.0.1(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
       '@happy-dom/global-registrator':
         specifier: 20.10.3
         version: 20.10.3
       '@microsoft/api-extractor':
         specifier: 7.58.9
-        version: 7.58.9(@types/node@25.9.3)
+        version: 7.58.9(@types/node@25.9.4)
       '@playwright/test':
         specifier: 1.61.0
         version: 1.61.0
@@ -45,8 +45,8 @@ importers:
         specifier: 14.6.1
         version: 14.6.1(@testing-library/dom@10.4.1)
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -55,7 +55,7 @@ importers:
         version: 19.2.3(@types/react@19.2.17)
       '@vitejs/plugin-react':
         specifier: 6.0.2
-        version: 6.0.2(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 6.0.2(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
       '@vitest/coverage-v8':
         specifier: 4.1.8
         version: 4.1.8(vitest@4.1.8)
@@ -76,7 +76,7 @@ importers:
         version: 9.1.7
       inquirer:
         specifier: 14.0.2
-        version: 14.0.2(@types/node@25.9.3)
+        version: 14.0.2(@types/node@25.9.4)
       inquirer-directory:
         specifier: 2.2.0
         version: 2.2.0
@@ -88,7 +88,7 @@ importers:
         version: 0.30.21
       plop:
         specifier: 4.0.5
-        version: 4.0.5(@types/node@25.9.3)
+        version: 4.0.5(@types/node@25.9.4)
       publint:
         specifier: 0.3.21
         version: 0.3.21
@@ -118,16 +118,16 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
       vite-plugin-lib-inject-css:
         specifier: 2.2.2
-        version: 2.2.2(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 2.2.2(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
       vitest:
         specifier: 4.1.8
-        version: 4.1.8(@types/node@25.9.3)(@vitest/coverage-v8@4.1.8)(happy-dom@20.10.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 4.1.8(@types/node@25.9.4)(@vitest/coverage-v8@4.1.8)(happy-dom@20.10.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   docs:
     dependencies:
@@ -233,8 +233,8 @@ importers:
         version: link:../../core/system
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -252,10 +252,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/accordion:
     dependencies:
@@ -267,8 +267,8 @@ importers:
         version: 1.2.14(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -286,10 +286,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/button:
     dependencies:
@@ -301,8 +301,8 @@ importers:
         version: 0.7.1
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -320,10 +320,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/card:
     dependencies:
@@ -335,8 +335,8 @@ importers:
         version: 0.7.1
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -354,10 +354,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/details:
     dependencies:
@@ -372,8 +372,8 @@ importers:
         version: link:../../core/system
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -391,10 +391,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/dropdown-menu:
     dependencies:
@@ -406,8 +406,8 @@ importers:
         version: 2.1.18(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -425,10 +425,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/header:
     dependencies:
@@ -446,8 +446,8 @@ importers:
         specifier: workspace:*
         version: link:../label
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -465,10 +465,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/heading:
     dependencies:
@@ -477,8 +477,8 @@ importers:
         version: link:../../core/system
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -496,10 +496,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/input:
     dependencies:
@@ -511,8 +511,8 @@ importers:
         version: 0.7.1
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -530,10 +530,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/kbd:
     dependencies:
@@ -545,8 +545,8 @@ importers:
         version: 0.7.1
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -564,10 +564,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/label:
     dependencies:
@@ -576,8 +576,8 @@ importers:
         version: link:../../core/system
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -595,10 +595,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/select:
     dependencies:
@@ -610,8 +610,8 @@ importers:
         version: 2.3.1(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -629,10 +629,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/separator:
     dependencies:
@@ -641,8 +641,8 @@ importers:
         version: link:../../core/system
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -660,10 +660,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/switch:
     dependencies:
@@ -678,8 +678,8 @@ importers:
         version: 0.7.1
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -697,10 +697,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/tooltip:
     dependencies:
@@ -712,8 +712,8 @@ importers:
         version: 1.2.10(@types/react-dom@19.2.3(@types/react@19.2.17))(@types/react@19.2.17)(react-dom@19.2.7(react@19.2.7))(react@19.2.7)
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -731,10 +731,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/components/view:
     dependencies:
@@ -743,8 +743,8 @@ importers:
         version: link:../../core/system
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -762,10 +762,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/core/nordstar:
     dependencies:
@@ -852,8 +852,8 @@ importers:
         specifier: 4.3.1
         version: 4.3.1
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/react':
         specifier: 19.2.17
         version: 19.2.17
@@ -874,10 +874,10 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       vite-plugin-dts:
         specifier: 5.0.2
-        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+        version: 5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   packages/core/system:
     dependencies:
@@ -892,8 +892,8 @@ importers:
         version: 3.6.0
     devDependencies:
       '@types/node':
-        specifier: 25.9.3
-        version: 25.9.3
+        specifier: 25.9.4
+        version: 25.9.4
       '@types/prop-types':
         specifier: 15.7.15
         version: 15.7.15
@@ -914,7 +914,7 @@ importers:
         version: 6.0.3
       vite:
         specifier: 8.0.16
-        version: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+        version: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
 
 packages:
 
@@ -2827,8 +2827,8 @@ packages:
   '@types/node@12.20.55':
     resolution: {integrity: sha512-J8xLz7q2OFulZ2cyGTLE1TbbZcjpno7FaN6zdJNrgAdrJ+DZzh/uFR6YrTb4C+nXakvud8Q4+rbhoIWlYQbUFQ==}
 
-  '@types/node@25.9.3':
-    resolution: {integrity: sha512-603BddQMv3pUcr4U2dhujk83N2tTDVr/34wII2B6bJy6g+8WD6yUb11jszNs0gdi4PesVWl7ABt8nYMVpnLUcg==}
+  '@types/node@25.9.4':
+    resolution: {integrity: sha512-dszCsrKb5U7ZsVZBWiHFklTloVl0mSEnWH/iZXfZUlI4rzCUnsvGmgqfuVRHL54ugE7/wRuxEIXRa2iMZ+BG6g==}
 
   '@types/picomatch@4.0.3':
     resolution: {integrity: sha512-iG0T6+nYJ9FAPmx9SsUlnwcq1ZVRuCXcVEvWnntoPlrOpwtSTKNDC9uVAxTsC3PUvJ+99n4RpAcNgBbHX3JSnQ==}
@@ -5551,7 +5551,7 @@ snapshots:
     transitivePeerDependencies:
       - encoding
 
-  '@changesets/cli@2.31.0(@types/node@25.9.3)':
+  '@changesets/cli@2.31.0(@types/node@25.9.4)':
     dependencies:
       '@changesets/apply-release-plan': 7.1.1
       '@changesets/assemble-release-plan': 6.0.10
@@ -5567,7 +5567,7 @@ snapshots:
       '@changesets/should-skip-package': 0.1.2
       '@changesets/types': 6.1.0
       '@changesets/write': 0.4.0
-      '@inquirer/external-editor': 1.0.3(@types/node@25.9.3)
+      '@inquirer/external-editor': 1.0.3(@types/node@25.9.4)
       '@manypkg/get-packages': 1.1.3
       ansi-colors: 4.1.3
       enquirer: 2.4.1
@@ -5681,11 +5681,11 @@ snapshots:
       unplugin: 1.16.1
       zod: 3.25.76
 
-  '@codecov/vite-plugin@2.0.1(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))':
+  '@codecov/vite-plugin@2.0.1(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))':
     dependencies:
       '@codecov/bundler-plugin-core': 2.0.1
       unplugin: 1.16.1
-      vite: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+      vite: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
 
   '@colors/colors@1.5.0':
     optional: true
@@ -5808,7 +5808,7 @@ snapshots:
 
   '@happy-dom/global-registrator@20.10.3':
     dependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
       happy-dom: 20.10.3
     transitivePeerDependencies:
       - bufferutil
@@ -5913,131 +5913,131 @@ snapshots:
 
   '@inquirer/ansi@2.0.7': {}
 
-  '@inquirer/checkbox@5.2.1(@types/node@25.9.3)':
+  '@inquirer/checkbox@5.2.1(@types/node@25.9.4)':
     dependencies:
       '@inquirer/ansi': 2.0.7
-      '@inquirer/core': 11.2.1(@types/node@25.9.3)
+      '@inquirer/core': 11.2.1(@types/node@25.9.4)
       '@inquirer/figures': 2.0.7
-      '@inquirer/type': 4.0.7(@types/node@25.9.3)
+      '@inquirer/type': 4.0.7(@types/node@25.9.4)
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
-  '@inquirer/confirm@6.1.1(@types/node@25.9.3)':
+  '@inquirer/confirm@6.1.1(@types/node@25.9.4)':
     dependencies:
-      '@inquirer/core': 11.2.1(@types/node@25.9.3)
-      '@inquirer/type': 4.0.7(@types/node@25.9.3)
+      '@inquirer/core': 11.2.1(@types/node@25.9.4)
+      '@inquirer/type': 4.0.7(@types/node@25.9.4)
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
-  '@inquirer/core@11.2.1(@types/node@25.9.3)':
+  '@inquirer/core@11.2.1(@types/node@25.9.4)':
     dependencies:
       '@inquirer/ansi': 2.0.7
       '@inquirer/figures': 2.0.7
-      '@inquirer/type': 4.0.7(@types/node@25.9.3)
+      '@inquirer/type': 4.0.7(@types/node@25.9.4)
       cli-width: 4.1.0
       fast-wrap-ansi: 0.2.2
       mute-stream: 3.0.0
       signal-exit: 4.1.0
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
-  '@inquirer/editor@5.2.2(@types/node@25.9.3)':
+  '@inquirer/editor@5.2.2(@types/node@25.9.4)':
     dependencies:
-      '@inquirer/core': 11.2.1(@types/node@25.9.3)
-      '@inquirer/external-editor': 3.0.3(@types/node@25.9.3)
-      '@inquirer/type': 4.0.7(@types/node@25.9.3)
+      '@inquirer/core': 11.2.1(@types/node@25.9.4)
+      '@inquirer/external-editor': 3.0.3(@types/node@25.9.4)
+      '@inquirer/type': 4.0.7(@types/node@25.9.4)
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
-  '@inquirer/expand@5.1.1(@types/node@25.9.3)':
+  '@inquirer/expand@5.1.1(@types/node@25.9.4)':
     dependencies:
-      '@inquirer/core': 11.2.1(@types/node@25.9.3)
-      '@inquirer/type': 4.0.7(@types/node@25.9.3)
+      '@inquirer/core': 11.2.1(@types/node@25.9.4)
+      '@inquirer/type': 4.0.7(@types/node@25.9.4)
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
-  '@inquirer/external-editor@1.0.3(@types/node@25.9.3)':
-    dependencies:
-      chardet: 2.1.1
-      iconv-lite: 0.7.2
-    optionalDependencies:
-      '@types/node': 25.9.3
-
-  '@inquirer/external-editor@3.0.3(@types/node@25.9.3)':
+  '@inquirer/external-editor@1.0.3(@types/node@25.9.4)':
     dependencies:
       chardet: 2.1.1
       iconv-lite: 0.7.2
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
+
+  '@inquirer/external-editor@3.0.3(@types/node@25.9.4)':
+    dependencies:
+      chardet: 2.1.1
+      iconv-lite: 0.7.2
+    optionalDependencies:
+      '@types/node': 25.9.4
 
   '@inquirer/figures@1.0.15': {}
 
   '@inquirer/figures@2.0.7': {}
 
-  '@inquirer/input@5.1.2(@types/node@25.9.3)':
+  '@inquirer/input@5.1.2(@types/node@25.9.4)':
     dependencies:
-      '@inquirer/core': 11.2.1(@types/node@25.9.3)
-      '@inquirer/type': 4.0.7(@types/node@25.9.3)
+      '@inquirer/core': 11.2.1(@types/node@25.9.4)
+      '@inquirer/type': 4.0.7(@types/node@25.9.4)
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
-  '@inquirer/number@4.1.1(@types/node@25.9.3)':
+  '@inquirer/number@4.1.1(@types/node@25.9.4)':
     dependencies:
-      '@inquirer/core': 11.2.1(@types/node@25.9.3)
-      '@inquirer/type': 4.0.7(@types/node@25.9.3)
+      '@inquirer/core': 11.2.1(@types/node@25.9.4)
+      '@inquirer/type': 4.0.7(@types/node@25.9.4)
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
-  '@inquirer/password@5.1.1(@types/node@25.9.3)':
-    dependencies:
-      '@inquirer/ansi': 2.0.7
-      '@inquirer/core': 11.2.1(@types/node@25.9.3)
-      '@inquirer/type': 4.0.7(@types/node@25.9.3)
-    optionalDependencies:
-      '@types/node': 25.9.3
-
-  '@inquirer/prompts@8.5.2(@types/node@25.9.3)':
-    dependencies:
-      '@inquirer/checkbox': 5.2.1(@types/node@25.9.3)
-      '@inquirer/confirm': 6.1.1(@types/node@25.9.3)
-      '@inquirer/editor': 5.2.2(@types/node@25.9.3)
-      '@inquirer/expand': 5.1.1(@types/node@25.9.3)
-      '@inquirer/input': 5.1.2(@types/node@25.9.3)
-      '@inquirer/number': 4.1.1(@types/node@25.9.3)
-      '@inquirer/password': 5.1.1(@types/node@25.9.3)
-      '@inquirer/rawlist': 5.3.1(@types/node@25.9.3)
-      '@inquirer/search': 4.2.1(@types/node@25.9.3)
-      '@inquirer/select': 5.2.1(@types/node@25.9.3)
-    optionalDependencies:
-      '@types/node': 25.9.3
-
-  '@inquirer/rawlist@5.3.1(@types/node@25.9.3)':
-    dependencies:
-      '@inquirer/core': 11.2.1(@types/node@25.9.3)
-      '@inquirer/type': 4.0.7(@types/node@25.9.3)
-    optionalDependencies:
-      '@types/node': 25.9.3
-
-  '@inquirer/search@4.2.1(@types/node@25.9.3)':
-    dependencies:
-      '@inquirer/core': 11.2.1(@types/node@25.9.3)
-      '@inquirer/figures': 2.0.7
-      '@inquirer/type': 4.0.7(@types/node@25.9.3)
-    optionalDependencies:
-      '@types/node': 25.9.3
-
-  '@inquirer/select@5.2.1(@types/node@25.9.3)':
+  '@inquirer/password@5.1.1(@types/node@25.9.4)':
     dependencies:
       '@inquirer/ansi': 2.0.7
-      '@inquirer/core': 11.2.1(@types/node@25.9.3)
-      '@inquirer/figures': 2.0.7
-      '@inquirer/type': 4.0.7(@types/node@25.9.3)
+      '@inquirer/core': 11.2.1(@types/node@25.9.4)
+      '@inquirer/type': 4.0.7(@types/node@25.9.4)
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
-  '@inquirer/type@4.0.7(@types/node@25.9.3)':
+  '@inquirer/prompts@8.5.2(@types/node@25.9.4)':
+    dependencies:
+      '@inquirer/checkbox': 5.2.1(@types/node@25.9.4)
+      '@inquirer/confirm': 6.1.1(@types/node@25.9.4)
+      '@inquirer/editor': 5.2.2(@types/node@25.9.4)
+      '@inquirer/expand': 5.1.1(@types/node@25.9.4)
+      '@inquirer/input': 5.1.2(@types/node@25.9.4)
+      '@inquirer/number': 4.1.1(@types/node@25.9.4)
+      '@inquirer/password': 5.1.1(@types/node@25.9.4)
+      '@inquirer/rawlist': 5.3.1(@types/node@25.9.4)
+      '@inquirer/search': 4.2.1(@types/node@25.9.4)
+      '@inquirer/select': 5.2.1(@types/node@25.9.4)
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
+
+  '@inquirer/rawlist@5.3.1(@types/node@25.9.4)':
+    dependencies:
+      '@inquirer/core': 11.2.1(@types/node@25.9.4)
+      '@inquirer/type': 4.0.7(@types/node@25.9.4)
+    optionalDependencies:
+      '@types/node': 25.9.4
+
+  '@inquirer/search@4.2.1(@types/node@25.9.4)':
+    dependencies:
+      '@inquirer/core': 11.2.1(@types/node@25.9.4)
+      '@inquirer/figures': 2.0.7
+      '@inquirer/type': 4.0.7(@types/node@25.9.4)
+    optionalDependencies:
+      '@types/node': 25.9.4
+
+  '@inquirer/select@5.2.1(@types/node@25.9.4)':
+    dependencies:
+      '@inquirer/ansi': 2.0.7
+      '@inquirer/core': 11.2.1(@types/node@25.9.4)
+      '@inquirer/figures': 2.0.7
+      '@inquirer/type': 4.0.7(@types/node@25.9.4)
+    optionalDependencies:
+      '@types/node': 25.9.4
+
+  '@inquirer/type@4.0.7(@types/node@25.9.4)':
+    optionalDependencies:
+      '@types/node': 25.9.4
 
   '@jridgewell/gen-mapping@0.3.13':
     dependencies:
@@ -6121,23 +6121,23 @@ snapshots:
       '@types/react': 19.2.17
       react: 19.2.7
 
-  '@microsoft/api-extractor-model@7.33.8(@types/node@25.9.3)':
+  '@microsoft/api-extractor-model@7.33.8(@types/node@25.9.4)':
     dependencies:
       '@microsoft/tsdoc': 0.16.0
       '@microsoft/tsdoc-config': 0.18.1
-      '@rushstack/node-core-library': 5.23.1(@types/node@25.9.3)
+      '@rushstack/node-core-library': 5.23.1(@types/node@25.9.4)
     transitivePeerDependencies:
       - '@types/node'
 
-  '@microsoft/api-extractor@7.58.9(@types/node@25.9.3)':
+  '@microsoft/api-extractor@7.58.9(@types/node@25.9.4)':
     dependencies:
-      '@microsoft/api-extractor-model': 7.33.8(@types/node@25.9.3)
+      '@microsoft/api-extractor-model': 7.33.8(@types/node@25.9.4)
       '@microsoft/tsdoc': 0.16.0
       '@microsoft/tsdoc-config': 0.18.1
-      '@rushstack/node-core-library': 5.23.1(@types/node@25.9.3)
+      '@rushstack/node-core-library': 5.23.1(@types/node@25.9.4)
       '@rushstack/rig-package': 0.7.3
-      '@rushstack/terminal': 0.24.0(@types/node@25.9.3)
-      '@rushstack/ts-command-line': 5.3.10(@types/node@25.9.3)
+      '@rushstack/terminal': 0.24.0(@types/node@25.9.4)
+      '@rushstack/ts-command-line': 5.3.10(@types/node@25.9.4)
       diff: 8.0.4
       minimatch: 10.2.3
       resolve: 1.22.12
@@ -6816,7 +6816,7 @@ snapshots:
   '@rollup/rollup-win32-x64-msvc@4.60.4':
     optional: true
 
-  '@rushstack/node-core-library@5.23.1(@types/node@25.9.3)':
+  '@rushstack/node-core-library@5.23.1(@types/node@25.9.4)':
     dependencies:
       ajv: 8.18.0
       ajv-draft-04: 1.0.0(ajv@8.18.0)
@@ -6827,28 +6827,28 @@ snapshots:
       resolve: 1.22.12
       semver: 7.7.4
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
-  '@rushstack/problem-matcher@0.2.1(@types/node@25.9.3)':
+  '@rushstack/problem-matcher@0.2.1(@types/node@25.9.4)':
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
   '@rushstack/rig-package@0.7.3':
     dependencies:
       jju: 1.4.0
       resolve: 1.22.12
 
-  '@rushstack/terminal@0.24.0(@types/node@25.9.3)':
+  '@rushstack/terminal@0.24.0(@types/node@25.9.4)':
     dependencies:
-      '@rushstack/node-core-library': 5.23.1(@types/node@25.9.3)
-      '@rushstack/problem-matcher': 0.2.1(@types/node@25.9.3)
+      '@rushstack/node-core-library': 5.23.1(@types/node@25.9.4)
+      '@rushstack/problem-matcher': 0.2.1(@types/node@25.9.4)
       supports-color: 8.1.1
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
-  '@rushstack/ts-command-line@5.3.10(@types/node@25.9.3)':
+  '@rushstack/ts-command-line@5.3.10(@types/node@25.9.4)':
     dependencies:
-      '@rushstack/terminal': 0.24.0(@types/node@25.9.3)
+      '@rushstack/terminal': 0.24.0(@types/node@25.9.4)
       '@types/argparse': 1.0.38
       argparse: 1.0.10
       string-argv: 0.3.2
@@ -7076,7 +7076,7 @@ snapshots:
   '@types/liftoff@4.0.3':
     dependencies:
       '@types/fined': 1.1.5
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
   '@types/mdast@4.0.4':
     dependencies:
@@ -7088,7 +7088,7 @@ snapshots:
 
   '@types/node@12.20.55': {}
 
-  '@types/node@25.9.3':
+  '@types/node@25.9.4':
     dependencies:
       undici-types: 7.24.6
 
@@ -7106,7 +7106,7 @@ snapshots:
 
   '@types/through@0.0.33':
     dependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
   '@types/unist@2.0.11': {}
 
@@ -7116,14 +7116,14 @@ snapshots:
 
   '@types/ws@8.18.1':
     dependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
   '@ungap/structured-clone@1.3.1': {}
 
-  '@vitejs/plugin-react@6.0.2(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))':
+  '@vitejs/plugin-react@6.0.2(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))':
     dependencies:
       '@rolldown/pluginutils': 1.0.1
-      vite: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+      vite: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
 
   '@vitest/coverage-v8@4.1.8(vitest@4.1.8)':
     dependencies:
@@ -7137,7 +7137,7 @@ snapshots:
       obug: 2.1.3
       std-env: 4.1.0
       tinyrainbow: 3.1.0
-      vitest: 4.1.8(@types/node@25.9.3)(@vitest/coverage-v8@4.1.8)(happy-dom@20.10.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+      vitest: 4.1.8(@types/node@25.9.4)(@vitest/coverage-v8@4.1.8)(happy-dom@20.10.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
 
   '@vitest/expect@4.1.8':
     dependencies:
@@ -7148,13 +7148,13 @@ snapshots:
       chai: 6.2.2
       tinyrainbow: 3.1.0
 
-  '@vitest/mocker@4.1.8(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))':
+  '@vitest/mocker@4.1.8(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))':
     dependencies:
       '@vitest/spy': 4.1.8
       estree-walker: 3.0.3
       magic-string: 0.30.21
     optionalDependencies:
-      vite: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+      vite: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
 
   '@vitest/pretty-format@4.1.8':
     dependencies:
@@ -7307,7 +7307,7 @@ snapshots:
 
   buffer-image-size@0.6.4:
     dependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
   buffer@5.7.1:
     dependencies:
@@ -7796,7 +7796,7 @@ snapshots:
 
   happy-dom@20.10.3:
     dependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
       '@types/whatwg-mimetype': 3.0.2
       '@types/ws': 8.18.1
       buffer-image-size: 0.6.4
@@ -7988,20 +7988,20 @@ snapshots:
       strip-ansi: 3.0.1
       through: 2.3.8
 
-  inquirer@14.0.2(@types/node@25.9.3):
+  inquirer@14.0.2(@types/node@25.9.4):
     dependencies:
       '@inquirer/ansi': 2.0.7
-      '@inquirer/core': 11.2.1(@types/node@25.9.3)
-      '@inquirer/prompts': 8.5.2(@types/node@25.9.3)
-      '@inquirer/type': 4.0.7(@types/node@25.9.3)
+      '@inquirer/core': 11.2.1(@types/node@25.9.4)
+      '@inquirer/prompts': 8.5.2(@types/node@25.9.4)
+      '@inquirer/type': 4.0.7(@types/node@25.9.4)
       mute-stream: 3.0.0
       run-async: 4.0.6
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
 
-  inquirer@9.3.8(@types/node@25.9.3):
+  inquirer@9.3.8(@types/node@25.9.4):
     dependencies:
-      '@inquirer/external-editor': 1.0.3(@types/node@25.9.3)
+      '@inquirer/external-editor': 1.0.3(@types/node@25.9.4)
       '@inquirer/figures': 1.0.15
       ansi-escapes: 4.3.2
       cli-width: 4.1.0
@@ -8811,14 +8811,14 @@ snapshots:
     dependencies:
       whatwg-url: 5.0.0
 
-  node-plop@0.32.3(@types/node@25.9.3):
+  node-plop@0.32.3(@types/node@25.9.4):
     dependencies:
       '@types/inquirer': 9.0.10
       '@types/picomatch': 4.0.3
       change-case: 5.4.4
       dlv: 1.1.3
       handlebars: 4.7.9
-      inquirer: 9.3.8(@types/node@25.9.3)
+      inquirer: 9.3.8(@types/node@25.9.4)
       isbinaryfile: 5.0.7
       resolve: 1.22.12
       tinyglobby: 0.2.17
@@ -8992,13 +8992,13 @@ snapshots:
     optionalDependencies:
       fsevents: 2.3.2
 
-  plop@4.0.5(@types/node@25.9.3):
+  plop@4.0.5(@types/node@25.9.4):
     dependencies:
       '@types/liftoff': 4.0.3
       interpret: 3.1.1
       liftoff: 5.0.1
       nanospinner: 1.2.2
-      node-plop: 0.32.3(@types/node@25.9.3)
+      node-plop: 0.32.3(@types/node@25.9.4)
       picocolors: 1.1.1
       v8flags: 4.0.1
     transitivePeerDependencies:
@@ -9717,7 +9717,7 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  unplugin-dts@1.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)):
+  unplugin-dts@1.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)):
     dependencies:
       '@rollup/pluginutils': 5.4.0(rollup@4.60.4)
       '@volar/typescript': 2.4.28
@@ -9729,11 +9729,11 @@ snapshots:
       typescript: 6.0.3
       unplugin: 2.3.11
     optionalDependencies:
-      '@microsoft/api-extractor': 7.58.9(@types/node@25.9.3)
+      '@microsoft/api-extractor': 7.58.9(@types/node@25.9.4)
       esbuild: 0.28.1
       rolldown: 1.0.3
       rollup: 4.60.4
-      vite: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+      vite: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
     transitivePeerDependencies:
       - supports-color
 
@@ -9794,13 +9794,13 @@ snapshots:
       '@types/unist': 3.0.3
       vfile-message: 4.0.3
 
-  vite-plugin-dts@5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)):
+  vite-plugin-dts@5.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)):
     dependencies:
-      unplugin-dts: 1.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.3))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+      unplugin-dts: 1.0.2(@microsoft/api-extractor@7.58.9(@types/node@25.9.4))(esbuild@0.28.1)(rolldown@1.0.3)(rollup@4.60.4)(typescript@6.0.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
     optionalDependencies:
-      '@microsoft/api-extractor': 7.58.9(@types/node@25.9.3)
+      '@microsoft/api-extractor': 7.58.9(@types/node@25.9.4)
       rollup: 4.60.4
-      vite: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+      vite: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
     transitivePeerDependencies:
       - '@rspack/core'
       - '@vue/language-core'
@@ -9810,14 +9810,14 @@ snapshots:
       - typescript
       - webpack
 
-  vite-plugin-lib-inject-css@2.2.2(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)):
+  vite-plugin-lib-inject-css@2.2.2(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)):
     dependencies:
       '@ast-grep/napi': 0.36.3
       magic-string: 0.30.21
       picocolors: 1.1.1
-      vite: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+      vite: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
 
-  vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0):
+  vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0):
     dependencies:
       lightningcss: 1.32.0
       picomatch: 4.0.4
@@ -9825,17 +9825,17 @@ snapshots:
       rolldown: 1.0.3
       tinyglobby: 0.2.17
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
       esbuild: 0.28.1
       fsevents: 2.3.3
       jiti: 2.7.0
       tsx: 4.22.4
       yaml: 2.9.0
 
-  vitest@4.1.8(@types/node@25.9.3)(@vitest/coverage-v8@4.1.8)(happy-dom@20.10.3)(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)):
+  vitest@4.1.8(@types/node@25.9.4)(@vitest/coverage-v8@4.1.8)(happy-dom@20.10.3)(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)):
     dependencies:
       '@vitest/expect': 4.1.8
-      '@vitest/mocker': 4.1.8(vite@8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
+      '@vitest/mocker': 4.1.8(vite@8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0))
       '@vitest/pretty-format': 4.1.8
       '@vitest/runner': 4.1.8
       '@vitest/snapshot': 4.1.8
@@ -9852,10 +9852,10 @@ snapshots:
       tinyexec: 1.2.4
       tinyglobby: 0.2.17
       tinyrainbow: 3.1.0
-      vite: 8.0.16(@types/node@25.9.3)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
+      vite: 8.0.16(@types/node@25.9.4)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.22.4)(yaml@2.9.0)
       why-is-node-running: 2.3.0
     optionalDependencies:
-      '@types/node': 25.9.3
+      '@types/node': 25.9.4
       '@vitest/coverage-v8': 4.1.8(vitest@4.1.8)
       happy-dom: 20.10.3
     transitivePeerDependencies:
