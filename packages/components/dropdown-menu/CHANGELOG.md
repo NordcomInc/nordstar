@@ -1,5 +1,16 @@
 # @nordcom/nordstar-dropdown-menu
 
+## 0.2.1
+
+### Patch Changes
+
+- [#1224](https://github.com/NordcomInc/nordstar/pull/1224) [`e749f41`](https://github.com/NordcomInc/nordstar/commit/e749f41445b2d434e2a25ff292c5b0975c5a9f91) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.9.4.
+
+- [#1236](https://github.com/NordcomInc/nordstar/pull/1236) [`9acab0f`](https://github.com/NordcomInc/nordstar/commit/9acab0f7b8daf7fff211edb6596a88dab5683bef) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update radix-ui-primitives monorepo .
+
+- Updated dependencies [[`e749f41`](https://github.com/NordcomInc/nordstar/commit/e749f41445b2d434e2a25ff292c5b0975c5a9f91)]:
+  - @nordcom/nordstar-system@0.2.1
+
 ## 0.2.0
 
 ### Patch Changes
