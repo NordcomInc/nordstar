@@ -1,5 +1,11 @@
 # @nordcom/nordstar-system
 
+## 0.2.1
+
+### Patch Changes
+
+- [#1224](https://github.com/NordcomInc/nordstar/pull/1224) [`e749f41`](https://github.com/NordcomInc/nordstar/commit/e749f41445b2d434e2a25ff292c5b0975c5a9f91) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.9.4.
+
 ## 0.2.0
 
 ## 0.1.1

@@ -1,5 +1,32 @@
 # @nordcom/nordstar-docs
 
+## 0.2.1
+
+### Patch Changes
+
+- [#1242](https://github.com/NordcomInc/nordstar/pull/1242) [`f9fe5db`](https://github.com/NordcomInc/nordstar/commit/f9fe5db2308dadd1d12666c10aa1fb09feb554e8) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency globals to v17.7.0.
+
+- [#1237](https://github.com/NordcomInc/nordstar/pull/1237) [`633f595`](https://github.com/NordcomInc/nordstar/commit/633f595c054970909f1671c89ed0b62d15cf0352) Thanks [@filiphsps](https://github.com/filiphsps)! - Add a Changelog section to the documentation site, generated from each
+  package's `CHANGELOG.md` at build time.
+
+  - A `/docs/changelog` overview lists every published package with its latest
+    version and most recent human-authored highlight; the umbrella
+    `@nordcom/nordstar` is featured at the top.
+  - Per-package pages (`/docs/changelog/<package>`) render the full release
+    history as a vertical timeline with semver-level badges, PR / commit / author
+    references, and rich entry bodies.
+  - Automated dependency bumps (renovate `Deps:` entries and changesets'
+    `Updated dependencies` rollups) are collapsed behind a per-release
+    "N dependency updates" disclosure so human-authored changes stay prominent.
+
+  A pure, unit-tested parser (`src/lib/changelog/parse.ts`) turns the changesets
+  markdown into a typed block/inline structure; `scripts/generate-changelogs.ts`
+  emits the data alongside the existing props/examples generators. Covered by unit
+  tests for the parser and Playwright end-to-end tests for the pages.
+
+- Updated dependencies [[`e749f41`](https://github.com/NordcomInc/nordstar/commit/e749f41445b2d434e2a25ff292c5b0975c5a9f91), [`9acab0f`](https://github.com/NordcomInc/nordstar/commit/9acab0f7b8daf7fff211edb6596a88dab5683bef)]:
+  - @nordcom/nordstar@0.2.1
+
 ## 0.2.0
 
 ### Patch Changes
