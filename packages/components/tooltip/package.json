@@ -62,7 +62,7 @@
     "homepage": "https://nordcominc.github.io/nordstar/docs/components/tooltip/",
     "dependencies": {
         "@nordcom/nordstar-system": "workspace:*",
-        "@radix-ui/react-tooltip": "1.2.10"
+        "@radix-ui/react-tooltip": "1.2.11"
     },
     "peerDependencies": {
         "react": ">=19",
