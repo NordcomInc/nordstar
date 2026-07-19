@@ -62,7 +62,7 @@
     "homepage": "https://nordcominc.github.io/nordstar/docs/components/switch/",
     "dependencies": {
         "@nordcom/nordstar-system": "workspace:*",
-        "@radix-ui/react-switch": "1.3.2",
+        "@radix-ui/react-switch": "1.3.3",
         "class-variance-authority": "0.7.1"
     },
     "peerDependencies": {
