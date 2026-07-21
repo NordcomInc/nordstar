@@ -62,7 +62,7 @@
     "homepage": "https://nordcominc.github.io/nordstar/docs/components/accordion/",
     "dependencies": {
         "@nordcom/nordstar-system": "workspace:*",
-        "@radix-ui/react-accordion": "1.2.16"
+        "@radix-ui/react-accordion": "1.2.17"
     },
     "peerDependencies": {
         "react": ">=19",
