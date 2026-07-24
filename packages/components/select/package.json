@@ -62,7 +62,7 @@
     "homepage": "https://nordcominc.github.io/nordstar/docs/components/select/",
     "dependencies": {
         "@nordcom/nordstar-system": "workspace:*",
-        "@radix-ui/react-select": "2.3.4"
+        "@radix-ui/react-select": "2.3.6"
     },
     "peerDependencies": {
         "react": ">=19",
