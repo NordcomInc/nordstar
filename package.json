@@ -99,7 +99,7 @@
         "husky": "9.1.7",
         "inquirer": "14.0.2",
         "inquirer-directory": "2.2.0",
-        "lint-staged": "17.1.0",
+        "lint-staged": "17.2.0",
         "magic-string": "1.0.0",
         "plop": "4.0.5",
         "publint": "0.3.21",
