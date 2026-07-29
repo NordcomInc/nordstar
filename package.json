@@ -83,7 +83,7 @@
         "@codecov/vite-plugin": "2.0.1",
         "@happy-dom/global-registrator": "20.11.1",
         "@microsoft/api-extractor": "7.58.12",
-        "@playwright/test": "1.61.1",
+        "@playwright/test": "1.62.0",
         "@testing-library/jest-dom": "7.0.0",
         "@testing-library/react": "16.3.2",
         "@testing-library/user-event": "14.6.1",
