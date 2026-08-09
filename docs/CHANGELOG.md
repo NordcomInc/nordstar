@@ -1,5 +1,84 @@
 # @nordcom/nordstar-docs
 
+## 0.2.1
+
+### Patch Changes
+
+- [#1242](https://github.com/NordcomInc/nordstar/pull/1242) [`f9fe5db`](https://github.com/NordcomInc/nordstar/commit/f9fe5db2308dadd1d12666c10aa1fb09feb554e8) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency globals to v17.7.0.
+
+- [#1251](https://github.com/NordcomInc/nordstar/pull/1251) [`5642dfe`](https://github.com/NordcomInc/nordstar/commit/5642dfe5b075cdfcdb1d1def5a97bdb178e886e5) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency shiki to v4.3.1.
+
+- [#1252](https://github.com/NordcomInc/nordstar/pull/1252) [`54c2c73`](https://github.com/NordcomInc/nordstar/commit/54c2c730ecc926f5d37197ea6c02e07c31942786) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency postcss to v8.5.16.
+
+- [#1253](https://github.com/NordcomInc/nordstar/pull/1253) [`74040d4`](https://github.com/NordcomInc/nordstar/commit/74040d43bb82868364e3c31c7a2a8a40f375f292) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update tailwindcss monorepo to v4.3.2.
+
+- [#1255](https://github.com/NordcomInc/nordstar/pull/1255) [`412b729`](https://github.com/NordcomInc/nordstar/commit/412b72901c1e96380601c87cf2dbfe1a2a593273) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update nextjs monorepo to v16.2.10.
+
+- [#1256](https://github.com/NordcomInc/nordstar/pull/1256) [`b5c6981`](https://github.com/NordcomInc/nordstar/commit/b5c69813eb2cf064b4d07f566309eee4197c40be) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tsx to v4.23.0.
+
+- [#1258](https://github.com/NordcomInc/nordstar/pull/1258) [`4f63b1f`](https://github.com/NordcomInc/nordstar/commit/4f63b1f5d4317cc8e5fdff53511ec471abeee13d) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency rehype-pretty-code to v0.14.4.
+
+- [#1270](https://github.com/NordcomInc/nordstar/pull/1270) [`d857d99`](https://github.com/NordcomInc/nordstar/commit/d857d99780d536f4b883d2909611983e5eddf230) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency postcss to v8.5.19.
+
+- [#1271](https://github.com/NordcomInc/nordstar/pull/1271) [`7cd361a`](https://github.com/NordcomInc/nordstar/commit/7cd361af0182f99ff8545c27157bef05b9f81f29) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tsx to v4.23.1.
+
+- [#1273](https://github.com/NordcomInc/nordstar/pull/1273) [`84c66c2`](https://github.com/NordcomInc/nordstar/commit/84c66c254a6e5a69fb7667cb8bb75f20e2b65a86) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update tailwindcss monorepo to v4.3.3.
+
+- [#1279](https://github.com/NordcomInc/nordstar/pull/1279) [`dfeb176`](https://github.com/NordcomInc/nordstar/commit/dfeb1766189debc2c565994bab246fa6db8c700a) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency postcss to v8.5.20.
+
+- [#1285](https://github.com/NordcomInc/nordstar/pull/1285) [`eecee6c`](https://github.com/NordcomInc/nordstar/commit/eecee6cc501da79e8ee27fdef927ee59adf84aa0) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency postcss to v8.5.22.
+
+- [#1288](https://github.com/NordcomInc/nordstar/pull/1288) [`2a04ab3`](https://github.com/NordcomInc/nordstar/commit/2a04ab382a2aa2a4d41f0bd511a461ef9cbe163b) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update nextjs monorepo to v16.2.11.
+
+- [#1298](https://github.com/NordcomInc/nordstar/pull/1298) [`54e003e`](https://github.com/NordcomInc/nordstar/commit/54e003e91c33265e28eeebe30ab5749503a65f78) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency postcss to v8.5.24.
+
+- [#1299](https://github.com/NordcomInc/nordstar/pull/1299) [`6db10cb`](https://github.com/NordcomInc/nordstar/commit/6db10cb9e1a554630db87538fa92830ab41a7b5b) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update react monorepo to v19.2.8.
+
+- [#1300](https://github.com/NordcomInc/nordstar/pull/1300) [`5fa4ab1`](https://github.com/NordcomInc/nordstar/commit/5fa4ab14215c34665ebc40cfc21a34e3db90baba) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency concurrently to v10.0.4.
+
+- [#1303](https://github.com/NordcomInc/nordstar/pull/1303) [`6043e30`](https://github.com/NordcomInc/nordstar/commit/6043e30ab436bb9ef3f5ba8a3ec96a3365e2ee2a) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency rehype-pretty-code to v0.14.5.
+
+- [#1304](https://github.com/NordcomInc/nordstar/pull/1304) [`32cc4cd`](https://github.com/NordcomInc/nordstar/commit/32cc4cdca8f54511261dfc92190cf8cdf7900949) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update nextjs monorepo to v16.2.12.
+
+- [#1305](https://github.com/NordcomInc/nordstar/pull/1305) [`28ec45f`](https://github.com/NordcomInc/nordstar/commit/28ec45ff39eb731659d4feb01aafd8dca5393e4d) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency globals to v17.8.0.
+
+- [#1309](https://github.com/NordcomInc/nordstar/pull/1309) [`bb0c2af`](https://github.com/NordcomInc/nordstar/commit/bb0c2af3209373fc246289488cfc2442395bc045) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency postcss to v8.5.25.
+
+- [#1313](https://github.com/NordcomInc/nordstar/pull/1313) [`1e1c511`](https://github.com/NordcomInc/nordstar/commit/1e1c511034a4a383038ef265a05e310edaf0897d) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update react monorepo .
+
+- [#1315](https://github.com/NordcomInc/nordstar/pull/1315) [`cc3093a`](https://github.com/NordcomInc/nordstar/commit/cc3093ae78d1be7f3bb02b0616e229ffeb8b1026) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency shiki to v4.4.1.
+
+- [#1317](https://github.com/NordcomInc/nordstar/pull/1317) [`142eac4`](https://github.com/NordcomInc/nordstar/commit/142eac475316b6be64e26c77cd349c6292c8328c) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency tsx to v4.23.11.
+
+- [#1318](https://github.com/NordcomInc/nordstar/pull/1318) [`79b299e`](https://github.com/NordcomInc/nordstar/commit/79b299ebf21f82e8ef489e503699505101556da5) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency globals to v17.9.0.
+
+- [#1320](https://github.com/NordcomInc/nordstar/pull/1320) [`56202c2`](https://github.com/NordcomInc/nordstar/commit/56202c26537daeb8cd72cc4cec48cc48eb3c1afe) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update nextjs monorepo to v16.3.0.
+
+- [#1324](https://github.com/NordcomInc/nordstar/pull/1324) [`a78758c`](https://github.com/NordcomInc/nordstar/commit/a78758cc72a61dcc48a27fe0915b7a1337407604) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency shiki to v4.4.2.
+
+- [#1325](https://github.com/NordcomInc/nordstar/pull/1325) [`8c29c6b`](https://github.com/NordcomInc/nordstar/commit/8c29c6badf7d2805a770d0929cf02af9534569dc) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency postcss to v8.5.26.
+
+- [#1237](https://github.com/NordcomInc/nordstar/pull/1237) [`633f595`](https://github.com/NordcomInc/nordstar/commit/633f595c054970909f1671c89ed0b62d15cf0352) Thanks [@filiphsps](https://github.com/filiphsps)! - Add a Changelog section to the documentation site, generated from each
+  package's `CHANGELOG.md` at build time.
+
+  - A `/docs/changelog` overview lists every published package with its latest
+    version and most recent human-authored highlight; the umbrella
+    `@nordcom/nordstar` is featured at the top.
+  - Per-package pages (`/docs/changelog/<package>`) render the full release
+    history as a vertical timeline with semver-level badges, PR / commit / author
+    references, and rich entry bodies.
+  - Automated dependency bumps (renovate `Deps:` entries and changesets'
+    `Updated dependencies` rollups) are collapsed behind a per-release
+    "N dependency updates" disclosure so human-authored changes stay prominent.
+
+  A pure, unit-tested parser (`src/lib/changelog/parse.ts`) turns the changesets
+  markdown into a typed block/inline structure; `scripts/generate-changelogs.ts`
+  emits the data alongside the existing props/examples generators. Covered by unit
+  tests for the parser and Playwright end-to-end tests for the pages.
+
+- Updated dependencies [[`e749f41`](https://github.com/NordcomInc/nordstar/commit/e749f41445b2d434e2a25ff292c5b0975c5a9f91), [`9acab0f`](https://github.com/NordcomInc/nordstar/commit/9acab0f7b8daf7fff211edb6596a88dab5683bef), [`3a86f8e`](https://github.com/NordcomInc/nordstar/commit/3a86f8edb419428fd4ba7dedc30c0f369541a7ae), [`36e7ab2`](https://github.com/NordcomInc/nordstar/commit/36e7ab2f742abbdc0dc6672b0de30e6719ba3932), [`74040d4`](https://github.com/NordcomInc/nordstar/commit/74040d43bb82868364e3c31c7a2a8a40f375f292), [`5b6d8a4`](https://github.com/NordcomInc/nordstar/commit/5b6d8a4cd53a830e443b84c59d2a26c6e4de05fc), [`9eca395`](https://github.com/NordcomInc/nordstar/commit/9eca39513f9d0069ba80202989b3381a7dd5549f), [`8947f8f`](https://github.com/NordcomInc/nordstar/commit/8947f8fd67eb178139c7bd6ccc5b6fe9f64b7c9f), [`1d84585`](https://github.com/NordcomInc/nordstar/commit/1d8458535086838e84b246d6b77f729181b2a43b), [`84c66c2`](https://github.com/NordcomInc/nordstar/commit/84c66c254a6e5a69fb7667cb8bb75f20e2b65a86), [`2b372e2`](https://github.com/NordcomInc/nordstar/commit/2b372e24db7871930759ba9bd99245afb0aba358), [`d83bfee`](https://github.com/NordcomInc/nordstar/commit/d83bfee25056d127a99f252f713f313b4b6c4965), [`6db10cb`](https://github.com/NordcomInc/nordstar/commit/6db10cb9e1a554630db87538fa92830ab41a7b5b), [`970423b`](https://github.com/NordcomInc/nordstar/commit/970423bdfe21dfb582f47a8841bae58269feb33a), [`1e1c511`](https://github.com/NordcomInc/nordstar/commit/1e1c511034a4a383038ef265a05e310edaf0897d), [`0f79a61`](https://github.com/NordcomInc/nordstar/commit/0f79a61ce841e02d8b5b05962ea43713dad5a82c)]:
+  - @nordcom/nordstar@0.2.1
+
 ## 0.2.0
 
 ### Patch Changes
