@@ -21,8 +21,8 @@ importers:
         specifier: 3.0.0
         version: 3.0.0
       '@changesets/types':
-        specifier: 6.1.0
-        version: 6.1.0
+        specifier: 7.0.0
+        version: 7.0.0
       '@codecov/vite-plugin':
         specifier: 2.0.1
         version: 2.0.1(vite@8.2.1(@types/node@25.9.5)(esbuild@0.28.1)(jiti@2.7.0)(tsx@4.23.12)(yaml@2.9.0))
