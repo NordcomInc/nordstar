@@ -93,7 +93,7 @@
         "@vitejs/plugin-react": "6.0.5",
         "@vitest/coverage-v8": "4.1.10",
         "chalk": "6.0.0",
-        "concurrently": "10.0.4",
+        "concurrently": "10.0.5",
         "glob": "^13.0.6",
         "happy-dom": "20.11.2",
         "husky": "9.1.7",
