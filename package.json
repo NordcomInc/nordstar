@@ -76,7 +76,7 @@
     "homepage": "https://nordcominc.github.io/nordstar/",
     "devDependencies": {
         "@arethetypeswrong/cli": "0.18.5",
-        "@biomejs/biome": "2.5.10",
+        "@biomejs/biome": "2.5.11",
         "@changesets/changelog-github": "1.0.0",
         "@changesets/cli": "3.0.1",
         "@changesets/types": "7.0.0",
