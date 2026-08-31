@@ -100,7 +100,7 @@
         "inquirer": "14.1.0",
         "inquirer-directory": "2.2.0",
         "lint-staged": "17.3.0",
-        "magic-string": "1.2.2",
+        "magic-string": "1.2.3",
         "plop": "4.0.5",
         "publint": "0.3.24",
         "react": "19.2.8",
