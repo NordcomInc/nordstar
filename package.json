@@ -91,7 +91,7 @@
         "@types/react": "19.2.18",
         "@types/react-dom": "19.2.5",
         "@vitejs/plugin-react": "6.1.1",
-        "@vitest/coverage-v8": "4.1.11",
+        "@vitest/coverage-v8": "5.0.0",
         "chalk": "6.0.0",
         "concurrently": "10.0.5",
         "glob": "^13.0.6",
@@ -114,7 +114,7 @@
         "vite": "8.2.2",
         "vite-plugin-dts": "5.0.3",
         "vite-plugin-lib-inject-css": "2.2.2",
-        "vitest": "4.1.11"
+        "vitest": "5.0.0"
     },
     "packageManager": "pnpm@11.25.0"
 }
