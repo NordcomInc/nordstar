@@ -2,7 +2,7 @@
     "$schema": "https://json.schemastore.org/package.json",
     "name": "@nordcom/nordstar-select",
     "type": "module",
-    "version": "0.2.0",
+    "version": "0.2.1",
     "description": "A dropdown for choosing one option from a list.",
     "files": [
         "dist",
