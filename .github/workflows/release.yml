@@ -11,6 +11,7 @@ concurrency:
 env:
     NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
     NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+    NPM_CONFIG_PROVENANCE: true
     GITHUB_TOKEN: ${{ secrets.MACHINE_USER }}
     CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
 
@@ -42,16 +43,17 @@ jobs:
               id: changesets
               uses: changesets/action@v2.1.2
               with:
-                  createGithubReleases: true
-                  version: pnpm run version
-                  publish: pnpm run release
-                  setupGitUser: false
-                  commit: |
-                      Changeset: Increment package & dependecy versions.
+                  create-github-releases: true
+                  version-script: pnpm run version
+                  publish-script: pnpm run release
+                  push-with-git-cli: true
+                  commit-message: |
+                      changeset: Increment package & dependecy versions.
 
                       Congratulations on the new release! 🎉
                       This is an automated commit triggered by the `release` workflow.
-                  title: 🚀 Release packages
+                  pr-title: 🚀 Release packages
+                  github-token: ${{ secrets.MACHINE_USER }}
 
             - name: 🫨 Create Unstable Release
               if: steps.changesets.outputs.published != 'true'
