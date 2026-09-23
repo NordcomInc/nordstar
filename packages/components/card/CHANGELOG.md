@@ -1,5 +1,45 @@
 # @nordcom/nordstar-card
 
+## 0.2.1
+
+### Patch Changes
+
+- [#1224](https://github.com/NordcomInc/nordstar/pull/1224) [`e749f41`](https://github.com/NordcomInc/nordstar/commit/e749f41445b2d434e2a25ff292c5b0975c5a9f91) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.9.4.
+
+- [#1245](https://github.com/NordcomInc/nordstar/pull/1245) [`3a86f8e`](https://github.com/NordcomInc/nordstar/commit/3a86f8edb419428fd4ba7dedc30c0f369541a7ae) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.1.3.
+
+- [#1249](https://github.com/NordcomInc/nordstar/pull/1249) [`36e7ab2`](https://github.com/NordcomInc/nordstar/commit/36e7ab2f742abbdc0dc6672b0de30e6719ba3932) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite-plugin-dts to v5.0.3.
+
+- [#1263](https://github.com/NordcomInc/nordstar/pull/1263) [`8947f8f`](https://github.com/NordcomInc/nordstar/commit/8947f8fd67eb178139c7bd6ccc5b6fe9f64b7c9f) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.9.5.
+
+- [#1265](https://github.com/NordcomInc/nordstar/pull/1265) [`1d84585`](https://github.com/NordcomInc/nordstar/commit/1d8458535086838e84b246d6b77f729181b2a43b) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.1.5.
+
+- [#1299](https://github.com/NordcomInc/nordstar/pull/1299) [`6db10cb`](https://github.com/NordcomInc/nordstar/commit/6db10cb9e1a554630db87538fa92830ab41a7b5b) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update react monorepo to v19.2.8.
+
+- [#1311](https://github.com/NordcomInc/nordstar/pull/1311) [`970423b`](https://github.com/NordcomInc/nordstar/commit/970423bdfe21dfb582f47a8841bae58269feb33a) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.2.0.
+
+- [#1313](https://github.com/NordcomInc/nordstar/pull/1313) [`1e1c511`](https://github.com/NordcomInc/nordstar/commit/1e1c511034a4a383038ef265a05e310edaf0897d) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update react monorepo .
+
+- [#1326](https://github.com/NordcomInc/nordstar/pull/1326) [`0f79a61`](https://github.com/NordcomInc/nordstar/commit/0f79a61ce841e02d8b5b05962ea43713dad5a82c) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.2.1.
+
+- [#1357](https://github.com/NordcomInc/nordstar/pull/1357) [`80bb577`](https://github.com/NordcomInc/nordstar/commit/80bb577f685e742259cf1c288d0b957a86205832) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.2.2.
+
+- [#1363](https://github.com/NordcomInc/nordstar/pull/1363) [`4c52b9b`](https://github.com/NordcomInc/nordstar/commit/4c52b9b0844f5ee82dce0c5f4814f52d2c8a84f3) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react-dom to v19.2.5.
+
+- [#1383](https://github.com/NordcomInc/nordstar/pull/1383) [`3fcda34`](https://github.com/NordcomInc/nordstar/commit/3fcda34aabac3e1067674eedfccf1c7d40312b0a) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/react-dom to v19.2.7.
+
+- [#1394](https://github.com/NordcomInc/nordstar/pull/1394) [`c1b3b06`](https://github.com/NordcomInc/nordstar/commit/c1b3b0663d648c694e86b271944f31e3c31aca0c) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.9.6.
+
+- [#1396](https://github.com/NordcomInc/nordstar/pull/1396) [`c3649f8`](https://github.com/NordcomInc/nordstar/commit/c3649f8a082f8420cf21d860d37db4efdaf585a3) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update react monorepo to v19.3.0.
+
+- [#1400](https://github.com/NordcomInc/nordstar/pull/1400) [`1c193ed`](https://github.com/NordcomInc/nordstar/commit/1c193ed8275466be41c0b342e09089dab2b33850) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency vite to v8.3.0.
+
+- [#1409](https://github.com/NordcomInc/nordstar/pull/1409) [`1548a50`](https://github.com/NordcomInc/nordstar/commit/1548a50a5cdb9ed8ed7f3f2fc22ceb1a8213b713) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.9.7.
+
+- [#1412](https://github.com/NordcomInc/nordstar/pull/1412) [`dc45ac7`](https://github.com/NordcomInc/nordstar/commit/dc45ac7fbafca59f35905e4e6a7d2ffc887cdfb0) Thanks [@renovate](https://github.com/apps/renovate)! - Deps: Update dependency @types/node to v25.9.8.
+- Updated dependencies [[`e749f41`](https://github.com/NordcomInc/nordstar/commit/e749f41445b2d434e2a25ff292c5b0975c5a9f91), [`3a86f8e`](https://github.com/NordcomInc/nordstar/commit/3a86f8edb419428fd4ba7dedc30c0f369541a7ae), [`8947f8f`](https://github.com/NordcomInc/nordstar/commit/8947f8fd67eb178139c7bd6ccc5b6fe9f64b7c9f), [`1d84585`](https://github.com/NordcomInc/nordstar/commit/1d8458535086838e84b246d6b77f729181b2a43b), [`6db10cb`](https://github.com/NordcomInc/nordstar/commit/6db10cb9e1a554630db87538fa92830ab41a7b5b), [`970423b`](https://github.com/NordcomInc/nordstar/commit/970423bdfe21dfb582f47a8841bae58269feb33a), [`1e1c511`](https://github.com/NordcomInc/nordstar/commit/1e1c511034a4a383038ef265a05e310edaf0897d), [`0f79a61`](https://github.com/NordcomInc/nordstar/commit/0f79a61ce841e02d8b5b05962ea43713dad5a82c), [`80bb577`](https://github.com/NordcomInc/nordstar/commit/80bb577f685e742259cf1c288d0b957a86205832), [`4c52b9b`](https://github.com/NordcomInc/nordstar/commit/4c52b9b0844f5ee82dce0c5f4814f52d2c8a84f3), [`3fcda34`](https://github.com/NordcomInc/nordstar/commit/3fcda34aabac3e1067674eedfccf1c7d40312b0a), [`c1b3b06`](https://github.com/NordcomInc/nordstar/commit/c1b3b0663d648c694e86b271944f31e3c31aca0c), [`c3649f8`](https://github.com/NordcomInc/nordstar/commit/c3649f8a082f8420cf21d860d37db4efdaf585a3), [`1c193ed`](https://github.com/NordcomInc/nordstar/commit/1c193ed8275466be41c0b342e09089dab2b33850), [`8b99d62`](https://github.com/NordcomInc/nordstar/commit/8b99d62f0ba91fcd9272081e24ac2eac1bbe0509), [`1548a50`](https://github.com/NordcomInc/nordstar/commit/1548a50a5cdb9ed8ed7f3f2fc22ceb1a8213b713), [`dc45ac7`](https://github.com/NordcomInc/nordstar/commit/dc45ac7fbafca59f35905e4e6a7d2ffc887cdfb0)]:
+  - @nordcom/nordstar-system@0.2.1
+
 ## 0.2.0
 
 ### Patch Changes
