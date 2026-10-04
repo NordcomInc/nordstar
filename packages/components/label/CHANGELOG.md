@@ -1,5 +1,15 @@
 # @nordcom/nordstar-label
 
+## 0.2.2
+
+### Patch Changes
+
+- [#1430](https://github.com/NordcomInc/nordstar/pull/1430) [`0b9a188`](https://github.com/NordcomInc/nordstar/commit/0b9a188fd6a090dc7265c39f497e65b76efca219) Thanks [@renovate](https://github.com/apps/renovate)! - deps: Update dependency vite to v8.3.2.
+
+- [#1435](https://github.com/NordcomInc/nordstar/pull/1435) [`afc0fdd`](https://github.com/NordcomInc/nordstar/commit/afc0fddb3aa91bcec3b521718b3c6fce6d319899) Thanks [@renovate](https://github.com/apps/renovate)! - deps: Update dependency @types/node to v25.9.9.
+- Updated dependencies [[`0b9a188`](https://github.com/NordcomInc/nordstar/commit/0b9a188fd6a090dc7265c39f497e65b76efca219), [`afc0fdd`](https://github.com/NordcomInc/nordstar/commit/afc0fddb3aa91bcec3b521718b3c6fce6d319899)]:
+  - @nordcom/nordstar-system@0.2.2
+
 ## 0.2.1
 
 ### Patch Changes
