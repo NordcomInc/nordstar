@@ -1,5 +1,17 @@
 # @nordcom/nordstar-docs
 
+## 0.2.2
+
+### Patch Changes
+
+- [#1426](https://github.com/NordcomInc/nordstar/pull/1426) [`586b2ab`](https://github.com/NordcomInc/nordstar/commit/586b2ab1c901c0c2ede4f59cc7441a41703ef370) Thanks [@renovate](https://github.com/apps/renovate)! - deps: Update nextjs monorepo to v16.3.8.
+
+- [#1432](https://github.com/NordcomInc/nordstar/pull/1432) [`76d019d`](https://github.com/NordcomInc/nordstar/commit/76d019d64d4e39b1c081014f4190808587d9fae4) Thanks [@renovate](https://github.com/apps/renovate)! - deps: Update dependency globals to v17.13.0.
+
+- [#1433](https://github.com/NordcomInc/nordstar/pull/1433) [`32146a4`](https://github.com/NordcomInc/nordstar/commit/32146a42c37697880eb61e1a08427ba7bc5d4646) Thanks [@renovate](https://github.com/apps/renovate)! - deps: Update dependency shiki to v4.5.0.
+- Updated dependencies [[`0b9a188`](https://github.com/NordcomInc/nordstar/commit/0b9a188fd6a090dc7265c39f497e65b76efca219), [`afc0fdd`](https://github.com/NordcomInc/nordstar/commit/afc0fddb3aa91bcec3b521718b3c6fce6d319899)]:
+  - @nordcom/nordstar@0.2.2
+
 ## 0.2.1
 
 ### Patch Changes
