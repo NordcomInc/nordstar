@@ -1,5 +1,23 @@
 # @nordcom/nordstar-docs
 
+## 0.2.2
+
+### Patch Changes
+
+- [#1426](https://github.com/NordcomInc/nordstar/pull/1426) [`586b2ab`](https://github.com/NordcomInc/nordstar/commit/586b2ab1c901c0c2ede4f59cc7441a41703ef370) Thanks [@renovate](https://github.com/apps/renovate)! - deps: Update nextjs monorepo to v16.3.8.
+
+- [#1432](https://github.com/NordcomInc/nordstar/pull/1432) [`76d019d`](https://github.com/NordcomInc/nordstar/commit/76d019d64d4e39b1c081014f4190808587d9fae4) Thanks [@renovate](https://github.com/apps/renovate)! - deps: Update dependency globals to v17.13.0.
+
+- [#1433](https://github.com/NordcomInc/nordstar/pull/1433) [`32146a4`](https://github.com/NordcomInc/nordstar/commit/32146a42c37697880eb61e1a08427ba7bc5d4646) Thanks [@renovate](https://github.com/apps/renovate)! - deps: Update dependency shiki to v4.5.0.
+
+- [#1442](https://github.com/NordcomInc/nordstar/pull/1442) [`8024dda`](https://github.com/NordcomInc/nordstar/commit/8024ddaecf50e64285387c72eb802ef29667c930) Thanks [@renovate](https://github.com/apps/renovate)! - deps: Update dependency postcss to v8.5.29.
+
+- [#1446](https://github.com/NordcomInc/nordstar/pull/1446) [`ff600e4`](https://github.com/NordcomInc/nordstar/commit/ff600e4a85c71fd20928c22034fa4fe0ea5efe02) Thanks [@renovate](https://github.com/apps/renovate)! - deps: Update nextjs monorepo to v16.4.0.
+
+- [#1449](https://github.com/NordcomInc/nordstar/pull/1449) [`fa30b2b`](https://github.com/NordcomInc/nordstar/commit/fa30b2b1264df909829721ff873c63ef0c5ec54d) Thanks [@renovate](https://github.com/apps/renovate)! - deps: Update dependency concurrently to v10.0.6.
+- Updated dependencies [[`0b9a188`](https://github.com/NordcomInc/nordstar/commit/0b9a188fd6a090dc7265c39f497e65b76efca219), [`afc0fdd`](https://github.com/NordcomInc/nordstar/commit/afc0fddb3aa91bcec3b521718b3c6fce6d319899), [`b7f0547`](https://github.com/NordcomInc/nordstar/commit/b7f0547056a8d95af68770dbfc14cbd6f00d0333), [`2acc94c`](https://github.com/NordcomInc/nordstar/commit/2acc94c02158b543feaeafb5f00a6638f8397290), [`9d4cb41`](https://github.com/NordcomInc/nordstar/commit/9d4cb41b244f6a0654fa3fa79e1bf694d1daea18)]:
+  - @nordcom/nordstar@0.2.2
+
 ## 0.2.1
 
 ### Patch Changes
